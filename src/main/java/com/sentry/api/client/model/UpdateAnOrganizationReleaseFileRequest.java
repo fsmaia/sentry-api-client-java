@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * UpdateAnOrganizationReleaseFileRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class UpdateAnOrganizationReleaseFileRequest implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class UpdateAnOrganizationReleaseFileRequest implements Serializable {
    * The new name (full path) of the file.
    * @return name
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -97,7 +97,7 @@ public class UpdateAnOrganizationReleaseFileRequest implements Serializable {
    * The new name of the dist.
    * @return dist
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDist() {
     return dist;
   }

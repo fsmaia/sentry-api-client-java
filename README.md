@@ -2,7 +2,7 @@
 
 API Reference
 - API version: v0
-  - Build date: 2023-06-15T10:01:41.950429Z[Etc/UTC]
+  - Build date: 2023-06-15T10:13:02.301928Z[Etc/UTC]
 
 Sentry Public API
 
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.openapitools</groupId>
+  <groupId>com.sentry</groupId>
   <artifactId>sentry-api-client-java</artifactId>
   <version>v0</version>
   <scope>compile</scope>
@@ -56,7 +56,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.openapitools:sentry-api-client-java:v0"
+     implementation "com.sentry:sentry-api-client-java:v0"
   }
 ```
 

@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * SCIMListResponseEnvelopeSCIMMemberIndexResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -99,7 +99,7 @@ public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializ
    * Get schemas
    * @return schemas
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getSchemas() {
     return schemas;
   }
@@ -120,7 +120,7 @@ public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializ
    * Get totalResults
    * @return totalResults
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getTotalResults() {
     return totalResults;
   }
@@ -141,7 +141,7 @@ public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializ
    * Get startIndex
    * @return startIndex
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getStartIndex() {
     return startIndex;
   }
@@ -162,7 +162,7 @@ public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializ
    * Get itemsPerPage
    * @return itemsPerPage
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getItemsPerPage() {
     return itemsPerPage;
   }
@@ -191,7 +191,7 @@ public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializ
    * Get resources
    * @return resources
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ListAnOrganizationSMembers200ResponseResourcesInner> getResources() {
     return resources;
   }

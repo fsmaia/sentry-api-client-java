@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * CreateAnExternalIssueRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class CreateAnExternalIssueRequest implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -84,7 +84,7 @@ public class CreateAnExternalIssueRequest implements Serializable {
    * The ID of the Sentry issue to link the external issue to.
    * @return issueId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getIssueId() {
     return issueId;
   }
@@ -105,7 +105,7 @@ public class CreateAnExternalIssueRequest implements Serializable {
    * The URL of the external service to link the issue to.
    * @return webUrl
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getWebUrl() {
     return webUrl;
   }
@@ -126,7 +126,7 @@ public class CreateAnExternalIssueRequest implements Serializable {
    * The external service&#39;s project.
    * @return project
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getProject() {
     return project;
   }
@@ -147,7 +147,7 @@ public class CreateAnExternalIssueRequest implements Serializable {
    * A unique identifier of the external issue.
    * @return identifier
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getIdentifier() {
     return identifier;
   }

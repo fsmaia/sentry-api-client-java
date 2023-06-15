@@ -55,7 +55,7 @@ import com.sentry.api.client.JSON;
 /**
  * OrganizationEventsResponseDict
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class OrganizationEventsResponseDict implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -88,7 +88,7 @@ public class OrganizationEventsResponseDict implements Serializable {
    * Get data
    * @return data
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<Map<String, Object>> getData() {
     return data;
   }
@@ -109,7 +109,7 @@ public class OrganizationEventsResponseDict implements Serializable {
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public QueryDiscoverEventsInTableFormat200ResponseMeta getMeta() {
     return meta;
   }

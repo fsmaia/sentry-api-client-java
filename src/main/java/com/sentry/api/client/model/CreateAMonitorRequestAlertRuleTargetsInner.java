@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * CreateAMonitorRequestAlertRuleTargetsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class CreateAMonitorRequestAlertRuleTargetsInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class CreateAMonitorRequestAlertRuleTargetsInner implements Serializable 
    * ID of target object
    * @return targetIdentifier
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getTargetIdentifier() {
     return targetIdentifier;
   }
@@ -97,7 +97,7 @@ public class CreateAMonitorRequestAlertRuleTargetsInner implements Serializable 
    * One of [Member, Team]
    * @return targetType
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTargetType() {
     return targetType;
   }

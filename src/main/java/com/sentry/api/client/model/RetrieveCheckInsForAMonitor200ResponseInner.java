@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveCheckInsForAMonitor200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveCheckInsForAMonitor200ResponseInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -101,7 +101,7 @@ public class RetrieveCheckInsForAMonitor200ResponseInner implements Serializable
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -122,7 +122,7 @@ public class RetrieveCheckInsForAMonitor200ResponseInner implements Serializable
    * Get environment
    * @return environment
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEnvironment() {
     return environment;
   }
@@ -143,7 +143,7 @@ public class RetrieveCheckInsForAMonitor200ResponseInner implements Serializable
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -164,7 +164,7 @@ public class RetrieveCheckInsForAMonitor200ResponseInner implements Serializable
    * Get duration
    * @return duration
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getDuration() {
     return duration;
   }
@@ -185,7 +185,7 @@ public class RetrieveCheckInsForAMonitor200ResponseInner implements Serializable
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -206,7 +206,7 @@ public class RetrieveCheckInsForAMonitor200ResponseInner implements Serializable
    * Get attachmentId
    * @return attachmentId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getAttachmentId() {
     return attachmentId;
   }
@@ -227,7 +227,7 @@ public class RetrieveCheckInsForAMonitor200ResponseInner implements Serializable
    * Get expectedTime
    * @return expectedTime
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getExpectedTime() {
     return expectedTime;
   }
@@ -248,7 +248,7 @@ public class RetrieveCheckInsForAMonitor200ResponseInner implements Serializable
    * Get monitorConfig
    * @return monitorConfig
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getMonitorConfig() {
     return monitorConfig;
   }

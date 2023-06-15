@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -125,7 +125,7 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner 
    * The path to the file. Both forward and backward slashes are supported.
    * @return path
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getPath() {
     return path;
   }
@@ -146,7 +146,7 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner 
    * The type of change that happened in the commit.
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public TypeEnum getType() {
     return type;
   }

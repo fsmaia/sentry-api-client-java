@@ -28,7 +28,7 @@ import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerA
 import java.io.IOException;
 import java.io.Serializable;
 
-import javax.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.GenericType;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -61,7 +61,7 @@ import com.google.gson.JsonParseException;
 
 import com.sentry.api.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInner extends AbstractOpenApiSchema, Serializable {
     private static final Logger log = Logger.getLogger(ResolveAnEventID200ResponseEventEntriesInner.class.getName());
 

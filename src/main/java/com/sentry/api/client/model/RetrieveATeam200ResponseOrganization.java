@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveATeam200ResponseOrganization
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveATeam200ResponseOrganization implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -103,7 +103,7 @@ public class RetrieveATeam200ResponseOrganization implements Serializable {
    * Get avatar
    * @return avatar
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveATeam200ResponseAvatar getAvatar() {
     return avatar;
   }
@@ -124,7 +124,7 @@ public class RetrieveATeam200ResponseOrganization implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -145,7 +145,7 @@ public class RetrieveATeam200ResponseOrganization implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -166,7 +166,7 @@ public class RetrieveATeam200ResponseOrganization implements Serializable {
    * Get isEarlyAdopter
    * @return isEarlyAdopter
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsEarlyAdopter() {
     return isEarlyAdopter;
   }
@@ -187,7 +187,7 @@ public class RetrieveATeam200ResponseOrganization implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -208,7 +208,7 @@ public class RetrieveATeam200ResponseOrganization implements Serializable {
    * Get require2FA
    * @return require2FA
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getRequire2FA() {
     return require2FA;
   }
@@ -229,7 +229,7 @@ public class RetrieveATeam200ResponseOrganization implements Serializable {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -250,7 +250,7 @@ public class RetrieveATeam200ResponseOrganization implements Serializable {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider getStatus() {
     return status;
   }

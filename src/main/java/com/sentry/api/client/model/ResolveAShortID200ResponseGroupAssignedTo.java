@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAShortID200ResponseGroupAssignedTo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAShortID200ResponseGroupAssignedTo implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -80,7 +80,7 @@ public class ResolveAShortID200ResponseGroupAssignedTo implements Serializable {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getType() {
     return type;
   }
@@ -101,7 +101,7 @@ public class ResolveAShortID200ResponseGroupAssignedTo implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getId() {
     return id;
   }
@@ -122,7 +122,7 @@ public class ResolveAShortID200ResponseGroupAssignedTo implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }

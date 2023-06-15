@@ -56,7 +56,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAProject200ResponsePluginsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAProject200ResponsePluginsInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -153,7 +153,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get assets
    * @return assets
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getAssets() {
     return assets;
   }
@@ -174,7 +174,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get author
    * @return author
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public RetrieveAProject200ResponsePluginsInnerAuthor getAuthor() {
     return author;
   }
@@ -195,7 +195,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get canDisable
    * @return canDisable
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getCanDisable() {
     return canDisable;
   }
@@ -224,7 +224,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get contexts
    * @return contexts
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getContexts() {
     return contexts;
   }
@@ -245,7 +245,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get description
    * @return description
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDescription() {
     return description;
   }
@@ -266,7 +266,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get doc
    * @return doc
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDoc() {
     return doc;
   }
@@ -287,7 +287,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get enabled
    * @return enabled
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getEnabled() {
     return enabled;
   }
@@ -308,7 +308,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get hasConfiguration
    * @return hasConfiguration
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasConfiguration() {
     return hasConfiguration;
   }
@@ -329,7 +329,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -350,7 +350,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get isTestable
    * @return isTestable
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsTestable() {
     return isTestable;
   }
@@ -371,7 +371,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get metadata
    * @return metadata
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getMetadata() {
     return metadata;
   }
@@ -392,7 +392,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -421,7 +421,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get resourceLinks
    * @return resourceLinks
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner> getResourceLinks() {
     return resourceLinks;
   }
@@ -442,7 +442,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get shortName
    * @return shortName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getShortName() {
     return shortName;
   }
@@ -463,7 +463,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -484,7 +484,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -505,7 +505,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -526,7 +526,7 @@ public class RetrieveAProject200ResponsePluginsInner implements Serializable {
    * Get version
    * @return version
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getVersion() {
     return version;
   }

@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * Additional details about the resolution. Valid values are &#x60;\&quot;inRelease\&quot;&#x60;, &#x60;\&quot;inNextRelease\&quot;&#x60;, &#x60;\&quot;inCommit\&quot;&#x60;, &#x60;\&quot;ignoreDuration\&quot;&#x60;, &#x60;\&quot;ignoreCount\&quot;&#x60;, &#x60;\&quot;ignoreWindow\&quot;&#x60;, &#x60;\&quot;ignoreUserCount\&quot;&#x60;, and &#x60;\&quot;ignoreUserWindow\&quot;&#x60;.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class BulkMutateAListOfIssuesRequestStatusDetails implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -100,7 +100,7 @@ public class BulkMutateAListOfIssuesRequestStatusDetails implements Serializable
    * Get inRelease
    * @return inRelease
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getInRelease() {
     return inRelease;
   }
@@ -121,7 +121,7 @@ public class BulkMutateAListOfIssuesRequestStatusDetails implements Serializable
    * Get inNextRelease
    * @return inNextRelease
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getInNextRelease() {
     return inNextRelease;
   }
@@ -142,7 +142,7 @@ public class BulkMutateAListOfIssuesRequestStatusDetails implements Serializable
    * Get inCommit
    * @return inCommit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getInCommit() {
     return inCommit;
   }
@@ -163,7 +163,7 @@ public class BulkMutateAListOfIssuesRequestStatusDetails implements Serializable
    * Get ignoreDuration
    * @return ignoreDuration
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getIgnoreDuration() {
     return ignoreDuration;
   }
@@ -184,7 +184,7 @@ public class BulkMutateAListOfIssuesRequestStatusDetails implements Serializable
    * Get ignoreCount
    * @return ignoreCount
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getIgnoreCount() {
     return ignoreCount;
   }
@@ -205,7 +205,7 @@ public class BulkMutateAListOfIssuesRequestStatusDetails implements Serializable
    * Get ignoreWindow
    * @return ignoreWindow
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getIgnoreWindow() {
     return ignoreWindow;
   }
@@ -226,7 +226,7 @@ public class BulkMutateAListOfIssuesRequestStatusDetails implements Serializable
    * Get ignoreUserCount
    * @return ignoreUserCount
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getIgnoreUserCount() {
     return ignoreUserCount;
   }
@@ -247,7 +247,7 @@ public class BulkMutateAListOfIssuesRequestStatusDetails implements Serializable
    * Get ignoreUserWindow
    * @return ignoreUserWindow
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getIgnoreUserWindow() {
     return ignoreUserWindow;
   }

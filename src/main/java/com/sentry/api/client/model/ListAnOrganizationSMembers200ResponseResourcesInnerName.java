@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSMembers200ResponseResourcesInnerName
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAnOrganizationSMembers200ResponseResourcesInnerName implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class ListAnOrganizationSMembers200ResponseResourcesInnerName implements 
    * Get givenName
    * @return givenName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getGivenName() {
     return givenName;
   }
@@ -97,7 +97,7 @@ public class ListAnOrganizationSMembers200ResponseResourcesInnerName implements 
    * Get familyName
    * @return familyName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getFamilyName() {
     return familyName;
   }

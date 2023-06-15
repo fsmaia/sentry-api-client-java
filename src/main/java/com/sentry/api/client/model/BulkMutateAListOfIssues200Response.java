@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * BulkMutateAListOfIssues200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class BulkMutateAListOfIssues200Response implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -129,7 +129,7 @@ public class BulkMutateAListOfIssues200Response implements Serializable {
    * Get isPublic
    * @return isPublic
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsPublic() {
     return isPublic;
   }
@@ -150,7 +150,7 @@ public class BulkMutateAListOfIssues200Response implements Serializable {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public StatusEnum getStatus() {
     return status;
   }
@@ -171,7 +171,7 @@ public class BulkMutateAListOfIssues200Response implements Serializable {
    * Get statusDetails
    * @return statusDetails
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getStatusDetails() {
     return statusDetails;
   }

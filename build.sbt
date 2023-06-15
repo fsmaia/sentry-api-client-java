@@ -1,6 +1,6 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "org.openapitools",
+    organization := "com.sentry",
     name := "sentry-api-client-java",
     version := "v0",
     scalaVersion := "2.11.4",

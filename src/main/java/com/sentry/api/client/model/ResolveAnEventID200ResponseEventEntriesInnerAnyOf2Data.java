@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf2Data
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf2Data implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -72,7 +72,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf2Data implements S
    * Get formatted
    * @return formatted
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getFormatted() {
     return formatted;
   }

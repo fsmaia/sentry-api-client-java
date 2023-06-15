@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * CreateANewReleaseForAnOrganizationRequestRefsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class CreateANewReleaseForAnOrganizationRequestRefsInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -80,7 +80,7 @@ public class CreateANewReleaseForAnOrganizationRequestRefsInner implements Seria
    * The full name of the repository the commit belongs to.
    * @return repository
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRepository() {
     return repository;
   }
@@ -101,7 +101,7 @@ public class CreateANewReleaseForAnOrganizationRequestRefsInner implements Seria
    * The current release&#39;s commit.
    * @return commit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getCommit() {
     return commit;
   }
@@ -122,7 +122,7 @@ public class CreateANewReleaseForAnOrganizationRequestRefsInner implements Seria
    * The previous release&#39;s commit.
    * @return previousCommit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPreviousCommit() {
     return previousCommit;
   }

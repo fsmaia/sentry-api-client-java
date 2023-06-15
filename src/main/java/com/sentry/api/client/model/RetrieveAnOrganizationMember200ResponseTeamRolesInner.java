@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganizationMember200ResponseTeamRolesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseTeamRolesInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class RetrieveAnOrganizationMember200ResponseTeamRolesInner implements Se
    * Get teamSlug
    * @return teamSlug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTeamSlug() {
     return teamSlug;
   }
@@ -97,7 +97,7 @@ public class RetrieveAnOrganizationMember200ResponseTeamRolesInner implements Se
    * Get role
    * @return role
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getRole() {
     return role;
   }

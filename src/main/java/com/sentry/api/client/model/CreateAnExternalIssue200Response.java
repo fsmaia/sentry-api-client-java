@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * CreateAnExternalIssue200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class CreateAnExternalIssue200Response implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -88,7 +88,7 @@ public class CreateAnExternalIssue200Response implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -109,7 +109,7 @@ public class CreateAnExternalIssue200Response implements Serializable {
    * Get issueId
    * @return issueId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getIssueId() {
     return issueId;
   }
@@ -130,7 +130,7 @@ public class CreateAnExternalIssue200Response implements Serializable {
    * Get serviceType
    * @return serviceType
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getServiceType() {
     return serviceType;
   }
@@ -151,7 +151,7 @@ public class CreateAnExternalIssue200Response implements Serializable {
    * Get displayName
    * @return displayName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDisplayName() {
     return displayName;
   }
@@ -172,7 +172,7 @@ public class CreateAnExternalIssue200Response implements Serializable {
    * Get webUrl
    * @return webUrl
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getWebUrl() {
     return webUrl;
   }

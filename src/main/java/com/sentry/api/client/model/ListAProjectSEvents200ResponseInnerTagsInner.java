@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSEvents200ResponseInnerTagsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAProjectSEvents200ResponseInnerTagsInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class ListAProjectSEvents200ResponseInnerTagsInner implements Serializabl
    * Get value
    * @return value
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getValue() {
     return value;
   }
@@ -97,7 +97,7 @@ public class ListAProjectSEvents200ResponseInnerTagsInner implements Serializabl
    * Get key
    * @return key
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getKey() {
     return key;
   }

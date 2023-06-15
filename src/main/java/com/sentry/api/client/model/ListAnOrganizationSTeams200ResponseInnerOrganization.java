@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSTeams200ResponseInnerOrganization
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -119,7 +119,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -140,7 +140,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -161,7 +161,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider getStatus() {
     return status;
   }
@@ -182,7 +182,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -203,7 +203,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -224,7 +224,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get isEarlyAdopter
    * @return isEarlyAdopter
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsEarlyAdopter() {
     return isEarlyAdopter;
   }
@@ -245,7 +245,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get require2FA
    * @return require2FA
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getRequire2FA() {
     return require2FA;
   }
@@ -266,7 +266,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get requireEmailVerification
    * @return requireEmailVerification
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getRequireEmailVerification() {
     return requireEmailVerification;
   }
@@ -287,7 +287,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get avatar
    * @return avatar
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getAvatar() {
     return avatar;
   }
@@ -308,7 +308,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get features
    * @return features
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getFeatures() {
     return features;
   }
@@ -329,7 +329,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get links
    * @return links
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ListAnOrganizationSTeams200ResponseInnerOrganizationLinks getLinks() {
     return links;
   }
@@ -350,7 +350,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganization implements Ser
    * Get hasAuthProvider
    * @return hasAuthProvider
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasAuthProvider() {
     return hasAuthProvider;
   }

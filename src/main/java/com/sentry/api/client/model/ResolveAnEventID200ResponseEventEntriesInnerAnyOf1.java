@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1 implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -77,7 +77,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1 implements Seria
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -98,7 +98,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1 implements Seria
    * Get data
    * @return data
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data getData() {
     return data;
   }

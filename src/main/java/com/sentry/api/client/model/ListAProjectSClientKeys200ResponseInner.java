@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSClientKeys200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAProjectSClientKeys200ResponseInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -118,7 +118,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get browserSdk
    * @return browserSdk
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ListAProjectSClientKeys200ResponseInnerBrowserSdk getBrowserSdk() {
     return browserSdk;
   }
@@ -139,7 +139,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get browserSdkVersion
    * @return browserSdkVersion
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getBrowserSdkVersion() {
     return browserSdkVersion;
   }
@@ -160,7 +160,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -181,7 +181,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get dsn
    * @return dsn
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ListAProjectSClientKeys200ResponseInnerDsn getDsn() {
     return dsn;
   }
@@ -202,7 +202,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -223,7 +223,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get isActive
    * @return isActive
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsActive() {
     return isActive;
   }
@@ -244,7 +244,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get label
    * @return label
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getLabel() {
     return label;
   }
@@ -265,7 +265,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -286,7 +286,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get projectId
    * @return projectId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getProjectId() {
     return projectId;
   }
@@ -307,7 +307,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get _public
    * @return _public
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getPublic() {
     return _public;
   }
@@ -328,7 +328,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get rateLimit
    * @return rateLimit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRateLimit() {
     return rateLimit;
   }
@@ -349,7 +349,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get secret
    * @return secret
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSecret() {
     return secret;
   }

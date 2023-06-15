@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnEventForAProject200ResponseMeta
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -101,7 +101,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUser() {
     return user;
   }
@@ -122,7 +122,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get context
    * @return context
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getContext() {
     return context;
   }
@@ -143,7 +143,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get entries
    * @return entries
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getEntries() {
     return entries;
   }
@@ -164,7 +164,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get contexts
    * @return contexts
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getContexts() {
     return contexts;
   }
@@ -185,7 +185,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getMessage() {
     return message;
   }
@@ -206,7 +206,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get packages
    * @return packages
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPackages() {
     return packages;
   }
@@ -227,7 +227,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get tags
    * @return tags
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getTags() {
     return tags;
   }
@@ -248,7 +248,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get sdk
    * @return sdk
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSdk() {
     return sdk;
   }

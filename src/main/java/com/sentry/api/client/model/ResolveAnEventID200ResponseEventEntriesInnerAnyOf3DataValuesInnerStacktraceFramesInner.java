@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -135,7 +135,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get function
    * @return function
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getFunction() {
     return function;
   }
@@ -156,7 +156,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getErrors() {
     return errors;
   }
@@ -177,7 +177,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get colNo
    * @return colNo
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getColNo() {
     return colNo;
   }
@@ -198,7 +198,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get vars
    * @return vars
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getVars() {
     return vars;
   }
@@ -219,7 +219,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get _package
    * @return _package
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPackage() {
     return _package;
   }
@@ -240,7 +240,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get absPath
    * @return absPath
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getAbsPath() {
     return absPath;
   }
@@ -261,7 +261,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get inApp
    * @return inApp
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getInApp() {
     return inApp;
   }
@@ -282,7 +282,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get lineNo
    * @return lineNo
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getLineNo() {
     return lineNo;
   }
@@ -303,7 +303,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get module
    * @return module
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getModule() {
     return module;
   }
@@ -324,7 +324,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get filename
    * @return filename
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getFilename() {
     return filename;
   }
@@ -345,7 +345,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPlatform() {
     return platform;
   }
@@ -366,7 +366,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get instructionAddr
    * @return instructionAddr
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getInstructionAddr() {
     return instructionAddr;
   }
@@ -395,7 +395,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get context
    * @return context
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<List<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInnerContextInnerInner>> getContext() {
     return context;
   }
@@ -416,7 +416,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get symbolAddr
    * @return symbolAddr
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSymbolAddr() {
     return symbolAddr;
   }
@@ -437,7 +437,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get trust
    * @return trust
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getTrust() {
     return trust;
   }
@@ -458,7 +458,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get symbol
    * @return symbol
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSymbol() {
     return symbol;
   }

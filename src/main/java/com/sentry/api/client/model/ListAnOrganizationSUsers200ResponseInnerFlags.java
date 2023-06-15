@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSUsers200ResponseInnerFlags
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAnOrganizationSUsers200ResponseInnerFlags implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class ListAnOrganizationSUsers200ResponseInnerFlags implements Serializab
    * Get ssoColonLinked
    * @return ssoColonLinked
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getSsoColonLinked() {
     return ssoColonLinked;
   }
@@ -97,7 +97,7 @@ public class ListAnOrganizationSUsers200ResponseInnerFlags implements Serializab
    * Get ssoColonInvalid
    * @return ssoColonInvalid
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getSsoColonInvalid() {
     return ssoColonInvalid;
   }

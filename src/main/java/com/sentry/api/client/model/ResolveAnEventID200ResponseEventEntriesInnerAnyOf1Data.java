@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -107,7 +107,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data implements S
    * Get fragment
    * @return fragment
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFragment() {
     return fragment;
   }
@@ -136,7 +136,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data implements S
    * Get cookies
    * @return cookies
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<List<String>> getCookies() {
     return cookies;
   }
@@ -157,7 +157,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data implements S
    * Get inferredContentType
    * @return inferredContentType
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getInferredContentType() {
     return inferredContentType;
   }
@@ -178,7 +178,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data implements S
    * Get env
    * @return env
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv getEnv() {
     return env;
   }
@@ -207,7 +207,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data implements S
    * Get headers
    * @return headers
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<List<String>> getHeaders() {
     return headers;
   }
@@ -228,7 +228,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data implements S
    * Get url
    * @return url
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getUrl() {
     return url;
   }
@@ -257,7 +257,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data implements S
    * Get query
    * @return query
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<List<String>> getQuery() {
     return query;
   }
@@ -278,7 +278,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data implements S
    * Get data
    * @return data
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getData() {
     return data;
   }
@@ -299,7 +299,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data implements S
    * Get method
    * @return method
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getMethod() {
     return method;
   }

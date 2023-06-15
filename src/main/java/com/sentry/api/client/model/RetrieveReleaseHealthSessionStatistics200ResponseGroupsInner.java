@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * A grouped result, as requested by the &#x60;groupBy&#x60; request parameter.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -83,7 +83,7 @@ public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner implem
    * These are key/value pairs, the key being the requested &#x60;groupBy&#x60; property with its corresponding value.
    * @return by
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getBy() {
     return by;
   }
@@ -104,7 +104,7 @@ public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner implem
    * These are key/value pairs, the key being the requested &#x60;field&#x60;, and the value the corresponding total over the requested time frame.
    * @return totals
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getTotals() {
     return totals;
   }
@@ -133,7 +133,7 @@ public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner implem
    * These are key/value pairs, the key being the requested &#x60;field&#x60;, and the value is an array of aggregated values. The array corresponds to the times given in the &#x60;intervals&#x60; array.
    * @return series
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, List<Integer>> getSeries() {
     return series;
   }

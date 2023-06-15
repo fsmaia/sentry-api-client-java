@@ -61,7 +61,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEvent implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -166,7 +166,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ResolveAnEventID200ResponseEventMeta getMeta() {
     return meta;
   }
@@ -187,7 +187,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get context
    * @return context
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ResolveAnEventID200ResponseEventContext getContext() {
     return context;
   }
@@ -208,7 +208,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get contexts
    * @return contexts
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getContexts() {
     return contexts;
   }
@@ -229,7 +229,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -250,7 +250,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get dateReceived
    * @return dateReceived
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDateReceived() {
     return dateReceived;
   }
@@ -271,7 +271,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get dist
    * @return dist
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDist() {
     return dist;
   }
@@ -300,7 +300,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get entries
    * @return entries
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventEntriesInner> getEntries() {
     return entries;
   }
@@ -329,7 +329,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventErrorsInner> getErrors() {
     return errors;
   }
@@ -350,7 +350,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get eventID
    * @return eventID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventID() {
     return eventID;
   }
@@ -379,7 +379,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get fingerprints
    * @return fingerprints
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getFingerprints() {
     return fingerprints;
   }
@@ -400,7 +400,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get groupID
    * @return groupID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getGroupID() {
     return groupID;
   }
@@ -421,7 +421,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -442,7 +442,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessage() {
     return message;
   }
@@ -463,7 +463,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get metadata
    * @return metadata
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ResolveAnEventID200ResponseEventMetadata getMetadata() {
     return metadata;
   }
@@ -484,7 +484,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get packages
    * @return packages
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ResolveAnEventID200ResponseEventPackages getPackages() {
     return packages;
   }
@@ -505,7 +505,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getPlatform() {
     return platform;
   }
@@ -526,7 +526,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get sdk
    * @return sdk
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getSdk() {
     return sdk;
   }
@@ -547,7 +547,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get size
    * @return size
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getSize() {
     return size;
   }
@@ -576,7 +576,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get tags
    * @return tags
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventTagsInner> getTags() {
     return tags;
   }
@@ -597,7 +597,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -618,7 +618,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ResolveAnEventID200ResponseEventUser getUser() {
     return user;
   }
@@ -639,7 +639,7 @@ public class ResolveAnEventID200ResponseEvent implements Serializable {
    * Get title
    * @return title
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTitle() {
     return title;
   }

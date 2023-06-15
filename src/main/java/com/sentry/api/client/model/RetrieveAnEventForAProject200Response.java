@@ -61,7 +61,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnEventForAProject200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200Response implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -182,7 +182,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get eventID
    * @return eventID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventID() {
     return eventID;
   }
@@ -203,7 +203,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get dist
    * @return dist
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDist() {
     return dist;
   }
@@ -224,7 +224,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get userReport
    * @return userReport
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getUserReport() {
     return userReport;
   }
@@ -245,7 +245,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get previousEventID
    * @return previousEventID
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPreviousEventID() {
     return previousEventID;
   }
@@ -266,7 +266,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessage() {
     return message;
   }
@@ -287,7 +287,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -308,7 +308,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get size
    * @return size
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getSize() {
     return size;
   }
@@ -337,7 +337,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventErrorsInner> getErrors() {
     return errors;
   }
@@ -358,7 +358,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getPlatform() {
     return platform;
   }
@@ -379,7 +379,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get nextEventID
    * @return nextEventID
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getNextEventID() {
     return nextEventID;
   }
@@ -400,7 +400,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -421,7 +421,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get metadata
    * @return metadata
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnEventForAProject200ResponseMetadata getMetadata() {
     return metadata;
   }
@@ -450,7 +450,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get tags
    * @return tags
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<RetrieveAnEventForAProject200ResponseTagsInner> getTags() {
     return tags;
   }
@@ -471,7 +471,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -492,7 +492,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get dateReceived
    * @return dateReceived
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDateReceived() {
     return dateReceived;
   }
@@ -513,7 +513,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ResolveAnEventID200ResponseEventUser getUser() {
     return user;
   }
@@ -542,7 +542,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get entries
    * @return entries
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventEntriesInner> getEntries() {
     return entries;
   }
@@ -563,7 +563,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get packages
    * @return packages
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getPackages() {
     return packages;
   }
@@ -584,7 +584,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get sdk
    * @return sdk
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnEventForAProject200ResponseSdk getSdk() {
     return sdk;
   }
@@ -605,7 +605,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnEventForAProject200ResponseMeta getMeta() {
     return meta;
   }
@@ -626,7 +626,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get contexts
    * @return contexts
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getContexts() {
     return contexts;
   }
@@ -655,7 +655,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get fingerprints
    * @return fingerprints
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getFingerprints() {
     return fingerprints;
   }
@@ -676,7 +676,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get context
    * @return context
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getContext() {
     return context;
   }
@@ -697,7 +697,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get release
    * @return release
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public RetrieveAnEventForAProject200ResponseRelease getRelease() {
     return release;
   }
@@ -718,7 +718,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get groupID
    * @return groupID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getGroupID() {
     return groupID;
   }
@@ -739,7 +739,7 @@ public class RetrieveAnEventForAProject200Response implements Serializable {
    * Get title
    * @return title
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTitle() {
     return title;
   }

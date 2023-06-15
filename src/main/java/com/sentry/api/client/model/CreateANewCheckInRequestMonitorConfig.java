@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * CreateANewCheckInRequestMonitorConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class CreateANewCheckInRequestMonitorConfig implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -1363,7 +1363,7 @@ public class CreateANewCheckInRequestMonitorConfig implements Serializable {
    * Currently supports \&quot;crontab\&quot; or \&quot;interval\&quot;
    * @return scheduleType
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ScheduleTypeEnum getScheduleType() {
     return scheduleType;
   }
@@ -1384,7 +1384,7 @@ public class CreateANewCheckInRequestMonitorConfig implements Serializable {
    * Varies depending on the schedule_type. Is either a crontab string, or a 2 element tuple for intervals (e.g. [1, &#39;day&#39;])
    * @return schedule
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getSchedule() {
     return schedule;
   }
@@ -1406,7 +1406,7 @@ public class CreateANewCheckInRequestMonitorConfig implements Serializable {
    * minimum: 0
    * @return checkinMargin
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getCheckinMargin() {
     return checkinMargin;
   }
@@ -1428,7 +1428,7 @@ public class CreateANewCheckInRequestMonitorConfig implements Serializable {
    * minimum: 1
    * @return maxRuntime
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getMaxRuntime() {
     return maxRuntime;
   }
@@ -1449,7 +1449,7 @@ public class CreateANewCheckInRequestMonitorConfig implements Serializable {
    * tz database style timezone string
    * @return timezone
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public TimezoneEnum getTimezone() {
     return timezone;
   }

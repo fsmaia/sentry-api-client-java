@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganizationMember200ResponseUserAvatar
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseUserAvatar implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class RetrieveAnOrganizationMember200ResponseUserAvatar implements Serial
    * Get avatarType
    * @return avatarType
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getAvatarType() {
     return avatarType;
   }
@@ -97,7 +97,7 @@ public class RetrieveAnOrganizationMember200ResponseUserAvatar implements Serial
    * Get avatarUuid
    * @return avatarUuid
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getAvatarUuid() {
     return avatarUuid;
   }

@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnIssue200ResponseActivityInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -89,7 +89,7 @@ public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
    * Get data
    * @return data
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getData() {
     return data;
   }
@@ -110,7 +110,7 @@ public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDateCreated() {
     return dateCreated;
   }
@@ -131,7 +131,7 @@ public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getId() {
     return id;
   }
@@ -152,7 +152,7 @@ public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getType() {
     return type;
   }
@@ -173,7 +173,7 @@ public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getUser() {
     return user;
   }

@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganizationMember200ResponseFlags
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseFlags implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -88,7 +88,7 @@ public class RetrieveAnOrganizationMember200ResponseFlags implements Serializabl
    * Get idpColonProvisioned
    * @return idpColonProvisioned
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIdpColonProvisioned() {
     return idpColonProvisioned;
   }
@@ -109,7 +109,7 @@ public class RetrieveAnOrganizationMember200ResponseFlags implements Serializabl
    * Get idpColonRoleRestricted
    * @return idpColonRoleRestricted
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIdpColonRoleRestricted() {
     return idpColonRoleRestricted;
   }
@@ -130,7 +130,7 @@ public class RetrieveAnOrganizationMember200ResponseFlags implements Serializabl
    * Get ssoColonLinked
    * @return ssoColonLinked
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getSsoColonLinked() {
     return ssoColonLinked;
   }
@@ -151,7 +151,7 @@ public class RetrieveAnOrganizationMember200ResponseFlags implements Serializabl
    * Get ssoColonInvalid
    * @return ssoColonInvalid
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getSsoColonInvalid() {
     return ssoColonInvalid;
   }
@@ -172,7 +172,7 @@ public class RetrieveAnOrganizationMember200ResponseFlags implements Serializabl
    * Get memberLimitColonRestricted
    * @return memberLimitColonRestricted
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getMemberLimitColonRestricted() {
     return memberLimitColonRestricted;
   }

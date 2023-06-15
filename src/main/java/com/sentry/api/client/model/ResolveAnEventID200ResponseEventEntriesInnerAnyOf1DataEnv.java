@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -72,7 +72,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv implement
    * Get ENV
    * @return ENV
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getENV() {
     return ENV;
   }

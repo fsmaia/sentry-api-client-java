@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
 /**
  * RegisterANewServiceHookRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RegisterANewServiceHookRequest implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -78,7 +78,7 @@ public class RegisterANewServiceHookRequest implements Serializable {
    * The URL for the webhook.
    * @return url
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getUrl() {
     return url;
   }
@@ -107,7 +107,7 @@ public class RegisterANewServiceHookRequest implements Serializable {
    * The events to subscribe to.
    * @return events
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getEvents() {
     return events;
   }

@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnIssueSHashes200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAnIssueSHashes200ResponseInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -77,7 +77,7 @@ public class ListAnIssueSHashes200ResponseInner implements Serializable {
    * Get latestEvent
    * @return latestEvent
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ListAnIssueSHashes200ResponseInnerLatestEvent getLatestEvent() {
     return latestEvent;
   }
@@ -98,7 +98,7 @@ public class ListAnIssueSHashes200ResponseInner implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getId() {
     return id;
   }

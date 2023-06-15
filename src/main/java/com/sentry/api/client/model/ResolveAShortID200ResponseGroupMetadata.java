@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAShortID200ResponseGroupMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAShortID200ResponseGroupMetadata implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -88,7 +88,7 @@ public class ResolveAShortID200ResponseGroupMetadata implements Serializable {
    * Get function
    * @return function
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFunction() {
     return function;
   }
@@ -109,7 +109,7 @@ public class ResolveAShortID200ResponseGroupMetadata implements Serializable {
    * Get title
    * @return title
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getTitle() {
     return title;
   }
@@ -130,7 +130,7 @@ public class ResolveAShortID200ResponseGroupMetadata implements Serializable {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getType() {
     return type;
   }
@@ -151,7 +151,7 @@ public class ResolveAShortID200ResponseGroupMetadata implements Serializable {
    * Get value
    * @return value
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getValue() {
     return value;
   }
@@ -172,7 +172,7 @@ public class ResolveAShortID200ResponseGroupMetadata implements Serializable {
    * Get filename
    * @return filename
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFilename() {
     return filename;
   }

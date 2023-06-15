@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200Response implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -89,7 +89,7 @@ public class ResolveAnEventID200Response implements Serializable {
    * Get event
    * @return event
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ResolveAnEventID200ResponseEvent getEvent() {
     return event;
   }
@@ -110,7 +110,7 @@ public class ResolveAnEventID200Response implements Serializable {
    * Get eventId
    * @return eventId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventId() {
     return eventId;
   }
@@ -131,7 +131,7 @@ public class ResolveAnEventID200Response implements Serializable {
    * Get groupId
    * @return groupId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getGroupId() {
     return groupId;
   }
@@ -152,7 +152,7 @@ public class ResolveAnEventID200Response implements Serializable {
    * Get organizationSlug
    * @return organizationSlug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getOrganizationSlug() {
     return organizationSlug;
   }
@@ -173,7 +173,7 @@ public class ResolveAnEventID200Response implements Serializable {
    * Get projectSlug
    * @return projectSlug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getProjectSlug() {
     return projectSlug;
   }

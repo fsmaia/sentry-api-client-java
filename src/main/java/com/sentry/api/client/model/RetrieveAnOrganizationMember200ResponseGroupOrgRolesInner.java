@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -94,7 +94,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -115,7 +115,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -136,7 +136,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get desc
    * @return desc
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDesc() {
     return desc;
   }
@@ -165,7 +165,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get scopes
    * @return scopes
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getScopes() {
     return scopes;
   }
@@ -186,7 +186,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get isGlobal
    * @return isGlobal
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsGlobal() {
     return isGlobal;
   }
@@ -207,7 +207,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get allowed
    * @return allowed
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getAllowed() {
     return allowed;
   }

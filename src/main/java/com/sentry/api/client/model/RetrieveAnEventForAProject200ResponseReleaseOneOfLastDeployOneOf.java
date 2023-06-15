@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -93,7 +93,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get environment
    * @return environment
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEnvironment() {
     return environment;
   }
@@ -114,7 +114,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get name
    * @return name
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -135,7 +135,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get dateStarted
    * @return dateStarted
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getDateStarted() {
     return dateStarted;
   }
@@ -156,7 +156,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get dateFinished
    * @return dateFinished
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateFinished() {
     return dateFinished;
   }
@@ -177,7 +177,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get url
    * @return url
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUrl() {
     return url;
   }
@@ -198,7 +198,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }

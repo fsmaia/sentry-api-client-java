@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnEventForAProject200ResponseSdk
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseSdk implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class RetrieveAnEventForAProject200ResponseSdk implements Serializable {
    * Get version
    * @return version
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getVersion() {
     return version;
   }
@@ -97,7 +97,7 @@ public class RetrieveAnEventForAProject200ResponseSdk implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }

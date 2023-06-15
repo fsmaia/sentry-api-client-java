@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * UpdateAnOrganizationMemberSAttributesRequestOperationsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class UpdateAnOrganizationMemberSAttributesRequestOperationsInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -80,7 +80,7 @@ public class UpdateAnOrganizationMemberSAttributesRequestOperationsInner impleme
    * Get op
    * @return op
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getOp() {
     return op;
   }
@@ -101,7 +101,7 @@ public class UpdateAnOrganizationMemberSAttributesRequestOperationsInner impleme
    * Get value
    * @return value
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getValue() {
     return value;
   }
@@ -122,7 +122,7 @@ public class UpdateAnOrganizationMemberSAttributesRequestOperationsInner impleme
    * Get path
    * @return path
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPath() {
     return path;
   }

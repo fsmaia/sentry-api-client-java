@@ -58,7 +58,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnIssue200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnIssue200Response implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -276,7 +276,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get activity
    * @return activity
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<RetrieveAnIssue200ResponseActivityInner> getActivity() {
     return activity;
   }
@@ -305,7 +305,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get annotations
    * @return annotations
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getAnnotations() {
     return annotations;
   }
@@ -326,7 +326,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get assignedTo
    * @return assignedTo
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getAssignedTo() {
     return assignedTo;
   }
@@ -347,7 +347,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get count
    * @return count
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getCount() {
     return count;
   }
@@ -368,7 +368,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get culprit
    * @return culprit
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getCulprit() {
     return culprit;
   }
@@ -389,7 +389,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get firstRelease
    * @return firstRelease
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public RetrieveAnIssue200ResponseFirstRelease getFirstRelease() {
     return firstRelease;
   }
@@ -410,7 +410,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get firstSeen
    * @return firstSeen
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getFirstSeen() {
     return firstSeen;
   }
@@ -431,7 +431,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get hasSeen
    * @return hasSeen
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasSeen() {
     return hasSeen;
   }
@@ -452,7 +452,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -473,7 +473,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get isBookmarked
    * @return isBookmarked
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
@@ -494,7 +494,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get isPublic
    * @return isPublic
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsPublic() {
     return isPublic;
   }
@@ -515,7 +515,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get isSubscribed
    * @return isSubscribed
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsSubscribed() {
     return isSubscribed;
   }
@@ -536,7 +536,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get lastRelease
    * @return lastRelease
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getLastRelease() {
     return lastRelease;
   }
@@ -557,7 +557,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get lastSeen
    * @return lastSeen
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getLastSeen() {
     return lastSeen;
   }
@@ -578,7 +578,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get level
    * @return level
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getLevel() {
     return level;
   }
@@ -599,7 +599,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get logger
    * @return logger
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getLogger() {
     return logger;
   }
@@ -620,7 +620,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get metadata
    * @return metadata
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ListAProjectSIssues200ResponseInnerMetadata getMetadata() {
     return metadata;
   }
@@ -641,7 +641,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get numComments
    * @return numComments
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getNumComments() {
     return numComments;
   }
@@ -670,7 +670,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get participants
    * @return participants
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<Object> getParticipants() {
     return participants;
   }
@@ -691,7 +691,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get permalink
    * @return permalink
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getPermalink() {
     return permalink;
   }
@@ -720,7 +720,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get pluginActions
    * @return pluginActions
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<List<String>> getPluginActions() {
     return pluginActions;
   }
@@ -749,7 +749,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get pluginContexts
    * @return pluginContexts
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getPluginContexts() {
     return pluginContexts;
   }
@@ -778,7 +778,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get pluginIssues
    * @return pluginIssues
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<Object> getPluginIssues() {
     return pluginIssues;
   }
@@ -799,7 +799,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get project
    * @return project
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ListAProjectSIssues200ResponseInnerProject getProject() {
     return project;
   }
@@ -828,7 +828,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get seenBy
    * @return seenBy
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<Object> getSeenBy() {
     return seenBy;
   }
@@ -849,7 +849,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get shareId
    * @return shareId
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getShareId() {
     return shareId;
   }
@@ -870,7 +870,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get shortId
    * @return shortId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getShortId() {
     return shortId;
   }
@@ -891,7 +891,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get stats
    * @return stats
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnIssue200ResponseStats getStats() {
     return stats;
   }
@@ -912,7 +912,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public StatusEnum getStatus() {
     return status;
   }
@@ -933,7 +933,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get statusDetails
    * @return statusDetails
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getStatusDetails() {
     return statusDetails;
   }
@@ -954,7 +954,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get subscriptionDetails
    * @return subscriptionDetails
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getSubscriptionDetails() {
     return subscriptionDetails;
   }
@@ -983,7 +983,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get tags
    * @return tags
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<Object> getTags() {
     return tags;
   }
@@ -1004,7 +1004,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get title
    * @return title
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTitle() {
     return title;
   }
@@ -1025,7 +1025,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -1046,7 +1046,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get userCount
    * @return userCount
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getUserCount() {
     return userCount;
   }
@@ -1067,7 +1067,7 @@ public class RetrieveAnIssue200Response implements Serializable {
    * Get userReportCount
    * @return userReportCount
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getUserReportCount() {
     return userReportCount;
   }

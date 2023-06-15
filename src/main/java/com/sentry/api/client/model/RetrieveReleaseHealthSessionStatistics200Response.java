@@ -55,7 +55,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveReleaseHealthSessionStatistics200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveReleaseHealthSessionStatistics200Response implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -88,7 +88,7 @@ public class RetrieveReleaseHealthSessionStatistics200Response implements Serial
    * The start time of the data being returned.
    * @return start
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getStart() {
     return start;
   }
@@ -109,7 +109,7 @@ public class RetrieveReleaseHealthSessionStatistics200Response implements Serial
    * The exclusive end time of the data being returned.
    * @return end
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getEnd() {
     return end;
   }
@@ -138,7 +138,7 @@ public class RetrieveReleaseHealthSessionStatistics200Response implements Serial
    * The time slices of the timeseries data given in the &#x60;groups[].series&#x60; field.
    * @return intervals
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<OffsetDateTime> getIntervals() {
     return intervals;
   }
@@ -167,7 +167,7 @@ public class RetrieveReleaseHealthSessionStatistics200Response implements Serial
    * Get groups
    * @return groups
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner> getGroups() {
     return groups;
   }

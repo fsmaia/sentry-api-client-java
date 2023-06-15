@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * UpdateAnOrganizationRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class UpdateAnOrganizationRequest implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class UpdateAnOrganizationRequest implements Serializable {
    * An optional new name for the organization.
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -97,7 +97,7 @@ public class UpdateAnOrganizationRequest implements Serializable {
    * An optional new slug for the organization. Needs to be available and unique.
    * @return slug
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSlug() {
     return slug;
   }

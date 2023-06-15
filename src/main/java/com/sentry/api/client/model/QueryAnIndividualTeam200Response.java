@@ -55,7 +55,7 @@ import com.sentry.api.client.JSON;
 /**
  * QueryAnIndividualTeam200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class QueryAnIndividualTeam200Response implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -100,7 +100,7 @@ public class QueryAnIndividualTeam200Response implements Serializable {
    * Get schemas
    * @return schemas
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getSchemas() {
     return schemas;
   }
@@ -121,7 +121,7 @@ public class QueryAnIndividualTeam200Response implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -142,7 +142,7 @@ public class QueryAnIndividualTeam200Response implements Serializable {
    * Get displayName
    * @return displayName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDisplayName() {
     return displayName;
   }
@@ -163,7 +163,7 @@ public class QueryAnIndividualTeam200Response implements Serializable {
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public QueryAnIndividualTeam200ResponseMeta getMeta() {
     return meta;
   }
@@ -192,7 +192,7 @@ public class QueryAnIndividualTeam200Response implements Serializable {
    * Get members
    * @return members
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner> getMembers() {
     return members;
   }

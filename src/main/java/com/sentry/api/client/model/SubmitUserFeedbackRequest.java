@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * SubmitUserFeedbackRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class SubmitUserFeedbackRequest implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -84,7 +84,7 @@ public class SubmitUserFeedbackRequest implements Serializable {
    * The event ID. This can be retrieved from the [beforeSend callback](https://docs.sentry.io/platforms/javascript/configuration/filtering/#using-beforesend).
    * @return eventId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventId() {
     return eventId;
   }
@@ -105,7 +105,7 @@ public class SubmitUserFeedbackRequest implements Serializable {
    * User&#39;s name.
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -126,7 +126,7 @@ public class SubmitUserFeedbackRequest implements Serializable {
    * User&#39;s email address.
    * @return email
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEmail() {
     return email;
   }
@@ -147,7 +147,7 @@ public class SubmitUserFeedbackRequest implements Serializable {
    * Comments supplied by user.
    * @return comments
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getComments() {
     return comments;
   }

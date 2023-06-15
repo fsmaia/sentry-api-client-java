@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -89,7 +89,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments imple
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -110,7 +110,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments imple
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -131,7 +131,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments imple
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -152,7 +152,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments imple
    * Get lastCheckIn
    * @return lastCheckIn
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getLastCheckIn() {
     return lastCheckIn;
   }
@@ -173,7 +173,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments imple
    * Get nextCheckIn
    * @return nextCheckIn
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getNextCheckIn() {
     return nextCheckIn;
   }

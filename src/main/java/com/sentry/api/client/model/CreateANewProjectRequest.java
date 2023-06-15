@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * CreateANewProjectRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class CreateANewProjectRequest implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -85,7 +85,7 @@ public class CreateANewProjectRequest implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -106,7 +106,7 @@ public class CreateANewProjectRequest implements Serializable {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSlug() {
     return slug;
   }
@@ -127,7 +127,7 @@ public class CreateANewProjectRequest implements Serializable {
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPlatform() {
     return platform;
   }
@@ -148,7 +148,7 @@ public class CreateANewProjectRequest implements Serializable {
    * Get defaultRules
    * @return defaultRules
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getDefaultRules() {
     return defaultRules;
   }

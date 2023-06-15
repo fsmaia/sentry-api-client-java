@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktrace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktrace implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -95,7 +95,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get frames
    * @return frames
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner> getFrames() {
     return frames;
   }
@@ -116,7 +116,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get framesOmitted
    * @return framesOmitted
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFramesOmitted() {
     return framesOmitted;
   }
@@ -137,7 +137,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get registers
    * @return registers
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRegisters() {
     return registers;
   }
@@ -158,7 +158,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get hasSystemFrames
    * @return hasSystemFrames
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasSystemFrames() {
     return hasSystemFrames;
   }

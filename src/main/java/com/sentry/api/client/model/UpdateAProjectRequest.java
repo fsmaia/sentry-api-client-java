@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * UpdateAProjectRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class UpdateAProjectRequest implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -92,7 +92,7 @@ public class UpdateAProjectRequest implements Serializable {
    * The new name for the project.
    * @return name
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -113,7 +113,7 @@ public class UpdateAProjectRequest implements Serializable {
    * The new slug for the project.
    * @return slug
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSlug() {
     return slug;
   }
@@ -134,7 +134,7 @@ public class UpdateAProjectRequest implements Serializable {
    * The new platform for the project.
    * @return platform
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPlatform() {
     return platform;
   }
@@ -155,7 +155,7 @@ public class UpdateAProjectRequest implements Serializable {
    * In case this API call is invoked with a user context this allows changing of the bookmark flag.
    * @return isBookmarked
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
@@ -176,7 +176,7 @@ public class UpdateAProjectRequest implements Serializable {
    * 
    * @return digestsMinDelay
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getDigestsMinDelay() {
     return digestsMinDelay;
   }
@@ -197,7 +197,7 @@ public class UpdateAProjectRequest implements Serializable {
    * 
    * @return digestsMaxDelay
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getDigestsMaxDelay() {
     return digestsMaxDelay;
   }

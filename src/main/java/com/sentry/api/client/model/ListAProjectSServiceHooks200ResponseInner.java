@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSServiceHooks200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -94,7 +94,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -123,7 +123,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get events
    * @return events
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getEvents() {
     return events;
   }
@@ -144,7 +144,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -165,7 +165,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get secret
    * @return secret
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSecret() {
     return secret;
   }
@@ -186,7 +186,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -207,7 +207,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get url
    * @return url
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getUrl() {
     return url;
   }

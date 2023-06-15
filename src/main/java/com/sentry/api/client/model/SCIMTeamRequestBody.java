@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
 /**
  * SCIMTeamRequestBody
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class SCIMTeamRequestBody implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -86,7 +86,7 @@ public class SCIMTeamRequestBody implements Serializable {
    * Get schemas
    * @return schemas
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<Object> getSchemas() {
     return schemas;
   }
@@ -104,7 +104,7 @@ public class SCIMTeamRequestBody implements Serializable {
    * Get displayName
    * @return displayName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDisplayName() {
     return displayName;
   }
@@ -119,7 +119,7 @@ public class SCIMTeamRequestBody implements Serializable {
    * Get members
    * @return members
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<Object> getMembers() {
     return members;
   }

@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSReleaseFiles200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -97,7 +97,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get sha1
    * @return sha1
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSha1() {
     return sha1;
   }
@@ -118,7 +118,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get dist
    * @return dist
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDist() {
     return dist;
   }
@@ -139,7 +139,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -160,7 +160,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -181,7 +181,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get headers
    * @return headers
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getHeaders() {
     return headers;
   }
@@ -202,7 +202,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -223,7 +223,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get size
    * @return size
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getSize() {
     return size;
   }

@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSClientKeys200ResponseInnerBrowserSdk
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAProjectSClientKeys200ResponseInnerBrowserSdk implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -82,7 +82,7 @@ public class ListAProjectSClientKeys200ResponseInnerBrowserSdk implements Serial
    * Get choices
    * @return choices
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<List<String>> getChoices() {
     return choices;
   }

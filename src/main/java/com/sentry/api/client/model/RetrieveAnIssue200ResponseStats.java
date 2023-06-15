@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnIssue200ResponseStats
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnIssue200ResponseStats implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -87,7 +87,7 @@ public class RetrieveAnIssue200ResponseStats implements Serializable {
    * Get _24h
    * @return _24h
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<List<BigDecimal>> get24h() {
     return _24h;
   }
@@ -116,7 +116,7 @@ public class RetrieveAnIssue200ResponseStats implements Serializable {
    * Get _30d
    * @return _30d
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<List<BigDecimal>> get30d() {
     return _30d;
   }

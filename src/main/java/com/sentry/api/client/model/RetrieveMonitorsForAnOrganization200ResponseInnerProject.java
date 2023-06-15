@@ -55,7 +55,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveMonitorsForAnOrganization200ResponseInnerProject
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -172,7 +172,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get stats
    * @return stats
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getStats() {
     return stats;
   }
@@ -193,7 +193,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get transactionStats
    * @return transactionStats
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getTransactionStats() {
     return transactionStats;
   }
@@ -214,7 +214,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get sessionStats
    * @return sessionStats
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getSessionStats() {
     return sessionStats;
   }
@@ -235,7 +235,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -256,7 +256,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -277,7 +277,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -298,7 +298,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPlatform() {
     return platform;
   }
@@ -319,7 +319,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -340,7 +340,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get isBookmarked
    * @return isBookmarked
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
@@ -361,7 +361,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get isMember
    * @return isMember
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsMember() {
     return isMember;
   }
@@ -390,7 +390,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get features
    * @return features
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getFeatures() {
     return features;
   }
@@ -411,7 +411,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get firstEvent
    * @return firstEvent
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getFirstEvent() {
     return firstEvent;
   }
@@ -432,7 +432,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get firstTransactionEvent
    * @return firstTransactionEvent
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getFirstTransactionEvent() {
     return firstTransactionEvent;
   }
@@ -461,7 +461,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get access
    * @return access
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getAccess() {
     return access;
   }
@@ -482,7 +482,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get hasAccess
    * @return hasAccess
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasAccess() {
     return hasAccess;
   }
@@ -503,7 +503,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get hasMinifiedStackTrace
    * @return hasMinifiedStackTrace
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasMinifiedStackTrace() {
     return hasMinifiedStackTrace;
   }
@@ -524,7 +524,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get hasMonitors
    * @return hasMonitors
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasMonitors() {
     return hasMonitors;
   }
@@ -545,7 +545,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get hasProfiles
    * @return hasProfiles
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasProfiles() {
     return hasProfiles;
   }
@@ -566,7 +566,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get hasReplays
    * @return hasReplays
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasReplays() {
     return hasReplays;
   }
@@ -587,7 +587,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get hasSessions
    * @return hasSessions
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasSessions() {
     return hasSessions;
   }
@@ -608,7 +608,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get isInternal
    * @return isInternal
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsInternal() {
     return isInternal;
   }
@@ -629,7 +629,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get isPublic
    * @return isPublic
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsPublic() {
     return isPublic;
   }
@@ -650,7 +650,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get avatar
    * @return avatar
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getAvatar() {
     return avatar;
   }
@@ -671,7 +671,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get color
    * @return color
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getColor() {
     return color;
   }
@@ -692,7 +692,7 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerProject implements
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatus() {
     return status;
   }

@@ -60,7 +60,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnIssueSHashes200ResponseInnerLatestEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -165,7 +165,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get eventID
    * @return eventID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventID() {
     return eventID;
   }
@@ -186,7 +186,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get dist
    * @return dist
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getDist() {
     return dist;
   }
@@ -207,7 +207,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get message
    * @return message
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessage() {
     return message;
   }
@@ -228,7 +228,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -249,7 +249,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get size
    * @return size
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Integer getSize() {
     return size;
   }
@@ -278,7 +278,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventErrorsInner> getErrors() {
     return errors;
   }
@@ -299,7 +299,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getPlatform() {
     return platform;
   }
@@ -320,7 +320,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -341,7 +341,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get metadata
    * @return metadata
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnEventForAProject200ResponseMetadata getMetadata() {
     return metadata;
   }
@@ -370,7 +370,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get tags
    * @return tags
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<RetrieveAnEventForAProject200ResponseTagsInner> getTags() {
     return tags;
   }
@@ -391,7 +391,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -412,7 +412,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get dateReceived
    * @return dateReceived
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDateReceived() {
     return dateReceived;
   }
@@ -433,7 +433,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ResolveAnEventID200ResponseEventUser getUser() {
     return user;
   }
@@ -462,7 +462,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get entries
    * @return entries
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventEntriesInner> getEntries() {
     return entries;
   }
@@ -483,7 +483,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get packages
    * @return packages
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getPackages() {
     return packages;
   }
@@ -504,7 +504,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get sdk
    * @return sdk
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnEventForAProject200ResponseSdk getSdk() {
     return sdk;
   }
@@ -525,7 +525,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnEventForAProject200ResponseMeta getMeta() {
     return meta;
   }
@@ -546,7 +546,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get contexts
    * @return contexts
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getContexts() {
     return contexts;
   }
@@ -575,7 +575,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get fingerprints
    * @return fingerprints
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getFingerprints() {
     return fingerprints;
   }
@@ -596,7 +596,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get context
    * @return context
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getContext() {
     return context;
   }
@@ -617,7 +617,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get groupID
    * @return groupID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getGroupID() {
     return groupID;
   }
@@ -638,7 +638,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get title
    * @return title
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getTitle() {
     return title;
   }

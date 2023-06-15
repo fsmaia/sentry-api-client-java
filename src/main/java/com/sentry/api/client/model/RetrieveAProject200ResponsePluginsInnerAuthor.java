@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAProject200ResponsePluginsInnerAuthor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAProject200ResponsePluginsInnerAuthor implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class RetrieveAProject200ResponsePluginsInnerAuthor implements Serializab
    * Get name
    * @return name
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -97,7 +97,7 @@ public class RetrieveAProject200ResponsePluginsInnerAuthor implements Serializab
    * Get url
    * @return url
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUrl() {
     return url;
   }

@@ -55,7 +55,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSPaginatedTeams200ResponseResourcesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -100,7 +100,7 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner implemen
    * Get schemas
    * @return schemas
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getSchemas() {
     return schemas;
   }
@@ -121,7 +121,7 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner implemen
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -142,7 +142,7 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner implemen
    * Get displayName
    * @return displayName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDisplayName() {
     return displayName;
   }
@@ -171,7 +171,7 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner implemen
    * Get members
    * @return members
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner> getMembers() {
     return members;
   }
@@ -192,7 +192,7 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner implemen
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMeta getMeta() {
     return meta;
   }

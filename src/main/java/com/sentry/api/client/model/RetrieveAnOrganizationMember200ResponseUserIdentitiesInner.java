@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganizationMember200ResponseUserIdentitiesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -95,7 +95,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -116,7 +116,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -137,7 +137,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get organization
    * @return organization
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerOrganization getOrganization() {
     return organization;
   }
@@ -158,7 +158,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get provider
    * @return provider
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider getProvider() {
     return provider;
   }
@@ -179,7 +179,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get dateVerified
    * @return dateVerified
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateVerified() {
     return dateVerified;
   }
@@ -200,7 +200,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get dateSynced
    * @return dateSynced
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateSynced() {
     return dateSynced;
   }

@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * SCIMMemberProvision
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class SCIMMemberProvision implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class SCIMMemberProvision implements Serializable {
    * Get userName
    * @return userName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getUserName() {
     return userName;
   }
@@ -97,7 +97,7 @@ public class SCIMMemberProvision implements Serializable {
    * Get sentryOrgRole
    * @return sentryOrgRole
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSentryOrgRole() {
     return sentryOrgRole;
   }

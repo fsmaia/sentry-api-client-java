@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSIntegrationPlatformInstallations200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAnOrganizationSIntegrationPlatformInstallations200ResponseInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -86,7 +86,7 @@ public class ListAnOrganizationSIntegrationPlatformInstallations200ResponseInner
    * Get app
    * @return app
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ListAnOrganizationSIntegrationPlatformInstallations200ResponseInnerApp getApp() {
     return app;
   }
@@ -107,7 +107,7 @@ public class ListAnOrganizationSIntegrationPlatformInstallations200ResponseInner
    * Get organization
    * @return organization
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ListAnOrganizationSIntegrationPlatformInstallations200ResponseInnerOrganization getOrganization() {
     return organization;
   }
@@ -128,7 +128,7 @@ public class ListAnOrganizationSIntegrationPlatformInstallations200ResponseInner
    * Get uuid
    * @return uuid
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getUuid() {
     return uuid;
   }
@@ -149,7 +149,7 @@ public class ListAnOrganizationSIntegrationPlatformInstallations200ResponseInner
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatus() {
     return status;
   }

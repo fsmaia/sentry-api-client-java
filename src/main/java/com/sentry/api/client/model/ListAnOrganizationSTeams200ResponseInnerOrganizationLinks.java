@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSTeams200ResponseInnerOrganizationLinks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAnOrganizationSTeams200ResponseInnerOrganizationLinks implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganizationLinks implement
    * Get organizationUrl
    * @return organizationUrl
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getOrganizationUrl() {
     return organizationUrl;
   }
@@ -97,7 +97,7 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganizationLinks implement
    * Get regionUrl
    * @return regionUrl
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getRegionUrl() {
     return regionUrl;
   }

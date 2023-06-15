@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
 /**
  * DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -82,7 +82,7 @@ public class DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner 
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -103,7 +103,7 @@ public class DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner 
    * Get message
    * @return message
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getMessage() {
     return message;
   }
@@ -132,7 +132,7 @@ public class DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner 
    * Get data
    * @return data
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Map<String, Object> getData() {
     return data;
   }

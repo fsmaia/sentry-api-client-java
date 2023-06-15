@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSUserFeedback200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ListAProjectSUserFeedback200ResponseInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -105,7 +105,7 @@ public class ListAProjectSUserFeedback200ResponseInner implements Serializable {
    * Get comments
    * @return comments
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getComments() {
     return comments;
   }
@@ -126,7 +126,7 @@ public class ListAProjectSUserFeedback200ResponseInner implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -147,7 +147,7 @@ public class ListAProjectSUserFeedback200ResponseInner implements Serializable {
    * Get email
    * @return email
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEmail() {
     return email;
   }
@@ -168,7 +168,7 @@ public class ListAProjectSUserFeedback200ResponseInner implements Serializable {
    * Get event
    * @return event
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ListAProjectSUserFeedback200ResponseInnerEvent getEvent() {
     return event;
   }
@@ -189,7 +189,7 @@ public class ListAProjectSUserFeedback200ResponseInner implements Serializable {
    * Get eventID
    * @return eventID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEventID() {
     return eventID;
   }
@@ -210,7 +210,7 @@ public class ListAProjectSUserFeedback200ResponseInner implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -231,7 +231,7 @@ public class ListAProjectSUserFeedback200ResponseInner implements Serializable {
    * Get issue
    * @return issue
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getIssue() {
     return issue;
   }
@@ -252,7 +252,7 @@ public class ListAProjectSUserFeedback200ResponseInner implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -273,7 +273,7 @@ public class ListAProjectSUserFeedback200ResponseInner implements Serializable {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getUser() {
     return user;
   }

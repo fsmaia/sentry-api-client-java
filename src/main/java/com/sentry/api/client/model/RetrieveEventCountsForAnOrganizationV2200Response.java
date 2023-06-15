@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveEventCountsForAnOrganizationV2200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveEventCountsForAnOrganizationV2200Response implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -87,7 +87,7 @@ public class RetrieveEventCountsForAnOrganizationV2200Response implements Serial
    * Get start
    * @return start
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStart() {
     return start;
   }
@@ -108,7 +108,7 @@ public class RetrieveEventCountsForAnOrganizationV2200Response implements Serial
    * Get end
    * @return end
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEnd() {
     return end;
   }
@@ -137,7 +137,7 @@ public class RetrieveEventCountsForAnOrganizationV2200Response implements Serial
    * Get intervals
    * @return intervals
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getIntervals() {
     return intervals;
   }
@@ -166,7 +166,7 @@ public class RetrieveEventCountsForAnOrganizationV2200Response implements Serial
    * Get groups
    * @return groups
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner> getGroups() {
     return groups;
   }

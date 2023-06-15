@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -90,7 +90,7 @@ public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner implem
    * Get by
    * @return by
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, Object> getBy() {
     return by;
   }
@@ -119,7 +119,7 @@ public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner implem
    * Get totals
    * @return totals
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, Object> getTotals() {
     return totals;
   }
@@ -148,7 +148,7 @@ public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner implem
    * Get series
    * @return series
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, Object> getSeries() {
     return series;
   }

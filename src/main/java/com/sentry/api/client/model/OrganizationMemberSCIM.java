@@ -56,7 +56,7 @@ import com.sentry.api.client.JSON;
 /**
  * Conforming to the SCIM RFC, this represents a Sentry Org Member as a SCIM user object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class OrganizationMemberSCIM implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -105,7 +105,7 @@ public class OrganizationMemberSCIM implements Serializable {
    * Get active
    * @return active
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getActive() {
     return active;
   }
@@ -134,7 +134,7 @@ public class OrganizationMemberSCIM implements Serializable {
    * Get schemas
    * @return schemas
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getSchemas() {
     return schemas;
   }
@@ -155,7 +155,7 @@ public class OrganizationMemberSCIM implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -176,7 +176,7 @@ public class OrganizationMemberSCIM implements Serializable {
    * Get userName
    * @return userName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getUserName() {
     return userName;
   }
@@ -197,7 +197,7 @@ public class OrganizationMemberSCIM implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public ListAnOrganizationSMembers200ResponseResourcesInnerName getName() {
     return name;
   }
@@ -226,7 +226,7 @@ public class OrganizationMemberSCIM implements Serializable {
    * Get emails
    * @return emails
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner> getEmails() {
     return emails;
   }
@@ -247,7 +247,7 @@ public class OrganizationMemberSCIM implements Serializable {
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public QueryAnIndividualTeam200ResponseMeta getMeta() {
     return meta;
   }
@@ -268,7 +268,7 @@ public class OrganizationMemberSCIM implements Serializable {
    * Get sentryOrgRole
    * @return sentryOrgRole
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSentryOrgRole() {
     return sentryOrgRole;
   }

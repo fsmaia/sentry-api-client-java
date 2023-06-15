@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * UpdateAnOrganizationSReleaseRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class UpdateAnOrganizationSReleaseRequest implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -91,7 +91,7 @@ public class UpdateAnOrganizationSReleaseRequest implements Serializable {
    * An optional commit reference. This is useful if a tagged version has been provided.
    * @return ref
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRef() {
     return ref;
   }
@@ -112,7 +112,7 @@ public class UpdateAnOrganizationSReleaseRequest implements Serializable {
    * A URL that points to the release. This can be the path to an online interface to the source code for instance.
    * @return url
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUrl() {
     return url;
   }
@@ -133,7 +133,7 @@ public class UpdateAnOrganizationSReleaseRequest implements Serializable {
    * An optional date that indicates when the release went live. If not provided the current time is assumed.
    * @return dateReleased
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getDateReleased() {
     return dateReleased;
   }
@@ -162,7 +162,7 @@ public class UpdateAnOrganizationSReleaseRequest implements Serializable {
    * An optional list of commit data to be associated with the release. Commits must include parameters &#x60;id&#x60; (the sha of the commit), and can optionally include &#x60;repository&#x60;, &#x60;message&#x60;, &#x60;author_name&#x60;, &#x60;author_email&#x60;, and &#x60;timestamp&#x60;.
    * @return commits
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<Object> getCommits() {
     return commits;
   }
@@ -191,7 +191,7 @@ public class UpdateAnOrganizationSReleaseRequest implements Serializable {
    * An optional way to indicate the start and end commits for each repository included in a release. Head commits must include parameters &#x60;repository&#x60; and &#x60;commit&#x60; (the HEAD sha). They can optionally include &#x60;previousCommit&#x60; (the sha of the HEAD of the previous release), which should be specified if this is the first time you&#39;ve sent commit data.
    * @return refs
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<Object> getRefs() {
     return refs;
   }

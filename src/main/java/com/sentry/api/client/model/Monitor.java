@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * Monitor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class Monitor implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -107,7 +107,7 @@ public class Monitor implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -128,7 +128,7 @@ public class Monitor implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -149,7 +149,7 @@ public class Monitor implements Serializable {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -170,7 +170,7 @@ public class Monitor implements Serializable {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -191,7 +191,7 @@ public class Monitor implements Serializable {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -212,7 +212,7 @@ public class Monitor implements Serializable {
    * Get config
    * @return config
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getConfig() {
     return config;
   }
@@ -233,7 +233,7 @@ public class Monitor implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -254,7 +254,7 @@ public class Monitor implements Serializable {
    * Get project
    * @return project
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveMonitorsForAnOrganization200ResponseInnerProject getProject() {
     return project;
   }
@@ -275,7 +275,7 @@ public class Monitor implements Serializable {
    * Get environments
    * @return environments
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments getEnvironments() {
     return environments;
   }

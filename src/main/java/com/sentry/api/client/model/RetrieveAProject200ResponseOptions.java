@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAProject200ResponseOptions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAProject200ResponseOptions implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -96,7 +96,7 @@ public class RetrieveAProject200ResponseOptions implements Serializable {
    * Get feedbackColonBranding
    * @return feedbackColonBranding
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getFeedbackColonBranding() {
     return feedbackColonBranding;
   }
@@ -117,7 +117,7 @@ public class RetrieveAProject200ResponseOptions implements Serializable {
    * Get filtersColonBlacklistedIps
    * @return filtersColonBlacklistedIps
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFiltersColonBlacklistedIps() {
     return filtersColonBlacklistedIps;
   }
@@ -138,7 +138,7 @@ public class RetrieveAProject200ResponseOptions implements Serializable {
    * Get filtersColonErrorMessages
    * @return filtersColonErrorMessages
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFiltersColonErrorMessages() {
     return filtersColonErrorMessages;
   }
@@ -159,7 +159,7 @@ public class RetrieveAProject200ResponseOptions implements Serializable {
    * Get filtersColonReleases
    * @return filtersColonReleases
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFiltersColonReleases() {
     return filtersColonReleases;
   }
@@ -180,7 +180,7 @@ public class RetrieveAProject200ResponseOptions implements Serializable {
    * Get sentryColonCspIgnoredSources
    * @return sentryColonCspIgnoredSources
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSentryColonCspIgnoredSources() {
     return sentryColonCspIgnoredSources;
   }
@@ -201,7 +201,7 @@ public class RetrieveAProject200ResponseOptions implements Serializable {
    * Get sentryColonCspIgnoredSourcesDefaults
    * @return sentryColonCspIgnoredSourcesDefaults
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getSentryColonCspIgnoredSourcesDefaults() {
     return sentryColonCspIgnoredSourcesDefaults;
   }
@@ -222,7 +222,7 @@ public class RetrieveAProject200ResponseOptions implements Serializable {
    * Get sentryColonReprocessingActive
    * @return sentryColonReprocessingActive
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getSentryColonReprocessingActive() {
     return sentryColonReprocessingActive;
   }

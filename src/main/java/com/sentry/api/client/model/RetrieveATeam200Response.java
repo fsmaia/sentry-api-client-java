@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveATeam200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveATeam200Response implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -111,7 +111,7 @@ public class RetrieveATeam200Response implements Serializable {
    * Get avatar
    * @return avatar
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveATeam200ResponseAvatar getAvatar() {
     return avatar;
   }
@@ -132,7 +132,7 @@ public class RetrieveATeam200Response implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -153,7 +153,7 @@ public class RetrieveATeam200Response implements Serializable {
    * Get hasAccess
    * @return hasAccess
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasAccess() {
     return hasAccess;
   }
@@ -174,7 +174,7 @@ public class RetrieveATeam200Response implements Serializable {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -195,7 +195,7 @@ public class RetrieveATeam200Response implements Serializable {
    * Get isMember
    * @return isMember
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsMember() {
     return isMember;
   }
@@ -216,7 +216,7 @@ public class RetrieveATeam200Response implements Serializable {
    * Get isPending
    * @return isPending
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsPending() {
     return isPending;
   }
@@ -237,7 +237,7 @@ public class RetrieveATeam200Response implements Serializable {
    * Get memberCount
    * @return memberCount
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getMemberCount() {
     return memberCount;
   }
@@ -258,7 +258,7 @@ public class RetrieveATeam200Response implements Serializable {
    * Get organization
    * @return organization
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public RetrieveATeam200ResponseOrganization getOrganization() {
     return organization;
   }
@@ -279,7 +279,7 @@ public class RetrieveATeam200Response implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -300,7 +300,7 @@ public class RetrieveATeam200Response implements Serializable {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSlug() {
     return slug;
   }

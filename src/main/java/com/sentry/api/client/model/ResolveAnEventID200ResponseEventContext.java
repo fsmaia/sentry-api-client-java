@@ -54,7 +54,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventContext
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventContext implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -91,7 +91,7 @@ public class ResolveAnEventID200ResponseEventContext implements Serializable {
    * Get length
    * @return length
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Integer getLength() {
     return length;
   }
@@ -120,7 +120,7 @@ public class ResolveAnEventID200ResponseEventContext implements Serializable {
    * Get results
    * @return results
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<Integer> getResults() {
     return results;
   }
@@ -141,7 +141,7 @@ public class ResolveAnEventID200ResponseEventContext implements Serializable {
    * Get session
    * @return session
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public ResolveAnEventID200ResponseEventContextSession getSession() {
     return session;
   }
@@ -162,7 +162,7 @@ public class ResolveAnEventID200ResponseEventContext implements Serializable {
    * Get unauthorized
    * @return unauthorized
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Boolean getUnauthorized() {
     return unauthorized;
   }
@@ -183,7 +183,7 @@ public class ResolveAnEventID200ResponseEventContext implements Serializable {
    * Get url
    * @return url
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUrl() {
     return url;
   }

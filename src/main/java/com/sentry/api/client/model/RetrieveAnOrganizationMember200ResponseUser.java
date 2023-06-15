@@ -59,7 +59,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganizationMember200ResponseUser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseUser implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -156,7 +156,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get identities
    * @return identities
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public List<RetrieveAnOrganizationMember200ResponseUserIdentitiesInner> getIdentities() {
     return identities;
   }
@@ -177,7 +177,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get avatar
    * @return avatar
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public RetrieveAnOrganizationMember200ResponseUserAvatar getAvatar() {
     return avatar;
   }
@@ -198,7 +198,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -219,7 +219,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -240,7 +240,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get username
    * @return username
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getUsername() {
     return username;
   }
@@ -261,7 +261,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get email
    * @return email
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getEmail() {
     return email;
   }
@@ -282,7 +282,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get avatarUrl
    * @return avatarUrl
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getAvatarUrl() {
     return avatarUrl;
   }
@@ -303,7 +303,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get isActive
    * @return isActive
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsActive() {
     return isActive;
   }
@@ -324,7 +324,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get hasPasswordAuth
    * @return hasPasswordAuth
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasPasswordAuth() {
     return hasPasswordAuth;
   }
@@ -345,7 +345,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get isManaged
    * @return isManaged
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsManaged() {
     return isManaged;
   }
@@ -366,7 +366,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get dateJoined
    * @return dateJoined
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateJoined() {
     return dateJoined;
   }
@@ -387,7 +387,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get lastLogin
    * @return lastLogin
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getLastLogin() {
     return lastLogin;
   }
@@ -408,7 +408,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get has2fa
    * @return has2fa
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHas2fa() {
     return has2fa;
   }
@@ -429,7 +429,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get lastActive
    * @return lastActive
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getLastActive() {
     return lastActive;
   }
@@ -450,7 +450,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get isSuperuser
    * @return isSuperuser
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsSuperuser() {
     return isSuperuser;
   }
@@ -471,7 +471,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get isStaff
    * @return isStaff
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsStaff() {
     return isStaff;
   }
@@ -500,7 +500,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get experiments
    * @return experiments
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Map<String, Object> getExperiments() {
     return experiments;
   }
@@ -529,7 +529,7 @@ public class RetrieveAnOrganizationMember200ResponseUser implements Serializable
    * Get emails
    * @return emails
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<RetrieveAnOrganizationMember200ResponseUserEmailsInner> getEmails() {
     return emails;
   }

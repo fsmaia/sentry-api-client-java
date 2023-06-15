@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * UpdateATeamRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class UpdateATeamRequest implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -76,7 +76,7 @@ public class UpdateATeamRequest implements Serializable {
    * The new name for the team.
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -97,7 +97,7 @@ public class UpdateATeamRequest implements Serializable {
    * A new slug for the team. It has to be unique and available.
    * @return slug
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSlug() {
     return slug;
   }

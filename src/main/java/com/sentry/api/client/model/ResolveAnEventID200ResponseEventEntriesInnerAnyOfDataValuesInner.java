@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -97,7 +97,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner im
    * Get category
    * @return category
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getCategory() {
     return category;
   }
@@ -118,7 +118,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner im
    * Get level
    * @return level
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getLevel() {
     return level;
   }
@@ -139,7 +139,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner im
    * Get eventId
    * @return eventId
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getEventId() {
     return eventId;
   }
@@ -160,7 +160,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner im
    * Get timestamp
    * @return timestamp
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
@@ -181,7 +181,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner im
    * Get data
    * @return data
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getData() {
     return data;
   }
@@ -202,7 +202,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner im
    * Get message
    * @return message
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getMessage() {
     return message;
   }
@@ -223,7 +223,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner im
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getType() {
     return type;
   }

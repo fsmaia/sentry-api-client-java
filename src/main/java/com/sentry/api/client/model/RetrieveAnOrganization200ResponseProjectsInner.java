@@ -55,7 +55,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganization200ResponseProjectsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnOrganization200ResponseProjectsInner implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -124,7 +124,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -145,7 +145,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get firstEvent
    * @return firstEvent
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getFirstEvent() {
     return firstEvent;
   }
@@ -166,7 +166,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get hasAccess
    * @return hasAccess
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getHasAccess() {
     return hasAccess;
   }
@@ -187,7 +187,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -208,7 +208,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get isBookmarked
    * @return isBookmarked
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
@@ -229,7 +229,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get isMember
    * @return isMember
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Boolean getIsMember() {
     return isMember;
   }
@@ -250,7 +250,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get latestDeploys
    * @return latestDeploys
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getLatestDeploys() {
     return latestDeploys;
   }
@@ -271,7 +271,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -292,7 +292,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getPlatform() {
     return platform;
   }
@@ -321,7 +321,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get platforms
    * @return platforms
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<String> getPlatforms() {
     return platforms;
   }
@@ -342,7 +342,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -363,7 +363,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get team
    * @return team
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public RetrieveAnOrganization200ResponseProjectsInnerTeam getTeam() {
     return team;
   }
@@ -392,7 +392,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get teams
    * @return teams
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<ListAnOrganizationSProjects200ResponseInnerTeamsInner> getTeams() {
     return teams;
   }

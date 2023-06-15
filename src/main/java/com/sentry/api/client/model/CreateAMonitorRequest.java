@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
 /**
  * Allows parameters to be defined in snake case, but passed as camel case.  Errors are output in camel case.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class CreateAMonitorRequest implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -190,7 +190,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get project
    * @return project
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getProject() {
     return project;
   }
@@ -211,7 +211,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -232,7 +232,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getSlug() {
     return slug;
   }
@@ -253,7 +253,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public StatusEnum getStatus() {
     return status;
   }
@@ -274,7 +274,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public TypeEnum getType() {
     return type;
   }
@@ -295,7 +295,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get config
    * @return config
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public CreateANewCheckInRequestMonitorConfig getConfig() {
     return config;
   }
@@ -316,7 +316,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get alertRule
    * @return alertRule
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public CreateAMonitorRequestAlertRule getAlertRule() {
     return alertRule;
   }

@@ -56,7 +56,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnEventForAProject200ResponseReleaseOneOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:01:41.950429Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -149,7 +149,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get authors
    * @return authors
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<Object> getAuthors() {
     return authors;
   }
@@ -170,7 +170,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get commitCount
    * @return commitCount
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getCommitCount() {
     return commitCount;
   }
@@ -191,7 +191,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get data
    * @return data
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Object getData() {
     return data;
   }
@@ -212,7 +212,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -233,7 +233,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get dateReleased
    * @return dateReleased
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getDateReleased() {
     return dateReleased;
   }
@@ -254,7 +254,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get deployCount
    * @return deployCount
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getDeployCount() {
     return deployCount;
   }
@@ -275,7 +275,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get firstEvent
    * @return firstEvent
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getFirstEvent() {
     return firstEvent;
   }
@@ -296,7 +296,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get lastCommit
    * @return lastCommit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getLastCommit() {
     return lastCommit;
   }
@@ -317,7 +317,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get lastDeploy
    * @return lastDeploy
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy getLastDeploy() {
     return lastDeploy;
   }
@@ -338,7 +338,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get lastEvent
    * @return lastEvent
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public OffsetDateTime getLastEvent() {
     return lastEvent;
   }
@@ -359,7 +359,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get newGroups
    * @return newGroups
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public Long getNewGroups() {
     return newGroups;
   }
@@ -380,7 +380,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get owner
    * @return owner
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public Object getOwner() {
     return owner;
   }
@@ -409,7 +409,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get projects
    * @return projects
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public List<RetrieveAProject200ResponseLatestReleaseProjectsInner> getProjects() {
     return projects;
   }
@@ -430,7 +430,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get ref
    * @return ref
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getRef() {
     return ref;
   }
@@ -451,7 +451,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get shortVersion
    * @return shortVersion
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getShortVersion() {
     return shortVersion;
   }
@@ -472,7 +472,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get version
    * @return version
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
   public String getVersion() {
     return version;
   }
@@ -493,7 +493,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get url
    * @return url
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
   public String getUrl() {
     return url;
   }
