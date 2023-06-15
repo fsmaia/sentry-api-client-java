@@ -2,7 +2,7 @@
 
 API Reference
 - API version: v0
-  - Build date: 2023-06-15T09:39:48.475487Z[Etc/UTC]
+  - Build date: 2023-06-15T10:01:41.950429Z[Etc/UTC]
 
 Sentry Public API
 
@@ -85,7 +85,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.CronsApi;
+import com.sentry.api.client.api.CronsApi;
 
 public class Example {
   public static void main(String[] args) {

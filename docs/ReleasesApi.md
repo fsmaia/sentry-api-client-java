@@ -44,7 +44,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -118,7 +118,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -189,7 +189,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -263,7 +263,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -335,7 +335,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -403,7 +403,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -476,7 +476,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -549,7 +549,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -620,7 +620,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -691,7 +691,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -762,7 +762,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -834,7 +834,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -906,7 +906,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -983,7 +983,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1058,7 +1058,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1129,7 +1129,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1199,7 +1199,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1293,7 +1293,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1370,7 +1370,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1445,7 +1445,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1518,7 +1518,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1596,7 +1596,7 @@ import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
 import com.sentry.api.client.models.*;
-import com.sentry.api.client.java.ReleasesApi;
+import com.sentry.api.client.api.ReleasesApi;
 
 public class Example {
   public static void main(String[] args) {
