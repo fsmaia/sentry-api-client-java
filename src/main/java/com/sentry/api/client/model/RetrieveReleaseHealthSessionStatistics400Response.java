@@ -15,52 +15,33 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveReleaseHealthSessionStatistics400Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveReleaseHealthSessionStatistics400Response.JSON_PROPERTY_DETAIL
+})
+@JsonTypeName("Retrieve_Release_Health_Session_Statistics_400_response")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveReleaseHealthSessionStatistics400Response {
-  public static final String SERIALIZED_NAME_DETAIL = "detail";
-  @SerializedName(SERIALIZED_NAME_DETAIL)
+  public static final String JSON_PROPERTY_DETAIL = "detail";
   private String detail;
 
-  public RetrieveReleaseHealthSessionStatistics400Response() {
+  public RetrieveReleaseHealthSessionStatistics400Response() { 
   }
 
   public RetrieveReleaseHealthSessionStatistics400Response detail(String detail) {
-    
     this.detail = detail;
     return this;
   }
@@ -69,18 +50,25 @@ public class RetrieveReleaseHealthSessionStatistics400Response {
    * Get detail
    * @return detail
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DETAIL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDetail() {
     return detail;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DETAIL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDetail(String detail) {
     this.detail = detail;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_Release_Health_Session_Statistics_400_response object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -118,99 +106,5 @@ public class RetrieveReleaseHealthSessionStatistics400Response {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("detail");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("detail");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveReleaseHealthSessionStatistics400Response
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveReleaseHealthSessionStatistics400Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveReleaseHealthSessionStatistics400Response is not found in the empty JSON string", RetrieveReleaseHealthSessionStatistics400Response.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveReleaseHealthSessionStatistics400Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveReleaseHealthSessionStatistics400Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveReleaseHealthSessionStatistics400Response.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("detail").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detail").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveReleaseHealthSessionStatistics400Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveReleaseHealthSessionStatistics400Response' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveReleaseHealthSessionStatistics400Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveReleaseHealthSessionStatistics400Response.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveReleaseHealthSessionStatistics400Response>() {
-           @Override
-           public void write(JsonWriter out, RetrieveReleaseHealthSessionStatistics400Response value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveReleaseHealthSessionStatistics400Response read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveReleaseHealthSessionStatistics400Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveReleaseHealthSessionStatistics400Response
-  * @throws IOException if the JSON string is invalid with respect to RetrieveReleaseHealthSessionStatistics400Response
-  */
-  public static RetrieveReleaseHealthSessionStatistics400Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveReleaseHealthSessionStatistics400Response.class);
-  }
-
- /**
-  * Convert an instance of RetrieveReleaseHealthSessionStatistics400Response to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

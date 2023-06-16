@@ -13,10 +13,12 @@
 
 package com.sentry.api.client.model;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.math.BigDecimal;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not

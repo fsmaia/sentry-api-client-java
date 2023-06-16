@@ -15,80 +15,61 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner;
-import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * CreateANewReleaseForAnOrganizationRequestCommitsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  CreateANewReleaseForAnOrganizationRequestCommitsInner.JSON_PROPERTY_PATCH_SET,
+  CreateANewReleaseForAnOrganizationRequestCommitsInner.JSON_PROPERTY_REPOSITORY,
+  CreateANewReleaseForAnOrganizationRequestCommitsInner.JSON_PROPERTY_AUTHOR_NAME,
+  CreateANewReleaseForAnOrganizationRequestCommitsInner.JSON_PROPERTY_AUTHOR_EMAIL,
+  CreateANewReleaseForAnOrganizationRequestCommitsInner.JSON_PROPERTY_TIMESTAMP,
+  CreateANewReleaseForAnOrganizationRequestCommitsInner.JSON_PROPERTY_MESSAGE,
+  CreateANewReleaseForAnOrganizationRequestCommitsInner.JSON_PROPERTY_ID
+})
+@JsonTypeName("Create_a_New_Release_for_an_Organization_request_commits_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
-  public static final String SERIALIZED_NAME_PATCH_SET = "patch_set";
-  @SerializedName(SERIALIZED_NAME_PATCH_SET)
+  public static final String JSON_PROPERTY_PATCH_SET = "patch_set";
   private List<CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner> patchSet;
 
-  public static final String SERIALIZED_NAME_REPOSITORY = "repository";
-  @SerializedName(SERIALIZED_NAME_REPOSITORY)
+  public static final String JSON_PROPERTY_REPOSITORY = "repository";
   private String repository;
 
-  public static final String SERIALIZED_NAME_AUTHOR_NAME = "author_name";
-  @SerializedName(SERIALIZED_NAME_AUTHOR_NAME)
+  public static final String JSON_PROPERTY_AUTHOR_NAME = "author_name";
   private String authorName;
 
-  public static final String SERIALIZED_NAME_AUTHOR_EMAIL = "author_email";
-  @SerializedName(SERIALIZED_NAME_AUTHOR_EMAIL)
+  public static final String JSON_PROPERTY_AUTHOR_EMAIL = "author_email";
   private String authorEmail;
 
-  public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
-  @SerializedName(SERIALIZED_NAME_TIMESTAMP)
+  public static final String JSON_PROPERTY_TIMESTAMP = "timestamp";
   private OffsetDateTime timestamp;
 
-  public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  public static final String JSON_PROPERTY_MESSAGE = "message";
   private String message;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public CreateANewReleaseForAnOrganizationRequestCommitsInner() {
+  public CreateANewReleaseForAnOrganizationRequestCommitsInner() { 
   }
 
   public CreateANewReleaseForAnOrganizationRequestCommitsInner patchSet(List<CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner> patchSet) {
-    
     this.patchSet = patchSet;
     return this;
   }
@@ -105,19 +86,23 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
    * A list of the files that have been changed in the commit. Specifying the patch_set is necessary to power suspect commits and suggested assignees.
    * @return patchSet
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_PATCH_SET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public List<CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner> getPatchSet() {
     return patchSet;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATCH_SET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPatchSet(List<CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner> patchSet) {
     this.patchSet = patchSet;
   }
 
 
   public CreateANewReleaseForAnOrganizationRequestCommitsInner repository(String repository) {
-    
     this.repository = repository;
     return this;
   }
@@ -126,19 +111,23 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
    * The full name of the repository the commit belongs to. If this field is not given Sentry will generate a name in the form: u&#39;organization-&lt;organization_id&gt;&#39; (i.e. if the organization id is 123, then the generated repository name will be u&#39;organization-123).
    * @return repository
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_REPOSITORY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getRepository() {
     return repository;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REPOSITORY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRepository(String repository) {
     this.repository = repository;
   }
 
 
   public CreateANewReleaseForAnOrganizationRequestCommitsInner authorName(String authorName) {
-    
     this.authorName = authorName;
     return this;
   }
@@ -147,19 +136,23 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
    * The name of the commit author.
    * @return authorName
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_AUTHOR_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getAuthorName() {
     return authorName;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AUTHOR_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAuthorName(String authorName) {
     this.authorName = authorName;
   }
 
 
   public CreateANewReleaseForAnOrganizationRequestCommitsInner authorEmail(String authorEmail) {
-    
     this.authorEmail = authorEmail;
     return this;
   }
@@ -168,19 +161,23 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
    * The email of the commit author. The commit author&#39;s email is required to enable the suggested assignee feature.
    * @return authorEmail
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_AUTHOR_EMAIL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getAuthorEmail() {
     return authorEmail;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AUTHOR_EMAIL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAuthorEmail(String authorEmail) {
     this.authorEmail = authorEmail;
   }
 
 
   public CreateANewReleaseForAnOrganizationRequestCommitsInner timestamp(OffsetDateTime timestamp) {
-    
     this.timestamp = timestamp;
     return this;
   }
@@ -189,19 +186,23 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
    * The commit timestamp is used to sort the commits given. If a timestamp is not included, the commits will remain sorted in the order given.
    * @return timestamp
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_TIMESTAMP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TIMESTAMP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTimestamp(OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
 
 
   public CreateANewReleaseForAnOrganizationRequestCommitsInner message(String message) {
-    
     this.message = message;
     return this;
   }
@@ -210,19 +211,23 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
    * The commit message.
    * @return message
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getMessage() {
     return message;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMessage(String message) {
     this.message = message;
   }
 
 
   public CreateANewReleaseForAnOrganizationRequestCommitsInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -231,18 +236,25 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
    * The commit ID (the commit SHA).
    * @return id
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setId(String id) {
     this.id = id;
   }
 
 
-
+  /**
+   * Return true if this Create_a_New_Release_for_an_Organization_request_commits_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -292,123 +304,5 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("patch_set");
-    openapiFields.add("repository");
-    openapiFields.add("author_name");
-    openapiFields.add("author_email");
-    openapiFields.add("timestamp");
-    openapiFields.add("message");
-    openapiFields.add("id");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to CreateANewReleaseForAnOrganizationRequestCommitsInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!CreateANewReleaseForAnOrganizationRequestCommitsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in CreateANewReleaseForAnOrganizationRequestCommitsInner is not found in the empty JSON string", CreateANewReleaseForAnOrganizationRequestCommitsInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!CreateANewReleaseForAnOrganizationRequestCommitsInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateANewReleaseForAnOrganizationRequestCommitsInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if (jsonObj.get("patch_set") != null && !jsonObj.get("patch_set").isJsonNull()) {
-        JsonArray jsonArraypatchSet = jsonObj.getAsJsonArray("patch_set");
-        if (jsonArraypatchSet != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("patch_set").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `patch_set` to be an array in the JSON string but got `%s`", jsonObj.get("patch_set").toString()));
-          }
-
-          // validate the optional field `patch_set` (array)
-          for (int i = 0; i < jsonArraypatchSet.size(); i++) {
-            CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner.validateJsonObject(jsonArraypatchSet.get(i).getAsJsonObject());
-          };
-        }
-      }
-      if ((jsonObj.get("repository") != null && !jsonObj.get("repository").isJsonNull()) && !jsonObj.get("repository").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `repository` to be a primitive type in the JSON string but got `%s`", jsonObj.get("repository").toString()));
-      }
-      if ((jsonObj.get("author_name") != null && !jsonObj.get("author_name").isJsonNull()) && !jsonObj.get("author_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `author_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("author_name").toString()));
-      }
-      if ((jsonObj.get("author_email") != null && !jsonObj.get("author_email").isJsonNull()) && !jsonObj.get("author_email").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `author_email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("author_email").toString()));
-      }
-      if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
-      }
-      if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CreateANewReleaseForAnOrganizationRequestCommitsInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CreateANewReleaseForAnOrganizationRequestCommitsInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CreateANewReleaseForAnOrganizationRequestCommitsInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CreateANewReleaseForAnOrganizationRequestCommitsInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<CreateANewReleaseForAnOrganizationRequestCommitsInner>() {
-           @Override
-           public void write(JsonWriter out, CreateANewReleaseForAnOrganizationRequestCommitsInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public CreateANewReleaseForAnOrganizationRequestCommitsInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of CreateANewReleaseForAnOrganizationRequestCommitsInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CreateANewReleaseForAnOrganizationRequestCommitsInner
-  * @throws IOException if the JSON string is invalid with respect to CreateANewReleaseForAnOrganizationRequestCommitsInner
-  */
-  public static CreateANewReleaseForAnOrganizationRequestCommitsInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, CreateANewReleaseForAnOrganizationRequestCommitsInner.class);
-  }
-
- /**
-  * Convert an instance of CreateANewReleaseForAnOrganizationRequestCommitsInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

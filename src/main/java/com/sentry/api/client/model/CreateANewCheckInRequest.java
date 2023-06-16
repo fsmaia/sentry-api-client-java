@@ -15,49 +15,37 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.sentry.api.client.model.CreateANewCheckInRequestMonitorConfig;
-import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.sentry.api.client.model.CreateANewCheckInRequestMonitorConfig;
+import org.openapitools.jackson.nullable.JsonNullable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.NoSuchElementException;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * CreateANewCheckInRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  CreateANewCheckInRequest.JSON_PROPERTY_STATUS,
+  CreateANewCheckInRequest.JSON_PROPERTY_DURATION,
+  CreateANewCheckInRequest.JSON_PROPERTY_ENVIRONMENT,
+  CreateANewCheckInRequest.JSON_PROPERTY_MONITOR_CONFIG
+})
+@JsonTypeName("Create_a_new_check_in_request")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class CreateANewCheckInRequest {
   /**
    * Gets or Sets status
    */
-  @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
     OK("ok"),
     
@@ -71,6 +59,7 @@ public class CreateANewCheckInRequest {
       this.value = value;
     }
 
+    @JsonValue
     public String getValue() {
       return value;
     }
@@ -80,6 +69,7 @@ public class CreateANewCheckInRequest {
       return String.valueOf(value);
     }
 
+    @JsonCreator
     public static StatusEnum fromValue(String value) {
       for (StatusEnum b : StatusEnum.values()) {
         if (b.value.equals(value)) {
@@ -88,42 +78,24 @@ public class CreateANewCheckInRequest {
       }
       throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
-
-    public static class Adapter extends TypeAdapter<StatusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return StatusEnum.fromValue(value);
-      }
-    }
   }
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private StatusEnum status;
 
-  public static final String SERIALIZED_NAME_DURATION = "duration";
-  @SerializedName(SERIALIZED_NAME_DURATION)
-  private Integer duration;
+  public static final String JSON_PROPERTY_DURATION = "duration";
+  private JsonNullable<Integer> duration = JsonNullable.<Integer>undefined();
 
-  public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
-  @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
-  private String environment;
+  public static final String JSON_PROPERTY_ENVIRONMENT = "environment";
+  private JsonNullable<String> environment = JsonNullable.<String>undefined();
 
-  public static final String SERIALIZED_NAME_MONITOR_CONFIG = "monitor_config";
-  @SerializedName(SERIALIZED_NAME_MONITOR_CONFIG)
+  public static final String JSON_PROPERTY_MONITOR_CONFIG = "monitor_config";
   private CreateANewCheckInRequestMonitorConfig monitorConfig;
 
-  public CreateANewCheckInRequest() {
+  public CreateANewCheckInRequest() { 
   }
 
   public CreateANewCheckInRequest status(StatusEnum status) {
-    
     this.status = status;
     return this;
   }
@@ -132,20 +104,24 @@ public class CreateANewCheckInRequest {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public StatusEnum getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setStatus(StatusEnum status) {
     this.status = status;
   }
 
 
   public CreateANewCheckInRequest duration(Integer duration) {
-    
-    this.duration = duration;
+    this.duration = JsonNullable.<Integer>of(duration);
     return this;
   }
 
@@ -155,20 +131,32 @@ public class CreateANewCheckInRequest {
    * maximum: 2147483647
    * @return duration
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public Integer getDuration() {
-    return duration;
+        return duration.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_DURATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<Integer> getDuration_JsonNullable() {
+    return duration;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_DURATION)
+  public void setDuration_JsonNullable(JsonNullable<Integer> duration) {
+    this.duration = duration;
+  }
 
   public void setDuration(Integer duration) {
-    this.duration = duration;
+    this.duration = JsonNullable.<Integer>of(duration);
   }
 
 
   public CreateANewCheckInRequest environment(String environment) {
-    
-    this.environment = environment;
+    this.environment = JsonNullable.<String>of(environment);
     return this;
   }
 
@@ -176,19 +164,31 @@ public class CreateANewCheckInRequest {
    * Get environment
    * @return environment
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public String getEnvironment() {
-    return environment;
+        return environment.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_ENVIRONMENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<String> getEnvironment_JsonNullable() {
+    return environment;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_ENVIRONMENT)
+  public void setEnvironment_JsonNullable(JsonNullable<String> environment) {
+    this.environment = environment;
+  }
 
   public void setEnvironment(String environment) {
-    this.environment = environment;
+    this.environment = JsonNullable.<String>of(environment);
   }
 
 
   public CreateANewCheckInRequest monitorConfig(CreateANewCheckInRequestMonitorConfig monitorConfig) {
-    
     this.monitorConfig = monitorConfig;
     return this;
   }
@@ -197,18 +197,25 @@ public class CreateANewCheckInRequest {
    * Get monitorConfig
    * @return monitorConfig
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_MONITOR_CONFIG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public CreateANewCheckInRequestMonitorConfig getMonitorConfig() {
     return monitorConfig;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MONITOR_CONFIG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMonitorConfig(CreateANewCheckInRequestMonitorConfig monitorConfig) {
     this.monitorConfig = monitorConfig;
   }
 
 
-
+  /**
+   * Return true if this Create_a_new_check_in_request object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -219,8 +226,8 @@ public class CreateANewCheckInRequest {
     }
     CreateANewCheckInRequest createANewCheckInRequest = (CreateANewCheckInRequest) o;
     return Objects.equals(this.status, createANewCheckInRequest.status) &&
-        Objects.equals(this.duration, createANewCheckInRequest.duration) &&
-        Objects.equals(this.environment, createANewCheckInRequest.environment) &&
+        equalsNullable(this.duration, createANewCheckInRequest.duration) &&
+        equalsNullable(this.environment, createANewCheckInRequest.environment) &&
         Objects.equals(this.monitorConfig, createANewCheckInRequest.monitorConfig);
   }
 
@@ -230,7 +237,7 @@ public class CreateANewCheckInRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, duration, environment, monitorConfig);
+    return Objects.hash(status, hashCodeNullable(duration), hashCodeNullable(environment), monitorConfig);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -263,109 +270,5 @@ public class CreateANewCheckInRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status");
-    openapiFields.add("duration");
-    openapiFields.add("environment");
-    openapiFields.add("monitor_config");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("status");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to CreateANewCheckInRequest
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!CreateANewCheckInRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in CreateANewCheckInRequest is not found in the empty JSON string", CreateANewCheckInRequest.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!CreateANewCheckInRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateANewCheckInRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : CreateANewCheckInRequest.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      if ((jsonObj.get("environment") != null && !jsonObj.get("environment").isJsonNull()) && !jsonObj.get("environment").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `environment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("environment").toString()));
-      }
-      // validate the optional field `monitor_config`
-      if (jsonObj.get("monitor_config") != null && !jsonObj.get("monitor_config").isJsonNull()) {
-        CreateANewCheckInRequestMonitorConfig.validateJsonObject(jsonObj.getAsJsonObject("monitor_config"));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CreateANewCheckInRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CreateANewCheckInRequest' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CreateANewCheckInRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CreateANewCheckInRequest.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<CreateANewCheckInRequest>() {
-           @Override
-           public void write(JsonWriter out, CreateANewCheckInRequest value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public CreateANewCheckInRequest read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of CreateANewCheckInRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CreateANewCheckInRequest
-  * @throws IOException if the JSON string is invalid with respect to CreateANewCheckInRequest
-  */
-  public static CreateANewCheckInRequest fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, CreateANewCheckInRequest.class);
-  }
-
- /**
-  * Convert an instance of CreateANewCheckInRequest to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

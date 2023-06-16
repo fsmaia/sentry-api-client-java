@@ -13,9 +13,11 @@
 
 package com.sentry.api.client.model;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInnerContextInnerInner

@@ -15,74 +15,55 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ListAProjectSServiceHooks200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ListAProjectSServiceHooks200ResponseInner.JSON_PROPERTY_DATE_CREATED,
+  ListAProjectSServiceHooks200ResponseInner.JSON_PROPERTY_EVENTS,
+  ListAProjectSServiceHooks200ResponseInner.JSON_PROPERTY_ID,
+  ListAProjectSServiceHooks200ResponseInner.JSON_PROPERTY_SECRET,
+  ListAProjectSServiceHooks200ResponseInner.JSON_PROPERTY_STATUS,
+  ListAProjectSServiceHooks200ResponseInner.JSON_PROPERTY_URL
+})
+@JsonTypeName("List_a_Project_s_Service_Hooks_200_response_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ListAProjectSServiceHooks200ResponseInner {
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private String dateCreated;
 
-  public static final String SERIALIZED_NAME_EVENTS = "events";
-  @SerializedName(SERIALIZED_NAME_EVENTS)
+  public static final String JSON_PROPERTY_EVENTS = "events";
   private List<String> events = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_SECRET = "secret";
-  @SerializedName(SERIALIZED_NAME_SECRET)
+  public static final String JSON_PROPERTY_SECRET = "secret";
   private String secret;
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private String status;
 
-  public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL)
+  public static final String JSON_PROPERTY_URL = "url";
   private String url;
 
-  public ListAProjectSServiceHooks200ResponseInner() {
+  public ListAProjectSServiceHooks200ResponseInner() { 
   }
 
   public ListAProjectSServiceHooks200ResponseInner dateCreated(String dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -91,19 +72,23 @@ public class ListAProjectSServiceHooks200ResponseInner {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(String dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public ListAProjectSServiceHooks200ResponseInner events(List<String> events) {
-    
     this.events = events;
     return this;
   }
@@ -120,19 +105,23 @@ public class ListAProjectSServiceHooks200ResponseInner {
    * Get events
    * @return events
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EVENTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getEvents() {
     return events;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EVENTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEvents(List<String> events) {
     this.events = events;
   }
 
 
   public ListAProjectSServiceHooks200ResponseInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -141,19 +130,23 @@ public class ListAProjectSServiceHooks200ResponseInner {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ListAProjectSServiceHooks200ResponseInner secret(String secret) {
-    
     this.secret = secret;
     return this;
   }
@@ -162,19 +155,23 @@ public class ListAProjectSServiceHooks200ResponseInner {
    * Get secret
    * @return secret
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SECRET)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getSecret() {
     return secret;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SECRET)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSecret(String secret) {
     this.secret = secret;
   }
 
 
   public ListAProjectSServiceHooks200ResponseInner status(String status) {
-    
     this.status = status;
     return this;
   }
@@ -183,19 +180,23 @@ public class ListAProjectSServiceHooks200ResponseInner {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setStatus(String status) {
     this.status = status;
   }
 
 
   public ListAProjectSServiceHooks200ResponseInner url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -204,18 +205,25 @@ public class ListAProjectSServiceHooks200ResponseInner {
    * Get url
    * @return url
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getUrl() {
     return url;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUrl(String url) {
     this.url = url;
   }
 
 
-
+  /**
+   * Return true if this List_a_Project_s_Service_Hooks_200_response_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -263,127 +271,5 @@ public class ListAProjectSServiceHooks200ResponseInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("dateCreated");
-    openapiFields.add("events");
-    openapiFields.add("id");
-    openapiFields.add("secret");
-    openapiFields.add("status");
-    openapiFields.add("url");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("events");
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("secret");
-    openapiRequiredFields.add("status");
-    openapiRequiredFields.add("url");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAProjectSServiceHooks200ResponseInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ListAProjectSServiceHooks200ResponseInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListAProjectSServiceHooks200ResponseInner is not found in the empty JSON string", ListAProjectSServiceHooks200ResponseInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ListAProjectSServiceHooks200ResponseInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListAProjectSServiceHooks200ResponseInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ListAProjectSServiceHooks200ResponseInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("dateCreated").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dateCreated` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dateCreated").toString()));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("events") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("events").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `events` to be an array in the JSON string but got `%s`", jsonObj.get("events").toString()));
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("secret").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `secret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret").toString()));
-      }
-      if (!jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      if (!jsonObj.get("url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ListAProjectSServiceHooks200ResponseInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ListAProjectSServiceHooks200ResponseInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ListAProjectSServiceHooks200ResponseInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ListAProjectSServiceHooks200ResponseInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ListAProjectSServiceHooks200ResponseInner>() {
-           @Override
-           public void write(JsonWriter out, ListAProjectSServiceHooks200ResponseInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ListAProjectSServiceHooks200ResponseInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ListAProjectSServiceHooks200ResponseInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAProjectSServiceHooks200ResponseInner
-  * @throws IOException if the JSON string is invalid with respect to ListAProjectSServiceHooks200ResponseInner
-  */
-  public static ListAProjectSServiceHooks200ResponseInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAProjectSServiceHooks200ResponseInner.class);
-  }
-
- /**
-  * Convert an instance of ListAProjectSServiceHooks200ResponseInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

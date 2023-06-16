@@ -13,7 +13,8 @@
 
 package com.sentry.api.client.api;
 
-import com.sentry.api.client.ApiException;
+import com.sentry.api.client.*;
+import com.sentry.api.client.auth.*;
 import com.sentry.api.client.model.CreateANewClientKeyRequest;
 import com.sentry.api.client.model.CreateANewProjectRequest;
 import java.io.File;
@@ -30,6 +31,8 @@ import com.sentry.api.client.model.RetrieveMonitorsForAnOrganization200ResponseI
 import com.sentry.api.client.model.SubmitUserFeedbackRequest;
 import com.sentry.api.client.model.UpdateAClientKeyRequest;
 import com.sentry.api.client.model.UpdateAProjectRequest;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -41,7 +44,6 @@ import java.util.Map;
 /**
  * API tests for ProjectsApi
  */
-@Disabled
 public class ProjectsApiTest {
 
     private final ProjectsApi api = new ProjectsApi();
@@ -53,10 +55,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void createANewClientKeyTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        CreateANewClientKeyRequest createANewClientKeyRequest = null;
-        ListAProjectSClientKeys200ResponseInner response = api.createANewClientKey(organizationSlug, projectSlug, createANewClientKeyRequest);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //CreateANewClientKeyRequest createANewClientKeyRequest = null;
+        //ListAProjectSClientKeys200ResponseInner response = api.createANewClientKey(organizationSlug, projectSlug, createANewClientKeyRequest);
         // TODO: test validations
     }
 
@@ -67,14 +69,14 @@ public class ProjectsApiTest {
      */
     @Test
     public void createANewProjectTest() throws ApiException {
-        String organizationSlug = null;
-        String teamSlug = null;
-        String name = null;
-        CreateANewProjectRequest createANewProjectRequest = null;
-        String slug = null;
-        String platform = null;
-        Boolean defaultRules = null;
-        RetrieveMonitorsForAnOrganization200ResponseInnerProject response = api.createANewProject(organizationSlug, teamSlug, name, createANewProjectRequest, slug, platform, defaultRules);
+        //String organizationSlug = null;
+        //String teamSlug = null;
+        //String name = null;
+        //CreateANewProjectRequest createANewProjectRequest = null;
+        //String slug = null;
+        //String platform = null;
+        //Boolean defaultRules = null;
+        //RetrieveMonitorsForAnOrganization200ResponseInnerProject response = api.createANewProject(organizationSlug, teamSlug, name, createANewProjectRequest, slug, platform, defaultRules);
         // TODO: test validations
     }
 
@@ -85,10 +87,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void deleteAClientKeyTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String keyId = null;
-        api.deleteAClientKey(organizationSlug, projectSlug, keyId);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String keyId = null;
+        //api.deleteAClientKey(organizationSlug, projectSlug, keyId);
         // TODO: test validations
     }
 
@@ -99,9 +101,9 @@ public class ProjectsApiTest {
      */
     @Test
     public void deleteAProjectTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        api.deleteAProject(organizationSlug, projectSlug);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //api.deleteAProject(organizationSlug, projectSlug);
         // TODO: test validations
     }
 
@@ -112,10 +114,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void deleteASpecificProjectsDebugInformationFileTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String id = null;
-        api.deleteASpecificProjectsDebugInformationFile(organizationSlug, projectSlug, id);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String id = null;
+        //api.deleteASpecificProjectsDebugInformationFile(organizationSlug, projectSlug, id);
         // TODO: test validations
     }
 
@@ -126,10 +128,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void listAProjectsClientKeysTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String cursor = null;
-        List<ListAProjectSClientKeys200ResponseInner> response = api.listAProjectsClientKeys(organizationSlug, projectSlug, cursor);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String cursor = null;
+        //List<ListAProjectSClientKeys200ResponseInner> response = api.listAProjectsClientKeys(organizationSlug, projectSlug, cursor);
         // TODO: test validations
     }
 
@@ -140,9 +142,9 @@ public class ProjectsApiTest {
      */
     @Test
     public void listAProjectsDebugInformationFilesTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        api.listAProjectsDebugInformationFiles(organizationSlug, projectSlug);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //api.listAProjectsDebugInformationFiles(organizationSlug, projectSlug);
         // TODO: test validations
     }
 
@@ -153,10 +155,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void listAProjectsServiceHooksTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String cursor = null;
-        List<ListAProjectSServiceHooks200ResponseInner> response = api.listAProjectsServiceHooks(organizationSlug, projectSlug, cursor);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String cursor = null;
+        //List<ListAProjectSServiceHooks200ResponseInner> response = api.listAProjectsServiceHooks(organizationSlug, projectSlug, cursor);
         // TODO: test validations
     }
 
@@ -167,9 +169,9 @@ public class ProjectsApiTest {
      */
     @Test
     public void listAProjectsUserFeedbackTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        List<ListAProjectSUserFeedback200ResponseInner> response = api.listAProjectsUserFeedback(organizationSlug, projectSlug);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //List<ListAProjectSUserFeedback200ResponseInner> response = api.listAProjectsUserFeedback(organizationSlug, projectSlug);
         // TODO: test validations
     }
 
@@ -180,10 +182,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void listAProjectsUsersTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String query = null;
-        List<ListAProjectSUsers200ResponseInner> response = api.listAProjectsUsers(organizationSlug, projectSlug, query);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String query = null;
+        //List<ListAProjectSUsers200ResponseInner> response = api.listAProjectsUsers(organizationSlug, projectSlug, query);
         // TODO: test validations
     }
 
@@ -194,10 +196,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void listATagsValuesTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String key = null;
-        List<ListATagSValues200ResponseInner> response = api.listATagsValues(organizationSlug, projectSlug, key);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String key = null;
+        //List<ListATagSValues200ResponseInner> response = api.listATagsValues(organizationSlug, projectSlug, key);
         // TODO: test validations
     }
 
@@ -208,8 +210,8 @@ public class ProjectsApiTest {
      */
     @Test
     public void listYourProjectsTest() throws ApiException {
-        String cursor = null;
-        List<ListYourProjects200ResponseInner> response = api.listYourProjects(cursor);
+        //String cursor = null;
+        //List<ListYourProjects200ResponseInner> response = api.listYourProjects(cursor);
         // TODO: test validations
     }
 
@@ -220,10 +222,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void registerANewServiceHookTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        RegisterANewServiceHookRequest registerANewServiceHookRequest = null;
-        ListAProjectSServiceHooks200ResponseInner response = api.registerANewServiceHook(organizationSlug, projectSlug, registerANewServiceHookRequest);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //RegisterANewServiceHookRequest registerANewServiceHookRequest = null;
+        //ListAProjectSServiceHooks200ResponseInner response = api.registerANewServiceHook(organizationSlug, projectSlug, registerANewServiceHookRequest);
         // TODO: test validations
     }
 
@@ -234,10 +236,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void removeAServiceHookTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String hookId = null;
-        api.removeAServiceHook(organizationSlug, projectSlug, hookId);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String hookId = null;
+        //api.removeAServiceHook(organizationSlug, projectSlug, hookId);
         // TODO: test validations
     }
 
@@ -248,9 +250,9 @@ public class ProjectsApiTest {
      */
     @Test
     public void retrieveAProjectTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        RetrieveAProject200Response response = api.retrieveAProject(organizationSlug, projectSlug);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //RetrieveAProject200Response response = api.retrieveAProject(organizationSlug, projectSlug);
         // TODO: test validations
     }
 
@@ -261,10 +263,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void retrieveAServiceHookTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String hookId = null;
-        ListAProjectSServiceHooks200ResponseInner response = api.retrieveAServiceHook(organizationSlug, projectSlug, hookId);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String hookId = null;
+        //ListAProjectSServiceHooks200ResponseInner response = api.retrieveAServiceHook(organizationSlug, projectSlug, hookId);
         // TODO: test validations
     }
 
@@ -277,13 +279,13 @@ public class ProjectsApiTest {
      */
     @Test
     public void retrieveEventCountsForAProjectTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String stat = null;
-        OffsetDateTime since = null;
-        OffsetDateTime until = null;
-        String resolution = null;
-        List<List<Integer>> response = api.retrieveEventCountsForAProject(organizationSlug, projectSlug, stat, since, until, resolution);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String stat = null;
+        //OffsetDateTime since = null;
+        //OffsetDateTime until = null;
+        //String resolution = null;
+        //List<List<Integer>> response = api.retrieveEventCountsForAProject(organizationSlug, projectSlug, stat, since, until, resolution);
         // TODO: test validations
     }
 
@@ -294,10 +296,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void submitUserFeedbackTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        SubmitUserFeedbackRequest submitUserFeedbackRequest = null;
-        ListAProjectSUserFeedback200ResponseInner response = api.submitUserFeedback(organizationSlug, projectSlug, submitUserFeedbackRequest);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //SubmitUserFeedbackRequest submitUserFeedbackRequest = null;
+        //ListAProjectSUserFeedback200ResponseInner response = api.submitUserFeedback(organizationSlug, projectSlug, submitUserFeedbackRequest);
         // TODO: test validations
     }
 
@@ -308,11 +310,11 @@ public class ProjectsApiTest {
      */
     @Test
     public void updateAClientKeyTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String keyId = null;
-        UpdateAClientKeyRequest updateAClientKeyRequest = null;
-        ListAProjectSClientKeys200ResponseInner response = api.updateAClientKey(organizationSlug, projectSlug, keyId, updateAClientKeyRequest);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String keyId = null;
+        //UpdateAClientKeyRequest updateAClientKeyRequest = null;
+        //ListAProjectSClientKeys200ResponseInner response = api.updateAClientKey(organizationSlug, projectSlug, keyId, updateAClientKeyRequest);
         // TODO: test validations
     }
 
@@ -323,10 +325,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void updateAProjectTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        UpdateAProjectRequest updateAProjectRequest = null;
-        RetrieveAProject200Response response = api.updateAProject(organizationSlug, projectSlug, updateAProjectRequest);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //UpdateAProjectRequest updateAProjectRequest = null;
+        //RetrieveAProject200Response response = api.updateAProject(organizationSlug, projectSlug, updateAProjectRequest);
         // TODO: test validations
     }
 
@@ -337,11 +339,11 @@ public class ProjectsApiTest {
      */
     @Test
     public void updateAServiceHookTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String hookId = null;
-        RegisterANewServiceHookRequest registerANewServiceHookRequest = null;
-        ListAProjectSServiceHooks200ResponseInner response = api.updateAServiceHook(organizationSlug, projectSlug, hookId, registerANewServiceHookRequest);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String hookId = null;
+        //RegisterANewServiceHookRequest registerANewServiceHookRequest = null;
+        //ListAProjectSServiceHooks200ResponseInner response = api.updateAServiceHook(organizationSlug, projectSlug, hookId, registerANewServiceHookRequest);
         // TODO: test validations
     }
 
@@ -352,10 +354,10 @@ public class ProjectsApiTest {
      */
     @Test
     public void uploadANewFileTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        File _file = null;
-        api.uploadANewFile(organizationSlug, projectSlug, _file);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //File _file = null;
+        //api.uploadANewFile(organizationSlug, projectSlug, _file);
         // TODO: test validations
     }
 

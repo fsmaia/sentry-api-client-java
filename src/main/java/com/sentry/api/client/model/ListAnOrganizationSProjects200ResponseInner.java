@@ -15,179 +15,167 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.ListAnOrganizationSProjects200ResponseInnerEventProcessing;
 import com.sentry.api.client.model.ListAnOrganizationSProjects200ResponseInnerLatestRelease;
 import com.sentry.api.client.model.ListAnOrganizationSProjects200ResponseInnerTeam;
 import com.sentry.api.client.model.ListAnOrganizationSProjects200ResponseInnerTeamsInner;
-import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.NoSuchElementException;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ListAnOrganizationSProjects200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_LATEST_DEPLOYS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_STATS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_TRANSACTION_STATS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_SESSION_STATS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_ID,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_SLUG,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_NAME,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_PLATFORM,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_DATE_CREATED,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_IS_BOOKMARKED,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_IS_MEMBER,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_FEATURES,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_FIRST_EVENT,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_FIRST_TRANSACTION_EVENT,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_ACCESS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_HAS_ACCESS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_HAS_MINIFIED_STACK_TRACE,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_HAS_MONITORS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_HAS_PROFILES,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_HAS_REPLAYS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_HAS_SESSIONS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_TEAM,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_TEAMS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_EVENT_PROCESSING,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_PLATFORMS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_HAS_USER_REPORTS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_ENVIRONMENTS,
+  ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_LATEST_RELEASE
+})
+@JsonTypeName("List_an_Organization_s_Projects_200_response_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ListAnOrganizationSProjects200ResponseInner {
-  public static final String SERIALIZED_NAME_LATEST_DEPLOYS = "latestDeploys";
-  @SerializedName(SERIALIZED_NAME_LATEST_DEPLOYS)
-  private Map<String, Map<String, String>> latestDeploys;
+  public static final String JSON_PROPERTY_LATEST_DEPLOYS = "latestDeploys";
+  private JsonNullable<Map<String, Map<String, String>>> latestDeploys = JsonNullable.<Map<String, Map<String, String>>>undefined();
 
-  public static final String SERIALIZED_NAME_STATS = "stats";
-  @SerializedName(SERIALIZED_NAME_STATS)
-  private Object stats = null;
+  public static final String JSON_PROPERTY_STATS = "stats";
+  private JsonNullable<Object> stats = JsonNullable.<Object>of(null);
 
-  public static final String SERIALIZED_NAME_TRANSACTION_STATS = "transactionStats";
-  @SerializedName(SERIALIZED_NAME_TRANSACTION_STATS)
-  private Object transactionStats = null;
+  public static final String JSON_PROPERTY_TRANSACTION_STATS = "transactionStats";
+  private JsonNullable<Object> transactionStats = JsonNullable.<Object>of(null);
 
-  public static final String SERIALIZED_NAME_SESSION_STATS = "sessionStats";
-  @SerializedName(SERIALIZED_NAME_SESSION_STATS)
-  private Object sessionStats = null;
+  public static final String JSON_PROPERTY_SESSION_STATS = "sessionStats";
+  private JsonNullable<Object> sessionStats = JsonNullable.<Object>of(null);
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_SLUG = "slug";
-  @SerializedName(SERIALIZED_NAME_SLUG)
+  public static final String JSON_PROPERTY_SLUG = "slug";
   private String slug;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_PLATFORM = "platform";
-  @SerializedName(SERIALIZED_NAME_PLATFORM)
+  public static final String JSON_PROPERTY_PLATFORM = "platform";
   private String platform;
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private OffsetDateTime dateCreated;
 
-  public static final String SERIALIZED_NAME_IS_BOOKMARKED = "isBookmarked";
-  @SerializedName(SERIALIZED_NAME_IS_BOOKMARKED)
+  public static final String JSON_PROPERTY_IS_BOOKMARKED = "isBookmarked";
   private Boolean isBookmarked;
 
-  public static final String SERIALIZED_NAME_IS_MEMBER = "isMember";
-  @SerializedName(SERIALIZED_NAME_IS_MEMBER)
+  public static final String JSON_PROPERTY_IS_MEMBER = "isMember";
   private Boolean isMember;
 
-  public static final String SERIALIZED_NAME_FEATURES = "features";
-  @SerializedName(SERIALIZED_NAME_FEATURES)
+  public static final String JSON_PROPERTY_FEATURES = "features";
   private List<String> features = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_FIRST_EVENT = "firstEvent";
-  @SerializedName(SERIALIZED_NAME_FIRST_EVENT)
+  public static final String JSON_PROPERTY_FIRST_EVENT = "firstEvent";
   private OffsetDateTime firstEvent;
 
-  public static final String SERIALIZED_NAME_FIRST_TRANSACTION_EVENT = "firstTransactionEvent";
-  @SerializedName(SERIALIZED_NAME_FIRST_TRANSACTION_EVENT)
+  public static final String JSON_PROPERTY_FIRST_TRANSACTION_EVENT = "firstTransactionEvent";
   private Boolean firstTransactionEvent;
 
-  public static final String SERIALIZED_NAME_ACCESS = "access";
-  @SerializedName(SERIALIZED_NAME_ACCESS)
+  public static final String JSON_PROPERTY_ACCESS = "access";
   private List<String> access = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_HAS_ACCESS = "hasAccess";
-  @SerializedName(SERIALIZED_NAME_HAS_ACCESS)
+  public static final String JSON_PROPERTY_HAS_ACCESS = "hasAccess";
   private Boolean hasAccess;
 
-  public static final String SERIALIZED_NAME_HAS_MINIFIED_STACK_TRACE = "hasMinifiedStackTrace";
-  @SerializedName(SERIALIZED_NAME_HAS_MINIFIED_STACK_TRACE)
+  public static final String JSON_PROPERTY_HAS_MINIFIED_STACK_TRACE = "hasMinifiedStackTrace";
   private Boolean hasMinifiedStackTrace;
 
-  public static final String SERIALIZED_NAME_HAS_MONITORS = "hasMonitors";
-  @SerializedName(SERIALIZED_NAME_HAS_MONITORS)
+  public static final String JSON_PROPERTY_HAS_MONITORS = "hasMonitors";
   private Boolean hasMonitors;
 
-  public static final String SERIALIZED_NAME_HAS_PROFILES = "hasProfiles";
-  @SerializedName(SERIALIZED_NAME_HAS_PROFILES)
+  public static final String JSON_PROPERTY_HAS_PROFILES = "hasProfiles";
   private Boolean hasProfiles;
 
-  public static final String SERIALIZED_NAME_HAS_REPLAYS = "hasReplays";
-  @SerializedName(SERIALIZED_NAME_HAS_REPLAYS)
+  public static final String JSON_PROPERTY_HAS_REPLAYS = "hasReplays";
   private Boolean hasReplays;
 
-  public static final String SERIALIZED_NAME_HAS_SESSIONS = "hasSessions";
-  @SerializedName(SERIALIZED_NAME_HAS_SESSIONS)
+  public static final String JSON_PROPERTY_HAS_SESSIONS = "hasSessions";
   private Boolean hasSessions;
 
-  public static final String SERIALIZED_NAME_TEAM = "team";
-  @SerializedName(SERIALIZED_NAME_TEAM)
+  public static final String JSON_PROPERTY_TEAM = "team";
   private ListAnOrganizationSProjects200ResponseInnerTeam team;
 
-  public static final String SERIALIZED_NAME_TEAMS = "teams";
-  @SerializedName(SERIALIZED_NAME_TEAMS)
+  public static final String JSON_PROPERTY_TEAMS = "teams";
   private List<ListAnOrganizationSProjects200ResponseInnerTeamsInner> teams = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_EVENT_PROCESSING = "eventProcessing";
-  @SerializedName(SERIALIZED_NAME_EVENT_PROCESSING)
+  public static final String JSON_PROPERTY_EVENT_PROCESSING = "eventProcessing";
   private ListAnOrganizationSProjects200ResponseInnerEventProcessing eventProcessing;
 
-  public static final String SERIALIZED_NAME_PLATFORMS = "platforms";
-  @SerializedName(SERIALIZED_NAME_PLATFORMS)
+  public static final String JSON_PROPERTY_PLATFORMS = "platforms";
   private List<String> platforms = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_HAS_USER_REPORTS = "hasUserReports";
-  @SerializedName(SERIALIZED_NAME_HAS_USER_REPORTS)
+  public static final String JSON_PROPERTY_HAS_USER_REPORTS = "hasUserReports";
   private Boolean hasUserReports;
 
-  public static final String SERIALIZED_NAME_ENVIRONMENTS = "environments";
-  @SerializedName(SERIALIZED_NAME_ENVIRONMENTS)
+  public static final String JSON_PROPERTY_ENVIRONMENTS = "environments";
   private List<String> environments = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_LATEST_RELEASE = "latestRelease";
-  @SerializedName(SERIALIZED_NAME_LATEST_RELEASE)
+  public static final String JSON_PROPERTY_LATEST_RELEASE = "latestRelease";
   private ListAnOrganizationSProjects200ResponseInnerLatestRelease latestRelease;
 
-  public ListAnOrganizationSProjects200ResponseInner() {
+  public ListAnOrganizationSProjects200ResponseInner() { 
   }
 
   public ListAnOrganizationSProjects200ResponseInner latestDeploys(Map<String, Map<String, String>> latestDeploys) {
-    
-    this.latestDeploys = latestDeploys;
+    this.latestDeploys = JsonNullable.<Map<String, Map<String, String>>>of(latestDeploys);
     return this;
   }
 
   public ListAnOrganizationSProjects200ResponseInner putLatestDeploysItem(String key, Map<String, String> latestDeploysItem) {
-    if (this.latestDeploys == null) {
-      this.latestDeploys = new HashMap<>();
+    if (this.latestDeploys == null || !this.latestDeploys.isPresent()) {
+      this.latestDeploys = JsonNullable.<Map<String, Map<String, String>>>of(new HashMap<>());
     }
-    this.latestDeploys.put(key, latestDeploysItem);
+    try {
+      this.latestDeploys.get().put(key, latestDeploysItem);
+    } catch (java.util.NoSuchElementException e) {
+      // this can never happen, as we make sure above that the value is present
+    }
     return this;
   }
 
@@ -195,20 +183,32 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get latestDeploys
    * @return latestDeploys
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public Map<String, Map<String, String>> getLatestDeploys() {
-    return latestDeploys;
+        return latestDeploys.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_LATEST_DEPLOYS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<Map<String, Map<String, String>>> getLatestDeploys_JsonNullable() {
+    return latestDeploys;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_LATEST_DEPLOYS)
+  public void setLatestDeploys_JsonNullable(JsonNullable<Map<String, Map<String, String>>> latestDeploys) {
+    this.latestDeploys = latestDeploys;
+  }
 
   public void setLatestDeploys(Map<String, Map<String, String>> latestDeploys) {
-    this.latestDeploys = latestDeploys;
+    this.latestDeploys = JsonNullable.<Map<String, Map<String, String>>>of(latestDeploys);
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner stats(Object stats) {
-    
-    this.stats = stats;
+    this.stats = JsonNullable.<Object>of(stats);
     return this;
   }
 
@@ -216,20 +216,32 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get stats
    * @return stats
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public Object getStats() {
-    return stats;
+        return stats.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_STATS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<Object> getStats_JsonNullable() {
+    return stats;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_STATS)
+  public void setStats_JsonNullable(JsonNullable<Object> stats) {
+    this.stats = stats;
+  }
 
   public void setStats(Object stats) {
-    this.stats = stats;
+    this.stats = JsonNullable.<Object>of(stats);
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner transactionStats(Object transactionStats) {
-    
-    this.transactionStats = transactionStats;
+    this.transactionStats = JsonNullable.<Object>of(transactionStats);
     return this;
   }
 
@@ -237,20 +249,32 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get transactionStats
    * @return transactionStats
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public Object getTransactionStats() {
-    return transactionStats;
+        return transactionStats.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_TRANSACTION_STATS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<Object> getTransactionStats_JsonNullable() {
+    return transactionStats;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_TRANSACTION_STATS)
+  public void setTransactionStats_JsonNullable(JsonNullable<Object> transactionStats) {
+    this.transactionStats = transactionStats;
+  }
 
   public void setTransactionStats(Object transactionStats) {
-    this.transactionStats = transactionStats;
+    this.transactionStats = JsonNullable.<Object>of(transactionStats);
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner sessionStats(Object sessionStats) {
-    
-    this.sessionStats = sessionStats;
+    this.sessionStats = JsonNullable.<Object>of(sessionStats);
     return this;
   }
 
@@ -258,19 +282,31 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get sessionStats
    * @return sessionStats
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public Object getSessionStats() {
-    return sessionStats;
+        return sessionStats.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_SESSION_STATS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<Object> getSessionStats_JsonNullable() {
+    return sessionStats;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_SESSION_STATS)
+  public void setSessionStats_JsonNullable(JsonNullable<Object> sessionStats) {
+    this.sessionStats = sessionStats;
+  }
 
   public void setSessionStats(Object sessionStats) {
-    this.sessionStats = sessionStats;
+    this.sessionStats = JsonNullable.<Object>of(sessionStats);
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -279,19 +315,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner slug(String slug) {
-    
     this.slug = slug;
     return this;
   }
@@ -300,19 +340,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SLUG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getSlug() {
     return slug;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SLUG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSlug(String slug) {
     this.slug = slug;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -321,19 +365,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner platform(String platform) {
-    
     this.platform = platform;
     return this;
   }
@@ -342,19 +390,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getPlatform() {
     return platform;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPlatform(String platform) {
     this.platform = platform;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner dateCreated(OffsetDateTime dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -363,19 +415,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner isBookmarked(Boolean isBookmarked) {
-    
     this.isBookmarked = isBookmarked;
     return this;
   }
@@ -384,19 +440,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get isBookmarked
    * @return isBookmarked
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_BOOKMARKED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_BOOKMARKED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsBookmarked(Boolean isBookmarked) {
     this.isBookmarked = isBookmarked;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner isMember(Boolean isMember) {
-    
     this.isMember = isMember;
     return this;
   }
@@ -405,19 +465,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get isMember
    * @return isMember
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_MEMBER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsMember() {
     return isMember;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_MEMBER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsMember(Boolean isMember) {
     this.isMember = isMember;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner features(List<String> features) {
-    
     this.features = features;
     return this;
   }
@@ -434,19 +498,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get features
    * @return features
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_FEATURES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getFeatures() {
     return features;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FEATURES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFeatures(List<String> features) {
     this.features = features;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner firstEvent(OffsetDateTime firstEvent) {
-    
     this.firstEvent = firstEvent;
     return this;
   }
@@ -455,19 +523,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get firstEvent
    * @return firstEvent
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_FIRST_EVENT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getFirstEvent() {
     return firstEvent;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIRST_EVENT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFirstEvent(OffsetDateTime firstEvent) {
     this.firstEvent = firstEvent;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner firstTransactionEvent(Boolean firstTransactionEvent) {
-    
     this.firstTransactionEvent = firstTransactionEvent;
     return this;
   }
@@ -476,19 +548,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get firstTransactionEvent
    * @return firstTransactionEvent
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_FIRST_TRANSACTION_EVENT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getFirstTransactionEvent() {
     return firstTransactionEvent;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIRST_TRANSACTION_EVENT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFirstTransactionEvent(Boolean firstTransactionEvent) {
     this.firstTransactionEvent = firstTransactionEvent;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner access(List<String> access) {
-    
     this.access = access;
     return this;
   }
@@ -505,19 +581,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get access
    * @return access
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ACCESS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getAccess() {
     return access;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ACCESS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAccess(List<String> access) {
     this.access = access;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner hasAccess(Boolean hasAccess) {
-    
     this.hasAccess = hasAccess;
     return this;
   }
@@ -526,19 +606,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get hasAccess
    * @return hasAccess
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_ACCESS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasAccess() {
     return hasAccess;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_ACCESS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasAccess(Boolean hasAccess) {
     this.hasAccess = hasAccess;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner hasMinifiedStackTrace(Boolean hasMinifiedStackTrace) {
-    
     this.hasMinifiedStackTrace = hasMinifiedStackTrace;
     return this;
   }
@@ -547,19 +631,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get hasMinifiedStackTrace
    * @return hasMinifiedStackTrace
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_MINIFIED_STACK_TRACE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasMinifiedStackTrace() {
     return hasMinifiedStackTrace;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_MINIFIED_STACK_TRACE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasMinifiedStackTrace(Boolean hasMinifiedStackTrace) {
     this.hasMinifiedStackTrace = hasMinifiedStackTrace;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner hasMonitors(Boolean hasMonitors) {
-    
     this.hasMonitors = hasMonitors;
     return this;
   }
@@ -568,19 +656,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get hasMonitors
    * @return hasMonitors
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_MONITORS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasMonitors() {
     return hasMonitors;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_MONITORS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasMonitors(Boolean hasMonitors) {
     this.hasMonitors = hasMonitors;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner hasProfiles(Boolean hasProfiles) {
-    
     this.hasProfiles = hasProfiles;
     return this;
   }
@@ -589,19 +681,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get hasProfiles
    * @return hasProfiles
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_PROFILES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasProfiles() {
     return hasProfiles;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_PROFILES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasProfiles(Boolean hasProfiles) {
     this.hasProfiles = hasProfiles;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner hasReplays(Boolean hasReplays) {
-    
     this.hasReplays = hasReplays;
     return this;
   }
@@ -610,19 +706,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get hasReplays
    * @return hasReplays
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_REPLAYS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasReplays() {
     return hasReplays;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_REPLAYS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasReplays(Boolean hasReplays) {
     this.hasReplays = hasReplays;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner hasSessions(Boolean hasSessions) {
-    
     this.hasSessions = hasSessions;
     return this;
   }
@@ -631,19 +731,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get hasSessions
    * @return hasSessions
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_SESSIONS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasSessions() {
     return hasSessions;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_SESSIONS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasSessions(Boolean hasSessions) {
     this.hasSessions = hasSessions;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner team(ListAnOrganizationSProjects200ResponseInnerTeam team) {
-    
     this.team = team;
     return this;
   }
@@ -652,19 +756,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get team
    * @return team
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_TEAM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ListAnOrganizationSProjects200ResponseInnerTeam getTeam() {
     return team;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEAM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTeam(ListAnOrganizationSProjects200ResponseInnerTeam team) {
     this.team = team;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner teams(List<ListAnOrganizationSProjects200ResponseInnerTeamsInner> teams) {
-    
     this.teams = teams;
     return this;
   }
@@ -681,19 +789,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get teams
    * @return teams
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TEAMS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<ListAnOrganizationSProjects200ResponseInnerTeamsInner> getTeams() {
     return teams;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEAMS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTeams(List<ListAnOrganizationSProjects200ResponseInnerTeamsInner> teams) {
     this.teams = teams;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner eventProcessing(ListAnOrganizationSProjects200ResponseInnerEventProcessing eventProcessing) {
-    
     this.eventProcessing = eventProcessing;
     return this;
   }
@@ -702,19 +814,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get eventProcessing
    * @return eventProcessing
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EVENT_PROCESSING)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ListAnOrganizationSProjects200ResponseInnerEventProcessing getEventProcessing() {
     return eventProcessing;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EVENT_PROCESSING)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEventProcessing(ListAnOrganizationSProjects200ResponseInnerEventProcessing eventProcessing) {
     this.eventProcessing = eventProcessing;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner platforms(List<String> platforms) {
-    
     this.platforms = platforms;
     return this;
   }
@@ -731,19 +847,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get platforms
    * @return platforms
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PLATFORMS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getPlatforms() {
     return platforms;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PLATFORMS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPlatforms(List<String> platforms) {
     this.platforms = platforms;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner hasUserReports(Boolean hasUserReports) {
-    
     this.hasUserReports = hasUserReports;
     return this;
   }
@@ -752,19 +872,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get hasUserReports
    * @return hasUserReports
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_USER_REPORTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasUserReports() {
     return hasUserReports;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_USER_REPORTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasUserReports(Boolean hasUserReports) {
     this.hasUserReports = hasUserReports;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner environments(List<String> environments) {
-    
     this.environments = environments;
     return this;
   }
@@ -781,19 +905,23 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get environments
    * @return environments
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ENVIRONMENTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getEnvironments() {
     return environments;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ENVIRONMENTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEnvironments(List<String> environments) {
     this.environments = environments;
   }
 
 
   public ListAnOrganizationSProjects200ResponseInner latestRelease(ListAnOrganizationSProjects200ResponseInnerLatestRelease latestRelease) {
-    
     this.latestRelease = latestRelease;
     return this;
   }
@@ -802,18 +930,25 @@ public class ListAnOrganizationSProjects200ResponseInner {
    * Get latestRelease
    * @return latestRelease
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_LATEST_RELEASE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ListAnOrganizationSProjects200ResponseInnerLatestRelease getLatestRelease() {
     return latestRelease;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LATEST_RELEASE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLatestRelease(ListAnOrganizationSProjects200ResponseInnerLatestRelease latestRelease) {
     this.latestRelease = latestRelease;
   }
 
 
-
+  /**
+   * Return true if this List_an_Organization_s_Projects_200_response_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -823,10 +958,10 @@ public class ListAnOrganizationSProjects200ResponseInner {
       return false;
     }
     ListAnOrganizationSProjects200ResponseInner listAnOrganizationSProjects200ResponseInner = (ListAnOrganizationSProjects200ResponseInner) o;
-    return Objects.equals(this.latestDeploys, listAnOrganizationSProjects200ResponseInner.latestDeploys) &&
-        Objects.equals(this.stats, listAnOrganizationSProjects200ResponseInner.stats) &&
-        Objects.equals(this.transactionStats, listAnOrganizationSProjects200ResponseInner.transactionStats) &&
-        Objects.equals(this.sessionStats, listAnOrganizationSProjects200ResponseInner.sessionStats) &&
+    return equalsNullable(this.latestDeploys, listAnOrganizationSProjects200ResponseInner.latestDeploys) &&
+        equalsNullable(this.stats, listAnOrganizationSProjects200ResponseInner.stats) &&
+        equalsNullable(this.transactionStats, listAnOrganizationSProjects200ResponseInner.transactionStats) &&
+        equalsNullable(this.sessionStats, listAnOrganizationSProjects200ResponseInner.sessionStats) &&
         Objects.equals(this.id, listAnOrganizationSProjects200ResponseInner.id) &&
         Objects.equals(this.slug, listAnOrganizationSProjects200ResponseInner.slug) &&
         Objects.equals(this.name, listAnOrganizationSProjects200ResponseInner.name) &&
@@ -859,7 +994,7 @@ public class ListAnOrganizationSProjects200ResponseInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(latestDeploys, stats, transactionStats, sessionStats, id, slug, name, platform, dateCreated, isBookmarked, isMember, features, firstEvent, firstTransactionEvent, access, hasAccess, hasMinifiedStackTrace, hasMonitors, hasProfiles, hasReplays, hasSessions, team, teams, eventProcessing, platforms, hasUserReports, environments, latestRelease);
+    return Objects.hash(hashCodeNullable(latestDeploys), hashCodeNullable(stats), hashCodeNullable(transactionStats), hashCodeNullable(sessionStats), id, slug, name, platform, dateCreated, isBookmarked, isMember, features, firstEvent, firstTransactionEvent, access, hasAccess, hasMinifiedStackTrace, hasMonitors, hasProfiles, hasReplays, hasSessions, team, teams, eventProcessing, platforms, hasUserReports, environments, latestRelease);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -916,198 +1051,5 @@ public class ListAnOrganizationSProjects200ResponseInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("latestDeploys");
-    openapiFields.add("stats");
-    openapiFields.add("transactionStats");
-    openapiFields.add("sessionStats");
-    openapiFields.add("id");
-    openapiFields.add("slug");
-    openapiFields.add("name");
-    openapiFields.add("platform");
-    openapiFields.add("dateCreated");
-    openapiFields.add("isBookmarked");
-    openapiFields.add("isMember");
-    openapiFields.add("features");
-    openapiFields.add("firstEvent");
-    openapiFields.add("firstTransactionEvent");
-    openapiFields.add("access");
-    openapiFields.add("hasAccess");
-    openapiFields.add("hasMinifiedStackTrace");
-    openapiFields.add("hasMonitors");
-    openapiFields.add("hasProfiles");
-    openapiFields.add("hasReplays");
-    openapiFields.add("hasSessions");
-    openapiFields.add("team");
-    openapiFields.add("teams");
-    openapiFields.add("eventProcessing");
-    openapiFields.add("platforms");
-    openapiFields.add("hasUserReports");
-    openapiFields.add("environments");
-    openapiFields.add("latestRelease");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("slug");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("platform");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("isBookmarked");
-    openapiRequiredFields.add("isMember");
-    openapiRequiredFields.add("features");
-    openapiRequiredFields.add("firstEvent");
-    openapiRequiredFields.add("firstTransactionEvent");
-    openapiRequiredFields.add("access");
-    openapiRequiredFields.add("hasAccess");
-    openapiRequiredFields.add("hasMinifiedStackTrace");
-    openapiRequiredFields.add("hasMonitors");
-    openapiRequiredFields.add("hasProfiles");
-    openapiRequiredFields.add("hasReplays");
-    openapiRequiredFields.add("hasSessions");
-    openapiRequiredFields.add("team");
-    openapiRequiredFields.add("teams");
-    openapiRequiredFields.add("eventProcessing");
-    openapiRequiredFields.add("platforms");
-    openapiRequiredFields.add("hasUserReports");
-    openapiRequiredFields.add("environments");
-    openapiRequiredFields.add("latestRelease");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAnOrganizationSProjects200ResponseInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ListAnOrganizationSProjects200ResponseInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListAnOrganizationSProjects200ResponseInner is not found in the empty JSON string", ListAnOrganizationSProjects200ResponseInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ListAnOrganizationSProjects200ResponseInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListAnOrganizationSProjects200ResponseInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ListAnOrganizationSProjects200ResponseInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("slug").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `slug` to be a primitive type in the JSON string but got `%s`", jsonObj.get("slug").toString()));
-      }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      if (!jsonObj.get("platform").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `platform` to be a primitive type in the JSON string but got `%s`", jsonObj.get("platform").toString()));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("features") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("features").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `features` to be an array in the JSON string but got `%s`", jsonObj.get("features").toString()));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("access") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("access").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `access` to be an array in the JSON string but got `%s`", jsonObj.get("access").toString()));
-      }
-      // validate the required field `team`
-      ListAnOrganizationSProjects200ResponseInnerTeam.validateJsonObject(jsonObj.getAsJsonObject("team"));
-      // ensure the json data is an array
-      if (!jsonObj.get("teams").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `teams` to be an array in the JSON string but got `%s`", jsonObj.get("teams").toString()));
-      }
-
-      JsonArray jsonArrayteams = jsonObj.getAsJsonArray("teams");
-      // validate the required field `teams` (array)
-      for (int i = 0; i < jsonArrayteams.size(); i++) {
-        ListAnOrganizationSProjects200ResponseInnerTeamsInner.validateJsonObject(jsonArrayteams.get(i).getAsJsonObject());
-      };
-      // validate the required field `eventProcessing`
-      ListAnOrganizationSProjects200ResponseInnerEventProcessing.validateJsonObject(jsonObj.getAsJsonObject("eventProcessing"));
-      // ensure the required json array is present
-      if (jsonObj.get("platforms") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("platforms").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `platforms` to be an array in the JSON string but got `%s`", jsonObj.get("platforms").toString()));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("environments") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("environments").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `environments` to be an array in the JSON string but got `%s`", jsonObj.get("environments").toString()));
-      }
-      // validate the required field `latestRelease`
-      ListAnOrganizationSProjects200ResponseInnerLatestRelease.validateJsonObject(jsonObj.getAsJsonObject("latestRelease"));
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ListAnOrganizationSProjects200ResponseInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ListAnOrganizationSProjects200ResponseInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ListAnOrganizationSProjects200ResponseInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ListAnOrganizationSProjects200ResponseInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ListAnOrganizationSProjects200ResponseInner>() {
-           @Override
-           public void write(JsonWriter out, ListAnOrganizationSProjects200ResponseInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ListAnOrganizationSProjects200ResponseInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ListAnOrganizationSProjects200ResponseInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAnOrganizationSProjects200ResponseInner
-  * @throws IOException if the JSON string is invalid with respect to ListAnOrganizationSProjects200ResponseInner
-  */
-  public static ListAnOrganizationSProjects200ResponseInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAnOrganizationSProjects200ResponseInner.class);
-  }
-
- /**
-  * Convert an instance of ListAnOrganizationSProjects200ResponseInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

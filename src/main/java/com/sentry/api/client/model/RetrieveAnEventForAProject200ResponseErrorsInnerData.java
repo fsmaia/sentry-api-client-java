@@ -15,60 +15,41 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnEventForAProject200ResponseErrorsInnerData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnEventForAProject200ResponseErrorsInnerData.JSON_PROPERTY_COLUMN,
+  RetrieveAnEventForAProject200ResponseErrorsInnerData.JSON_PROPERTY_SOURCE,
+  RetrieveAnEventForAProject200ResponseErrorsInnerData.JSON_PROPERTY_ROW
+})
+@JsonTypeName("Retrieve_an_Event_for_a_Project_200_response_errors_inner_data")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseErrorsInnerData {
-  public static final String SERIALIZED_NAME_COLUMN = "column";
-  @SerializedName(SERIALIZED_NAME_COLUMN)
+  public static final String JSON_PROPERTY_COLUMN = "column";
   private Integer column;
 
-  public static final String SERIALIZED_NAME_SOURCE = "source";
-  @SerializedName(SERIALIZED_NAME_SOURCE)
+  public static final String JSON_PROPERTY_SOURCE = "source";
   private String source;
 
-  public static final String SERIALIZED_NAME_ROW = "row";
-  @SerializedName(SERIALIZED_NAME_ROW)
+  public static final String JSON_PROPERTY_ROW = "row";
   private Integer row;
 
-  public RetrieveAnEventForAProject200ResponseErrorsInnerData() {
+  public RetrieveAnEventForAProject200ResponseErrorsInnerData() { 
   }
 
   public RetrieveAnEventForAProject200ResponseErrorsInnerData column(Integer column) {
-    
     this.column = column;
     return this;
   }
@@ -77,19 +58,23 @@ public class RetrieveAnEventForAProject200ResponseErrorsInnerData {
    * Get column
    * @return column
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_COLUMN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Integer getColumn() {
     return column;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLUMN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColumn(Integer column) {
     this.column = column;
   }
 
 
   public RetrieveAnEventForAProject200ResponseErrorsInnerData source(String source) {
-    
     this.source = source;
     return this;
   }
@@ -98,19 +83,23 @@ public class RetrieveAnEventForAProject200ResponseErrorsInnerData {
    * Get source
    * @return source
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SOURCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getSource() {
     return source;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SOURCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSource(String source) {
     this.source = source;
   }
 
 
   public RetrieveAnEventForAProject200ResponseErrorsInnerData row(Integer row) {
-    
     this.row = row;
     return this;
   }
@@ -119,18 +108,25 @@ public class RetrieveAnEventForAProject200ResponseErrorsInnerData {
    * Get row
    * @return row
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ROW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Integer getRow() {
     return row;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRow(Integer row) {
     this.row = row;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_an_Event_for_a_Project_200_response_errors_inner_data object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -172,93 +168,5 @@ public class RetrieveAnEventForAProject200ResponseErrorsInnerData {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("column");
-    openapiFields.add("source");
-    openapiFields.add("row");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200ResponseErrorsInnerData
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnEventForAProject200ResponseErrorsInnerData.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnEventForAProject200ResponseErrorsInnerData is not found in the empty JSON string", RetrieveAnEventForAProject200ResponseErrorsInnerData.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnEventForAProject200ResponseErrorsInnerData.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnEventForAProject200ResponseErrorsInnerData` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("source") != null && !jsonObj.get("source").isJsonNull()) && !jsonObj.get("source").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `source` to be a primitive type in the JSON string but got `%s`", jsonObj.get("source").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnEventForAProject200ResponseErrorsInnerData.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseErrorsInnerData' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnEventForAProject200ResponseErrorsInnerData> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200ResponseErrorsInnerData.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseErrorsInnerData>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseErrorsInnerData value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnEventForAProject200ResponseErrorsInnerData read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnEventForAProject200ResponseErrorsInnerData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnEventForAProject200ResponseErrorsInnerData
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnEventForAProject200ResponseErrorsInnerData
-  */
-  public static RetrieveAnEventForAProject200ResponseErrorsInnerData fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnEventForAProject200ResponseErrorsInnerData.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnEventForAProject200ResponseErrorsInnerData to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

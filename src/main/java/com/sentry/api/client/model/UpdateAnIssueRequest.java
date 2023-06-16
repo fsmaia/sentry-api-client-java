@@ -15,72 +15,53 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * UpdateAnIssueRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  UpdateAnIssueRequest.JSON_PROPERTY_STATUS,
+  UpdateAnIssueRequest.JSON_PROPERTY_ASSIGNED_TO,
+  UpdateAnIssueRequest.JSON_PROPERTY_HAS_SEEN,
+  UpdateAnIssueRequest.JSON_PROPERTY_IS_BOOKMARKED,
+  UpdateAnIssueRequest.JSON_PROPERTY_IS_SUBSCRIBED,
+  UpdateAnIssueRequest.JSON_PROPERTY_IS_PUBLIC
+})
+@JsonTypeName("Update_an_Issue_request")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class UpdateAnIssueRequest {
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private String status;
 
-  public static final String SERIALIZED_NAME_ASSIGNED_TO = "assignedTo";
-  @SerializedName(SERIALIZED_NAME_ASSIGNED_TO)
+  public static final String JSON_PROPERTY_ASSIGNED_TO = "assignedTo";
   private String assignedTo;
 
-  public static final String SERIALIZED_NAME_HAS_SEEN = "hasSeen";
-  @SerializedName(SERIALIZED_NAME_HAS_SEEN)
+  public static final String JSON_PROPERTY_HAS_SEEN = "hasSeen";
   private Boolean hasSeen;
 
-  public static final String SERIALIZED_NAME_IS_BOOKMARKED = "isBookmarked";
-  @SerializedName(SERIALIZED_NAME_IS_BOOKMARKED)
+  public static final String JSON_PROPERTY_IS_BOOKMARKED = "isBookmarked";
   private Boolean isBookmarked;
 
-  public static final String SERIALIZED_NAME_IS_SUBSCRIBED = "isSubscribed";
-  @SerializedName(SERIALIZED_NAME_IS_SUBSCRIBED)
+  public static final String JSON_PROPERTY_IS_SUBSCRIBED = "isSubscribed";
   private Boolean isSubscribed;
 
-  public static final String SERIALIZED_NAME_IS_PUBLIC = "isPublic";
-  @SerializedName(SERIALIZED_NAME_IS_PUBLIC)
+  public static final String JSON_PROPERTY_IS_PUBLIC = "isPublic";
   private Boolean isPublic;
 
-  public UpdateAnIssueRequest() {
+  public UpdateAnIssueRequest() { 
   }
 
   public UpdateAnIssueRequest status(String status) {
-    
     this.status = status;
     return this;
   }
@@ -89,19 +70,23 @@ public class UpdateAnIssueRequest {
    * The new status for the issues. Valid values are &#x60;\&quot;resolved\&quot;&#x60;, &#x60;\&quot;resolvedInNextRelease\&quot;&#x60;, &#x60;\&quot;unresolved\&quot;&#x60;, and &#x60;\&quot;ignored\&quot;&#x60;.
    * @return status
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStatus(String status) {
     this.status = status;
   }
 
 
   public UpdateAnIssueRequest assignedTo(String assignedTo) {
-    
     this.assignedTo = assignedTo;
     return this;
   }
@@ -110,19 +95,23 @@ public class UpdateAnIssueRequest {
    * The actor id (or username) of the user or team that should be assigned to this issue.
    * @return assignedTo
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ASSIGNED_TO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getAssignedTo() {
     return assignedTo;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ASSIGNED_TO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAssignedTo(String assignedTo) {
     this.assignedTo = assignedTo;
   }
 
 
   public UpdateAnIssueRequest hasSeen(Boolean hasSeen) {
-    
     this.hasSeen = hasSeen;
     return this;
   }
@@ -131,19 +120,23 @@ public class UpdateAnIssueRequest {
    * In case this API call is invoked with a user context this allows changing of the flag that indicates if the user has seen the event.
    * @return hasSeen
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_HAS_SEEN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Boolean getHasSeen() {
     return hasSeen;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_SEEN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHasSeen(Boolean hasSeen) {
     this.hasSeen = hasSeen;
   }
 
 
   public UpdateAnIssueRequest isBookmarked(Boolean isBookmarked) {
-    
     this.isBookmarked = isBookmarked;
     return this;
   }
@@ -152,19 +145,23 @@ public class UpdateAnIssueRequest {
    * In case this API call is invoked with a user context this allows changing of the bookmark flag.
    * @return isBookmarked
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_IS_BOOKMARKED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_BOOKMARKED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsBookmarked(Boolean isBookmarked) {
     this.isBookmarked = isBookmarked;
   }
 
 
   public UpdateAnIssueRequest isSubscribed(Boolean isSubscribed) {
-    
     this.isSubscribed = isSubscribed;
     return this;
   }
@@ -173,19 +170,23 @@ public class UpdateAnIssueRequest {
    * Get isSubscribed
    * @return isSubscribed
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_IS_SUBSCRIBED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Boolean getIsSubscribed() {
     return isSubscribed;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_SUBSCRIBED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsSubscribed(Boolean isSubscribed) {
     this.isSubscribed = isSubscribed;
   }
 
 
   public UpdateAnIssueRequest isPublic(Boolean isPublic) {
-    
     this.isPublic = isPublic;
     return this;
   }
@@ -194,18 +195,25 @@ public class UpdateAnIssueRequest {
    * Sets the issue to public or private.
    * @return isPublic
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_IS_PUBLIC)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Boolean getIsPublic() {
     return isPublic;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_PUBLIC)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsPublic(Boolean isPublic) {
     this.isPublic = isPublic;
   }
 
 
-
+  /**
+   * Return true if this Update_an_Issue_request object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -253,99 +261,5 @@ public class UpdateAnIssueRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status");
-    openapiFields.add("assignedTo");
-    openapiFields.add("hasSeen");
-    openapiFields.add("isBookmarked");
-    openapiFields.add("isSubscribed");
-    openapiFields.add("isPublic");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to UpdateAnIssueRequest
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!UpdateAnIssueRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateAnIssueRequest is not found in the empty JSON string", UpdateAnIssueRequest.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!UpdateAnIssueRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UpdateAnIssueRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      if ((jsonObj.get("assignedTo") != null && !jsonObj.get("assignedTo").isJsonNull()) && !jsonObj.get("assignedTo").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assignedTo` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assignedTo").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!UpdateAnIssueRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'UpdateAnIssueRequest' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<UpdateAnIssueRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(UpdateAnIssueRequest.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<UpdateAnIssueRequest>() {
-           @Override
-           public void write(JsonWriter out, UpdateAnIssueRequest value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public UpdateAnIssueRequest read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of UpdateAnIssueRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateAnIssueRequest
-  * @throws IOException if the JSON string is invalid with respect to UpdateAnIssueRequest
-  */
-  public static UpdateAnIssueRequest fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, UpdateAnIssueRequest.class);
-  }
-
- /**
-  * Convert an instance of UpdateAnIssueRequest to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

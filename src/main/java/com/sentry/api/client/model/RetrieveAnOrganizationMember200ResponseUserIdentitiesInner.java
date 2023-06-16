@@ -15,75 +15,56 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerOrganization;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider;
-import java.io.IOException;
 import java.time.OffsetDateTime;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnOrganizationMember200ResponseUserIdentitiesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.JSON_PROPERTY_ID,
+  RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.JSON_PROPERTY_NAME,
+  RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.JSON_PROPERTY_ORGANIZATION,
+  RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.JSON_PROPERTY_PROVIDER,
+  RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.JSON_PROPERTY_DATE_VERIFIED,
+  RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.JSON_PROPERTY_DATE_SYNCED
+})
+@JsonTypeName("Retrieve_an_Organization_Member_200_response_user_identities_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner {
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_ORGANIZATION = "organization";
-  @SerializedName(SERIALIZED_NAME_ORGANIZATION)
+  public static final String JSON_PROPERTY_ORGANIZATION = "organization";
   private RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerOrganization organization;
 
-  public static final String SERIALIZED_NAME_PROVIDER = "provider";
-  @SerializedName(SERIALIZED_NAME_PROVIDER)
+  public static final String JSON_PROPERTY_PROVIDER = "provider";
   private RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider provider;
 
-  public static final String SERIALIZED_NAME_DATE_VERIFIED = "dateVerified";
-  @SerializedName(SERIALIZED_NAME_DATE_VERIFIED)
+  public static final String JSON_PROPERTY_DATE_VERIFIED = "dateVerified";
   private OffsetDateTime dateVerified;
 
-  public static final String SERIALIZED_NAME_DATE_SYNCED = "dateSynced";
-  @SerializedName(SERIALIZED_NAME_DATE_SYNCED)
+  public static final String JSON_PROPERTY_DATE_SYNCED = "dateSynced";
   private OffsetDateTime dateSynced;
 
-  public RetrieveAnOrganizationMember200ResponseUserIdentitiesInner() {
+  public RetrieveAnOrganizationMember200ResponseUserIdentitiesInner() { 
   }
 
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -92,19 +73,23 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInner name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -113,19 +98,23 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInner organization(RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerOrganization organization) {
-    
     this.organization = organization;
     return this;
   }
@@ -134,19 +123,23 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner {
    * Get organization
    * @return organization
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ORGANIZATION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerOrganization getOrganization() {
     return organization;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ORGANIZATION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setOrganization(RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerOrganization organization) {
     this.organization = organization;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInner provider(RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider provider) {
-    
     this.provider = provider;
     return this;
   }
@@ -155,19 +148,23 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner {
    * Get provider
    * @return provider
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PROVIDER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider getProvider() {
     return provider;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROVIDER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setProvider(RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider provider) {
     this.provider = provider;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInner dateVerified(OffsetDateTime dateVerified) {
-    
     this.dateVerified = dateVerified;
     return this;
   }
@@ -176,19 +173,23 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner {
    * Get dateVerified
    * @return dateVerified
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_VERIFIED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getDateVerified() {
     return dateVerified;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_VERIFIED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateVerified(OffsetDateTime dateVerified) {
     this.dateVerified = dateVerified;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInner dateSynced(OffsetDateTime dateSynced) {
-    
     this.dateSynced = dateSynced;
     return this;
   }
@@ -197,18 +198,25 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner {
    * Get dateSynced
    * @return dateSynced
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_SYNCED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getDateSynced() {
     return dateSynced;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_SYNCED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateSynced(OffsetDateTime dateSynced) {
     this.dateSynced = dateSynced;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_an_Organization_Member_200_response_user_identities_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -256,116 +264,5 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("organization");
-    openapiFields.add("provider");
-    openapiFields.add("dateVerified");
-    openapiFields.add("dateSynced");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("organization");
-    openapiRequiredFields.add("provider");
-    openapiRequiredFields.add("dateVerified");
-    openapiRequiredFields.add("dateSynced");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnOrganizationMember200ResponseUserIdentitiesInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnOrganizationMember200ResponseUserIdentitiesInner is not found in the empty JSON string", RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnOrganizationMember200ResponseUserIdentitiesInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      // validate the required field `organization`
-      RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerOrganization.validateJsonObject(jsonObj.getAsJsonObject("organization"));
-      // validate the required field `provider`
-      RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider.validateJsonObject(jsonObj.getAsJsonObject("provider"));
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnOrganizationMember200ResponseUserIdentitiesInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnOrganizationMember200ResponseUserIdentitiesInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnOrganizationMember200ResponseUserIdentitiesInner>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnOrganizationMember200ResponseUserIdentitiesInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnOrganizationMember200ResponseUserIdentitiesInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnOrganizationMember200ResponseUserIdentitiesInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnOrganizationMember200ResponseUserIdentitiesInner
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnOrganizationMember200ResponseUserIdentitiesInner
-  */
-  public static RetrieveAnOrganizationMember200ResponseUserIdentitiesInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnOrganizationMember200ResponseUserIdentitiesInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

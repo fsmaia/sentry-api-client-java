@@ -15,173 +15,138 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOf;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOf1;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOf2;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOf3;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOf3Data;
-import java.io.IOException;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.sentry.api.client.JSON;
 
-import javax.ws.rs.core.GenericType;
 
+import jakarta.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.Response;
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.HashMap;
-import java.util.Map;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapter;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.JsonPrimitive;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.sentry.api.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@JsonDeserialize(using=ResolveAnEventID200ResponseEventEntriesInner.ResolveAnEventID200ResponseEventEntriesInnerDeserializer.class)
+@JsonSerialize(using = ResolveAnEventID200ResponseEventEntriesInner.ResolveAnEventID200ResponseEventEntriesInnerSerializer.class)
 public class ResolveAnEventID200ResponseEventEntriesInner extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(ResolveAnEventID200ResponseEventEntriesInner.class.getName());
 
-    public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-        @SuppressWarnings("unchecked")
+    public static class ResolveAnEventID200ResponseEventEntriesInnerSerializer extends StdSerializer<ResolveAnEventID200ResponseEventEntriesInner> {
+        public ResolveAnEventID200ResponseEventEntriesInnerSerializer(Class<ResolveAnEventID200ResponseEventEntriesInner> t) {
+            super(t);
+        }
+
+        public ResolveAnEventID200ResponseEventEntriesInnerSerializer() {
+            this(null);
+        }
+
         @Override
-        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-            if (!ResolveAnEventID200ResponseEventEntriesInner.class.isAssignableFrom(type.getRawType())) {
-                return null; // this class only serializes 'ResolveAnEventID200ResponseEventEntriesInner' and its subtypes
+        public void serialize(ResolveAnEventID200ResponseEventEntriesInner value, JsonGenerator jgen, SerializerProvider provider) throws IOException, JsonProcessingException {
+            jgen.writeObject(value.getActualInstance());
+        }
+    }
+
+    public static class ResolveAnEventID200ResponseEventEntriesInnerDeserializer extends StdDeserializer<ResolveAnEventID200ResponseEventEntriesInner> {
+        public ResolveAnEventID200ResponseEventEntriesInnerDeserializer() {
+            this(ResolveAnEventID200ResponseEventEntriesInner.class);
+        }
+
+        public ResolveAnEventID200ResponseEventEntriesInnerDeserializer(Class<?> vc) {
+            super(vc);
+        }
+
+        @Override
+        public ResolveAnEventID200ResponseEventEntriesInner deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+            JsonNode tree = jp.readValueAsTree();
+
+            Object deserialized = null;
+            // deserialize ResolveAnEventID200ResponseEventEntriesInnerAnyOf
+            try {
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(ResolveAnEventID200ResponseEventEntriesInnerAnyOf.class);
+                ResolveAnEventID200ResponseEventEntriesInner ret = new ResolveAnEventID200ResponseEventEntriesInner();
+                ret.setActualInstance(deserialized);
+                return ret;
+            } catch (Exception e) {
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'ResolveAnEventID200ResponseEventEntriesInner'", e);
             }
-            final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-            final TypeAdapter<ResolveAnEventID200ResponseEventEntriesInnerAnyOf> adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf = gson.getDelegateAdapter(this, TypeToken.get(ResolveAnEventID200ResponseEventEntriesInnerAnyOf.class));
-            final TypeAdapter<ResolveAnEventID200ResponseEventEntriesInnerAnyOf1> adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf1 = gson.getDelegateAdapter(this, TypeToken.get(ResolveAnEventID200ResponseEventEntriesInnerAnyOf1.class));
-            final TypeAdapter<ResolveAnEventID200ResponseEventEntriesInnerAnyOf2> adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf2 = gson.getDelegateAdapter(this, TypeToken.get(ResolveAnEventID200ResponseEventEntriesInnerAnyOf2.class));
-            final TypeAdapter<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3> adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf3 = gson.getDelegateAdapter(this, TypeToken.get(ResolveAnEventID200ResponseEventEntriesInnerAnyOf3.class));
 
-            return (TypeAdapter<T>) new TypeAdapter<ResolveAnEventID200ResponseEventEntriesInner>() {
-                @Override
-                public void write(JsonWriter out, ResolveAnEventID200ResponseEventEntriesInner value) throws IOException {
-                    if (value == null || value.getActualInstance() == null) {
-                        elementAdapter.write(out, null);
-                        return;
-                    }
+            // deserialize ResolveAnEventID200ResponseEventEntriesInnerAnyOf1
+            try {
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(ResolveAnEventID200ResponseEventEntriesInnerAnyOf1.class);
+                ResolveAnEventID200ResponseEventEntriesInner ret = new ResolveAnEventID200ResponseEventEntriesInner();
+                ret.setActualInstance(deserialized);
+                return ret;
+            } catch (Exception e) {
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'ResolveAnEventID200ResponseEventEntriesInner'", e);
+            }
 
-                    // check if the actual instance is of the type `ResolveAnEventID200ResponseEventEntriesInnerAnyOf`
-                    if (value.getActualInstance() instanceof ResolveAnEventID200ResponseEventEntriesInnerAnyOf) {
-                        JsonObject obj = adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf.toJsonTree((ResolveAnEventID200ResponseEventEntriesInnerAnyOf)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+            // deserialize ResolveAnEventID200ResponseEventEntriesInnerAnyOf2
+            try {
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(ResolveAnEventID200ResponseEventEntriesInnerAnyOf2.class);
+                ResolveAnEventID200ResponseEventEntriesInner ret = new ResolveAnEventID200ResponseEventEntriesInner();
+                ret.setActualInstance(deserialized);
+                return ret;
+            } catch (Exception e) {
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'ResolveAnEventID200ResponseEventEntriesInner'", e);
+            }
 
-                    // check if the actual instance is of the type `ResolveAnEventID200ResponseEventEntriesInnerAnyOf1`
-                    if (value.getActualInstance() instanceof ResolveAnEventID200ResponseEventEntriesInnerAnyOf1) {
-                        JsonObject obj = adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf1.toJsonTree((ResolveAnEventID200ResponseEventEntriesInnerAnyOf1)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+            // deserialize ResolveAnEventID200ResponseEventEntriesInnerAnyOf3
+            try {
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(ResolveAnEventID200ResponseEventEntriesInnerAnyOf3.class);
+                ResolveAnEventID200ResponseEventEntriesInner ret = new ResolveAnEventID200ResponseEventEntriesInner();
+                ret.setActualInstance(deserialized);
+                return ret;
+            } catch (Exception e) {
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'ResolveAnEventID200ResponseEventEntriesInner'", e);
+            }
 
-                    // check if the actual instance is of the type `ResolveAnEventID200ResponseEventEntriesInnerAnyOf2`
-                    if (value.getActualInstance() instanceof ResolveAnEventID200ResponseEventEntriesInnerAnyOf2) {
-                        JsonObject obj = adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf2.toJsonTree((ResolveAnEventID200ResponseEventEntriesInnerAnyOf2)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+            throw new IOException(String.format("Failed deserialization for ResolveAnEventID200ResponseEventEntriesInner: no match found"));
+        }
 
-                    // check if the actual instance is of the type `ResolveAnEventID200ResponseEventEntriesInnerAnyOf3`
-                    if (value.getActualInstance() instanceof ResolveAnEventID200ResponseEventEntriesInnerAnyOf3) {
-                        JsonObject obj = adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf3.toJsonTree((ResolveAnEventID200ResponseEventEntriesInnerAnyOf3)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
-
-                    throw new IOException("Failed to serialize as the type doesn't match anyOf schemas: ResolveAnEventID200ResponseEventEntriesInnerAnyOf, ResolveAnEventID200ResponseEventEntriesInnerAnyOf1, ResolveAnEventID200ResponseEventEntriesInnerAnyOf2, ResolveAnEventID200ResponseEventEntriesInnerAnyOf3");
-                }
-
-                @Override
-                public ResolveAnEventID200ResponseEventEntriesInner read(JsonReader in) throws IOException {
-                    Object deserialized = null;
-                    JsonObject jsonObject = elementAdapter.read(in).getAsJsonObject();
-
-                    // deserialize ResolveAnEventID200ResponseEventEntriesInnerAnyOf
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        ResolveAnEventID200ResponseEventEntriesInnerAnyOf.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'ResolveAnEventID200ResponseEventEntriesInnerAnyOf'");
-                        ResolveAnEventID200ResponseEventEntriesInner ret = new ResolveAnEventID200ResponseEventEntriesInner();
-                        ret.setActualInstance(adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf.fromJsonTree(jsonObject));
-                        return ret;
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'ResolveAnEventID200ResponseEventEntriesInnerAnyOf'", e);
-                    }
-
-                    // deserialize ResolveAnEventID200ResponseEventEntriesInnerAnyOf1
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        ResolveAnEventID200ResponseEventEntriesInnerAnyOf1.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'ResolveAnEventID200ResponseEventEntriesInnerAnyOf1'");
-                        ResolveAnEventID200ResponseEventEntriesInner ret = new ResolveAnEventID200ResponseEventEntriesInner();
-                        ret.setActualInstance(adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf1.fromJsonTree(jsonObject));
-                        return ret;
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'ResolveAnEventID200ResponseEventEntriesInnerAnyOf1'", e);
-                    }
-
-                    // deserialize ResolveAnEventID200ResponseEventEntriesInnerAnyOf2
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        ResolveAnEventID200ResponseEventEntriesInnerAnyOf2.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'ResolveAnEventID200ResponseEventEntriesInnerAnyOf2'");
-                        ResolveAnEventID200ResponseEventEntriesInner ret = new ResolveAnEventID200ResponseEventEntriesInner();
-                        ret.setActualInstance(adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf2.fromJsonTree(jsonObject));
-                        return ret;
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'ResolveAnEventID200ResponseEventEntriesInnerAnyOf2'", e);
-                    }
-
-                    // deserialize ResolveAnEventID200ResponseEventEntriesInnerAnyOf3
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        ResolveAnEventID200ResponseEventEntriesInnerAnyOf3.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'ResolveAnEventID200ResponseEventEntriesInnerAnyOf3'");
-                        ResolveAnEventID200ResponseEventEntriesInner ret = new ResolveAnEventID200ResponseEventEntriesInner();
-                        ret.setActualInstance(adapterResolveAnEventID200ResponseEventEntriesInnerAnyOf3.fromJsonTree(jsonObject));
-                        return ret;
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'ResolveAnEventID200ResponseEventEntriesInnerAnyOf3'", e);
-                    }
-
-
-                    throw new IOException(String.format("Failed deserialization for ResolveAnEventID200ResponseEventEntriesInner: no class matched. JSON: %s", jsonObject.toString()));
-                }
-            }.nullSafe();
+        /**
+         * Handle deserialization of the 'null' value.
+         */
+        @Override
+        public ResolveAnEventID200ResponseEventEntriesInner getNullValue(DeserializationContext ctxt) throws JsonMappingException {
+            throw new JsonMappingException(ctxt.getParser(), "ResolveAnEventID200ResponseEventEntriesInner cannot be null");
         }
     }
 
     // store a list of schema names defined in anyOf
-    public static final Map<String, GenericType> schemas = new HashMap<String, GenericType>();
+    public static final Map<String, GenericType> schemas = new HashMap<>();
 
     public ResolveAnEventID200ResponseEventEntriesInner() {
         super("anyOf", Boolean.FALSE);
@@ -216,6 +181,7 @@ public class ResolveAnEventID200ResponseEventEntriesInner extends AbstractOpenAp
         });
         schemas.put("ResolveAnEventID200ResponseEventEntriesInnerAnyOf3", new GenericType<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3>() {
         });
+        JSON.registerDescendants(ResolveAnEventID200ResponseEventEntriesInner.class, Collections.unmodifiableMap(schemas));
     }
 
     @Override
@@ -233,22 +199,22 @@ public class ResolveAnEventID200ResponseEventEntriesInner extends AbstractOpenAp
      */
     @Override
     public void setActualInstance(Object instance) {
-        if (instance instanceof ResolveAnEventID200ResponseEventEntriesInnerAnyOf) {
+        if (JSON.isInstanceOf(ResolveAnEventID200ResponseEventEntriesInnerAnyOf.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof ResolveAnEventID200ResponseEventEntriesInnerAnyOf1) {
+        if (JSON.isInstanceOf(ResolveAnEventID200ResponseEventEntriesInnerAnyOf1.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof ResolveAnEventID200ResponseEventEntriesInnerAnyOf2) {
+        if (JSON.isInstanceOf(ResolveAnEventID200ResponseEventEntriesInnerAnyOf2.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof ResolveAnEventID200ResponseEventEntriesInnerAnyOf3) {
+        if (JSON.isInstanceOf(ResolveAnEventID200ResponseEventEntriesInnerAnyOf3.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
@@ -311,71 +277,5 @@ public class ResolveAnEventID200ResponseEventEntriesInner extends AbstractOpenAp
         return (ResolveAnEventID200ResponseEventEntriesInnerAnyOf3)super.getActualInstance();
     }
 
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ResolveAnEventID200ResponseEventEntriesInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-    // validate anyOf schemas one by one
-    int validCount = 0;
-    // validate the json string with ResolveAnEventID200ResponseEventEntriesInnerAnyOf
-    try {
-      ResolveAnEventID200ResponseEventEntriesInnerAnyOf.validateJsonObject(jsonObj);
-      return; // return earlier as at least one schema is valid with respect to the Json object
-      //validCount++;
-    } catch (Exception e) {
-      // continue to the next one
-    }
-    // validate the json string with ResolveAnEventID200ResponseEventEntriesInnerAnyOf1
-    try {
-      ResolveAnEventID200ResponseEventEntriesInnerAnyOf1.validateJsonObject(jsonObj);
-      return; // return earlier as at least one schema is valid with respect to the Json object
-      //validCount++;
-    } catch (Exception e) {
-      // continue to the next one
-    }
-    // validate the json string with ResolveAnEventID200ResponseEventEntriesInnerAnyOf2
-    try {
-      ResolveAnEventID200ResponseEventEntriesInnerAnyOf2.validateJsonObject(jsonObj);
-      return; // return earlier as at least one schema is valid with respect to the Json object
-      //validCount++;
-    } catch (Exception e) {
-      // continue to the next one
-    }
-    // validate the json string with ResolveAnEventID200ResponseEventEntriesInnerAnyOf3
-    try {
-      ResolveAnEventID200ResponseEventEntriesInnerAnyOf3.validateJsonObject(jsonObj);
-      return; // return earlier as at least one schema is valid with respect to the Json object
-      //validCount++;
-    } catch (Exception e) {
-      // continue to the next one
-    }
-    if (validCount == 0) {
-      throw new IOException(String.format("The JSON string is invalid for ResolveAnEventID200ResponseEventEntriesInner with anyOf schemas: ResolveAnEventID200ResponseEventEntriesInnerAnyOf, ResolveAnEventID200ResponseEventEntriesInnerAnyOf1, ResolveAnEventID200ResponseEventEntriesInnerAnyOf2, ResolveAnEventID200ResponseEventEntriesInnerAnyOf3. JSON: %s", jsonObj.toString()));
-    }
-  }
-
- /**
-  * Create an instance of ResolveAnEventID200ResponseEventEntriesInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ResolveAnEventID200ResponseEventEntriesInner
-  * @throws IOException if the JSON string is invalid with respect to ResolveAnEventID200ResponseEventEntriesInner
-  */
-  public static ResolveAnEventID200ResponseEventEntriesInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ResolveAnEventID200ResponseEventEntriesInner.class);
-  }
-
- /**
-  * Convert an instance of ResolveAnEventID200ResponseEventEntriesInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

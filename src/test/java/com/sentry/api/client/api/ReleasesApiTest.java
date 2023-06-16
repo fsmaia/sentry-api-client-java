@@ -13,7 +13,8 @@
 
 package com.sentry.api.client.api;
 
-import com.sentry.api.client.ApiException;
+import com.sentry.api.client.*;
+import com.sentry.api.client.auth.*;
 import com.sentry.api.client.model.CreateANewDeployForAnOrganizationRequest;
 import com.sentry.api.client.model.CreateANewReleaseForAnOrganizationRequest;
 import java.io.File;
@@ -26,6 +27,8 @@ import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics200Resp
 import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics400Response;
 import com.sentry.api.client.model.UpdateAnOrganizationReleaseFileRequest;
 import com.sentry.api.client.model.UpdateAnOrganizationSReleaseRequest;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -37,7 +40,6 @@ import java.util.Map;
 /**
  * API tests for ReleasesApi
  */
-@Disabled
 public class ReleasesApiTest {
 
     private final ReleasesApi api = new ReleasesApi();
@@ -49,10 +51,10 @@ public class ReleasesApiTest {
      */
     @Test
     public void createANewDeployForAnOrganizationTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        CreateANewDeployForAnOrganizationRequest createANewDeployForAnOrganizationRequest = null;
-        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf response = api.createANewDeployForAnOrganization(organizationSlug, version, createANewDeployForAnOrganizationRequest);
+        //String organizationSlug = null;
+        //String version = null;
+        //CreateANewDeployForAnOrganizationRequest createANewDeployForAnOrganizationRequest = null;
+        //RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf response = api.createANewDeployForAnOrganization(organizationSlug, version, createANewDeployForAnOrganizationRequest);
         // TODO: test validations
     }
 
@@ -63,9 +65,9 @@ public class ReleasesApiTest {
      */
     @Test
     public void createANewReleaseForAnOrganizationTest() throws ApiException {
-        String organizationSlug = null;
-        CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest = null;
-        RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.createANewReleaseForAnOrganization(organizationSlug, createANewReleaseForAnOrganizationRequest);
+        //String organizationSlug = null;
+        //CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest = null;
+        //RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.createANewReleaseForAnOrganization(organizationSlug, createANewReleaseForAnOrganizationRequest);
         // TODO: test validations
     }
 
@@ -76,11 +78,11 @@ public class ReleasesApiTest {
      */
     @Test
     public void deleteAProjectReleasesFileTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String version = null;
-        String fileId = null;
-        api.deleteAProjectReleasesFile(organizationSlug, projectSlug, version, fileId);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String version = null;
+        //String fileId = null;
+        //api.deleteAProjectReleasesFile(organizationSlug, projectSlug, version, fileId);
         // TODO: test validations
     }
 
@@ -91,10 +93,10 @@ public class ReleasesApiTest {
      */
     @Test
     public void deleteAnOrganizationReleasesFileTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        String fileId = null;
-        api.deleteAnOrganizationReleasesFile(organizationSlug, version, fileId);
+        //String organizationSlug = null;
+        //String version = null;
+        //String fileId = null;
+        //api.deleteAnOrganizationReleasesFile(organizationSlug, version, fileId);
         // TODO: test validations
     }
 
@@ -105,9 +107,9 @@ public class ReleasesApiTest {
      */
     @Test
     public void deleteAnOrganizationsReleaseTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        api.deleteAnOrganizationsRelease(organizationSlug, version);
+        //String organizationSlug = null;
+        //String version = null;
+        //api.deleteAnOrganizationsRelease(organizationSlug, version);
         // TODO: test validations
     }
 
@@ -118,10 +120,10 @@ public class ReleasesApiTest {
      */
     @Test
     public void listAProjectReleasesCommitsTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String version = null;
-        List<ListARepositorySCommits200ResponseInner> response = api.listAProjectReleasesCommits(organizationSlug, projectSlug, version);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String version = null;
+        //List<ListARepositorySCommits200ResponseInner> response = api.listAProjectReleasesCommits(organizationSlug, projectSlug, version);
         // TODO: test validations
     }
 
@@ -132,10 +134,10 @@ public class ReleasesApiTest {
      */
     @Test
     public void listAProjectsReleaseFilesTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String version = null;
-        List<ListAnOrganizationSReleaseFiles200ResponseInner> response = api.listAProjectsReleaseFiles(organizationSlug, projectSlug, version);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String version = null;
+        //List<ListAnOrganizationSReleaseFiles200ResponseInner> response = api.listAProjectsReleaseFiles(organizationSlug, projectSlug, version);
         // TODO: test validations
     }
 
@@ -146,9 +148,9 @@ public class ReleasesApiTest {
      */
     @Test
     public void listAReleasesDeploysTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        List<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf> response = api.listAReleasesDeploys(organizationSlug, version);
+        //String organizationSlug = null;
+        //String version = null;
+        //List<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf> response = api.listAReleasesDeploys(organizationSlug, version);
         // TODO: test validations
     }
 
@@ -159,9 +161,9 @@ public class ReleasesApiTest {
      */
     @Test
     public void listAnOrganizationReleasesCommitsTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        List<ListARepositorySCommits200ResponseInner> response = api.listAnOrganizationReleasesCommits(organizationSlug, version);
+        //String organizationSlug = null;
+        //String version = null;
+        //List<ListARepositorySCommits200ResponseInner> response = api.listAnOrganizationReleasesCommits(organizationSlug, version);
         // TODO: test validations
     }
 
@@ -172,9 +174,9 @@ public class ReleasesApiTest {
      */
     @Test
     public void listAnOrganizationsReleaseFilesTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        List<ListAnOrganizationSReleaseFiles200ResponseInner> response = api.listAnOrganizationsReleaseFiles(organizationSlug, version);
+        //String organizationSlug = null;
+        //String version = null;
+        //List<ListAnOrganizationSReleaseFiles200ResponseInner> response = api.listAnOrganizationsReleaseFiles(organizationSlug, version);
         // TODO: test validations
     }
 
@@ -185,9 +187,9 @@ public class ReleasesApiTest {
      */
     @Test
     public void listAnOrganizationsReleasesTest() throws ApiException {
-        String organizationSlug = null;
-        String query = null;
-        List<RetrieveAnEventForAProject200ResponseReleaseAllOf> response = api.listAnOrganizationsReleases(organizationSlug, query);
+        //String organizationSlug = null;
+        //String query = null;
+        //List<RetrieveAnEventForAProject200ResponseReleaseAllOf> response = api.listAnOrganizationsReleases(organizationSlug, query);
         // TODO: test validations
     }
 
@@ -198,10 +200,10 @@ public class ReleasesApiTest {
      */
     @Test
     public void listIssuesToBeResolvedInAParticularReleaseTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String version = null;
-        api.listIssuesToBeResolvedInAParticularRelease(organizationSlug, projectSlug, version);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String version = null;
+        //api.listIssuesToBeResolvedInAParticularRelease(organizationSlug, projectSlug, version);
         // TODO: test validations
     }
 
@@ -212,12 +214,12 @@ public class ReleasesApiTest {
      */
     @Test
     public void retrieveAProjectReleasesFileTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String version = null;
-        String fileId = null;
-        Boolean download = null;
-        ListAnOrganizationSReleaseFiles200ResponseInner response = api.retrieveAProjectReleasesFile(organizationSlug, projectSlug, version, fileId, download);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String version = null;
+        //String fileId = null;
+        //Boolean download = null;
+        //ListAnOrganizationSReleaseFiles200ResponseInner response = api.retrieveAProjectReleasesFile(organizationSlug, projectSlug, version, fileId, download);
         // TODO: test validations
     }
 
@@ -228,11 +230,11 @@ public class ReleasesApiTest {
      */
     @Test
     public void retrieveAnOrganizationReleasesFileTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        String fileId = null;
-        Boolean download = null;
-        ListAnOrganizationSReleaseFiles200ResponseInner response = api.retrieveAnOrganizationReleasesFile(organizationSlug, version, fileId, download);
+        //String organizationSlug = null;
+        //String version = null;
+        //String fileId = null;
+        //Boolean download = null;
+        //ListAnOrganizationSReleaseFiles200ResponseInner response = api.retrieveAnOrganizationReleasesFile(organizationSlug, version, fileId, download);
         // TODO: test validations
     }
 
@@ -243,9 +245,9 @@ public class ReleasesApiTest {
      */
     @Test
     public void retrieveAnOrganizationsReleasesTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.retrieveAnOrganizationsReleases(organizationSlug, version);
+        //String organizationSlug = null;
+        //String version = null;
+        //RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.retrieveAnOrganizationsReleases(organizationSlug, version);
         // TODO: test validations
     }
 
@@ -256,9 +258,9 @@ public class ReleasesApiTest {
      */
     @Test
     public void retrieveFilesChangedInAReleasesCommitsTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        api.retrieveFilesChangedInAReleasesCommits(organizationSlug, version);
+        //String organizationSlug = null;
+        //String version = null;
+        //api.retrieveFilesChangedInAReleasesCommits(organizationSlug, version);
         // TODO: test validations
     }
 
@@ -269,20 +271,20 @@ public class ReleasesApiTest {
      */
     @Test
     public void retrieveReleaseHealthSessionStatisticsTest() throws ApiException {
-        String organizationSlug = null;
-        List<Integer> project = null;
-        List<String> field = null;
-        List<String> environment = null;
-        List<String> groupBy = null;
-        String orderBy = null;
-        String query = null;
-        String statsPeriod = null;
-        String interval = null;
-        String statsPeriodStart = null;
-        String statsPeriodEnd = null;
-        OffsetDateTime start = null;
-        OffsetDateTime end = null;
-        RetrieveReleaseHealthSessionStatistics200Response response = api.retrieveReleaseHealthSessionStatistics(organizationSlug, project, field, environment, groupBy, orderBy, query, statsPeriod, interval, statsPeriodStart, statsPeriodEnd, start, end);
+        //String organizationSlug = null;
+        //List<Integer> project = null;
+        //List<String> field = null;
+        //List<String> environment = null;
+        //List<String> groupBy = null;
+        //String orderBy = null;
+        //String query = null;
+        //String statsPeriod = null;
+        //String interval = null;
+        //String statsPeriodStart = null;
+        //String statsPeriodEnd = null;
+        //OffsetDateTime start = null;
+        //OffsetDateTime end = null;
+        //RetrieveReleaseHealthSessionStatistics200Response response = api.retrieveReleaseHealthSessionStatistics(organizationSlug, project, field, environment, groupBy, orderBy, query, statsPeriod, interval, statsPeriodStart, statsPeriodEnd, start, end);
         // TODO: test validations
     }
 
@@ -293,12 +295,12 @@ public class ReleasesApiTest {
      */
     @Test
     public void updateAProjectReleaseFileTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String version = null;
-        String fileId = null;
-        UpdateAnOrganizationReleaseFileRequest updateAnOrganizationReleaseFileRequest = null;
-        ListAnOrganizationSReleaseFiles200ResponseInner response = api.updateAProjectReleaseFile(organizationSlug, projectSlug, version, fileId, updateAnOrganizationReleaseFileRequest);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String version = null;
+        //String fileId = null;
+        //UpdateAnOrganizationReleaseFileRequest updateAnOrganizationReleaseFileRequest = null;
+        //ListAnOrganizationSReleaseFiles200ResponseInner response = api.updateAProjectReleaseFile(organizationSlug, projectSlug, version, fileId, updateAnOrganizationReleaseFileRequest);
         // TODO: test validations
     }
 
@@ -309,11 +311,11 @@ public class ReleasesApiTest {
      */
     @Test
     public void updateAnOrganizationReleaseFileTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        String fileId = null;
-        UpdateAnOrganizationReleaseFileRequest updateAnOrganizationReleaseFileRequest = null;
-        ListAnOrganizationSReleaseFiles200ResponseInner response = api.updateAnOrganizationReleaseFile(organizationSlug, version, fileId, updateAnOrganizationReleaseFileRequest);
+        //String organizationSlug = null;
+        //String version = null;
+        //String fileId = null;
+        //UpdateAnOrganizationReleaseFileRequest updateAnOrganizationReleaseFileRequest = null;
+        //ListAnOrganizationSReleaseFiles200ResponseInner response = api.updateAnOrganizationReleaseFile(organizationSlug, version, fileId, updateAnOrganizationReleaseFileRequest);
         // TODO: test validations
     }
 
@@ -324,10 +326,10 @@ public class ReleasesApiTest {
      */
     @Test
     public void updateAnOrganizationsReleaseTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest = null;
-        RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.updateAnOrganizationsRelease(organizationSlug, version, updateAnOrganizationSReleaseRequest);
+        //String organizationSlug = null;
+        //String version = null;
+        //UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest = null;
+        //RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.updateAnOrganizationsRelease(organizationSlug, version, updateAnOrganizationSReleaseRequest);
         // TODO: test validations
     }
 
@@ -338,13 +340,13 @@ public class ReleasesApiTest {
      */
     @Test
     public void uploadANewOrganizationReleaseFileTest() throws ApiException {
-        String organizationSlug = null;
-        String version = null;
-        File _file = null;
-        String name = null;
-        String dist = null;
-        String header = null;
-        api.uploadANewOrganizationReleaseFile(organizationSlug, version, _file, name, dist, header);
+        //String organizationSlug = null;
+        //String version = null;
+        //File _file = null;
+        //String name = null;
+        //String dist = null;
+        //String header = null;
+        //api.uploadANewOrganizationReleaseFile(organizationSlug, version, _file, name, dist, header);
         // TODO: test validations
     }
 
@@ -355,14 +357,14 @@ public class ReleasesApiTest {
      */
     @Test
     public void uploadANewProjectReleaseFileTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String version = null;
-        File _file = null;
-        String name = null;
-        String dist = null;
-        String header = null;
-        ListAnOrganizationSReleaseFiles200ResponseInner response = api.uploadANewProjectReleaseFile(organizationSlug, projectSlug, version, _file, name, dist, header);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String version = null;
+        //File _file = null;
+        //String name = null;
+        //String dist = null;
+        //String header = null;
+        //ListAnOrganizationSReleaseFiles200ResponseInner response = api.uploadANewProjectReleaseFile(organizationSlug, projectSlug, version, _file, name, dist, header);
         // TODO: test validations
     }
 

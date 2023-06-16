@@ -15,68 +15,49 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnOrganizationMember200ResponseFlags
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnOrganizationMember200ResponseFlags.JSON_PROPERTY_IDP_COLON_PROVISIONED,
+  RetrieveAnOrganizationMember200ResponseFlags.JSON_PROPERTY_IDP_COLON_ROLE_RESTRICTED,
+  RetrieveAnOrganizationMember200ResponseFlags.JSON_PROPERTY_SSO_COLON_LINKED,
+  RetrieveAnOrganizationMember200ResponseFlags.JSON_PROPERTY_SSO_COLON_INVALID,
+  RetrieveAnOrganizationMember200ResponseFlags.JSON_PROPERTY_MEMBER_LIMIT_COLON_RESTRICTED
+})
+@JsonTypeName("Retrieve_an_Organization_Member_200_response_flags")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseFlags {
-  public static final String SERIALIZED_NAME_IDP_COLON_PROVISIONED = "idp:provisioned";
-  @SerializedName(SERIALIZED_NAME_IDP_COLON_PROVISIONED)
+  public static final String JSON_PROPERTY_IDP_COLON_PROVISIONED = "idp:provisioned";
   private Boolean idpColonProvisioned;
 
-  public static final String SERIALIZED_NAME_IDP_COLON_ROLE_RESTRICTED = "idp:role-restricted";
-  @SerializedName(SERIALIZED_NAME_IDP_COLON_ROLE_RESTRICTED)
+  public static final String JSON_PROPERTY_IDP_COLON_ROLE_RESTRICTED = "idp:role-restricted";
   private Boolean idpColonRoleRestricted;
 
-  public static final String SERIALIZED_NAME_SSO_COLON_LINKED = "sso:linked";
-  @SerializedName(SERIALIZED_NAME_SSO_COLON_LINKED)
+  public static final String JSON_PROPERTY_SSO_COLON_LINKED = "sso:linked";
   private Boolean ssoColonLinked;
 
-  public static final String SERIALIZED_NAME_SSO_COLON_INVALID = "sso:invalid";
-  @SerializedName(SERIALIZED_NAME_SSO_COLON_INVALID)
+  public static final String JSON_PROPERTY_SSO_COLON_INVALID = "sso:invalid";
   private Boolean ssoColonInvalid;
 
-  public static final String SERIALIZED_NAME_MEMBER_LIMIT_COLON_RESTRICTED = "member-limit:restricted";
-  @SerializedName(SERIALIZED_NAME_MEMBER_LIMIT_COLON_RESTRICTED)
+  public static final String JSON_PROPERTY_MEMBER_LIMIT_COLON_RESTRICTED = "member-limit:restricted";
   private Boolean memberLimitColonRestricted;
 
-  public RetrieveAnOrganizationMember200ResponseFlags() {
+  public RetrieveAnOrganizationMember200ResponseFlags() { 
   }
 
   public RetrieveAnOrganizationMember200ResponseFlags idpColonProvisioned(Boolean idpColonProvisioned) {
-    
     this.idpColonProvisioned = idpColonProvisioned;
     return this;
   }
@@ -85,19 +66,23 @@ public class RetrieveAnOrganizationMember200ResponseFlags {
    * Get idpColonProvisioned
    * @return idpColonProvisioned
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IDP_COLON_PROVISIONED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIdpColonProvisioned() {
     return idpColonProvisioned;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IDP_COLON_PROVISIONED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIdpColonProvisioned(Boolean idpColonProvisioned) {
     this.idpColonProvisioned = idpColonProvisioned;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseFlags idpColonRoleRestricted(Boolean idpColonRoleRestricted) {
-    
     this.idpColonRoleRestricted = idpColonRoleRestricted;
     return this;
   }
@@ -106,19 +91,23 @@ public class RetrieveAnOrganizationMember200ResponseFlags {
    * Get idpColonRoleRestricted
    * @return idpColonRoleRestricted
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IDP_COLON_ROLE_RESTRICTED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIdpColonRoleRestricted() {
     return idpColonRoleRestricted;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IDP_COLON_ROLE_RESTRICTED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIdpColonRoleRestricted(Boolean idpColonRoleRestricted) {
     this.idpColonRoleRestricted = idpColonRoleRestricted;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseFlags ssoColonLinked(Boolean ssoColonLinked) {
-    
     this.ssoColonLinked = ssoColonLinked;
     return this;
   }
@@ -127,19 +116,23 @@ public class RetrieveAnOrganizationMember200ResponseFlags {
    * Get ssoColonLinked
    * @return ssoColonLinked
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SSO_COLON_LINKED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getSsoColonLinked() {
     return ssoColonLinked;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SSO_COLON_LINKED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSsoColonLinked(Boolean ssoColonLinked) {
     this.ssoColonLinked = ssoColonLinked;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseFlags ssoColonInvalid(Boolean ssoColonInvalid) {
-    
     this.ssoColonInvalid = ssoColonInvalid;
     return this;
   }
@@ -148,19 +141,23 @@ public class RetrieveAnOrganizationMember200ResponseFlags {
    * Get ssoColonInvalid
    * @return ssoColonInvalid
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SSO_COLON_INVALID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getSsoColonInvalid() {
     return ssoColonInvalid;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SSO_COLON_INVALID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSsoColonInvalid(Boolean ssoColonInvalid) {
     this.ssoColonInvalid = ssoColonInvalid;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseFlags memberLimitColonRestricted(Boolean memberLimitColonRestricted) {
-    
     this.memberLimitColonRestricted = memberLimitColonRestricted;
     return this;
   }
@@ -169,18 +166,25 @@ public class RetrieveAnOrganizationMember200ResponseFlags {
    * Get memberLimitColonRestricted
    * @return memberLimitColonRestricted
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_MEMBER_LIMIT_COLON_RESTRICTED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getMemberLimitColonRestricted() {
     return memberLimitColonRestricted;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MEMBER_LIMIT_COLON_RESTRICTED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMemberLimitColonRestricted(Boolean memberLimitColonRestricted) {
     this.memberLimitColonRestricted = memberLimitColonRestricted;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_an_Organization_Member_200_response_flags object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -226,104 +230,5 @@ public class RetrieveAnOrganizationMember200ResponseFlags {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("idp:provisioned");
-    openapiFields.add("idp:role-restricted");
-    openapiFields.add("sso:linked");
-    openapiFields.add("sso:invalid");
-    openapiFields.add("member-limit:restricted");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("idp:provisioned");
-    openapiRequiredFields.add("idp:role-restricted");
-    openapiRequiredFields.add("sso:linked");
-    openapiRequiredFields.add("sso:invalid");
-    openapiRequiredFields.add("member-limit:restricted");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnOrganizationMember200ResponseFlags
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnOrganizationMember200ResponseFlags.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnOrganizationMember200ResponseFlags is not found in the empty JSON string", RetrieveAnOrganizationMember200ResponseFlags.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnOrganizationMember200ResponseFlags.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnOrganizationMember200ResponseFlags` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveAnOrganizationMember200ResponseFlags.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnOrganizationMember200ResponseFlags.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnOrganizationMember200ResponseFlags' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnOrganizationMember200ResponseFlags> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnOrganizationMember200ResponseFlags.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnOrganizationMember200ResponseFlags>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnOrganizationMember200ResponseFlags value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnOrganizationMember200ResponseFlags read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnOrganizationMember200ResponseFlags given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnOrganizationMember200ResponseFlags
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnOrganizationMember200ResponseFlags
-  */
-  public static RetrieveAnOrganizationMember200ResponseFlags fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnOrganizationMember200ResponseFlags.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnOrganizationMember200ResponseFlags to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

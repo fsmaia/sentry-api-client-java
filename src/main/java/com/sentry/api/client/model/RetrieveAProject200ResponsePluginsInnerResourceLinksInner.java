@@ -15,56 +15,37 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAProject200ResponsePluginsInnerResourceLinksInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAProject200ResponsePluginsInnerResourceLinksInner.JSON_PROPERTY_TITLE,
+  RetrieveAProject200ResponsePluginsInnerResourceLinksInner.JSON_PROPERTY_URL
+})
+@JsonTypeName("Retrieve_a_Project_200_response_plugins_inner_resourceLinks_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAProject200ResponsePluginsInnerResourceLinksInner {
-  public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  public static final String JSON_PROPERTY_TITLE = "title";
   private String title;
 
-  public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL)
+  public static final String JSON_PROPERTY_URL = "url";
   private String url;
 
-  public RetrieveAProject200ResponsePluginsInnerResourceLinksInner() {
+  public RetrieveAProject200ResponsePluginsInnerResourceLinksInner() { 
   }
 
   public RetrieveAProject200ResponsePluginsInnerResourceLinksInner title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -73,19 +54,23 @@ public class RetrieveAProject200ResponsePluginsInnerResourceLinksInner {
    * Get title
    * @return title
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getTitle() {
     return title;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTitle(String title) {
     this.title = title;
   }
 
 
   public RetrieveAProject200ResponsePluginsInnerResourceLinksInner url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -94,18 +79,25 @@ public class RetrieveAProject200ResponsePluginsInnerResourceLinksInner {
    * Get url
    * @return url
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getUrl() {
     return url;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUrl(String url) {
     this.url = url;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_a_Project_200_response_plugins_inner_resourceLinks_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -145,95 +137,5 @@ public class RetrieveAProject200ResponsePluginsInnerResourceLinksInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("title");
-    openapiFields.add("url");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAProject200ResponsePluginsInnerResourceLinksInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAProject200ResponsePluginsInnerResourceLinksInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAProject200ResponsePluginsInnerResourceLinksInner is not found in the empty JSON string", RetrieveAProject200ResponsePluginsInnerResourceLinksInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAProject200ResponsePluginsInnerResourceLinksInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAProject200ResponsePluginsInnerResourceLinksInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
-      }
-      if ((jsonObj.get("url") != null && !jsonObj.get("url").isJsonNull()) && !jsonObj.get("url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAProject200ResponsePluginsInnerResourceLinksInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAProject200ResponsePluginsInnerResourceLinksInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAProject200ResponsePluginsInnerResourceLinksInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAProject200ResponsePluginsInnerResourceLinksInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAProject200ResponsePluginsInnerResourceLinksInner>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAProject200ResponsePluginsInnerResourceLinksInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAProject200ResponsePluginsInnerResourceLinksInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAProject200ResponsePluginsInnerResourceLinksInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAProject200ResponsePluginsInnerResourceLinksInner
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAProject200ResponsePluginsInnerResourceLinksInner
-  */
-  public static RetrieveAProject200ResponsePluginsInnerResourceLinksInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAProject200ResponsePluginsInnerResourceLinksInner.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAProject200ResponsePluginsInnerResourceLinksInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

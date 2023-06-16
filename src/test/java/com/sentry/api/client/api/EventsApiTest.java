@@ -13,7 +13,8 @@
 
 package com.sentry.api.client.api;
 
-import com.sentry.api.client.ApiException;
+import com.sentry.api.client.*;
+import com.sentry.api.client.auth.*;
 import com.sentry.api.client.model.BulkMutateAListOfIssues200Response;
 import com.sentry.api.client.model.BulkMutateAListOfIssuesRequest;
 import com.sentry.api.client.model.DebugIssuesRelatedToSourceMapsForAGivenEvent200Response;
@@ -27,6 +28,8 @@ import com.sentry.api.client.model.RetrieveTagDetails200Response;
 import java.util.UUID;
 import com.sentry.api.client.model.UpdateAnIssue200Response;
 import com.sentry.api.client.model.UpdateAnIssueRequest;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -38,7 +41,6 @@ import java.util.Map;
 /**
  * API tests for EventsApi
  */
-@Disabled
 public class EventsApiTest {
 
     private final EventsApi api = new EventsApi();
@@ -50,12 +52,12 @@ public class EventsApiTest {
      */
     @Test
     public void bulkMutateAListOfIssuesTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        BulkMutateAListOfIssuesRequest bulkMutateAListOfIssuesRequest = null;
-        Integer id = null;
-        String status = null;
-        BulkMutateAListOfIssues200Response response = api.bulkMutateAListOfIssues(organizationSlug, projectSlug, bulkMutateAListOfIssuesRequest, id, status);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //BulkMutateAListOfIssuesRequest bulkMutateAListOfIssuesRequest = null;
+        //Integer id = null;
+        //String status = null;
+        //BulkMutateAListOfIssues200Response response = api.bulkMutateAListOfIssues(organizationSlug, projectSlug, bulkMutateAListOfIssuesRequest, id, status);
         // TODO: test validations
     }
 
@@ -66,10 +68,10 @@ public class EventsApiTest {
      */
     @Test
     public void bulkRemoveAListOfIssuesTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        Integer id = null;
-        api.bulkRemoveAListOfIssues(organizationSlug, projectSlug, id);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //Integer id = null;
+        //api.bulkRemoveAListOfIssues(organizationSlug, projectSlug, id);
         // TODO: test validations
     }
 
@@ -80,12 +82,12 @@ public class EventsApiTest {
      */
     @Test
     public void debugIssuesRelatedToSourceMapsForAGivenEventTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        UUID eventId = null;
-        Integer frameIdx = null;
-        Integer exceptionIdx = null;
-        DebugIssuesRelatedToSourceMapsForAGivenEvent200Response response = api.debugIssuesRelatedToSourceMapsForAGivenEvent(organizationSlug, projectSlug, eventId, frameIdx, exceptionIdx);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //UUID eventId = null;
+        //Integer frameIdx = null;
+        //Integer exceptionIdx = null;
+        //DebugIssuesRelatedToSourceMapsForAGivenEvent200Response response = api.debugIssuesRelatedToSourceMapsForAGivenEvent(organizationSlug, projectSlug, eventId, frameIdx, exceptionIdx);
         // TODO: test validations
     }
 
@@ -96,11 +98,11 @@ public class EventsApiTest {
      */
     @Test
     public void listAProjectsEventsTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        Boolean full = null;
-        String cursor = null;
-        List<ListAProjectSEvents200ResponseInner> response = api.listAProjectsEvents(organizationSlug, projectSlug, full, cursor);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //Boolean full = null;
+        //String cursor = null;
+        //List<ListAProjectSEvents200ResponseInner> response = api.listAProjectsEvents(organizationSlug, projectSlug, full, cursor);
         // TODO: test validations
     }
 
@@ -111,13 +113,13 @@ public class EventsApiTest {
      */
     @Test
     public void listAProjectsIssuesTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String statsPeriod = null;
-        Boolean shortIdLookup = null;
-        String query = null;
-        String cursor = null;
-        List<ListAProjectSIssues200ResponseInner> response = api.listAProjectsIssues(organizationSlug, projectSlug, statsPeriod, shortIdLookup, query, cursor);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String statsPeriod = null;
+        //Boolean shortIdLookup = null;
+        //String query = null;
+        //String cursor = null;
+        //List<ListAProjectSIssues200ResponseInner> response = api.listAProjectsIssues(organizationSlug, projectSlug, statsPeriod, shortIdLookup, query, cursor);
         // TODO: test validations
     }
 
@@ -128,9 +130,9 @@ public class EventsApiTest {
      */
     @Test
     public void listATagsValuesRelatedToAnIssueTest() throws ApiException {
-        String issueId = null;
-        String key = null;
-        List<ListATagSValuesRelatedToAnIssue200ResponseInner> response = api.listATagsValuesRelatedToAnIssue(issueId, key);
+        //String issueId = null;
+        //String key = null;
+        //List<ListATagSValuesRelatedToAnIssue200ResponseInner> response = api.listATagsValuesRelatedToAnIssue(issueId, key);
         // TODO: test validations
     }
 
@@ -141,9 +143,9 @@ public class EventsApiTest {
      */
     @Test
     public void listAnIssuesEventsTest() throws ApiException {
-        String issueId = null;
-        Boolean full = null;
-        List<ListAProjectSEvents200ResponseInner> response = api.listAnIssuesEvents(issueId, full);
+        //String issueId = null;
+        //Boolean full = null;
+        //List<ListAProjectSEvents200ResponseInner> response = api.listAnIssuesEvents(issueId, full);
         // TODO: test validations
     }
 
@@ -154,9 +156,9 @@ public class EventsApiTest {
      */
     @Test
     public void listAnIssuesHashesTest() throws ApiException {
-        String issueId = null;
-        String cursor = null;
-        List<ListAnIssueSHashes200ResponseInner> response = api.listAnIssuesHashes(issueId, cursor);
+        //String issueId = null;
+        //String cursor = null;
+        //List<ListAnIssueSHashes200ResponseInner> response = api.listAnIssuesHashes(issueId, cursor);
         // TODO: test validations
     }
 
@@ -167,8 +169,8 @@ public class EventsApiTest {
      */
     @Test
     public void removeAnIssueTest() throws ApiException {
-        String issueId = null;
-        api.removeAnIssue(issueId);
+        //String issueId = null;
+        //api.removeAnIssue(issueId);
         // TODO: test validations
     }
 
@@ -179,10 +181,10 @@ public class EventsApiTest {
      */
     @Test
     public void retrieveAnEventForAProjectTest() throws ApiException {
-        String organizationSlug = null;
-        String projectSlug = null;
-        String eventId = null;
-        RetrieveAnEventForAProject200Response response = api.retrieveAnEventForAProject(organizationSlug, projectSlug, eventId);
+        //String organizationSlug = null;
+        //String projectSlug = null;
+        //String eventId = null;
+        //RetrieveAnEventForAProject200Response response = api.retrieveAnEventForAProject(organizationSlug, projectSlug, eventId);
         // TODO: test validations
     }
 
@@ -193,8 +195,8 @@ public class EventsApiTest {
      */
     @Test
     public void retrieveAnIssueTest() throws ApiException {
-        String issueId = null;
-        RetrieveAnIssue200Response response = api.retrieveAnIssue(issueId);
+        //String issueId = null;
+        //RetrieveAnIssue200Response response = api.retrieveAnIssue(issueId);
         // TODO: test validations
     }
 
@@ -205,9 +207,9 @@ public class EventsApiTest {
      */
     @Test
     public void retrieveTagDetailsTest() throws ApiException {
-        String issueId = null;
-        String key = null;
-        RetrieveTagDetails200Response response = api.retrieveTagDetails(issueId, key);
+        //String issueId = null;
+        //String key = null;
+        //RetrieveTagDetails200Response response = api.retrieveTagDetails(issueId, key);
         // TODO: test validations
     }
 
@@ -218,8 +220,8 @@ public class EventsApiTest {
      */
     @Test
     public void retrieveTheLatestEventForAnIssueTest() throws ApiException {
-        String issueId = null;
-        RetrieveAnEventForAProject200Response response = api.retrieveTheLatestEventForAnIssue(issueId);
+        //String issueId = null;
+        //RetrieveAnEventForAProject200Response response = api.retrieveTheLatestEventForAnIssue(issueId);
         // TODO: test validations
     }
 
@@ -230,8 +232,8 @@ public class EventsApiTest {
      */
     @Test
     public void retrieveTheOldestEventForAnIssueTest() throws ApiException {
-        String issueId = null;
-        RetrieveAnEventForAProject200Response response = api.retrieveTheOldestEventForAnIssue(issueId);
+        //String issueId = null;
+        //RetrieveAnEventForAProject200Response response = api.retrieveTheOldestEventForAnIssue(issueId);
         // TODO: test validations
     }
 
@@ -242,9 +244,9 @@ public class EventsApiTest {
      */
     @Test
     public void updateAnIssueTest() throws ApiException {
-        String issueId = null;
-        UpdateAnIssueRequest updateAnIssueRequest = null;
-        UpdateAnIssue200Response response = api.updateAnIssue(issueId, updateAnIssueRequest);
+        //String issueId = null;
+        //UpdateAnIssueRequest updateAnIssueRequest = null;
+        //UpdateAnIssue200Response response = api.updateAnIssue(issueId, updateAnIssueRequest);
         // TODO: test validations
     }
 

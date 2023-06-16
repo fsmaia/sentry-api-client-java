@@ -15,61 +15,45 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.CreateAMonitorRequestAlertRule;
 import com.sentry.api.client.model.CreateANewCheckInRequestMonitorConfig;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * Allows parameters to be defined in snake case, but passed as camel case.  Errors are output in camel case.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  MonitorValidator.JSON_PROPERTY_PROJECT,
+  MonitorValidator.JSON_PROPERTY_NAME,
+  MonitorValidator.JSON_PROPERTY_SLUG,
+  MonitorValidator.JSON_PROPERTY_STATUS,
+  MonitorValidator.JSON_PROPERTY_TYPE,
+  MonitorValidator.JSON_PROPERTY_CONFIG,
+  MonitorValidator.JSON_PROPERTY_ALERT_RULE
+})
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class MonitorValidator {
-  public static final String SERIALIZED_NAME_PROJECT = "project";
-  @SerializedName(SERIALIZED_NAME_PROJECT)
+  public static final String JSON_PROPERTY_PROJECT = "project";
   private String project;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_SLUG = "slug";
-  @SerializedName(SERIALIZED_NAME_SLUG)
+  public static final String JSON_PROPERTY_SLUG = "slug";
   private String slug;
 
   /**
    * Gets or Sets status
    */
-  @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
     ACTIVE("active"),
     
@@ -81,6 +65,7 @@ public class MonitorValidator {
       this.value = value;
     }
 
+    @JsonValue
     public String getValue() {
       return value;
     }
@@ -90,6 +75,7 @@ public class MonitorValidator {
       return String.valueOf(value);
     }
 
+    @JsonCreator
     public static StatusEnum fromValue(String value) {
       for (StatusEnum b : StatusEnum.values()) {
         if (b.value.equals(value)) {
@@ -98,29 +84,14 @@ public class MonitorValidator {
       }
       throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
-
-    public static class Adapter extends TypeAdapter<StatusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return StatusEnum.fromValue(value);
-      }
-    }
   }
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private StatusEnum status = StatusEnum.ACTIVE;
 
   /**
    * Gets or Sets type
    */
-  @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
     CRON_JOB("cron_job");
 
@@ -130,6 +101,7 @@ public class MonitorValidator {
       this.value = value;
     }
 
+    @JsonValue
     public String getValue() {
       return value;
     }
@@ -139,6 +111,7 @@ public class MonitorValidator {
       return String.valueOf(value);
     }
 
+    @JsonCreator
     public static TypeEnum fromValue(String value) {
       for (TypeEnum b : TypeEnum.values()) {
         if (b.value.equals(value)) {
@@ -147,38 +120,21 @@ public class MonitorValidator {
       }
       throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
-
-    public static class Adapter extends TypeAdapter<TypeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final TypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public TypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return TypeEnum.fromValue(value);
-      }
-    }
   }
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  public static final String JSON_PROPERTY_TYPE = "type";
   private TypeEnum type;
 
-  public static final String SERIALIZED_NAME_CONFIG = "config";
-  @SerializedName(SERIALIZED_NAME_CONFIG)
+  public static final String JSON_PROPERTY_CONFIG = "config";
   private CreateANewCheckInRequestMonitorConfig config;
 
-  public static final String SERIALIZED_NAME_ALERT_RULE = "alert_rule";
-  @SerializedName(SERIALIZED_NAME_ALERT_RULE)
+  public static final String JSON_PROPERTY_ALERT_RULE = "alert_rule";
   private CreateAMonitorRequestAlertRule alertRule;
 
-  public MonitorValidator() {
+  public MonitorValidator() { 
   }
 
   public MonitorValidator project(String project) {
-    
     this.project = project;
     return this;
   }
@@ -187,19 +143,23 @@ public class MonitorValidator {
    * Get project
    * @return project
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PROJECT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getProject() {
     return project;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROJECT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setProject(String project) {
     this.project = project;
   }
 
 
   public MonitorValidator name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -208,19 +168,23 @@ public class MonitorValidator {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public MonitorValidator slug(String slug) {
-    
     this.slug = slug;
     return this;
   }
@@ -229,19 +193,23 @@ public class MonitorValidator {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SLUG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getSlug() {
     return slug;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SLUG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSlug(String slug) {
     this.slug = slug;
   }
 
 
   public MonitorValidator status(StatusEnum status) {
-    
     this.status = status;
     return this;
   }
@@ -250,19 +218,23 @@ public class MonitorValidator {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public StatusEnum getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStatus(StatusEnum status) {
     this.status = status;
   }
 
 
   public MonitorValidator type(TypeEnum type) {
-    
     this.type = type;
     return this;
   }
@@ -271,19 +243,23 @@ public class MonitorValidator {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public TypeEnum getType() {
     return type;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setType(TypeEnum type) {
     this.type = type;
   }
 
 
   public MonitorValidator config(CreateANewCheckInRequestMonitorConfig config) {
-    
     this.config = config;
     return this;
   }
@@ -292,19 +268,23 @@ public class MonitorValidator {
    * Get config
    * @return config
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CONFIG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public CreateANewCheckInRequestMonitorConfig getConfig() {
     return config;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setConfig(CreateANewCheckInRequestMonitorConfig config) {
     this.config = config;
   }
 
 
   public MonitorValidator alertRule(CreateAMonitorRequestAlertRule alertRule) {
-    
     this.alertRule = alertRule;
     return this;
   }
@@ -313,18 +293,25 @@ public class MonitorValidator {
    * Get alertRule
    * @return alertRule
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ALERT_RULE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public CreateAMonitorRequestAlertRule getAlertRule() {
     return alertRule;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALERT_RULE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAlertRule(CreateAMonitorRequestAlertRule alertRule) {
     this.alertRule = alertRule;
   }
 
 
-
+  /**
+   * Return true if this MonitorValidator object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -374,126 +361,5 @@ public class MonitorValidator {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("project");
-    openapiFields.add("name");
-    openapiFields.add("slug");
-    openapiFields.add("status");
-    openapiFields.add("type");
-    openapiFields.add("config");
-    openapiFields.add("alert_rule");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("project");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("config");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to MonitorValidator
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!MonitorValidator.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in MonitorValidator is not found in the empty JSON string", MonitorValidator.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!MonitorValidator.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MonitorValidator` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : MonitorValidator.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("project").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `project` to be a primitive type in the JSON string but got `%s`", jsonObj.get("project").toString()));
-      }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      if ((jsonObj.get("slug") != null && !jsonObj.get("slug").isJsonNull()) && !jsonObj.get("slug").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `slug` to be a primitive type in the JSON string but got `%s`", jsonObj.get("slug").toString()));
-      }
-      if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-      // validate the required field `config`
-      CreateANewCheckInRequestMonitorConfig.validateJsonObject(jsonObj.getAsJsonObject("config"));
-      // validate the optional field `alert_rule`
-      if (jsonObj.get("alert_rule") != null && !jsonObj.get("alert_rule").isJsonNull()) {
-        CreateAMonitorRequestAlertRule.validateJsonObject(jsonObj.getAsJsonObject("alert_rule"));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!MonitorValidator.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'MonitorValidator' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<MonitorValidator> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(MonitorValidator.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<MonitorValidator>() {
-           @Override
-           public void write(JsonWriter out, MonitorValidator value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public MonitorValidator read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of MonitorValidator given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of MonitorValidator
-  * @throws IOException if the JSON string is invalid with respect to MonitorValidator
-  */
-  public static MonitorValidator fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, MonitorValidator.class);
-  }
-
- /**
-  * Convert an instance of MonitorValidator to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

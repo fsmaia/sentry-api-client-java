@@ -15,72 +15,53 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner;
 import com.sentry.api.client.model.ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMeta;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ListAnOrganizationSPaginatedTeams200ResponseResourcesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.JSON_PROPERTY_SCHEMAS,
+  ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.JSON_PROPERTY_ID,
+  ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.JSON_PROPERTY_DISPLAY_NAME,
+  ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.JSON_PROPERTY_MEMBERS,
+  ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.JSON_PROPERTY_META
+})
+@JsonTypeName("List_an_Organization_s_Paginated_Teams_200_response_Resources_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner {
-  public static final String SERIALIZED_NAME_SCHEMAS = "schemas";
-  @SerializedName(SERIALIZED_NAME_SCHEMAS)
+  public static final String JSON_PROPERTY_SCHEMAS = "schemas";
   private List<String> schemas = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_DISPLAY_NAME = "displayName";
-  @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
+  public static final String JSON_PROPERTY_DISPLAY_NAME = "displayName";
   private String displayName;
 
-  public static final String SERIALIZED_NAME_MEMBERS = "members";
-  @SerializedName(SERIALIZED_NAME_MEMBERS)
+  public static final String JSON_PROPERTY_MEMBERS = "members";
   private List<ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner> members = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_META = "meta";
-  @SerializedName(SERIALIZED_NAME_META)
+  public static final String JSON_PROPERTY_META = "meta";
   private ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMeta meta;
 
-  public ListAnOrganizationSPaginatedTeams200ResponseResourcesInner() {
+  public ListAnOrganizationSPaginatedTeams200ResponseResourcesInner() { 
   }
 
   public ListAnOrganizationSPaginatedTeams200ResponseResourcesInner schemas(List<String> schemas) {
-    
     this.schemas = schemas;
     return this;
   }
@@ -97,19 +78,23 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner {
    * Get schemas
    * @return schemas
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SCHEMAS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getSchemas() {
     return schemas;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCHEMAS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSchemas(List<String> schemas) {
     this.schemas = schemas;
   }
 
 
   public ListAnOrganizationSPaginatedTeams200ResponseResourcesInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -118,19 +103,23 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ListAnOrganizationSPaginatedTeams200ResponseResourcesInner displayName(String displayName) {
-    
     this.displayName = displayName;
     return this;
   }
@@ -139,19 +128,23 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner {
    * Get displayName
    * @return displayName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DISPLAY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDisplayName() {
     return displayName;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DISPLAY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
 
   public ListAnOrganizationSPaginatedTeams200ResponseResourcesInner members(List<ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner> members) {
-    
     this.members = members;
     return this;
   }
@@ -168,19 +161,23 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner {
    * Get members
    * @return members
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_MEMBERS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner> getMembers() {
     return members;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MEMBERS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMembers(List<ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner> members) {
     this.members = members;
   }
 
 
   public ListAnOrganizationSPaginatedTeams200ResponseResourcesInner meta(ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMeta meta) {
-    
     this.meta = meta;
     return this;
   }
@@ -189,18 +186,25 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner {
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_META)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMeta getMeta() {
     return meta;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_META)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMeta(ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMeta meta) {
     this.meta = meta;
   }
 
 
-
+  /**
+   * Return true if this List_an_Organization_s_Paginated_Teams_200_response_Resources_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -246,128 +250,5 @@ public class ListAnOrganizationSPaginatedTeams200ResponseResourcesInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("schemas");
-    openapiFields.add("id");
-    openapiFields.add("displayName");
-    openapiFields.add("members");
-    openapiFields.add("meta");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("schemas");
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("displayName");
-    openapiRequiredFields.add("members");
-    openapiRequiredFields.add("meta");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAnOrganizationSPaginatedTeams200ResponseResourcesInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListAnOrganizationSPaginatedTeams200ResponseResourcesInner is not found in the empty JSON string", ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListAnOrganizationSPaginatedTeams200ResponseResourcesInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("schemas") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("schemas").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schemas` to be an array in the JSON string but got `%s`", jsonObj.get("schemas").toString()));
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("displayName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `displayName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("displayName").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("members").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `members` to be an array in the JSON string but got `%s`", jsonObj.get("members").toString()));
-      }
-
-      JsonArray jsonArraymembers = jsonObj.getAsJsonArray("members");
-      // validate the required field `members` (array)
-      for (int i = 0; i < jsonArraymembers.size(); i++) {
-        ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner.validateJsonObject(jsonArraymembers.get(i).getAsJsonObject());
-      };
-      // validate the required field `meta`
-      ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMeta.validateJsonObject(jsonObj.getAsJsonObject("meta"));
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ListAnOrganizationSPaginatedTeams200ResponseResourcesInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ListAnOrganizationSPaginatedTeams200ResponseResourcesInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ListAnOrganizationSPaginatedTeams200ResponseResourcesInner>() {
-           @Override
-           public void write(JsonWriter out, ListAnOrganizationSPaginatedTeams200ResponseResourcesInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ListAnOrganizationSPaginatedTeams200ResponseResourcesInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ListAnOrganizationSPaginatedTeams200ResponseResourcesInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAnOrganizationSPaginatedTeams200ResponseResourcesInner
-  * @throws IOException if the JSON string is invalid with respect to ListAnOrganizationSPaginatedTeams200ResponseResourcesInner
-  */
-  public static ListAnOrganizationSPaginatedTeams200ResponseResourcesInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.class);
-  }
-
- /**
-  * Convert an instance of ListAnOrganizationSPaginatedTeams200ResponseResourcesInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

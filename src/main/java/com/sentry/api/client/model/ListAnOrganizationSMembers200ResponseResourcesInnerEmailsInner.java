@@ -15,60 +15,41 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.JSON_PROPERTY_PRIMARY,
+  ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.JSON_PROPERTY_VALUE,
+  ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.JSON_PROPERTY_TYPE
+})
+@JsonTypeName("List_an_Organization_s_Members_200_response_Resources_inner_emails_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner {
-  public static final String SERIALIZED_NAME_PRIMARY = "primary";
-  @SerializedName(SERIALIZED_NAME_PRIMARY)
+  public static final String JSON_PROPERTY_PRIMARY = "primary";
   private Boolean primary;
 
-  public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
+  public static final String JSON_PROPERTY_VALUE = "value";
   private String value;
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  public static final String JSON_PROPERTY_TYPE = "type";
   private String type;
 
-  public ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner() {
+  public ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner() { 
   }
 
   public ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner primary(Boolean primary) {
-    
     this.primary = primary;
     return this;
   }
@@ -77,19 +58,23 @@ public class ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner {
    * Get primary
    * @return primary
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PRIMARY)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getPrimary() {
     return primary;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PRIMARY)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPrimary(Boolean primary) {
     this.primary = primary;
   }
 
 
   public ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner value(String value) {
-    
     this.value = value;
     return this;
   }
@@ -98,19 +83,23 @@ public class ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner {
    * Get value
    * @return value
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getValue() {
     return value;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setValue(String value) {
     this.value = value;
   }
 
 
   public ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -119,18 +108,25 @@ public class ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getType() {
     return type;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setType(String type) {
     this.type = type;
   }
 
 
-
+  /**
+   * Return true if this List_an_Organization_s_Members_200_response_Resources_inner_emails_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -172,106 +168,5 @@ public class ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("primary");
-    openapiFields.add("value");
-    openapiFields.add("type");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("primary");
-    openapiRequiredFields.add("value");
-    openapiRequiredFields.add("type");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner is not found in the empty JSON string", ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
-      }
-      if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner>() {
-           @Override
-           public void write(JsonWriter out, ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner
-  * @throws IOException if the JSON string is invalid with respect to ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner
-  */
-  public static ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.class);
-  }
-
- /**
-  * Convert an instance of ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

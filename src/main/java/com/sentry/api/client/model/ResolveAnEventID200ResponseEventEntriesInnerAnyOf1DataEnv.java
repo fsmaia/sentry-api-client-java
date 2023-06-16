@@ -15,52 +15,33 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv.JSON_PROPERTY_E_N_V
+})
+@JsonTypeName("Resolve_an_Event_ID_200_response_event_entries_inner_anyOf_1_data_env")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv {
-  public static final String SERIALIZED_NAME_E_N_V = "ENV";
-  @SerializedName(SERIALIZED_NAME_E_N_V)
+  public static final String JSON_PROPERTY_E_N_V = "ENV";
   private String ENV;
 
-  public ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv() {
+  public ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv() { 
   }
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv ENV(String ENV) {
-    
     this.ENV = ENV;
     return this;
   }
@@ -69,18 +50,25 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv {
    * Get ENV
    * @return ENV
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_E_N_V)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getENV() {
     return ENV;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_E_N_V)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setENV(String ENV) {
     this.ENV = ENV;
   }
 
 
-
+  /**
+   * Return true if this Resolve_an_Event_ID_200_response_event_entries_inner_anyOf_1_data_env object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -118,91 +106,5 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("ENV");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv is not found in the empty JSON string", ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("ENV") != null && !jsonObj.get("ENV").isJsonNull()) && !jsonObj.get("ENV").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ENV` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ENV").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv>() {
-           @Override
-           public void write(JsonWriter out, ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv
-  * @throws IOException if the JSON string is invalid with respect to ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv
-  */
-  public static ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv.class);
-  }
-
- /**
-  * Convert an instance of ResolveAnEventID200ResponseEventEntriesInnerAnyOf1DataEnv to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

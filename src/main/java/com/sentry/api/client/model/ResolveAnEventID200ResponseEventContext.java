@@ -15,71 +15,52 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventContextSession;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ResolveAnEventID200ResponseEventContext
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ResolveAnEventID200ResponseEventContext.JSON_PROPERTY_LENGTH,
+  ResolveAnEventID200ResponseEventContext.JSON_PROPERTY_RESULTS,
+  ResolveAnEventID200ResponseEventContext.JSON_PROPERTY_SESSION,
+  ResolveAnEventID200ResponseEventContext.JSON_PROPERTY_UNAUTHORIZED,
+  ResolveAnEventID200ResponseEventContext.JSON_PROPERTY_URL
+})
+@JsonTypeName("Resolve_an_Event_ID_200_response_event_context")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventContext {
-  public static final String SERIALIZED_NAME_LENGTH = "length";
-  @SerializedName(SERIALIZED_NAME_LENGTH)
+  public static final String JSON_PROPERTY_LENGTH = "length";
   private Integer length;
 
-  public static final String SERIALIZED_NAME_RESULTS = "results";
-  @SerializedName(SERIALIZED_NAME_RESULTS)
+  public static final String JSON_PROPERTY_RESULTS = "results";
   private List<Integer> results;
 
-  public static final String SERIALIZED_NAME_SESSION = "session";
-  @SerializedName(SERIALIZED_NAME_SESSION)
+  public static final String JSON_PROPERTY_SESSION = "session";
   private ResolveAnEventID200ResponseEventContextSession session;
 
-  public static final String SERIALIZED_NAME_UNAUTHORIZED = "unauthorized";
-  @SerializedName(SERIALIZED_NAME_UNAUTHORIZED)
+  public static final String JSON_PROPERTY_UNAUTHORIZED = "unauthorized";
   private Boolean unauthorized;
 
-  public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL)
+  public static final String JSON_PROPERTY_URL = "url";
   private String url;
 
-  public ResolveAnEventID200ResponseEventContext() {
+  public ResolveAnEventID200ResponseEventContext() { 
   }
 
   public ResolveAnEventID200ResponseEventContext length(Integer length) {
-    
     this.length = length;
     return this;
   }
@@ -88,19 +69,23 @@ public class ResolveAnEventID200ResponseEventContext {
    * Get length
    * @return length
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_LENGTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Integer getLength() {
     return length;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LENGTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLength(Integer length) {
     this.length = length;
   }
 
 
   public ResolveAnEventID200ResponseEventContext results(List<Integer> results) {
-    
     this.results = results;
     return this;
   }
@@ -117,19 +102,23 @@ public class ResolveAnEventID200ResponseEventContext {
    * Get results
    * @return results
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_RESULTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public List<Integer> getResults() {
     return results;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RESULTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResults(List<Integer> results) {
     this.results = results;
   }
 
 
   public ResolveAnEventID200ResponseEventContext session(ResolveAnEventID200ResponseEventContextSession session) {
-    
     this.session = session;
     return this;
   }
@@ -138,19 +127,23 @@ public class ResolveAnEventID200ResponseEventContext {
    * Get session
    * @return session
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SESSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public ResolveAnEventID200ResponseEventContextSession getSession() {
     return session;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SESSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSession(ResolveAnEventID200ResponseEventContextSession session) {
     this.session = session;
   }
 
 
   public ResolveAnEventID200ResponseEventContext unauthorized(Boolean unauthorized) {
-    
     this.unauthorized = unauthorized;
     return this;
   }
@@ -159,19 +152,23 @@ public class ResolveAnEventID200ResponseEventContext {
    * Get unauthorized
    * @return unauthorized
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_UNAUTHORIZED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Boolean getUnauthorized() {
     return unauthorized;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_UNAUTHORIZED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUnauthorized(Boolean unauthorized) {
     this.unauthorized = unauthorized;
   }
 
 
   public ResolveAnEventID200ResponseEventContext url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -180,18 +177,25 @@ public class ResolveAnEventID200ResponseEventContext {
    * Get url
    * @return url
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getUrl() {
     return url;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUrl(String url) {
     this.url = url;
   }
 
 
-
+  /**
+   * Return true if this Resolve_an_Event_ID_200_response_event_context object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -237,103 +241,5 @@ public class ResolveAnEventID200ResponseEventContext {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("length");
-    openapiFields.add("results");
-    openapiFields.add("session");
-    openapiFields.add("unauthorized");
-    openapiFields.add("url");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ResolveAnEventID200ResponseEventContext
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ResolveAnEventID200ResponseEventContext.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ResolveAnEventID200ResponseEventContext is not found in the empty JSON string", ResolveAnEventID200ResponseEventContext.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ResolveAnEventID200ResponseEventContext.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ResolveAnEventID200ResponseEventContext` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("results") != null && !jsonObj.get("results").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `results` to be an array in the JSON string but got `%s`", jsonObj.get("results").toString()));
-      }
-      // validate the optional field `session`
-      if (jsonObj.get("session") != null && !jsonObj.get("session").isJsonNull()) {
-        ResolveAnEventID200ResponseEventContextSession.validateJsonObject(jsonObj.getAsJsonObject("session"));
-      }
-      if ((jsonObj.get("url") != null && !jsonObj.get("url").isJsonNull()) && !jsonObj.get("url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ResolveAnEventID200ResponseEventContext.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ResolveAnEventID200ResponseEventContext' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ResolveAnEventID200ResponseEventContext> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ResolveAnEventID200ResponseEventContext.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ResolveAnEventID200ResponseEventContext>() {
-           @Override
-           public void write(JsonWriter out, ResolveAnEventID200ResponseEventContext value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ResolveAnEventID200ResponseEventContext read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ResolveAnEventID200ResponseEventContext given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ResolveAnEventID200ResponseEventContext
-  * @throws IOException if the JSON string is invalid with respect to ResolveAnEventID200ResponseEventContext
-  */
-  public static ResolveAnEventID200ResponseEventContext fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ResolveAnEventID200ResponseEventContext.class);
-  }
-
- /**
-  * Convert an instance of ResolveAnEventID200ResponseEventContext to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

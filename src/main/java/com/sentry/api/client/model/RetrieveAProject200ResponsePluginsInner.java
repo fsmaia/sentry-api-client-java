@@ -15,125 +15,109 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.RetrieveAProject200ResponsePluginsInnerAuthor;
 import com.sentry.api.client.model.RetrieveAProject200ResponsePluginsInnerResourceLinksInner;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.NoSuchElementException;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAProject200ResponsePluginsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_ASSETS,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_AUTHOR,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_CAN_DISABLE,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_CONTEXTS,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_DESCRIPTION,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_DOC,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_ENABLED,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_HAS_CONFIGURATION,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_ID,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_IS_TESTABLE,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_METADATA,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_NAME,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_RESOURCE_LINKS,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_SHORT_NAME,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_SLUG,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_STATUS,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_TYPE,
+  RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_VERSION
+})
+@JsonTypeName("Retrieve_a_Project_200_response_plugins_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAProject200ResponsePluginsInner {
-  public static final String SERIALIZED_NAME_ASSETS = "assets";
-  @SerializedName(SERIALIZED_NAME_ASSETS)
+  public static final String JSON_PROPERTY_ASSETS = "assets";
   private List<String> assets = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_AUTHOR = "author";
-  @SerializedName(SERIALIZED_NAME_AUTHOR)
-  private RetrieveAProject200ResponsePluginsInnerAuthor author;
+  public static final String JSON_PROPERTY_AUTHOR = "author";
+  private JsonNullable<RetrieveAProject200ResponsePluginsInnerAuthor> author = JsonNullable.<RetrieveAProject200ResponsePluginsInnerAuthor>undefined();
 
-  public static final String SERIALIZED_NAME_CAN_DISABLE = "canDisable";
-  @SerializedName(SERIALIZED_NAME_CAN_DISABLE)
+  public static final String JSON_PROPERTY_CAN_DISABLE = "canDisable";
   private Boolean canDisable;
 
-  public static final String SERIALIZED_NAME_CONTEXTS = "contexts";
-  @SerializedName(SERIALIZED_NAME_CONTEXTS)
+  public static final String JSON_PROPERTY_CONTEXTS = "contexts";
   private List<String> contexts = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  public static final String JSON_PROPERTY_DESCRIPTION = "description";
   private String description;
 
-  public static final String SERIALIZED_NAME_DOC = "doc";
-  @SerializedName(SERIALIZED_NAME_DOC)
+  public static final String JSON_PROPERTY_DOC = "doc";
   private String doc;
 
-  public static final String SERIALIZED_NAME_ENABLED = "enabled";
-  @SerializedName(SERIALIZED_NAME_ENABLED)
+  public static final String JSON_PROPERTY_ENABLED = "enabled";
   private Boolean enabled;
 
-  public static final String SERIALIZED_NAME_HAS_CONFIGURATION = "hasConfiguration";
-  @SerializedName(SERIALIZED_NAME_HAS_CONFIGURATION)
+  public static final String JSON_PROPERTY_HAS_CONFIGURATION = "hasConfiguration";
   private Boolean hasConfiguration;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_IS_TESTABLE = "isTestable";
-  @SerializedName(SERIALIZED_NAME_IS_TESTABLE)
+  public static final String JSON_PROPERTY_IS_TESTABLE = "isTestable";
   private Boolean isTestable;
 
-  public static final String SERIALIZED_NAME_METADATA = "metadata";
-  @SerializedName(SERIALIZED_NAME_METADATA)
+  public static final String JSON_PROPERTY_METADATA = "metadata";
   private Object metadata;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_RESOURCE_LINKS = "resourceLinks";
-  @SerializedName(SERIALIZED_NAME_RESOURCE_LINKS)
-  private List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner> resourceLinks;
+  public static final String JSON_PROPERTY_RESOURCE_LINKS = "resourceLinks";
+  private JsonNullable<List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner>> resourceLinks = JsonNullable.<List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner>>undefined();
 
-  public static final String SERIALIZED_NAME_SHORT_NAME = "shortName";
-  @SerializedName(SERIALIZED_NAME_SHORT_NAME)
+  public static final String JSON_PROPERTY_SHORT_NAME = "shortName";
   private String shortName;
 
-  public static final String SERIALIZED_NAME_SLUG = "slug";
-  @SerializedName(SERIALIZED_NAME_SLUG)
+  public static final String JSON_PROPERTY_SLUG = "slug";
   private String slug;
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private String status;
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  public static final String JSON_PROPERTY_TYPE = "type";
   private String type;
 
-  public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION)
-  private String version;
+  public static final String JSON_PROPERTY_VERSION = "version";
+  private JsonNullable<String> version = JsonNullable.<String>undefined();
 
-  public RetrieveAProject200ResponsePluginsInner() {
+  public RetrieveAProject200ResponsePluginsInner() { 
   }
 
   public RetrieveAProject200ResponsePluginsInner assets(List<String> assets) {
-    
     this.assets = assets;
     return this;
   }
@@ -150,20 +134,24 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get assets
    * @return assets
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ASSETS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getAssets() {
     return assets;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ASSETS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAssets(List<String> assets) {
     this.assets = assets;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner author(RetrieveAProject200ResponsePluginsInnerAuthor author) {
-    
-    this.author = author;
+    this.author = JsonNullable.<RetrieveAProject200ResponsePluginsInnerAuthor>of(author);
     return this;
   }
 
@@ -171,19 +159,31 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get author
    * @return author
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public RetrieveAProject200ResponsePluginsInnerAuthor getAuthor() {
-    return author;
+        return author.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_AUTHOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<RetrieveAProject200ResponsePluginsInnerAuthor> getAuthor_JsonNullable() {
+    return author;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_AUTHOR)
+  public void setAuthor_JsonNullable(JsonNullable<RetrieveAProject200ResponsePluginsInnerAuthor> author) {
+    this.author = author;
+  }
 
   public void setAuthor(RetrieveAProject200ResponsePluginsInnerAuthor author) {
-    this.author = author;
+    this.author = JsonNullable.<RetrieveAProject200ResponsePluginsInnerAuthor>of(author);
   }
 
 
   public RetrieveAProject200ResponsePluginsInner canDisable(Boolean canDisable) {
-    
     this.canDisable = canDisable;
     return this;
   }
@@ -192,19 +192,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get canDisable
    * @return canDisable
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CAN_DISABLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getCanDisable() {
     return canDisable;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CAN_DISABLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setCanDisable(Boolean canDisable) {
     this.canDisable = canDisable;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner contexts(List<String> contexts) {
-    
     this.contexts = contexts;
     return this;
   }
@@ -221,19 +225,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get contexts
    * @return contexts
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CONTEXTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getContexts() {
     return contexts;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTEXTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setContexts(List<String> contexts) {
     this.contexts = contexts;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -242,19 +250,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get description
    * @return description
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getDescription() {
     return description;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDescription(String description) {
     this.description = description;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner doc(String doc) {
-    
     this.doc = doc;
     return this;
   }
@@ -263,19 +275,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get doc
    * @return doc
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DOC)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDoc() {
     return doc;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DOC)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDoc(String doc) {
     this.doc = doc;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner enabled(Boolean enabled) {
-    
     this.enabled = enabled;
     return this;
   }
@@ -284,19 +300,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get enabled
    * @return enabled
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ENABLED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getEnabled() {
     return enabled;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ENABLED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEnabled(Boolean enabled) {
     this.enabled = enabled;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner hasConfiguration(Boolean hasConfiguration) {
-    
     this.hasConfiguration = hasConfiguration;
     return this;
   }
@@ -305,19 +325,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get hasConfiguration
    * @return hasConfiguration
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_CONFIGURATION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasConfiguration() {
     return hasConfiguration;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_CONFIGURATION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasConfiguration(Boolean hasConfiguration) {
     this.hasConfiguration = hasConfiguration;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -326,19 +350,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner isTestable(Boolean isTestable) {
-    
     this.isTestable = isTestable;
     return this;
   }
@@ -347,19 +375,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get isTestable
    * @return isTestable
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_TESTABLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsTestable() {
     return isTestable;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_TESTABLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsTestable(Boolean isTestable) {
     this.isTestable = isTestable;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner metadata(Object metadata) {
-    
     this.metadata = metadata;
     return this;
   }
@@ -368,19 +400,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get metadata
    * @return metadata
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_METADATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getMetadata() {
     return metadata;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_METADATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMetadata(Object metadata) {
     this.metadata = metadata;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -389,28 +425,36 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner resourceLinks(List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner> resourceLinks) {
-    
-    this.resourceLinks = resourceLinks;
+    this.resourceLinks = JsonNullable.<List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner>>of(resourceLinks);
     return this;
   }
 
   public RetrieveAProject200ResponsePluginsInner addResourceLinksItem(RetrieveAProject200ResponsePluginsInnerResourceLinksInner resourceLinksItem) {
-    if (this.resourceLinks == null) {
-      this.resourceLinks = new ArrayList<>();
+    if (this.resourceLinks == null || !this.resourceLinks.isPresent()) {
+      this.resourceLinks = JsonNullable.<List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner>>of(new ArrayList<>());
     }
-    this.resourceLinks.add(resourceLinksItem);
+    try {
+      this.resourceLinks.get().add(resourceLinksItem);
+    } catch (java.util.NoSuchElementException e) {
+      // this can never happen, as we make sure above that the value is present
+    }
     return this;
   }
 
@@ -418,19 +462,31 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get resourceLinks
    * @return resourceLinks
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner> getResourceLinks() {
-    return resourceLinks;
+        return resourceLinks.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_RESOURCE_LINKS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner>> getResourceLinks_JsonNullable() {
+    return resourceLinks;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_RESOURCE_LINKS)
+  public void setResourceLinks_JsonNullable(JsonNullable<List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner>> resourceLinks) {
+    this.resourceLinks = resourceLinks;
+  }
 
   public void setResourceLinks(List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner> resourceLinks) {
-    this.resourceLinks = resourceLinks;
+    this.resourceLinks = JsonNullable.<List<RetrieveAProject200ResponsePluginsInnerResourceLinksInner>>of(resourceLinks);
   }
 
 
   public RetrieveAProject200ResponsePluginsInner shortName(String shortName) {
-    
     this.shortName = shortName;
     return this;
   }
@@ -439,19 +495,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get shortName
    * @return shortName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SHORT_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getShortName() {
     return shortName;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SHORT_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setShortName(String shortName) {
     this.shortName = shortName;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner slug(String slug) {
-    
     this.slug = slug;
     return this;
   }
@@ -460,19 +520,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SLUG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getSlug() {
     return slug;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SLUG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSlug(String slug) {
     this.slug = slug;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner status(String status) {
-    
     this.status = status;
     return this;
   }
@@ -481,19 +545,23 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setStatus(String status) {
     this.status = status;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -502,20 +570,24 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getType() {
     return type;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setType(String type) {
     this.type = type;
   }
 
 
   public RetrieveAProject200ResponsePluginsInner version(String version) {
-    
-    this.version = version;
+    this.version = JsonNullable.<String>of(version);
     return this;
   }
 
@@ -523,18 +595,33 @@ public class RetrieveAProject200ResponsePluginsInner {
    * Get version
    * @return version
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public String getVersion() {
-    return version;
+        return version.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_VERSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public void setVersion(String version) {
+  public JsonNullable<String> getVersion_JsonNullable() {
+    return version;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_VERSION)
+  public void setVersion_JsonNullable(JsonNullable<String> version) {
     this.version = version;
   }
 
+  public void setVersion(String version) {
+    this.version = JsonNullable.<String>of(version);
+  }
 
 
+  /**
+   * Return true if this Retrieve_a_Project_200_response_plugins_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -545,7 +632,7 @@ public class RetrieveAProject200ResponsePluginsInner {
     }
     RetrieveAProject200ResponsePluginsInner retrieveAProject200ResponsePluginsInner = (RetrieveAProject200ResponsePluginsInner) o;
     return Objects.equals(this.assets, retrieveAProject200ResponsePluginsInner.assets) &&
-        Objects.equals(this.author, retrieveAProject200ResponsePluginsInner.author) &&
+        equalsNullable(this.author, retrieveAProject200ResponsePluginsInner.author) &&
         Objects.equals(this.canDisable, retrieveAProject200ResponsePluginsInner.canDisable) &&
         Objects.equals(this.contexts, retrieveAProject200ResponsePluginsInner.contexts) &&
         Objects.equals(this.description, retrieveAProject200ResponsePluginsInner.description) &&
@@ -556,12 +643,12 @@ public class RetrieveAProject200ResponsePluginsInner {
         Objects.equals(this.isTestable, retrieveAProject200ResponsePluginsInner.isTestable) &&
         Objects.equals(this.metadata, retrieveAProject200ResponsePluginsInner.metadata) &&
         Objects.equals(this.name, retrieveAProject200ResponsePluginsInner.name) &&
-        Objects.equals(this.resourceLinks, retrieveAProject200ResponsePluginsInner.resourceLinks) &&
+        equalsNullable(this.resourceLinks, retrieveAProject200ResponsePluginsInner.resourceLinks) &&
         Objects.equals(this.shortName, retrieveAProject200ResponsePluginsInner.shortName) &&
         Objects.equals(this.slug, retrieveAProject200ResponsePluginsInner.slug) &&
         Objects.equals(this.status, retrieveAProject200ResponsePluginsInner.status) &&
         Objects.equals(this.type, retrieveAProject200ResponsePluginsInner.type) &&
-        Objects.equals(this.version, retrieveAProject200ResponsePluginsInner.version);
+        equalsNullable(this.version, retrieveAProject200ResponsePluginsInner.version);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -570,7 +657,7 @@ public class RetrieveAProject200ResponsePluginsInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(assets, author, canDisable, contexts, description, doc, enabled, hasConfiguration, id, isTestable, metadata, name, resourceLinks, shortName, slug, status, type, version);
+    return Objects.hash(assets, hashCodeNullable(author), canDisable, contexts, description, doc, enabled, hasConfiguration, id, isTestable, metadata, name, hashCodeNullable(resourceLinks), shortName, slug, status, type, hashCodeNullable(version));
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -617,183 +704,5 @@ public class RetrieveAProject200ResponsePluginsInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("assets");
-    openapiFields.add("author");
-    openapiFields.add("canDisable");
-    openapiFields.add("contexts");
-    openapiFields.add("description");
-    openapiFields.add("doc");
-    openapiFields.add("enabled");
-    openapiFields.add("hasConfiguration");
-    openapiFields.add("id");
-    openapiFields.add("isTestable");
-    openapiFields.add("metadata");
-    openapiFields.add("name");
-    openapiFields.add("resourceLinks");
-    openapiFields.add("shortName");
-    openapiFields.add("slug");
-    openapiFields.add("status");
-    openapiFields.add("type");
-    openapiFields.add("version");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("assets");
-    openapiRequiredFields.add("canDisable");
-    openapiRequiredFields.add("contexts");
-    openapiRequiredFields.add("doc");
-    openapiRequiredFields.add("enabled");
-    openapiRequiredFields.add("hasConfiguration");
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("isTestable");
-    openapiRequiredFields.add("metadata");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("shortName");
-    openapiRequiredFields.add("slug");
-    openapiRequiredFields.add("status");
-    openapiRequiredFields.add("type");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAProject200ResponsePluginsInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAProject200ResponsePluginsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAProject200ResponsePluginsInner is not found in the empty JSON string", RetrieveAProject200ResponsePluginsInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAProject200ResponsePluginsInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAProject200ResponsePluginsInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveAProject200ResponsePluginsInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("assets") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("assets").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assets` to be an array in the JSON string but got `%s`", jsonObj.get("assets").toString()));
-      }
-      // validate the optional field `author`
-      if (jsonObj.get("author") != null && !jsonObj.get("author").isJsonNull()) {
-        RetrieveAProject200ResponsePluginsInnerAuthor.validateJsonObject(jsonObj.getAsJsonObject("author"));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("contexts") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("contexts").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `contexts` to be an array in the JSON string but got `%s`", jsonObj.get("contexts").toString()));
-      }
-      if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
-      }
-      if (!jsonObj.get("doc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `doc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("doc").toString()));
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      if (jsonObj.get("resourceLinks") != null && !jsonObj.get("resourceLinks").isJsonNull()) {
-        JsonArray jsonArrayresourceLinks = jsonObj.getAsJsonArray("resourceLinks");
-        if (jsonArrayresourceLinks != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("resourceLinks").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `resourceLinks` to be an array in the JSON string but got `%s`", jsonObj.get("resourceLinks").toString()));
-          }
-
-          // validate the optional field `resourceLinks` (array)
-          for (int i = 0; i < jsonArrayresourceLinks.size(); i++) {
-            RetrieveAProject200ResponsePluginsInnerResourceLinksInner.validateJsonObject(jsonArrayresourceLinks.get(i).getAsJsonObject());
-          };
-        }
-      }
-      if (!jsonObj.get("shortName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `shortName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("shortName").toString()));
-      }
-      if (!jsonObj.get("slug").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `slug` to be a primitive type in the JSON string but got `%s`", jsonObj.get("slug").toString()));
-      }
-      if (!jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-      if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAProject200ResponsePluginsInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAProject200ResponsePluginsInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAProject200ResponsePluginsInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAProject200ResponsePluginsInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAProject200ResponsePluginsInner>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAProject200ResponsePluginsInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAProject200ResponsePluginsInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAProject200ResponsePluginsInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAProject200ResponsePluginsInner
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAProject200ResponsePluginsInner
-  */
-  public static RetrieveAProject200ResponsePluginsInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAProject200ResponsePluginsInner.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAProject200ResponsePluginsInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

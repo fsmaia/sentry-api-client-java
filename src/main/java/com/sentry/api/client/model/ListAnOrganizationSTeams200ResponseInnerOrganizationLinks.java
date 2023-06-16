@@ -15,56 +15,37 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ListAnOrganizationSTeams200ResponseInnerOrganizationLinks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ListAnOrganizationSTeams200ResponseInnerOrganizationLinks.JSON_PROPERTY_ORGANIZATION_URL,
+  ListAnOrganizationSTeams200ResponseInnerOrganizationLinks.JSON_PROPERTY_REGION_URL
+})
+@JsonTypeName("List_an_Organization_s_Teams_200_response_inner_organization_links")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ListAnOrganizationSTeams200ResponseInnerOrganizationLinks {
-  public static final String SERIALIZED_NAME_ORGANIZATION_URL = "organizationUrl";
-  @SerializedName(SERIALIZED_NAME_ORGANIZATION_URL)
+  public static final String JSON_PROPERTY_ORGANIZATION_URL = "organizationUrl";
   private String organizationUrl;
 
-  public static final String SERIALIZED_NAME_REGION_URL = "regionUrl";
-  @SerializedName(SERIALIZED_NAME_REGION_URL)
+  public static final String JSON_PROPERTY_REGION_URL = "regionUrl";
   private String regionUrl;
 
-  public ListAnOrganizationSTeams200ResponseInnerOrganizationLinks() {
+  public ListAnOrganizationSTeams200ResponseInnerOrganizationLinks() { 
   }
 
   public ListAnOrganizationSTeams200ResponseInnerOrganizationLinks organizationUrl(String organizationUrl) {
-    
     this.organizationUrl = organizationUrl;
     return this;
   }
@@ -73,19 +54,23 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganizationLinks {
    * Get organizationUrl
    * @return organizationUrl
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ORGANIZATION_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getOrganizationUrl() {
     return organizationUrl;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ORGANIZATION_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setOrganizationUrl(String organizationUrl) {
     this.organizationUrl = organizationUrl;
   }
 
 
   public ListAnOrganizationSTeams200ResponseInnerOrganizationLinks regionUrl(String regionUrl) {
-    
     this.regionUrl = regionUrl;
     return this;
   }
@@ -94,18 +79,25 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganizationLinks {
    * Get regionUrl
    * @return regionUrl
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_REGION_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getRegionUrl() {
     return regionUrl;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REGION_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setRegionUrl(String regionUrl) {
     this.regionUrl = regionUrl;
   }
 
 
-
+  /**
+   * Return true if this List_an_Organization_s_Teams_200_response_inner_organization_links object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -145,104 +137,5 @@ public class ListAnOrganizationSTeams200ResponseInnerOrganizationLinks {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("organizationUrl");
-    openapiFields.add("regionUrl");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("organizationUrl");
-    openapiRequiredFields.add("regionUrl");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAnOrganizationSTeams200ResponseInnerOrganizationLinks
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ListAnOrganizationSTeams200ResponseInnerOrganizationLinks.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListAnOrganizationSTeams200ResponseInnerOrganizationLinks is not found in the empty JSON string", ListAnOrganizationSTeams200ResponseInnerOrganizationLinks.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ListAnOrganizationSTeams200ResponseInnerOrganizationLinks.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListAnOrganizationSTeams200ResponseInnerOrganizationLinks` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ListAnOrganizationSTeams200ResponseInnerOrganizationLinks.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("organizationUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `organizationUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("organizationUrl").toString()));
-      }
-      if (!jsonObj.get("regionUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `regionUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("regionUrl").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ListAnOrganizationSTeams200ResponseInnerOrganizationLinks.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ListAnOrganizationSTeams200ResponseInnerOrganizationLinks' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ListAnOrganizationSTeams200ResponseInnerOrganizationLinks> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ListAnOrganizationSTeams200ResponseInnerOrganizationLinks.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ListAnOrganizationSTeams200ResponseInnerOrganizationLinks>() {
-           @Override
-           public void write(JsonWriter out, ListAnOrganizationSTeams200ResponseInnerOrganizationLinks value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ListAnOrganizationSTeams200ResponseInnerOrganizationLinks read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ListAnOrganizationSTeams200ResponseInnerOrganizationLinks given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAnOrganizationSTeams200ResponseInnerOrganizationLinks
-  * @throws IOException if the JSON string is invalid with respect to ListAnOrganizationSTeams200ResponseInnerOrganizationLinks
-  */
-  public static ListAnOrganizationSTeams200ResponseInnerOrganizationLinks fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAnOrganizationSTeams200ResponseInnerOrganizationLinks.class);
-  }
-
- /**
-  * Convert an instance of ListAnOrganizationSTeams200ResponseInnerOrganizationLinks to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

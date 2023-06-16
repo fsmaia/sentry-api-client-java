@@ -15,144 +15,124 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseExternalUsersInner;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseFlags;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseTeamRolesInner;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseUser;
-import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * OrganizationMemberWithRoles
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  OrganizationMemberWithRoles.JSON_PROPERTY_EXTERNAL_USERS,
+  OrganizationMemberWithRoles.JSON_PROPERTY_ID,
+  OrganizationMemberWithRoles.JSON_PROPERTY_EMAIL,
+  OrganizationMemberWithRoles.JSON_PROPERTY_NAME,
+  OrganizationMemberWithRoles.JSON_PROPERTY_USER,
+  OrganizationMemberWithRoles.JSON_PROPERTY_ROLE,
+  OrganizationMemberWithRoles.JSON_PROPERTY_ROLE_NAME,
+  OrganizationMemberWithRoles.JSON_PROPERTY_ORG_ROLE,
+  OrganizationMemberWithRoles.JSON_PROPERTY_GROUP_ORG_ROLES,
+  OrganizationMemberWithRoles.JSON_PROPERTY_PENDING,
+  OrganizationMemberWithRoles.JSON_PROPERTY_EXPIRED,
+  OrganizationMemberWithRoles.JSON_PROPERTY_FLAGS,
+  OrganizationMemberWithRoles.JSON_PROPERTY_DATE_CREATED,
+  OrganizationMemberWithRoles.JSON_PROPERTY_INVITE_STATUS,
+  OrganizationMemberWithRoles.JSON_PROPERTY_INVITER_NAME,
+  OrganizationMemberWithRoles.JSON_PROPERTY_TEAMS,
+  OrganizationMemberWithRoles.JSON_PROPERTY_TEAM_ROLES,
+  OrganizationMemberWithRoles.JSON_PROPERTY_INVITE_LINK,
+  OrganizationMemberWithRoles.JSON_PROPERTY_IS_ONLY_OWNER,
+  OrganizationMemberWithRoles.JSON_PROPERTY_ROLES,
+  OrganizationMemberWithRoles.JSON_PROPERTY_ORG_ROLE_LIST,
+  OrganizationMemberWithRoles.JSON_PROPERTY_TEAM_ROLE_LIST
+})
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class OrganizationMemberWithRoles {
-  public static final String SERIALIZED_NAME_EXTERNAL_USERS = "externalUsers";
-  @SerializedName(SERIALIZED_NAME_EXTERNAL_USERS)
+  public static final String JSON_PROPERTY_EXTERNAL_USERS = "externalUsers";
   private List<RetrieveAnOrganizationMember200ResponseExternalUsersInner> externalUsers;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
+  public static final String JSON_PROPERTY_EMAIL = "email";
   private String email;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_USER = "user";
-  @SerializedName(SERIALIZED_NAME_USER)
+  public static final String JSON_PROPERTY_USER = "user";
   private RetrieveAnOrganizationMember200ResponseUser user;
 
-  public static final String SERIALIZED_NAME_ROLE = "role";
-  @SerializedName(SERIALIZED_NAME_ROLE)
+  public static final String JSON_PROPERTY_ROLE = "role";
   private String role;
 
-  public static final String SERIALIZED_NAME_ROLE_NAME = "roleName";
-  @SerializedName(SERIALIZED_NAME_ROLE_NAME)
+  public static final String JSON_PROPERTY_ROLE_NAME = "roleName";
   private String roleName;
 
-  public static final String SERIALIZED_NAME_ORG_ROLE = "orgRole";
-  @SerializedName(SERIALIZED_NAME_ORG_ROLE)
+  public static final String JSON_PROPERTY_ORG_ROLE = "orgRole";
   private String orgRole;
 
-  public static final String SERIALIZED_NAME_GROUP_ORG_ROLES = "groupOrgRoles";
-  @SerializedName(SERIALIZED_NAME_GROUP_ORG_ROLES)
+  public static final String JSON_PROPERTY_GROUP_ORG_ROLES = "groupOrgRoles";
   private List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> groupOrgRoles = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_PENDING = "pending";
-  @SerializedName(SERIALIZED_NAME_PENDING)
+  public static final String JSON_PROPERTY_PENDING = "pending";
   private Boolean pending;
 
-  public static final String SERIALIZED_NAME_EXPIRED = "expired";
-  @SerializedName(SERIALIZED_NAME_EXPIRED)
+  public static final String JSON_PROPERTY_EXPIRED = "expired";
   private String expired;
 
-  public static final String SERIALIZED_NAME_FLAGS = "flags";
-  @SerializedName(SERIALIZED_NAME_FLAGS)
+  public static final String JSON_PROPERTY_FLAGS = "flags";
   private RetrieveAnOrganizationMember200ResponseFlags flags;
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private OffsetDateTime dateCreated;
 
-  public static final String SERIALIZED_NAME_INVITE_STATUS = "inviteStatus";
-  @SerializedName(SERIALIZED_NAME_INVITE_STATUS)
+  public static final String JSON_PROPERTY_INVITE_STATUS = "inviteStatus";
   private String inviteStatus;
 
-  public static final String SERIALIZED_NAME_INVITER_NAME = "inviterName";
-  @SerializedName(SERIALIZED_NAME_INVITER_NAME)
+  public static final String JSON_PROPERTY_INVITER_NAME = "inviterName";
   private String inviterName;
 
-  public static final String SERIALIZED_NAME_TEAMS = "teams";
-  @SerializedName(SERIALIZED_NAME_TEAMS)
+  public static final String JSON_PROPERTY_TEAMS = "teams";
   private List<String> teams = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_TEAM_ROLES = "teamRoles";
-  @SerializedName(SERIALIZED_NAME_TEAM_ROLES)
+  public static final String JSON_PROPERTY_TEAM_ROLES = "teamRoles";
   private List<RetrieveAnOrganizationMember200ResponseTeamRolesInner> teamRoles = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_INVITE_LINK = "invite_link";
-  @SerializedName(SERIALIZED_NAME_INVITE_LINK)
+  public static final String JSON_PROPERTY_INVITE_LINK = "invite_link";
   private String inviteLink;
 
-  public static final String SERIALIZED_NAME_IS_ONLY_OWNER = "isOnlyOwner";
-  @SerializedName(SERIALIZED_NAME_IS_ONLY_OWNER)
+  public static final String JSON_PROPERTY_IS_ONLY_OWNER = "isOnlyOwner";
   private Boolean isOnlyOwner;
 
-  public static final String SERIALIZED_NAME_ROLES = "roles";
-  @SerializedName(SERIALIZED_NAME_ROLES)
+  public static final String JSON_PROPERTY_ROLES = "roles";
   private List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> roles = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_ORG_ROLE_LIST = "orgRoleList";
-  @SerializedName(SERIALIZED_NAME_ORG_ROLE_LIST)
+  public static final String JSON_PROPERTY_ORG_ROLE_LIST = "orgRoleList";
   private List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> orgRoleList = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_TEAM_ROLE_LIST = "teamRoleList";
-  @SerializedName(SERIALIZED_NAME_TEAM_ROLE_LIST)
+  public static final String JSON_PROPERTY_TEAM_ROLE_LIST = "teamRoleList";
   private List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> teamRoleList = new ArrayList<>();
 
-  public OrganizationMemberWithRoles() {
+  public OrganizationMemberWithRoles() { 
   }
 
   public OrganizationMemberWithRoles externalUsers(List<RetrieveAnOrganizationMember200ResponseExternalUsersInner> externalUsers) {
-    
     this.externalUsers = externalUsers;
     return this;
   }
@@ -169,19 +149,23 @@ public class OrganizationMemberWithRoles {
    * Get externalUsers
    * @return externalUsers
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_EXTERNAL_USERS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public List<RetrieveAnOrganizationMember200ResponseExternalUsersInner> getExternalUsers() {
     return externalUsers;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXTERNAL_USERS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExternalUsers(List<RetrieveAnOrganizationMember200ResponseExternalUsersInner> externalUsers) {
     this.externalUsers = externalUsers;
   }
 
 
   public OrganizationMemberWithRoles id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -190,19 +174,23 @@ public class OrganizationMemberWithRoles {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public OrganizationMemberWithRoles email(String email) {
-    
     this.email = email;
     return this;
   }
@@ -211,19 +199,23 @@ public class OrganizationMemberWithRoles {
    * Get email
    * @return email
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EMAIL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getEmail() {
     return email;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EMAIL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEmail(String email) {
     this.email = email;
   }
 
 
   public OrganizationMemberWithRoles name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -232,19 +224,23 @@ public class OrganizationMemberWithRoles {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public OrganizationMemberWithRoles user(RetrieveAnOrganizationMember200ResponseUser user) {
-    
     this.user = user;
     return this;
   }
@@ -253,19 +249,23 @@ public class OrganizationMemberWithRoles {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_USER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnOrganizationMember200ResponseUser getUser() {
     return user;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUser(RetrieveAnOrganizationMember200ResponseUser user) {
     this.user = user;
   }
 
 
   public OrganizationMemberWithRoles role(String role) {
-    
     this.role = role;
     return this;
   }
@@ -274,19 +274,23 @@ public class OrganizationMemberWithRoles {
    * Get role
    * @return role
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ROLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getRole() {
     return role;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setRole(String role) {
     this.role = role;
   }
 
 
   public OrganizationMemberWithRoles roleName(String roleName) {
-    
     this.roleName = roleName;
     return this;
   }
@@ -295,19 +299,23 @@ public class OrganizationMemberWithRoles {
    * Get roleName
    * @return roleName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ROLE_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getRoleName() {
     return roleName;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROLE_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setRoleName(String roleName) {
     this.roleName = roleName;
   }
 
 
   public OrganizationMemberWithRoles orgRole(String orgRole) {
-    
     this.orgRole = orgRole;
     return this;
   }
@@ -316,19 +324,23 @@ public class OrganizationMemberWithRoles {
    * Get orgRole
    * @return orgRole
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ORG_ROLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getOrgRole() {
     return orgRole;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ORG_ROLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setOrgRole(String orgRole) {
     this.orgRole = orgRole;
   }
 
 
   public OrganizationMemberWithRoles groupOrgRoles(List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> groupOrgRoles) {
-    
     this.groupOrgRoles = groupOrgRoles;
     return this;
   }
@@ -345,19 +357,23 @@ public class OrganizationMemberWithRoles {
    * Get groupOrgRoles
    * @return groupOrgRoles
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_GROUP_ORG_ROLES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> getGroupOrgRoles() {
     return groupOrgRoles;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_GROUP_ORG_ROLES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setGroupOrgRoles(List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> groupOrgRoles) {
     this.groupOrgRoles = groupOrgRoles;
   }
 
 
   public OrganizationMemberWithRoles pending(Boolean pending) {
-    
     this.pending = pending;
     return this;
   }
@@ -366,19 +382,23 @@ public class OrganizationMemberWithRoles {
    * Get pending
    * @return pending
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PENDING)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getPending() {
     return pending;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PENDING)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPending(Boolean pending) {
     this.pending = pending;
   }
 
 
   public OrganizationMemberWithRoles expired(String expired) {
-    
     this.expired = expired;
     return this;
   }
@@ -387,19 +407,23 @@ public class OrganizationMemberWithRoles {
    * Get expired
    * @return expired
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EXPIRED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getExpired() {
     return expired;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXPIRED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setExpired(String expired) {
     this.expired = expired;
   }
 
 
   public OrganizationMemberWithRoles flags(RetrieveAnOrganizationMember200ResponseFlags flags) {
-    
     this.flags = flags;
     return this;
   }
@@ -408,19 +432,23 @@ public class OrganizationMemberWithRoles {
    * Get flags
    * @return flags
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_FLAGS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnOrganizationMember200ResponseFlags getFlags() {
     return flags;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FLAGS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFlags(RetrieveAnOrganizationMember200ResponseFlags flags) {
     this.flags = flags;
   }
 
 
   public OrganizationMemberWithRoles dateCreated(OffsetDateTime dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -429,19 +457,23 @@ public class OrganizationMemberWithRoles {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public OrganizationMemberWithRoles inviteStatus(String inviteStatus) {
-    
     this.inviteStatus = inviteStatus;
     return this;
   }
@@ -450,19 +482,23 @@ public class OrganizationMemberWithRoles {
    * Get inviteStatus
    * @return inviteStatus
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_INVITE_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getInviteStatus() {
     return inviteStatus;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INVITE_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setInviteStatus(String inviteStatus) {
     this.inviteStatus = inviteStatus;
   }
 
 
   public OrganizationMemberWithRoles inviterName(String inviterName) {
-    
     this.inviterName = inviterName;
     return this;
   }
@@ -471,19 +507,23 @@ public class OrganizationMemberWithRoles {
    * Get inviterName
    * @return inviterName
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_INVITER_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getInviterName() {
     return inviterName;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INVITER_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setInviterName(String inviterName) {
     this.inviterName = inviterName;
   }
 
 
   public OrganizationMemberWithRoles teams(List<String> teams) {
-    
     this.teams = teams;
     return this;
   }
@@ -500,19 +540,23 @@ public class OrganizationMemberWithRoles {
    * Get teams
    * @return teams
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TEAMS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getTeams() {
     return teams;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEAMS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTeams(List<String> teams) {
     this.teams = teams;
   }
 
 
   public OrganizationMemberWithRoles teamRoles(List<RetrieveAnOrganizationMember200ResponseTeamRolesInner> teamRoles) {
-    
     this.teamRoles = teamRoles;
     return this;
   }
@@ -529,19 +573,23 @@ public class OrganizationMemberWithRoles {
    * Get teamRoles
    * @return teamRoles
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TEAM_ROLES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnOrganizationMember200ResponseTeamRolesInner> getTeamRoles() {
     return teamRoles;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEAM_ROLES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTeamRoles(List<RetrieveAnOrganizationMember200ResponseTeamRolesInner> teamRoles) {
     this.teamRoles = teamRoles;
   }
 
 
   public OrganizationMemberWithRoles inviteLink(String inviteLink) {
-    
     this.inviteLink = inviteLink;
     return this;
   }
@@ -550,19 +598,23 @@ public class OrganizationMemberWithRoles {
    * Get inviteLink
    * @return inviteLink
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_INVITE_LINK)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getInviteLink() {
     return inviteLink;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INVITE_LINK)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setInviteLink(String inviteLink) {
     this.inviteLink = inviteLink;
   }
 
 
   public OrganizationMemberWithRoles isOnlyOwner(Boolean isOnlyOwner) {
-    
     this.isOnlyOwner = isOnlyOwner;
     return this;
   }
@@ -571,19 +623,23 @@ public class OrganizationMemberWithRoles {
    * Get isOnlyOwner
    * @return isOnlyOwner
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_ONLY_OWNER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsOnlyOwner() {
     return isOnlyOwner;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_ONLY_OWNER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsOnlyOwner(Boolean isOnlyOwner) {
     this.isOnlyOwner = isOnlyOwner;
   }
 
 
   public OrganizationMemberWithRoles roles(List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> roles) {
-    
     this.roles = roles;
     return this;
   }
@@ -600,19 +656,23 @@ public class OrganizationMemberWithRoles {
    * Get roles
    * @return roles
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ROLES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> getRoles() {
     return roles;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROLES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setRoles(List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> roles) {
     this.roles = roles;
   }
 
 
   public OrganizationMemberWithRoles orgRoleList(List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> orgRoleList) {
-    
     this.orgRoleList = orgRoleList;
     return this;
   }
@@ -629,19 +689,23 @@ public class OrganizationMemberWithRoles {
    * Get orgRoleList
    * @return orgRoleList
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ORG_ROLE_LIST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> getOrgRoleList() {
     return orgRoleList;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ORG_ROLE_LIST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setOrgRoleList(List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> orgRoleList) {
     this.orgRoleList = orgRoleList;
   }
 
 
   public OrganizationMemberWithRoles teamRoleList(List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> teamRoleList) {
-    
     this.teamRoleList = teamRoleList;
     return this;
   }
@@ -658,18 +722,25 @@ public class OrganizationMemberWithRoles {
    * Get teamRoleList
    * @return teamRoleList
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TEAM_ROLE_LIST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> getTeamRoleList() {
     return teamRoleList;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEAM_ROLE_LIST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTeamRoleList(List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> teamRoleList) {
     this.teamRoleList = teamRoleList;
   }
 
 
-
+  /**
+   * Return true if this OrganizationMemberWithRoles object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -749,241 +820,5 @@ public class OrganizationMemberWithRoles {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("externalUsers");
-    openapiFields.add("id");
-    openapiFields.add("email");
-    openapiFields.add("name");
-    openapiFields.add("user");
-    openapiFields.add("role");
-    openapiFields.add("roleName");
-    openapiFields.add("orgRole");
-    openapiFields.add("groupOrgRoles");
-    openapiFields.add("pending");
-    openapiFields.add("expired");
-    openapiFields.add("flags");
-    openapiFields.add("dateCreated");
-    openapiFields.add("inviteStatus");
-    openapiFields.add("inviterName");
-    openapiFields.add("teams");
-    openapiFields.add("teamRoles");
-    openapiFields.add("invite_link");
-    openapiFields.add("isOnlyOwner");
-    openapiFields.add("roles");
-    openapiFields.add("orgRoleList");
-    openapiFields.add("teamRoleList");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("email");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("user");
-    openapiRequiredFields.add("role");
-    openapiRequiredFields.add("roleName");
-    openapiRequiredFields.add("orgRole");
-    openapiRequiredFields.add("groupOrgRoles");
-    openapiRequiredFields.add("pending");
-    openapiRequiredFields.add("expired");
-    openapiRequiredFields.add("flags");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("inviteStatus");
-    openapiRequiredFields.add("inviterName");
-    openapiRequiredFields.add("teams");
-    openapiRequiredFields.add("teamRoles");
-    openapiRequiredFields.add("invite_link");
-    openapiRequiredFields.add("isOnlyOwner");
-    openapiRequiredFields.add("roles");
-    openapiRequiredFields.add("orgRoleList");
-    openapiRequiredFields.add("teamRoleList");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to OrganizationMemberWithRoles
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!OrganizationMemberWithRoles.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in OrganizationMemberWithRoles is not found in the empty JSON string", OrganizationMemberWithRoles.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!OrganizationMemberWithRoles.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `OrganizationMemberWithRoles` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : OrganizationMemberWithRoles.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (jsonObj.get("externalUsers") != null && !jsonObj.get("externalUsers").isJsonNull()) {
-        JsonArray jsonArrayexternalUsers = jsonObj.getAsJsonArray("externalUsers");
-        if (jsonArrayexternalUsers != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("externalUsers").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `externalUsers` to be an array in the JSON string but got `%s`", jsonObj.get("externalUsers").toString()));
-          }
-
-          // validate the optional field `externalUsers` (array)
-          for (int i = 0; i < jsonArrayexternalUsers.size(); i++) {
-            RetrieveAnOrganizationMember200ResponseExternalUsersInner.validateJsonObject(jsonArrayexternalUsers.get(i).getAsJsonObject());
-          };
-        }
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("email").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email").toString()));
-      }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      // validate the required field `user`
-      RetrieveAnOrganizationMember200ResponseUser.validateJsonObject(jsonObj.getAsJsonObject("user"));
-      if (!jsonObj.get("role").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `role` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role").toString()));
-      }
-      if (!jsonObj.get("roleName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `roleName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("roleName").toString()));
-      }
-      if (!jsonObj.get("orgRole").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `orgRole` to be a primitive type in the JSON string but got `%s`", jsonObj.get("orgRole").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("groupOrgRoles").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `groupOrgRoles` to be an array in the JSON string but got `%s`", jsonObj.get("groupOrgRoles").toString()));
-      }
-
-      JsonArray jsonArraygroupOrgRoles = jsonObj.getAsJsonArray("groupOrgRoles");
-      // validate the required field `groupOrgRoles` (array)
-      for (int i = 0; i < jsonArraygroupOrgRoles.size(); i++) {
-        RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner.validateJsonObject(jsonArraygroupOrgRoles.get(i).getAsJsonObject());
-      };
-      if (!jsonObj.get("expired").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `expired` to be a primitive type in the JSON string but got `%s`", jsonObj.get("expired").toString()));
-      }
-      // validate the required field `flags`
-      RetrieveAnOrganizationMember200ResponseFlags.validateJsonObject(jsonObj.getAsJsonObject("flags"));
-      if (!jsonObj.get("inviteStatus").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `inviteStatus` to be a primitive type in the JSON string but got `%s`", jsonObj.get("inviteStatus").toString()));
-      }
-      if (!jsonObj.get("inviterName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `inviterName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("inviterName").toString()));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("teams") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("teams").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `teams` to be an array in the JSON string but got `%s`", jsonObj.get("teams").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("teamRoles").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `teamRoles` to be an array in the JSON string but got `%s`", jsonObj.get("teamRoles").toString()));
-      }
-
-      JsonArray jsonArrayteamRoles = jsonObj.getAsJsonArray("teamRoles");
-      // validate the required field `teamRoles` (array)
-      for (int i = 0; i < jsonArrayteamRoles.size(); i++) {
-        RetrieveAnOrganizationMember200ResponseTeamRolesInner.validateJsonObject(jsonArrayteamRoles.get(i).getAsJsonObject());
-      };
-      if (!jsonObj.get("invite_link").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `invite_link` to be a primitive type in the JSON string but got `%s`", jsonObj.get("invite_link").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("roles").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `roles` to be an array in the JSON string but got `%s`", jsonObj.get("roles").toString()));
-      }
-
-      JsonArray jsonArrayroles = jsonObj.getAsJsonArray("roles");
-      // validate the required field `roles` (array)
-      for (int i = 0; i < jsonArrayroles.size(); i++) {
-        RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner.validateJsonObject(jsonArrayroles.get(i).getAsJsonObject());
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("orgRoleList").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `orgRoleList` to be an array in the JSON string but got `%s`", jsonObj.get("orgRoleList").toString()));
-      }
-
-      JsonArray jsonArrayorgRoleList = jsonObj.getAsJsonArray("orgRoleList");
-      // validate the required field `orgRoleList` (array)
-      for (int i = 0; i < jsonArrayorgRoleList.size(); i++) {
-        RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner.validateJsonObject(jsonArrayorgRoleList.get(i).getAsJsonObject());
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("teamRoleList").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `teamRoleList` to be an array in the JSON string but got `%s`", jsonObj.get("teamRoleList").toString()));
-      }
-
-      JsonArray jsonArrayteamRoleList = jsonObj.getAsJsonArray("teamRoleList");
-      // validate the required field `teamRoleList` (array)
-      for (int i = 0; i < jsonArrayteamRoleList.size(); i++) {
-        RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner.validateJsonObject(jsonArrayteamRoleList.get(i).getAsJsonObject());
-      };
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!OrganizationMemberWithRoles.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'OrganizationMemberWithRoles' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<OrganizationMemberWithRoles> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(OrganizationMemberWithRoles.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<OrganizationMemberWithRoles>() {
-           @Override
-           public void write(JsonWriter out, OrganizationMemberWithRoles value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public OrganizationMemberWithRoles read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of OrganizationMemberWithRoles given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of OrganizationMemberWithRoles
-  * @throws IOException if the JSON string is invalid with respect to OrganizationMemberWithRoles
-  */
-  public static OrganizationMemberWithRoles fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, OrganizationMemberWithRoles.class);
-  }
-
- /**
-  * Convert an instance of OrganizationMemberWithRoles to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

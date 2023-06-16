@@ -15,60 +15,41 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * CreateANewReleaseForAnOrganizationRequestRefsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  CreateANewReleaseForAnOrganizationRequestRefsInner.JSON_PROPERTY_REPOSITORY,
+  CreateANewReleaseForAnOrganizationRequestRefsInner.JSON_PROPERTY_COMMIT,
+  CreateANewReleaseForAnOrganizationRequestRefsInner.JSON_PROPERTY_PREVIOUS_COMMIT
+})
+@JsonTypeName("Create_a_New_Release_for_an_Organization_request_refs_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class CreateANewReleaseForAnOrganizationRequestRefsInner {
-  public static final String SERIALIZED_NAME_REPOSITORY = "repository";
-  @SerializedName(SERIALIZED_NAME_REPOSITORY)
+  public static final String JSON_PROPERTY_REPOSITORY = "repository";
   private String repository;
 
-  public static final String SERIALIZED_NAME_COMMIT = "commit";
-  @SerializedName(SERIALIZED_NAME_COMMIT)
+  public static final String JSON_PROPERTY_COMMIT = "commit";
   private String commit;
 
-  public static final String SERIALIZED_NAME_PREVIOUS_COMMIT = "previousCommit";
-  @SerializedName(SERIALIZED_NAME_PREVIOUS_COMMIT)
+  public static final String JSON_PROPERTY_PREVIOUS_COMMIT = "previousCommit";
   private String previousCommit;
 
-  public CreateANewReleaseForAnOrganizationRequestRefsInner() {
+  public CreateANewReleaseForAnOrganizationRequestRefsInner() { 
   }
 
   public CreateANewReleaseForAnOrganizationRequestRefsInner repository(String repository) {
-    
     this.repository = repository;
     return this;
   }
@@ -77,19 +58,23 @@ public class CreateANewReleaseForAnOrganizationRequestRefsInner {
    * The full name of the repository the commit belongs to.
    * @return repository
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_REPOSITORY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getRepository() {
     return repository;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REPOSITORY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRepository(String repository) {
     this.repository = repository;
   }
 
 
   public CreateANewReleaseForAnOrganizationRequestRefsInner commit(String commit) {
-    
     this.commit = commit;
     return this;
   }
@@ -98,19 +83,23 @@ public class CreateANewReleaseForAnOrganizationRequestRefsInner {
    * The current release&#39;s commit.
    * @return commit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_COMMIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getCommit() {
     return commit;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMMIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCommit(String commit) {
     this.commit = commit;
   }
 
 
   public CreateANewReleaseForAnOrganizationRequestRefsInner previousCommit(String previousCommit) {
-    
     this.previousCommit = previousCommit;
     return this;
   }
@@ -119,18 +108,25 @@ public class CreateANewReleaseForAnOrganizationRequestRefsInner {
    * The previous release&#39;s commit.
    * @return previousCommit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_PREVIOUS_COMMIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getPreviousCommit() {
     return previousCommit;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PREVIOUS_COMMIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPreviousCommit(String previousCommit) {
     this.previousCommit = previousCommit;
   }
 
 
-
+  /**
+   * Return true if this Create_a_New_Release_for_an_Organization_request_refs_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -172,99 +168,5 @@ public class CreateANewReleaseForAnOrganizationRequestRefsInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("repository");
-    openapiFields.add("commit");
-    openapiFields.add("previousCommit");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to CreateANewReleaseForAnOrganizationRequestRefsInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!CreateANewReleaseForAnOrganizationRequestRefsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in CreateANewReleaseForAnOrganizationRequestRefsInner is not found in the empty JSON string", CreateANewReleaseForAnOrganizationRequestRefsInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!CreateANewReleaseForAnOrganizationRequestRefsInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateANewReleaseForAnOrganizationRequestRefsInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("repository") != null && !jsonObj.get("repository").isJsonNull()) && !jsonObj.get("repository").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `repository` to be a primitive type in the JSON string but got `%s`", jsonObj.get("repository").toString()));
-      }
-      if ((jsonObj.get("commit") != null && !jsonObj.get("commit").isJsonNull()) && !jsonObj.get("commit").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `commit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("commit").toString()));
-      }
-      if ((jsonObj.get("previousCommit") != null && !jsonObj.get("previousCommit").isJsonNull()) && !jsonObj.get("previousCommit").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `previousCommit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("previousCommit").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CreateANewReleaseForAnOrganizationRequestRefsInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CreateANewReleaseForAnOrganizationRequestRefsInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CreateANewReleaseForAnOrganizationRequestRefsInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CreateANewReleaseForAnOrganizationRequestRefsInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<CreateANewReleaseForAnOrganizationRequestRefsInner>() {
-           @Override
-           public void write(JsonWriter out, CreateANewReleaseForAnOrganizationRequestRefsInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public CreateANewReleaseForAnOrganizationRequestRefsInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of CreateANewReleaseForAnOrganizationRequestRefsInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CreateANewReleaseForAnOrganizationRequestRefsInner
-  * @throws IOException if the JSON string is invalid with respect to CreateANewReleaseForAnOrganizationRequestRefsInner
-  */
-  public static CreateANewReleaseForAnOrganizationRequestRefsInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, CreateANewReleaseForAnOrganizationRequestRefsInner.class);
-  }
-
- /**
-  * Convert an instance of CreateANewReleaseForAnOrganizationRequestRefsInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

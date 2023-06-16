@@ -15,48 +15,37 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import org.openapitools.jackson.nullable.JsonNullable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.NoSuchElementException;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * CreateANewCheckInRequestMonitorConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  CreateANewCheckInRequestMonitorConfig.JSON_PROPERTY_SCHEDULE_TYPE,
+  CreateANewCheckInRequestMonitorConfig.JSON_PROPERTY_SCHEDULE,
+  CreateANewCheckInRequestMonitorConfig.JSON_PROPERTY_CHECKIN_MARGIN,
+  CreateANewCheckInRequestMonitorConfig.JSON_PROPERTY_MAX_RUNTIME,
+  CreateANewCheckInRequestMonitorConfig.JSON_PROPERTY_TIMEZONE
+})
+@JsonTypeName("Create_a_new_check_in_request_monitor_config")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class CreateANewCheckInRequestMonitorConfig {
   /**
    * Currently supports \&quot;crontab\&quot; or \&quot;interval\&quot;
    */
-  @JsonAdapter(ScheduleTypeEnum.Adapter.class)
   public enum ScheduleTypeEnum {
     CRONTAB("crontab"),
     
@@ -68,6 +57,7 @@ public class CreateANewCheckInRequestMonitorConfig {
       this.value = value;
     }
 
+    @JsonValue
     public String getValue() {
       return value;
     }
@@ -77,6 +67,7 @@ public class CreateANewCheckInRequestMonitorConfig {
       return String.valueOf(value);
     }
 
+    @JsonCreator
     public static ScheduleTypeEnum fromValue(String value) {
       for (ScheduleTypeEnum b : ScheduleTypeEnum.values()) {
         if (b.value.equals(value)) {
@@ -85,41 +76,23 @@ public class CreateANewCheckInRequestMonitorConfig {
       }
       throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
-
-    public static class Adapter extends TypeAdapter<ScheduleTypeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final ScheduleTypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public ScheduleTypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return ScheduleTypeEnum.fromValue(value);
-      }
-    }
   }
 
-  public static final String SERIALIZED_NAME_SCHEDULE_TYPE = "schedule_type";
-  @SerializedName(SERIALIZED_NAME_SCHEDULE_TYPE)
+  public static final String JSON_PROPERTY_SCHEDULE_TYPE = "schedule_type";
   private ScheduleTypeEnum scheduleType;
 
-  public static final String SERIALIZED_NAME_SCHEDULE = "schedule";
-  @SerializedName(SERIALIZED_NAME_SCHEDULE)
+  public static final String JSON_PROPERTY_SCHEDULE = "schedule";
   private Object schedule = null;
 
-  public static final String SERIALIZED_NAME_CHECKIN_MARGIN = "checkin_margin";
-  @SerializedName(SERIALIZED_NAME_CHECKIN_MARGIN)
-  private Integer checkinMargin;
+  public static final String JSON_PROPERTY_CHECKIN_MARGIN = "checkin_margin";
+  private JsonNullable<Integer> checkinMargin = JsonNullable.<Integer>undefined();
 
-  public static final String SERIALIZED_NAME_MAX_RUNTIME = "max_runtime";
-  @SerializedName(SERIALIZED_NAME_MAX_RUNTIME)
-  private Integer maxRuntime;
+  public static final String JSON_PROPERTY_MAX_RUNTIME = "max_runtime";
+  private JsonNullable<Integer> maxRuntime = JsonNullable.<Integer>undefined();
 
   /**
    * tz database style timezone string
    */
-  @JsonAdapter(TimezoneEnum.Adapter.class)
   public enum TimezoneEnum {
     AFRICA_ABIDJAN("Africa/Abidjan"),
     
@@ -1311,6 +1284,7 @@ public class CreateANewCheckInRequestMonitorConfig {
       this.value = value;
     }
 
+    @JsonValue
     public String getValue() {
       return value;
     }
@@ -1320,6 +1294,7 @@ public class CreateANewCheckInRequestMonitorConfig {
       return String.valueOf(value);
     }
 
+    @JsonCreator
     public static TimezoneEnum fromValue(String value) {
       for (TimezoneEnum b : TimezoneEnum.values()) {
         if (b.value.equals(value)) {
@@ -1328,30 +1303,15 @@ public class CreateANewCheckInRequestMonitorConfig {
       }
       throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
-
-    public static class Adapter extends TypeAdapter<TimezoneEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final TimezoneEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public TimezoneEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return TimezoneEnum.fromValue(value);
-      }
-    }
   }
 
-  public static final String SERIALIZED_NAME_TIMEZONE = "timezone";
-  @SerializedName(SERIALIZED_NAME_TIMEZONE)
+  public static final String JSON_PROPERTY_TIMEZONE = "timezone";
   private TimezoneEnum timezone;
 
-  public CreateANewCheckInRequestMonitorConfig() {
+  public CreateANewCheckInRequestMonitorConfig() { 
   }
 
   public CreateANewCheckInRequestMonitorConfig scheduleType(ScheduleTypeEnum scheduleType) {
-    
     this.scheduleType = scheduleType;
     return this;
   }
@@ -1360,19 +1320,23 @@ public class CreateANewCheckInRequestMonitorConfig {
    * Currently supports \&quot;crontab\&quot; or \&quot;interval\&quot;
    * @return scheduleType
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SCHEDULE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public ScheduleTypeEnum getScheduleType() {
     return scheduleType;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCHEDULE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setScheduleType(ScheduleTypeEnum scheduleType) {
     this.scheduleType = scheduleType;
   }
 
 
   public CreateANewCheckInRequestMonitorConfig schedule(Object schedule) {
-    
     this.schedule = schedule;
     return this;
   }
@@ -1381,20 +1345,24 @@ public class CreateANewCheckInRequestMonitorConfig {
    * Varies depending on the schedule_type. Is either a crontab string, or a 2 element tuple for intervals (e.g. [1, &#39;day&#39;])
    * @return schedule
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SCHEDULE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getSchedule() {
     return schedule;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCHEDULE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSchedule(Object schedule) {
     this.schedule = schedule;
   }
 
 
   public CreateANewCheckInRequestMonitorConfig checkinMargin(Integer checkinMargin) {
-    
-    this.checkinMargin = checkinMargin;
+    this.checkinMargin = JsonNullable.<Integer>of(checkinMargin);
     return this;
   }
 
@@ -1403,20 +1371,32 @@ public class CreateANewCheckInRequestMonitorConfig {
    * minimum: 0
    * @return checkinMargin
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public Integer getCheckinMargin() {
-    return checkinMargin;
+        return checkinMargin.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_CHECKIN_MARGIN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<Integer> getCheckinMargin_JsonNullable() {
+    return checkinMargin;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_CHECKIN_MARGIN)
+  public void setCheckinMargin_JsonNullable(JsonNullable<Integer> checkinMargin) {
+    this.checkinMargin = checkinMargin;
+  }
 
   public void setCheckinMargin(Integer checkinMargin) {
-    this.checkinMargin = checkinMargin;
+    this.checkinMargin = JsonNullable.<Integer>of(checkinMargin);
   }
 
 
   public CreateANewCheckInRequestMonitorConfig maxRuntime(Integer maxRuntime) {
-    
-    this.maxRuntime = maxRuntime;
+    this.maxRuntime = JsonNullable.<Integer>of(maxRuntime);
     return this;
   }
 
@@ -1425,19 +1405,31 @@ public class CreateANewCheckInRequestMonitorConfig {
    * minimum: 1
    * @return maxRuntime
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public Integer getMaxRuntime() {
-    return maxRuntime;
+        return maxRuntime.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_MAX_RUNTIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<Integer> getMaxRuntime_JsonNullable() {
+    return maxRuntime;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_MAX_RUNTIME)
+  public void setMaxRuntime_JsonNullable(JsonNullable<Integer> maxRuntime) {
+    this.maxRuntime = maxRuntime;
+  }
 
   public void setMaxRuntime(Integer maxRuntime) {
-    this.maxRuntime = maxRuntime;
+    this.maxRuntime = JsonNullable.<Integer>of(maxRuntime);
   }
 
 
   public CreateANewCheckInRequestMonitorConfig timezone(TimezoneEnum timezone) {
-    
     this.timezone = timezone;
     return this;
   }
@@ -1446,18 +1438,25 @@ public class CreateANewCheckInRequestMonitorConfig {
    * tz database style timezone string
    * @return timezone
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_TIMEZONE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public TimezoneEnum getTimezone() {
     return timezone;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TIMEZONE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTimezone(TimezoneEnum timezone) {
     this.timezone = timezone;
   }
 
 
-
+  /**
+   * Return true if this Create_a_new_check_in_request_monitor_config object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1469,8 +1468,8 @@ public class CreateANewCheckInRequestMonitorConfig {
     CreateANewCheckInRequestMonitorConfig createANewCheckInRequestMonitorConfig = (CreateANewCheckInRequestMonitorConfig) o;
     return Objects.equals(this.scheduleType, createANewCheckInRequestMonitorConfig.scheduleType) &&
         Objects.equals(this.schedule, createANewCheckInRequestMonitorConfig.schedule) &&
-        Objects.equals(this.checkinMargin, createANewCheckInRequestMonitorConfig.checkinMargin) &&
-        Objects.equals(this.maxRuntime, createANewCheckInRequestMonitorConfig.maxRuntime) &&
+        equalsNullable(this.checkinMargin, createANewCheckInRequestMonitorConfig.checkinMargin) &&
+        equalsNullable(this.maxRuntime, createANewCheckInRequestMonitorConfig.maxRuntime) &&
         Objects.equals(this.timezone, createANewCheckInRequestMonitorConfig.timezone);
   }
 
@@ -1480,7 +1479,7 @@ public class CreateANewCheckInRequestMonitorConfig {
 
   @Override
   public int hashCode() {
-    return Objects.hash(scheduleType, schedule, checkinMargin, maxRuntime, timezone);
+    return Objects.hash(scheduleType, schedule, hashCodeNullable(checkinMargin), hashCodeNullable(maxRuntime), timezone);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1514,106 +1513,5 @@ public class CreateANewCheckInRequestMonitorConfig {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("schedule_type");
-    openapiFields.add("schedule");
-    openapiFields.add("checkin_margin");
-    openapiFields.add("max_runtime");
-    openapiFields.add("timezone");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("schedule");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to CreateANewCheckInRequestMonitorConfig
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!CreateANewCheckInRequestMonitorConfig.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in CreateANewCheckInRequestMonitorConfig is not found in the empty JSON string", CreateANewCheckInRequestMonitorConfig.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!CreateANewCheckInRequestMonitorConfig.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateANewCheckInRequestMonitorConfig` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : CreateANewCheckInRequestMonitorConfig.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("schedule_type") != null && !jsonObj.get("schedule_type").isJsonNull()) && !jsonObj.get("schedule_type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schedule_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("schedule_type").toString()));
-      }
-      if ((jsonObj.get("timezone") != null && !jsonObj.get("timezone").isJsonNull()) && !jsonObj.get("timezone").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `timezone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("timezone").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CreateANewCheckInRequestMonitorConfig.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CreateANewCheckInRequestMonitorConfig' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CreateANewCheckInRequestMonitorConfig> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CreateANewCheckInRequestMonitorConfig.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<CreateANewCheckInRequestMonitorConfig>() {
-           @Override
-           public void write(JsonWriter out, CreateANewCheckInRequestMonitorConfig value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public CreateANewCheckInRequestMonitorConfig read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of CreateANewCheckInRequestMonitorConfig given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CreateANewCheckInRequestMonitorConfig
-  * @throws IOException if the JSON string is invalid with respect to CreateANewCheckInRequestMonitorConfig
-  */
-  public static CreateANewCheckInRequestMonitorConfig fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, CreateANewCheckInRequestMonitorConfig.class);
-  }
-
- /**
-  * Convert an instance of CreateANewCheckInRequestMonitorConfig to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

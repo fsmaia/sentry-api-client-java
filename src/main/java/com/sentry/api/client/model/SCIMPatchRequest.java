@@ -15,59 +15,39 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.UpdateAnOrganizationMemberSAttributesRequestOperationsInner;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * SCIMPatchRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  SCIMPatchRequest.JSON_PROPERTY_SCHEMAS,
+  SCIMPatchRequest.JSON_PROPERTY_OPERATIONS
+})
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class SCIMPatchRequest {
-  public static final String SERIALIZED_NAME_SCHEMAS = "schemas";
-  @SerializedName(SERIALIZED_NAME_SCHEMAS)
+  public static final String JSON_PROPERTY_SCHEMAS = "schemas";
   private List<String> schemas;
 
-  public static final String SERIALIZED_NAME_OPERATIONS = "Operations";
-  @SerializedName(SERIALIZED_NAME_OPERATIONS)
+  public static final String JSON_PROPERTY_OPERATIONS = "Operations";
   private List<UpdateAnOrganizationMemberSAttributesRequestOperationsInner> operations = new ArrayList<>();
 
-  public SCIMPatchRequest() {
+  public SCIMPatchRequest() { 
   }
 
   public SCIMPatchRequest schemas(List<String> schemas) {
-    
     this.schemas = schemas;
     return this;
   }
@@ -84,19 +64,23 @@ public class SCIMPatchRequest {
    * Get schemas
    * @return schemas
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SCHEMAS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public List<String> getSchemas() {
     return schemas;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCHEMAS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSchemas(List<String> schemas) {
     this.schemas = schemas;
   }
 
 
   public SCIMPatchRequest operations(List<UpdateAnOrganizationMemberSAttributesRequestOperationsInner> operations) {
-    
     this.operations = operations;
     return this;
   }
@@ -113,18 +97,25 @@ public class SCIMPatchRequest {
    * Get operations
    * @return operations
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_OPERATIONS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<UpdateAnOrganizationMemberSAttributesRequestOperationsInner> getOperations() {
     return operations;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OPERATIONS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setOperations(List<UpdateAnOrganizationMemberSAttributesRequestOperationsInner> operations) {
     this.operations = operations;
   }
 
 
-
+  /**
+   * Return true if this SCIMPatchRequest object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -164,111 +155,5 @@ public class SCIMPatchRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("schemas");
-    openapiFields.add("Operations");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("Operations");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to SCIMPatchRequest
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!SCIMPatchRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in SCIMPatchRequest is not found in the empty JSON string", SCIMPatchRequest.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!SCIMPatchRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SCIMPatchRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : SCIMPatchRequest.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("schemas") != null && !jsonObj.get("schemas").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `schemas` to be an array in the JSON string but got `%s`", jsonObj.get("schemas").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("Operations").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `Operations` to be an array in the JSON string but got `%s`", jsonObj.get("Operations").toString()));
-      }
-
-      JsonArray jsonArrayoperations = jsonObj.getAsJsonArray("Operations");
-      // validate the required field `Operations` (array)
-      for (int i = 0; i < jsonArrayoperations.size(); i++) {
-        UpdateAnOrganizationMemberSAttributesRequestOperationsInner.validateJsonObject(jsonArrayoperations.get(i).getAsJsonObject());
-      };
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!SCIMPatchRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'SCIMPatchRequest' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<SCIMPatchRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(SCIMPatchRequest.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<SCIMPatchRequest>() {
-           @Override
-           public void write(JsonWriter out, SCIMPatchRequest value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public SCIMPatchRequest read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of SCIMPatchRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of SCIMPatchRequest
-  * @throws IOException if the JSON string is invalid with respect to SCIMPatchRequest
-  */
-  public static SCIMPatchRequest fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, SCIMPatchRequest.class);
-  }
-
- /**
-  * Convert an instance of SCIMPatchRequest to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

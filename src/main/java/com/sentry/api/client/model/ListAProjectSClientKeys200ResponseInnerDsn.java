@@ -15,72 +15,53 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ListAProjectSClientKeys200ResponseInnerDsn
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ListAProjectSClientKeys200ResponseInnerDsn.JSON_PROPERTY_CDN,
+  ListAProjectSClientKeys200ResponseInnerDsn.JSON_PROPERTY_CSP,
+  ListAProjectSClientKeys200ResponseInnerDsn.JSON_PROPERTY_MINIDUMP,
+  ListAProjectSClientKeys200ResponseInnerDsn.JSON_PROPERTY_PUBLIC,
+  ListAProjectSClientKeys200ResponseInnerDsn.JSON_PROPERTY_SECRET,
+  ListAProjectSClientKeys200ResponseInnerDsn.JSON_PROPERTY_SECURITY
+})
+@JsonTypeName("List_a_Project_s_Client_Keys_200_response_inner_dsn")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ListAProjectSClientKeys200ResponseInnerDsn {
-  public static final String SERIALIZED_NAME_CDN = "cdn";
-  @SerializedName(SERIALIZED_NAME_CDN)
+  public static final String JSON_PROPERTY_CDN = "cdn";
   private String cdn;
 
-  public static final String SERIALIZED_NAME_CSP = "csp";
-  @SerializedName(SERIALIZED_NAME_CSP)
+  public static final String JSON_PROPERTY_CSP = "csp";
   private String csp;
 
-  public static final String SERIALIZED_NAME_MINIDUMP = "minidump";
-  @SerializedName(SERIALIZED_NAME_MINIDUMP)
+  public static final String JSON_PROPERTY_MINIDUMP = "minidump";
   private String minidump;
 
-  public static final String SERIALIZED_NAME_PUBLIC = "public";
-  @SerializedName(SERIALIZED_NAME_PUBLIC)
+  public static final String JSON_PROPERTY_PUBLIC = "public";
   private String _public;
 
-  public static final String SERIALIZED_NAME_SECRET = "secret";
-  @SerializedName(SERIALIZED_NAME_SECRET)
+  public static final String JSON_PROPERTY_SECRET = "secret";
   private String secret;
 
-  public static final String SERIALIZED_NAME_SECURITY = "security";
-  @SerializedName(SERIALIZED_NAME_SECURITY)
+  public static final String JSON_PROPERTY_SECURITY = "security";
   private String security;
 
-  public ListAProjectSClientKeys200ResponseInnerDsn() {
+  public ListAProjectSClientKeys200ResponseInnerDsn() { 
   }
 
   public ListAProjectSClientKeys200ResponseInnerDsn cdn(String cdn) {
-    
     this.cdn = cdn;
     return this;
   }
@@ -89,19 +70,23 @@ public class ListAProjectSClientKeys200ResponseInnerDsn {
    * Get cdn
    * @return cdn
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CDN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getCdn() {
     return cdn;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CDN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setCdn(String cdn) {
     this.cdn = cdn;
   }
 
 
   public ListAProjectSClientKeys200ResponseInnerDsn csp(String csp) {
-    
     this.csp = csp;
     return this;
   }
@@ -110,19 +95,23 @@ public class ListAProjectSClientKeys200ResponseInnerDsn {
    * Get csp
    * @return csp
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CSP)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getCsp() {
     return csp;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CSP)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setCsp(String csp) {
     this.csp = csp;
   }
 
 
   public ListAProjectSClientKeys200ResponseInnerDsn minidump(String minidump) {
-    
     this.minidump = minidump;
     return this;
   }
@@ -131,19 +120,23 @@ public class ListAProjectSClientKeys200ResponseInnerDsn {
    * Get minidump
    * @return minidump
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_MINIDUMP)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getMinidump() {
     return minidump;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MINIDUMP)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMinidump(String minidump) {
     this.minidump = minidump;
   }
 
 
   public ListAProjectSClientKeys200ResponseInnerDsn _public(String _public) {
-    
     this._public = _public;
     return this;
   }
@@ -152,19 +145,23 @@ public class ListAProjectSClientKeys200ResponseInnerDsn {
    * Get _public
    * @return _public
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PUBLIC)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getPublic() {
     return _public;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PUBLIC)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPublic(String _public) {
     this._public = _public;
   }
 
 
   public ListAProjectSClientKeys200ResponseInnerDsn secret(String secret) {
-    
     this.secret = secret;
     return this;
   }
@@ -173,19 +170,23 @@ public class ListAProjectSClientKeys200ResponseInnerDsn {
    * Get secret
    * @return secret
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SECRET)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getSecret() {
     return secret;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SECRET)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSecret(String secret) {
     this.secret = secret;
   }
 
 
   public ListAProjectSClientKeys200ResponseInnerDsn security(String security) {
-    
     this.security = security;
     return this;
   }
@@ -194,18 +195,25 @@ public class ListAProjectSClientKeys200ResponseInnerDsn {
    * Get security
    * @return security
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SECURITY)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getSecurity() {
     return security;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SECURITY)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSecurity(String security) {
     this.security = security;
   }
 
 
-
+  /**
+   * Return true if this List_a_Project_s_Client_Keys_200_response_inner_dsn object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -253,124 +261,5 @@ public class ListAProjectSClientKeys200ResponseInnerDsn {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("cdn");
-    openapiFields.add("csp");
-    openapiFields.add("minidump");
-    openapiFields.add("public");
-    openapiFields.add("secret");
-    openapiFields.add("security");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("cdn");
-    openapiRequiredFields.add("csp");
-    openapiRequiredFields.add("minidump");
-    openapiRequiredFields.add("public");
-    openapiRequiredFields.add("secret");
-    openapiRequiredFields.add("security");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAProjectSClientKeys200ResponseInnerDsn
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ListAProjectSClientKeys200ResponseInnerDsn.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListAProjectSClientKeys200ResponseInnerDsn is not found in the empty JSON string", ListAProjectSClientKeys200ResponseInnerDsn.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ListAProjectSClientKeys200ResponseInnerDsn.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListAProjectSClientKeys200ResponseInnerDsn` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ListAProjectSClientKeys200ResponseInnerDsn.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("cdn").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cdn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cdn").toString()));
-      }
-      if (!jsonObj.get("csp").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `csp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("csp").toString()));
-      }
-      if (!jsonObj.get("minidump").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `minidump` to be a primitive type in the JSON string but got `%s`", jsonObj.get("minidump").toString()));
-      }
-      if (!jsonObj.get("public").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `public` to be a primitive type in the JSON string but got `%s`", jsonObj.get("public").toString()));
-      }
-      if (!jsonObj.get("secret").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `secret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("secret").toString()));
-      }
-      if (!jsonObj.get("security").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `security` to be a primitive type in the JSON string but got `%s`", jsonObj.get("security").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ListAProjectSClientKeys200ResponseInnerDsn.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ListAProjectSClientKeys200ResponseInnerDsn' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ListAProjectSClientKeys200ResponseInnerDsn> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ListAProjectSClientKeys200ResponseInnerDsn.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ListAProjectSClientKeys200ResponseInnerDsn>() {
-           @Override
-           public void write(JsonWriter out, ListAProjectSClientKeys200ResponseInnerDsn value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ListAProjectSClientKeys200ResponseInnerDsn read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ListAProjectSClientKeys200ResponseInnerDsn given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAProjectSClientKeys200ResponseInnerDsn
-  * @throws IOException if the JSON string is invalid with respect to ListAProjectSClientKeys200ResponseInnerDsn
-  */
-  public static ListAProjectSClientKeys200ResponseInnerDsn fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAProjectSClientKeys200ResponseInnerDsn.class);
-  }
-
- /**
-  * Convert an instance of ListAProjectSClientKeys200ResponseInnerDsn to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

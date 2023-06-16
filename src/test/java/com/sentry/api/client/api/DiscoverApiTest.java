@@ -13,9 +13,12 @@
 
 package com.sentry.api.client.api;
 
-import com.sentry.api.client.ApiException;
+import com.sentry.api.client.*;
+import com.sentry.api.client.auth.*;
 import java.time.OffsetDateTime;
 import com.sentry.api.client.model.QueryDiscoverEventsInTableFormat200Response;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -27,7 +30,6 @@ import java.util.Map;
 /**
  * API tests for DiscoverApi
  */
-@Disabled
 public class DiscoverApiTest {
 
     private final DiscoverApi api = new DiscoverApi();
@@ -39,17 +41,17 @@ public class DiscoverApiTest {
      */
     @Test
     public void queryDiscoverEventsInTableFormatTest() throws ApiException {
-        String organizationSlug = null;
-        List<String> field = null;
-        OffsetDateTime end = null;
-        List<String> environment = null;
-        List<Integer> project = null;
-        OffsetDateTime start = null;
-        String statsPeriod = null;
-        Integer perPage = null;
-        String query = null;
-        String sort = null;
-        QueryDiscoverEventsInTableFormat200Response response = api.queryDiscoverEventsInTableFormat(organizationSlug, field, end, environment, project, start, statsPeriod, perPage, query, sort);
+        //String organizationSlug = null;
+        //List<String> field = null;
+        //OffsetDateTime end = null;
+        //List<String> environment = null;
+        //List<Integer> project = null;
+        //OffsetDateTime start = null;
+        //String statsPeriod = null;
+        //Integer perPage = null;
+        //String query = null;
+        //String sort = null;
+        //QueryDiscoverEventsInTableFormat200Response response = api.queryDiscoverEventsInTableFormat(organizationSlug, field, end, environment, project, start, statsPeriod, perPage, query, sort);
         // TODO: test validations
     }
 

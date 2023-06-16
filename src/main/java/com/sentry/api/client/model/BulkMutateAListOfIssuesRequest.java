@@ -15,81 +15,62 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.sentry.api.client.model.BulkMutateAListOfIssuesRequestStatusDetails;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.sentry.api.client.model.BulkMutateAListOfIssuesRequestStatusDetails;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * BulkMutateAListOfIssuesRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  BulkMutateAListOfIssuesRequest.JSON_PROPERTY_STATUS,
+  BulkMutateAListOfIssuesRequest.JSON_PROPERTY_STATUS_DETAILS,
+  BulkMutateAListOfIssuesRequest.JSON_PROPERTY_IGNORE_DURATION,
+  BulkMutateAListOfIssuesRequest.JSON_PROPERTY_IS_PUBLIC,
+  BulkMutateAListOfIssuesRequest.JSON_PROPERTY_MERGE,
+  BulkMutateAListOfIssuesRequest.JSON_PROPERTY_ASSIGNED_TO,
+  BulkMutateAListOfIssuesRequest.JSON_PROPERTY_HAS_SEEN,
+  BulkMutateAListOfIssuesRequest.JSON_PROPERTY_IS_BOOKMARKED
+})
+@JsonTypeName("Bulk_Mutate_a_List_of_Issues_request")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class BulkMutateAListOfIssuesRequest {
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private String status;
 
-  public static final String SERIALIZED_NAME_STATUS_DETAILS = "statusDetails";
-  @SerializedName(SERIALIZED_NAME_STATUS_DETAILS)
+  public static final String JSON_PROPERTY_STATUS_DETAILS = "statusDetails";
   private BulkMutateAListOfIssuesRequestStatusDetails statusDetails;
 
-  public static final String SERIALIZED_NAME_IGNORE_DURATION = "ignoreDuration";
-  @SerializedName(SERIALIZED_NAME_IGNORE_DURATION)
+  public static final String JSON_PROPERTY_IGNORE_DURATION = "ignoreDuration";
   private Integer ignoreDuration;
 
-  public static final String SERIALIZED_NAME_IS_PUBLIC = "isPublic";
-  @SerializedName(SERIALIZED_NAME_IS_PUBLIC)
+  public static final String JSON_PROPERTY_IS_PUBLIC = "isPublic";
   private Boolean isPublic;
 
-  public static final String SERIALIZED_NAME_MERGE = "merge";
-  @SerializedName(SERIALIZED_NAME_MERGE)
+  public static final String JSON_PROPERTY_MERGE = "merge";
   private Boolean merge;
 
-  public static final String SERIALIZED_NAME_ASSIGNED_TO = "assignedTo";
-  @SerializedName(SERIALIZED_NAME_ASSIGNED_TO)
+  public static final String JSON_PROPERTY_ASSIGNED_TO = "assignedTo";
   private String assignedTo;
 
-  public static final String SERIALIZED_NAME_HAS_SEEN = "hasSeen";
-  @SerializedName(SERIALIZED_NAME_HAS_SEEN)
+  public static final String JSON_PROPERTY_HAS_SEEN = "hasSeen";
   private Boolean hasSeen;
 
-  public static final String SERIALIZED_NAME_IS_BOOKMARKED = "isBookmarked";
-  @SerializedName(SERIALIZED_NAME_IS_BOOKMARKED)
+  public static final String JSON_PROPERTY_IS_BOOKMARKED = "isBookmarked";
   private Boolean isBookmarked;
 
-  public BulkMutateAListOfIssuesRequest() {
+  public BulkMutateAListOfIssuesRequest() { 
   }
 
   public BulkMutateAListOfIssuesRequest status(String status) {
-    
     this.status = status;
     return this;
   }
@@ -98,19 +79,23 @@ public class BulkMutateAListOfIssuesRequest {
    * The new status for the issues. Valid values are &#x60;\&quot;resolved\&quot;&#x60;, &#x60;\&quot;resolvedInNextRelease\&quot;&#x60;, &#x60;\&quot;unresolved\&quot;&#x60;, and &#x60;\&quot;ignored\&quot;&#x60;.
    * @return status
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStatus(String status) {
     this.status = status;
   }
 
 
   public BulkMutateAListOfIssuesRequest statusDetails(BulkMutateAListOfIssuesRequestStatusDetails statusDetails) {
-    
     this.statusDetails = statusDetails;
     return this;
   }
@@ -119,19 +104,23 @@ public class BulkMutateAListOfIssuesRequest {
    * Get statusDetails
    * @return statusDetails
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_STATUS_DETAILS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public BulkMutateAListOfIssuesRequestStatusDetails getStatusDetails() {
     return statusDetails;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS_DETAILS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStatusDetails(BulkMutateAListOfIssuesRequestStatusDetails statusDetails) {
     this.statusDetails = statusDetails;
   }
 
 
   public BulkMutateAListOfIssuesRequest ignoreDuration(Integer ignoreDuration) {
-    
     this.ignoreDuration = ignoreDuration;
     return this;
   }
@@ -140,19 +129,23 @@ public class BulkMutateAListOfIssuesRequest {
    * The number of minutes to ignore this issue.
    * @return ignoreDuration
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_IGNORE_DURATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Integer getIgnoreDuration() {
     return ignoreDuration;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IGNORE_DURATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIgnoreDuration(Integer ignoreDuration) {
     this.ignoreDuration = ignoreDuration;
   }
 
 
   public BulkMutateAListOfIssuesRequest isPublic(Boolean isPublic) {
-    
     this.isPublic = isPublic;
     return this;
   }
@@ -161,19 +154,23 @@ public class BulkMutateAListOfIssuesRequest {
    * Sets the issue to public or private.
    * @return isPublic
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_IS_PUBLIC)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Boolean getIsPublic() {
     return isPublic;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_PUBLIC)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsPublic(Boolean isPublic) {
     this.isPublic = isPublic;
   }
 
 
   public BulkMutateAListOfIssuesRequest merge(Boolean merge) {
-    
     this.merge = merge;
     return this;
   }
@@ -182,19 +179,23 @@ public class BulkMutateAListOfIssuesRequest {
    * Allows to merge or unmerge different issues.
    * @return merge
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_MERGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Boolean getMerge() {
     return merge;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MERGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMerge(Boolean merge) {
     this.merge = merge;
   }
 
 
   public BulkMutateAListOfIssuesRequest assignedTo(String assignedTo) {
-    
     this.assignedTo = assignedTo;
     return this;
   }
@@ -203,19 +204,23 @@ public class BulkMutateAListOfIssuesRequest {
    * The actor id (or username) of the user or team that should be assigned to this issue.
    * @return assignedTo
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ASSIGNED_TO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getAssignedTo() {
     return assignedTo;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ASSIGNED_TO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAssignedTo(String assignedTo) {
     this.assignedTo = assignedTo;
   }
 
 
   public BulkMutateAListOfIssuesRequest hasSeen(Boolean hasSeen) {
-    
     this.hasSeen = hasSeen;
     return this;
   }
@@ -224,19 +229,23 @@ public class BulkMutateAListOfIssuesRequest {
    * In case this API call is invoked with a user context this allows changing of the flag that indicates if the user has seen the event.
    * @return hasSeen
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_HAS_SEEN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Boolean getHasSeen() {
     return hasSeen;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_SEEN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHasSeen(Boolean hasSeen) {
     this.hasSeen = hasSeen;
   }
 
 
   public BulkMutateAListOfIssuesRequest isBookmarked(Boolean isBookmarked) {
-    
     this.isBookmarked = isBookmarked;
     return this;
   }
@@ -245,18 +254,25 @@ public class BulkMutateAListOfIssuesRequest {
    * In case this API call is invoked with a user context this allows changing of the bookmark flag.
    * @return isBookmarked
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_IS_BOOKMARKED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_BOOKMARKED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsBookmarked(Boolean isBookmarked) {
     this.isBookmarked = isBookmarked;
   }
 
 
-
+  /**
+   * Return true if this Bulk_Mutate_a_List_of_Issues_request object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -308,105 +324,5 @@ public class BulkMutateAListOfIssuesRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status");
-    openapiFields.add("statusDetails");
-    openapiFields.add("ignoreDuration");
-    openapiFields.add("isPublic");
-    openapiFields.add("merge");
-    openapiFields.add("assignedTo");
-    openapiFields.add("hasSeen");
-    openapiFields.add("isBookmarked");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to BulkMutateAListOfIssuesRequest
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!BulkMutateAListOfIssuesRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in BulkMutateAListOfIssuesRequest is not found in the empty JSON string", BulkMutateAListOfIssuesRequest.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!BulkMutateAListOfIssuesRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `BulkMutateAListOfIssuesRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      // validate the optional field `statusDetails`
-      if (jsonObj.get("statusDetails") != null && !jsonObj.get("statusDetails").isJsonNull()) {
-        BulkMutateAListOfIssuesRequestStatusDetails.validateJsonObject(jsonObj.getAsJsonObject("statusDetails"));
-      }
-      if ((jsonObj.get("assignedTo") != null && !jsonObj.get("assignedTo").isJsonNull()) && !jsonObj.get("assignedTo").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `assignedTo` to be a primitive type in the JSON string but got `%s`", jsonObj.get("assignedTo").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!BulkMutateAListOfIssuesRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'BulkMutateAListOfIssuesRequest' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<BulkMutateAListOfIssuesRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(BulkMutateAListOfIssuesRequest.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<BulkMutateAListOfIssuesRequest>() {
-           @Override
-           public void write(JsonWriter out, BulkMutateAListOfIssuesRequest value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public BulkMutateAListOfIssuesRequest read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of BulkMutateAListOfIssuesRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of BulkMutateAListOfIssuesRequest
-  * @throws IOException if the JSON string is invalid with respect to BulkMutateAListOfIssuesRequest
-  */
-  public static BulkMutateAListOfIssuesRequest fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, BulkMutateAListOfIssuesRequest.class);
-  }
-
- /**
-  * Convert an instance of BulkMutateAListOfIssuesRequest to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

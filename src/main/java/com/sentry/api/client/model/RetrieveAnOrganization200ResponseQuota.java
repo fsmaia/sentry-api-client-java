@@ -15,65 +15,49 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import org.openapitools.jackson.nullable.JsonNullable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.NoSuchElementException;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnOrganization200ResponseQuota
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnOrganization200ResponseQuota.JSON_PROPERTY_ACCOUNT_LIMIT,
+  RetrieveAnOrganization200ResponseQuota.JSON_PROPERTY_MAX_RATE,
+  RetrieveAnOrganization200ResponseQuota.JSON_PROPERTY_MAX_RATE_INTERVAL,
+  RetrieveAnOrganization200ResponseQuota.JSON_PROPERTY_PROJECT_LIMIT
+})
+@JsonTypeName("Retrieve_an_Organization_200_response_quota")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnOrganization200ResponseQuota {
-  public static final String SERIALIZED_NAME_ACCOUNT_LIMIT = "accountLimit";
-  @SerializedName(SERIALIZED_NAME_ACCOUNT_LIMIT)
+  public static final String JSON_PROPERTY_ACCOUNT_LIMIT = "accountLimit";
   private Long accountLimit;
 
-  public static final String SERIALIZED_NAME_MAX_RATE = "maxRate";
-  @SerializedName(SERIALIZED_NAME_MAX_RATE)
-  private Long maxRate;
+  public static final String JSON_PROPERTY_MAX_RATE = "maxRate";
+  private JsonNullable<Long> maxRate = JsonNullable.<Long>undefined();
 
-  public static final String SERIALIZED_NAME_MAX_RATE_INTERVAL = "maxRateInterval";
-  @SerializedName(SERIALIZED_NAME_MAX_RATE_INTERVAL)
+  public static final String JSON_PROPERTY_MAX_RATE_INTERVAL = "maxRateInterval";
   private Long maxRateInterval;
 
-  public static final String SERIALIZED_NAME_PROJECT_LIMIT = "projectLimit";
-  @SerializedName(SERIALIZED_NAME_PROJECT_LIMIT)
+  public static final String JSON_PROPERTY_PROJECT_LIMIT = "projectLimit";
   private Long projectLimit;
 
-  public RetrieveAnOrganization200ResponseQuota() {
+  public RetrieveAnOrganization200ResponseQuota() { 
   }
 
   public RetrieveAnOrganization200ResponseQuota accountLimit(Long accountLimit) {
-    
     this.accountLimit = accountLimit;
     return this;
   }
@@ -82,20 +66,24 @@ public class RetrieveAnOrganization200ResponseQuota {
    * Get accountLimit
    * @return accountLimit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ACCOUNT_LIMIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Long getAccountLimit() {
     return accountLimit;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ACCOUNT_LIMIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAccountLimit(Long accountLimit) {
     this.accountLimit = accountLimit;
   }
 
 
   public RetrieveAnOrganization200ResponseQuota maxRate(Long maxRate) {
-    
-    this.maxRate = maxRate;
+    this.maxRate = JsonNullable.<Long>of(maxRate);
     return this;
   }
 
@@ -103,19 +91,31 @@ public class RetrieveAnOrganization200ResponseQuota {
    * Get maxRate
    * @return maxRate
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public Long getMaxRate() {
-    return maxRate;
+        return maxRate.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_MAX_RATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<Long> getMaxRate_JsonNullable() {
+    return maxRate;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_MAX_RATE)
+  public void setMaxRate_JsonNullable(JsonNullable<Long> maxRate) {
+    this.maxRate = maxRate;
+  }
 
   public void setMaxRate(Long maxRate) {
-    this.maxRate = maxRate;
+    this.maxRate = JsonNullable.<Long>of(maxRate);
   }
 
 
   public RetrieveAnOrganization200ResponseQuota maxRateInterval(Long maxRateInterval) {
-    
     this.maxRateInterval = maxRateInterval;
     return this;
   }
@@ -124,19 +124,23 @@ public class RetrieveAnOrganization200ResponseQuota {
    * Get maxRateInterval
    * @return maxRateInterval
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_MAX_RATE_INTERVAL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Long getMaxRateInterval() {
     return maxRateInterval;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MAX_RATE_INTERVAL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMaxRateInterval(Long maxRateInterval) {
     this.maxRateInterval = maxRateInterval;
   }
 
 
   public RetrieveAnOrganization200ResponseQuota projectLimit(Long projectLimit) {
-    
     this.projectLimit = projectLimit;
     return this;
   }
@@ -145,18 +149,25 @@ public class RetrieveAnOrganization200ResponseQuota {
    * Get projectLimit
    * @return projectLimit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_PROJECT_LIMIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Long getProjectLimit() {
     return projectLimit;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROJECT_LIMIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setProjectLimit(Long projectLimit) {
     this.projectLimit = projectLimit;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_an_Organization_200_response_quota object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -167,7 +178,7 @@ public class RetrieveAnOrganization200ResponseQuota {
     }
     RetrieveAnOrganization200ResponseQuota retrieveAnOrganization200ResponseQuota = (RetrieveAnOrganization200ResponseQuota) o;
     return Objects.equals(this.accountLimit, retrieveAnOrganization200ResponseQuota.accountLimit) &&
-        Objects.equals(this.maxRate, retrieveAnOrganization200ResponseQuota.maxRate) &&
+        equalsNullable(this.maxRate, retrieveAnOrganization200ResponseQuota.maxRate) &&
         Objects.equals(this.maxRateInterval, retrieveAnOrganization200ResponseQuota.maxRateInterval) &&
         Objects.equals(this.projectLimit, retrieveAnOrganization200ResponseQuota.projectLimit);
   }
@@ -178,7 +189,7 @@ public class RetrieveAnOrganization200ResponseQuota {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountLimit, maxRate, maxRateInterval, projectLimit);
+    return Objects.hash(accountLimit, hashCodeNullable(maxRate), maxRateInterval, projectLimit);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -211,91 +222,5 @@ public class RetrieveAnOrganization200ResponseQuota {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("accountLimit");
-    openapiFields.add("maxRate");
-    openapiFields.add("maxRateInterval");
-    openapiFields.add("projectLimit");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnOrganization200ResponseQuota
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnOrganization200ResponseQuota.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnOrganization200ResponseQuota is not found in the empty JSON string", RetrieveAnOrganization200ResponseQuota.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnOrganization200ResponseQuota.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnOrganization200ResponseQuota` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnOrganization200ResponseQuota.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnOrganization200ResponseQuota' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnOrganization200ResponseQuota> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnOrganization200ResponseQuota.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnOrganization200ResponseQuota>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnOrganization200ResponseQuota value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnOrganization200ResponseQuota read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnOrganization200ResponseQuota given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnOrganization200ResponseQuota
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnOrganization200ResponseQuota
-  */
-  public static RetrieveAnOrganization200ResponseQuota fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnOrganization200ResponseQuota.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnOrganization200ResponseQuota to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

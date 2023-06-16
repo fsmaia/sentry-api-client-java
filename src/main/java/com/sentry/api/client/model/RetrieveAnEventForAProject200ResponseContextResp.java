@@ -15,73 +15,54 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.sentry.api.client.model.ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.sentry.api.client.model.ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnEventForAProject200ResponseContextResp
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnEventForAProject200ResponseContextResp.JSON_PROPERTY_STATUS,
+  RetrieveAnEventForAProject200ResponseContextResp.JSON_PROPERTY_RESPONSE_J_S_O_N,
+  RetrieveAnEventForAProject200ResponseContextResp.JSON_PROPERTY_NAME,
+  RetrieveAnEventForAProject200ResponseContextResp.JSON_PROPERTY_STATUS_TEXT,
+  RetrieveAnEventForAProject200ResponseContextResp.JSON_PROPERTY_MESSAGE,
+  RetrieveAnEventForAProject200ResponseContextResp.JSON_PROPERTY_STACK
+})
+@JsonTypeName("Retrieve_an_Event_for_a_Project_200_response_context_resp")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseContextResp {
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private Integer status;
 
-  public static final String SERIALIZED_NAME_RESPONSE_J_S_O_N = "responseJSON";
-  @SerializedName(SERIALIZED_NAME_RESPONSE_J_S_O_N)
+  public static final String JSON_PROPERTY_RESPONSE_J_S_O_N = "responseJSON";
   private ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON responseJSON;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_STATUS_TEXT = "statusText";
-  @SerializedName(SERIALIZED_NAME_STATUS_TEXT)
+  public static final String JSON_PROPERTY_STATUS_TEXT = "statusText";
   private String statusText;
 
-  public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  public static final String JSON_PROPERTY_MESSAGE = "message";
   private String message;
 
-  public static final String SERIALIZED_NAME_STACK = "stack";
-  @SerializedName(SERIALIZED_NAME_STACK)
+  public static final String JSON_PROPERTY_STACK = "stack";
   private String stack;
 
-  public RetrieveAnEventForAProject200ResponseContextResp() {
+  public RetrieveAnEventForAProject200ResponseContextResp() { 
   }
 
   public RetrieveAnEventForAProject200ResponseContextResp status(Integer status) {
-    
     this.status = status;
     return this;
   }
@@ -90,19 +71,23 @@ public class RetrieveAnEventForAProject200ResponseContextResp {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Integer getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStatus(Integer status) {
     this.status = status;
   }
 
 
   public RetrieveAnEventForAProject200ResponseContextResp responseJSON(ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON responseJSON) {
-    
     this.responseJSON = responseJSON;
     return this;
   }
@@ -111,19 +96,23 @@ public class RetrieveAnEventForAProject200ResponseContextResp {
    * Get responseJSON
    * @return responseJSON
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_RESPONSE_J_S_O_N)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON getResponseJSON() {
     return responseJSON;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RESPONSE_J_S_O_N)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResponseJSON(ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON responseJSON) {
     this.responseJSON = responseJSON;
   }
 
 
   public RetrieveAnEventForAProject200ResponseContextResp name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -132,19 +121,23 @@ public class RetrieveAnEventForAProject200ResponseContextResp {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public RetrieveAnEventForAProject200ResponseContextResp statusText(String statusText) {
-    
     this.statusText = statusText;
     return this;
   }
@@ -153,19 +146,23 @@ public class RetrieveAnEventForAProject200ResponseContextResp {
    * Get statusText
    * @return statusText
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_STATUS_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getStatusText() {
     return statusText;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStatusText(String statusText) {
     this.statusText = statusText;
   }
 
 
   public RetrieveAnEventForAProject200ResponseContextResp message(String message) {
-    
     this.message = message;
     return this;
   }
@@ -174,19 +171,23 @@ public class RetrieveAnEventForAProject200ResponseContextResp {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getMessage() {
     return message;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMessage(String message) {
     this.message = message;
   }
 
 
   public RetrieveAnEventForAProject200ResponseContextResp stack(String stack) {
-    
     this.stack = stack;
     return this;
   }
@@ -195,18 +196,25 @@ public class RetrieveAnEventForAProject200ResponseContextResp {
    * Get stack
    * @return stack
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_STACK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getStack() {
     return stack;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STACK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStack(String stack) {
     this.stack = stack;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_an_Event_for_a_Project_200_response_context_resp object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -254,109 +262,5 @@ public class RetrieveAnEventForAProject200ResponseContextResp {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("status");
-    openapiFields.add("responseJSON");
-    openapiFields.add("name");
-    openapiFields.add("statusText");
-    openapiFields.add("message");
-    openapiFields.add("stack");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200ResponseContextResp
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnEventForAProject200ResponseContextResp.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnEventForAProject200ResponseContextResp is not found in the empty JSON string", RetrieveAnEventForAProject200ResponseContextResp.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnEventForAProject200ResponseContextResp.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnEventForAProject200ResponseContextResp` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      // validate the optional field `responseJSON`
-      if (jsonObj.get("responseJSON") != null && !jsonObj.get("responseJSON").isJsonNull()) {
-        ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON.validateJsonObject(jsonObj.getAsJsonObject("responseJSON"));
-      }
-      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      if ((jsonObj.get("statusText") != null && !jsonObj.get("statusText").isJsonNull()) && !jsonObj.get("statusText").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `statusText` to be a primitive type in the JSON string but got `%s`", jsonObj.get("statusText").toString()));
-      }
-      if ((jsonObj.get("message") != null && !jsonObj.get("message").isJsonNull()) && !jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
-      }
-      if ((jsonObj.get("stack") != null && !jsonObj.get("stack").isJsonNull()) && !jsonObj.get("stack").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `stack` to be a primitive type in the JSON string but got `%s`", jsonObj.get("stack").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnEventForAProject200ResponseContextResp.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseContextResp' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnEventForAProject200ResponseContextResp> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200ResponseContextResp.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseContextResp>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseContextResp value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnEventForAProject200ResponseContextResp read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnEventForAProject200ResponseContextResp given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnEventForAProject200ResponseContextResp
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnEventForAProject200ResponseContextResp
-  */
-  public static RetrieveAnEventForAProject200ResponseContextResp fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnEventForAProject200ResponseContextResp.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnEventForAProject200ResponseContextResp to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

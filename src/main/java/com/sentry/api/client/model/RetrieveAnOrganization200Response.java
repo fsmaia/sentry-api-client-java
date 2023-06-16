@@ -15,177 +15,158 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.RetrieveATeam200ResponseAvatar;
 import com.sentry.api.client.model.RetrieveAnOrganization200ResponseAvailableRolesInner;
 import com.sentry.api.client.model.RetrieveAnOrganization200ResponseOnboardingTasksInner;
 import com.sentry.api.client.model.RetrieveAnOrganization200ResponseProjectsInner;
 import com.sentry.api.client.model.RetrieveAnOrganization200ResponseQuota;
 import com.sentry.api.client.model.UpdateATeam200Response;
-import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnOrganization200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnOrganization200Response.JSON_PROPERTY_ACCESS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_ALLOW_SHARED_ISSUES,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_AVAILABLE_ROLES,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_AVATAR,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_DATA_SCRUBBER,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_DATA_SCRUBBER_DEFAULTS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_DATE_CREATED,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_DEFAULT_ROLE,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_ENHANCED_PRIVACY,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_EXPERIMENTS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_FEATURES,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_ID,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_IS_DEFAULT,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_IS_EARLY_ADOPTER,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_NAME,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_ONBOARDING_TASKS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_OPEN_MEMBERSHIP,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_PENDING_ACCESS_REQUESTS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_PROJECTS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_QUOTA,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_REQUIRE2_F_A,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_SAFE_FIELDS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_SCRAPE_JAVA_SCRIPT,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_SCRUB_I_P_ADDRESSES,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_SENSITIVE_FIELDS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_SLUG,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_STATUS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_STORE_CRASH_REPORTS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_TEAMS,
+  RetrieveAnOrganization200Response.JSON_PROPERTY_TRUSTED_RELAYS
+})
+@JsonTypeName("Retrieve_an_Organization_200_response")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnOrganization200Response {
-  public static final String SERIALIZED_NAME_ACCESS = "access";
-  @SerializedName(SERIALIZED_NAME_ACCESS)
+  public static final String JSON_PROPERTY_ACCESS = "access";
   private List<String> access = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_ALLOW_SHARED_ISSUES = "allowSharedIssues";
-  @SerializedName(SERIALIZED_NAME_ALLOW_SHARED_ISSUES)
+  public static final String JSON_PROPERTY_ALLOW_SHARED_ISSUES = "allowSharedIssues";
   private Boolean allowSharedIssues;
 
-  public static final String SERIALIZED_NAME_AVAILABLE_ROLES = "availableRoles";
-  @SerializedName(SERIALIZED_NAME_AVAILABLE_ROLES)
+  public static final String JSON_PROPERTY_AVAILABLE_ROLES = "availableRoles";
   private List<RetrieveAnOrganization200ResponseAvailableRolesInner> availableRoles = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_AVATAR = "avatar";
-  @SerializedName(SERIALIZED_NAME_AVATAR)
+  public static final String JSON_PROPERTY_AVATAR = "avatar";
   private RetrieveATeam200ResponseAvatar avatar;
 
-  public static final String SERIALIZED_NAME_DATA_SCRUBBER = "dataScrubber";
-  @SerializedName(SERIALIZED_NAME_DATA_SCRUBBER)
+  public static final String JSON_PROPERTY_DATA_SCRUBBER = "dataScrubber";
   private Boolean dataScrubber;
 
-  public static final String SERIALIZED_NAME_DATA_SCRUBBER_DEFAULTS = "dataScrubberDefaults";
-  @SerializedName(SERIALIZED_NAME_DATA_SCRUBBER_DEFAULTS)
+  public static final String JSON_PROPERTY_DATA_SCRUBBER_DEFAULTS = "dataScrubberDefaults";
   private Boolean dataScrubberDefaults;
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private OffsetDateTime dateCreated;
 
-  public static final String SERIALIZED_NAME_DEFAULT_ROLE = "defaultRole";
-  @SerializedName(SERIALIZED_NAME_DEFAULT_ROLE)
+  public static final String JSON_PROPERTY_DEFAULT_ROLE = "defaultRole";
   private String defaultRole;
 
-  public static final String SERIALIZED_NAME_ENHANCED_PRIVACY = "enhancedPrivacy";
-  @SerializedName(SERIALIZED_NAME_ENHANCED_PRIVACY)
+  public static final String JSON_PROPERTY_ENHANCED_PRIVACY = "enhancedPrivacy";
   private Boolean enhancedPrivacy;
 
-  public static final String SERIALIZED_NAME_EXPERIMENTS = "experiments";
-  @SerializedName(SERIALIZED_NAME_EXPERIMENTS)
+  public static final String JSON_PROPERTY_EXPERIMENTS = "experiments";
   private Object experiments;
 
-  public static final String SERIALIZED_NAME_FEATURES = "features";
-  @SerializedName(SERIALIZED_NAME_FEATURES)
+  public static final String JSON_PROPERTY_FEATURES = "features";
   private List<String> features = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_IS_DEFAULT = "isDefault";
-  @SerializedName(SERIALIZED_NAME_IS_DEFAULT)
+  public static final String JSON_PROPERTY_IS_DEFAULT = "isDefault";
   private Boolean isDefault;
 
-  public static final String SERIALIZED_NAME_IS_EARLY_ADOPTER = "isEarlyAdopter";
-  @SerializedName(SERIALIZED_NAME_IS_EARLY_ADOPTER)
+  public static final String JSON_PROPERTY_IS_EARLY_ADOPTER = "isEarlyAdopter";
   private Boolean isEarlyAdopter;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_ONBOARDING_TASKS = "onboardingTasks";
-  @SerializedName(SERIALIZED_NAME_ONBOARDING_TASKS)
+  public static final String JSON_PROPERTY_ONBOARDING_TASKS = "onboardingTasks";
   private List<RetrieveAnOrganization200ResponseOnboardingTasksInner> onboardingTasks = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_OPEN_MEMBERSHIP = "openMembership";
-  @SerializedName(SERIALIZED_NAME_OPEN_MEMBERSHIP)
+  public static final String JSON_PROPERTY_OPEN_MEMBERSHIP = "openMembership";
   private Boolean openMembership;
 
-  public static final String SERIALIZED_NAME_PENDING_ACCESS_REQUESTS = "pendingAccessRequests";
-  @SerializedName(SERIALIZED_NAME_PENDING_ACCESS_REQUESTS)
+  public static final String JSON_PROPERTY_PENDING_ACCESS_REQUESTS = "pendingAccessRequests";
   private Long pendingAccessRequests;
 
-  public static final String SERIALIZED_NAME_PROJECTS = "projects";
-  @SerializedName(SERIALIZED_NAME_PROJECTS)
+  public static final String JSON_PROPERTY_PROJECTS = "projects";
   private List<RetrieveAnOrganization200ResponseProjectsInner> projects = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_QUOTA = "quota";
-  @SerializedName(SERIALIZED_NAME_QUOTA)
+  public static final String JSON_PROPERTY_QUOTA = "quota";
   private RetrieveAnOrganization200ResponseQuota quota;
 
-  public static final String SERIALIZED_NAME_REQUIRE2_F_A = "require2FA";
-  @SerializedName(SERIALIZED_NAME_REQUIRE2_F_A)
+  public static final String JSON_PROPERTY_REQUIRE2_F_A = "require2FA";
   private Boolean require2FA;
 
-  public static final String SERIALIZED_NAME_SAFE_FIELDS = "safeFields";
-  @SerializedName(SERIALIZED_NAME_SAFE_FIELDS)
+  public static final String JSON_PROPERTY_SAFE_FIELDS = "safeFields";
   private List<String> safeFields = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_SCRAPE_JAVA_SCRIPT = "scrapeJavaScript";
-  @SerializedName(SERIALIZED_NAME_SCRAPE_JAVA_SCRIPT)
+  public static final String JSON_PROPERTY_SCRAPE_JAVA_SCRIPT = "scrapeJavaScript";
   private Boolean scrapeJavaScript;
 
-  public static final String SERIALIZED_NAME_SCRUB_I_P_ADDRESSES = "scrubIPAddresses";
-  @SerializedName(SERIALIZED_NAME_SCRUB_I_P_ADDRESSES)
+  public static final String JSON_PROPERTY_SCRUB_I_P_ADDRESSES = "scrubIPAddresses";
   private Boolean scrubIPAddresses;
 
-  public static final String SERIALIZED_NAME_SENSITIVE_FIELDS = "sensitiveFields";
-  @SerializedName(SERIALIZED_NAME_SENSITIVE_FIELDS)
+  public static final String JSON_PROPERTY_SENSITIVE_FIELDS = "sensitiveFields";
   private List<String> sensitiveFields = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_SLUG = "slug";
-  @SerializedName(SERIALIZED_NAME_SLUG)
+  public static final String JSON_PROPERTY_SLUG = "slug";
   private String slug;
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private RetrieveAnOrganization200ResponseAvailableRolesInner status;
 
-  public static final String SERIALIZED_NAME_STORE_CRASH_REPORTS = "storeCrashReports";
-  @SerializedName(SERIALIZED_NAME_STORE_CRASH_REPORTS)
+  public static final String JSON_PROPERTY_STORE_CRASH_REPORTS = "storeCrashReports";
   private Long storeCrashReports;
 
-  public static final String SERIALIZED_NAME_TEAMS = "teams";
-  @SerializedName(SERIALIZED_NAME_TEAMS)
+  public static final String JSON_PROPERTY_TEAMS = "teams";
   private List<UpdateATeam200Response> teams = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_TRUSTED_RELAYS = "trustedRelays";
-  @SerializedName(SERIALIZED_NAME_TRUSTED_RELAYS)
+  public static final String JSON_PROPERTY_TRUSTED_RELAYS = "trustedRelays";
   private List<String> trustedRelays = new ArrayList<>();
 
-  public RetrieveAnOrganization200Response() {
+  public RetrieveAnOrganization200Response() { 
   }
 
   public RetrieveAnOrganization200Response access(List<String> access) {
-    
     this.access = access;
     return this;
   }
@@ -202,19 +183,23 @@ public class RetrieveAnOrganization200Response {
    * Get access
    * @return access
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ACCESS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getAccess() {
     return access;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ACCESS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAccess(List<String> access) {
     this.access = access;
   }
 
 
   public RetrieveAnOrganization200Response allowSharedIssues(Boolean allowSharedIssues) {
-    
     this.allowSharedIssues = allowSharedIssues;
     return this;
   }
@@ -223,19 +208,23 @@ public class RetrieveAnOrganization200Response {
    * Get allowSharedIssues
    * @return allowSharedIssues
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ALLOW_SHARED_ISSUES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getAllowSharedIssues() {
     return allowSharedIssues;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALLOW_SHARED_ISSUES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAllowSharedIssues(Boolean allowSharedIssues) {
     this.allowSharedIssues = allowSharedIssues;
   }
 
 
   public RetrieveAnOrganization200Response availableRoles(List<RetrieveAnOrganization200ResponseAvailableRolesInner> availableRoles) {
-    
     this.availableRoles = availableRoles;
     return this;
   }
@@ -252,19 +241,23 @@ public class RetrieveAnOrganization200Response {
    * Get availableRoles
    * @return availableRoles
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_AVAILABLE_ROLES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnOrganization200ResponseAvailableRolesInner> getAvailableRoles() {
     return availableRoles;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AVAILABLE_ROLES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAvailableRoles(List<RetrieveAnOrganization200ResponseAvailableRolesInner> availableRoles) {
     this.availableRoles = availableRoles;
   }
 
 
   public RetrieveAnOrganization200Response avatar(RetrieveATeam200ResponseAvatar avatar) {
-    
     this.avatar = avatar;
     return this;
   }
@@ -273,19 +266,23 @@ public class RetrieveAnOrganization200Response {
    * Get avatar
    * @return avatar
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_AVATAR)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveATeam200ResponseAvatar getAvatar() {
     return avatar;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AVATAR)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAvatar(RetrieveATeam200ResponseAvatar avatar) {
     this.avatar = avatar;
   }
 
 
   public RetrieveAnOrganization200Response dataScrubber(Boolean dataScrubber) {
-    
     this.dataScrubber = dataScrubber;
     return this;
   }
@@ -294,19 +291,23 @@ public class RetrieveAnOrganization200Response {
    * Get dataScrubber
    * @return dataScrubber
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATA_SCRUBBER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getDataScrubber() {
     return dataScrubber;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA_SCRUBBER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDataScrubber(Boolean dataScrubber) {
     this.dataScrubber = dataScrubber;
   }
 
 
   public RetrieveAnOrganization200Response dataScrubberDefaults(Boolean dataScrubberDefaults) {
-    
     this.dataScrubberDefaults = dataScrubberDefaults;
     return this;
   }
@@ -315,19 +316,23 @@ public class RetrieveAnOrganization200Response {
    * Get dataScrubberDefaults
    * @return dataScrubberDefaults
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATA_SCRUBBER_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getDataScrubberDefaults() {
     return dataScrubberDefaults;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA_SCRUBBER_DEFAULTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDataScrubberDefaults(Boolean dataScrubberDefaults) {
     this.dataScrubberDefaults = dataScrubberDefaults;
   }
 
 
   public RetrieveAnOrganization200Response dateCreated(OffsetDateTime dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -336,19 +341,23 @@ public class RetrieveAnOrganization200Response {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public RetrieveAnOrganization200Response defaultRole(String defaultRole) {
-    
     this.defaultRole = defaultRole;
     return this;
   }
@@ -357,19 +366,23 @@ public class RetrieveAnOrganization200Response {
    * Get defaultRole
    * @return defaultRole
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DEFAULT_ROLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDefaultRole() {
     return defaultRole;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DEFAULT_ROLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDefaultRole(String defaultRole) {
     this.defaultRole = defaultRole;
   }
 
 
   public RetrieveAnOrganization200Response enhancedPrivacy(Boolean enhancedPrivacy) {
-    
     this.enhancedPrivacy = enhancedPrivacy;
     return this;
   }
@@ -378,19 +391,23 @@ public class RetrieveAnOrganization200Response {
    * Get enhancedPrivacy
    * @return enhancedPrivacy
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ENHANCED_PRIVACY)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getEnhancedPrivacy() {
     return enhancedPrivacy;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ENHANCED_PRIVACY)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEnhancedPrivacy(Boolean enhancedPrivacy) {
     this.enhancedPrivacy = enhancedPrivacy;
   }
 
 
   public RetrieveAnOrganization200Response experiments(Object experiments) {
-    
     this.experiments = experiments;
     return this;
   }
@@ -399,19 +416,23 @@ public class RetrieveAnOrganization200Response {
    * Get experiments
    * @return experiments
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EXPERIMENTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getExperiments() {
     return experiments;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXPERIMENTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setExperiments(Object experiments) {
     this.experiments = experiments;
   }
 
 
   public RetrieveAnOrganization200Response features(List<String> features) {
-    
     this.features = features;
     return this;
   }
@@ -428,19 +449,23 @@ public class RetrieveAnOrganization200Response {
    * Get features
    * @return features
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_FEATURES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getFeatures() {
     return features;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FEATURES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFeatures(List<String> features) {
     this.features = features;
   }
 
 
   public RetrieveAnOrganization200Response id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -449,19 +474,23 @@ public class RetrieveAnOrganization200Response {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public RetrieveAnOrganization200Response isDefault(Boolean isDefault) {
-    
     this.isDefault = isDefault;
     return this;
   }
@@ -470,19 +499,23 @@ public class RetrieveAnOrganization200Response {
    * Get isDefault
    * @return isDefault
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_DEFAULT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsDefault() {
     return isDefault;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_DEFAULT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsDefault(Boolean isDefault) {
     this.isDefault = isDefault;
   }
 
 
   public RetrieveAnOrganization200Response isEarlyAdopter(Boolean isEarlyAdopter) {
-    
     this.isEarlyAdopter = isEarlyAdopter;
     return this;
   }
@@ -491,19 +524,23 @@ public class RetrieveAnOrganization200Response {
    * Get isEarlyAdopter
    * @return isEarlyAdopter
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_EARLY_ADOPTER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsEarlyAdopter() {
     return isEarlyAdopter;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_EARLY_ADOPTER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsEarlyAdopter(Boolean isEarlyAdopter) {
     this.isEarlyAdopter = isEarlyAdopter;
   }
 
 
   public RetrieveAnOrganization200Response name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -512,19 +549,23 @@ public class RetrieveAnOrganization200Response {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public RetrieveAnOrganization200Response onboardingTasks(List<RetrieveAnOrganization200ResponseOnboardingTasksInner> onboardingTasks) {
-    
     this.onboardingTasks = onboardingTasks;
     return this;
   }
@@ -541,19 +582,23 @@ public class RetrieveAnOrganization200Response {
    * Get onboardingTasks
    * @return onboardingTasks
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ONBOARDING_TASKS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnOrganization200ResponseOnboardingTasksInner> getOnboardingTasks() {
     return onboardingTasks;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ONBOARDING_TASKS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setOnboardingTasks(List<RetrieveAnOrganization200ResponseOnboardingTasksInner> onboardingTasks) {
     this.onboardingTasks = onboardingTasks;
   }
 
 
   public RetrieveAnOrganization200Response openMembership(Boolean openMembership) {
-    
     this.openMembership = openMembership;
     return this;
   }
@@ -562,19 +607,23 @@ public class RetrieveAnOrganization200Response {
    * Get openMembership
    * @return openMembership
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_OPEN_MEMBERSHIP)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getOpenMembership() {
     return openMembership;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OPEN_MEMBERSHIP)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setOpenMembership(Boolean openMembership) {
     this.openMembership = openMembership;
   }
 
 
   public RetrieveAnOrganization200Response pendingAccessRequests(Long pendingAccessRequests) {
-    
     this.pendingAccessRequests = pendingAccessRequests;
     return this;
   }
@@ -583,19 +632,23 @@ public class RetrieveAnOrganization200Response {
    * Get pendingAccessRequests
    * @return pendingAccessRequests
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PENDING_ACCESS_REQUESTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Long getPendingAccessRequests() {
     return pendingAccessRequests;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PENDING_ACCESS_REQUESTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPendingAccessRequests(Long pendingAccessRequests) {
     this.pendingAccessRequests = pendingAccessRequests;
   }
 
 
   public RetrieveAnOrganization200Response projects(List<RetrieveAnOrganization200ResponseProjectsInner> projects) {
-    
     this.projects = projects;
     return this;
   }
@@ -612,19 +665,23 @@ public class RetrieveAnOrganization200Response {
    * Get projects
    * @return projects
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PROJECTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnOrganization200ResponseProjectsInner> getProjects() {
     return projects;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROJECTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setProjects(List<RetrieveAnOrganization200ResponseProjectsInner> projects) {
     this.projects = projects;
   }
 
 
   public RetrieveAnOrganization200Response quota(RetrieveAnOrganization200ResponseQuota quota) {
-    
     this.quota = quota;
     return this;
   }
@@ -633,19 +690,23 @@ public class RetrieveAnOrganization200Response {
    * Get quota
    * @return quota
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_QUOTA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnOrganization200ResponseQuota getQuota() {
     return quota;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_QUOTA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setQuota(RetrieveAnOrganization200ResponseQuota quota) {
     this.quota = quota;
   }
 
 
   public RetrieveAnOrganization200Response require2FA(Boolean require2FA) {
-    
     this.require2FA = require2FA;
     return this;
   }
@@ -654,19 +715,23 @@ public class RetrieveAnOrganization200Response {
    * Get require2FA
    * @return require2FA
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_REQUIRE2_F_A)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getRequire2FA() {
     return require2FA;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REQUIRE2_F_A)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setRequire2FA(Boolean require2FA) {
     this.require2FA = require2FA;
   }
 
 
   public RetrieveAnOrganization200Response safeFields(List<String> safeFields) {
-    
     this.safeFields = safeFields;
     return this;
   }
@@ -683,19 +748,23 @@ public class RetrieveAnOrganization200Response {
    * Get safeFields
    * @return safeFields
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SAFE_FIELDS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getSafeFields() {
     return safeFields;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SAFE_FIELDS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSafeFields(List<String> safeFields) {
     this.safeFields = safeFields;
   }
 
 
   public RetrieveAnOrganization200Response scrapeJavaScript(Boolean scrapeJavaScript) {
-    
     this.scrapeJavaScript = scrapeJavaScript;
     return this;
   }
@@ -704,19 +773,23 @@ public class RetrieveAnOrganization200Response {
    * Get scrapeJavaScript
    * @return scrapeJavaScript
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SCRAPE_JAVA_SCRIPT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getScrapeJavaScript() {
     return scrapeJavaScript;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCRAPE_JAVA_SCRIPT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setScrapeJavaScript(Boolean scrapeJavaScript) {
     this.scrapeJavaScript = scrapeJavaScript;
   }
 
 
   public RetrieveAnOrganization200Response scrubIPAddresses(Boolean scrubIPAddresses) {
-    
     this.scrubIPAddresses = scrubIPAddresses;
     return this;
   }
@@ -725,19 +798,23 @@ public class RetrieveAnOrganization200Response {
    * Get scrubIPAddresses
    * @return scrubIPAddresses
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SCRUB_I_P_ADDRESSES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getScrubIPAddresses() {
     return scrubIPAddresses;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCRUB_I_P_ADDRESSES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setScrubIPAddresses(Boolean scrubIPAddresses) {
     this.scrubIPAddresses = scrubIPAddresses;
   }
 
 
   public RetrieveAnOrganization200Response sensitiveFields(List<String> sensitiveFields) {
-    
     this.sensitiveFields = sensitiveFields;
     return this;
   }
@@ -754,19 +831,23 @@ public class RetrieveAnOrganization200Response {
    * Get sensitiveFields
    * @return sensitiveFields
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SENSITIVE_FIELDS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getSensitiveFields() {
     return sensitiveFields;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENSITIVE_FIELDS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSensitiveFields(List<String> sensitiveFields) {
     this.sensitiveFields = sensitiveFields;
   }
 
 
   public RetrieveAnOrganization200Response slug(String slug) {
-    
     this.slug = slug;
     return this;
   }
@@ -775,19 +856,23 @@ public class RetrieveAnOrganization200Response {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SLUG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getSlug() {
     return slug;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SLUG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSlug(String slug) {
     this.slug = slug;
   }
 
 
   public RetrieveAnOrganization200Response status(RetrieveAnOrganization200ResponseAvailableRolesInner status) {
-    
     this.status = status;
     return this;
   }
@@ -796,19 +881,23 @@ public class RetrieveAnOrganization200Response {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnOrganization200ResponseAvailableRolesInner getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setStatus(RetrieveAnOrganization200ResponseAvailableRolesInner status) {
     this.status = status;
   }
 
 
   public RetrieveAnOrganization200Response storeCrashReports(Long storeCrashReports) {
-    
     this.storeCrashReports = storeCrashReports;
     return this;
   }
@@ -817,19 +906,23 @@ public class RetrieveAnOrganization200Response {
    * Get storeCrashReports
    * @return storeCrashReports
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_STORE_CRASH_REPORTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Long getStoreCrashReports() {
     return storeCrashReports;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STORE_CRASH_REPORTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setStoreCrashReports(Long storeCrashReports) {
     this.storeCrashReports = storeCrashReports;
   }
 
 
   public RetrieveAnOrganization200Response teams(List<UpdateATeam200Response> teams) {
-    
     this.teams = teams;
     return this;
   }
@@ -846,19 +939,23 @@ public class RetrieveAnOrganization200Response {
    * Get teams
    * @return teams
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TEAMS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<UpdateATeam200Response> getTeams() {
     return teams;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEAMS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTeams(List<UpdateATeam200Response> teams) {
     this.teams = teams;
   }
 
 
   public RetrieveAnOrganization200Response trustedRelays(List<String> trustedRelays) {
-    
     this.trustedRelays = trustedRelays;
     return this;
   }
@@ -875,18 +972,25 @@ public class RetrieveAnOrganization200Response {
    * Get trustedRelays
    * @return trustedRelays
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TRUSTED_RELAYS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getTrustedRelays() {
     return trustedRelays;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TRUSTED_RELAYS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTrustedRelays(List<String> trustedRelays) {
     this.trustedRelays = trustedRelays;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_an_Organization_200_response object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -982,242 +1086,5 @@ public class RetrieveAnOrganization200Response {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("access");
-    openapiFields.add("allowSharedIssues");
-    openapiFields.add("availableRoles");
-    openapiFields.add("avatar");
-    openapiFields.add("dataScrubber");
-    openapiFields.add("dataScrubberDefaults");
-    openapiFields.add("dateCreated");
-    openapiFields.add("defaultRole");
-    openapiFields.add("enhancedPrivacy");
-    openapiFields.add("experiments");
-    openapiFields.add("features");
-    openapiFields.add("id");
-    openapiFields.add("isDefault");
-    openapiFields.add("isEarlyAdopter");
-    openapiFields.add("name");
-    openapiFields.add("onboardingTasks");
-    openapiFields.add("openMembership");
-    openapiFields.add("pendingAccessRequests");
-    openapiFields.add("projects");
-    openapiFields.add("quota");
-    openapiFields.add("require2FA");
-    openapiFields.add("safeFields");
-    openapiFields.add("scrapeJavaScript");
-    openapiFields.add("scrubIPAddresses");
-    openapiFields.add("sensitiveFields");
-    openapiFields.add("slug");
-    openapiFields.add("status");
-    openapiFields.add("storeCrashReports");
-    openapiFields.add("teams");
-    openapiFields.add("trustedRelays");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("access");
-    openapiRequiredFields.add("allowSharedIssues");
-    openapiRequiredFields.add("availableRoles");
-    openapiRequiredFields.add("avatar");
-    openapiRequiredFields.add("dataScrubber");
-    openapiRequiredFields.add("dataScrubberDefaults");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("defaultRole");
-    openapiRequiredFields.add("enhancedPrivacy");
-    openapiRequiredFields.add("experiments");
-    openapiRequiredFields.add("features");
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("isDefault");
-    openapiRequiredFields.add("isEarlyAdopter");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("onboardingTasks");
-    openapiRequiredFields.add("openMembership");
-    openapiRequiredFields.add("pendingAccessRequests");
-    openapiRequiredFields.add("projects");
-    openapiRequiredFields.add("quota");
-    openapiRequiredFields.add("require2FA");
-    openapiRequiredFields.add("safeFields");
-    openapiRequiredFields.add("scrapeJavaScript");
-    openapiRequiredFields.add("scrubIPAddresses");
-    openapiRequiredFields.add("sensitiveFields");
-    openapiRequiredFields.add("slug");
-    openapiRequiredFields.add("status");
-    openapiRequiredFields.add("storeCrashReports");
-    openapiRequiredFields.add("teams");
-    openapiRequiredFields.add("trustedRelays");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnOrganization200Response
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnOrganization200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnOrganization200Response is not found in the empty JSON string", RetrieveAnOrganization200Response.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnOrganization200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnOrganization200Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveAnOrganization200Response.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("access") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("access").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `access` to be an array in the JSON string but got `%s`", jsonObj.get("access").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("availableRoles").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `availableRoles` to be an array in the JSON string but got `%s`", jsonObj.get("availableRoles").toString()));
-      }
-
-      JsonArray jsonArrayavailableRoles = jsonObj.getAsJsonArray("availableRoles");
-      // validate the required field `availableRoles` (array)
-      for (int i = 0; i < jsonArrayavailableRoles.size(); i++) {
-        RetrieveAnOrganization200ResponseAvailableRolesInner.validateJsonObject(jsonArrayavailableRoles.get(i).getAsJsonObject());
-      };
-      // validate the required field `avatar`
-      RetrieveATeam200ResponseAvatar.validateJsonObject(jsonObj.getAsJsonObject("avatar"));
-      if (!jsonObj.get("defaultRole").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `defaultRole` to be a primitive type in the JSON string but got `%s`", jsonObj.get("defaultRole").toString()));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("features") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("features").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `features` to be an array in the JSON string but got `%s`", jsonObj.get("features").toString()));
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("onboardingTasks").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `onboardingTasks` to be an array in the JSON string but got `%s`", jsonObj.get("onboardingTasks").toString()));
-      }
-
-      JsonArray jsonArrayonboardingTasks = jsonObj.getAsJsonArray("onboardingTasks");
-      // validate the required field `onboardingTasks` (array)
-      for (int i = 0; i < jsonArrayonboardingTasks.size(); i++) {
-        RetrieveAnOrganization200ResponseOnboardingTasksInner.validateJsonObject(jsonArrayonboardingTasks.get(i).getAsJsonObject());
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("projects").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `projects` to be an array in the JSON string but got `%s`", jsonObj.get("projects").toString()));
-      }
-
-      JsonArray jsonArrayprojects = jsonObj.getAsJsonArray("projects");
-      // validate the required field `projects` (array)
-      for (int i = 0; i < jsonArrayprojects.size(); i++) {
-        RetrieveAnOrganization200ResponseProjectsInner.validateJsonObject(jsonArrayprojects.get(i).getAsJsonObject());
-      };
-      // validate the required field `quota`
-      RetrieveAnOrganization200ResponseQuota.validateJsonObject(jsonObj.getAsJsonObject("quota"));
-      // ensure the required json array is present
-      if (jsonObj.get("safeFields") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("safeFields").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `safeFields` to be an array in the JSON string but got `%s`", jsonObj.get("safeFields").toString()));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("sensitiveFields") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("sensitiveFields").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sensitiveFields` to be an array in the JSON string but got `%s`", jsonObj.get("sensitiveFields").toString()));
-      }
-      if (!jsonObj.get("slug").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `slug` to be a primitive type in the JSON string but got `%s`", jsonObj.get("slug").toString()));
-      }
-      // validate the required field `status`
-      RetrieveAnOrganization200ResponseAvailableRolesInner.validateJsonObject(jsonObj.getAsJsonObject("status"));
-      // ensure the json data is an array
-      if (!jsonObj.get("teams").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `teams` to be an array in the JSON string but got `%s`", jsonObj.get("teams").toString()));
-      }
-
-      JsonArray jsonArrayteams = jsonObj.getAsJsonArray("teams");
-      // validate the required field `teams` (array)
-      for (int i = 0; i < jsonArrayteams.size(); i++) {
-        UpdateATeam200Response.validateJsonObject(jsonArrayteams.get(i).getAsJsonObject());
-      };
-      // ensure the required json array is present
-      if (jsonObj.get("trustedRelays") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("trustedRelays").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `trustedRelays` to be an array in the JSON string but got `%s`", jsonObj.get("trustedRelays").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnOrganization200Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnOrganization200Response' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnOrganization200Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnOrganization200Response.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnOrganization200Response>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnOrganization200Response value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnOrganization200Response read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnOrganization200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnOrganization200Response
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnOrganization200Response
-  */
-  public static RetrieveAnOrganization200Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnOrganization200Response.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnOrganization200Response to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

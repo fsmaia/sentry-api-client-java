@@ -15,71 +15,55 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.NoSuchElementException;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnOrganization200ResponseOnboardingTasksInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnOrganization200ResponseOnboardingTasksInner.JSON_PROPERTY_DATA,
+  RetrieveAnOrganization200ResponseOnboardingTasksInner.JSON_PROPERTY_DATE_COMPLETED,
+  RetrieveAnOrganization200ResponseOnboardingTasksInner.JSON_PROPERTY_STATUS,
+  RetrieveAnOrganization200ResponseOnboardingTasksInner.JSON_PROPERTY_TASK,
+  RetrieveAnOrganization200ResponseOnboardingTasksInner.JSON_PROPERTY_USER
+})
+@JsonTypeName("Retrieve_an_Organization_200_response_onboardingTasks_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnOrganization200ResponseOnboardingTasksInner {
-  public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
-  private Object data;
+  public static final String JSON_PROPERTY_DATA = "data";
+  private JsonNullable<Object> data = JsonNullable.<Object>undefined();
 
-  public static final String SERIALIZED_NAME_DATE_COMPLETED = "dateCompleted";
-  @SerializedName(SERIALIZED_NAME_DATE_COMPLETED)
+  public static final String JSON_PROPERTY_DATE_COMPLETED = "dateCompleted";
   private OffsetDateTime dateCompleted;
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private String status;
 
-  public static final String SERIALIZED_NAME_TASK = "task";
-  @SerializedName(SERIALIZED_NAME_TASK)
+  public static final String JSON_PROPERTY_TASK = "task";
   private Integer task;
 
-  public static final String SERIALIZED_NAME_USER = "user";
-  @SerializedName(SERIALIZED_NAME_USER)
-  private String user;
+  public static final String JSON_PROPERTY_USER = "user";
+  private JsonNullable<String> user = JsonNullable.<String>undefined();
 
-  public RetrieveAnOrganization200ResponseOnboardingTasksInner() {
+  public RetrieveAnOrganization200ResponseOnboardingTasksInner() { 
   }
 
   public RetrieveAnOrganization200ResponseOnboardingTasksInner data(Object data) {
-    
-    this.data = data;
+    this.data = JsonNullable.<Object>of(data);
     return this;
   }
 
@@ -87,19 +71,31 @@ public class RetrieveAnOrganization200ResponseOnboardingTasksInner {
    * Get data
    * @return data
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public Object getData() {
-    return data;
+        return data.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JsonNullable<Object> getData_JsonNullable() {
+    return data;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_DATA)
+  public void setData_JsonNullable(JsonNullable<Object> data) {
+    this.data = data;
+  }
 
   public void setData(Object data) {
-    this.data = data;
+    this.data = JsonNullable.<Object>of(data);
   }
 
 
   public RetrieveAnOrganization200ResponseOnboardingTasksInner dateCompleted(OffsetDateTime dateCompleted) {
-    
     this.dateCompleted = dateCompleted;
     return this;
   }
@@ -108,19 +104,23 @@ public class RetrieveAnOrganization200ResponseOnboardingTasksInner {
    * Get dateCompleted
    * @return dateCompleted
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_DATE_COMPLETED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public OffsetDateTime getDateCompleted() {
     return dateCompleted;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_COMPLETED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDateCompleted(OffsetDateTime dateCompleted) {
     this.dateCompleted = dateCompleted;
   }
 
 
   public RetrieveAnOrganization200ResponseOnboardingTasksInner status(String status) {
-    
     this.status = status;
     return this;
   }
@@ -129,19 +129,23 @@ public class RetrieveAnOrganization200ResponseOnboardingTasksInner {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStatus(String status) {
     this.status = status;
   }
 
 
   public RetrieveAnOrganization200ResponseOnboardingTasksInner task(Integer task) {
-    
     this.task = task;
     return this;
   }
@@ -150,20 +154,24 @@ public class RetrieveAnOrganization200ResponseOnboardingTasksInner {
    * Get task
    * @return task
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_TASK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Integer getTask() {
     return task;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TASK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTask(Integer task) {
     this.task = task;
   }
 
 
   public RetrieveAnOrganization200ResponseOnboardingTasksInner user(String user) {
-    
-    this.user = user;
+    this.user = JsonNullable.<String>of(user);
     return this;
   }
 
@@ -171,18 +179,33 @@ public class RetrieveAnOrganization200ResponseOnboardingTasksInner {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public String getUser() {
-    return user;
+        return user.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_USER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public void setUser(String user) {
+  public JsonNullable<String> getUser_JsonNullable() {
+    return user;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_USER)
+  public void setUser_JsonNullable(JsonNullable<String> user) {
     this.user = user;
   }
 
+  public void setUser(String user) {
+    this.user = JsonNullable.<String>of(user);
+  }
 
 
+  /**
+   * Return true if this Retrieve_an_Organization_200_response_onboardingTasks_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -192,11 +215,11 @@ public class RetrieveAnOrganization200ResponseOnboardingTasksInner {
       return false;
     }
     RetrieveAnOrganization200ResponseOnboardingTasksInner retrieveAnOrganization200ResponseOnboardingTasksInner = (RetrieveAnOrganization200ResponseOnboardingTasksInner) o;
-    return Objects.equals(this.data, retrieveAnOrganization200ResponseOnboardingTasksInner.data) &&
+    return equalsNullable(this.data, retrieveAnOrganization200ResponseOnboardingTasksInner.data) &&
         Objects.equals(this.dateCompleted, retrieveAnOrganization200ResponseOnboardingTasksInner.dateCompleted) &&
         Objects.equals(this.status, retrieveAnOrganization200ResponseOnboardingTasksInner.status) &&
         Objects.equals(this.task, retrieveAnOrganization200ResponseOnboardingTasksInner.task) &&
-        Objects.equals(this.user, retrieveAnOrganization200ResponseOnboardingTasksInner.user);
+        equalsNullable(this.user, retrieveAnOrganization200ResponseOnboardingTasksInner.user);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -205,7 +228,7 @@ public class RetrieveAnOrganization200ResponseOnboardingTasksInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, dateCompleted, status, task, user);
+    return Objects.hash(hashCodeNullable(data), dateCompleted, status, task, hashCodeNullable(user));
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -239,98 +262,5 @@ public class RetrieveAnOrganization200ResponseOnboardingTasksInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("data");
-    openapiFields.add("dateCompleted");
-    openapiFields.add("status");
-    openapiFields.add("task");
-    openapiFields.add("user");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnOrganization200ResponseOnboardingTasksInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnOrganization200ResponseOnboardingTasksInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnOrganization200ResponseOnboardingTasksInner is not found in the empty JSON string", RetrieveAnOrganization200ResponseOnboardingTasksInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnOrganization200ResponseOnboardingTasksInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnOrganization200ResponseOnboardingTasksInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("status") != null && !jsonObj.get("status").isJsonNull()) && !jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      if ((jsonObj.get("user") != null && !jsonObj.get("user").isJsonNull()) && !jsonObj.get("user").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnOrganization200ResponseOnboardingTasksInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnOrganization200ResponseOnboardingTasksInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnOrganization200ResponseOnboardingTasksInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnOrganization200ResponseOnboardingTasksInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnOrganization200ResponseOnboardingTasksInner>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnOrganization200ResponseOnboardingTasksInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnOrganization200ResponseOnboardingTasksInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnOrganization200ResponseOnboardingTasksInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnOrganization200ResponseOnboardingTasksInner
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnOrganization200ResponseOnboardingTasksInner
-  */
-  public static RetrieveAnOrganization200ResponseOnboardingTasksInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnOrganization200ResponseOnboardingTasksInner.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnOrganization200ResponseOnboardingTasksInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

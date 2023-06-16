@@ -15,11 +15,13 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventContexts;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInner;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventUser;
@@ -30,149 +32,128 @@ import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseMetadata
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseRelease;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseSdk;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseTagsInner;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnEventForAProject200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_EVENT_I_D,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_DIST,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_USER_REPORT,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_PREVIOUS_EVENT_I_D,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_MESSAGE,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_ID,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_SIZE,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_ERRORS,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_PLATFORM,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_NEXT_EVENT_I_D,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_TYPE,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_METADATA,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_TAGS,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_DATE_CREATED,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_DATE_RECEIVED,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_USER,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_ENTRIES,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_PACKAGES,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_SDK,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_META,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_CONTEXTS,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_FINGERPRINTS,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_CONTEXT,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_RELEASE,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_GROUP_I_D,
+  RetrieveAnEventForAProject200Response.JSON_PROPERTY_TITLE
+})
+@JsonTypeName("Retrieve_an_Event_for_a_Project_200_response")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200Response {
-  public static final String SERIALIZED_NAME_EVENT_I_D = "eventID";
-  @SerializedName(SERIALIZED_NAME_EVENT_I_D)
+  public static final String JSON_PROPERTY_EVENT_I_D = "eventID";
   private String eventID;
 
-  public static final String SERIALIZED_NAME_DIST = "dist";
-  @SerializedName(SERIALIZED_NAME_DIST)
+  public static final String JSON_PROPERTY_DIST = "dist";
   private String dist;
 
-  public static final String SERIALIZED_NAME_USER_REPORT = "userReport";
-  @SerializedName(SERIALIZED_NAME_USER_REPORT)
+  public static final String JSON_PROPERTY_USER_REPORT = "userReport";
   private Object userReport;
 
-  public static final String SERIALIZED_NAME_PREVIOUS_EVENT_I_D = "previousEventID";
-  @SerializedName(SERIALIZED_NAME_PREVIOUS_EVENT_I_D)
+  public static final String JSON_PROPERTY_PREVIOUS_EVENT_I_D = "previousEventID";
   private String previousEventID;
 
-  public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  public static final String JSON_PROPERTY_MESSAGE = "message";
   private String message;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_SIZE = "size";
-  @SerializedName(SERIALIZED_NAME_SIZE)
+  public static final String JSON_PROPERTY_SIZE = "size";
   private Integer size;
 
-  public static final String SERIALIZED_NAME_ERRORS = "errors";
-  @SerializedName(SERIALIZED_NAME_ERRORS)
+  public static final String JSON_PROPERTY_ERRORS = "errors";
   private List<RetrieveAnEventForAProject200ResponseErrorsInner> errors = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_PLATFORM = "platform";
-  @SerializedName(SERIALIZED_NAME_PLATFORM)
+  public static final String JSON_PROPERTY_PLATFORM = "platform";
   private String platform;
 
-  public static final String SERIALIZED_NAME_NEXT_EVENT_I_D = "nextEventID";
-  @SerializedName(SERIALIZED_NAME_NEXT_EVENT_I_D)
+  public static final String JSON_PROPERTY_NEXT_EVENT_I_D = "nextEventID";
   private String nextEventID;
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  public static final String JSON_PROPERTY_TYPE = "type";
   private String type;
 
-  public static final String SERIALIZED_NAME_METADATA = "metadata";
-  @SerializedName(SERIALIZED_NAME_METADATA)
+  public static final String JSON_PROPERTY_METADATA = "metadata";
   private RetrieveAnEventForAProject200ResponseMetadata metadata;
 
-  public static final String SERIALIZED_NAME_TAGS = "tags";
-  @SerializedName(SERIALIZED_NAME_TAGS)
+  public static final String JSON_PROPERTY_TAGS = "tags";
   private List<RetrieveAnEventForAProject200ResponseTagsInner> tags = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private String dateCreated;
 
-  public static final String SERIALIZED_NAME_DATE_RECEIVED = "dateReceived";
-  @SerializedName(SERIALIZED_NAME_DATE_RECEIVED)
+  public static final String JSON_PROPERTY_DATE_RECEIVED = "dateReceived";
   private String dateReceived;
 
-  public static final String SERIALIZED_NAME_USER = "user";
-  @SerializedName(SERIALIZED_NAME_USER)
+  public static final String JSON_PROPERTY_USER = "user";
   private ResolveAnEventID200ResponseEventUser user;
 
-  public static final String SERIALIZED_NAME_ENTRIES = "entries";
-  @SerializedName(SERIALIZED_NAME_ENTRIES)
+  public static final String JSON_PROPERTY_ENTRIES = "entries";
   private List<ResolveAnEventID200ResponseEventEntriesInner> entries = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_PACKAGES = "packages";
-  @SerializedName(SERIALIZED_NAME_PACKAGES)
+  public static final String JSON_PROPERTY_PACKAGES = "packages";
   private Object packages;
 
-  public static final String SERIALIZED_NAME_SDK = "sdk";
-  @SerializedName(SERIALIZED_NAME_SDK)
+  public static final String JSON_PROPERTY_SDK = "sdk";
   private RetrieveAnEventForAProject200ResponseSdk sdk;
 
-  public static final String SERIALIZED_NAME_META = "_meta";
-  @SerializedName(SERIALIZED_NAME_META)
+  public static final String JSON_PROPERTY_META = "_meta";
   private RetrieveAnEventForAProject200ResponseMeta meta;
 
-  public static final String SERIALIZED_NAME_CONTEXTS = "contexts";
-  @SerializedName(SERIALIZED_NAME_CONTEXTS)
+  public static final String JSON_PROPERTY_CONTEXTS = "contexts";
   private ResolveAnEventID200ResponseEventContexts contexts;
 
-  public static final String SERIALIZED_NAME_FINGERPRINTS = "fingerprints";
-  @SerializedName(SERIALIZED_NAME_FINGERPRINTS)
+  public static final String JSON_PROPERTY_FINGERPRINTS = "fingerprints";
   private List<String> fingerprints = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_CONTEXT = "context";
-  @SerializedName(SERIALIZED_NAME_CONTEXT)
+  public static final String JSON_PROPERTY_CONTEXT = "context";
   private RetrieveAnEventForAProject200ResponseContext context;
 
-  public static final String SERIALIZED_NAME_RELEASE = "release";
-  @SerializedName(SERIALIZED_NAME_RELEASE)
+  public static final String JSON_PROPERTY_RELEASE = "release";
   private RetrieveAnEventForAProject200ResponseRelease release;
 
-  public static final String SERIALIZED_NAME_GROUP_I_D = "groupID";
-  @SerializedName(SERIALIZED_NAME_GROUP_I_D)
+  public static final String JSON_PROPERTY_GROUP_I_D = "groupID";
   private String groupID;
 
-  public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  public static final String JSON_PROPERTY_TITLE = "title";
   private String title;
 
-  public RetrieveAnEventForAProject200Response() {
+  public RetrieveAnEventForAProject200Response() { 
   }
 
   public RetrieveAnEventForAProject200Response eventID(String eventID) {
-    
     this.eventID = eventID;
     return this;
   }
@@ -181,19 +162,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get eventID
    * @return eventID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EVENT_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getEventID() {
     return eventID;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EVENT_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEventID(String eventID) {
     this.eventID = eventID;
   }
 
 
   public RetrieveAnEventForAProject200Response dist(String dist) {
-    
     this.dist = dist;
     return this;
   }
@@ -202,19 +187,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get dist
    * @return dist
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_DIST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDist() {
     return dist;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DIST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDist(String dist) {
     this.dist = dist;
   }
 
 
   public RetrieveAnEventForAProject200Response userReport(Object userReport) {
-    
     this.userReport = userReport;
     return this;
   }
@@ -223,19 +212,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get userReport
    * @return userReport
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_USER_REPORT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getUserReport() {
     return userReport;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USER_REPORT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUserReport(Object userReport) {
     this.userReport = userReport;
   }
 
 
   public RetrieveAnEventForAProject200Response previousEventID(String previousEventID) {
-    
     this.previousEventID = previousEventID;
     return this;
   }
@@ -244,19 +237,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get previousEventID
    * @return previousEventID
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_PREVIOUS_EVENT_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getPreviousEventID() {
     return previousEventID;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PREVIOUS_EVENT_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPreviousEventID(String previousEventID) {
     this.previousEventID = previousEventID;
   }
 
 
   public RetrieveAnEventForAProject200Response message(String message) {
-    
     this.message = message;
     return this;
   }
@@ -265,19 +262,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getMessage() {
     return message;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMessage(String message) {
     this.message = message;
   }
 
 
   public RetrieveAnEventForAProject200Response id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -286,19 +287,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public RetrieveAnEventForAProject200Response size(Integer size) {
-    
     this.size = size;
     return this;
   }
@@ -307,19 +312,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get size
    * @return size
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SIZE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getSize() {
     return size;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SIZE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSize(Integer size) {
     this.size = size;
   }
 
 
   public RetrieveAnEventForAProject200Response errors(List<RetrieveAnEventForAProject200ResponseErrorsInner> errors) {
-    
     this.errors = errors;
     return this;
   }
@@ -336,19 +345,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnEventForAProject200ResponseErrorsInner> getErrors() {
     return errors;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setErrors(List<RetrieveAnEventForAProject200ResponseErrorsInner> errors) {
     this.errors = errors;
   }
 
 
   public RetrieveAnEventForAProject200Response platform(String platform) {
-    
     this.platform = platform;
     return this;
   }
@@ -357,19 +370,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getPlatform() {
     return platform;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPlatform(String platform) {
     this.platform = platform;
   }
 
 
   public RetrieveAnEventForAProject200Response nextEventID(String nextEventID) {
-    
     this.nextEventID = nextEventID;
     return this;
   }
@@ -378,19 +395,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get nextEventID
    * @return nextEventID
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_NEXT_EVENT_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getNextEventID() {
     return nextEventID;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NEXT_EVENT_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setNextEventID(String nextEventID) {
     this.nextEventID = nextEventID;
   }
 
 
   public RetrieveAnEventForAProject200Response type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -399,19 +420,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getType() {
     return type;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setType(String type) {
     this.type = type;
   }
 
 
   public RetrieveAnEventForAProject200Response metadata(RetrieveAnEventForAProject200ResponseMetadata metadata) {
-    
     this.metadata = metadata;
     return this;
   }
@@ -420,19 +445,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get metadata
    * @return metadata
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_METADATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnEventForAProject200ResponseMetadata getMetadata() {
     return metadata;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_METADATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMetadata(RetrieveAnEventForAProject200ResponseMetadata metadata) {
     this.metadata = metadata;
   }
 
 
   public RetrieveAnEventForAProject200Response tags(List<RetrieveAnEventForAProject200ResponseTagsInner> tags) {
-    
     this.tags = tags;
     return this;
   }
@@ -449,19 +478,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get tags
    * @return tags
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TAGS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnEventForAProject200ResponseTagsInner> getTags() {
     return tags;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TAGS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTags(List<RetrieveAnEventForAProject200ResponseTagsInner> tags) {
     this.tags = tags;
   }
 
 
   public RetrieveAnEventForAProject200Response dateCreated(String dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -470,19 +503,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(String dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public RetrieveAnEventForAProject200Response dateReceived(String dateReceived) {
-    
     this.dateReceived = dateReceived;
     return this;
   }
@@ -491,19 +528,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get dateReceived
    * @return dateReceived
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_RECEIVED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDateReceived() {
     return dateReceived;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_RECEIVED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateReceived(String dateReceived) {
     this.dateReceived = dateReceived;
   }
 
 
   public RetrieveAnEventForAProject200Response user(ResolveAnEventID200ResponseEventUser user) {
-    
     this.user = user;
     return this;
   }
@@ -512,19 +553,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_USER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAnEventID200ResponseEventUser getUser() {
     return user;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUser(ResolveAnEventID200ResponseEventUser user) {
     this.user = user;
   }
 
 
   public RetrieveAnEventForAProject200Response entries(List<ResolveAnEventID200ResponseEventEntriesInner> entries) {
-    
     this.entries = entries;
     return this;
   }
@@ -541,19 +586,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get entries
    * @return entries
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ENTRIES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<ResolveAnEventID200ResponseEventEntriesInner> getEntries() {
     return entries;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ENTRIES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEntries(List<ResolveAnEventID200ResponseEventEntriesInner> entries) {
     this.entries = entries;
   }
 
 
   public RetrieveAnEventForAProject200Response packages(Object packages) {
-    
     this.packages = packages;
     return this;
   }
@@ -562,19 +611,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get packages
    * @return packages
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PACKAGES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getPackages() {
     return packages;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PACKAGES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPackages(Object packages) {
     this.packages = packages;
   }
 
 
   public RetrieveAnEventForAProject200Response sdk(RetrieveAnEventForAProject200ResponseSdk sdk) {
-    
     this.sdk = sdk;
     return this;
   }
@@ -583,19 +636,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get sdk
    * @return sdk
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SDK)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnEventForAProject200ResponseSdk getSdk() {
     return sdk;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SDK)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSdk(RetrieveAnEventForAProject200ResponseSdk sdk) {
     this.sdk = sdk;
   }
 
 
   public RetrieveAnEventForAProject200Response meta(RetrieveAnEventForAProject200ResponseMeta meta) {
-    
     this.meta = meta;
     return this;
   }
@@ -604,19 +661,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_META)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnEventForAProject200ResponseMeta getMeta() {
     return meta;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_META)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMeta(RetrieveAnEventForAProject200ResponseMeta meta) {
     this.meta = meta;
   }
 
 
   public RetrieveAnEventForAProject200Response contexts(ResolveAnEventID200ResponseEventContexts contexts) {
-    
     this.contexts = contexts;
     return this;
   }
@@ -625,19 +686,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get contexts
    * @return contexts
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CONTEXTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAnEventID200ResponseEventContexts getContexts() {
     return contexts;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTEXTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setContexts(ResolveAnEventID200ResponseEventContexts contexts) {
     this.contexts = contexts;
   }
 
 
   public RetrieveAnEventForAProject200Response fingerprints(List<String> fingerprints) {
-    
     this.fingerprints = fingerprints;
     return this;
   }
@@ -654,19 +719,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get fingerprints
    * @return fingerprints
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_FINGERPRINTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getFingerprints() {
     return fingerprints;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FINGERPRINTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFingerprints(List<String> fingerprints) {
     this.fingerprints = fingerprints;
   }
 
 
   public RetrieveAnEventForAProject200Response context(RetrieveAnEventForAProject200ResponseContext context) {
-    
     this.context = context;
     return this;
   }
@@ -675,19 +744,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get context
    * @return context
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CONTEXT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnEventForAProject200ResponseContext getContext() {
     return context;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTEXT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setContext(RetrieveAnEventForAProject200ResponseContext context) {
     this.context = context;
   }
 
 
   public RetrieveAnEventForAProject200Response release(RetrieveAnEventForAProject200ResponseRelease release) {
-    
     this.release = release;
     return this;
   }
@@ -696,19 +769,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get release
    * @return release
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_RELEASE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveAnEventForAProject200ResponseRelease getRelease() {
     return release;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RELEASE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setRelease(RetrieveAnEventForAProject200ResponseRelease release) {
     this.release = release;
   }
 
 
   public RetrieveAnEventForAProject200Response groupID(String groupID) {
-    
     this.groupID = groupID;
     return this;
   }
@@ -717,19 +794,23 @@ public class RetrieveAnEventForAProject200Response {
    * Get groupID
    * @return groupID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_GROUP_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getGroupID() {
     return groupID;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_GROUP_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setGroupID(String groupID) {
     this.groupID = groupID;
   }
 
 
   public RetrieveAnEventForAProject200Response title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -738,18 +819,25 @@ public class RetrieveAnEventForAProject200Response {
    * Get title
    * @return title
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getTitle() {
     return title;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTitle(String title) {
     this.title = title;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_an_Event_for_a_Project_200_response object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -837,232 +925,5 @@ public class RetrieveAnEventForAProject200Response {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("eventID");
-    openapiFields.add("dist");
-    openapiFields.add("userReport");
-    openapiFields.add("previousEventID");
-    openapiFields.add("message");
-    openapiFields.add("id");
-    openapiFields.add("size");
-    openapiFields.add("errors");
-    openapiFields.add("platform");
-    openapiFields.add("nextEventID");
-    openapiFields.add("type");
-    openapiFields.add("metadata");
-    openapiFields.add("tags");
-    openapiFields.add("dateCreated");
-    openapiFields.add("dateReceived");
-    openapiFields.add("user");
-    openapiFields.add("entries");
-    openapiFields.add("packages");
-    openapiFields.add("sdk");
-    openapiFields.add("_meta");
-    openapiFields.add("contexts");
-    openapiFields.add("fingerprints");
-    openapiFields.add("context");
-    openapiFields.add("release");
-    openapiFields.add("groupID");
-    openapiFields.add("title");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("eventID");
-    openapiRequiredFields.add("dist");
-    openapiRequiredFields.add("userReport");
-    openapiRequiredFields.add("previousEventID");
-    openapiRequiredFields.add("message");
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("size");
-    openapiRequiredFields.add("errors");
-    openapiRequiredFields.add("platform");
-    openapiRequiredFields.add("nextEventID");
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("metadata");
-    openapiRequiredFields.add("tags");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("dateReceived");
-    openapiRequiredFields.add("user");
-    openapiRequiredFields.add("entries");
-    openapiRequiredFields.add("packages");
-    openapiRequiredFields.add("sdk");
-    openapiRequiredFields.add("_meta");
-    openapiRequiredFields.add("contexts");
-    openapiRequiredFields.add("fingerprints");
-    openapiRequiredFields.add("context");
-    openapiRequiredFields.add("release");
-    openapiRequiredFields.add("groupID");
-    openapiRequiredFields.add("title");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200Response
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnEventForAProject200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnEventForAProject200Response is not found in the empty JSON string", RetrieveAnEventForAProject200Response.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnEventForAProject200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnEventForAProject200Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveAnEventForAProject200Response.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("eventID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `eventID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eventID").toString()));
-      }
-      if (!jsonObj.get("dist").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dist` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dist").toString()));
-      }
-      if (!jsonObj.get("previousEventID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `previousEventID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("previousEventID").toString()));
-      }
-      if (!jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("errors").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `errors` to be an array in the JSON string but got `%s`", jsonObj.get("errors").toString()));
-      }
-
-      JsonArray jsonArrayerrors = jsonObj.getAsJsonArray("errors");
-      // validate the required field `errors` (array)
-      for (int i = 0; i < jsonArrayerrors.size(); i++) {
-        RetrieveAnEventForAProject200ResponseErrorsInner.validateJsonObject(jsonArrayerrors.get(i).getAsJsonObject());
-      };
-      if (!jsonObj.get("platform").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `platform` to be a primitive type in the JSON string but got `%s`", jsonObj.get("platform").toString()));
-      }
-      if (!jsonObj.get("nextEventID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `nextEventID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nextEventID").toString()));
-      }
-      if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-      // validate the required field `metadata`
-      RetrieveAnEventForAProject200ResponseMetadata.validateJsonObject(jsonObj.getAsJsonObject("metadata"));
-      // ensure the json data is an array
-      if (!jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
-      }
-
-      JsonArray jsonArraytags = jsonObj.getAsJsonArray("tags");
-      // validate the required field `tags` (array)
-      for (int i = 0; i < jsonArraytags.size(); i++) {
-        RetrieveAnEventForAProject200ResponseTagsInner.validateJsonObject(jsonArraytags.get(i).getAsJsonObject());
-      };
-      if (!jsonObj.get("dateCreated").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dateCreated` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dateCreated").toString()));
-      }
-      if (!jsonObj.get("dateReceived").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dateReceived` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dateReceived").toString()));
-      }
-      // validate the required field `user`
-      ResolveAnEventID200ResponseEventUser.validateJsonObject(jsonObj.getAsJsonObject("user"));
-      // ensure the json data is an array
-      if (!jsonObj.get("entries").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entries` to be an array in the JSON string but got `%s`", jsonObj.get("entries").toString()));
-      }
-
-      JsonArray jsonArrayentries = jsonObj.getAsJsonArray("entries");
-      // validate the required field `entries` (array)
-      for (int i = 0; i < jsonArrayentries.size(); i++) {
-        ResolveAnEventID200ResponseEventEntriesInner.validateJsonObject(jsonArrayentries.get(i).getAsJsonObject());
-      };
-      // validate the required field `sdk`
-      RetrieveAnEventForAProject200ResponseSdk.validateJsonObject(jsonObj.getAsJsonObject("sdk"));
-      // validate the required field `_meta`
-      RetrieveAnEventForAProject200ResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("_meta"));
-      // validate the required field `contexts`
-      ResolveAnEventID200ResponseEventContexts.validateJsonObject(jsonObj.getAsJsonObject("contexts"));
-      // ensure the required json array is present
-      if (jsonObj.get("fingerprints") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("fingerprints").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `fingerprints` to be an array in the JSON string but got `%s`", jsonObj.get("fingerprints").toString()));
-      }
-      // validate the required field `context`
-      RetrieveAnEventForAProject200ResponseContext.validateJsonObject(jsonObj.getAsJsonObject("context"));
-      // validate the required field `release`
-      RetrieveAnEventForAProject200ResponseRelease.validateJsonObject(jsonObj.getAsJsonObject("release"));
-      if (!jsonObj.get("groupID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `groupID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("groupID").toString()));
-      }
-      if (!jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnEventForAProject200Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnEventForAProject200Response' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnEventForAProject200Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200Response.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200Response>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnEventForAProject200Response value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnEventForAProject200Response read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnEventForAProject200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnEventForAProject200Response
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnEventForAProject200Response
-  */
-  public static RetrieveAnEventForAProject200Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnEventForAProject200Response.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnEventForAProject200Response to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

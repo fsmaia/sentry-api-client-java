@@ -15,69 +15,53 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import org.openapitools.jackson.nullable.JsonNullable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.NoSuchElementException;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnIssue200ResponseActivityInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnIssue200ResponseActivityInner.JSON_PROPERTY_DATA,
+  RetrieveAnIssue200ResponseActivityInner.JSON_PROPERTY_DATE_CREATED,
+  RetrieveAnIssue200ResponseActivityInner.JSON_PROPERTY_ID,
+  RetrieveAnIssue200ResponseActivityInner.JSON_PROPERTY_TYPE,
+  RetrieveAnIssue200ResponseActivityInner.JSON_PROPERTY_USER
+})
+@JsonTypeName("Retrieve_an_Issue_200_response_activity_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnIssue200ResponseActivityInner {
-  public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
+  public static final String JSON_PROPERTY_DATA = "data";
   private Object data;
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private String dateCreated;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  public static final String JSON_PROPERTY_TYPE = "type";
   private String type;
 
-  public static final String SERIALIZED_NAME_USER = "user";
-  @SerializedName(SERIALIZED_NAME_USER)
-  private Object user;
+  public static final String JSON_PROPERTY_USER = "user";
+  private JsonNullable<Object> user = JsonNullable.<Object>undefined();
 
-  public RetrieveAnIssue200ResponseActivityInner() {
+  public RetrieveAnIssue200ResponseActivityInner() { 
   }
 
   public RetrieveAnIssue200ResponseActivityInner data(Object data) {
-    
     this.data = data;
     return this;
   }
@@ -86,19 +70,23 @@ public class RetrieveAnIssue200ResponseActivityInner {
    * Get data
    * @return data
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Object getData() {
     return data;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setData(Object data) {
     this.data = data;
   }
 
 
   public RetrieveAnIssue200ResponseActivityInner dateCreated(String dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -107,19 +95,23 @@ public class RetrieveAnIssue200ResponseActivityInner {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDateCreated(String dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public RetrieveAnIssue200ResponseActivityInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -128,19 +120,23 @@ public class RetrieveAnIssue200ResponseActivityInner {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public RetrieveAnIssue200ResponseActivityInner type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -149,20 +145,24 @@ public class RetrieveAnIssue200ResponseActivityInner {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getType() {
     return type;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setType(String type) {
     this.type = type;
   }
 
 
   public RetrieveAnIssue200ResponseActivityInner user(Object user) {
-    
-    this.user = user;
+    this.user = JsonNullable.<Object>of(user);
     return this;
   }
 
@@ -170,18 +170,33 @@ public class RetrieveAnIssue200ResponseActivityInner {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public Object getUser() {
-    return user;
+        return user.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_USER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public void setUser(Object user) {
+  public JsonNullable<Object> getUser_JsonNullable() {
+    return user;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_USER)
+  public void setUser_JsonNullable(JsonNullable<Object> user) {
     this.user = user;
   }
 
+  public void setUser(Object user) {
+    this.user = JsonNullable.<Object>of(user);
+  }
 
 
+  /**
+   * Return true if this Retrieve_an_Issue_200_response_activity_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -195,7 +210,7 @@ public class RetrieveAnIssue200ResponseActivityInner {
         Objects.equals(this.dateCreated, retrieveAnIssue200ResponseActivityInner.dateCreated) &&
         Objects.equals(this.id, retrieveAnIssue200ResponseActivityInner.id) &&
         Objects.equals(this.type, retrieveAnIssue200ResponseActivityInner.type) &&
-        Objects.equals(this.user, retrieveAnIssue200ResponseActivityInner.user);
+        equalsNullable(this.user, retrieveAnIssue200ResponseActivityInner.user);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -204,7 +219,7 @@ public class RetrieveAnIssue200ResponseActivityInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, dateCreated, id, type, user);
+    return Objects.hash(data, dateCreated, id, type, hashCodeNullable(user));
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -238,101 +253,5 @@ public class RetrieveAnIssue200ResponseActivityInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("data");
-    openapiFields.add("dateCreated");
-    openapiFields.add("id");
-    openapiFields.add("type");
-    openapiFields.add("user");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnIssue200ResponseActivityInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnIssue200ResponseActivityInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnIssue200ResponseActivityInner is not found in the empty JSON string", RetrieveAnIssue200ResponseActivityInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnIssue200ResponseActivityInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnIssue200ResponseActivityInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("dateCreated") != null && !jsonObj.get("dateCreated").isJsonNull()) && !jsonObj.get("dateCreated").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dateCreated` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dateCreated").toString()));
-      }
-      if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnIssue200ResponseActivityInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnIssue200ResponseActivityInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnIssue200ResponseActivityInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnIssue200ResponseActivityInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnIssue200ResponseActivityInner>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnIssue200ResponseActivityInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnIssue200ResponseActivityInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnIssue200ResponseActivityInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnIssue200ResponseActivityInner
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnIssue200ResponseActivityInner
-  */
-  public static RetrieveAnIssue200ResponseActivityInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnIssue200ResponseActivityInner.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnIssue200ResponseActivityInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

@@ -15,77 +15,58 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import java.time.OffsetDateTime;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.JSON_PROPERTY_CATEGORY,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.JSON_PROPERTY_LEVEL,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.JSON_PROPERTY_EVENT_ID,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.JSON_PROPERTY_TIMESTAMP,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.JSON_PROPERTY_DATA,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.JSON_PROPERTY_MESSAGE,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.JSON_PROPERTY_TYPE
+})
+@JsonTypeName("Resolve_an_Event_ID_200_response_event_entries_inner_anyOf_data_values_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner {
-  public static final String SERIALIZED_NAME_CATEGORY = "category";
-  @SerializedName(SERIALIZED_NAME_CATEGORY)
+  public static final String JSON_PROPERTY_CATEGORY = "category";
   private String category;
 
-  public static final String SERIALIZED_NAME_LEVEL = "level";
-  @SerializedName(SERIALIZED_NAME_LEVEL)
+  public static final String JSON_PROPERTY_LEVEL = "level";
   private String level;
 
-  public static final String SERIALIZED_NAME_EVENT_ID = "event_id";
-  @SerializedName(SERIALIZED_NAME_EVENT_ID)
+  public static final String JSON_PROPERTY_EVENT_ID = "event_id";
   private String eventId;
 
-  public static final String SERIALIZED_NAME_TIMESTAMP = "timestamp";
-  @SerializedName(SERIALIZED_NAME_TIMESTAMP)
+  public static final String JSON_PROPERTY_TIMESTAMP = "timestamp";
   private OffsetDateTime timestamp;
 
-  public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
+  public static final String JSON_PROPERTY_DATA = "data";
   private Object data;
 
-  public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  public static final String JSON_PROPERTY_MESSAGE = "message";
   private String message;
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  public static final String JSON_PROPERTY_TYPE = "type";
   private String type;
 
-  public ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner() {
+  public ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner() { 
   }
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner category(String category) {
-    
     this.category = category;
     return this;
   }
@@ -94,19 +75,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner {
    * Get category
    * @return category
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CATEGORY)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getCategory() {
     return category;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CATEGORY)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setCategory(String category) {
     this.category = category;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner level(String level) {
-    
     this.level = level;
     return this;
   }
@@ -115,19 +100,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner {
    * Get level
    * @return level
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getLevel() {
     return level;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLevel(String level) {
     this.level = level;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner eventId(String eventId) {
-    
     this.eventId = eventId;
     return this;
   }
@@ -136,19 +125,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner {
    * Get eventId
    * @return eventId
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_EVENT_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getEventId() {
     return eventId;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EVENT_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEventId(String eventId) {
     this.eventId = eventId;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner timestamp(OffsetDateTime timestamp) {
-    
     this.timestamp = timestamp;
     return this;
   }
@@ -157,19 +150,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner {
    * Get timestamp
    * @return timestamp
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TIMESTAMP)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TIMESTAMP)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTimestamp(OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner data(Object data) {
-    
     this.data = data;
     return this;
   }
@@ -178,19 +175,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner {
    * Get data
    * @return data
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getData() {
     return data;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setData(Object data) {
     this.data = data;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner message(String message) {
-    
     this.message = message;
     return this;
   }
@@ -199,19 +200,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getMessage() {
     return message;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMessage(String message) {
     this.message = message;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -220,18 +225,25 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getType() {
     return type;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setType(String type) {
     this.type = type;
   }
 
 
-
+  /**
+   * Return true if this Resolve_an_Event_ID_200_response_event_entries_inner_anyOf_data_values_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -281,123 +293,5 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("category");
-    openapiFields.add("level");
-    openapiFields.add("event_id");
-    openapiFields.add("timestamp");
-    openapiFields.add("data");
-    openapiFields.add("message");
-    openapiFields.add("type");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("category");
-    openapiRequiredFields.add("level");
-    openapiRequiredFields.add("event_id");
-    openapiRequiredFields.add("timestamp");
-    openapiRequiredFields.add("data");
-    openapiRequiredFields.add("message");
-    openapiRequiredFields.add("type");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner is not found in the empty JSON string", ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
-      }
-      if (!jsonObj.get("level").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `level` to be a primitive type in the JSON string but got `%s`", jsonObj.get("level").toString()));
-      }
-      if (!jsonObj.get("event_id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `event_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("event_id").toString()));
-      }
-      if (!jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
-      }
-      if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner>() {
-           @Override
-           public void write(JsonWriter out, ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner
-  * @throws IOException if the JSON string is invalid with respect to ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner
-  */
-  public static ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner.class);
-  }
-
- /**
-  * Convert an instance of ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

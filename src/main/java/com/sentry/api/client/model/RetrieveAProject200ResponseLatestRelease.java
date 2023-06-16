@@ -15,120 +15,101 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.RetrieveAProject200ResponseLatestReleaseAuthorsInner;
 import com.sentry.api.client.model.RetrieveAProject200ResponseLatestReleaseProjectsInner;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAProject200ResponseLatestRelease
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_AUTHORS,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_COMMIT_COUNT,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_DATA,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_DATE_CREATED,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_DATE_RELEASED,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_DEPLOY_COUNT,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_FIRST_EVENT,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_LAST_COMMIT,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_LAST_DEPLOY,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_LAST_EVENT,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_NEW_GROUPS,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_OWNER,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_PROJECTS,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_REF,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_SHORT_VERSION,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_URL,
+  RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_VERSION
+})
+@JsonTypeName("Retrieve_a_Project_200_response_latestRelease")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAProject200ResponseLatestRelease {
-  public static final String SERIALIZED_NAME_AUTHORS = "authors";
-  @SerializedName(SERIALIZED_NAME_AUTHORS)
+  public static final String JSON_PROPERTY_AUTHORS = "authors";
   private List<RetrieveAProject200ResponseLatestReleaseAuthorsInner> authors = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_COMMIT_COUNT = "commitCount";
-  @SerializedName(SERIALIZED_NAME_COMMIT_COUNT)
+  public static final String JSON_PROPERTY_COMMIT_COUNT = "commitCount";
   private Integer commitCount;
 
-  public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
+  public static final String JSON_PROPERTY_DATA = "data";
   private Object data;
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private String dateCreated;
 
-  public static final String SERIALIZED_NAME_DATE_RELEASED = "dateReleased";
-  @SerializedName(SERIALIZED_NAME_DATE_RELEASED)
+  public static final String JSON_PROPERTY_DATE_RELEASED = "dateReleased";
   private String dateReleased;
 
-  public static final String SERIALIZED_NAME_DEPLOY_COUNT = "deployCount";
-  @SerializedName(SERIALIZED_NAME_DEPLOY_COUNT)
+  public static final String JSON_PROPERTY_DEPLOY_COUNT = "deployCount";
   private Integer deployCount;
 
-  public static final String SERIALIZED_NAME_FIRST_EVENT = "firstEvent";
-  @SerializedName(SERIALIZED_NAME_FIRST_EVENT)
+  public static final String JSON_PROPERTY_FIRST_EVENT = "firstEvent";
   private String firstEvent;
 
-  public static final String SERIALIZED_NAME_LAST_COMMIT = "lastCommit";
-  @SerializedName(SERIALIZED_NAME_LAST_COMMIT)
+  public static final String JSON_PROPERTY_LAST_COMMIT = "lastCommit";
   private Object lastCommit;
 
-  public static final String SERIALIZED_NAME_LAST_DEPLOY = "lastDeploy";
-  @SerializedName(SERIALIZED_NAME_LAST_DEPLOY)
+  public static final String JSON_PROPERTY_LAST_DEPLOY = "lastDeploy";
   private Object lastDeploy;
 
-  public static final String SERIALIZED_NAME_LAST_EVENT = "lastEvent";
-  @SerializedName(SERIALIZED_NAME_LAST_EVENT)
+  public static final String JSON_PROPERTY_LAST_EVENT = "lastEvent";
   private String lastEvent;
 
-  public static final String SERIALIZED_NAME_NEW_GROUPS = "newGroups";
-  @SerializedName(SERIALIZED_NAME_NEW_GROUPS)
+  public static final String JSON_PROPERTY_NEW_GROUPS = "newGroups";
   private Integer newGroups;
 
-  public static final String SERIALIZED_NAME_OWNER = "owner";
-  @SerializedName(SERIALIZED_NAME_OWNER)
+  public static final String JSON_PROPERTY_OWNER = "owner";
   private String owner;
 
-  public static final String SERIALIZED_NAME_PROJECTS = "projects";
-  @SerializedName(SERIALIZED_NAME_PROJECTS)
+  public static final String JSON_PROPERTY_PROJECTS = "projects";
   private List<RetrieveAProject200ResponseLatestReleaseProjectsInner> projects = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_REF = "ref";
-  @SerializedName(SERIALIZED_NAME_REF)
+  public static final String JSON_PROPERTY_REF = "ref";
   private String ref;
 
-  public static final String SERIALIZED_NAME_SHORT_VERSION = "shortVersion";
-  @SerializedName(SERIALIZED_NAME_SHORT_VERSION)
+  public static final String JSON_PROPERTY_SHORT_VERSION = "shortVersion";
   private String shortVersion;
 
-  public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL)
+  public static final String JSON_PROPERTY_URL = "url";
   private String url;
 
-  public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION)
+  public static final String JSON_PROPERTY_VERSION = "version";
   private String version;
 
-  public RetrieveAProject200ResponseLatestRelease() {
+  public RetrieveAProject200ResponseLatestRelease() { 
   }
 
   public RetrieveAProject200ResponseLatestRelease authors(List<RetrieveAProject200ResponseLatestReleaseAuthorsInner> authors) {
-    
     this.authors = authors;
     return this;
   }
@@ -145,19 +126,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get authors
    * @return authors
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_AUTHORS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAProject200ResponseLatestReleaseAuthorsInner> getAuthors() {
     return authors;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AUTHORS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAuthors(List<RetrieveAProject200ResponseLatestReleaseAuthorsInner> authors) {
     this.authors = authors;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease commitCount(Integer commitCount) {
-    
     this.commitCount = commitCount;
     return this;
   }
@@ -166,19 +151,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get commitCount
    * @return commitCount
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_COMMIT_COUNT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getCommitCount() {
     return commitCount;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMMIT_COUNT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setCommitCount(Integer commitCount) {
     this.commitCount = commitCount;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease data(Object data) {
-    
     this.data = data;
     return this;
   }
@@ -187,19 +176,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get data
    * @return data
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getData() {
     return data;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setData(Object data) {
     this.data = data;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease dateCreated(String dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -208,19 +201,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(String dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease dateReleased(String dateReleased) {
-    
     this.dateReleased = dateReleased;
     return this;
   }
@@ -229,19 +226,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get dateReleased
    * @return dateReleased
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_DATE_RELEASED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDateReleased() {
     return dateReleased;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_RELEASED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateReleased(String dateReleased) {
     this.dateReleased = dateReleased;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease deployCount(Integer deployCount) {
-    
     this.deployCount = deployCount;
     return this;
   }
@@ -250,19 +251,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get deployCount
    * @return deployCount
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DEPLOY_COUNT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getDeployCount() {
     return deployCount;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DEPLOY_COUNT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDeployCount(Integer deployCount) {
     this.deployCount = deployCount;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease firstEvent(String firstEvent) {
-    
     this.firstEvent = firstEvent;
     return this;
   }
@@ -271,19 +276,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get firstEvent
    * @return firstEvent
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_FIRST_EVENT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getFirstEvent() {
     return firstEvent;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIRST_EVENT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFirstEvent(String firstEvent) {
     this.firstEvent = firstEvent;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease lastCommit(Object lastCommit) {
-    
     this.lastCommit = lastCommit;
     return this;
   }
@@ -292,19 +301,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get lastCommit
    * @return lastCommit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_LAST_COMMIT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getLastCommit() {
     return lastCommit;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LAST_COMMIT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLastCommit(Object lastCommit) {
     this.lastCommit = lastCommit;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease lastDeploy(Object lastDeploy) {
-    
     this.lastDeploy = lastDeploy;
     return this;
   }
@@ -313,19 +326,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get lastDeploy
    * @return lastDeploy
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_LAST_DEPLOY)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getLastDeploy() {
     return lastDeploy;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LAST_DEPLOY)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLastDeploy(Object lastDeploy) {
     this.lastDeploy = lastDeploy;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease lastEvent(String lastEvent) {
-    
     this.lastEvent = lastEvent;
     return this;
   }
@@ -334,19 +351,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get lastEvent
    * @return lastEvent
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_LAST_EVENT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getLastEvent() {
     return lastEvent;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LAST_EVENT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLastEvent(String lastEvent) {
     this.lastEvent = lastEvent;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease newGroups(Integer newGroups) {
-    
     this.newGroups = newGroups;
     return this;
   }
@@ -355,19 +376,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get newGroups
    * @return newGroups
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NEW_GROUPS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getNewGroups() {
     return newGroups;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NEW_GROUPS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setNewGroups(Integer newGroups) {
     this.newGroups = newGroups;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease owner(String owner) {
-    
     this.owner = owner;
     return this;
   }
@@ -376,19 +401,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get owner
    * @return owner
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_OWNER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getOwner() {
     return owner;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OWNER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setOwner(String owner) {
     this.owner = owner;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease projects(List<RetrieveAProject200ResponseLatestReleaseProjectsInner> projects) {
-    
     this.projects = projects;
     return this;
   }
@@ -405,19 +434,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get projects
    * @return projects
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PROJECTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAProject200ResponseLatestReleaseProjectsInner> getProjects() {
     return projects;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROJECTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setProjects(List<RetrieveAProject200ResponseLatestReleaseProjectsInner> projects) {
     this.projects = projects;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease ref(String ref) {
-    
     this.ref = ref;
     return this;
   }
@@ -426,19 +459,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get ref
    * @return ref
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_REF)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getRef() {
     return ref;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REF)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setRef(String ref) {
     this.ref = ref;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease shortVersion(String shortVersion) {
-    
     this.shortVersion = shortVersion;
     return this;
   }
@@ -447,19 +484,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get shortVersion
    * @return shortVersion
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SHORT_VERSION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getShortVersion() {
     return shortVersion;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SHORT_VERSION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setShortVersion(String shortVersion) {
     this.shortVersion = shortVersion;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -468,19 +509,23 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get url
    * @return url
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getUrl() {
     return url;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUrl(String url) {
     this.url = url;
   }
 
 
   public RetrieveAProject200ResponseLatestRelease version(String version) {
-    
     this.version = version;
     return this;
   }
@@ -489,18 +534,25 @@ public class RetrieveAProject200ResponseLatestRelease {
    * Get version
    * @return version
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_VERSION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getVersion() {
     return version;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VERSION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setVersion(String version) {
     this.version = version;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_a_Project_200_response_latestRelease object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -570,175 +622,5 @@ public class RetrieveAProject200ResponseLatestRelease {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("authors");
-    openapiFields.add("commitCount");
-    openapiFields.add("data");
-    openapiFields.add("dateCreated");
-    openapiFields.add("dateReleased");
-    openapiFields.add("deployCount");
-    openapiFields.add("firstEvent");
-    openapiFields.add("lastCommit");
-    openapiFields.add("lastDeploy");
-    openapiFields.add("lastEvent");
-    openapiFields.add("newGroups");
-    openapiFields.add("owner");
-    openapiFields.add("projects");
-    openapiFields.add("ref");
-    openapiFields.add("shortVersion");
-    openapiFields.add("url");
-    openapiFields.add("version");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("authors");
-    openapiRequiredFields.add("commitCount");
-    openapiRequiredFields.add("data");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("dateReleased");
-    openapiRequiredFields.add("deployCount");
-    openapiRequiredFields.add("firstEvent");
-    openapiRequiredFields.add("lastCommit");
-    openapiRequiredFields.add("lastDeploy");
-    openapiRequiredFields.add("lastEvent");
-    openapiRequiredFields.add("newGroups");
-    openapiRequiredFields.add("owner");
-    openapiRequiredFields.add("projects");
-    openapiRequiredFields.add("ref");
-    openapiRequiredFields.add("shortVersion");
-    openapiRequiredFields.add("url");
-    openapiRequiredFields.add("version");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAProject200ResponseLatestRelease
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAProject200ResponseLatestRelease.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAProject200ResponseLatestRelease is not found in the empty JSON string", RetrieveAProject200ResponseLatestRelease.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAProject200ResponseLatestRelease.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAProject200ResponseLatestRelease` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveAProject200ResponseLatestRelease.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("authors").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `authors` to be an array in the JSON string but got `%s`", jsonObj.get("authors").toString()));
-      }
-
-      JsonArray jsonArrayauthors = jsonObj.getAsJsonArray("authors");
-      // validate the required field `authors` (array)
-      for (int i = 0; i < jsonArrayauthors.size(); i++) {
-        RetrieveAProject200ResponseLatestReleaseAuthorsInner.validateJsonObject(jsonArrayauthors.get(i).getAsJsonObject());
-      };
-      if (!jsonObj.get("dateCreated").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dateCreated` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dateCreated").toString()));
-      }
-      if (!jsonObj.get("dateReleased").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dateReleased` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dateReleased").toString()));
-      }
-      if (!jsonObj.get("firstEvent").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `firstEvent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("firstEvent").toString()));
-      }
-      if (!jsonObj.get("lastEvent").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `lastEvent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lastEvent").toString()));
-      }
-      if (!jsonObj.get("owner").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `owner` to be a primitive type in the JSON string but got `%s`", jsonObj.get("owner").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("projects").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `projects` to be an array in the JSON string but got `%s`", jsonObj.get("projects").toString()));
-      }
-
-      JsonArray jsonArrayprojects = jsonObj.getAsJsonArray("projects");
-      // validate the required field `projects` (array)
-      for (int i = 0; i < jsonArrayprojects.size(); i++) {
-        RetrieveAProject200ResponseLatestReleaseProjectsInner.validateJsonObject(jsonArrayprojects.get(i).getAsJsonObject());
-      };
-      if (!jsonObj.get("ref").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ref` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref").toString()));
-      }
-      if (!jsonObj.get("shortVersion").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `shortVersion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("shortVersion").toString()));
-      }
-      if (!jsonObj.get("url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
-      }
-      if (!jsonObj.get("version").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAProject200ResponseLatestRelease.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAProject200ResponseLatestRelease' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAProject200ResponseLatestRelease> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAProject200ResponseLatestRelease.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAProject200ResponseLatestRelease>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAProject200ResponseLatestRelease value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAProject200ResponseLatestRelease read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAProject200ResponseLatestRelease given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAProject200ResponseLatestRelease
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAProject200ResponseLatestRelease
-  */
-  public static RetrieveAProject200ResponseLatestRelease fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAProject200ResponseLatestRelease.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAProject200ResponseLatestRelease to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

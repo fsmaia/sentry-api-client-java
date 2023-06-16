@@ -15,91 +15,72 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.RetrieveATeam200ResponseAvatar;
 import com.sentry.api.client.model.RetrieveATeam200ResponseOrganization;
-import java.io.IOException;
 import java.time.OffsetDateTime;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveATeam200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveATeam200Response.JSON_PROPERTY_AVATAR,
+  RetrieveATeam200Response.JSON_PROPERTY_DATE_CREATED,
+  RetrieveATeam200Response.JSON_PROPERTY_HAS_ACCESS,
+  RetrieveATeam200Response.JSON_PROPERTY_ID,
+  RetrieveATeam200Response.JSON_PROPERTY_IS_MEMBER,
+  RetrieveATeam200Response.JSON_PROPERTY_IS_PENDING,
+  RetrieveATeam200Response.JSON_PROPERTY_MEMBER_COUNT,
+  RetrieveATeam200Response.JSON_PROPERTY_ORGANIZATION,
+  RetrieveATeam200Response.JSON_PROPERTY_NAME,
+  RetrieveATeam200Response.JSON_PROPERTY_SLUG
+})
+@JsonTypeName("Retrieve_a_Team_200_response")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveATeam200Response {
-  public static final String SERIALIZED_NAME_AVATAR = "avatar";
-  @SerializedName(SERIALIZED_NAME_AVATAR)
+  public static final String JSON_PROPERTY_AVATAR = "avatar";
   private RetrieveATeam200ResponseAvatar avatar;
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private OffsetDateTime dateCreated;
 
-  public static final String SERIALIZED_NAME_HAS_ACCESS = "hasAccess";
-  @SerializedName(SERIALIZED_NAME_HAS_ACCESS)
+  public static final String JSON_PROPERTY_HAS_ACCESS = "hasAccess";
   private Boolean hasAccess;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_IS_MEMBER = "isMember";
-  @SerializedName(SERIALIZED_NAME_IS_MEMBER)
+  public static final String JSON_PROPERTY_IS_MEMBER = "isMember";
   private Boolean isMember;
 
-  public static final String SERIALIZED_NAME_IS_PENDING = "isPending";
-  @SerializedName(SERIALIZED_NAME_IS_PENDING)
+  public static final String JSON_PROPERTY_IS_PENDING = "isPending";
   private Boolean isPending;
 
-  public static final String SERIALIZED_NAME_MEMBER_COUNT = "memberCount";
-  @SerializedName(SERIALIZED_NAME_MEMBER_COUNT)
+  public static final String JSON_PROPERTY_MEMBER_COUNT = "memberCount";
   private Long memberCount;
 
-  public static final String SERIALIZED_NAME_ORGANIZATION = "organization";
-  @SerializedName(SERIALIZED_NAME_ORGANIZATION)
+  public static final String JSON_PROPERTY_ORGANIZATION = "organization";
   private RetrieveATeam200ResponseOrganization organization;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_SLUG = "slug";
-  @SerializedName(SERIALIZED_NAME_SLUG)
+  public static final String JSON_PROPERTY_SLUG = "slug";
   private String slug;
 
-  public RetrieveATeam200Response() {
+  public RetrieveATeam200Response() { 
   }
 
   public RetrieveATeam200Response avatar(RetrieveATeam200ResponseAvatar avatar) {
-    
     this.avatar = avatar;
     return this;
   }
@@ -108,19 +89,23 @@ public class RetrieveATeam200Response {
    * Get avatar
    * @return avatar
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_AVATAR)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveATeam200ResponseAvatar getAvatar() {
     return avatar;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AVATAR)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAvatar(RetrieveATeam200ResponseAvatar avatar) {
     this.avatar = avatar;
   }
 
 
   public RetrieveATeam200Response dateCreated(OffsetDateTime dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -129,19 +114,23 @@ public class RetrieveATeam200Response {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public RetrieveATeam200Response hasAccess(Boolean hasAccess) {
-    
     this.hasAccess = hasAccess;
     return this;
   }
@@ -150,19 +139,23 @@ public class RetrieveATeam200Response {
    * Get hasAccess
    * @return hasAccess
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_ACCESS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasAccess() {
     return hasAccess;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_ACCESS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasAccess(Boolean hasAccess) {
     this.hasAccess = hasAccess;
   }
 
 
   public RetrieveATeam200Response id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -171,19 +164,23 @@ public class RetrieveATeam200Response {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public RetrieveATeam200Response isMember(Boolean isMember) {
-    
     this.isMember = isMember;
     return this;
   }
@@ -192,19 +189,23 @@ public class RetrieveATeam200Response {
    * Get isMember
    * @return isMember
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_MEMBER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsMember() {
     return isMember;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_MEMBER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsMember(Boolean isMember) {
     this.isMember = isMember;
   }
 
 
   public RetrieveATeam200Response isPending(Boolean isPending) {
-    
     this.isPending = isPending;
     return this;
   }
@@ -213,19 +214,23 @@ public class RetrieveATeam200Response {
    * Get isPending
    * @return isPending
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_PENDING)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsPending() {
     return isPending;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_PENDING)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsPending(Boolean isPending) {
     this.isPending = isPending;
   }
 
 
   public RetrieveATeam200Response memberCount(Long memberCount) {
-    
     this.memberCount = memberCount;
     return this;
   }
@@ -234,19 +239,23 @@ public class RetrieveATeam200Response {
    * Get memberCount
    * @return memberCount
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_MEMBER_COUNT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Long getMemberCount() {
     return memberCount;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MEMBER_COUNT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMemberCount(Long memberCount) {
     this.memberCount = memberCount;
   }
 
 
   public RetrieveATeam200Response organization(RetrieveATeam200ResponseOrganization organization) {
-    
     this.organization = organization;
     return this;
   }
@@ -255,19 +264,23 @@ public class RetrieveATeam200Response {
    * Get organization
    * @return organization
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ORGANIZATION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public RetrieveATeam200ResponseOrganization getOrganization() {
     return organization;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ORGANIZATION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setOrganization(RetrieveATeam200ResponseOrganization organization) {
     this.organization = organization;
   }
 
 
   public RetrieveATeam200Response name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -276,19 +289,23 @@ public class RetrieveATeam200Response {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public RetrieveATeam200Response slug(String slug) {
-    
     this.slug = slug;
     return this;
   }
@@ -297,18 +314,25 @@ public class RetrieveATeam200Response {
    * Get slug
    * @return slug
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SLUG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getSlug() {
     return slug;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SLUG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSlug(String slug) {
     this.slug = slug;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_a_Team_200_response object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -364,127 +388,5 @@ public class RetrieveATeam200Response {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("avatar");
-    openapiFields.add("dateCreated");
-    openapiFields.add("hasAccess");
-    openapiFields.add("id");
-    openapiFields.add("isMember");
-    openapiFields.add("isPending");
-    openapiFields.add("memberCount");
-    openapiFields.add("organization");
-    openapiFields.add("name");
-    openapiFields.add("slug");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("avatar");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("hasAccess");
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("isMember");
-    openapiRequiredFields.add("isPending");
-    openapiRequiredFields.add("memberCount");
-    openapiRequiredFields.add("organization");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("slug");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveATeam200Response
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveATeam200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveATeam200Response is not found in the empty JSON string", RetrieveATeam200Response.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveATeam200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveATeam200Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveATeam200Response.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      // validate the required field `avatar`
-      RetrieveATeam200ResponseAvatar.validateJsonObject(jsonObj.getAsJsonObject("avatar"));
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      // validate the required field `organization`
-      RetrieveATeam200ResponseOrganization.validateJsonObject(jsonObj.getAsJsonObject("organization"));
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      if (!jsonObj.get("slug").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `slug` to be a primitive type in the JSON string but got `%s`", jsonObj.get("slug").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveATeam200Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveATeam200Response' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveATeam200Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveATeam200Response.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveATeam200Response>() {
-           @Override
-           public void write(JsonWriter out, RetrieveATeam200Response value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveATeam200Response read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveATeam200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveATeam200Response
-  * @throws IOException if the JSON string is invalid with respect to RetrieveATeam200Response
-  */
-  public static RetrieveATeam200Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveATeam200Response.class);
-  }
-
- /**
-  * Convert an instance of RetrieveATeam200Response to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

@@ -15,115 +15,96 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInnerContextInnerInner;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_FUNCTION,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_ERRORS,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_COL_NO,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_VARS,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_PACKAGE,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_ABS_PATH,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_IN_APP,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_LINE_NO,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_MODULE,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_FILENAME,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_PLATFORM,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_INSTRUCTION_ADDR,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_CONTEXT,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_SYMBOL_ADDR,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_TRUST,
+  ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.JSON_PROPERTY_SYMBOL
+})
+@JsonTypeName("Resolve_an_Event_ID_200_response_event_entries_inner_anyOf_3_data_values_inner_stacktrace_frames_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner {
-  public static final String SERIALIZED_NAME_FUNCTION = "function";
-  @SerializedName(SERIALIZED_NAME_FUNCTION)
+  public static final String JSON_PROPERTY_FUNCTION = "function";
   private String function;
 
-  public static final String SERIALIZED_NAME_ERRORS = "errors";
-  @SerializedName(SERIALIZED_NAME_ERRORS)
+  public static final String JSON_PROPERTY_ERRORS = "errors";
   private String errors;
 
-  public static final String SERIALIZED_NAME_COL_NO = "colNo";
-  @SerializedName(SERIALIZED_NAME_COL_NO)
+  public static final String JSON_PROPERTY_COL_NO = "colNo";
   private Integer colNo;
 
-  public static final String SERIALIZED_NAME_VARS = "vars";
-  @SerializedName(SERIALIZED_NAME_VARS)
+  public static final String JSON_PROPERTY_VARS = "vars";
   private Object vars;
 
-  public static final String SERIALIZED_NAME_PACKAGE = "package";
-  @SerializedName(SERIALIZED_NAME_PACKAGE)
+  public static final String JSON_PROPERTY_PACKAGE = "package";
   private String _package;
 
-  public static final String SERIALIZED_NAME_ABS_PATH = "absPath";
-  @SerializedName(SERIALIZED_NAME_ABS_PATH)
+  public static final String JSON_PROPERTY_ABS_PATH = "absPath";
   private String absPath;
 
-  public static final String SERIALIZED_NAME_IN_APP = "inApp";
-  @SerializedName(SERIALIZED_NAME_IN_APP)
+  public static final String JSON_PROPERTY_IN_APP = "inApp";
   private Boolean inApp;
 
-  public static final String SERIALIZED_NAME_LINE_NO = "lineNo";
-  @SerializedName(SERIALIZED_NAME_LINE_NO)
+  public static final String JSON_PROPERTY_LINE_NO = "lineNo";
   private Integer lineNo;
 
-  public static final String SERIALIZED_NAME_MODULE = "module";
-  @SerializedName(SERIALIZED_NAME_MODULE)
+  public static final String JSON_PROPERTY_MODULE = "module";
   private String module;
 
-  public static final String SERIALIZED_NAME_FILENAME = "filename";
-  @SerializedName(SERIALIZED_NAME_FILENAME)
+  public static final String JSON_PROPERTY_FILENAME = "filename";
   private String filename;
 
-  public static final String SERIALIZED_NAME_PLATFORM = "platform";
-  @SerializedName(SERIALIZED_NAME_PLATFORM)
+  public static final String JSON_PROPERTY_PLATFORM = "platform";
   private String platform;
 
-  public static final String SERIALIZED_NAME_INSTRUCTION_ADDR = "instructionAddr";
-  @SerializedName(SERIALIZED_NAME_INSTRUCTION_ADDR)
+  public static final String JSON_PROPERTY_INSTRUCTION_ADDR = "instructionAddr";
   private String instructionAddr;
 
-  public static final String SERIALIZED_NAME_CONTEXT = "context";
-  @SerializedName(SERIALIZED_NAME_CONTEXT)
+  public static final String JSON_PROPERTY_CONTEXT = "context";
   private List<List<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInnerContextInnerInner>> context = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_SYMBOL_ADDR = "symbolAddr";
-  @SerializedName(SERIALIZED_NAME_SYMBOL_ADDR)
+  public static final String JSON_PROPERTY_SYMBOL_ADDR = "symbolAddr";
   private String symbolAddr;
 
-  public static final String SERIALIZED_NAME_TRUST = "trust";
-  @SerializedName(SERIALIZED_NAME_TRUST)
+  public static final String JSON_PROPERTY_TRUST = "trust";
   private String trust;
 
-  public static final String SERIALIZED_NAME_SYMBOL = "symbol";
-  @SerializedName(SERIALIZED_NAME_SYMBOL)
+  public static final String JSON_PROPERTY_SYMBOL = "symbol";
   private String symbol;
 
-  public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner() {
+  public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner() { 
   }
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner function(String function) {
-    
     this.function = function;
     return this;
   }
@@ -132,19 +113,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get function
    * @return function
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_FUNCTION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getFunction() {
     return function;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FUNCTION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFunction(String function) {
     this.function = function;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner errors(String errors) {
-    
     this.errors = errors;
     return this;
   }
@@ -153,19 +138,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getErrors() {
     return errors;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setErrors(String errors) {
     this.errors = errors;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner colNo(Integer colNo) {
-    
     this.colNo = colNo;
     return this;
   }
@@ -174,19 +163,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get colNo
    * @return colNo
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_COL_NO)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getColNo() {
     return colNo;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COL_NO)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setColNo(Integer colNo) {
     this.colNo = colNo;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner vars(Object vars) {
-    
     this.vars = vars;
     return this;
   }
@@ -195,19 +188,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get vars
    * @return vars
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_VARS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getVars() {
     return vars;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VARS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setVars(Object vars) {
     this.vars = vars;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner _package(String _package) {
-    
     this._package = _package;
     return this;
   }
@@ -216,19 +213,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get _package
    * @return _package
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_PACKAGE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getPackage() {
     return _package;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PACKAGE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPackage(String _package) {
     this._package = _package;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner absPath(String absPath) {
-    
     this.absPath = absPath;
     return this;
   }
@@ -237,19 +238,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get absPath
    * @return absPath
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ABS_PATH)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getAbsPath() {
     return absPath;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ABS_PATH)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAbsPath(String absPath) {
     this.absPath = absPath;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner inApp(Boolean inApp) {
-    
     this.inApp = inApp;
     return this;
   }
@@ -258,19 +263,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get inApp
    * @return inApp
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IN_APP)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getInApp() {
     return inApp;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IN_APP)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setInApp(Boolean inApp) {
     this.inApp = inApp;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner lineNo(Integer lineNo) {
-    
     this.lineNo = lineNo;
     return this;
   }
@@ -279,19 +288,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get lineNo
    * @return lineNo
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_LINE_NO)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getLineNo() {
     return lineNo;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LINE_NO)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLineNo(Integer lineNo) {
     this.lineNo = lineNo;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner module(String module) {
-    
     this.module = module;
     return this;
   }
@@ -300,19 +313,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get module
    * @return module
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_MODULE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getModule() {
     return module;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MODULE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setModule(String module) {
     this.module = module;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner filename(String filename) {
-    
     this.filename = filename;
     return this;
   }
@@ -321,19 +338,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get filename
    * @return filename
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_FILENAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getFilename() {
     return filename;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILENAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFilename(String filename) {
     this.filename = filename;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner platform(String platform) {
-    
     this.platform = platform;
     return this;
   }
@@ -342,19 +363,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getPlatform() {
     return platform;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPlatform(String platform) {
     this.platform = platform;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner instructionAddr(String instructionAddr) {
-    
     this.instructionAddr = instructionAddr;
     return this;
   }
@@ -363,19 +388,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get instructionAddr
    * @return instructionAddr
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_INSTRUCTION_ADDR)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getInstructionAddr() {
     return instructionAddr;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INSTRUCTION_ADDR)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setInstructionAddr(String instructionAddr) {
     this.instructionAddr = instructionAddr;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner context(List<List<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInnerContextInnerInner>> context) {
-    
     this.context = context;
     return this;
   }
@@ -392,19 +421,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get context
    * @return context
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CONTEXT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<List<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInnerContextInnerInner>> getContext() {
     return context;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTEXT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setContext(List<List<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInnerContextInnerInner>> context) {
     this.context = context;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner symbolAddr(String symbolAddr) {
-    
     this.symbolAddr = symbolAddr;
     return this;
   }
@@ -413,19 +446,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get symbolAddr
    * @return symbolAddr
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SYMBOL_ADDR)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getSymbolAddr() {
     return symbolAddr;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SYMBOL_ADDR)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSymbolAddr(String symbolAddr) {
     this.symbolAddr = symbolAddr;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner trust(String trust) {
-    
     this.trust = trust;
     return this;
   }
@@ -434,19 +471,23 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get trust
    * @return trust
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_TRUST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getTrust() {
     return trust;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TRUST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTrust(String trust) {
     this.trust = trust;
   }
 
 
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner symbol(String symbol) {
-    
     this.symbol = symbol;
     return this;
   }
@@ -455,18 +496,25 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get symbol
    * @return symbol
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SYMBOL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getSymbol() {
     return symbol;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SYMBOL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSymbol(String symbol) {
     this.symbol = symbol;
   }
 
 
-
+  /**
+   * Return true if this Resolve_an_Event_ID_200_response_event_entries_inner_anyOf_3_data_values_inner_stacktrace_frames_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -534,165 +582,5 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("function");
-    openapiFields.add("errors");
-    openapiFields.add("colNo");
-    openapiFields.add("vars");
-    openapiFields.add("package");
-    openapiFields.add("absPath");
-    openapiFields.add("inApp");
-    openapiFields.add("lineNo");
-    openapiFields.add("module");
-    openapiFields.add("filename");
-    openapiFields.add("platform");
-    openapiFields.add("instructionAddr");
-    openapiFields.add("context");
-    openapiFields.add("symbolAddr");
-    openapiFields.add("trust");
-    openapiFields.add("symbol");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("function");
-    openapiRequiredFields.add("errors");
-    openapiRequiredFields.add("colNo");
-    openapiRequiredFields.add("vars");
-    openapiRequiredFields.add("package");
-    openapiRequiredFields.add("absPath");
-    openapiRequiredFields.add("inApp");
-    openapiRequiredFields.add("lineNo");
-    openapiRequiredFields.add("module");
-    openapiRequiredFields.add("filename");
-    openapiRequiredFields.add("platform");
-    openapiRequiredFields.add("instructionAddr");
-    openapiRequiredFields.add("context");
-    openapiRequiredFields.add("symbolAddr");
-    openapiRequiredFields.add("trust");
-    openapiRequiredFields.add("symbol");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner is not found in the empty JSON string", ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("function").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `function` to be a primitive type in the JSON string but got `%s`", jsonObj.get("function").toString()));
-      }
-      if (!jsonObj.get("errors").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `errors` to be a primitive type in the JSON string but got `%s`", jsonObj.get("errors").toString()));
-      }
-      if (!jsonObj.get("package").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `package` to be a primitive type in the JSON string but got `%s`", jsonObj.get("package").toString()));
-      }
-      if (!jsonObj.get("absPath").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `absPath` to be a primitive type in the JSON string but got `%s`", jsonObj.get("absPath").toString()));
-      }
-      if (!jsonObj.get("module").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `module` to be a primitive type in the JSON string but got `%s`", jsonObj.get("module").toString()));
-      }
-      if (!jsonObj.get("filename").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `filename` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filename").toString()));
-      }
-      if (!jsonObj.get("platform").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `platform` to be a primitive type in the JSON string but got `%s`", jsonObj.get("platform").toString()));
-      }
-      if (!jsonObj.get("instructionAddr").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `instructionAddr` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instructionAddr").toString()));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("context") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("context").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `context` to be an array in the JSON string but got `%s`", jsonObj.get("context").toString()));
-      }
-      if (!jsonObj.get("symbolAddr").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `symbolAddr` to be a primitive type in the JSON string but got `%s`", jsonObj.get("symbolAddr").toString()));
-      }
-      if (!jsonObj.get("trust").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `trust` to be a primitive type in the JSON string but got `%s`", jsonObj.get("trust").toString()));
-      }
-      if (!jsonObj.get("symbol").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `symbol` to be a primitive type in the JSON string but got `%s`", jsonObj.get("symbol").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner>() {
-           @Override
-           public void write(JsonWriter out, ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner
-  * @throws IOException if the JSON string is invalid with respect to ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner
-  */
-  public static ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner.class);
-  }
-
- /**
-  * Convert an instance of ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

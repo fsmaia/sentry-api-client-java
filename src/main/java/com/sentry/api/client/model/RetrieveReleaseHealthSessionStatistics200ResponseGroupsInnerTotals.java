@@ -15,52 +15,33 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * These are key/value pairs, the key being the requested &#x60;field&#x60;, and the value the corresponding total over the requested time frame.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.JSON_PROPERTY_SUM_SESSION
+})
+@JsonTypeName("Retrieve_Release_Health_Session_Statistics_200_response_groups_inner_totals")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals {
-  public static final String SERIALIZED_NAME_SUM_SESSION = "sum(session)";
-  @SerializedName(SERIALIZED_NAME_SUM_SESSION)
+  public static final String JSON_PROPERTY_SUM_SESSION = "sum(session)";
   private Integer sumSession;
 
-  public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals() {
+  public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals() { 
   }
 
   public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals sumSession(Integer sumSession) {
-    
     this.sumSession = sumSession;
     return this;
   }
@@ -69,18 +50,25 @@ public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals 
    * Example &#x60;field&#x60; value
    * @return sumSession
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SUM_SESSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public Integer getSumSession() {
     return sumSession;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUM_SESSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSumSession(Integer sumSession) {
     this.sumSession = sumSession;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_Release_Health_Session_Statistics_200_response_groups_inner_totals object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -118,88 +106,5 @@ public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals 
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("sum(session)");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals is not found in the empty JSON string", RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals>() {
-           @Override
-           public void write(JsonWriter out, RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals
-  * @throws IOException if the JSON string is invalid with respect to RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals
-  */
-  public static RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.class);
-  }
-
- /**
-  * Convert an instance of RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

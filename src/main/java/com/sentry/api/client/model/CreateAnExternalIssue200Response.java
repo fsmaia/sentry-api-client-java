@@ -15,68 +15,49 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * CreateAnExternalIssue200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  CreateAnExternalIssue200Response.JSON_PROPERTY_ID,
+  CreateAnExternalIssue200Response.JSON_PROPERTY_ISSUE_ID,
+  CreateAnExternalIssue200Response.JSON_PROPERTY_SERVICE_TYPE,
+  CreateAnExternalIssue200Response.JSON_PROPERTY_DISPLAY_NAME,
+  CreateAnExternalIssue200Response.JSON_PROPERTY_WEB_URL
+})
+@JsonTypeName("Create_an_External_Issue_200_response")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class CreateAnExternalIssue200Response {
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_ISSUE_ID = "issueId";
-  @SerializedName(SERIALIZED_NAME_ISSUE_ID)
+  public static final String JSON_PROPERTY_ISSUE_ID = "issueId";
   private String issueId;
 
-  public static final String SERIALIZED_NAME_SERVICE_TYPE = "serviceType";
-  @SerializedName(SERIALIZED_NAME_SERVICE_TYPE)
+  public static final String JSON_PROPERTY_SERVICE_TYPE = "serviceType";
   private String serviceType;
 
-  public static final String SERIALIZED_NAME_DISPLAY_NAME = "displayName";
-  @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
+  public static final String JSON_PROPERTY_DISPLAY_NAME = "displayName";
   private String displayName;
 
-  public static final String SERIALIZED_NAME_WEB_URL = "webUrl";
-  @SerializedName(SERIALIZED_NAME_WEB_URL)
+  public static final String JSON_PROPERTY_WEB_URL = "webUrl";
   private String webUrl;
 
-  public CreateAnExternalIssue200Response() {
+  public CreateAnExternalIssue200Response() { 
   }
 
   public CreateAnExternalIssue200Response id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -85,19 +66,23 @@ public class CreateAnExternalIssue200Response {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public CreateAnExternalIssue200Response issueId(String issueId) {
-    
     this.issueId = issueId;
     return this;
   }
@@ -106,19 +91,23 @@ public class CreateAnExternalIssue200Response {
    * Get issueId
    * @return issueId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ISSUE_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getIssueId() {
     return issueId;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ISSUE_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIssueId(String issueId) {
     this.issueId = issueId;
   }
 
 
   public CreateAnExternalIssue200Response serviceType(String serviceType) {
-    
     this.serviceType = serviceType;
     return this;
   }
@@ -127,19 +116,23 @@ public class CreateAnExternalIssue200Response {
    * Get serviceType
    * @return serviceType
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SERVICE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getServiceType() {
     return serviceType;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SERVICE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setServiceType(String serviceType) {
     this.serviceType = serviceType;
   }
 
 
   public CreateAnExternalIssue200Response displayName(String displayName) {
-    
     this.displayName = displayName;
     return this;
   }
@@ -148,19 +141,23 @@ public class CreateAnExternalIssue200Response {
    * Get displayName
    * @return displayName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DISPLAY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDisplayName() {
     return displayName;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DISPLAY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
 
   public CreateAnExternalIssue200Response webUrl(String webUrl) {
-    
     this.webUrl = webUrl;
     return this;
   }
@@ -169,18 +166,25 @@ public class CreateAnExternalIssue200Response {
    * Get webUrl
    * @return webUrl
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_WEB_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getWebUrl() {
     return webUrl;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WEB_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setWebUrl(String webUrl) {
     this.webUrl = webUrl;
   }
 
 
-
+  /**
+   * Return true if this Create_an_External_Issue_200_response object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -226,119 +230,5 @@ public class CreateAnExternalIssue200Response {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("issueId");
-    openapiFields.add("serviceType");
-    openapiFields.add("displayName");
-    openapiFields.add("webUrl");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("issueId");
-    openapiRequiredFields.add("serviceType");
-    openapiRequiredFields.add("displayName");
-    openapiRequiredFields.add("webUrl");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to CreateAnExternalIssue200Response
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!CreateAnExternalIssue200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in CreateAnExternalIssue200Response is not found in the empty JSON string", CreateAnExternalIssue200Response.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!CreateAnExternalIssue200Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateAnExternalIssue200Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : CreateAnExternalIssue200Response.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("issueId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `issueId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("issueId").toString()));
-      }
-      if (!jsonObj.get("serviceType").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `serviceType` to be a primitive type in the JSON string but got `%s`", jsonObj.get("serviceType").toString()));
-      }
-      if (!jsonObj.get("displayName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `displayName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("displayName").toString()));
-      }
-      if (!jsonObj.get("webUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `webUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("webUrl").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!CreateAnExternalIssue200Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'CreateAnExternalIssue200Response' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<CreateAnExternalIssue200Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(CreateAnExternalIssue200Response.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<CreateAnExternalIssue200Response>() {
-           @Override
-           public void write(JsonWriter out, CreateAnExternalIssue200Response value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public CreateAnExternalIssue200Response read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of CreateAnExternalIssue200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of CreateAnExternalIssue200Response
-  * @throws IOException if the JSON string is invalid with respect to CreateAnExternalIssue200Response
-  */
-  public static CreateAnExternalIssue200Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, CreateAnExternalIssue200Response.class);
-  }
-
- /**
-  * Convert an instance of CreateAnExternalIssue200Response to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

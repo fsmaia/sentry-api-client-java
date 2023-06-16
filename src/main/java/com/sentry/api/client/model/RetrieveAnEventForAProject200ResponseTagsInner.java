@@ -15,61 +15,45 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import org.openapitools.jackson.nullable.JsonNullable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.NoSuchElementException;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnEventForAProject200ResponseTagsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnEventForAProject200ResponseTagsInner.JSON_PROPERTY_VALUE,
+  RetrieveAnEventForAProject200ResponseTagsInner.JSON_PROPERTY_KEY,
+  RetrieveAnEventForAProject200ResponseTagsInner.JSON_PROPERTY_META
+})
+@JsonTypeName("Retrieve_an_Event_for_a_Project_200_response_tags_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseTagsInner {
-  public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
+  public static final String JSON_PROPERTY_VALUE = "value";
   private String value;
 
-  public static final String SERIALIZED_NAME_KEY = "key";
-  @SerializedName(SERIALIZED_NAME_KEY)
+  public static final String JSON_PROPERTY_KEY = "key";
   private String key;
 
-  public static final String SERIALIZED_NAME_META = "_meta";
-  @SerializedName(SERIALIZED_NAME_META)
-  private String meta;
+  public static final String JSON_PROPERTY_META = "_meta";
+  private JsonNullable<String> meta = JsonNullable.<String>undefined();
 
-  public RetrieveAnEventForAProject200ResponseTagsInner() {
+  public RetrieveAnEventForAProject200ResponseTagsInner() { 
   }
 
   public RetrieveAnEventForAProject200ResponseTagsInner value(String value) {
-    
     this.value = value;
     return this;
   }
@@ -78,19 +62,23 @@ public class RetrieveAnEventForAProject200ResponseTagsInner {
    * Get value
    * @return value
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getValue() {
     return value;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValue(String value) {
     this.value = value;
   }
 
 
   public RetrieveAnEventForAProject200ResponseTagsInner key(String key) {
-    
     this.key = key;
     return this;
   }
@@ -99,20 +87,24 @@ public class RetrieveAnEventForAProject200ResponseTagsInner {
    * Get key
    * @return key
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_KEY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getKey() {
     return key;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_KEY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setKey(String key) {
     this.key = key;
   }
 
 
   public RetrieveAnEventForAProject200ResponseTagsInner meta(String meta) {
-    
-    this.meta = meta;
+    this.meta = JsonNullable.<String>of(meta);
     return this;
   }
 
@@ -120,18 +112,33 @@ public class RetrieveAnEventForAProject200ResponseTagsInner {
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonIgnore
+
   public String getMeta() {
-    return meta;
+        return meta.orElse(null);
   }
 
+  @JsonProperty(JSON_PROPERTY_META)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public void setMeta(String meta) {
+  public JsonNullable<String> getMeta_JsonNullable() {
+    return meta;
+  }
+  
+  @JsonProperty(JSON_PROPERTY_META)
+  public void setMeta_JsonNullable(JsonNullable<String> meta) {
     this.meta = meta;
   }
 
+  public void setMeta(String meta) {
+    this.meta = JsonNullable.<String>of(meta);
+  }
 
 
+  /**
+   * Return true if this Retrieve_an_Event_for_a_Project_200_response_tags_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -143,7 +150,7 @@ public class RetrieveAnEventForAProject200ResponseTagsInner {
     RetrieveAnEventForAProject200ResponseTagsInner retrieveAnEventForAProject200ResponseTagsInner = (RetrieveAnEventForAProject200ResponseTagsInner) o;
     return Objects.equals(this.value, retrieveAnEventForAProject200ResponseTagsInner.value) &&
         Objects.equals(this.key, retrieveAnEventForAProject200ResponseTagsInner.key) &&
-        Objects.equals(this.meta, retrieveAnEventForAProject200ResponseTagsInner.meta);
+        equalsNullable(this.meta, retrieveAnEventForAProject200ResponseTagsInner.meta);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -152,7 +159,7 @@ public class RetrieveAnEventForAProject200ResponseTagsInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, key, meta);
+    return Objects.hash(value, key, hashCodeNullable(meta));
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -184,99 +191,5 @@ public class RetrieveAnEventForAProject200ResponseTagsInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("value");
-    openapiFields.add("key");
-    openapiFields.add("_meta");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200ResponseTagsInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnEventForAProject200ResponseTagsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnEventForAProject200ResponseTagsInner is not found in the empty JSON string", RetrieveAnEventForAProject200ResponseTagsInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnEventForAProject200ResponseTagsInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnEventForAProject200ResponseTagsInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
-      }
-      if ((jsonObj.get("key") != null && !jsonObj.get("key").isJsonNull()) && !jsonObj.get("key").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `key` to be a primitive type in the JSON string but got `%s`", jsonObj.get("key").toString()));
-      }
-      if ((jsonObj.get("_meta") != null && !jsonObj.get("_meta").isJsonNull()) && !jsonObj.get("_meta").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `_meta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("_meta").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnEventForAProject200ResponseTagsInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseTagsInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnEventForAProject200ResponseTagsInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200ResponseTagsInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseTagsInner>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseTagsInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnEventForAProject200ResponseTagsInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnEventForAProject200ResponseTagsInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnEventForAProject200ResponseTagsInner
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnEventForAProject200ResponseTagsInner
-  */
-  public static RetrieveAnEventForAProject200ResponseTagsInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnEventForAProject200ResponseTagsInner.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnEventForAProject200ResponseTagsInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

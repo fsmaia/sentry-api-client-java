@@ -15,55 +15,36 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ListAProjectSIssues200ResponseInnerStats
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ListAProjectSIssues200ResponseInnerStats.JSON_PROPERTY_24H
+})
+@JsonTypeName("List_a_Project_s_Issues_200_response_inner_stats")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ListAProjectSIssues200ResponseInnerStats {
-  public static final String SERIALIZED_NAME_24H = "24h";
-  @SerializedName(SERIALIZED_NAME_24H)
+  public static final String JSON_PROPERTY_24H = "24h";
   private List<List<BigDecimal>> _24h;
 
-  public ListAProjectSIssues200ResponseInnerStats() {
+  public ListAProjectSIssues200ResponseInnerStats() { 
   }
 
   public ListAProjectSIssues200ResponseInnerStats _24h(List<List<BigDecimal>> _24h) {
-    
     this._24h = _24h;
     return this;
   }
@@ -80,18 +61,25 @@ public class ListAProjectSIssues200ResponseInnerStats {
    * Get _24h
    * @return _24h
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_24H)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public List<List<BigDecimal>> get24h() {
     return _24h;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_24H)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void set24h(List<List<BigDecimal>> _24h) {
     this._24h = _24h;
   }
 
 
-
+  /**
+   * Return true if this List_a_Project_s_Issues_200_response_inner_stats object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -129,92 +117,5 @@ public class ListAProjectSIssues200ResponseInnerStats {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("24h");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAProjectSIssues200ResponseInnerStats
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ListAProjectSIssues200ResponseInnerStats.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListAProjectSIssues200ResponseInnerStats is not found in the empty JSON string", ListAProjectSIssues200ResponseInnerStats.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ListAProjectSIssues200ResponseInnerStats.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListAProjectSIssues200ResponseInnerStats` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("24h") != null && !jsonObj.get("24h").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `24h` to be an array in the JSON string but got `%s`", jsonObj.get("24h").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ListAProjectSIssues200ResponseInnerStats.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ListAProjectSIssues200ResponseInnerStats' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ListAProjectSIssues200ResponseInnerStats> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ListAProjectSIssues200ResponseInnerStats.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ListAProjectSIssues200ResponseInnerStats>() {
-           @Override
-           public void write(JsonWriter out, ListAProjectSIssues200ResponseInnerStats value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ListAProjectSIssues200ResponseInnerStats read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ListAProjectSIssues200ResponseInnerStats given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAProjectSIssues200ResponseInnerStats
-  * @throws IOException if the JSON string is invalid with respect to ListAProjectSIssues200ResponseInnerStats
-  */
-  public static ListAProjectSIssues200ResponseInnerStats fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAProjectSIssues200ResponseInnerStats.class);
-  }
-
- /**
-  * Convert an instance of ListAProjectSIssues200ResponseInnerStats to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

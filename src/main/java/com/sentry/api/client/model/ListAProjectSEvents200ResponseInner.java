@@ -15,92 +15,73 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.ListAProjectSEvents200ResponseInnerTagsInner;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventUser;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ListAProjectSEvents200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ListAProjectSEvents200ResponseInner.JSON_PROPERTY_EVENT_I_D,
+  ListAProjectSEvents200ResponseInner.JSON_PROPERTY_TAGS,
+  ListAProjectSEvents200ResponseInner.JSON_PROPERTY_DATE_CREATED,
+  ListAProjectSEvents200ResponseInner.JSON_PROPERTY_USER,
+  ListAProjectSEvents200ResponseInner.JSON_PROPERTY_MESSAGE,
+  ListAProjectSEvents200ResponseInner.JSON_PROPERTY_ID,
+  ListAProjectSEvents200ResponseInner.JSON_PROPERTY_PLATFORM,
+  ListAProjectSEvents200ResponseInner.JSON_PROPERTY_EVENT_TYPE,
+  ListAProjectSEvents200ResponseInner.JSON_PROPERTY_GROUP_I_D,
+  ListAProjectSEvents200ResponseInner.JSON_PROPERTY_TITLE
+})
+@JsonTypeName("List_a_Project_s_Events_200_response_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ListAProjectSEvents200ResponseInner {
-  public static final String SERIALIZED_NAME_EVENT_I_D = "eventID";
-  @SerializedName(SERIALIZED_NAME_EVENT_I_D)
+  public static final String JSON_PROPERTY_EVENT_I_D = "eventID";
   private String eventID;
 
-  public static final String SERIALIZED_NAME_TAGS = "tags";
-  @SerializedName(SERIALIZED_NAME_TAGS)
+  public static final String JSON_PROPERTY_TAGS = "tags";
   private List<ListAProjectSEvents200ResponseInnerTagsInner> tags = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private String dateCreated;
 
-  public static final String SERIALIZED_NAME_USER = "user";
-  @SerializedName(SERIALIZED_NAME_USER)
+  public static final String JSON_PROPERTY_USER = "user";
   private ResolveAnEventID200ResponseEventUser user;
 
-  public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  public static final String JSON_PROPERTY_MESSAGE = "message";
   private String message;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_PLATFORM = "platform";
-  @SerializedName(SERIALIZED_NAME_PLATFORM)
+  public static final String JSON_PROPERTY_PLATFORM = "platform";
   private String platform;
 
-  public static final String SERIALIZED_NAME_EVENT_TYPE = "event.type";
-  @SerializedName(SERIALIZED_NAME_EVENT_TYPE)
+  public static final String JSON_PROPERTY_EVENT_TYPE = "event.type";
   private String eventType;
 
-  public static final String SERIALIZED_NAME_GROUP_I_D = "groupID";
-  @SerializedName(SERIALIZED_NAME_GROUP_I_D)
+  public static final String JSON_PROPERTY_GROUP_I_D = "groupID";
   private String groupID;
 
-  public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  public static final String JSON_PROPERTY_TITLE = "title";
   private String title;
 
-  public ListAProjectSEvents200ResponseInner() {
+  public ListAProjectSEvents200ResponseInner() { 
   }
 
   public ListAProjectSEvents200ResponseInner eventID(String eventID) {
-    
     this.eventID = eventID;
     return this;
   }
@@ -109,19 +90,23 @@ public class ListAProjectSEvents200ResponseInner {
    * Get eventID
    * @return eventID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EVENT_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getEventID() {
     return eventID;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EVENT_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEventID(String eventID) {
     this.eventID = eventID;
   }
 
 
   public ListAProjectSEvents200ResponseInner tags(List<ListAProjectSEvents200ResponseInnerTagsInner> tags) {
-    
     this.tags = tags;
     return this;
   }
@@ -138,19 +123,23 @@ public class ListAProjectSEvents200ResponseInner {
    * Get tags
    * @return tags
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TAGS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<ListAProjectSEvents200ResponseInnerTagsInner> getTags() {
     return tags;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TAGS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTags(List<ListAProjectSEvents200ResponseInnerTagsInner> tags) {
     this.tags = tags;
   }
 
 
   public ListAProjectSEvents200ResponseInner dateCreated(String dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -159,19 +148,23 @@ public class ListAProjectSEvents200ResponseInner {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(String dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public ListAProjectSEvents200ResponseInner user(ResolveAnEventID200ResponseEventUser user) {
-    
     this.user = user;
     return this;
   }
@@ -180,19 +173,23 @@ public class ListAProjectSEvents200ResponseInner {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_USER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAnEventID200ResponseEventUser getUser() {
     return user;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUser(ResolveAnEventID200ResponseEventUser user) {
     this.user = user;
   }
 
 
   public ListAProjectSEvents200ResponseInner message(String message) {
-    
     this.message = message;
     return this;
   }
@@ -201,19 +198,23 @@ public class ListAProjectSEvents200ResponseInner {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getMessage() {
     return message;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMessage(String message) {
     this.message = message;
   }
 
 
   public ListAProjectSEvents200ResponseInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -222,19 +223,23 @@ public class ListAProjectSEvents200ResponseInner {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ListAProjectSEvents200ResponseInner platform(String platform) {
-    
     this.platform = platform;
     return this;
   }
@@ -243,19 +248,23 @@ public class ListAProjectSEvents200ResponseInner {
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getPlatform() {
     return platform;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPlatform(String platform) {
     this.platform = platform;
   }
 
 
   public ListAProjectSEvents200ResponseInner eventType(String eventType) {
-    
     this.eventType = eventType;
     return this;
   }
@@ -264,19 +273,23 @@ public class ListAProjectSEvents200ResponseInner {
    * Get eventType
    * @return eventType
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EVENT_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getEventType() {
     return eventType;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EVENT_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEventType(String eventType) {
     this.eventType = eventType;
   }
 
 
   public ListAProjectSEvents200ResponseInner groupID(String groupID) {
-    
     this.groupID = groupID;
     return this;
   }
@@ -285,19 +298,23 @@ public class ListAProjectSEvents200ResponseInner {
    * Get groupID
    * @return groupID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_GROUP_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getGroupID() {
     return groupID;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_GROUP_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setGroupID(String groupID) {
     this.groupID = groupID;
   }
 
 
   public ListAProjectSEvents200ResponseInner title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -306,18 +323,25 @@ public class ListAProjectSEvents200ResponseInner {
    * Get title
    * @return title
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getTitle() {
     return title;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTitle(String title) {
     this.title = title;
   }
 
 
-
+  /**
+   * Return true if this List_a_Project_s_Events_200_response_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -373,150 +397,5 @@ public class ListAProjectSEvents200ResponseInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("eventID");
-    openapiFields.add("tags");
-    openapiFields.add("dateCreated");
-    openapiFields.add("user");
-    openapiFields.add("message");
-    openapiFields.add("id");
-    openapiFields.add("platform");
-    openapiFields.add("event.type");
-    openapiFields.add("groupID");
-    openapiFields.add("title");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("eventID");
-    openapiRequiredFields.add("tags");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("user");
-    openapiRequiredFields.add("message");
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("platform");
-    openapiRequiredFields.add("event.type");
-    openapiRequiredFields.add("groupID");
-    openapiRequiredFields.add("title");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAProjectSEvents200ResponseInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ListAProjectSEvents200ResponseInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListAProjectSEvents200ResponseInner is not found in the empty JSON string", ListAProjectSEvents200ResponseInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ListAProjectSEvents200ResponseInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListAProjectSEvents200ResponseInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ListAProjectSEvents200ResponseInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("eventID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `eventID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eventID").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
-      }
-
-      JsonArray jsonArraytags = jsonObj.getAsJsonArray("tags");
-      // validate the required field `tags` (array)
-      for (int i = 0; i < jsonArraytags.size(); i++) {
-        ListAProjectSEvents200ResponseInnerTagsInner.validateJsonObject(jsonArraytags.get(i).getAsJsonObject());
-      };
-      if (!jsonObj.get("dateCreated").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dateCreated` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dateCreated").toString()));
-      }
-      // validate the required field `user`
-      ResolveAnEventID200ResponseEventUser.validateJsonObject(jsonObj.getAsJsonObject("user"));
-      if (!jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("platform").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `platform` to be a primitive type in the JSON string but got `%s`", jsonObj.get("platform").toString()));
-      }
-      if (!jsonObj.get("event.type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `event.type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("event.type").toString()));
-      }
-      if (!jsonObj.get("groupID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `groupID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("groupID").toString()));
-      }
-      if (!jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ListAProjectSEvents200ResponseInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ListAProjectSEvents200ResponseInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ListAProjectSEvents200ResponseInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ListAProjectSEvents200ResponseInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ListAProjectSEvents200ResponseInner>() {
-           @Override
-           public void write(JsonWriter out, ListAProjectSEvents200ResponseInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ListAProjectSEvents200ResponseInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ListAProjectSEvents200ResponseInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAProjectSEvents200ResponseInner
-  * @throws IOException if the JSON string is invalid with respect to ListAProjectSEvents200ResponseInner
-  */
-  public static ListAProjectSEvents200ResponseInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAProjectSEvents200ResponseInner.class);
-  }
-
- /**
-  * Convert an instance of ListAProjectSEvents200ResponseInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

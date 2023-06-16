@@ -15,81 +15,62 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import java.time.OffsetDateTime;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveCheckInsForAMonitor200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveCheckInsForAMonitor200ResponseInner.JSON_PROPERTY_ID,
+  RetrieveCheckInsForAMonitor200ResponseInner.JSON_PROPERTY_ENVIRONMENT,
+  RetrieveCheckInsForAMonitor200ResponseInner.JSON_PROPERTY_STATUS,
+  RetrieveCheckInsForAMonitor200ResponseInner.JSON_PROPERTY_DURATION,
+  RetrieveCheckInsForAMonitor200ResponseInner.JSON_PROPERTY_DATE_CREATED,
+  RetrieveCheckInsForAMonitor200ResponseInner.JSON_PROPERTY_ATTACHMENT_ID,
+  RetrieveCheckInsForAMonitor200ResponseInner.JSON_PROPERTY_EXPECTED_TIME,
+  RetrieveCheckInsForAMonitor200ResponseInner.JSON_PROPERTY_MONITOR_CONFIG
+})
+@JsonTypeName("Retrieve_check_ins_for_a_monitor_200_response_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveCheckInsForAMonitor200ResponseInner {
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
-  @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
+  public static final String JSON_PROPERTY_ENVIRONMENT = "environment";
   private String environment;
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private String status;
 
-  public static final String SERIALIZED_NAME_DURATION = "duration";
-  @SerializedName(SERIALIZED_NAME_DURATION)
+  public static final String JSON_PROPERTY_DURATION = "duration";
   private Integer duration;
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private OffsetDateTime dateCreated;
 
-  public static final String SERIALIZED_NAME_ATTACHMENT_ID = "attachmentId";
-  @SerializedName(SERIALIZED_NAME_ATTACHMENT_ID)
+  public static final String JSON_PROPERTY_ATTACHMENT_ID = "attachmentId";
   private String attachmentId;
 
-  public static final String SERIALIZED_NAME_EXPECTED_TIME = "expectedTime";
-  @SerializedName(SERIALIZED_NAME_EXPECTED_TIME)
+  public static final String JSON_PROPERTY_EXPECTED_TIME = "expectedTime";
   private OffsetDateTime expectedTime;
 
-  public static final String SERIALIZED_NAME_MONITOR_CONFIG = "monitorConfig";
-  @SerializedName(SERIALIZED_NAME_MONITOR_CONFIG)
+  public static final String JSON_PROPERTY_MONITOR_CONFIG = "monitorConfig";
   private Object monitorConfig = null;
 
-  public RetrieveCheckInsForAMonitor200ResponseInner() {
+  public RetrieveCheckInsForAMonitor200ResponseInner() { 
   }
 
   public RetrieveCheckInsForAMonitor200ResponseInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -98,19 +79,23 @@ public class RetrieveCheckInsForAMonitor200ResponseInner {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public RetrieveCheckInsForAMonitor200ResponseInner environment(String environment) {
-    
     this.environment = environment;
     return this;
   }
@@ -119,19 +104,23 @@ public class RetrieveCheckInsForAMonitor200ResponseInner {
    * Get environment
    * @return environment
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ENVIRONMENT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getEnvironment() {
     return environment;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ENVIRONMENT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEnvironment(String environment) {
     this.environment = environment;
   }
 
 
   public RetrieveCheckInsForAMonitor200ResponseInner status(String status) {
-    
     this.status = status;
     return this;
   }
@@ -140,19 +129,23 @@ public class RetrieveCheckInsForAMonitor200ResponseInner {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setStatus(String status) {
     this.status = status;
   }
 
 
   public RetrieveCheckInsForAMonitor200ResponseInner duration(Integer duration) {
-    
     this.duration = duration;
     return this;
   }
@@ -161,19 +154,23 @@ public class RetrieveCheckInsForAMonitor200ResponseInner {
    * Get duration
    * @return duration
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DURATION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getDuration() {
     return duration;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DURATION)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDuration(Integer duration) {
     this.duration = duration;
   }
 
 
   public RetrieveCheckInsForAMonitor200ResponseInner dateCreated(OffsetDateTime dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -182,19 +179,23 @@ public class RetrieveCheckInsForAMonitor200ResponseInner {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public RetrieveCheckInsForAMonitor200ResponseInner attachmentId(String attachmentId) {
-    
     this.attachmentId = attachmentId;
     return this;
   }
@@ -203,19 +204,23 @@ public class RetrieveCheckInsForAMonitor200ResponseInner {
    * Get attachmentId
    * @return attachmentId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ATTACHMENT_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getAttachmentId() {
     return attachmentId;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ATTACHMENT_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAttachmentId(String attachmentId) {
     this.attachmentId = attachmentId;
   }
 
 
   public RetrieveCheckInsForAMonitor200ResponseInner expectedTime(OffsetDateTime expectedTime) {
-    
     this.expectedTime = expectedTime;
     return this;
   }
@@ -224,19 +229,23 @@ public class RetrieveCheckInsForAMonitor200ResponseInner {
    * Get expectedTime
    * @return expectedTime
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EXPECTED_TIME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getExpectedTime() {
     return expectedTime;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXPECTED_TIME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setExpectedTime(OffsetDateTime expectedTime) {
     this.expectedTime = expectedTime;
   }
 
 
   public RetrieveCheckInsForAMonitor200ResponseInner monitorConfig(Object monitorConfig) {
-    
     this.monitorConfig = monitorConfig;
     return this;
   }
@@ -245,18 +254,25 @@ public class RetrieveCheckInsForAMonitor200ResponseInner {
    * Get monitorConfig
    * @return monitorConfig
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_MONITOR_CONFIG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getMonitorConfig() {
     return monitorConfig;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MONITOR_CONFIG)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMonitorConfig(Object monitorConfig) {
     this.monitorConfig = monitorConfig;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_check_ins_for_a_monitor_200_response_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -308,122 +324,5 @@ public class RetrieveCheckInsForAMonitor200ResponseInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("environment");
-    openapiFields.add("status");
-    openapiFields.add("duration");
-    openapiFields.add("dateCreated");
-    openapiFields.add("attachmentId");
-    openapiFields.add("expectedTime");
-    openapiFields.add("monitorConfig");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("environment");
-    openapiRequiredFields.add("status");
-    openapiRequiredFields.add("duration");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("attachmentId");
-    openapiRequiredFields.add("expectedTime");
-    openapiRequiredFields.add("monitorConfig");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveCheckInsForAMonitor200ResponseInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveCheckInsForAMonitor200ResponseInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveCheckInsForAMonitor200ResponseInner is not found in the empty JSON string", RetrieveCheckInsForAMonitor200ResponseInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveCheckInsForAMonitor200ResponseInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveCheckInsForAMonitor200ResponseInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveCheckInsForAMonitor200ResponseInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("environment").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `environment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("environment").toString()));
-      }
-      if (!jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      if (!jsonObj.get("attachmentId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `attachmentId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("attachmentId").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveCheckInsForAMonitor200ResponseInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveCheckInsForAMonitor200ResponseInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveCheckInsForAMonitor200ResponseInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveCheckInsForAMonitor200ResponseInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveCheckInsForAMonitor200ResponseInner>() {
-           @Override
-           public void write(JsonWriter out, RetrieveCheckInsForAMonitor200ResponseInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveCheckInsForAMonitor200ResponseInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveCheckInsForAMonitor200ResponseInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveCheckInsForAMonitor200ResponseInner
-  * @throws IOException if the JSON string is invalid with respect to RetrieveCheckInsForAMonitor200ResponseInner
-  */
-  public static RetrieveCheckInsForAMonitor200ResponseInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveCheckInsForAMonitor200ResponseInner.class);
-  }
-
- /**
-  * Convert an instance of RetrieveCheckInsForAMonitor200ResponseInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

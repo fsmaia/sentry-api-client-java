@@ -15,78 +15,59 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.sentry.api.client.model.ListAnOrganizationSReleaseFiles200ResponseInnerHeaders;
-import java.io.IOException;
-import java.time.OffsetDateTime;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.sentry.api.client.model.ListAnOrganizationSReleaseFiles200ResponseInnerHeaders;
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ListAnOrganizationSReleaseFiles200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ListAnOrganizationSReleaseFiles200ResponseInner.JSON_PROPERTY_SHA1,
+  ListAnOrganizationSReleaseFiles200ResponseInner.JSON_PROPERTY_DIST,
+  ListAnOrganizationSReleaseFiles200ResponseInner.JSON_PROPERTY_NAME,
+  ListAnOrganizationSReleaseFiles200ResponseInner.JSON_PROPERTY_DATE_CREATED,
+  ListAnOrganizationSReleaseFiles200ResponseInner.JSON_PROPERTY_HEADERS,
+  ListAnOrganizationSReleaseFiles200ResponseInner.JSON_PROPERTY_ID,
+  ListAnOrganizationSReleaseFiles200ResponseInner.JSON_PROPERTY_SIZE
+})
+@JsonTypeName("List_an_Organization_s_Release_Files_200_response_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ListAnOrganizationSReleaseFiles200ResponseInner {
-  public static final String SERIALIZED_NAME_SHA1 = "sha1";
-  @SerializedName(SERIALIZED_NAME_SHA1)
+  public static final String JSON_PROPERTY_SHA1 = "sha1";
   private String sha1;
 
-  public static final String SERIALIZED_NAME_DIST = "dist";
-  @SerializedName(SERIALIZED_NAME_DIST)
+  public static final String JSON_PROPERTY_DIST = "dist";
   private String dist;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private OffsetDateTime dateCreated;
 
-  public static final String SERIALIZED_NAME_HEADERS = "headers";
-  @SerializedName(SERIALIZED_NAME_HEADERS)
+  public static final String JSON_PROPERTY_HEADERS = "headers";
   private ListAnOrganizationSReleaseFiles200ResponseInnerHeaders headers;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_SIZE = "size";
-  @SerializedName(SERIALIZED_NAME_SIZE)
+  public static final String JSON_PROPERTY_SIZE = "size";
   private Integer size;
 
-  public ListAnOrganizationSReleaseFiles200ResponseInner() {
+  public ListAnOrganizationSReleaseFiles200ResponseInner() { 
   }
 
   public ListAnOrganizationSReleaseFiles200ResponseInner sha1(String sha1) {
-    
     this.sha1 = sha1;
     return this;
   }
@@ -95,19 +76,23 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner {
    * Get sha1
    * @return sha1
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SHA1)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getSha1() {
     return sha1;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SHA1)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSha1(String sha1) {
     this.sha1 = sha1;
   }
 
 
   public ListAnOrganizationSReleaseFiles200ResponseInner dist(String dist) {
-    
     this.dist = dist;
     return this;
   }
@@ -116,19 +101,23 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner {
    * Get dist
    * @return dist
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_DIST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDist() {
     return dist;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DIST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDist(String dist) {
     this.dist = dist;
   }
 
 
   public ListAnOrganizationSReleaseFiles200ResponseInner name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -137,19 +126,23 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ListAnOrganizationSReleaseFiles200ResponseInner dateCreated(OffsetDateTime dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -158,19 +151,23 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public ListAnOrganizationSReleaseFiles200ResponseInner headers(ListAnOrganizationSReleaseFiles200ResponseInnerHeaders headers) {
-    
     this.headers = headers;
     return this;
   }
@@ -179,19 +176,23 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner {
    * Get headers
    * @return headers
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HEADERS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ListAnOrganizationSReleaseFiles200ResponseInnerHeaders getHeaders() {
     return headers;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEADERS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHeaders(ListAnOrganizationSReleaseFiles200ResponseInnerHeaders headers) {
     this.headers = headers;
   }
 
 
   public ListAnOrganizationSReleaseFiles200ResponseInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -200,19 +201,23 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ListAnOrganizationSReleaseFiles200ResponseInner size(Integer size) {
-    
     this.size = size;
     return this;
   }
@@ -221,18 +226,25 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner {
    * Get size
    * @return size
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SIZE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getSize() {
     return size;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SIZE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSize(Integer size) {
     this.size = size;
   }
 
 
-
+  /**
+   * Return true if this List_an_Organization_s_Release_Files_200_response_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -282,122 +294,5 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("sha1");
-    openapiFields.add("dist");
-    openapiFields.add("name");
-    openapiFields.add("dateCreated");
-    openapiFields.add("headers");
-    openapiFields.add("id");
-    openapiFields.add("size");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("sha1");
-    openapiRequiredFields.add("dist");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("headers");
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("size");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAnOrganizationSReleaseFiles200ResponseInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ListAnOrganizationSReleaseFiles200ResponseInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListAnOrganizationSReleaseFiles200ResponseInner is not found in the empty JSON string", ListAnOrganizationSReleaseFiles200ResponseInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ListAnOrganizationSReleaseFiles200ResponseInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListAnOrganizationSReleaseFiles200ResponseInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ListAnOrganizationSReleaseFiles200ResponseInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("sha1").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sha1` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sha1").toString()));
-      }
-      if (!jsonObj.get("dist").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dist` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dist").toString()));
-      }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      // validate the required field `headers`
-      ListAnOrganizationSReleaseFiles200ResponseInnerHeaders.validateJsonObject(jsonObj.getAsJsonObject("headers"));
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ListAnOrganizationSReleaseFiles200ResponseInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ListAnOrganizationSReleaseFiles200ResponseInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ListAnOrganizationSReleaseFiles200ResponseInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ListAnOrganizationSReleaseFiles200ResponseInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ListAnOrganizationSReleaseFiles200ResponseInner>() {
-           @Override
-           public void write(JsonWriter out, ListAnOrganizationSReleaseFiles200ResponseInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ListAnOrganizationSReleaseFiles200ResponseInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ListAnOrganizationSReleaseFiles200ResponseInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAnOrganizationSReleaseFiles200ResponseInner
-  * @throws IOException if the JSON string is invalid with respect to ListAnOrganizationSReleaseFiles200ResponseInner
-  */
-  public static ListAnOrganizationSReleaseFiles200ResponseInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAnOrganizationSReleaseFiles200ResponseInner.class);
-  }
-
- /**
-  * Convert an instance of ListAnOrganizationSReleaseFiles200ResponseInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

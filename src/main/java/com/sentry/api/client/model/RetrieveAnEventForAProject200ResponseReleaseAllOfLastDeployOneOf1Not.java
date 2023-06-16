@@ -15,184 +15,141 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.sentry.api.client.JSON;
 
-import javax.ws.rs.core.GenericType;
 
+import jakarta.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.Response;
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.HashMap;
-import java.util.Map;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapter;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.JsonPrimitive;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.sentry.api.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@JsonDeserialize(using=RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotDeserializer.class)
+@JsonSerialize(using = RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotSerializer.class)
 public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class.getName());
 
-    public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-        @SuppressWarnings("unchecked")
+    public static class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotSerializer extends StdSerializer<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not> {
+        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotSerializer(Class<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not> t) {
+            super(t);
+        }
+
+        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotSerializer() {
+            this(null);
+        }
+
         @Override
-        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-            if (!RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class.isAssignableFrom(type.getRawType())) {
-                return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not' and its subtypes
+        public void serialize(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not value, JsonGenerator jgen, SerializerProvider provider) throws IOException, JsonProcessingException {
+            jgen.writeObject(value.getActualInstance());
+        }
+    }
+
+    public static class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotDeserializer extends StdDeserializer<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not> {
+        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotDeserializer() {
+            this(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class);
+        }
+
+        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotDeserializer(Class<?> vc) {
+            super(vc);
+        }
+
+        @Override
+        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+            JsonNode tree = jp.readValueAsTree();
+
+            Object deserialized = null;
+            // deserialize BigDecimal
+            try {
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(BigDecimal.class);
+                RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
+                ret.setActualInstance(deserialized);
+                return ret;
+            } catch (Exception e) {
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
             }
-            final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-            final TypeAdapter<BigDecimal> adapterBigDecimal = gson.getDelegateAdapter(this, TypeToken.get(BigDecimal.class));
-            final TypeAdapter<Boolean> adapterBoolean = gson.getDelegateAdapter(this, TypeToken.get(Boolean.class));
-            final TypeAdapter<List&lt;Object&gt;> adapterList&lt;Object&gt; = gson.getDelegateAdapter(this, TypeToken.get(List&lt;Object&gt;.class));
-            final TypeAdapter<Object> adapterObject = gson.getDelegateAdapter(this, TypeToken.get(Object.class));
-            final TypeAdapter<String> adapterString = gson.getDelegateAdapter(this, TypeToken.get(String.class));
 
-            return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not>() {
-                @Override
-                public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not value) throws IOException {
-                    if (value == null || value.getActualInstance() == null) {
-                        elementAdapter.write(out, null);
-                        return;
-                    }
+            // deserialize Boolean
+            try {
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(Boolean.class);
+                RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
+                ret.setActualInstance(deserialized);
+                return ret;
+            } catch (Exception e) {
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
+            }
 
-                    // check if the actual instance is of the type `BigDecimal`
-                    if (value.getActualInstance() instanceof BigDecimal) {
-                        JsonObject obj = adapterBigDecimal.toJsonTree((BigDecimal)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+            // deserialize List<Object>
+            try {
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(List<Object>.class);
+                RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
+                ret.setActualInstance(deserialized);
+                return ret;
+            } catch (Exception e) {
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
+            }
 
-                    // check if the actual instance is of the type `Boolean`
-                    if (value.getActualInstance() instanceof Boolean) {
-                        JsonObject obj = adapterBoolean.toJsonTree((Boolean)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+            // deserialize Object
+            try {
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(Object.class);
+                RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
+                ret.setActualInstance(deserialized);
+                return ret;
+            } catch (Exception e) {
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
+            }
 
-                    // check if the actual instance is of the type `List&lt;Object&gt;`
-                    if (value.getActualInstance() instanceof List&lt;Object&gt;) {
-                        JsonObject obj = adapterList&lt;Object&gt;.toJsonTree((List&lt;Object&gt;)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+            // deserialize String
+            try {
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(String.class);
+                RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
+                ret.setActualInstance(deserialized);
+                return ret;
+            } catch (Exception e) {
+                // deserialization failed, continue, log to help debugging
+                log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
+            }
 
-                    // check if the actual instance is of the type `Object`
-                    if (value.getActualInstance() instanceof Object) {
-                        JsonObject obj = adapterObject.toJsonTree((Object)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+            throw new IOException(String.format("Failed deserialization for RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not: no match found"));
+        }
 
-                    // check if the actual instance is of the type `String`
-                    if (value.getActualInstance() instanceof String) {
-                        JsonObject obj = adapterString.toJsonTree((String)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
-
-                    throw new IOException("Failed to serialize as the type doesn't match anyOf schemas: BigDecimal, Boolean, List<Object>, Object, String");
-                }
-
-                @Override
-                public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not read(JsonReader in) throws IOException {
-                    Object deserialized = null;
-                    JsonObject jsonObject = elementAdapter.read(in).getAsJsonObject();
-
-                    // deserialize BigDecimal
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        BigDecimal.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'BigDecimal'");
-                        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
-                        ret.setActualInstance(adapterBigDecimal.fromJsonTree(jsonObject));
-                        return ret;
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'BigDecimal'", e);
-                    }
-
-                    // deserialize Boolean
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        Boolean.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'Boolean'");
-                        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
-                        ret.setActualInstance(adapterBoolean.fromJsonTree(jsonObject));
-                        return ret;
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'Boolean'", e);
-                    }
-
-                    // deserialize List<Object>
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        List&lt;Object&gt;.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'List<Object>'");
-                        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
-                        ret.setActualInstance(adapterList&lt;Object&gt;.fromJsonTree(jsonObject));
-                        return ret;
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'List<Object>'", e);
-                    }
-
-                    // deserialize Object
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        Object.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'Object'");
-                        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
-                        ret.setActualInstance(adapterObject.fromJsonTree(jsonObject));
-                        return ret;
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'Object'", e);
-                    }
-
-                    // deserialize String
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        String.validateJsonObject(jsonObject);
-                        log.log(Level.FINER, "Input data matches schema 'String'");
-                        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
-                        ret.setActualInstance(adapterString.fromJsonTree(jsonObject));
-                        return ret;
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        log.log(Level.FINER, "Input data does not match schema 'String'", e);
-                    }
-
-
-                    throw new IOException(String.format("Failed deserialization for RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not: no class matched. JSON: %s", jsonObject.toString()));
-                }
-            }.nullSafe();
+        /**
+         * Handle deserialization of the 'null' value.
+         */
+        @Override
+        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not getNullValue(DeserializationContext ctxt) throws JsonMappingException {
+            throw new JsonMappingException(ctxt.getParser(), "RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not cannot be null");
         }
     }
 
     // store a list of schema names defined in anyOf
-    public static final Map<String, GenericType> schemas = new HashMap<String, GenericType>();
+    public static final Map<String, GenericType> schemas = new HashMap<>();
 
     public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not() {
         super("anyOf", Boolean.FALSE);
@@ -234,6 +191,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
         });
         schemas.put("String", new GenericType<String>() {
         });
+        JSON.registerDescendants(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class, Collections.unmodifiableMap(schemas));
     }
 
     @Override
@@ -251,27 +209,27 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
      */
     @Override
     public void setActualInstance(Object instance) {
-        if (instance instanceof BigDecimal) {
+        if (JSON.isInstanceOf(BigDecimal.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof Boolean) {
+        if (JSON.isInstanceOf(Boolean.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof List<Object>) {
+        if (JSON.isInstanceOf(List<Object>.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof Object) {
+        if (JSON.isInstanceOf(Object.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof String) {
+        if (JSON.isInstanceOf(String.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
@@ -345,79 +303,5 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
         return (String)super.getActualInstance();
     }
 
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-    // validate anyOf schemas one by one
-    int validCount = 0;
-    // validate the json string with BigDecimal
-    try {
-      BigDecimal.validateJsonObject(jsonObj);
-      return; // return earlier as at least one schema is valid with respect to the Json object
-      //validCount++;
-    } catch (Exception e) {
-      // continue to the next one
-    }
-    // validate the json string with Boolean
-    try {
-      Boolean.validateJsonObject(jsonObj);
-      return; // return earlier as at least one schema is valid with respect to the Json object
-      //validCount++;
-    } catch (Exception e) {
-      // continue to the next one
-    }
-    // validate the json string with List<Object>
-    try {
-      List<Object>.validateJsonObject(jsonObj);
-      return; // return earlier as at least one schema is valid with respect to the Json object
-      //validCount++;
-    } catch (Exception e) {
-      // continue to the next one
-    }
-    // validate the json string with Object
-    try {
-      Object.validateJsonObject(jsonObj);
-      return; // return earlier as at least one schema is valid with respect to the Json object
-      //validCount++;
-    } catch (Exception e) {
-      // continue to the next one
-    }
-    // validate the json string with String
-    try {
-      String.validateJsonObject(jsonObj);
-      return; // return earlier as at least one schema is valid with respect to the Json object
-      //validCount++;
-    } catch (Exception e) {
-      // continue to the next one
-    }
-    if (validCount == 0) {
-      throw new IOException(String.format("The JSON string is invalid for RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not with anyOf schemas: BigDecimal, Boolean, List<Object>, Object, String. JSON: %s", jsonObj.toString()));
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not
-  */
-  public static RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

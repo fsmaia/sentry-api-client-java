@@ -15,137 +15,153 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.ListAProjectSIssues200ResponseInnerMetadataOneOf;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseMetadataOneOf1;
-import java.io.IOException;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.sentry.api.client.JSON;
 
-import javax.ws.rs.core.GenericType;
+import com.fasterxml.jackson.core.type.TypeReference;
 
+import jakarta.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.Response;
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.HashMap;
-import java.util.Map;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapter;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.JsonPrimitive;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.JsonToken;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.MapperFeature;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.sentry.api.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@JsonDeserialize(using = ListAProjectSIssues200ResponseInnerMetadata.ListAProjectSIssues200ResponseInnerMetadataDeserializer.class)
+@JsonSerialize(using = ListAProjectSIssues200ResponseInnerMetadata.ListAProjectSIssues200ResponseInnerMetadataSerializer.class)
 public class ListAProjectSIssues200ResponseInnerMetadata extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(ListAProjectSIssues200ResponseInnerMetadata.class.getName());
 
-    public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-        @SuppressWarnings("unchecked")
+    public static class ListAProjectSIssues200ResponseInnerMetadataSerializer extends StdSerializer<ListAProjectSIssues200ResponseInnerMetadata> {
+        public ListAProjectSIssues200ResponseInnerMetadataSerializer(Class<ListAProjectSIssues200ResponseInnerMetadata> t) {
+            super(t);
+        }
+
+        public ListAProjectSIssues200ResponseInnerMetadataSerializer() {
+            this(null);
+        }
+
         @Override
-        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-            if (!ListAProjectSIssues200ResponseInnerMetadata.class.isAssignableFrom(type.getRawType())) {
-                return null; // this class only serializes 'ListAProjectSIssues200ResponseInnerMetadata' and its subtypes
+        public void serialize(ListAProjectSIssues200ResponseInnerMetadata value, JsonGenerator jgen, SerializerProvider provider) throws IOException, JsonProcessingException {
+            jgen.writeObject(value.getActualInstance());
+        }
+    }
+
+    public static class ListAProjectSIssues200ResponseInnerMetadataDeserializer extends StdDeserializer<ListAProjectSIssues200ResponseInnerMetadata> {
+        public ListAProjectSIssues200ResponseInnerMetadataDeserializer() {
+            this(ListAProjectSIssues200ResponseInnerMetadata.class);
+        }
+
+        public ListAProjectSIssues200ResponseInnerMetadataDeserializer(Class<?> vc) {
+            super(vc);
+        }
+
+        @Override
+        public ListAProjectSIssues200ResponseInnerMetadata deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+            JsonNode tree = jp.readValueAsTree();
+            Object deserialized = null;
+            boolean typeCoercion = ctxt.isEnabled(MapperFeature.ALLOW_COERCION_OF_SCALARS);
+            int match = 0;
+            JsonToken token = tree.traverse(jp.getCodec()).nextToken();
+            // deserialize ListAProjectSIssues200ResponseInnerMetadataOneOf
+            try {
+                boolean attemptParsing = true;
+                // ensure that we respect type coercion as set on the client ObjectMapper
+                if (ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(Integer.class) || ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(Long.class) || ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(Float.class) || ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(Double.class) || ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(Boolean.class) || ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(String.class)) {
+                    attemptParsing = typeCoercion;
+                    if (!attemptParsing) {
+                        attemptParsing |= ((ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(Integer.class) || ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(Float.class) || ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (ListAProjectSIssues200ResponseInnerMetadataOneOf.class.equals(String.class) && token == JsonToken.VALUE_STRING);
+                    }
+                }
+                if (attemptParsing) {
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(ListAProjectSIssues200ResponseInnerMetadataOneOf.class);
+                    // TODO: there is no validation against JSON schema constraints
+                    // (min, max, enum, pattern...), this does not perform a strict JSON
+                    // validation, which means the 'match' count may be higher than it should be.
+                    match++;
+                    log.log(Level.FINER, "Input data matches schema 'ListAProjectSIssues200ResponseInnerMetadataOneOf'");
+                }
+            } catch (Exception e) {
+                // deserialization failed, continue
+                log.log(Level.FINER, "Input data does not match schema 'ListAProjectSIssues200ResponseInnerMetadataOneOf'", e);
             }
-            final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-            final TypeAdapter<ListAProjectSIssues200ResponseInnerMetadataOneOf> adapterListAProjectSIssues200ResponseInnerMetadataOneOf = gson.getDelegateAdapter(this, TypeToken.get(ListAProjectSIssues200ResponseInnerMetadataOneOf.class));
-            final TypeAdapter<RetrieveAnEventForAProject200ResponseMetadataOneOf1> adapterRetrieveAnEventForAProject200ResponseMetadataOneOf1 = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200ResponseMetadataOneOf1.class));
 
-            return (TypeAdapter<T>) new TypeAdapter<ListAProjectSIssues200ResponseInnerMetadata>() {
-                @Override
-                public void write(JsonWriter out, ListAProjectSIssues200ResponseInnerMetadata value) throws IOException {
-                    if (value == null || value.getActualInstance() == null) {
-                        elementAdapter.write(out, null);
-                        return;
+            // deserialize RetrieveAnEventForAProject200ResponseMetadataOneOf1
+            try {
+                boolean attemptParsing = true;
+                // ensure that we respect type coercion as set on the client ObjectMapper
+                if (RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(Integer.class) || RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(Long.class) || RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(Float.class) || RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(Double.class) || RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(Boolean.class) || RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(String.class)) {
+                    attemptParsing = typeCoercion;
+                    if (!attemptParsing) {
+                        attemptParsing |= ((RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(Integer.class) || RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(Long.class)) && token == JsonToken.VALUE_NUMBER_INT);
+                        attemptParsing |= ((RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(Float.class) || RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(Double.class)) && token == JsonToken.VALUE_NUMBER_FLOAT);
+                        attemptParsing |= (RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(Boolean.class) && (token == JsonToken.VALUE_FALSE || token == JsonToken.VALUE_TRUE));
+                        attemptParsing |= (RetrieveAnEventForAProject200ResponseMetadataOneOf1.class.equals(String.class) && token == JsonToken.VALUE_STRING);
                     }
-
-                    // check if the actual instance is of the type `ListAProjectSIssues200ResponseInnerMetadataOneOf`
-                    if (value.getActualInstance() instanceof ListAProjectSIssues200ResponseInnerMetadataOneOf) {
-                        JsonObject obj = adapterListAProjectSIssues200ResponseInnerMetadataOneOf.toJsonTree((ListAProjectSIssues200ResponseInnerMetadataOneOf)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
-
-                    // check if the actual instance is of the type `RetrieveAnEventForAProject200ResponseMetadataOneOf1`
-                    if (value.getActualInstance() instanceof RetrieveAnEventForAProject200ResponseMetadataOneOf1) {
-                        JsonObject obj = adapterRetrieveAnEventForAProject200ResponseMetadataOneOf1.toJsonTree((RetrieveAnEventForAProject200ResponseMetadataOneOf1)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
-
-                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: ListAProjectSIssues200ResponseInnerMetadataOneOf, RetrieveAnEventForAProject200ResponseMetadataOneOf1");
                 }
-
-                @Override
-                public ListAProjectSIssues200ResponseInnerMetadata read(JsonReader in) throws IOException {
-                    Object deserialized = null;
-                    JsonObject jsonObject = elementAdapter.read(in).getAsJsonObject();
-
-                    int match = 0;
-                    ArrayList<String> errorMessages = new ArrayList<>();
-                    TypeAdapter actualAdapter = elementAdapter;
-
-                    // deserialize ListAProjectSIssues200ResponseInnerMetadataOneOf
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        ListAProjectSIssues200ResponseInnerMetadataOneOf.validateJsonObject(jsonObject);
-                        actualAdapter = adapterListAProjectSIssues200ResponseInnerMetadataOneOf;
-                        match++;
-                        log.log(Level.FINER, "Input data matches schema 'ListAProjectSIssues200ResponseInnerMetadataOneOf'");
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        errorMessages.add(String.format("Deserialization for ListAProjectSIssues200ResponseInnerMetadataOneOf failed with `%s`.", e.getMessage()));
-                        log.log(Level.FINER, "Input data does not match schema 'ListAProjectSIssues200ResponseInnerMetadataOneOf'", e);
-                    }
-
-                    // deserialize RetrieveAnEventForAProject200ResponseMetadataOneOf1
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        RetrieveAnEventForAProject200ResponseMetadataOneOf1.validateJsonObject(jsonObject);
-                        actualAdapter = adapterRetrieveAnEventForAProject200ResponseMetadataOneOf1;
-                        match++;
-                        log.log(Level.FINER, "Input data matches schema 'RetrieveAnEventForAProject200ResponseMetadataOneOf1'");
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        errorMessages.add(String.format("Deserialization for RetrieveAnEventForAProject200ResponseMetadataOneOf1 failed with `%s`.", e.getMessage()));
-                        log.log(Level.FINER, "Input data does not match schema 'RetrieveAnEventForAProject200ResponseMetadataOneOf1'", e);
-                    }
-
-                    if (match == 1) {
-                        ListAProjectSIssues200ResponseInnerMetadata ret = new ListAProjectSIssues200ResponseInnerMetadata();
-                        ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject));
-                        return ret;
-                    }
-
-                    throw new IOException(String.format("Failed deserialization for ListAProjectSIssues200ResponseInnerMetadata: %d classes match result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", match, errorMessages, jsonObject.toString()));
+                if (attemptParsing) {
+                    deserialized = tree.traverse(jp.getCodec()).readValueAs(RetrieveAnEventForAProject200ResponseMetadataOneOf1.class);
+                    // TODO: there is no validation against JSON schema constraints
+                    // (min, max, enum, pattern...), this does not perform a strict JSON
+                    // validation, which means the 'match' count may be higher than it should be.
+                    match++;
+                    log.log(Level.FINER, "Input data matches schema 'RetrieveAnEventForAProject200ResponseMetadataOneOf1'");
                 }
-            }.nullSafe();
+            } catch (Exception e) {
+                // deserialization failed, continue
+                log.log(Level.FINER, "Input data does not match schema 'RetrieveAnEventForAProject200ResponseMetadataOneOf1'", e);
+            }
+
+            if (match == 1) {
+                ListAProjectSIssues200ResponseInnerMetadata ret = new ListAProjectSIssues200ResponseInnerMetadata();
+                ret.setActualInstance(deserialized);
+                return ret;
+            }
+            throw new IOException(String.format("Failed deserialization for ListAProjectSIssues200ResponseInnerMetadata: %d classes match result, expected 1", match));
+        }
+
+        /**
+         * Handle deserialization of the 'null' value.
+         */
+        @Override
+        public ListAProjectSIssues200ResponseInnerMetadata getNullValue(DeserializationContext ctxt) throws JsonMappingException {
+            throw new JsonMappingException(ctxt.getParser(), "ListAProjectSIssues200ResponseInnerMetadata cannot be null");
         }
     }
 
     // store a list of schema names defined in oneOf
-    public static final Map<String, GenericType> schemas = new HashMap<String, GenericType>();
+    public static final Map<String, GenericType> schemas = new HashMap<>();
 
     public ListAProjectSIssues200ResponseInnerMetadata() {
         super("oneOf", Boolean.FALSE);
@@ -166,6 +182,7 @@ public class ListAProjectSIssues200ResponseInnerMetadata extends AbstractOpenApi
         });
         schemas.put("RetrieveAnEventForAProject200ResponseMetadataOneOf1", new GenericType<RetrieveAnEventForAProject200ResponseMetadataOneOf1>() {
         });
+        JSON.registerDescendants(ListAProjectSIssues200ResponseInnerMetadata.class, Collections.unmodifiableMap(schemas));
     }
 
     @Override
@@ -183,12 +200,12 @@ public class ListAProjectSIssues200ResponseInnerMetadata extends AbstractOpenApi
      */
     @Override
     public void setActualInstance(Object instance) {
-        if (instance instanceof ListAProjectSIssues200ResponseInnerMetadataOneOf) {
+        if (JSON.isInstanceOf(ListAProjectSIssues200ResponseInnerMetadataOneOf.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
 
-        if (instance instanceof RetrieveAnEventForAProject200ResponseMetadataOneOf1) {
+        if (JSON.isInstanceOf(RetrieveAnEventForAProject200ResponseMetadataOneOf1.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
@@ -229,56 +246,5 @@ public class ListAProjectSIssues200ResponseInnerMetadata extends AbstractOpenApi
         return (RetrieveAnEventForAProject200ResponseMetadataOneOf1)super.getActualInstance();
     }
 
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAProjectSIssues200ResponseInnerMetadata
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-    // validate oneOf schemas one by one
-    int validCount = 0;
-    ArrayList<String> errorMessages = new ArrayList<>();
-    // validate the json string with ListAProjectSIssues200ResponseInnerMetadataOneOf
-    try {
-      ListAProjectSIssues200ResponseInnerMetadataOneOf.validateJsonObject(jsonObj);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for ListAProjectSIssues200ResponseInnerMetadataOneOf failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    // validate the json string with RetrieveAnEventForAProject200ResponseMetadataOneOf1
-    try {
-      RetrieveAnEventForAProject200ResponseMetadataOneOf1.validateJsonObject(jsonObj);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for RetrieveAnEventForAProject200ResponseMetadataOneOf1 failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    if (validCount != 1) {
-      throw new IOException(String.format("The JSON string is invalid for ListAProjectSIssues200ResponseInnerMetadata with oneOf schemas: ListAProjectSIssues200ResponseInnerMetadataOneOf, RetrieveAnEventForAProject200ResponseMetadataOneOf1. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonObj.toString()));
-    }
-  }
-
- /**
-  * Create an instance of ListAProjectSIssues200ResponseInnerMetadata given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAProjectSIssues200ResponseInnerMetadata
-  * @throws IOException if the JSON string is invalid with respect to ListAProjectSIssues200ResponseInnerMetadata
-  */
-  public static ListAProjectSIssues200ResponseInnerMetadata fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAProjectSIssues200ResponseInnerMetadata.class);
-  }
-
- /**
-  * Convert an instance of ListAProjectSIssues200ResponseInnerMetadata to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

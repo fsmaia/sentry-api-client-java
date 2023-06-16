@@ -13,12 +13,15 @@
 
 package com.sentry.api.client.api;
 
-import com.sentry.api.client.ApiException;
+import com.sentry.api.client.*;
+import com.sentry.api.client.auth.*;
 import com.sentry.api.client.model.CreateAMonitorRequest;
 import com.sentry.api.client.model.CreateANewCheckInRequest;
 import com.sentry.api.client.model.RetrieveCheckInsForAMonitor200ResponseInner;
 import com.sentry.api.client.model.RetrieveMonitorsForAnOrganization200ResponseInner;
 import java.util.UUID;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -30,7 +33,6 @@ import java.util.Map;
 /**
  * API tests for CronsApi
  */
-@Disabled
 public class CronsApiTest {
 
     private final CronsApi api = new CronsApi();
@@ -42,9 +44,9 @@ public class CronsApiTest {
      */
     @Test
     public void createAMonitorTest() throws ApiException {
-        String organizationSlug = null;
-        CreateAMonitorRequest createAMonitorRequest = null;
-        RetrieveMonitorsForAnOrganization200ResponseInner response = api.createAMonitor(organizationSlug, createAMonitorRequest);
+        //String organizationSlug = null;
+        //CreateAMonitorRequest createAMonitorRequest = null;
+        //RetrieveMonitorsForAnOrganization200ResponseInner response = api.createAMonitor(organizationSlug, createAMonitorRequest);
         // TODO: test validations
     }
 
@@ -55,10 +57,10 @@ public class CronsApiTest {
      */
     @Test
     public void createANewCheckInTest() throws ApiException {
-        String organizationSlug = null;
-        String monitorSlug = null;
-        CreateANewCheckInRequest createANewCheckInRequest = null;
-        RetrieveCheckInsForAMonitor200ResponseInner response = api.createANewCheckIn(organizationSlug, monitorSlug, createANewCheckInRequest);
+        //String organizationSlug = null;
+        //String monitorSlug = null;
+        //CreateANewCheckInRequest createANewCheckInRequest = null;
+        //RetrieveCheckInsForAMonitor200ResponseInner response = api.createANewCheckIn(organizationSlug, monitorSlug, createANewCheckInRequest);
         // TODO: test validations
     }
 
@@ -69,10 +71,10 @@ public class CronsApiTest {
      */
     @Test
     public void deleteAMonitorOrMonitorEnvironmentsTest() throws ApiException {
-        String organizationSlug = null;
-        String monitorSlug = null;
-        List<String> environment = null;
-        api.deleteAMonitorOrMonitorEnvironments(organizationSlug, monitorSlug, environment);
+        //String organizationSlug = null;
+        //String monitorSlug = null;
+        //List<String> environment = null;
+        //api.deleteAMonitorOrMonitorEnvironments(organizationSlug, monitorSlug, environment);
         // TODO: test validations
     }
 
@@ -83,10 +85,10 @@ public class CronsApiTest {
      */
     @Test
     public void retrieveAMonitorTest() throws ApiException {
-        String organizationSlug = null;
-        String monitorSlug = null;
-        List<String> environment = null;
-        RetrieveMonitorsForAnOrganization200ResponseInner response = api.retrieveAMonitor(organizationSlug, monitorSlug, environment);
+        //String organizationSlug = null;
+        //String monitorSlug = null;
+        //List<String> environment = null;
+        //RetrieveMonitorsForAnOrganization200ResponseInner response = api.retrieveAMonitor(organizationSlug, monitorSlug, environment);
         // TODO: test validations
     }
 
@@ -97,10 +99,10 @@ public class CronsApiTest {
      */
     @Test
     public void retrieveCheckInsForAMonitorTest() throws ApiException {
-        String organizationSlug = null;
-        String monitorSlug = null;
-        UUID checkinId = null;
-        List<RetrieveCheckInsForAMonitor200ResponseInner> response = api.retrieveCheckInsForAMonitor(organizationSlug, monitorSlug, checkinId);
+        //String organizationSlug = null;
+        //String monitorSlug = null;
+        //UUID checkinId = null;
+        //List<RetrieveCheckInsForAMonitor200ResponseInner> response = api.retrieveCheckInsForAMonitor(organizationSlug, monitorSlug, checkinId);
         // TODO: test validations
     }
 
@@ -111,10 +113,10 @@ public class CronsApiTest {
      */
     @Test
     public void retrieveMonitorsForAnOrganizationTest() throws ApiException {
-        String organizationSlug = null;
-        List<Integer> project = null;
-        List<String> environment = null;
-        List<RetrieveMonitorsForAnOrganization200ResponseInner> response = api.retrieveMonitorsForAnOrganization(organizationSlug, project, environment);
+        //String organizationSlug = null;
+        //List<Integer> project = null;
+        //List<String> environment = null;
+        //List<RetrieveMonitorsForAnOrganization200ResponseInner> response = api.retrieveMonitorsForAnOrganization(organizationSlug, project, environment);
         // TODO: test validations
     }
 
@@ -125,11 +127,11 @@ public class CronsApiTest {
      */
     @Test
     public void updateACheckInTest() throws ApiException {
-        String organizationSlug = null;
-        String monitorSlug = null;
-        UUID checkinId = null;
-        CreateANewCheckInRequest createANewCheckInRequest = null;
-        RetrieveCheckInsForAMonitor200ResponseInner response = api.updateACheckIn(organizationSlug, monitorSlug, checkinId, createANewCheckInRequest);
+        //String organizationSlug = null;
+        //String monitorSlug = null;
+        //UUID checkinId = null;
+        //CreateANewCheckInRequest createANewCheckInRequest = null;
+        //RetrieveCheckInsForAMonitor200ResponseInner response = api.updateACheckIn(organizationSlug, monitorSlug, checkinId, createANewCheckInRequest);
         // TODO: test validations
     }
 
@@ -140,10 +142,10 @@ public class CronsApiTest {
      */
     @Test
     public void updateAMonitorTest() throws ApiException {
-        String organizationSlug = null;
-        String monitorSlug = null;
-        CreateAMonitorRequest createAMonitorRequest = null;
-        RetrieveMonitorsForAnOrganization200ResponseInner response = api.updateAMonitor(organizationSlug, monitorSlug, createAMonitorRequest);
+        //String organizationSlug = null;
+        //String monitorSlug = null;
+        //CreateAMonitorRequest createAMonitorRequest = null;
+        //RetrieveMonitorsForAnOrganization200ResponseInner response = api.updateAMonitor(organizationSlug, monitorSlug, createAMonitorRequest);
         // TODO: test validations
     }
 

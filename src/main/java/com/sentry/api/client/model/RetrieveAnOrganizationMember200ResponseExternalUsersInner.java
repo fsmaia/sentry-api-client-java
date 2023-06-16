@@ -15,76 +15,57 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnOrganizationMember200ResponseExternalUsersInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnOrganizationMember200ResponseExternalUsersInner.JSON_PROPERTY_EXTERNAL_ID,
+  RetrieveAnOrganizationMember200ResponseExternalUsersInner.JSON_PROPERTY_USER_ID,
+  RetrieveAnOrganizationMember200ResponseExternalUsersInner.JSON_PROPERTY_TEAM_ID,
+  RetrieveAnOrganizationMember200ResponseExternalUsersInner.JSON_PROPERTY_ID,
+  RetrieveAnOrganizationMember200ResponseExternalUsersInner.JSON_PROPERTY_PROVIDER,
+  RetrieveAnOrganizationMember200ResponseExternalUsersInner.JSON_PROPERTY_EXTERNAL_NAME,
+  RetrieveAnOrganizationMember200ResponseExternalUsersInner.JSON_PROPERTY_INTEGRATION_ID
+})
+@JsonTypeName("Retrieve_an_Organization_Member_200_response_externalUsers_inner")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseExternalUsersInner {
-  public static final String SERIALIZED_NAME_EXTERNAL_ID = "externalId";
-  @SerializedName(SERIALIZED_NAME_EXTERNAL_ID)
+  public static final String JSON_PROPERTY_EXTERNAL_ID = "externalId";
   private String externalId;
 
-  public static final String SERIALIZED_NAME_USER_ID = "userId";
-  @SerializedName(SERIALIZED_NAME_USER_ID)
+  public static final String JSON_PROPERTY_USER_ID = "userId";
   private String userId;
 
-  public static final String SERIALIZED_NAME_TEAM_ID = "teamId";
-  @SerializedName(SERIALIZED_NAME_TEAM_ID)
+  public static final String JSON_PROPERTY_TEAM_ID = "teamId";
   private String teamId;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_PROVIDER = "provider";
-  @SerializedName(SERIALIZED_NAME_PROVIDER)
+  public static final String JSON_PROPERTY_PROVIDER = "provider";
   private String provider;
 
-  public static final String SERIALIZED_NAME_EXTERNAL_NAME = "externalName";
-  @SerializedName(SERIALIZED_NAME_EXTERNAL_NAME)
+  public static final String JSON_PROPERTY_EXTERNAL_NAME = "externalName";
   private String externalName;
 
-  public static final String SERIALIZED_NAME_INTEGRATION_ID = "integrationId";
-  @SerializedName(SERIALIZED_NAME_INTEGRATION_ID)
+  public static final String JSON_PROPERTY_INTEGRATION_ID = "integrationId";
   private String integrationId;
 
-  public RetrieveAnOrganizationMember200ResponseExternalUsersInner() {
+  public RetrieveAnOrganizationMember200ResponseExternalUsersInner() { 
   }
 
   public RetrieveAnOrganizationMember200ResponseExternalUsersInner externalId(String externalId) {
-    
     this.externalId = externalId;
     return this;
   }
@@ -93,19 +74,23 @@ public class RetrieveAnOrganizationMember200ResponseExternalUsersInner {
    * Get externalId
    * @return externalId
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_EXTERNAL_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getExternalId() {
     return externalId;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXTERNAL_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExternalId(String externalId) {
     this.externalId = externalId;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseExternalUsersInner userId(String userId) {
-    
     this.userId = userId;
     return this;
   }
@@ -114,19 +99,23 @@ public class RetrieveAnOrganizationMember200ResponseExternalUsersInner {
    * Get userId
    * @return userId
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_USER_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getUserId() {
     return userId;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USER_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseExternalUsersInner teamId(String teamId) {
-    
     this.teamId = teamId;
     return this;
   }
@@ -135,19 +124,23 @@ public class RetrieveAnOrganizationMember200ResponseExternalUsersInner {
    * Get teamId
    * @return teamId
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_TEAM_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getTeamId() {
     return teamId;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEAM_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTeamId(String teamId) {
     this.teamId = teamId;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseExternalUsersInner id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -156,19 +149,23 @@ public class RetrieveAnOrganizationMember200ResponseExternalUsersInner {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseExternalUsersInner provider(String provider) {
-    
     this.provider = provider;
     return this;
   }
@@ -177,19 +174,23 @@ public class RetrieveAnOrganizationMember200ResponseExternalUsersInner {
    * Get provider
    * @return provider
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PROVIDER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getProvider() {
     return provider;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROVIDER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setProvider(String provider) {
     this.provider = provider;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseExternalUsersInner externalName(String externalName) {
-    
     this.externalName = externalName;
     return this;
   }
@@ -198,19 +199,23 @@ public class RetrieveAnOrganizationMember200ResponseExternalUsersInner {
    * Get externalName
    * @return externalName
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EXTERNAL_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getExternalName() {
     return externalName;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXTERNAL_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setExternalName(String externalName) {
     this.externalName = externalName;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseExternalUsersInner integrationId(String integrationId) {
-    
     this.integrationId = integrationId;
     return this;
   }
@@ -219,18 +224,25 @@ public class RetrieveAnOrganizationMember200ResponseExternalUsersInner {
    * Get integrationId
    * @return integrationId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_INTEGRATION_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getIntegrationId() {
     return integrationId;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INTEGRATION_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIntegrationId(String integrationId) {
     this.integrationId = integrationId;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_an_Organization_Member_200_response_externalUsers_inner object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -280,126 +292,5 @@ public class RetrieveAnOrganizationMember200ResponseExternalUsersInner {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("externalId");
-    openapiFields.add("userId");
-    openapiFields.add("teamId");
-    openapiFields.add("id");
-    openapiFields.add("provider");
-    openapiFields.add("externalName");
-    openapiFields.add("integrationId");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("provider");
-    openapiRequiredFields.add("externalName");
-    openapiRequiredFields.add("integrationId");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnOrganizationMember200ResponseExternalUsersInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnOrganizationMember200ResponseExternalUsersInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnOrganizationMember200ResponseExternalUsersInner is not found in the empty JSON string", RetrieveAnOrganizationMember200ResponseExternalUsersInner.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnOrganizationMember200ResponseExternalUsersInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnOrganizationMember200ResponseExternalUsersInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveAnOrganizationMember200ResponseExternalUsersInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("externalId") != null && !jsonObj.get("externalId").isJsonNull()) && !jsonObj.get("externalId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `externalId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("externalId").toString()));
-      }
-      if ((jsonObj.get("userId") != null && !jsonObj.get("userId").isJsonNull()) && !jsonObj.get("userId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `userId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("userId").toString()));
-      }
-      if ((jsonObj.get("teamId") != null && !jsonObj.get("teamId").isJsonNull()) && !jsonObj.get("teamId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `teamId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("teamId").toString()));
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("provider").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `provider` to be a primitive type in the JSON string but got `%s`", jsonObj.get("provider").toString()));
-      }
-      if (!jsonObj.get("externalName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `externalName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("externalName").toString()));
-      }
-      if (!jsonObj.get("integrationId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `integrationId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("integrationId").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnOrganizationMember200ResponseExternalUsersInner.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnOrganizationMember200ResponseExternalUsersInner' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnOrganizationMember200ResponseExternalUsersInner> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnOrganizationMember200ResponseExternalUsersInner.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnOrganizationMember200ResponseExternalUsersInner>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnOrganizationMember200ResponseExternalUsersInner value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnOrganizationMember200ResponseExternalUsersInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnOrganizationMember200ResponseExternalUsersInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnOrganizationMember200ResponseExternalUsersInner
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnOrganizationMember200ResponseExternalUsersInner
-  */
-  public static RetrieveAnOrganizationMember200ResponseExternalUsersInner fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnOrganizationMember200ResponseExternalUsersInner.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnOrganizationMember200ResponseExternalUsersInner to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

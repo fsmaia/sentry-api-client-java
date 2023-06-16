@@ -15,97 +15,92 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.ResolveAShortID200ResponseGroupAssignedTo;
 import com.sentry.api.client.model.ResolveAShortID200ResponseGroupMetadata;
 import com.sentry.api.client.model.ResolveAShortID200ResponseGroupProject;
 import com.sentry.api.client.model.ResolveAShortID200ResponseGroupSubscriptionDetails;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ResolveAShortID200ResponseGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_LAST_SEEN,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_NUM_COMMENTS,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_USER_COUNT,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_CULPRIT,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_TITLE,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_ID,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_ASSIGNED_TO,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_LOGGER,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_TYPE,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_ANNOTATIONS,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_METADATA,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_STATUS,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_SUBSCRIPTION_DETAILS,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_IS_PUBLIC,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_HAS_SEEN,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_SHORT_ID,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_SHARE_ID,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_FIRST_SEEN,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_COUNT,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_PERMALINK,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_LEVEL,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_IS_SUBSCRIBED,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_IS_BOOKMARKED,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_PROJECT,
+  ResolveAShortID200ResponseGroup.JSON_PROPERTY_STATUS_DETAILS
+})
+@JsonTypeName("Resolve_a_Short_ID_200_response_group")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ResolveAShortID200ResponseGroup {
-  public static final String SERIALIZED_NAME_LAST_SEEN = "lastSeen";
-  @SerializedName(SERIALIZED_NAME_LAST_SEEN)
+  public static final String JSON_PROPERTY_LAST_SEEN = "lastSeen";
   private String lastSeen;
 
-  public static final String SERIALIZED_NAME_NUM_COMMENTS = "numComments";
-  @SerializedName(SERIALIZED_NAME_NUM_COMMENTS)
+  public static final String JSON_PROPERTY_NUM_COMMENTS = "numComments";
   private Integer numComments;
 
-  public static final String SERIALIZED_NAME_USER_COUNT = "userCount";
-  @SerializedName(SERIALIZED_NAME_USER_COUNT)
+  public static final String JSON_PROPERTY_USER_COUNT = "userCount";
   private Integer userCount;
 
-  public static final String SERIALIZED_NAME_CULPRIT = "culprit";
-  @SerializedName(SERIALIZED_NAME_CULPRIT)
+  public static final String JSON_PROPERTY_CULPRIT = "culprit";
   private String culprit;
 
-  public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  public static final String JSON_PROPERTY_TITLE = "title";
   private String title;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_ASSIGNED_TO = "assignedTo";
-  @SerializedName(SERIALIZED_NAME_ASSIGNED_TO)
+  public static final String JSON_PROPERTY_ASSIGNED_TO = "assignedTo";
   private ResolveAShortID200ResponseGroupAssignedTo assignedTo;
 
-  public static final String SERIALIZED_NAME_LOGGER = "logger";
-  @SerializedName(SERIALIZED_NAME_LOGGER)
+  public static final String JSON_PROPERTY_LOGGER = "logger";
   private String logger;
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  public static final String JSON_PROPERTY_TYPE = "type";
   private String type;
 
-  public static final String SERIALIZED_NAME_ANNOTATIONS = "annotations";
-  @SerializedName(SERIALIZED_NAME_ANNOTATIONS)
+  public static final String JSON_PROPERTY_ANNOTATIONS = "annotations";
   private List<String> annotations = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_METADATA = "metadata";
-  @SerializedName(SERIALIZED_NAME_METADATA)
+  public static final String JSON_PROPERTY_METADATA = "metadata";
   private ResolveAShortID200ResponseGroupMetadata metadata;
 
   /**
    * Gets or Sets status
    */
-  @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
     RESOLVED("resolved"),
     
@@ -119,6 +114,7 @@ public class ResolveAShortID200ResponseGroup {
       this.value = value;
     }
 
+    @JsonValue
     public String getValue() {
       return value;
     }
@@ -128,6 +124,7 @@ public class ResolveAShortID200ResponseGroup {
       return String.valueOf(value);
     }
 
+    @JsonCreator
     public static StatusEnum fromValue(String value) {
       for (StatusEnum b : StatusEnum.values()) {
         if (b.value.equals(value)) {
@@ -136,82 +133,54 @@ public class ResolveAShortID200ResponseGroup {
       }
       throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
-
-    public static class Adapter extends TypeAdapter<StatusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return StatusEnum.fromValue(value);
-      }
-    }
   }
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private StatusEnum status;
 
-  public static final String SERIALIZED_NAME_SUBSCRIPTION_DETAILS = "subscriptionDetails";
-  @SerializedName(SERIALIZED_NAME_SUBSCRIPTION_DETAILS)
+  public static final String JSON_PROPERTY_SUBSCRIPTION_DETAILS = "subscriptionDetails";
   private ResolveAShortID200ResponseGroupSubscriptionDetails subscriptionDetails;
 
-  public static final String SERIALIZED_NAME_IS_PUBLIC = "isPublic";
-  @SerializedName(SERIALIZED_NAME_IS_PUBLIC)
+  public static final String JSON_PROPERTY_IS_PUBLIC = "isPublic";
   private Boolean isPublic;
 
-  public static final String SERIALIZED_NAME_HAS_SEEN = "hasSeen";
-  @SerializedName(SERIALIZED_NAME_HAS_SEEN)
+  public static final String JSON_PROPERTY_HAS_SEEN = "hasSeen";
   private Boolean hasSeen;
 
-  public static final String SERIALIZED_NAME_SHORT_ID = "shortId";
-  @SerializedName(SERIALIZED_NAME_SHORT_ID)
+  public static final String JSON_PROPERTY_SHORT_ID = "shortId";
   private String shortId;
 
-  public static final String SERIALIZED_NAME_SHARE_ID = "shareId";
-  @SerializedName(SERIALIZED_NAME_SHARE_ID)
+  public static final String JSON_PROPERTY_SHARE_ID = "shareId";
   private String shareId;
 
-  public static final String SERIALIZED_NAME_FIRST_SEEN = "firstSeen";
-  @SerializedName(SERIALIZED_NAME_FIRST_SEEN)
+  public static final String JSON_PROPERTY_FIRST_SEEN = "firstSeen";
   private String firstSeen;
 
-  public static final String SERIALIZED_NAME_COUNT = "count";
-  @SerializedName(SERIALIZED_NAME_COUNT)
+  public static final String JSON_PROPERTY_COUNT = "count";
   private String count;
 
-  public static final String SERIALIZED_NAME_PERMALINK = "permalink";
-  @SerializedName(SERIALIZED_NAME_PERMALINK)
+  public static final String JSON_PROPERTY_PERMALINK = "permalink";
   private String permalink;
 
-  public static final String SERIALIZED_NAME_LEVEL = "level";
-  @SerializedName(SERIALIZED_NAME_LEVEL)
+  public static final String JSON_PROPERTY_LEVEL = "level";
   private String level;
 
-  public static final String SERIALIZED_NAME_IS_SUBSCRIBED = "isSubscribed";
-  @SerializedName(SERIALIZED_NAME_IS_SUBSCRIBED)
+  public static final String JSON_PROPERTY_IS_SUBSCRIBED = "isSubscribed";
   private Boolean isSubscribed;
 
-  public static final String SERIALIZED_NAME_IS_BOOKMARKED = "isBookmarked";
-  @SerializedName(SERIALIZED_NAME_IS_BOOKMARKED)
+  public static final String JSON_PROPERTY_IS_BOOKMARKED = "isBookmarked";
   private Boolean isBookmarked;
 
-  public static final String SERIALIZED_NAME_PROJECT = "project";
-  @SerializedName(SERIALIZED_NAME_PROJECT)
+  public static final String JSON_PROPERTY_PROJECT = "project";
   private ResolveAShortID200ResponseGroupProject project;
 
-  public static final String SERIALIZED_NAME_STATUS_DETAILS = "statusDetails";
-  @SerializedName(SERIALIZED_NAME_STATUS_DETAILS)
+  public static final String JSON_PROPERTY_STATUS_DETAILS = "statusDetails";
   private Object statusDetails;
 
-  public ResolveAShortID200ResponseGroup() {
+  public ResolveAShortID200ResponseGroup() { 
   }
 
   public ResolveAShortID200ResponseGroup lastSeen(String lastSeen) {
-    
     this.lastSeen = lastSeen;
     return this;
   }
@@ -220,19 +189,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get lastSeen
    * @return lastSeen
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_LAST_SEEN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getLastSeen() {
     return lastSeen;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LAST_SEEN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLastSeen(String lastSeen) {
     this.lastSeen = lastSeen;
   }
 
 
   public ResolveAShortID200ResponseGroup numComments(Integer numComments) {
-    
     this.numComments = numComments;
     return this;
   }
@@ -241,19 +214,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get numComments
    * @return numComments
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NUM_COMMENTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getNumComments() {
     return numComments;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NUM_COMMENTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setNumComments(Integer numComments) {
     this.numComments = numComments;
   }
 
 
   public ResolveAShortID200ResponseGroup userCount(Integer userCount) {
-    
     this.userCount = userCount;
     return this;
   }
@@ -262,19 +239,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get userCount
    * @return userCount
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_USER_COUNT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getUserCount() {
     return userCount;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USER_COUNT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUserCount(Integer userCount) {
     this.userCount = userCount;
   }
 
 
   public ResolveAShortID200ResponseGroup culprit(String culprit) {
-    
     this.culprit = culprit;
     return this;
   }
@@ -283,19 +264,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get culprit
    * @return culprit
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_CULPRIT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getCulprit() {
     return culprit;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CULPRIT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setCulprit(String culprit) {
     this.culprit = culprit;
   }
 
 
   public ResolveAShortID200ResponseGroup title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -304,19 +289,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get title
    * @return title
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getTitle() {
     return title;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTitle(String title) {
     this.title = title;
   }
 
 
   public ResolveAShortID200ResponseGroup id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -325,19 +314,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ResolveAShortID200ResponseGroup assignedTo(ResolveAShortID200ResponseGroupAssignedTo assignedTo) {
-    
     this.assignedTo = assignedTo;
     return this;
   }
@@ -346,19 +339,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get assignedTo
    * @return assignedTo
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ASSIGNED_TO)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAShortID200ResponseGroupAssignedTo getAssignedTo() {
     return assignedTo;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ASSIGNED_TO)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAssignedTo(ResolveAShortID200ResponseGroupAssignedTo assignedTo) {
     this.assignedTo = assignedTo;
   }
 
 
   public ResolveAShortID200ResponseGroup logger(String logger) {
-    
     this.logger = logger;
     return this;
   }
@@ -367,19 +364,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get logger
    * @return logger
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_LOGGER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getLogger() {
     return logger;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LOGGER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLogger(String logger) {
     this.logger = logger;
   }
 
 
   public ResolveAShortID200ResponseGroup type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -388,19 +389,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getType() {
     return type;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setType(String type) {
     this.type = type;
   }
 
 
   public ResolveAShortID200ResponseGroup annotations(List<String> annotations) {
-    
     this.annotations = annotations;
     return this;
   }
@@ -417,19 +422,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get annotations
    * @return annotations
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ANNOTATIONS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getAnnotations() {
     return annotations;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ANNOTATIONS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAnnotations(List<String> annotations) {
     this.annotations = annotations;
   }
 
 
   public ResolveAShortID200ResponseGroup metadata(ResolveAShortID200ResponseGroupMetadata metadata) {
-    
     this.metadata = metadata;
     return this;
   }
@@ -438,19 +447,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get metadata
    * @return metadata
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_METADATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAShortID200ResponseGroupMetadata getMetadata() {
     return metadata;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_METADATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMetadata(ResolveAShortID200ResponseGroupMetadata metadata) {
     this.metadata = metadata;
   }
 
 
   public ResolveAShortID200ResponseGroup status(StatusEnum status) {
-    
     this.status = status;
     return this;
   }
@@ -459,19 +472,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public StatusEnum getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setStatus(StatusEnum status) {
     this.status = status;
   }
 
 
   public ResolveAShortID200ResponseGroup subscriptionDetails(ResolveAShortID200ResponseGroupSubscriptionDetails subscriptionDetails) {
-    
     this.subscriptionDetails = subscriptionDetails;
     return this;
   }
@@ -480,19 +497,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get subscriptionDetails
    * @return subscriptionDetails
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SUBSCRIPTION_DETAILS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAShortID200ResponseGroupSubscriptionDetails getSubscriptionDetails() {
     return subscriptionDetails;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUBSCRIPTION_DETAILS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSubscriptionDetails(ResolveAShortID200ResponseGroupSubscriptionDetails subscriptionDetails) {
     this.subscriptionDetails = subscriptionDetails;
   }
 
 
   public ResolveAShortID200ResponseGroup isPublic(Boolean isPublic) {
-    
     this.isPublic = isPublic;
     return this;
   }
@@ -501,19 +522,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get isPublic
    * @return isPublic
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_PUBLIC)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsPublic() {
     return isPublic;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_PUBLIC)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsPublic(Boolean isPublic) {
     this.isPublic = isPublic;
   }
 
 
   public ResolveAShortID200ResponseGroup hasSeen(Boolean hasSeen) {
-    
     this.hasSeen = hasSeen;
     return this;
   }
@@ -522,19 +547,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get hasSeen
    * @return hasSeen
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_SEEN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasSeen() {
     return hasSeen;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_SEEN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasSeen(Boolean hasSeen) {
     this.hasSeen = hasSeen;
   }
 
 
   public ResolveAShortID200ResponseGroup shortId(String shortId) {
-    
     this.shortId = shortId;
     return this;
   }
@@ -543,19 +572,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get shortId
    * @return shortId
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SHORT_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getShortId() {
     return shortId;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SHORT_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setShortId(String shortId) {
     this.shortId = shortId;
   }
 
 
   public ResolveAShortID200ResponseGroup shareId(String shareId) {
-    
     this.shareId = shareId;
     return this;
   }
@@ -564,19 +597,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get shareId
    * @return shareId
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SHARE_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getShareId() {
     return shareId;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SHARE_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setShareId(String shareId) {
     this.shareId = shareId;
   }
 
 
   public ResolveAShortID200ResponseGroup firstSeen(String firstSeen) {
-    
     this.firstSeen = firstSeen;
     return this;
   }
@@ -585,19 +622,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get firstSeen
    * @return firstSeen
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_FIRST_SEEN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getFirstSeen() {
     return firstSeen;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIRST_SEEN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFirstSeen(String firstSeen) {
     this.firstSeen = firstSeen;
   }
 
 
   public ResolveAShortID200ResponseGroup count(String count) {
-    
     this.count = count;
     return this;
   }
@@ -606,19 +647,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get count
    * @return count
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_COUNT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getCount() {
     return count;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setCount(String count) {
     this.count = count;
   }
 
 
   public ResolveAShortID200ResponseGroup permalink(String permalink) {
-    
     this.permalink = permalink;
     return this;
   }
@@ -627,19 +672,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get permalink
    * @return permalink
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PERMALINK)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getPermalink() {
     return permalink;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PERMALINK)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPermalink(String permalink) {
     this.permalink = permalink;
   }
 
 
   public ResolveAShortID200ResponseGroup level(String level) {
-    
     this.level = level;
     return this;
   }
@@ -648,19 +697,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get level
    * @return level
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getLevel() {
     return level;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLevel(String level) {
     this.level = level;
   }
 
 
   public ResolveAShortID200ResponseGroup isSubscribed(Boolean isSubscribed) {
-    
     this.isSubscribed = isSubscribed;
     return this;
   }
@@ -669,19 +722,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get isSubscribed
    * @return isSubscribed
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_SUBSCRIBED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsSubscribed() {
     return isSubscribed;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_SUBSCRIBED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsSubscribed(Boolean isSubscribed) {
     this.isSubscribed = isSubscribed;
   }
 
 
   public ResolveAShortID200ResponseGroup isBookmarked(Boolean isBookmarked) {
-    
     this.isBookmarked = isBookmarked;
     return this;
   }
@@ -690,19 +747,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get isBookmarked
    * @return isBookmarked
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_BOOKMARKED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_BOOKMARKED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsBookmarked(Boolean isBookmarked) {
     this.isBookmarked = isBookmarked;
   }
 
 
   public ResolveAShortID200ResponseGroup project(ResolveAShortID200ResponseGroupProject project) {
-    
     this.project = project;
     return this;
   }
@@ -711,19 +772,23 @@ public class ResolveAShortID200ResponseGroup {
    * Get project
    * @return project
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PROJECT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAShortID200ResponseGroupProject getProject() {
     return project;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROJECT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setProject(ResolveAShortID200ResponseGroupProject project) {
     this.project = project;
   }
 
 
   public ResolveAShortID200ResponseGroup statusDetails(Object statusDetails) {
-    
     this.statusDetails = statusDetails;
     return this;
   }
@@ -732,18 +797,25 @@ public class ResolveAShortID200ResponseGroup {
    * Get statusDetails
    * @return statusDetails
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_STATUS_DETAILS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getStatusDetails() {
     return statusDetails;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS_DETAILS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setStatusDetails(Object statusDetails) {
     this.statusDetails = statusDetails;
   }
 
 
-
+  /**
+   * Return true if this Resolve_a_Short_ID_200_response_group object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -829,197 +901,5 @@ public class ResolveAShortID200ResponseGroup {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("lastSeen");
-    openapiFields.add("numComments");
-    openapiFields.add("userCount");
-    openapiFields.add("culprit");
-    openapiFields.add("title");
-    openapiFields.add("id");
-    openapiFields.add("assignedTo");
-    openapiFields.add("logger");
-    openapiFields.add("type");
-    openapiFields.add("annotations");
-    openapiFields.add("metadata");
-    openapiFields.add("status");
-    openapiFields.add("subscriptionDetails");
-    openapiFields.add("isPublic");
-    openapiFields.add("hasSeen");
-    openapiFields.add("shortId");
-    openapiFields.add("shareId");
-    openapiFields.add("firstSeen");
-    openapiFields.add("count");
-    openapiFields.add("permalink");
-    openapiFields.add("level");
-    openapiFields.add("isSubscribed");
-    openapiFields.add("isBookmarked");
-    openapiFields.add("project");
-    openapiFields.add("statusDetails");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("lastSeen");
-    openapiRequiredFields.add("numComments");
-    openapiRequiredFields.add("userCount");
-    openapiRequiredFields.add("culprit");
-    openapiRequiredFields.add("title");
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("assignedTo");
-    openapiRequiredFields.add("logger");
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("annotations");
-    openapiRequiredFields.add("metadata");
-    openapiRequiredFields.add("status");
-    openapiRequiredFields.add("subscriptionDetails");
-    openapiRequiredFields.add("isPublic");
-    openapiRequiredFields.add("hasSeen");
-    openapiRequiredFields.add("shortId");
-    openapiRequiredFields.add("shareId");
-    openapiRequiredFields.add("firstSeen");
-    openapiRequiredFields.add("count");
-    openapiRequiredFields.add("permalink");
-    openapiRequiredFields.add("level");
-    openapiRequiredFields.add("isSubscribed");
-    openapiRequiredFields.add("isBookmarked");
-    openapiRequiredFields.add("project");
-    openapiRequiredFields.add("statusDetails");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ResolveAShortID200ResponseGroup
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ResolveAShortID200ResponseGroup.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ResolveAShortID200ResponseGroup is not found in the empty JSON string", ResolveAShortID200ResponseGroup.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ResolveAShortID200ResponseGroup.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ResolveAShortID200ResponseGroup` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ResolveAShortID200ResponseGroup.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("lastSeen").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `lastSeen` to be a primitive type in the JSON string but got `%s`", jsonObj.get("lastSeen").toString()));
-      }
-      if (!jsonObj.get("culprit").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `culprit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("culprit").toString()));
-      }
-      if (!jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      // validate the required field `assignedTo`
-      ResolveAShortID200ResponseGroupAssignedTo.validateJsonObject(jsonObj.getAsJsonObject("assignedTo"));
-      if (!jsonObj.get("logger").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `logger` to be a primitive type in the JSON string but got `%s`", jsonObj.get("logger").toString()));
-      }
-      if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("annotations") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("annotations").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `annotations` to be an array in the JSON string but got `%s`", jsonObj.get("annotations").toString()));
-      }
-      // validate the required field `metadata`
-      ResolveAShortID200ResponseGroupMetadata.validateJsonObject(jsonObj.getAsJsonObject("metadata"));
-      if (!jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-      // validate the required field `subscriptionDetails`
-      ResolveAShortID200ResponseGroupSubscriptionDetails.validateJsonObject(jsonObj.getAsJsonObject("subscriptionDetails"));
-      if (!jsonObj.get("shortId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `shortId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("shortId").toString()));
-      }
-      if (!jsonObj.get("shareId").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `shareId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("shareId").toString()));
-      }
-      if (!jsonObj.get("firstSeen").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `firstSeen` to be a primitive type in the JSON string but got `%s`", jsonObj.get("firstSeen").toString()));
-      }
-      if (!jsonObj.get("count").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `count` to be a primitive type in the JSON string but got `%s`", jsonObj.get("count").toString()));
-      }
-      if (!jsonObj.get("permalink").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `permalink` to be a primitive type in the JSON string but got `%s`", jsonObj.get("permalink").toString()));
-      }
-      if (!jsonObj.get("level").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `level` to be a primitive type in the JSON string but got `%s`", jsonObj.get("level").toString()));
-      }
-      // validate the required field `project`
-      ResolveAShortID200ResponseGroupProject.validateJsonObject(jsonObj.getAsJsonObject("project"));
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ResolveAShortID200ResponseGroup.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ResolveAShortID200ResponseGroup' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ResolveAShortID200ResponseGroup> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ResolveAShortID200ResponseGroup.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ResolveAShortID200ResponseGroup>() {
-           @Override
-           public void write(JsonWriter out, ResolveAShortID200ResponseGroup value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ResolveAShortID200ResponseGroup read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ResolveAShortID200ResponseGroup given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ResolveAShortID200ResponseGroup
-  * @throws IOException if the JSON string is invalid with respect to ResolveAShortID200ResponseGroup
-  */
-  public static ResolveAShortID200ResponseGroup fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ResolveAShortID200ResponseGroup.class);
-  }
-
- /**
-  * Convert an instance of ResolveAShortID200ResponseGroup to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

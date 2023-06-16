@@ -13,7 +13,8 @@
 
 package com.sentry.api.client.api;
 
-import com.sentry.api.client.ApiException;
+import com.sentry.api.client.*;
+import com.sentry.api.client.auth.*;
 import com.sentry.api.client.model.ListARepositorySCommits200ResponseInner;
 import com.sentry.api.client.model.ListAnOrganizationSProjects200ResponseInner;
 import com.sentry.api.client.model.ListAnOrganizationSRepositories200ResponseInner;
@@ -26,6 +27,8 @@ import com.sentry.api.client.model.RetrieveAnOrganization200Response;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200Response;
 import com.sentry.api.client.model.RetrieveEventCountsForAnOrganizationV2200Response;
 import com.sentry.api.client.model.UpdateAnOrganizationRequest;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -37,7 +40,6 @@ import java.util.Map;
 /**
  * API tests for OrganizationsApi
  */
-@Disabled
 public class OrganizationsApiTest {
 
     private final OrganizationsApi api = new OrganizationsApi();
@@ -49,9 +51,9 @@ public class OrganizationsApiTest {
      */
     @Test
     public void deleteAnOrganizationMemberTest() throws ApiException {
-        String organizationSlug = null;
-        String memberId = null;
-        api.deleteAnOrganizationMember(organizationSlug, memberId);
+        //String organizationSlug = null;
+        //String memberId = null;
+        //api.deleteAnOrganizationMember(organizationSlug, memberId);
         // TODO: test validations
     }
 
@@ -62,9 +64,9 @@ public class OrganizationsApiTest {
      */
     @Test
     public void listARepositorysCommitsTest() throws ApiException {
-        String organizationSlug = null;
-        String repoId = null;
-        List<ListARepositorySCommits200ResponseInner> response = api.listARepositorysCommits(organizationSlug, repoId);
+        //String organizationSlug = null;
+        //String repoId = null;
+        //List<ListARepositorySCommits200ResponseInner> response = api.listARepositorysCommits(organizationSlug, repoId);
         // TODO: test validations
     }
 
@@ -75,9 +77,9 @@ public class OrganizationsApiTest {
      */
     @Test
     public void listAnOrganizationsProjectsTest() throws ApiException {
-        String organizationSlug = null;
-        String cursor = null;
-        List<ListAnOrganizationSProjects200ResponseInner> response = api.listAnOrganizationsProjects(organizationSlug, cursor);
+        //String organizationSlug = null;
+        //String cursor = null;
+        //List<ListAnOrganizationSProjects200ResponseInner> response = api.listAnOrganizationsProjects(organizationSlug, cursor);
         // TODO: test validations
     }
 
@@ -88,8 +90,8 @@ public class OrganizationsApiTest {
      */
     @Test
     public void listAnOrganizationsRepositoriesTest() throws ApiException {
-        String organizationSlug = null;
-        List<ListAnOrganizationSRepositories200ResponseInner> response = api.listAnOrganizationsRepositories(organizationSlug);
+        //String organizationSlug = null;
+        //List<ListAnOrganizationSRepositories200ResponseInner> response = api.listAnOrganizationsRepositories(organizationSlug);
         // TODO: test validations
     }
 
@@ -100,9 +102,9 @@ public class OrganizationsApiTest {
      */
     @Test
     public void listAnOrganizationsUsersTest() throws ApiException {
-        String organizationSlug = null;
-        String project = null;
-        List<ListAnOrganizationSUsers200ResponseInner> response = api.listAnOrganizationsUsers(organizationSlug, project);
+        //String organizationSlug = null;
+        //String project = null;
+        //List<ListAnOrganizationSUsers200ResponseInner> response = api.listAnOrganizationsUsers(organizationSlug, project);
         // TODO: test validations
     }
 
@@ -113,9 +115,9 @@ public class OrganizationsApiTest {
      */
     @Test
     public void listYourOrganizationsTest() throws ApiException {
-        Boolean owner = null;
-        String cursor = null;
-        List<RetrieveATeam200ResponseOrganization> response = api.listYourOrganizations(owner, cursor);
+        //Boolean owner = null;
+        //String cursor = null;
+        //List<RetrieveATeam200ResponseOrganization> response = api.listYourOrganizations(owner, cursor);
         // TODO: test validations
     }
 
@@ -126,9 +128,9 @@ public class OrganizationsApiTest {
      */
     @Test
     public void resolveAShortIDTest() throws ApiException {
-        String organizationSlug = null;
-        String shortId = null;
-        ResolveAShortID200Response response = api.resolveAShortID(organizationSlug, shortId);
+        //String organizationSlug = null;
+        //String shortId = null;
+        //ResolveAShortID200Response response = api.resolveAShortID(organizationSlug, shortId);
         // TODO: test validations
     }
 
@@ -139,9 +141,9 @@ public class OrganizationsApiTest {
      */
     @Test
     public void resolveAnEventIDTest() throws ApiException {
-        String organizationSlug = null;
-        String eventId = null;
-        ResolveAnEventID200Response response = api.resolveAnEventID(organizationSlug, eventId);
+        //String organizationSlug = null;
+        //String eventId = null;
+        //ResolveAnEventID200Response response = api.resolveAnEventID(organizationSlug, eventId);
         // TODO: test validations
     }
 
@@ -152,8 +154,8 @@ public class OrganizationsApiTest {
      */
     @Test
     public void retrieveAnOrganizationTest() throws ApiException {
-        String organizationSlug = null;
-        RetrieveAnOrganization200Response response = api.retrieveAnOrganization(organizationSlug);
+        //String organizationSlug = null;
+        //RetrieveAnOrganization200Response response = api.retrieveAnOrganization(organizationSlug);
         // TODO: test validations
     }
 
@@ -164,9 +166,9 @@ public class OrganizationsApiTest {
      */
     @Test
     public void retrieveAnOrganizationMemberTest() throws ApiException {
-        String organizationSlug = null;
-        String memberId = null;
-        RetrieveAnOrganizationMember200Response response = api.retrieveAnOrganizationMember(organizationSlug, memberId);
+        //String organizationSlug = null;
+        //String memberId = null;
+        //RetrieveAnOrganizationMember200Response response = api.retrieveAnOrganizationMember(organizationSlug, memberId);
         // TODO: test validations
     }
 
@@ -177,12 +179,12 @@ public class OrganizationsApiTest {
      */
     @Test
     public void retrieveEventCountsForAnOrganizationTest() throws ApiException {
-        String organizationSlug = null;
-        String stat = null;
-        OffsetDateTime since = null;
-        OffsetDateTime until = null;
-        String resolution = null;
-        List<List<Integer>> response = api.retrieveEventCountsForAnOrganization(organizationSlug, stat, since, until, resolution);
+        //String organizationSlug = null;
+        //String stat = null;
+        //OffsetDateTime since = null;
+        //OffsetDateTime until = null;
+        //String resolution = null;
+        //List<List<Integer>> response = api.retrieveEventCountsForAnOrganization(organizationSlug, stat, since, until, resolution);
         // TODO: test validations
     }
 
@@ -193,18 +195,18 @@ public class OrganizationsApiTest {
      */
     @Test
     public void retrieveEventCountsForAnOrganizationV2Test() throws ApiException {
-        String organizationSlug = null;
-        List<String> groupBy = null;
-        String field = null;
-        String statsPeriod = null;
-        String interval = null;
-        OffsetDateTime start = null;
-        OffsetDateTime end = null;
-        List<Object> project = null;
-        String category = null;
-        String outcome = null;
-        String reason = null;
-        RetrieveEventCountsForAnOrganizationV2200Response response = api.retrieveEventCountsForAnOrganizationV2(organizationSlug, groupBy, field, statsPeriod, interval, start, end, project, category, outcome, reason);
+        //String organizationSlug = null;
+        //List<String> groupBy = null;
+        //String field = null;
+        //String statsPeriod = null;
+        //String interval = null;
+        //OffsetDateTime start = null;
+        //OffsetDateTime end = null;
+        //List<Object> project = null;
+        //String category = null;
+        //String outcome = null;
+        //String reason = null;
+        //RetrieveEventCountsForAnOrganizationV2200Response response = api.retrieveEventCountsForAnOrganizationV2(organizationSlug, groupBy, field, statsPeriod, interval, start, end, project, category, outcome, reason);
         // TODO: test validations
     }
 
@@ -215,9 +217,9 @@ public class OrganizationsApiTest {
      */
     @Test
     public void updateAnOrganizationTest() throws ApiException {
-        String organizationSlug = null;
-        UpdateAnOrganizationRequest updateAnOrganizationRequest = null;
-        RetrieveAnOrganization200Response response = api.updateAnOrganization(organizationSlug, updateAnOrganizationRequest);
+        //String organizationSlug = null;
+        //UpdateAnOrganizationRequest updateAnOrganizationRequest = null;
+        //RetrieveAnOrganization200Response response = api.updateAnOrganization(organizationSlug, updateAnOrganizationRequest);
         // TODO: test validations
     }
 

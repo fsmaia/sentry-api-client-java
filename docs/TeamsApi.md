@@ -13,8 +13,9 @@ All URIs are relative to *https://sentry.io*
 | [**updateATeam**](TeamsApi.md#updateATeam) | **PUT** /api/0/teams/{organization_slug}/{team_slug}/ |  |
 
 
-<a id="createANewTeam"></a>
-# **createANewTeam**
+
+## createANewTeam
+
 > ListAnOrganizationSTeams200ResponseInner createANewTeam(organizationSlug, name, slug, createANewTeamRequest)
 
 
@@ -22,44 +23,46 @@ All URIs are relative to *https://sentry.io*
 Create a new team bound to an organization.
 
 ### Example
+
 ```java
 // Import classes:
 import com.sentry.api.client.ApiClient;
 import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
-import com.sentry.api.client.models.*;
+import com.sentry.api.client.model.*;
 import com.sentry.api.client.api.TeamsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://sentry.io");
-    
-    // Configure HTTP bearer authorization: auth_token
-    HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
-    auth_token.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://sentry.io");
+        
+        // Configure HTTP bearer authorization: auth_token
+        HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
+        auth_token.setBearerToken("BEARER TOKEN");
 
-    TeamsApi apiInstance = new TeamsApi(defaultClient);
-    String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the resource belongs to.
-    String name = "name_example"; // String | The name of the team.
-    String slug = "slug_example"; // String | Optional slug for the team. If not provided a slug is generated from the name.
-    CreateANewTeamRequest createANewTeamRequest = new CreateANewTeamRequest(); // CreateANewTeamRequest | 
-    try {
-      ListAnOrganizationSTeams200ResponseInner result = apiInstance.createANewTeam(organizationSlug, name, slug, createANewTeamRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#createANewTeam");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        TeamsApi apiInstance = new TeamsApi(defaultClient);
+        String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the resource belongs to.
+        String name = "name_example"; // String | The name of the team.
+        String slug = "slug_example"; // String | Optional slug for the team. If not provided a slug is generated from the name.
+        CreateANewTeamRequest createANewTeamRequest = new CreateANewTeamRequest(); // CreateANewTeamRequest | 
+        try {
+            ListAnOrganizationSTeams200ResponseInner result = apiInstance.createANewTeam(organizationSlug, name, slug, createANewTeamRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TeamsApi#createANewTeam");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
 ### Parameters
+
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
@@ -78,8 +81,8 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -89,50 +92,55 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **404** | A team with this slug already exists. |  -  |
 
-<a id="deleteATeam"></a>
-# **deleteATeam**
+
+## deleteATeam
+
 > deleteATeam(organizationSlug, teamSlug)
 
 
 
-Schedules a team for deletion.  Note: Deletion happens asynchronously and therefore is not immediate. However once deletion has begun the state of a project changes and will be hidden from most public views.
+Schedules a team for deletion.
+
+Note: Deletion happens asynchronously and therefore is not immediate. However once deletion has begun the state of a project changes and will be hidden from most public views.
 
 ### Example
+
 ```java
 // Import classes:
 import com.sentry.api.client.ApiClient;
 import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
-import com.sentry.api.client.models.*;
+import com.sentry.api.client.model.*;
 import com.sentry.api.client.api.TeamsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://sentry.io");
-    
-    // Configure HTTP bearer authorization: auth_token
-    HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
-    auth_token.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://sentry.io");
+        
+        // Configure HTTP bearer authorization: auth_token
+        HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
+        auth_token.setBearerToken("BEARER TOKEN");
 
-    TeamsApi apiInstance = new TeamsApi(defaultClient);
-    String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the team belongs to.
-    String teamSlug = "teamSlug_example"; // String | The slug of the team to get.
-    try {
-      apiInstance.deleteATeam(organizationSlug, teamSlug);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#deleteATeam");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        TeamsApi apiInstance = new TeamsApi(defaultClient);
+        String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the team belongs to.
+        String teamSlug = "teamSlug_example"; // String | The slug of the team to get.
+        try {
+            apiInstance.deleteATeam(organizationSlug, teamSlug);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TeamsApi#deleteATeam");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
 ### Parameters
+
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
@@ -149,8 +157,8 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -159,8 +167,9 @@ null (empty response body)
 | **403** | Forbidden |  -  |
 | **404** | Team not found |  -  |
 
-<a id="listATeamsProjects"></a>
-# **listATeamsProjects**
+
+## listATeamsProjects
+
 > List&lt;ListAnOrganizationSProjects200ResponseInner&gt; listATeamsProjects(organizationSlug, teamSlug, cursor)
 
 
@@ -168,43 +177,45 @@ null (empty response body)
 Return a list of projects bound to a team.
 
 ### Example
+
 ```java
 // Import classes:
 import com.sentry.api.client.ApiClient;
 import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
-import com.sentry.api.client.models.*;
+import com.sentry.api.client.model.*;
 import com.sentry.api.client.api.TeamsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://sentry.io");
-    
-    // Configure HTTP bearer authorization: auth_token
-    HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
-    auth_token.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://sentry.io");
+        
+        // Configure HTTP bearer authorization: auth_token
+        HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
+        auth_token.setBearerToken("BEARER TOKEN");
 
-    TeamsApi apiInstance = new TeamsApi(defaultClient);
-    String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the resource belongs to.
-    String teamSlug = "teamSlug_example"; // String | The slug of the team the resource belongs to.
-    String cursor = "cursor_example"; // String | A pointer to the last object fetched and its sort order; used to retrieve the next or previous results.
-    try {
-      List<ListAnOrganizationSProjects200ResponseInner> result = apiInstance.listATeamsProjects(organizationSlug, teamSlug, cursor);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#listATeamsProjects");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        TeamsApi apiInstance = new TeamsApi(defaultClient);
+        String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the resource belongs to.
+        String teamSlug = "teamSlug_example"; // String | The slug of the team the resource belongs to.
+        String cursor = "cursor_example"; // String | A pointer to the last object fetched and its sort order; used to retrieve the next or previous results.
+        try {
+            List<ListAnOrganizationSProjects200ResponseInner> result = apiInstance.listATeamsProjects(organizationSlug, teamSlug, cursor);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TeamsApi#listATeamsProjects");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
 ### Parameters
+
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
@@ -222,8 +233,8 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -232,8 +243,9 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **404** | Team not found. |  -  |
 
-<a id="listAnOrganizationsTeams"></a>
-# **listAnOrganizationsTeams**
+
+## listAnOrganizationsTeams
+
 > List&lt;ListAnOrganizationSTeams200ResponseInner&gt; listAnOrganizationsTeams(organizationSlug, detailed, cursor)
 
 
@@ -241,43 +253,45 @@ public class Example {
 Returns a list of teams bound to a organization.
 
 ### Example
+
 ```java
 // Import classes:
 import com.sentry.api.client.ApiClient;
 import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
-import com.sentry.api.client.models.*;
+import com.sentry.api.client.model.*;
 import com.sentry.api.client.api.TeamsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://sentry.io");
-    
-    // Configure HTTP bearer authorization: auth_token
-    HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
-    auth_token.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://sentry.io");
+        
+        // Configure HTTP bearer authorization: auth_token
+        HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
+        auth_token.setBearerToken("BEARER TOKEN");
 
-    TeamsApi apiInstance = new TeamsApi(defaultClient);
-    String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the resource belongs to.
-    String detailed = "detailed_example"; // String | Specify \"0\" to return team details that do not include projects
-    String cursor = "cursor_example"; // String | A pointer to the last object fetched and its sort order; used to retrieve the next or previous results.
-    try {
-      List<ListAnOrganizationSTeams200ResponseInner> result = apiInstance.listAnOrganizationsTeams(organizationSlug, detailed, cursor);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#listAnOrganizationsTeams");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        TeamsApi apiInstance = new TeamsApi(defaultClient);
+        String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the resource belongs to.
+        String detailed = "detailed_example"; // String | Specify \"0\" to return team details that do not include projects
+        String cursor = "cursor_example"; // String | A pointer to the last object fetched and its sort order; used to retrieve the next or previous results.
+        try {
+            List<ListAnOrganizationSTeams200ResponseInner> result = apiInstance.listAnOrganizationsTeams(organizationSlug, detailed, cursor);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TeamsApi#listAnOrganizationsTeams");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
 ### Parameters
+
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
@@ -295,8 +309,8 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -305,8 +319,9 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **404** | Not Found |  -  |
 
-<a id="retrieveATeam"></a>
-# **retrieveATeam**
+
+## retrieveATeam
+
 > RetrieveATeam200Response retrieveATeam(organizationSlug, teamSlug)
 
 
@@ -314,42 +329,44 @@ public class Example {
 Return details on an individual team.
 
 ### Example
+
 ```java
 // Import classes:
 import com.sentry.api.client.ApiClient;
 import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
-import com.sentry.api.client.models.*;
+import com.sentry.api.client.model.*;
 import com.sentry.api.client.api.TeamsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://sentry.io");
-    
-    // Configure HTTP bearer authorization: auth_token
-    HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
-    auth_token.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://sentry.io");
+        
+        // Configure HTTP bearer authorization: auth_token
+        HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
+        auth_token.setBearerToken("BEARER TOKEN");
 
-    TeamsApi apiInstance = new TeamsApi(defaultClient);
-    String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the team belongs to.
-    String teamSlug = "teamSlug_example"; // String | The slug of the team to get.
-    try {
-      RetrieveATeam200Response result = apiInstance.retrieveATeam(organizationSlug, teamSlug);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#retrieveATeam");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        TeamsApi apiInstance = new TeamsApi(defaultClient);
+        String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the team belongs to.
+        String teamSlug = "teamSlug_example"; // String | The slug of the team to get.
+        try {
+            RetrieveATeam200Response result = apiInstance.retrieveATeam(organizationSlug, teamSlug);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TeamsApi#retrieveATeam");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
 ### Parameters
+
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
@@ -366,8 +383,8 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -376,55 +393,61 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **404** | Team not found |  -  |
 
-<a id="retrieveEventCountsForATeam"></a>
-# **retrieveEventCountsForATeam**
+
+## retrieveEventCountsForATeam
+
 > List&lt;List&lt;Integer&gt;&gt; retrieveEventCountsForATeam(organizationSlug, teamSlug, stat, since, until, resolution)
 
 Caution: this endpoint may change in the future without notice.
 
-Return a set of points representing a normalized timestamp and the number of events seen in the period.  Query ranges are limited to Sentry’s configured time-series resolutions.
+Return a set of points representing a normalized timestamp and the number of events seen in the period.
+
+Query ranges are limited to Sentry’s configured time-series resolutions.
 
 ### Example
+
 ```java
+import java.time.OffsetDateTime;
 // Import classes:
 import com.sentry.api.client.ApiClient;
 import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
-import com.sentry.api.client.models.*;
+import com.sentry.api.client.model.*;
 import com.sentry.api.client.api.TeamsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://sentry.io");
-    
-    // Configure HTTP bearer authorization: auth_token
-    HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
-    auth_token.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://sentry.io");
+        
+        // Configure HTTP bearer authorization: auth_token
+        HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
+        auth_token.setBearerToken("BEARER TOKEN");
 
-    TeamsApi apiInstance = new TeamsApi(defaultClient);
-    String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the team belongs to.
-    String teamSlug = "teamSlug_example"; // String | The slug of the team to get.
-    String stat = "received"; // String | The name of the stat to query `(\"received\", \"rejected\")`.
-    OffsetDateTime since = OffsetDateTime.now(); // OffsetDateTime | A timestamp to set the start of the query in seconds since UNIX epoch.
-    OffsetDateTime until = OffsetDateTime.now(); // OffsetDateTime | A timestamp to set the end of the query in seconds since UNIX epoch.
-    String resolution = "10s"; // String | An explicit resolution to search for (one of `10s`, `1h`, and `1d`).
-    try {
-      List<List<Integer>> result = apiInstance.retrieveEventCountsForATeam(organizationSlug, teamSlug, stat, since, until, resolution);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#retrieveEventCountsForATeam");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        TeamsApi apiInstance = new TeamsApi(defaultClient);
+        String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the team belongs to.
+        String teamSlug = "teamSlug_example"; // String | The slug of the team to get.
+        String stat = "received"; // String | The name of the stat to query `(\"received\", \"rejected\")`.
+        OffsetDateTime since = OffsetDateTime.now(); // OffsetDateTime | A timestamp to set the start of the query in seconds since UNIX epoch.
+        OffsetDateTime until = OffsetDateTime.now(); // OffsetDateTime | A timestamp to set the end of the query in seconds since UNIX epoch.
+        String resolution = "10s"; // String | An explicit resolution to search for (one of `10s`, `1h`, and `1d`).
+        try {
+            List<List<Integer>> result = apiInstance.retrieveEventCountsForATeam(organizationSlug, teamSlug, stat, since, until, resolution);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TeamsApi#retrieveEventCountsForATeam");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
 ### Parameters
+
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
@@ -445,8 +468,8 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -455,8 +478,9 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **404** | Team not found |  -  |
 
-<a id="updateATeam"></a>
-# **updateATeam**
+
+## updateATeam
+
 > UpdateATeam200Response updateATeam(organizationSlug, teamSlug, updateATeamRequest)
 
 
@@ -464,43 +488,45 @@ public class Example {
 Update various attributes and configurable settings for the given team.
 
 ### Example
+
 ```java
 // Import classes:
 import com.sentry.api.client.ApiClient;
 import com.sentry.api.client.ApiException;
 import com.sentry.api.client.Configuration;
 import com.sentry.api.client.auth.*;
-import com.sentry.api.client.models.*;
+import com.sentry.api.client.model.*;
 import com.sentry.api.client.api.TeamsApi;
 
 public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://sentry.io");
-    
-    // Configure HTTP bearer authorization: auth_token
-    HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
-    auth_token.setBearerToken("BEARER TOKEN");
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://sentry.io");
+        
+        // Configure HTTP bearer authorization: auth_token
+        HttpBearerAuth auth_token = (HttpBearerAuth) defaultClient.getAuthentication("auth_token");
+        auth_token.setBearerToken("BEARER TOKEN");
 
-    TeamsApi apiInstance = new TeamsApi(defaultClient);
-    String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the team belongs to.
-    String teamSlug = "teamSlug_example"; // String | The slug of the team to get.
-    UpdateATeamRequest updateATeamRequest = new UpdateATeamRequest(); // UpdateATeamRequest | 
-    try {
-      UpdateATeam200Response result = apiInstance.updateATeam(organizationSlug, teamSlug, updateATeamRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#updateATeam");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
+        TeamsApi apiInstance = new TeamsApi(defaultClient);
+        String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the team belongs to.
+        String teamSlug = "teamSlug_example"; // String | The slug of the team to get.
+        UpdateATeamRequest updateATeamRequest = new UpdateATeamRequest(); // UpdateATeamRequest | 
+        try {
+            UpdateATeam200Response result = apiInstance.updateATeam(organizationSlug, teamSlug, updateATeamRequest);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling TeamsApi#updateATeam");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
     }
-  }
 }
 ```
 
 ### Parameters
+
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
@@ -518,8 +544,8 @@ public class Example {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

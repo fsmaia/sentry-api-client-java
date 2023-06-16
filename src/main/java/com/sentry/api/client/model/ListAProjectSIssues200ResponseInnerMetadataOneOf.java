@@ -15,60 +15,41 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ListAProjectSIssues200ResponseInnerMetadataOneOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ListAProjectSIssues200ResponseInnerMetadataOneOf.JSON_PROPERTY_FILENAME,
+  ListAProjectSIssues200ResponseInnerMetadataOneOf.JSON_PROPERTY_TYPE,
+  ListAProjectSIssues200ResponseInnerMetadataOneOf.JSON_PROPERTY_VALUE
+})
+@JsonTypeName("List_a_Project_s_Issues_200_response_inner_metadata_oneOf")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ListAProjectSIssues200ResponseInnerMetadataOneOf {
-  public static final String SERIALIZED_NAME_FILENAME = "filename";
-  @SerializedName(SERIALIZED_NAME_FILENAME)
+  public static final String JSON_PROPERTY_FILENAME = "filename";
   private String filename;
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  public static final String JSON_PROPERTY_TYPE = "type";
   private String type;
 
-  public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
+  public static final String JSON_PROPERTY_VALUE = "value";
   private String value;
 
-  public ListAProjectSIssues200ResponseInnerMetadataOneOf() {
+  public ListAProjectSIssues200ResponseInnerMetadataOneOf() { 
   }
 
   public ListAProjectSIssues200ResponseInnerMetadataOneOf filename(String filename) {
-    
     this.filename = filename;
     return this;
   }
@@ -77,19 +58,23 @@ public class ListAProjectSIssues200ResponseInnerMetadataOneOf {
    * Get filename
    * @return filename
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_FILENAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getFilename() {
     return filename;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILENAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFilename(String filename) {
     this.filename = filename;
   }
 
 
   public ListAProjectSIssues200ResponseInnerMetadataOneOf type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -98,19 +83,23 @@ public class ListAProjectSIssues200ResponseInnerMetadataOneOf {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getType() {
     return type;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setType(String type) {
     this.type = type;
   }
 
 
   public ListAProjectSIssues200ResponseInnerMetadataOneOf value(String value) {
-    
     this.value = value;
     return this;
   }
@@ -119,18 +108,25 @@ public class ListAProjectSIssues200ResponseInnerMetadataOneOf {
    * Get value
    * @return value
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getValue() {
     return value;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setValue(String value) {
     this.value = value;
   }
 
 
-
+  /**
+   * Return true if this List_a_Project_s_Issues_200_response_inner_metadata_oneOf object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -172,109 +168,5 @@ public class ListAProjectSIssues200ResponseInnerMetadataOneOf {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("filename");
-    openapiFields.add("type");
-    openapiFields.add("value");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("filename");
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("value");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ListAProjectSIssues200ResponseInnerMetadataOneOf
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ListAProjectSIssues200ResponseInnerMetadataOneOf.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ListAProjectSIssues200ResponseInnerMetadataOneOf is not found in the empty JSON string", ListAProjectSIssues200ResponseInnerMetadataOneOf.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ListAProjectSIssues200ResponseInnerMetadataOneOf.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListAProjectSIssues200ResponseInnerMetadataOneOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ListAProjectSIssues200ResponseInnerMetadataOneOf.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("filename").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `filename` to be a primitive type in the JSON string but got `%s`", jsonObj.get("filename").toString()));
-      }
-      if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-      if (!jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ListAProjectSIssues200ResponseInnerMetadataOneOf.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ListAProjectSIssues200ResponseInnerMetadataOneOf' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ListAProjectSIssues200ResponseInnerMetadataOneOf> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ListAProjectSIssues200ResponseInnerMetadataOneOf.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ListAProjectSIssues200ResponseInnerMetadataOneOf>() {
-           @Override
-           public void write(JsonWriter out, ListAProjectSIssues200ResponseInnerMetadataOneOf value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ListAProjectSIssues200ResponseInnerMetadataOneOf read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ListAProjectSIssues200ResponseInnerMetadataOneOf given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ListAProjectSIssues200ResponseInnerMetadataOneOf
-  * @throws IOException if the JSON string is invalid with respect to ListAProjectSIssues200ResponseInnerMetadataOneOf
-  */
-  public static ListAProjectSIssues200ResponseInnerMetadataOneOf fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ListAProjectSIssues200ResponseInnerMetadataOneOf.class);
-  }
-
- /**
-  * Convert an instance of ListAProjectSIssues200ResponseInnerMetadataOneOf to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

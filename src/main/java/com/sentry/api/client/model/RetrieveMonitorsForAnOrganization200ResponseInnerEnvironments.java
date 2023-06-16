@@ -15,69 +15,50 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import java.time.OffsetDateTime;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import java.time.OffsetDateTime;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.JSON_PROPERTY_NAME,
+  RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.JSON_PROPERTY_STATUS,
+  RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.JSON_PROPERTY_DATE_CREATED,
+  RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.JSON_PROPERTY_LAST_CHECK_IN,
+  RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.JSON_PROPERTY_NEXT_CHECK_IN
+})
+@JsonTypeName("Retrieve_monitors_for_an_organization_200_response_inner_environments")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments {
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
+  public static final String JSON_PROPERTY_STATUS = "status";
   private String status;
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private OffsetDateTime dateCreated;
 
-  public static final String SERIALIZED_NAME_LAST_CHECK_IN = "lastCheckIn";
-  @SerializedName(SERIALIZED_NAME_LAST_CHECK_IN)
+  public static final String JSON_PROPERTY_LAST_CHECK_IN = "lastCheckIn";
   private OffsetDateTime lastCheckIn;
 
-  public static final String SERIALIZED_NAME_NEXT_CHECK_IN = "nextCheckIn";
-  @SerializedName(SERIALIZED_NAME_NEXT_CHECK_IN)
+  public static final String JSON_PROPERTY_NEXT_CHECK_IN = "nextCheckIn";
   private OffsetDateTime nextCheckIn;
 
-  public RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments() {
+  public RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments() { 
   }
 
   public RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -86,19 +67,23 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments status(String status) {
-    
     this.status = status;
     return this;
   }
@@ -107,19 +92,23 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getStatus() {
     return status;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setStatus(String status) {
     this.status = status;
   }
 
 
   public RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments dateCreated(OffsetDateTime dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -128,19 +117,23 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments lastCheckIn(OffsetDateTime lastCheckIn) {
-    
     this.lastCheckIn = lastCheckIn;
     return this;
   }
@@ -149,19 +142,23 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments {
    * Get lastCheckIn
    * @return lastCheckIn
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_LAST_CHECK_IN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getLastCheckIn() {
     return lastCheckIn;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LAST_CHECK_IN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLastCheckIn(OffsetDateTime lastCheckIn) {
     this.lastCheckIn = lastCheckIn;
   }
 
 
   public RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments nextCheckIn(OffsetDateTime nextCheckIn) {
-    
     this.nextCheckIn = nextCheckIn;
     return this;
   }
@@ -170,18 +167,25 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments {
    * Get nextCheckIn
    * @return nextCheckIn
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NEXT_CHECK_IN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getNextCheckIn() {
     return nextCheckIn;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NEXT_CHECK_IN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setNextCheckIn(OffsetDateTime nextCheckIn) {
     this.nextCheckIn = nextCheckIn;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_monitors_for_an_organization_200_response_inner_environments object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -227,110 +231,5 @@ public class RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("name");
-    openapiFields.add("status");
-    openapiFields.add("dateCreated");
-    openapiFields.add("lastCheckIn");
-    openapiFields.add("nextCheckIn");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("status");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("lastCheckIn");
-    openapiRequiredFields.add("nextCheckIn");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments is not found in the empty JSON string", RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      if (!jsonObj.get("status").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments>() {
-           @Override
-           public void write(JsonWriter out, RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments
-  * @throws IOException if the JSON string is invalid with respect to RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments
-  */
-  public static RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.class);
-  }
-
- /**
-  * Convert an instance of RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

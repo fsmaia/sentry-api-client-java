@@ -13,7 +13,8 @@
 
 package com.sentry.api.client.api;
 
-import com.sentry.api.client.ApiException;
+import com.sentry.api.client.*;
+import com.sentry.api.client.auth.*;
 import com.sentry.api.client.model.CreateANewTeamRequest;
 import com.sentry.api.client.model.ListAnOrganizationSProjects200ResponseInner;
 import com.sentry.api.client.model.ListAnOrganizationSTeams200ResponseInner;
@@ -21,6 +22,8 @@ import java.time.OffsetDateTime;
 import com.sentry.api.client.model.RetrieveATeam200Response;
 import com.sentry.api.client.model.UpdateATeam200Response;
 import com.sentry.api.client.model.UpdateATeamRequest;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -32,7 +35,6 @@ import java.util.Map;
 /**
  * API tests for TeamsApi
  */
-@Disabled
 public class TeamsApiTest {
 
     private final TeamsApi api = new TeamsApi();
@@ -44,11 +46,11 @@ public class TeamsApiTest {
      */
     @Test
     public void createANewTeamTest() throws ApiException {
-        String organizationSlug = null;
-        String name = null;
-        String slug = null;
-        CreateANewTeamRequest createANewTeamRequest = null;
-        ListAnOrganizationSTeams200ResponseInner response = api.createANewTeam(organizationSlug, name, slug, createANewTeamRequest);
+        //String organizationSlug = null;
+        //String name = null;
+        //String slug = null;
+        //CreateANewTeamRequest createANewTeamRequest = null;
+        //ListAnOrganizationSTeams200ResponseInner response = api.createANewTeam(organizationSlug, name, slug, createANewTeamRequest);
         // TODO: test validations
     }
 
@@ -59,9 +61,9 @@ public class TeamsApiTest {
      */
     @Test
     public void deleteATeamTest() throws ApiException {
-        String organizationSlug = null;
-        String teamSlug = null;
-        api.deleteATeam(organizationSlug, teamSlug);
+        //String organizationSlug = null;
+        //String teamSlug = null;
+        //api.deleteATeam(organizationSlug, teamSlug);
         // TODO: test validations
     }
 
@@ -72,10 +74,10 @@ public class TeamsApiTest {
      */
     @Test
     public void listATeamsProjectsTest() throws ApiException {
-        String organizationSlug = null;
-        String teamSlug = null;
-        String cursor = null;
-        List<ListAnOrganizationSProjects200ResponseInner> response = api.listATeamsProjects(organizationSlug, teamSlug, cursor);
+        //String organizationSlug = null;
+        //String teamSlug = null;
+        //String cursor = null;
+        //List<ListAnOrganizationSProjects200ResponseInner> response = api.listATeamsProjects(organizationSlug, teamSlug, cursor);
         // TODO: test validations
     }
 
@@ -86,10 +88,10 @@ public class TeamsApiTest {
      */
     @Test
     public void listAnOrganizationsTeamsTest() throws ApiException {
-        String organizationSlug = null;
-        String detailed = null;
-        String cursor = null;
-        List<ListAnOrganizationSTeams200ResponseInner> response = api.listAnOrganizationsTeams(organizationSlug, detailed, cursor);
+        //String organizationSlug = null;
+        //String detailed = null;
+        //String cursor = null;
+        //List<ListAnOrganizationSTeams200ResponseInner> response = api.listAnOrganizationsTeams(organizationSlug, detailed, cursor);
         // TODO: test validations
     }
 
@@ -100,9 +102,9 @@ public class TeamsApiTest {
      */
     @Test
     public void retrieveATeamTest() throws ApiException {
-        String organizationSlug = null;
-        String teamSlug = null;
-        RetrieveATeam200Response response = api.retrieveATeam(organizationSlug, teamSlug);
+        //String organizationSlug = null;
+        //String teamSlug = null;
+        //RetrieveATeam200Response response = api.retrieveATeam(organizationSlug, teamSlug);
         // TODO: test validations
     }
 
@@ -115,13 +117,13 @@ public class TeamsApiTest {
      */
     @Test
     public void retrieveEventCountsForATeamTest() throws ApiException {
-        String organizationSlug = null;
-        String teamSlug = null;
-        String stat = null;
-        OffsetDateTime since = null;
-        OffsetDateTime until = null;
-        String resolution = null;
-        List<List<Integer>> response = api.retrieveEventCountsForATeam(organizationSlug, teamSlug, stat, since, until, resolution);
+        //String organizationSlug = null;
+        //String teamSlug = null;
+        //String stat = null;
+        //OffsetDateTime since = null;
+        //OffsetDateTime until = null;
+        //String resolution = null;
+        //List<List<Integer>> response = api.retrieveEventCountsForATeam(organizationSlug, teamSlug, stat, since, until, resolution);
         // TODO: test validations
     }
 
@@ -132,10 +134,10 @@ public class TeamsApiTest {
      */
     @Test
     public void updateATeamTest() throws ApiException {
-        String organizationSlug = null;
-        String teamSlug = null;
-        UpdateATeamRequest updateATeamRequest = null;
-        UpdateATeam200Response response = api.updateATeam(organizationSlug, teamSlug, updateATeamRequest);
+        //String organizationSlug = null;
+        //String teamSlug = null;
+        //UpdateATeamRequest updateATeamRequest = null;
+        //UpdateATeam200Response response = api.updateATeam(organizationSlug, teamSlug, updateATeamRequest);
         // TODO: test validations
     }
 

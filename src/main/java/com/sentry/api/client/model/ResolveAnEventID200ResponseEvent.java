@@ -15,11 +15,13 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventContext;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventContexts;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInner;
@@ -29,133 +31,112 @@ import com.sentry.api.client.model.ResolveAnEventID200ResponseEventMetadata;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventPackages;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventTagsInner;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventUser;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * ResolveAnEventID200ResponseEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_META,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_CONTEXT,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_CONTEXTS,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_DATE_CREATED,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_DATE_RECEIVED,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_DIST,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_ENTRIES,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_ERRORS,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_EVENT_I_D,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_FINGERPRINTS,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_GROUP_I_D,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_ID,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_MESSAGE,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_METADATA,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_PACKAGES,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_PLATFORM,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_SDK,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_SIZE,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_TAGS,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_TYPE,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_USER,
+  ResolveAnEventID200ResponseEvent.JSON_PROPERTY_TITLE
+})
+@JsonTypeName("Resolve_an_Event_ID_200_response_event")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEvent {
-  public static final String SERIALIZED_NAME_META = "_meta";
-  @SerializedName(SERIALIZED_NAME_META)
+  public static final String JSON_PROPERTY_META = "_meta";
   private ResolveAnEventID200ResponseEventMeta meta;
 
-  public static final String SERIALIZED_NAME_CONTEXT = "context";
-  @SerializedName(SERIALIZED_NAME_CONTEXT)
+  public static final String JSON_PROPERTY_CONTEXT = "context";
   private ResolveAnEventID200ResponseEventContext context;
 
-  public static final String SERIALIZED_NAME_CONTEXTS = "contexts";
-  @SerializedName(SERIALIZED_NAME_CONTEXTS)
+  public static final String JSON_PROPERTY_CONTEXTS = "contexts";
   private ResolveAnEventID200ResponseEventContexts contexts;
 
-  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
-  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private String dateCreated;
 
-  public static final String SERIALIZED_NAME_DATE_RECEIVED = "dateReceived";
-  @SerializedName(SERIALIZED_NAME_DATE_RECEIVED)
+  public static final String JSON_PROPERTY_DATE_RECEIVED = "dateReceived";
   private String dateReceived;
 
-  public static final String SERIALIZED_NAME_DIST = "dist";
-  @SerializedName(SERIALIZED_NAME_DIST)
+  public static final String JSON_PROPERTY_DIST = "dist";
   private String dist;
 
-  public static final String SERIALIZED_NAME_ENTRIES = "entries";
-  @SerializedName(SERIALIZED_NAME_ENTRIES)
+  public static final String JSON_PROPERTY_ENTRIES = "entries";
   private List<ResolveAnEventID200ResponseEventEntriesInner> entries = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_ERRORS = "errors";
-  @SerializedName(SERIALIZED_NAME_ERRORS)
+  public static final String JSON_PROPERTY_ERRORS = "errors";
   private List<ResolveAnEventID200ResponseEventErrorsInner> errors = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_EVENT_I_D = "eventID";
-  @SerializedName(SERIALIZED_NAME_EVENT_I_D)
+  public static final String JSON_PROPERTY_EVENT_I_D = "eventID";
   private String eventID;
 
-  public static final String SERIALIZED_NAME_FINGERPRINTS = "fingerprints";
-  @SerializedName(SERIALIZED_NAME_FINGERPRINTS)
+  public static final String JSON_PROPERTY_FINGERPRINTS = "fingerprints";
   private List<String> fingerprints = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_GROUP_I_D = "groupID";
-  @SerializedName(SERIALIZED_NAME_GROUP_I_D)
+  public static final String JSON_PROPERTY_GROUP_I_D = "groupID";
   private String groupID;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  public static final String JSON_PROPERTY_MESSAGE = "message";
   private String message;
 
-  public static final String SERIALIZED_NAME_METADATA = "metadata";
-  @SerializedName(SERIALIZED_NAME_METADATA)
+  public static final String JSON_PROPERTY_METADATA = "metadata";
   private ResolveAnEventID200ResponseEventMetadata metadata;
 
-  public static final String SERIALIZED_NAME_PACKAGES = "packages";
-  @SerializedName(SERIALIZED_NAME_PACKAGES)
+  public static final String JSON_PROPERTY_PACKAGES = "packages";
   private ResolveAnEventID200ResponseEventPackages packages;
 
-  public static final String SERIALIZED_NAME_PLATFORM = "platform";
-  @SerializedName(SERIALIZED_NAME_PLATFORM)
+  public static final String JSON_PROPERTY_PLATFORM = "platform";
   private String platform;
 
-  public static final String SERIALIZED_NAME_SDK = "sdk";
-  @SerializedName(SERIALIZED_NAME_SDK)
+  public static final String JSON_PROPERTY_SDK = "sdk";
   private Object sdk;
 
-  public static final String SERIALIZED_NAME_SIZE = "size";
-  @SerializedName(SERIALIZED_NAME_SIZE)
+  public static final String JSON_PROPERTY_SIZE = "size";
   private Integer size;
 
-  public static final String SERIALIZED_NAME_TAGS = "tags";
-  @SerializedName(SERIALIZED_NAME_TAGS)
+  public static final String JSON_PROPERTY_TAGS = "tags";
   private List<ResolveAnEventID200ResponseEventTagsInner> tags = new ArrayList<>();
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
+  public static final String JSON_PROPERTY_TYPE = "type";
   private String type;
 
-  public static final String SERIALIZED_NAME_USER = "user";
-  @SerializedName(SERIALIZED_NAME_USER)
+  public static final String JSON_PROPERTY_USER = "user";
   private ResolveAnEventID200ResponseEventUser user;
 
-  public static final String SERIALIZED_NAME_TITLE = "title";
-  @SerializedName(SERIALIZED_NAME_TITLE)
+  public static final String JSON_PROPERTY_TITLE = "title";
   private String title;
 
-  public ResolveAnEventID200ResponseEvent() {
+  public ResolveAnEventID200ResponseEvent() { 
   }
 
   public ResolveAnEventID200ResponseEvent meta(ResolveAnEventID200ResponseEventMeta meta) {
-    
     this.meta = meta;
     return this;
   }
@@ -164,19 +145,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get meta
    * @return meta
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_META)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAnEventID200ResponseEventMeta getMeta() {
     return meta;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_META)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMeta(ResolveAnEventID200ResponseEventMeta meta) {
     this.meta = meta;
   }
 
 
   public ResolveAnEventID200ResponseEvent context(ResolveAnEventID200ResponseEventContext context) {
-    
     this.context = context;
     return this;
   }
@@ -185,19 +170,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get context
    * @return context
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CONTEXT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAnEventID200ResponseEventContext getContext() {
     return context;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTEXT)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setContext(ResolveAnEventID200ResponseEventContext context) {
     this.context = context;
   }
 
 
   public ResolveAnEventID200ResponseEvent contexts(ResolveAnEventID200ResponseEventContexts contexts) {
-    
     this.contexts = contexts;
     return this;
   }
@@ -206,19 +195,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get contexts
    * @return contexts
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_CONTEXTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAnEventID200ResponseEventContexts getContexts() {
     return contexts;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTEXTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setContexts(ResolveAnEventID200ResponseEventContexts contexts) {
     this.contexts = contexts;
   }
 
 
   public ResolveAnEventID200ResponseEvent dateCreated(String dateCreated) {
-    
     this.dateCreated = dateCreated;
     return this;
   }
@@ -227,19 +220,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get dateCreated
    * @return dateCreated
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDateCreated() {
     return dateCreated;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateCreated(String dateCreated) {
     this.dateCreated = dateCreated;
   }
 
 
   public ResolveAnEventID200ResponseEvent dateReceived(String dateReceived) {
-    
     this.dateReceived = dateReceived;
     return this;
   }
@@ -248,19 +245,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get dateReceived
    * @return dateReceived
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_RECEIVED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDateReceived() {
     return dateReceived;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_RECEIVED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateReceived(String dateReceived) {
     this.dateReceived = dateReceived;
   }
 
 
   public ResolveAnEventID200ResponseEvent dist(String dist) {
-    
     this.dist = dist;
     return this;
   }
@@ -269,19 +270,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get dist
    * @return dist
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_DIST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getDist() {
     return dist;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DIST)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDist(String dist) {
     this.dist = dist;
   }
 
 
   public ResolveAnEventID200ResponseEvent entries(List<ResolveAnEventID200ResponseEventEntriesInner> entries) {
-    
     this.entries = entries;
     return this;
   }
@@ -298,19 +303,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get entries
    * @return entries
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ENTRIES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<ResolveAnEventID200ResponseEventEntriesInner> getEntries() {
     return entries;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ENTRIES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEntries(List<ResolveAnEventID200ResponseEventEntriesInner> entries) {
     this.entries = entries;
   }
 
 
   public ResolveAnEventID200ResponseEvent errors(List<ResolveAnEventID200ResponseEventErrorsInner> errors) {
-    
     this.errors = errors;
     return this;
   }
@@ -327,19 +336,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<ResolveAnEventID200ResponseEventErrorsInner> getErrors() {
     return errors;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setErrors(List<ResolveAnEventID200ResponseEventErrorsInner> errors) {
     this.errors = errors;
   }
 
 
   public ResolveAnEventID200ResponseEvent eventID(String eventID) {
-    
     this.eventID = eventID;
     return this;
   }
@@ -348,19 +361,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get eventID
    * @return eventID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EVENT_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getEventID() {
     return eventID;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EVENT_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEventID(String eventID) {
     this.eventID = eventID;
   }
 
 
   public ResolveAnEventID200ResponseEvent fingerprints(List<String> fingerprints) {
-    
     this.fingerprints = fingerprints;
     return this;
   }
@@ -377,19 +394,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get fingerprints
    * @return fingerprints
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_FINGERPRINTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<String> getFingerprints() {
     return fingerprints;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FINGERPRINTS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setFingerprints(List<String> fingerprints) {
     this.fingerprints = fingerprints;
   }
 
 
   public ResolveAnEventID200ResponseEvent groupID(String groupID) {
-    
     this.groupID = groupID;
     return this;
   }
@@ -398,19 +419,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get groupID
    * @return groupID
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_GROUP_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getGroupID() {
     return groupID;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_GROUP_I_D)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setGroupID(String groupID) {
     this.groupID = groupID;
   }
 
 
   public ResolveAnEventID200ResponseEvent id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -419,19 +444,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public ResolveAnEventID200ResponseEvent message(String message) {
-    
     this.message = message;
     return this;
   }
@@ -440,19 +469,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get message
    * @return message
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getMessage() {
     return message;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMessage(String message) {
     this.message = message;
   }
 
 
   public ResolveAnEventID200ResponseEvent metadata(ResolveAnEventID200ResponseEventMetadata metadata) {
-    
     this.metadata = metadata;
     return this;
   }
@@ -461,19 +494,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get metadata
    * @return metadata
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_METADATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAnEventID200ResponseEventMetadata getMetadata() {
     return metadata;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_METADATA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setMetadata(ResolveAnEventID200ResponseEventMetadata metadata) {
     this.metadata = metadata;
   }
 
 
   public ResolveAnEventID200ResponseEvent packages(ResolveAnEventID200ResponseEventPackages packages) {
-    
     this.packages = packages;
     return this;
   }
@@ -482,19 +519,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get packages
    * @return packages
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PACKAGES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAnEventID200ResponseEventPackages getPackages() {
     return packages;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PACKAGES)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPackages(ResolveAnEventID200ResponseEventPackages packages) {
     this.packages = packages;
   }
 
 
   public ResolveAnEventID200ResponseEvent platform(String platform) {
-    
     this.platform = platform;
     return this;
   }
@@ -503,19 +544,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get platform
    * @return platform
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getPlatform() {
     return platform;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPlatform(String platform) {
     this.platform = platform;
   }
 
 
   public ResolveAnEventID200ResponseEvent sdk(Object sdk) {
-    
     this.sdk = sdk;
     return this;
   }
@@ -524,19 +569,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get sdk
    * @return sdk
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_SDK)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Object getSdk() {
     return sdk;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SDK)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSdk(Object sdk) {
     this.sdk = sdk;
   }
 
 
   public ResolveAnEventID200ResponseEvent size(Integer size) {
-    
     this.size = size;
     return this;
   }
@@ -545,19 +594,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get size
    * @return size
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_SIZE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Integer getSize() {
     return size;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SIZE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setSize(Integer size) {
     this.size = size;
   }
 
 
   public ResolveAnEventID200ResponseEvent tags(List<ResolveAnEventID200ResponseEventTagsInner> tags) {
-    
     this.tags = tags;
     return this;
   }
@@ -574,19 +627,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get tags
    * @return tags
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TAGS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<ResolveAnEventID200ResponseEventTagsInner> getTags() {
     return tags;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TAGS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTags(List<ResolveAnEventID200ResponseEventTagsInner> tags) {
     this.tags = tags;
   }
 
 
   public ResolveAnEventID200ResponseEvent type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -595,19 +652,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getType() {
     return type;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setType(String type) {
     this.type = type;
   }
 
 
   public ResolveAnEventID200ResponseEvent user(ResolveAnEventID200ResponseEventUser user) {
-    
     this.user = user;
     return this;
   }
@@ -616,19 +677,23 @@ public class ResolveAnEventID200ResponseEvent {
    * Get user
    * @return user
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_USER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public ResolveAnEventID200ResponseEventUser getUser() {
     return user;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUser(ResolveAnEventID200ResponseEventUser user) {
     this.user = user;
   }
 
 
   public ResolveAnEventID200ResponseEvent title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -637,18 +702,25 @@ public class ResolveAnEventID200ResponseEvent {
    * Get title
    * @return title
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getTitle() {
     return title;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setTitle(String title) {
     this.title = title;
   }
 
 
-
+  /**
+   * Return true if this Resolve_an_Event_ID_200_response_event object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -728,216 +800,5 @@ public class ResolveAnEventID200ResponseEvent {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("_meta");
-    openapiFields.add("context");
-    openapiFields.add("contexts");
-    openapiFields.add("dateCreated");
-    openapiFields.add("dateReceived");
-    openapiFields.add("dist");
-    openapiFields.add("entries");
-    openapiFields.add("errors");
-    openapiFields.add("eventID");
-    openapiFields.add("fingerprints");
-    openapiFields.add("groupID");
-    openapiFields.add("id");
-    openapiFields.add("message");
-    openapiFields.add("metadata");
-    openapiFields.add("packages");
-    openapiFields.add("platform");
-    openapiFields.add("sdk");
-    openapiFields.add("size");
-    openapiFields.add("tags");
-    openapiFields.add("type");
-    openapiFields.add("user");
-    openapiFields.add("title");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("_meta");
-    openapiRequiredFields.add("context");
-    openapiRequiredFields.add("contexts");
-    openapiRequiredFields.add("dateCreated");
-    openapiRequiredFields.add("dateReceived");
-    openapiRequiredFields.add("dist");
-    openapiRequiredFields.add("entries");
-    openapiRequiredFields.add("errors");
-    openapiRequiredFields.add("eventID");
-    openapiRequiredFields.add("fingerprints");
-    openapiRequiredFields.add("groupID");
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("message");
-    openapiRequiredFields.add("metadata");
-    openapiRequiredFields.add("packages");
-    openapiRequiredFields.add("platform");
-    openapiRequiredFields.add("sdk");
-    openapiRequiredFields.add("size");
-    openapiRequiredFields.add("tags");
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("user");
-    openapiRequiredFields.add("title");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ResolveAnEventID200ResponseEvent
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ResolveAnEventID200ResponseEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ResolveAnEventID200ResponseEvent is not found in the empty JSON string", ResolveAnEventID200ResponseEvent.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ResolveAnEventID200ResponseEvent.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ResolveAnEventID200ResponseEvent` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ResolveAnEventID200ResponseEvent.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      // validate the required field `_meta`
-      ResolveAnEventID200ResponseEventMeta.validateJsonObject(jsonObj.getAsJsonObject("_meta"));
-      // validate the required field `context`
-      ResolveAnEventID200ResponseEventContext.validateJsonObject(jsonObj.getAsJsonObject("context"));
-      // validate the required field `contexts`
-      ResolveAnEventID200ResponseEventContexts.validateJsonObject(jsonObj.getAsJsonObject("contexts"));
-      if (!jsonObj.get("dateCreated").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dateCreated` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dateCreated").toString()));
-      }
-      if (!jsonObj.get("dateReceived").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dateReceived` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dateReceived").toString()));
-      }
-      if (!jsonObj.get("dist").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `dist` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dist").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("entries").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `entries` to be an array in the JSON string but got `%s`", jsonObj.get("entries").toString()));
-      }
-
-      JsonArray jsonArrayentries = jsonObj.getAsJsonArray("entries");
-      // validate the required field `entries` (array)
-      for (int i = 0; i < jsonArrayentries.size(); i++) {
-        ResolveAnEventID200ResponseEventEntriesInner.validateJsonObject(jsonArrayentries.get(i).getAsJsonObject());
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("errors").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `errors` to be an array in the JSON string but got `%s`", jsonObj.get("errors").toString()));
-      }
-
-      JsonArray jsonArrayerrors = jsonObj.getAsJsonArray("errors");
-      // validate the required field `errors` (array)
-      for (int i = 0; i < jsonArrayerrors.size(); i++) {
-        ResolveAnEventID200ResponseEventErrorsInner.validateJsonObject(jsonArrayerrors.get(i).getAsJsonObject());
-      };
-      if (!jsonObj.get("eventID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `eventID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eventID").toString()));
-      }
-      // ensure the required json array is present
-      if (jsonObj.get("fingerprints") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("fingerprints").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `fingerprints` to be an array in the JSON string but got `%s`", jsonObj.get("fingerprints").toString()));
-      }
-      if (!jsonObj.get("groupID").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `groupID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("groupID").toString()));
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
-      }
-      // validate the required field `metadata`
-      ResolveAnEventID200ResponseEventMetadata.validateJsonObject(jsonObj.getAsJsonObject("metadata"));
-      // validate the required field `packages`
-      ResolveAnEventID200ResponseEventPackages.validateJsonObject(jsonObj.getAsJsonObject("packages"));
-      if (!jsonObj.get("platform").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `platform` to be a primitive type in the JSON string but got `%s`", jsonObj.get("platform").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("tags").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `tags` to be an array in the JSON string but got `%s`", jsonObj.get("tags").toString()));
-      }
-
-      JsonArray jsonArraytags = jsonObj.getAsJsonArray("tags");
-      // validate the required field `tags` (array)
-      for (int i = 0; i < jsonArraytags.size(); i++) {
-        ResolveAnEventID200ResponseEventTagsInner.validateJsonObject(jsonArraytags.get(i).getAsJsonObject());
-      };
-      if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
-      }
-      // validate the required field `user`
-      ResolveAnEventID200ResponseEventUser.validateJsonObject(jsonObj.getAsJsonObject("user"));
-      if (!jsonObj.get("title").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ResolveAnEventID200ResponseEvent.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ResolveAnEventID200ResponseEvent' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ResolveAnEventID200ResponseEvent> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ResolveAnEventID200ResponseEvent.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<ResolveAnEventID200ResponseEvent>() {
-           @Override
-           public void write(JsonWriter out, ResolveAnEventID200ResponseEvent value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public ResolveAnEventID200ResponseEvent read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of ResolveAnEventID200ResponseEvent given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ResolveAnEventID200ResponseEvent
-  * @throws IOException if the JSON string is invalid with respect to ResolveAnEventID200ResponseEvent
-  */
-  public static ResolveAnEventID200ResponseEvent fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ResolveAnEventID200ResponseEvent.class);
-  }
-
- /**
-  * Convert an instance of ResolveAnEventID200ResponseEvent to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

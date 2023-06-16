@@ -15,128 +15,109 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseUserAvatar;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseUserEmailsInner;
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseUserIdentitiesInner;
-import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnOrganizationMember200ResponseUser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_IDENTITIES,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_AVATAR,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_ID,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_NAME,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_USERNAME,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_EMAIL,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_AVATAR_URL,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_IS_ACTIVE,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_HAS_PASSWORD_AUTH,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_IS_MANAGED,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_DATE_JOINED,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_LAST_LOGIN,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_HAS2FA,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_LAST_ACTIVE,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_IS_SUPERUSER,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_IS_STAFF,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_EXPERIMENTS,
+  RetrieveAnOrganizationMember200ResponseUser.JSON_PROPERTY_EMAILS
+})
+@JsonTypeName("Retrieve_an_Organization_Member_200_response_user")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseUser {
-  public static final String SERIALIZED_NAME_IDENTITIES = "identities";
-  @SerializedName(SERIALIZED_NAME_IDENTITIES)
+  public static final String JSON_PROPERTY_IDENTITIES = "identities";
   private List<RetrieveAnOrganizationMember200ResponseUserIdentitiesInner> identities;
 
-  public static final String SERIALIZED_NAME_AVATAR = "avatar";
-  @SerializedName(SERIALIZED_NAME_AVATAR)
+  public static final String JSON_PROPERTY_AVATAR = "avatar";
   private RetrieveAnOrganizationMember200ResponseUserAvatar avatar;
 
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+  public static final String JSON_PROPERTY_ID = "id";
   private String id;
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
+  public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public static final String SERIALIZED_NAME_USERNAME = "username";
-  @SerializedName(SERIALIZED_NAME_USERNAME)
+  public static final String JSON_PROPERTY_USERNAME = "username";
   private String username;
 
-  public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
+  public static final String JSON_PROPERTY_EMAIL = "email";
   private String email;
 
-  public static final String SERIALIZED_NAME_AVATAR_URL = "avatarUrl";
-  @SerializedName(SERIALIZED_NAME_AVATAR_URL)
+  public static final String JSON_PROPERTY_AVATAR_URL = "avatarUrl";
   private String avatarUrl;
 
-  public static final String SERIALIZED_NAME_IS_ACTIVE = "isActive";
-  @SerializedName(SERIALIZED_NAME_IS_ACTIVE)
+  public static final String JSON_PROPERTY_IS_ACTIVE = "isActive";
   private Boolean isActive;
 
-  public static final String SERIALIZED_NAME_HAS_PASSWORD_AUTH = "hasPasswordAuth";
-  @SerializedName(SERIALIZED_NAME_HAS_PASSWORD_AUTH)
+  public static final String JSON_PROPERTY_HAS_PASSWORD_AUTH = "hasPasswordAuth";
   private Boolean hasPasswordAuth;
 
-  public static final String SERIALIZED_NAME_IS_MANAGED = "isManaged";
-  @SerializedName(SERIALIZED_NAME_IS_MANAGED)
+  public static final String JSON_PROPERTY_IS_MANAGED = "isManaged";
   private Boolean isManaged;
 
-  public static final String SERIALIZED_NAME_DATE_JOINED = "dateJoined";
-  @SerializedName(SERIALIZED_NAME_DATE_JOINED)
+  public static final String JSON_PROPERTY_DATE_JOINED = "dateJoined";
   private OffsetDateTime dateJoined;
 
-  public static final String SERIALIZED_NAME_LAST_LOGIN = "lastLogin";
-  @SerializedName(SERIALIZED_NAME_LAST_LOGIN)
+  public static final String JSON_PROPERTY_LAST_LOGIN = "lastLogin";
   private OffsetDateTime lastLogin;
 
-  public static final String SERIALIZED_NAME_HAS2FA = "has2fa";
-  @SerializedName(SERIALIZED_NAME_HAS2FA)
+  public static final String JSON_PROPERTY_HAS2FA = "has2fa";
   private Boolean has2fa;
 
-  public static final String SERIALIZED_NAME_LAST_ACTIVE = "lastActive";
-  @SerializedName(SERIALIZED_NAME_LAST_ACTIVE)
+  public static final String JSON_PROPERTY_LAST_ACTIVE = "lastActive";
   private OffsetDateTime lastActive;
 
-  public static final String SERIALIZED_NAME_IS_SUPERUSER = "isSuperuser";
-  @SerializedName(SERIALIZED_NAME_IS_SUPERUSER)
+  public static final String JSON_PROPERTY_IS_SUPERUSER = "isSuperuser";
   private Boolean isSuperuser;
 
-  public static final String SERIALIZED_NAME_IS_STAFF = "isStaff";
-  @SerializedName(SERIALIZED_NAME_IS_STAFF)
+  public static final String JSON_PROPERTY_IS_STAFF = "isStaff";
   private Boolean isStaff;
 
-  public static final String SERIALIZED_NAME_EXPERIMENTS = "experiments";
-  @SerializedName(SERIALIZED_NAME_EXPERIMENTS)
+  public static final String JSON_PROPERTY_EXPERIMENTS = "experiments";
   private Map<String, Object> experiments = new HashMap<>();
 
-  public static final String SERIALIZED_NAME_EMAILS = "emails";
-  @SerializedName(SERIALIZED_NAME_EMAILS)
+  public static final String JSON_PROPERTY_EMAILS = "emails";
   private List<RetrieveAnOrganizationMember200ResponseUserEmailsInner> emails = new ArrayList<>();
 
-  public RetrieveAnOrganizationMember200ResponseUser() {
+  public RetrieveAnOrganizationMember200ResponseUser() { 
   }
 
   public RetrieveAnOrganizationMember200ResponseUser identities(List<RetrieveAnOrganizationMember200ResponseUserIdentitiesInner> identities) {
-    
     this.identities = identities;
     return this;
   }
@@ -153,19 +134,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get identities
    * @return identities
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_IDENTITIES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public List<RetrieveAnOrganizationMember200ResponseUserIdentitiesInner> getIdentities() {
     return identities;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IDENTITIES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIdentities(List<RetrieveAnOrganizationMember200ResponseUserIdentitiesInner> identities) {
     this.identities = identities;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser avatar(RetrieveAnOrganizationMember200ResponseUserAvatar avatar) {
-    
     this.avatar = avatar;
     return this;
   }
@@ -174,19 +159,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get avatar
    * @return avatar
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_AVATAR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public RetrieveAnOrganizationMember200ResponseUserAvatar getAvatar() {
     return avatar;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AVATAR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAvatar(RetrieveAnOrganizationMember200ResponseUserAvatar avatar) {
     this.avatar = avatar;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -195,19 +184,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get id
    * @return id
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getId() {
     return id;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ID)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setId(String id) {
     this.id = id;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -216,19 +209,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get name
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getName() {
     return name;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setName(String name) {
     this.name = name;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser username(String username) {
-    
     this.username = username;
     return this;
   }
@@ -237,19 +234,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get username
    * @return username
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_USERNAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getUsername() {
     return username;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USERNAME)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setUsername(String username) {
     this.username = username;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser email(String email) {
-    
     this.email = email;
     return this;
   }
@@ -258,19 +259,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get email
    * @return email
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EMAIL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getEmail() {
     return email;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EMAIL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEmail(String email) {
     this.email = email;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser avatarUrl(String avatarUrl) {
-    
     this.avatarUrl = avatarUrl;
     return this;
   }
@@ -279,19 +284,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get avatarUrl
    * @return avatarUrl
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_AVATAR_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public String getAvatarUrl() {
     return avatarUrl;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AVATAR_URL)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAvatarUrl(String avatarUrl) {
     this.avatarUrl = avatarUrl;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser isActive(Boolean isActive) {
-    
     this.isActive = isActive;
     return this;
   }
@@ -300,19 +309,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get isActive
    * @return isActive
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_ACTIVE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsActive() {
     return isActive;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_ACTIVE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsActive(Boolean isActive) {
     this.isActive = isActive;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser hasPasswordAuth(Boolean hasPasswordAuth) {
-    
     this.hasPasswordAuth = hasPasswordAuth;
     return this;
   }
@@ -321,19 +334,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get hasPasswordAuth
    * @return hasPasswordAuth
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS_PASSWORD_AUTH)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHasPasswordAuth() {
     return hasPasswordAuth;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_PASSWORD_AUTH)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHasPasswordAuth(Boolean hasPasswordAuth) {
     this.hasPasswordAuth = hasPasswordAuth;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser isManaged(Boolean isManaged) {
-    
     this.isManaged = isManaged;
     return this;
   }
@@ -342,19 +359,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get isManaged
    * @return isManaged
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_MANAGED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsManaged() {
     return isManaged;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_MANAGED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsManaged(Boolean isManaged) {
     this.isManaged = isManaged;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser dateJoined(OffsetDateTime dateJoined) {
-    
     this.dateJoined = dateJoined;
     return this;
   }
@@ -363,19 +384,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get dateJoined
    * @return dateJoined
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_DATE_JOINED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getDateJoined() {
     return dateJoined;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_JOINED)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setDateJoined(OffsetDateTime dateJoined) {
     this.dateJoined = dateJoined;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser lastLogin(OffsetDateTime lastLogin) {
-    
     this.lastLogin = lastLogin;
     return this;
   }
@@ -384,19 +409,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get lastLogin
    * @return lastLogin
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_LAST_LOGIN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getLastLogin() {
     return lastLogin;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LAST_LOGIN)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLastLogin(OffsetDateTime lastLogin) {
     this.lastLogin = lastLogin;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser has2fa(Boolean has2fa) {
-    
     this.has2fa = has2fa;
     return this;
   }
@@ -405,19 +434,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get has2fa
    * @return has2fa
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_HAS2FA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getHas2fa() {
     return has2fa;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS2FA)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setHas2fa(Boolean has2fa) {
     this.has2fa = has2fa;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser lastActive(OffsetDateTime lastActive) {
-    
     this.lastActive = lastActive;
     return this;
   }
@@ -426,19 +459,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get lastActive
    * @return lastActive
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_LAST_ACTIVE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public OffsetDateTime getLastActive() {
     return lastActive;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LAST_ACTIVE)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setLastActive(OffsetDateTime lastActive) {
     this.lastActive = lastActive;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser isSuperuser(Boolean isSuperuser) {
-    
     this.isSuperuser = isSuperuser;
     return this;
   }
@@ -447,19 +484,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get isSuperuser
    * @return isSuperuser
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_SUPERUSER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsSuperuser() {
     return isSuperuser;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_SUPERUSER)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsSuperuser(Boolean isSuperuser) {
     this.isSuperuser = isSuperuser;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser isStaff(Boolean isStaff) {
-    
     this.isStaff = isStaff;
     return this;
   }
@@ -468,19 +509,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get isStaff
    * @return isStaff
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_IS_STAFF)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public Boolean getIsStaff() {
     return isStaff;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_STAFF)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setIsStaff(Boolean isStaff) {
     this.isStaff = isStaff;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser experiments(Map<String, Object> experiments) {
-    
     this.experiments = experiments;
     return this;
   }
@@ -497,19 +542,23 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get experiments
    * @return experiments
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EXPERIMENTS)
+  @JsonInclude(content = JsonInclude.Include.ALWAYS, value = JsonInclude.Include.ALWAYS)
+
   public Map<String, Object> getExperiments() {
     return experiments;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXPERIMENTS)
+  @JsonInclude(content = JsonInclude.Include.ALWAYS, value = JsonInclude.Include.ALWAYS)
   public void setExperiments(Map<String, Object> experiments) {
     this.experiments = experiments;
   }
 
 
   public RetrieveAnOrganizationMember200ResponseUser emails(List<RetrieveAnOrganizationMember200ResponseUserEmailsInner> emails) {
-    
     this.emails = emails;
     return this;
   }
@@ -526,18 +575,25 @@ public class RetrieveAnOrganizationMember200ResponseUser {
    * Get emails
    * @return emails
   **/
-  @javax.annotation.Nonnull
+  @jakarta.annotation.Nonnull
+  @JsonProperty(JSON_PROPERTY_EMAILS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
+
   public List<RetrieveAnOrganizationMember200ResponseUserEmailsInner> getEmails() {
     return emails;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EMAILS)
+  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setEmails(List<RetrieveAnOrganizationMember200ResponseUserEmailsInner> emails) {
     this.emails = emails;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_an_Organization_Member_200_response_user object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -609,171 +665,5 @@ public class RetrieveAnOrganizationMember200ResponseUser {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("identities");
-    openapiFields.add("avatar");
-    openapiFields.add("id");
-    openapiFields.add("name");
-    openapiFields.add("username");
-    openapiFields.add("email");
-    openapiFields.add("avatarUrl");
-    openapiFields.add("isActive");
-    openapiFields.add("hasPasswordAuth");
-    openapiFields.add("isManaged");
-    openapiFields.add("dateJoined");
-    openapiFields.add("lastLogin");
-    openapiFields.add("has2fa");
-    openapiFields.add("lastActive");
-    openapiFields.add("isSuperuser");
-    openapiFields.add("isStaff");
-    openapiFields.add("experiments");
-    openapiFields.add("emails");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("id");
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("username");
-    openapiRequiredFields.add("email");
-    openapiRequiredFields.add("avatarUrl");
-    openapiRequiredFields.add("isActive");
-    openapiRequiredFields.add("hasPasswordAuth");
-    openapiRequiredFields.add("isManaged");
-    openapiRequiredFields.add("dateJoined");
-    openapiRequiredFields.add("lastLogin");
-    openapiRequiredFields.add("has2fa");
-    openapiRequiredFields.add("lastActive");
-    openapiRequiredFields.add("isSuperuser");
-    openapiRequiredFields.add("isStaff");
-    openapiRequiredFields.add("experiments");
-    openapiRequiredFields.add("emails");
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnOrganizationMember200ResponseUser
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnOrganizationMember200ResponseUser.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnOrganizationMember200ResponseUser is not found in the empty JSON string", RetrieveAnOrganizationMember200ResponseUser.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnOrganizationMember200ResponseUser.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnOrganizationMember200ResponseUser` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveAnOrganizationMember200ResponseUser.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if (jsonObj.get("identities") != null && !jsonObj.get("identities").isJsonNull()) {
-        JsonArray jsonArrayidentities = jsonObj.getAsJsonArray("identities");
-        if (jsonArrayidentities != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("identities").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `identities` to be an array in the JSON string but got `%s`", jsonObj.get("identities").toString()));
-          }
-
-          // validate the optional field `identities` (array)
-          for (int i = 0; i < jsonArrayidentities.size(); i++) {
-            RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.validateJsonObject(jsonArrayidentities.get(i).getAsJsonObject());
-          };
-        }
-      }
-      // validate the optional field `avatar`
-      if (jsonObj.get("avatar") != null && !jsonObj.get("avatar").isJsonNull()) {
-        RetrieveAnOrganizationMember200ResponseUserAvatar.validateJsonObject(jsonObj.getAsJsonObject("avatar"));
-      }
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
-      }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      if (!jsonObj.get("username").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("username").toString()));
-      }
-      if (!jsonObj.get("email").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `email` to be a primitive type in the JSON string but got `%s`", jsonObj.get("email").toString()));
-      }
-      if (!jsonObj.get("avatarUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `avatarUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("avatarUrl").toString()));
-      }
-      // ensure the json data is an array
-      if (!jsonObj.get("emails").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `emails` to be an array in the JSON string but got `%s`", jsonObj.get("emails").toString()));
-      }
-
-      JsonArray jsonArrayemails = jsonObj.getAsJsonArray("emails");
-      // validate the required field `emails` (array)
-      for (int i = 0; i < jsonArrayemails.size(); i++) {
-        RetrieveAnOrganizationMember200ResponseUserEmailsInner.validateJsonObject(jsonArrayemails.get(i).getAsJsonObject());
-      };
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnOrganizationMember200ResponseUser.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnOrganizationMember200ResponseUser' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnOrganizationMember200ResponseUser> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnOrganizationMember200ResponseUser.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnOrganizationMember200ResponseUser>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnOrganizationMember200ResponseUser value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnOrganizationMember200ResponseUser read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnOrganizationMember200ResponseUser given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnOrganizationMember200ResponseUser
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnOrganizationMember200ResponseUser
-  */
-  public static RetrieveAnOrganizationMember200ResponseUser fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnOrganizationMember200ResponseUser.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnOrganizationMember200ResponseUser to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

@@ -15,59 +15,40 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * RetrieveAnIssue200ResponseStats
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  RetrieveAnIssue200ResponseStats.JSON_PROPERTY_24H,
+  RetrieveAnIssue200ResponseStats.JSON_PROPERTY_30D
+})
+@JsonTypeName("Retrieve_an_Issue_200_response_stats")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class RetrieveAnIssue200ResponseStats {
-  public static final String SERIALIZED_NAME_24H = "24h";
-  @SerializedName(SERIALIZED_NAME_24H)
+  public static final String JSON_PROPERTY_24H = "24h";
   private List<List<BigDecimal>> _24h;
 
-  public static final String SERIALIZED_NAME_30D = "30d";
-  @SerializedName(SERIALIZED_NAME_30D)
+  public static final String JSON_PROPERTY_30D = "30d";
   private List<List<BigDecimal>> _30d;
 
-  public RetrieveAnIssue200ResponseStats() {
+  public RetrieveAnIssue200ResponseStats() { 
   }
 
   public RetrieveAnIssue200ResponseStats _24h(List<List<BigDecimal>> _24h) {
-    
     this._24h = _24h;
     return this;
   }
@@ -84,19 +65,23 @@ public class RetrieveAnIssue200ResponseStats {
    * Get _24h
    * @return _24h
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_24H)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public List<List<BigDecimal>> get24h() {
     return _24h;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_24H)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void set24h(List<List<BigDecimal>> _24h) {
     this._24h = _24h;
   }
 
 
   public RetrieveAnIssue200ResponseStats _30d(List<List<BigDecimal>> _30d) {
-    
     this._30d = _30d;
     return this;
   }
@@ -113,18 +98,25 @@ public class RetrieveAnIssue200ResponseStats {
    * Get _30d
    * @return _30d
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_30D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public List<List<BigDecimal>> get30d() {
     return _30d;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_30D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void set30d(List<List<BigDecimal>> _30d) {
     this._30d = _30d;
   }
 
 
-
+  /**
+   * Return true if this Retrieve_an_Issue_200_response_stats object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -164,97 +156,5 @@ public class RetrieveAnIssue200ResponseStats {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("24h");
-    openapiFields.add("30d");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnIssue200ResponseStats
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!RetrieveAnIssue200ResponseStats.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnIssue200ResponseStats is not found in the empty JSON string", RetrieveAnIssue200ResponseStats.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnIssue200ResponseStats.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnIssue200ResponseStats` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("24h") != null && !jsonObj.get("24h").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `24h` to be an array in the JSON string but got `%s`", jsonObj.get("24h").toString()));
-      }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("30d") != null && !jsonObj.get("30d").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `30d` to be an array in the JSON string but got `%s`", jsonObj.get("30d").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnIssue200ResponseStats.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnIssue200ResponseStats' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnIssue200ResponseStats> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnIssue200ResponseStats.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnIssue200ResponseStats>() {
-           @Override
-           public void write(JsonWriter out, RetrieveAnIssue200ResponseStats value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public RetrieveAnIssue200ResponseStats read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of RetrieveAnIssue200ResponseStats given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of RetrieveAnIssue200ResponseStats
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnIssue200ResponseStats
-  */
-  public static RetrieveAnIssue200ResponseStats fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnIssue200ResponseStats.class);
-  }
-
- /**
-  * Convert an instance of RetrieveAnIssue200ResponseStats to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 

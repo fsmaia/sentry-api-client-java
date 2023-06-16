@@ -15,71 +15,52 @@ package com.sentry.api.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
+import java.util.Map;
+import java.util.HashMap;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sentry.api.client.JSON;
+
 
 /**
  * UpdateAnOrganizationSReleaseRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
+@JsonPropertyOrder({
+  UpdateAnOrganizationSReleaseRequest.JSON_PROPERTY_REF,
+  UpdateAnOrganizationSReleaseRequest.JSON_PROPERTY_URL,
+  UpdateAnOrganizationSReleaseRequest.JSON_PROPERTY_DATE_RELEASED,
+  UpdateAnOrganizationSReleaseRequest.JSON_PROPERTY_COMMITS,
+  UpdateAnOrganizationSReleaseRequest.JSON_PROPERTY_REFS
+})
+@JsonTypeName("Update_an_Organization_s_Release_request")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
 public class UpdateAnOrganizationSReleaseRequest {
-  public static final String SERIALIZED_NAME_REF = "ref";
-  @SerializedName(SERIALIZED_NAME_REF)
+  public static final String JSON_PROPERTY_REF = "ref";
   private String ref;
 
-  public static final String SERIALIZED_NAME_URL = "url";
-  @SerializedName(SERIALIZED_NAME_URL)
+  public static final String JSON_PROPERTY_URL = "url";
   private String url;
 
-  public static final String SERIALIZED_NAME_DATE_RELEASED = "dateReleased";
-  @SerializedName(SERIALIZED_NAME_DATE_RELEASED)
+  public static final String JSON_PROPERTY_DATE_RELEASED = "dateReleased";
   private OffsetDateTime dateReleased;
 
-  public static final String SERIALIZED_NAME_COMMITS = "commits";
-  @SerializedName(SERIALIZED_NAME_COMMITS)
+  public static final String JSON_PROPERTY_COMMITS = "commits";
   private List<Object> commits;
 
-  public static final String SERIALIZED_NAME_REFS = "refs";
-  @SerializedName(SERIALIZED_NAME_REFS)
+  public static final String JSON_PROPERTY_REFS = "refs";
   private List<Object> refs;
 
-  public UpdateAnOrganizationSReleaseRequest() {
+  public UpdateAnOrganizationSReleaseRequest() { 
   }
 
   public UpdateAnOrganizationSReleaseRequest ref(String ref) {
-    
     this.ref = ref;
     return this;
   }
@@ -88,19 +69,23 @@ public class UpdateAnOrganizationSReleaseRequest {
    * An optional commit reference. This is useful if a tagged version has been provided.
    * @return ref
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_REF)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getRef() {
     return ref;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REF)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRef(String ref) {
     this.ref = ref;
   }
 
 
   public UpdateAnOrganizationSReleaseRequest url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -109,19 +94,23 @@ public class UpdateAnOrganizationSReleaseRequest {
    * A URL that points to the release. This can be the path to an online interface to the source code for instance.
    * @return url
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public String getUrl() {
     return url;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUrl(String url) {
     this.url = url;
   }
 
 
   public UpdateAnOrganizationSReleaseRequest dateReleased(OffsetDateTime dateReleased) {
-    
     this.dateReleased = dateReleased;
     return this;
   }
@@ -130,19 +119,23 @@ public class UpdateAnOrganizationSReleaseRequest {
    * An optional date that indicates when the release went live. If not provided the current time is assumed.
    * @return dateReleased
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_DATE_RELEASED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public OffsetDateTime getDateReleased() {
     return dateReleased;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_RELEASED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDateReleased(OffsetDateTime dateReleased) {
     this.dateReleased = dateReleased;
   }
 
 
   public UpdateAnOrganizationSReleaseRequest commits(List<Object> commits) {
-    
     this.commits = commits;
     return this;
   }
@@ -159,19 +152,23 @@ public class UpdateAnOrganizationSReleaseRequest {
    * An optional list of commit data to be associated with the release. Commits must include parameters &#x60;id&#x60; (the sha of the commit), and can optionally include &#x60;repository&#x60;, &#x60;message&#x60;, &#x60;author_name&#x60;, &#x60;author_email&#x60;, and &#x60;timestamp&#x60;.
    * @return commits
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_COMMITS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public List<Object> getCommits() {
     return commits;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMMITS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCommits(List<Object> commits) {
     this.commits = commits;
   }
 
 
   public UpdateAnOrganizationSReleaseRequest refs(List<Object> refs) {
-    
     this.refs = refs;
     return this;
   }
@@ -188,18 +185,25 @@ public class UpdateAnOrganizationSReleaseRequest {
    * An optional way to indicate the start and end commits for each repository included in a release. Head commits must include parameters &#x60;repository&#x60; and &#x60;commit&#x60; (the HEAD sha). They can optionally include &#x60;previousCommit&#x60; (the sha of the HEAD of the previous release), which should be specified if this is the first time you&#39;ve sent commit data.
    * @return refs
   **/
-  @javax.annotation.Nullable
+  @jakarta.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_REFS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
   public List<Object> getRefs() {
     return refs;
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REFS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRefs(List<Object> refs) {
     this.refs = refs;
   }
 
 
-
+  /**
+   * Return true if this Update_an_Organization_s_Release_request object is equal to o.
+   */
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -245,106 +249,5 @@ public class UpdateAnOrganizationSReleaseRequest {
     return o.toString().replace("\n", "\n    ");
   }
 
-
-  public static HashSet<String> openapiFields;
-  public static HashSet<String> openapiRequiredFields;
-
-  static {
-    // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>();
-    openapiFields.add("ref");
-    openapiFields.add("url");
-    openapiFields.add("dateReleased");
-    openapiFields.add("commits");
-    openapiFields.add("refs");
-
-    // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>();
-  }
-
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to UpdateAnOrganizationSReleaseRequest
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!UpdateAnOrganizationSReleaseRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateAnOrganizationSReleaseRequest is not found in the empty JSON string", UpdateAnOrganizationSReleaseRequest.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!UpdateAnOrganizationSReleaseRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UpdateAnOrganizationSReleaseRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("ref") != null && !jsonObj.get("ref").isJsonNull()) && !jsonObj.get("ref").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `ref` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref").toString()));
-      }
-      if ((jsonObj.get("url") != null && !jsonObj.get("url").isJsonNull()) && !jsonObj.get("url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
-      }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("commits") != null && !jsonObj.get("commits").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `commits` to be an array in the JSON string but got `%s`", jsonObj.get("commits").toString()));
-      }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("refs") != null && !jsonObj.get("refs").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `refs` to be an array in the JSON string but got `%s`", jsonObj.get("refs").toString()));
-      }
-  }
-
-  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-    @SuppressWarnings("unchecked")
-    @Override
-    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!UpdateAnOrganizationSReleaseRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'UpdateAnOrganizationSReleaseRequest' and its subtypes
-       }
-       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<UpdateAnOrganizationSReleaseRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(UpdateAnOrganizationSReleaseRequest.class));
-
-       return (TypeAdapter<T>) new TypeAdapter<UpdateAnOrganizationSReleaseRequest>() {
-           @Override
-           public void write(JsonWriter out, UpdateAnOrganizationSReleaseRequest value) throws IOException {
-             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             elementAdapter.write(out, obj);
-           }
-
-           @Override
-           public UpdateAnOrganizationSReleaseRequest read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
-           }
-
-       }.nullSafe();
-    }
-  }
-
- /**
-  * Create an instance of UpdateAnOrganizationSReleaseRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateAnOrganizationSReleaseRequest
-  * @throws IOException if the JSON string is invalid with respect to UpdateAnOrganizationSReleaseRequest
-  */
-  public static UpdateAnOrganizationSReleaseRequest fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, UpdateAnOrganizationSReleaseRequest.class);
-  }
-
- /**
-  * Convert an instance of UpdateAnOrganizationSReleaseRequest to an JSON string
-  *
-  * @return JSON string
-  */
-  public String toJson() {
-    return JSON.getGson().toJson(this);
-  }
 }
 
