@@ -7084,7 +7084,7 @@ paths:
                     slug: javascript
                 groupID: "1341191803"
               schema:
-                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response'
+                $ref: '#/components/schemas/Retrieve_the_Oldest_Event_for_an_Issue_200_response'
           description: Success
         "403":
           description: Forbidden
@@ -7558,7 +7558,7 @@ paths:
                     slug: javascript
                 groupID: "1341191803"
               schema:
-                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response'
+                $ref: '#/components/schemas/Retrieve_the_Oldest_Event_for_an_Issue_200_response'
           description: Success
         "403":
           description: Forbidden
@@ -8006,7 +8006,7 @@ paths:
                 version: 2b6af31b2edccc73a629108b17344dfe20858780
               schema:
                 items:
-                  $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf'
+                  $ref: '#/components/schemas/Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf'
                 type: array
           description: Success
         "401":
@@ -8075,7 +8075,7 @@ paths:
                 url: null
                 version: 2.0rc2
               schema:
-                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf'
+                $ref: '#/components/schemas/Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf'
           description: Success
         "400":
           description: Bad Input
@@ -8164,7 +8164,7 @@ paths:
                 url: null
                 version: 2.0rc2
               schema:
-                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf'
+                $ref: '#/components/schemas/Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf'
           description: Success
         "403":
           description: Forbidden
@@ -8230,7 +8230,7 @@ paths:
                 url: null
                 version: 2.0rc2
               schema:
-                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf'
+                $ref: '#/components/schemas/Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf'
           description: Success
         "403":
           description: Forbidden
@@ -16104,33 +16104,7 @@ components:
           $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf_1_not'
         nullable: true
         type: string
-      type: object
     Retrieve_an_Event_for_a_Project_200_response_release_allOf:
-      example:
-        owner: "{}"
-        shortVersion: shortVersion
-        projects:
-        - name: name
-          slug: slug
-        - name: name
-          slug: slug
-        data: "{}"
-        commitCount: 6
-        lastCommit: "{}"
-        lastDeploy: null
-        version: version
-        url: url
-        newGroups: 5
-        ref: ref
-        dateCreated: 2000-01-23T04:56:07.000+00:00
-        firstEvent: 2000-01-23T04:56:07.000+00:00
-        lastEvent: 2000-01-23T04:56:07.000+00:00
-        deployCount: 1
-        dateReleased: 2000-01-23T04:56:07.000+00:00
-        id: 0
-        authors:
-        - "{}"
-        - "{}"
       properties:
         id:
           type: integer
@@ -17028,6 +17002,315 @@ components:
           $ref: '#/components/schemas/List_an_Issue_s_Hashes_200_response_inner_latestEvent'
         id:
           type: string
+      type: object
+    Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf_lastDeploy:
+      nullable: true
+      oneOf:
+      - $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf'
+      - not:
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf_1_not'
+        nullable: true
+        type: string
+      type: object
+    Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf:
+      example:
+        owner: "{}"
+        shortVersion: shortVersion
+        projects:
+        - name: name
+          slug: slug
+        - name: name
+          slug: slug
+        data: "{}"
+        commitCount: 6
+        lastCommit: "{}"
+        lastDeploy: null
+        version: version
+        url: url
+        newGroups: 5
+        ref: ref
+        dateCreated: 2000-01-23T04:56:07.000+00:00
+        firstEvent: 2000-01-23T04:56:07.000+00:00
+        lastEvent: 2000-01-23T04:56:07.000+00:00
+        deployCount: 1
+        dateReleased: 2000-01-23T04:56:07.000+00:00
+        id: 0
+        authors:
+        - "{}"
+        - "{}"
+      properties:
+        id:
+          type: integer
+        authors:
+          items:
+            type: object
+          type: array
+        commitCount:
+          format: int64
+          type: integer
+        data:
+          type: object
+        dateCreated:
+          format: date-time
+          type: string
+        dateReleased:
+          format: date-time
+          nullable: true
+          type: string
+        deployCount:
+          format: int64
+          type: integer
+        firstEvent:
+          format: date-time
+          nullable: true
+          type: string
+        lastCommit:
+          nullable: true
+          type: object
+        lastDeploy:
+          $ref: '#/components/schemas/Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf_lastDeploy'
+        lastEvent:
+          format: date-time
+          nullable: true
+          type: string
+        newGroups:
+          format: int64
+          type: integer
+        owner:
+          nullable: true
+          type: object
+        projects:
+          items:
+            $ref: '#/components/schemas/Retrieve_a_Project_200_response_latestRelease_projects_inner'
+          type: array
+        ref:
+          nullable: true
+          type: string
+        shortVersion:
+          type: string
+        version:
+          type: string
+        url:
+          nullable: true
+          type: string
+      required:
+      - authors
+      - commitCount
+      - data
+      - dateCreated
+      - dateReleased
+      - deployCount
+      - firstEvent
+      - lastCommit
+      - lastDeploy
+      - lastEvent
+      - newGroups
+      - owner
+      - projects
+      - ref
+      - shortVersion
+      - url
+      - version
+      type: object
+    Retrieve_the_Oldest_Event_for_an_Issue_200_response_release:
+      allOf:
+      - $ref: '#/components/schemas/Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf'
+      nullable: true
+      type: object
+    Retrieve_the_Oldest_Event_for_an_Issue_200_response:
+      example:
+        eventID: eventID
+        metadata: null
+        userReport: "{}"
+        nextEventID: nextEventID
+        release: null
+        dist: dist
+        _meta:
+          entries: "{}"
+          context: context
+          contexts: contexts
+          sdk: sdk
+          message: message
+          packages: packages
+          user: user
+          tags: "{}"
+        contexts:
+          trace:
+            op: op
+            trace_id: trace_id
+            span_id: span_id
+            type: type
+          os:
+            name: name
+            type: type
+            version: version
+          ForbiddenError:
+            statusText: statusText
+            responseJSON:
+              detail: detail
+            type: type
+            status: 1
+          browser:
+            name: name
+            type: type
+            version: version
+          organization:
+            id: id
+            type: type
+            slug: slug
+        type: type
+        title: title
+        platform: platform
+        dateCreated: dateCreated
+        dateReceived: dateReceived
+        context:
+          resp:
+            stack: stack
+            statusText: statusText
+            name: name
+            responseJSON:
+              detail: detail
+            message: message
+            status: 5
+          session:
+            foo: foo
+          unauthorized: true
+          url: url
+        id: id
+        groupID: groupID
+        previousEventID: previousEventID
+        message: message
+        packages: "{}"
+        tags:
+        - _meta: _meta
+          value: value
+          key: key
+        - _meta: _meta
+          value: value
+          key: key
+        fingerprints:
+        - fingerprints
+        - fingerprints
+        entries:
+        - null
+        - null
+        size: 0
+        sdk:
+          name: name
+          version: version
+        user:
+          data:
+            isStaff: true
+          name: name
+          ip_address: ip_address
+          id: id
+          email: email
+          username: username
+        errors:
+        - data:
+            column: 6
+            source: source
+            row: 1
+          message: message
+          type: type
+        - data:
+            column: 6
+            source: source
+            row: 1
+          message: message
+          type: type
+      properties:
+        eventID:
+          type: string
+        dist:
+          nullable: true
+          type: string
+        userReport:
+          nullable: true
+          type: object
+        previousEventID:
+          nullable: true
+          type: string
+        message:
+          type: string
+        id:
+          type: string
+        size:
+          type: integer
+        errors:
+          items:
+            $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_errors_inner'
+          type: array
+        platform:
+          type: string
+        nextEventID:
+          nullable: true
+          type: string
+        type:
+          type: string
+        metadata:
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_metadata'
+        tags:
+          items:
+            $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_tags_inner'
+          type: array
+        dateCreated:
+          type: string
+        dateReceived:
+          type: string
+        user:
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_user'
+        entries:
+          items:
+            $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_entries_inner'
+          type: array
+        packages:
+          type: object
+        sdk:
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_sdk'
+        _meta:
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response__meta'
+        contexts:
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts'
+        fingerprints:
+          items:
+            type: string
+          type: array
+        context:
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_context'
+        release:
+          $ref: '#/components/schemas/Retrieve_the_Oldest_Event_for_an_Issue_200_response_release'
+        groupID:
+          type: string
+        title:
+          type: string
+      required:
+      - _meta
+      - context
+      - contexts
+      - dateCreated
+      - dateReceived
+      - dist
+      - entries
+      - errors
+      - eventID
+      - fingerprints
+      - groupID
+      - id
+      - message
+      - metadata
+      - nextEventID
+      - packages
+      - platform
+      - previousEventID
+      - release
+      - sdk
+      - size
+      - tags
+      - title
+      - type
+      - user
+      - userReport
       type: object
     Retrieve_an_Issue_200_response_activity_inner:
       example:

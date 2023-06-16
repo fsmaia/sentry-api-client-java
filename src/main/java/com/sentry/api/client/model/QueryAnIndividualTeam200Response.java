@@ -41,7 +41,7 @@ import com.sentry.api.client.JSON;
   QueryAnIndividualTeam200Response.JSON_PROPERTY_MEMBERS
 })
 @JsonTypeName("Query_an_Individual_Team_200_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class QueryAnIndividualTeam200Response {
   public static final String JSON_PROPERTY_SCHEMAS = "schemas";
   private List<String> schemas = new ArrayList<>();

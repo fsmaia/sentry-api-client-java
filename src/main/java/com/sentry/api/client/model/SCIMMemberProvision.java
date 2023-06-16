@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   SCIMMemberProvision.JSON_PROPERTY_USER_NAME,
   SCIMMemberProvision.JSON_PROPERTY_SENTRY_ORG_ROLE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class SCIMMemberProvision {
   public static final String JSON_PROPERTY_USER_NAME = "userName";
   private String userName;

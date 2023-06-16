@@ -18,6 +18,7 @@ import com.sentry.api.client.model.ListAnIssueSHashes200ResponseInner;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200Response;
 import com.sentry.api.client.model.RetrieveAnIssue200Response;
 import com.sentry.api.client.model.RetrieveTagDetails200Response;
+import com.sentry.api.client.model.RetrieveTheOldestEventForAnIssue200Response;
 import java.util.UUID;
 import com.sentry.api.client.model.UpdateAnIssue200Response;
 import com.sentry.api.client.model.UpdateAnIssueRequest;
@@ -28,7 +29,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class EventsApi {
   private ApiClient apiClient;
 
@@ -784,7 +785,7 @@ public class EventsApi {
    * 
    * Retrieves the details of the latest event for an issue.
    * @param issueId The ID of the issue. (required)
-   * @return RetrieveAnEventForAProject200Response
+   * @return RetrieveTheOldestEventForAnIssue200Response
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -793,7 +794,7 @@ public class EventsApi {
        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
      </table>
    */
-  public RetrieveAnEventForAProject200Response retrieveTheLatestEventForAnIssue(String issueId) throws ApiException {
+  public RetrieveTheOldestEventForAnIssue200Response retrieveTheLatestEventForAnIssue(String issueId) throws ApiException {
     return retrieveTheLatestEventForAnIssueWithHttpInfo(issueId).getData();
   }
 
@@ -801,7 +802,7 @@ public class EventsApi {
    * 
    * Retrieves the details of the latest event for an issue.
    * @param issueId The ID of the issue. (required)
-   * @return ApiResponse&lt;RetrieveAnEventForAProject200Response&gt;
+   * @return ApiResponse&lt;RetrieveTheOldestEventForAnIssue200Response&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -810,7 +811,7 @@ public class EventsApi {
        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<RetrieveAnEventForAProject200Response> retrieveTheLatestEventForAnIssueWithHttpInfo(String issueId) throws ApiException {
+  public ApiResponse<RetrieveTheOldestEventForAnIssue200Response> retrieveTheLatestEventForAnIssueWithHttpInfo(String issueId) throws ApiException {
     // Check required parameters
     if (issueId == null) {
       throw new ApiException(400, "Missing the required parameter 'issueId' when calling retrieveTheLatestEventForAnIssue");
@@ -823,7 +824,7 @@ public class EventsApi {
     String localVarAccept = apiClient.selectHeaderAccept("application/json");
     String localVarContentType = apiClient.selectHeaderContentType();
     String[] localVarAuthNames = new String[] {"auth_token"};
-    GenericType<RetrieveAnEventForAProject200Response> localVarReturnType = new GenericType<RetrieveAnEventForAProject200Response>() {};
+    GenericType<RetrieveTheOldestEventForAnIssue200Response> localVarReturnType = new GenericType<RetrieveTheOldestEventForAnIssue200Response>() {};
     return apiClient.invokeAPI("EventsApi.retrieveTheLatestEventForAnIssue", localVarPath, "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                localVarAuthNames, localVarReturnType, false);
@@ -832,7 +833,7 @@ public class EventsApi {
    * 
    * Retrieves the details of the oldest event for an issue.
    * @param issueId The ID of the issue. (required)
-   * @return RetrieveAnEventForAProject200Response
+   * @return RetrieveTheOldestEventForAnIssue200Response
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -841,7 +842,7 @@ public class EventsApi {
        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
      </table>
    */
-  public RetrieveAnEventForAProject200Response retrieveTheOldestEventForAnIssue(String issueId) throws ApiException {
+  public RetrieveTheOldestEventForAnIssue200Response retrieveTheOldestEventForAnIssue(String issueId) throws ApiException {
     return retrieveTheOldestEventForAnIssueWithHttpInfo(issueId).getData();
   }
 
@@ -849,7 +850,7 @@ public class EventsApi {
    * 
    * Retrieves the details of the oldest event for an issue.
    * @param issueId The ID of the issue. (required)
-   * @return ApiResponse&lt;RetrieveAnEventForAProject200Response&gt;
+   * @return ApiResponse&lt;RetrieveTheOldestEventForAnIssue200Response&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -858,7 +859,7 @@ public class EventsApi {
        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<RetrieveAnEventForAProject200Response> retrieveTheOldestEventForAnIssueWithHttpInfo(String issueId) throws ApiException {
+  public ApiResponse<RetrieveTheOldestEventForAnIssue200Response> retrieveTheOldestEventForAnIssueWithHttpInfo(String issueId) throws ApiException {
     // Check required parameters
     if (issueId == null) {
       throw new ApiException(400, "Missing the required parameter 'issueId' when calling retrieveTheOldestEventForAnIssue");
@@ -871,7 +872,7 @@ public class EventsApi {
     String localVarAccept = apiClient.selectHeaderAccept("application/json");
     String localVarContentType = apiClient.selectHeaderContentType();
     String[] localVarAuthNames = new String[] {"auth_token"};
-    GenericType<RetrieveAnEventForAProject200Response> localVarReturnType = new GenericType<RetrieveAnEventForAProject200Response>() {};
+    GenericType<RetrieveTheOldestEventForAnIssue200Response> localVarReturnType = new GenericType<RetrieveTheOldestEventForAnIssue200Response>() {};
     return apiClient.invokeAPI("EventsApi.retrieveTheOldestEventForAnIssue", localVarPath, "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                localVarAuthNames, localVarReturnType, false);

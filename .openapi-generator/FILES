@@ -198,6 +198,10 @@ docs/RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy.md
 docs/RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.md
 docs/RetrieveReleaseHealthSessionStatistics400Response.md
 docs/RetrieveTagDetails200Response.md
+docs/RetrieveTheOldestEventForAnIssue200Response.md
+docs/RetrieveTheOldestEventForAnIssue200ResponseRelease.md
+docs/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf.md
+docs/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy.md
 docs/SCIMListResponseEnvelopeSCIMMemberIndexResponse.md
 docs/SCIMListResponseEnvelopeSCIMTeamIndexResponse.md
 docs/SCIMMemberProvision.md
@@ -445,6 +449,10 @@ src/main/java/com/sentry/api/client/model/RetrieveReleaseHealthSessionStatistics
 src/main/java/com/sentry/api/client/model/RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.java
 src/main/java/com/sentry/api/client/model/RetrieveReleaseHealthSessionStatistics400Response.java
 src/main/java/com/sentry/api/client/model/RetrieveTagDetails200Response.java
+src/main/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200Response.java
+src/main/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseRelease.java
+src/main/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf.java
+src/main/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy.java
 src/main/java/com/sentry/api/client/model/SCIMListResponseEnvelopeSCIMMemberIndexResponse.java
 src/main/java/com/sentry/api/client/model/SCIMListResponseEnvelopeSCIMTeamIndexResponse.java
 src/main/java/com/sentry/api/client/model/SCIMMemberProvision.java
@@ -665,6 +673,10 @@ src/test/java/com/sentry/api/client/model/RetrieveReleaseHealthSessionStatistics
 src/test/java/com/sentry/api/client/model/RetrieveReleaseHealthSessionStatistics200ResponseTest.java
 src/test/java/com/sentry/api/client/model/RetrieveReleaseHealthSessionStatistics400ResponseTest.java
 src/test/java/com/sentry/api/client/model/RetrieveTagDetails200ResponseTest.java
+src/test/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployTest.java
+src/test/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfTest.java
+src/test/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseTest.java
+src/test/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseTest.java
 src/test/java/com/sentry/api/client/model/SCIMListResponseEnvelopeSCIMMemberIndexResponseTest.java
 src/test/java/com/sentry/api/client/model/SCIMListResponseEnvelopeSCIMTeamIndexResponseTest.java
 src/test/java/com/sentry/api/client/model/SCIMMemberProvisionTest.java

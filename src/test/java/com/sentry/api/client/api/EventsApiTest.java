@@ -25,6 +25,7 @@ import com.sentry.api.client.model.ListAnIssueSHashes200ResponseInner;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200Response;
 import com.sentry.api.client.model.RetrieveAnIssue200Response;
 import com.sentry.api.client.model.RetrieveTagDetails200Response;
+import com.sentry.api.client.model.RetrieveTheOldestEventForAnIssue200Response;
 import java.util.UUID;
 import com.sentry.api.client.model.UpdateAnIssue200Response;
 import com.sentry.api.client.model.UpdateAnIssueRequest;
@@ -221,7 +222,7 @@ public class EventsApiTest {
     @Test
     public void retrieveTheLatestEventForAnIssueTest() throws ApiException {
         //String issueId = null;
-        //RetrieveAnEventForAProject200Response response = api.retrieveTheLatestEventForAnIssue(issueId);
+        //RetrieveTheOldestEventForAnIssue200Response response = api.retrieveTheLatestEventForAnIssue(issueId);
         // TODO: test validations
     }
 
@@ -233,7 +234,7 @@ public class EventsApiTest {
     @Test
     public void retrieveTheOldestEventForAnIssueTest() throws ApiException {
         //String issueId = null;
-        //RetrieveAnEventForAProject200Response response = api.retrieveTheOldestEventForAnIssue(issueId);
+        //RetrieveTheOldestEventForAnIssue200Response response = api.retrieveTheOldestEventForAnIssue(issueId);
         // TODO: test validations
     }
 

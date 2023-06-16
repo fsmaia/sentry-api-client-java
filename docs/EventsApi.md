@@ -951,7 +951,7 @@ public class Example {
 
 ## retrieveTheLatestEventForAnIssue
 
-> RetrieveAnEventForAProject200Response retrieveTheLatestEventForAnIssue(issueId)
+> RetrieveTheOldestEventForAnIssue200Response retrieveTheLatestEventForAnIssue(issueId)
 
 
 
@@ -980,7 +980,7 @@ public class Example {
         EventsApi apiInstance = new EventsApi(defaultClient);
         String issueId = "issueId_example"; // String | The ID of the issue.
         try {
-            RetrieveAnEventForAProject200Response result = apiInstance.retrieveTheLatestEventForAnIssue(issueId);
+            RetrieveTheOldestEventForAnIssue200Response result = apiInstance.retrieveTheLatestEventForAnIssue(issueId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EventsApi#retrieveTheLatestEventForAnIssue");
@@ -1002,7 +1002,7 @@ public class Example {
 
 ### Return type
 
-[**RetrieveAnEventForAProject200Response**](RetrieveAnEventForAProject200Response.md)
+[**RetrieveTheOldestEventForAnIssue200Response**](RetrieveTheOldestEventForAnIssue200Response.md)
 
 ### Authorization
 
@@ -1022,7 +1022,7 @@ public class Example {
 
 ## retrieveTheOldestEventForAnIssue
 
-> RetrieveAnEventForAProject200Response retrieveTheOldestEventForAnIssue(issueId)
+> RetrieveTheOldestEventForAnIssue200Response retrieveTheOldestEventForAnIssue(issueId)
 
 
 
@@ -1051,7 +1051,7 @@ public class Example {
         EventsApi apiInstance = new EventsApi(defaultClient);
         String issueId = "issueId_example"; // String | The ID of the issue.
         try {
-            RetrieveAnEventForAProject200Response result = apiInstance.retrieveTheOldestEventForAnIssue(issueId);
+            RetrieveTheOldestEventForAnIssue200Response result = apiInstance.retrieveTheOldestEventForAnIssue(issueId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EventsApi#retrieveTheOldestEventForAnIssue");
@@ -1073,7 +1073,7 @@ public class Example {
 
 ### Return type
 
-[**RetrieveAnEventForAProject200Response**](RetrieveAnEventForAProject200Response.md)
+[**RetrieveTheOldestEventForAnIssue200Response**](RetrieveTheOldestEventForAnIssue200Response.md)
 
 ### Authorization
 

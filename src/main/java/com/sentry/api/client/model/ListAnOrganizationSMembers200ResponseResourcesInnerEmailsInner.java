@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner.JSON_PROPERTY_TYPE
 })
 @JsonTypeName("List_an_Organization_s_Members_200_response_Resources_inner_emails_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner {
   public static final String JSON_PROPERTY_PRIMARY = "primary";
   private Boolean primary;

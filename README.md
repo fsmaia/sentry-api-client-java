@@ -4,7 +4,7 @@ API Reference
 
 - API version: v0
 
-- Build date: 2023-06-16T14:43:30.075015Z[Etc/UTC]
+- Build date: 2023-06-16T15:18:46.808333Z[Etc/UTC]
 
 Sentry Public API
 
@@ -410,6 +410,10 @@ Class | Method | HTTP request | Description
  - [RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals](docs/RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.md)
  - [RetrieveReleaseHealthSessionStatistics400Response](docs/RetrieveReleaseHealthSessionStatistics400Response.md)
  - [RetrieveTagDetails200Response](docs/RetrieveTagDetails200Response.md)
+ - [RetrieveTheOldestEventForAnIssue200Response](docs/RetrieveTheOldestEventForAnIssue200Response.md)
+ - [RetrieveTheOldestEventForAnIssue200ResponseRelease](docs/RetrieveTheOldestEventForAnIssue200ResponseRelease.md)
+ - [RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf](docs/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf.md)
+ - [RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy](docs/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy.md)
  - [SCIMListResponseEnvelopeSCIMMemberIndexResponse](docs/SCIMListResponseEnvelopeSCIMMemberIndexResponse.md)
  - [SCIMListResponseEnvelopeSCIMTeamIndexResponse](docs/SCIMListResponseEnvelopeSCIMTeamIndexResponse.md)
  - [SCIMMemberProvision](docs/SCIMMemberProvision.md)

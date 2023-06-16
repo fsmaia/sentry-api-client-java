@@ -39,7 +39,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.JSON_PROPERTY_ID
 })
 @JsonTypeName("Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf {
   public static final String JSON_PROPERTY_ENVIRONMENT = "environment";
   private String environment;

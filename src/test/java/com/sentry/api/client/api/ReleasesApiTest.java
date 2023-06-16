@@ -21,10 +21,10 @@ import java.io.File;
 import com.sentry.api.client.model.ListARepositorySCommits200ResponseInner;
 import com.sentry.api.client.model.ListAnOrganizationSReleaseFiles200ResponseInner;
 import java.time.OffsetDateTime;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOf;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf;
 import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics200Response;
 import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics400Response;
+import com.sentry.api.client.model.RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf;
 import com.sentry.api.client.model.UpdateAnOrganizationReleaseFileRequest;
 import com.sentry.api.client.model.UpdateAnOrganizationSReleaseRequest;
 
@@ -67,7 +67,7 @@ public class ReleasesApiTest {
     public void createANewReleaseForAnOrganizationTest() throws ApiException {
         //String organizationSlug = null;
         //CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest = null;
-        //RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.createANewReleaseForAnOrganization(organizationSlug, createANewReleaseForAnOrganizationRequest);
+        //RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf response = api.createANewReleaseForAnOrganization(organizationSlug, createANewReleaseForAnOrganizationRequest);
         // TODO: test validations
     }
 
@@ -189,7 +189,7 @@ public class ReleasesApiTest {
     public void listAnOrganizationsReleasesTest() throws ApiException {
         //String organizationSlug = null;
         //String query = null;
-        //List<RetrieveAnEventForAProject200ResponseReleaseAllOf> response = api.listAnOrganizationsReleases(organizationSlug, query);
+        //List<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf> response = api.listAnOrganizationsReleases(organizationSlug, query);
         // TODO: test validations
     }
 
@@ -247,7 +247,7 @@ public class ReleasesApiTest {
     public void retrieveAnOrganizationsReleasesTest() throws ApiException {
         //String organizationSlug = null;
         //String version = null;
-        //RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.retrieveAnOrganizationsReleases(organizationSlug, version);
+        //RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf response = api.retrieveAnOrganizationsReleases(organizationSlug, version);
         // TODO: test validations
     }
 
@@ -329,7 +329,7 @@ public class ReleasesApiTest {
         //String organizationSlug = null;
         //String version = null;
         //UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest = null;
-        //RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.updateAnOrganizationsRelease(organizationSlug, version, updateAnOrganizationSReleaseRequest);
+        //RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf response = api.updateAnOrganizationsRelease(organizationSlug, version, updateAnOrganizationSReleaseRequest);
         // TODO: test validations
     }
 

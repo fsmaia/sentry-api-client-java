@@ -41,7 +41,7 @@ import com.sentry.api.client.JSON;
   RetrieveCheckInsForAMonitor200ResponseInner.JSON_PROPERTY_MONITOR_CONFIG
 })
 @JsonTypeName("Retrieve_check_ins_for_a_monitor_200_response_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class RetrieveCheckInsForAMonitor200ResponseInner {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

@@ -40,7 +40,7 @@ import com.sentry.api.client.JSON;
   RetrieveReleaseHealthSessionStatistics200Response.JSON_PROPERTY_GROUPS
 })
 @JsonTypeName("Retrieve_Release_Health_Session_Statistics_200_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class RetrieveReleaseHealthSessionStatistics200Response {
   public static final String JSON_PROPERTY_START = "start";
   private OffsetDateTime start;

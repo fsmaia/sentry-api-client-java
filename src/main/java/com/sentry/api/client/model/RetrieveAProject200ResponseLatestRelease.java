@@ -53,7 +53,7 @@ import com.sentry.api.client.JSON;
   RetrieveAProject200ResponseLatestRelease.JSON_PROPERTY_VERSION
 })
 @JsonTypeName("Retrieve_a_Project_200_response_latestRelease")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class RetrieveAProject200ResponseLatestRelease {
   public static final String JSON_PROPERTY_AUTHORS = "authors";
   private List<RetrieveAProject200ResponseLatestReleaseAuthorsInner> authors = new ArrayList<>();

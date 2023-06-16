@@ -39,7 +39,7 @@ import com.sentry.api.client.JSON;
   RetrieveAProject200ResponseOptions.JSON_PROPERTY_SENTRY_COLON_REPROCESSING_ACTIVE
 })
 @JsonTypeName("Retrieve_a_Project_200_response_options")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class RetrieveAProject200ResponseOptions {
   public static final String JSON_PROPERTY_FEEDBACK_COLON_BRANDING = "feedback:branding";
   private Boolean feedbackColonBranding;

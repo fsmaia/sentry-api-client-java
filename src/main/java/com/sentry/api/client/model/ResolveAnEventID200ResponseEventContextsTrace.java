@@ -36,7 +36,7 @@ import com.sentry.api.client.JSON;
   ResolveAnEventID200ResponseEventContextsTrace.JSON_PROPERTY_OP
 })
 @JsonTypeName("Resolve_an_Event_ID_200_response_event_contexts_trace")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventContextsTrace {
   public static final String JSON_PROPERTY_SPAN_ID = "span_id";
   private String spanId;

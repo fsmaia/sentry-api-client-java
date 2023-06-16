@@ -38,7 +38,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSIntegrationPlatformInstallations200ResponseInner.JSON_PROPERTY_STATUS
 })
 @JsonTypeName("List_an_Organization_s_Integration_Platform_Installations_200_response_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class ListAnOrganizationSIntegrationPlatformInstallations200ResponseInner {
   public static final String JSON_PROPERTY_APP = "app";
   private ListAnOrganizationSIntegrationPlatformInstallations200ResponseInnerApp app;

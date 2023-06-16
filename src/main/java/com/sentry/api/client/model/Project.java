@@ -63,7 +63,7 @@ import com.sentry.api.client.JSON;
   Project.JSON_PROPERTY_COLOR,
   Project.JSON_PROPERTY_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class Project {
   public static final String JSON_PROPERTY_STATS = "stats";
   private JsonNullable<Object> stats = JsonNullable.<Object>of(null);

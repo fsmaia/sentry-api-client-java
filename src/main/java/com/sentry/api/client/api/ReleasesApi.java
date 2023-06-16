@@ -14,10 +14,10 @@ import java.io.File;
 import com.sentry.api.client.model.ListARepositorySCommits200ResponseInner;
 import com.sentry.api.client.model.ListAnOrganizationSReleaseFiles200ResponseInner;
 import java.time.OffsetDateTime;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOf;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf;
 import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics200Response;
 import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics400Response;
+import com.sentry.api.client.model.RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf;
 import com.sentry.api.client.model.UpdateAnOrganizationReleaseFileRequest;
 import com.sentry.api.client.model.UpdateAnOrganizationSReleaseRequest;
 
@@ -27,7 +27,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class ReleasesApi {
   private ApiClient apiClient;
 
@@ -122,7 +122,7 @@ public class ReleasesApi {
    * Create a new release for the given organization.  Releases are used by Sentry to improve its error reporting abilities by correlating first seen events with the release that might have introduced the problem. Releases are also necessary for source maps and other debug features that require manual upload for functioning well.
    * @param organizationSlug The slug of the organization. (required)
    * @param createANewReleaseForAnOrganizationRequest  (optional)
-   * @return RetrieveAnEventForAProject200ResponseReleaseAllOf
+   * @return RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -132,7 +132,7 @@ public class ReleasesApi {
        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
      </table>
    */
-  public RetrieveAnEventForAProject200ResponseReleaseAllOf createANewReleaseForAnOrganization(String organizationSlug, CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest) throws ApiException {
+  public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf createANewReleaseForAnOrganization(String organizationSlug, CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest) throws ApiException {
     return createANewReleaseForAnOrganizationWithHttpInfo(organizationSlug, createANewReleaseForAnOrganizationRequest).getData();
   }
 
@@ -141,7 +141,7 @@ public class ReleasesApi {
    * Create a new release for the given organization.  Releases are used by Sentry to improve its error reporting abilities by correlating first seen events with the release that might have introduced the problem. Releases are also necessary for source maps and other debug features that require manual upload for functioning well.
    * @param organizationSlug The slug of the organization. (required)
    * @param createANewReleaseForAnOrganizationRequest  (optional)
-   * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;
+   * @return ApiResponse&lt;RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -151,7 +151,7 @@ public class ReleasesApi {
        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOf> createANewReleaseForAnOrganizationWithHttpInfo(String organizationSlug, CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest) throws ApiException {
+  public ApiResponse<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf> createANewReleaseForAnOrganizationWithHttpInfo(String organizationSlug, CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest) throws ApiException {
     // Check required parameters
     if (organizationSlug == null) {
       throw new ApiException(400, "Missing the required parameter 'organizationSlug' when calling createANewReleaseForAnOrganization");
@@ -164,7 +164,7 @@ public class ReleasesApi {
     String localVarAccept = apiClient.selectHeaderAccept("application/json");
     String localVarContentType = apiClient.selectHeaderContentType("application/json");
     String[] localVarAuthNames = new String[] {"auth_token"};
-    GenericType<RetrieveAnEventForAProject200ResponseReleaseAllOf> localVarReturnType = new GenericType<RetrieveAnEventForAProject200ResponseReleaseAllOf>() {};
+    GenericType<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf> localVarReturnType = new GenericType<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf>() {};
     return apiClient.invokeAPI("ReleasesApi.createANewReleaseForAnOrganization", localVarPath, "POST", new ArrayList<>(), createANewReleaseForAnOrganizationRequest,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                localVarAuthNames, localVarReturnType, false);
@@ -642,7 +642,7 @@ public class ReleasesApi {
    * Return a list of releases for a given organization.
    * @param organizationSlug The slug of the organization. (required)
    * @param query This parameter can be used to create a \&quot;starts with\&quot; filter for the version. (optional)
-   * @return List&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;
+   * @return List&lt;RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -653,7 +653,7 @@ public class ReleasesApi {
        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
    */
-  public List<RetrieveAnEventForAProject200ResponseReleaseAllOf> listAnOrganizationsReleases(String organizationSlug, String query) throws ApiException {
+  public List<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf> listAnOrganizationsReleases(String organizationSlug, String query) throws ApiException {
     return listAnOrganizationsReleasesWithHttpInfo(organizationSlug, query).getData();
   }
 
@@ -662,7 +662,7 @@ public class ReleasesApi {
    * Return a list of releases for a given organization.
    * @param organizationSlug The slug of the organization. (required)
    * @param query This parameter can be used to create a \&quot;starts with\&quot; filter for the version. (optional)
-   * @return ApiResponse&lt;List&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;&gt;
+   * @return ApiResponse&lt;List&lt;RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf&gt;&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -673,7 +673,7 @@ public class ReleasesApi {
        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<List<RetrieveAnEventForAProject200ResponseReleaseAllOf>> listAnOrganizationsReleasesWithHttpInfo(String organizationSlug, String query) throws ApiException {
+  public ApiResponse<List<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf>> listAnOrganizationsReleasesWithHttpInfo(String organizationSlug, String query) throws ApiException {
     // Check required parameters
     if (organizationSlug == null) {
       throw new ApiException(400, "Missing the required parameter 'organizationSlug' when calling listAnOrganizationsReleases");
@@ -691,7 +691,7 @@ public class ReleasesApi {
     String localVarAccept = apiClient.selectHeaderAccept("application/json");
     String localVarContentType = apiClient.selectHeaderContentType();
     String[] localVarAuthNames = new String[] {"auth_token"};
-    GenericType<List<RetrieveAnEventForAProject200ResponseReleaseAllOf>> localVarReturnType = new GenericType<List<RetrieveAnEventForAProject200ResponseReleaseAllOf>>() {};
+    GenericType<List<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf>> localVarReturnType = new GenericType<List<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf>>() {};
     return apiClient.invokeAPI("ReleasesApi.listAnOrganizationsReleases", localVarPath, "GET", localVarQueryParams, null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                localVarAuthNames, localVarReturnType, false);
@@ -905,7 +905,7 @@ public class ReleasesApi {
    * Return a release for a given organization.
    * @param organizationSlug The slug of the organization the release belongs to. (required)
    * @param version The version identifier of the release. (required)
-   * @return RetrieveAnEventForAProject200ResponseReleaseAllOf
+   * @return RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -915,7 +915,7 @@ public class ReleasesApi {
        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
    */
-  public RetrieveAnEventForAProject200ResponseReleaseAllOf retrieveAnOrganizationsReleases(String organizationSlug, String version) throws ApiException {
+  public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf retrieveAnOrganizationsReleases(String organizationSlug, String version) throws ApiException {
     return retrieveAnOrganizationsReleasesWithHttpInfo(organizationSlug, version).getData();
   }
 
@@ -924,7 +924,7 @@ public class ReleasesApi {
    * Return a release for a given organization.
    * @param organizationSlug The slug of the organization the release belongs to. (required)
    * @param version The version identifier of the release. (required)
-   * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;
+   * @return ApiResponse&lt;RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -934,7 +934,7 @@ public class ReleasesApi {
        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOf> retrieveAnOrganizationsReleasesWithHttpInfo(String organizationSlug, String version) throws ApiException {
+  public ApiResponse<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf> retrieveAnOrganizationsReleasesWithHttpInfo(String organizationSlug, String version) throws ApiException {
     // Check required parameters
     if (organizationSlug == null) {
       throw new ApiException(400, "Missing the required parameter 'organizationSlug' when calling retrieveAnOrganizationsReleases");
@@ -951,7 +951,7 @@ public class ReleasesApi {
     String localVarAccept = apiClient.selectHeaderAccept("application/json");
     String localVarContentType = apiClient.selectHeaderContentType();
     String[] localVarAuthNames = new String[] {"auth_token"};
-    GenericType<RetrieveAnEventForAProject200ResponseReleaseAllOf> localVarReturnType = new GenericType<RetrieveAnEventForAProject200ResponseReleaseAllOf>() {};
+    GenericType<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf> localVarReturnType = new GenericType<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf>() {};
     return apiClient.invokeAPI("ReleasesApi.retrieveAnOrganizationsReleases", localVarPath, "GET", new ArrayList<>(), null,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                localVarAuthNames, localVarReturnType, false);
@@ -1248,7 +1248,7 @@ public class ReleasesApi {
    * @param organizationSlug The slug of the organization the release belongs to. (required)
    * @param version The version identifier of the release. (required)
    * @param updateAnOrganizationSReleaseRequest  (optional)
-   * @return RetrieveAnEventForAProject200ResponseReleaseAllOf
+   * @return RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -1258,7 +1258,7 @@ public class ReleasesApi {
        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
    */
-  public RetrieveAnEventForAProject200ResponseReleaseAllOf updateAnOrganizationsRelease(String organizationSlug, String version, UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest) throws ApiException {
+  public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf updateAnOrganizationsRelease(String organizationSlug, String version, UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest) throws ApiException {
     return updateAnOrganizationsReleaseWithHttpInfo(organizationSlug, version, updateAnOrganizationSReleaseRequest).getData();
   }
 
@@ -1268,7 +1268,7 @@ public class ReleasesApi {
    * @param organizationSlug The slug of the organization the release belongs to. (required)
    * @param version The version identifier of the release. (required)
    * @param updateAnOrganizationSReleaseRequest  (optional)
-   * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;
+   * @return ApiResponse&lt;RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf&gt;
    * @throws ApiException if fails to make API call
    * @http.response.details
      <table summary="Response Details" border="1">
@@ -1278,7 +1278,7 @@ public class ReleasesApi {
        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOf> updateAnOrganizationsReleaseWithHttpInfo(String organizationSlug, String version, UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest) throws ApiException {
+  public ApiResponse<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf> updateAnOrganizationsReleaseWithHttpInfo(String organizationSlug, String version, UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest) throws ApiException {
     // Check required parameters
     if (organizationSlug == null) {
       throw new ApiException(400, "Missing the required parameter 'organizationSlug' when calling updateAnOrganizationsRelease");
@@ -1295,7 +1295,7 @@ public class ReleasesApi {
     String localVarAccept = apiClient.selectHeaderAccept("application/json");
     String localVarContentType = apiClient.selectHeaderContentType("application/json");
     String[] localVarAuthNames = new String[] {"auth_token"};
-    GenericType<RetrieveAnEventForAProject200ResponseReleaseAllOf> localVarReturnType = new GenericType<RetrieveAnEventForAProject200ResponseReleaseAllOf>() {};
+    GenericType<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf> localVarReturnType = new GenericType<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf>() {};
     return apiClient.invokeAPI("ReleasesApi.updateAnOrganizationsRelease", localVarPath, "PUT", new ArrayList<>(), updateAnOrganizationSReleaseRequest,
                                new LinkedHashMap<>(), new LinkedHashMap<>(), new LinkedHashMap<>(), localVarAccept, localVarContentType,
                                localVarAuthNames, localVarReturnType, false);

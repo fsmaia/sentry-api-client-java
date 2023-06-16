@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   CreateANewReleaseForAnOrganizationRequestRefsInner.JSON_PROPERTY_PREVIOUS_COMMIT
 })
 @JsonTypeName("Create_a_New_Release_for_an_Organization_request_refs_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class CreateANewReleaseForAnOrganizationRequestRefsInner {
   public static final String JSON_PROPERTY_REPOSITORY = "repository";
   private String repository;

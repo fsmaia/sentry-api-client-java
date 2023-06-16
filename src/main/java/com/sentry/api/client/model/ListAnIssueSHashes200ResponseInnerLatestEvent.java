@@ -65,7 +65,7 @@ import com.sentry.api.client.JSON;
   ListAnIssueSHashes200ResponseInnerLatestEvent.JSON_PROPERTY_TITLE
 })
 @JsonTypeName("List_an_Issue_s_Hashes_200_response_inner_latestEvent")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class ListAnIssueSHashes200ResponseInnerLatestEvent {
   public static final String JSON_PROPERTY_EVENT_I_D = "eventID";
   private String eventID;

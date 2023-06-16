@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   ResolveAShortID200ResponseGroupProject.JSON_PROPERTY_NAME
 })
 @JsonTypeName("Resolve_a_Short_ID_200_response_group_project")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class ResolveAShortID200ResponseGroupProject {
   public static final String JSON_PROPERTY_SLUG = "slug";
   private String slug;

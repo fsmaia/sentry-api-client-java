@@ -41,7 +41,7 @@ import com.sentry.api.client.JSON;
   CreateAMonitorRequestAlertRule.JSON_PROPERTY_TARGETS
 })
 @JsonTypeName("Create_a_monitor_request_alert_rule")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class CreateAMonitorRequestAlertRule {
   public static final String JSON_PROPERTY_ENVIRONMENT = "environment";
   private JsonNullable<String> environment = JsonNullable.<String>undefined();

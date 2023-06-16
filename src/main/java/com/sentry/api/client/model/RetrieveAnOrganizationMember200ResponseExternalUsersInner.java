@@ -39,7 +39,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnOrganizationMember200ResponseExternalUsersInner.JSON_PROPERTY_INTEGRATION_ID
 })
 @JsonTypeName("Retrieve_an_Organization_Member_200_response_externalUsers_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseExternalUsersInner {
   public static final String JSON_PROPERTY_EXTERNAL_ID = "externalId";
   private String externalId;

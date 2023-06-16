@@ -108,7 +108,7 @@ public class Example {
 
 ## createANewReleaseForAnOrganization
 
-> RetrieveAnEventForAProject200ResponseReleaseAllOf createANewReleaseForAnOrganization(organizationSlug, createANewReleaseForAnOrganizationRequest)
+> RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf createANewReleaseForAnOrganization(organizationSlug, createANewReleaseForAnOrganizationRequest)
 
 
 
@@ -143,7 +143,7 @@ public class Example {
         String organizationSlug = "organizationSlug_example"; // String | The slug of the organization.
         CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest = new CreateANewReleaseForAnOrganizationRequest(); // CreateANewReleaseForAnOrganizationRequest | 
         try {
-            RetrieveAnEventForAProject200ResponseReleaseAllOf result = apiInstance.createANewReleaseForAnOrganization(organizationSlug, createANewReleaseForAnOrganizationRequest);
+            RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf result = apiInstance.createANewReleaseForAnOrganization(organizationSlug, createANewReleaseForAnOrganizationRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReleasesApi#createANewReleaseForAnOrganization");
@@ -166,7 +166,7 @@ public class Example {
 
 ### Return type
 
-[**RetrieveAnEventForAProject200ResponseReleaseAllOf**](RetrieveAnEventForAProject200ResponseReleaseAllOf.md)
+[**RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf**](RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf.md)
 
 ### Authorization
 
@@ -784,7 +784,7 @@ public class Example {
 
 ## listAnOrganizationsReleases
 
-> List&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt; listAnOrganizationsReleases(organizationSlug, query)
+> List&lt;RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf&gt; listAnOrganizationsReleases(organizationSlug, query)
 
 
 
@@ -814,7 +814,7 @@ public class Example {
         String organizationSlug = "organizationSlug_example"; // String | The slug of the organization.
         String query = "query_example"; // String | This parameter can be used to create a \"starts with\" filter for the version.
         try {
-            List<RetrieveAnEventForAProject200ResponseReleaseAllOf> result = apiInstance.listAnOrganizationsReleases(organizationSlug, query);
+            List<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf> result = apiInstance.listAnOrganizationsReleases(organizationSlug, query);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReleasesApi#listAnOrganizationsReleases");
@@ -837,7 +837,7 @@ public class Example {
 
 ### Return type
 
-[**List&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;**](RetrieveAnEventForAProject200ResponseReleaseAllOf.md)
+[**List&lt;RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf&gt;**](RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf.md)
 
 ### Authorization
 
@@ -1092,7 +1092,7 @@ public class Example {
 
 ## retrieveAnOrganizationsReleases
 
-> RetrieveAnEventForAProject200ResponseReleaseAllOf retrieveAnOrganizationsReleases(organizationSlug, version)
+> RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf retrieveAnOrganizationsReleases(organizationSlug, version)
 
 
 
@@ -1122,7 +1122,7 @@ public class Example {
         String organizationSlug = "organizationSlug_example"; // String | The slug of the organization the release belongs to.
         String version = "version_example"; // String | The version identifier of the release.
         try {
-            RetrieveAnEventForAProject200ResponseReleaseAllOf result = apiInstance.retrieveAnOrganizationsReleases(organizationSlug, version);
+            RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf result = apiInstance.retrieveAnOrganizationsReleases(organizationSlug, version);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReleasesApi#retrieveAnOrganizationsReleases");
@@ -1145,7 +1145,7 @@ public class Example {
 
 ### Return type
 
-[**RetrieveAnEventForAProject200ResponseReleaseAllOf**](RetrieveAnEventForAProject200ResponseReleaseAllOf.md)
+[**RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf**](RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf.md)
 
 ### Authorization
 
@@ -1501,7 +1501,7 @@ public class Example {
 
 ## updateAnOrganizationsRelease
 
-> RetrieveAnEventForAProject200ResponseReleaseAllOf updateAnOrganizationsRelease(organizationSlug, version, updateAnOrganizationSReleaseRequest)
+> RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf updateAnOrganizationsRelease(organizationSlug, version, updateAnOrganizationSReleaseRequest)
 
 
 
@@ -1532,7 +1532,7 @@ public class Example {
         String version = "version_example"; // String | The version identifier of the release.
         UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest = new UpdateAnOrganizationSReleaseRequest(); // UpdateAnOrganizationSReleaseRequest | 
         try {
-            RetrieveAnEventForAProject200ResponseReleaseAllOf result = apiInstance.updateAnOrganizationsRelease(organizationSlug, version, updateAnOrganizationSReleaseRequest);
+            RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf result = apiInstance.updateAnOrganizationsRelease(organizationSlug, version, updateAnOrganizationSReleaseRequest);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ReleasesApi#updateAnOrganizationsRelease");
@@ -1556,7 +1556,7 @@ public class Example {
 
 ### Return type
 
-[**RetrieveAnEventForAProject200ResponseReleaseAllOf**](RetrieveAnEventForAProject200ResponseReleaseAllOf.md)
+[**RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf**](RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf.md)
 
 ### Authorization
 
