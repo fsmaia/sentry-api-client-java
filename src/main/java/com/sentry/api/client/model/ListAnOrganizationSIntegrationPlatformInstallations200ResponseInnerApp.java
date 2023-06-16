@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSIntegrationPlatformInstallations200ResponseInnerApp.JSON_PROPERTY_SLUG
 })
 @JsonTypeName("List_an_Organization_s_Integration_Platform_Installations_200_response_inner_app")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class ListAnOrganizationSIntegrationPlatformInstallations200ResponseInnerApp {
   public static final String JSON_PROPERTY_UUID = "uuid";
   private String uuid;

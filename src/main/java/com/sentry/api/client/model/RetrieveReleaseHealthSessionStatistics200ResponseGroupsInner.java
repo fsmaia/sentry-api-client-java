@@ -40,7 +40,7 @@ import com.sentry.api.client.JSON;
   RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner.JSON_PROPERTY_SERIES
 })
 @JsonTypeName("Retrieve_Release_Health_Session_Statistics_200_response_groups_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner {
   public static final String JSON_PROPERTY_BY = "by";
   private RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy by;

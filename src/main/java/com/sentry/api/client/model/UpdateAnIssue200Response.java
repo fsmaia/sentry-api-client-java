@@ -61,7 +61,7 @@ import com.sentry.api.client.JSON;
   UpdateAnIssue200Response.JSON_PROPERTY_USER_COUNT
 })
 @JsonTypeName("Update_an_Issue_200_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class UpdateAnIssue200Response {
   public static final String JSON_PROPERTY_ANNOTATIONS = "annotations";
   private List<String> annotations = new ArrayList<>();

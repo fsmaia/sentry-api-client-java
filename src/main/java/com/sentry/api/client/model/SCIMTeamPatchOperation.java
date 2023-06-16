@@ -36,7 +36,7 @@ import com.sentry.api.client.JSON;
   SCIMTeamPatchOperation.JSON_PROPERTY_VALUE,
   SCIMTeamPatchOperation.JSON_PROPERTY_PATH
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class SCIMTeamPatchOperation {
   public static final String JSON_PROPERTY_OP = "op";
   private String op;

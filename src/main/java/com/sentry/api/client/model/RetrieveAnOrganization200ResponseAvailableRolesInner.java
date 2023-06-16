@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnOrganization200ResponseAvailableRolesInner.JSON_PROPERTY_NAME
 })
 @JsonTypeName("Retrieve_an_Organization_200_response_availableRoles_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class RetrieveAnOrganization200ResponseAvailableRolesInner {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

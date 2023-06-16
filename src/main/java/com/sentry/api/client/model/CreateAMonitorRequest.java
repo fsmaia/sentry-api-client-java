@@ -41,7 +41,7 @@ import com.sentry.api.client.JSON;
   CreateAMonitorRequest.JSON_PROPERTY_ALERT_RULE
 })
 @JsonTypeName("Create_a_monitor_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class CreateAMonitorRequest {
   public static final String JSON_PROPERTY_PROJECT = "project";
   private String project;

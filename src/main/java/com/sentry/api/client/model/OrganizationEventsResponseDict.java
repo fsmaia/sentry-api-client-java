@@ -37,7 +37,7 @@ import com.sentry.api.client.JSON;
   OrganizationEventsResponseDict.JSON_PROPERTY_DATA,
   OrganizationEventsResponseDict.JSON_PROPERTY_META
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class OrganizationEventsResponseDict {
   public static final String JSON_PROPERTY_DATA = "data";
   private List<Map<String, Object>> data = new ArrayList<>();

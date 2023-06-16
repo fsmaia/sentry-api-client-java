@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   ListAProjectSClientKeys200ResponseInnerBrowserSdk.JSON_PROPERTY_CHOICES
 })
 @JsonTypeName("List_a_Project_s_Client_Keys_200_response_inner_browserSdk")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class ListAProjectSClientKeys200ResponseInnerBrowserSdk {
   public static final String JSON_PROPERTY_CHOICES = "choices";
   private List<List<String>> choices;

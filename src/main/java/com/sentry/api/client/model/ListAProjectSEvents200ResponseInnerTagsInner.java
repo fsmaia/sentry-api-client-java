@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   ListAProjectSEvents200ResponseInnerTagsInner.JSON_PROPERTY_KEY
 })
 @JsonTypeName("List_a_Project_s_Events_200_response_inner_tags_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class ListAProjectSEvents200ResponseInnerTagsInner {
   public static final String JSON_PROPERTY_VALUE = "value";
   private String value;

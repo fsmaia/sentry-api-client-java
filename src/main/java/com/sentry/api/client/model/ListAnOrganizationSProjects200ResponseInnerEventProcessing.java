@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSProjects200ResponseInnerEventProcessing.JSON_PROPERTY_SYMBOLICATION_DEGRADED
 })
 @JsonTypeName("List_an_Organization_s_Projects_200_response_inner_eventProcessing")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class ListAnOrganizationSProjects200ResponseInnerEventProcessing {
   public static final String JSON_PROPERTY_SYMBOLICATION_DEGRADED = "symbolicationDegraded";
   private Boolean symbolicationDegraded;

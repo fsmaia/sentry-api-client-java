@@ -36,7 +36,7 @@ import com.sentry.api.client.JSON;
   ListAProjectSIssues200ResponseInnerStats.JSON_PROPERTY_24H
 })
 @JsonTypeName("List_a_Project_s_Issues_200_response_inner_stats")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class ListAProjectSIssues200ResponseInnerStats {
   public static final String JSON_PROPERTY_24H = "24h";
   private List<List<BigDecimal>> _24h;

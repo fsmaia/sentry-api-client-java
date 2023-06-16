@@ -44,7 +44,7 @@ import com.sentry.api.client.JSON;
   ResolveAnEventID200ResponseEventMeta.JSON_PROPERTY_USER
 })
 @JsonTypeName("Resolve_an_Event_ID_200_response_event__meta")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventMeta {
   public static final String JSON_PROPERTY_CONTEXT = "context";
   private JsonNullable<String> context = JsonNullable.<String>undefined();

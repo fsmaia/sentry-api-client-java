@@ -36,7 +36,7 @@ import com.sentry.api.client.JSON;
   SCIMPatchRequest.JSON_PROPERTY_SCHEMAS,
   SCIMPatchRequest.JSON_PROPERTY_OPERATIONS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class SCIMPatchRequest {
   public static final String JSON_PROPERTY_SCHEMAS = "schemas";
   private List<String> schemas;

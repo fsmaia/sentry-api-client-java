@@ -38,7 +38,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnEventForAProject200ResponseContext.JSON_PROPERTY_URL
 })
 @JsonTypeName("Retrieve_an_Event_for_a_Project_200_response_context")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseContext {
   public static final String JSON_PROPERTY_RESP = "resp";
   private RetrieveAnEventForAProject200ResponseContextResp resp;

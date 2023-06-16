@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   RetrieveAProject200ResponsePluginsInnerAuthor.JSON_PROPERTY_URL
 })
 @JsonTypeName("Retrieve_a_Project_200_response_plugins_inner_author")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class RetrieveAProject200ResponsePluginsInnerAuthor {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;

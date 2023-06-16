@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   ProvisionANewOrganizationMemberRequest.JSON_PROPERTY_SENTRY_ORG_ROLE
 })
 @JsonTypeName("Provision_a_New_Organization_Member_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class ProvisionANewOrganizationMemberRequest {
   public static final String JSON_PROPERTY_USER_NAME = "userName";
   private String userName;

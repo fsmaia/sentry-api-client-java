@@ -38,7 +38,7 @@ import com.sentry.api.client.JSON;
   RetrieveATeam200ResponseAvatar.JSON_PROPERTY_AVATAR_UUID
 })
 @JsonTypeName("Retrieve_a_Team_200_response_avatar")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class RetrieveATeam200ResponseAvatar {
   public static final String JSON_PROPERTY_AVATAR_TYPE = "avatarType";
   private String avatarType;

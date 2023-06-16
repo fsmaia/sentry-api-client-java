@@ -36,7 +36,7 @@ import com.sentry.api.client.JSON;
   RegisterANewServiceHookRequest.JSON_PROPERTY_EVENTS
 })
 @JsonTypeName("Register_a_New_Service_Hook_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class RegisterANewServiceHookRequest {
   public static final String JSON_PROPERTY_URL = "url";
   private String url;

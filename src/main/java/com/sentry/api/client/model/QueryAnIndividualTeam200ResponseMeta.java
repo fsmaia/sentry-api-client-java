@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   QueryAnIndividualTeam200ResponseMeta.JSON_PROPERTY_RESOURCE_TYPE
 })
 @JsonTypeName("Query_an_Individual_Team_200_response_meta")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:46:47.521074Z[Etc/UTC]")
 public class QueryAnIndividualTeam200ResponseMeta {
   public static final String JSON_PROPERTY_RESOURCE_TYPE = "resourceType";
   private String resourceType;
