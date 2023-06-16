@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   UpdateAnOrganizationReleaseFileRequest.JSON_PROPERTY_DIST
 })
 @JsonTypeName("Update_an_Organization_Release_File_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class UpdateAnOrganizationReleaseFileRequest {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;

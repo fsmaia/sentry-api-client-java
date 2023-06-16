@@ -40,7 +40,7 @@ import com.sentry.api.client.JSON;
   MonitorCheckInValidator.JSON_PROPERTY_ENVIRONMENT,
   MonitorCheckInValidator.JSON_PROPERTY_MONITOR_CONFIG
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class MonitorCheckInValidator {
   /**
    * Gets or Sets status

@@ -41,7 +41,7 @@ import com.sentry.api.client.JSON;
   BulkMutateAListOfIssuesRequest.JSON_PROPERTY_IS_BOOKMARKED
 })
 @JsonTypeName("Bulk_Mutate_a_List_of_Issues_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class BulkMutateAListOfIssuesRequest {
   public static final String JSON_PROPERTY_STATUS = "status";
   private String status;

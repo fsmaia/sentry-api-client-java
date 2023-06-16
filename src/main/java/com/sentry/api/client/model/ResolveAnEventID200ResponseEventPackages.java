@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   ResolveAnEventID200ResponseEventPackages.JSON_PROPERTY_MY_PACKAGE
 })
 @JsonTypeName("Resolve_an_Event_ID_200_response_event_packages")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventPackages {
   public static final String JSON_PROPERTY_MY_PACKAGE = "my.package";
   private String myPackage;

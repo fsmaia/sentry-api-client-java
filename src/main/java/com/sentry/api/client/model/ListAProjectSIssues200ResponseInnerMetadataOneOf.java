@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   ListAProjectSIssues200ResponseInnerMetadataOneOf.JSON_PROPERTY_VALUE
 })
 @JsonTypeName("List_a_Project_s_Issues_200_response_inner_metadata_oneOf")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class ListAProjectSIssues200ResponseInnerMetadataOneOf {
   public static final String JSON_PROPERTY_FILENAME = "filename";
   private String filename;

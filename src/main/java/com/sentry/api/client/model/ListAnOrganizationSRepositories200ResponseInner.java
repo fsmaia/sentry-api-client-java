@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSRepositories200ResponseInner.JSON_PROPERTY_NAME
 })
 @JsonTypeName("List_an_Organization_s_Repositories_200_response_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class ListAnOrganizationSRepositories200ResponseInner {
   public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private String dateCreated;

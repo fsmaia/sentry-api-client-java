@@ -56,7 +56,7 @@ import com.sentry.api.client.JSON;
   Team.JSON_PROPERTY_AVATAR,
   Team.JSON_PROPERTY_ORG_ROLE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class Team {
   public static final String JSON_PROPERTY_EXTERNAL_TEAMS = "externalTeams";
   private List<RetrieveAnOrganizationMember200ResponseExternalUsersInner> externalTeams;

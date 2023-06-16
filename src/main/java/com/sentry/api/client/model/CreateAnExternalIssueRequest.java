@@ -36,7 +36,7 @@ import com.sentry.api.client.JSON;
   CreateAnExternalIssueRequest.JSON_PROPERTY_IDENTIFIER
 })
 @JsonTypeName("Create_an_External_Issue_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class CreateAnExternalIssueRequest {
   public static final String JSON_PROPERTY_ISSUE_ID = "issueId";
   private Integer issueId;

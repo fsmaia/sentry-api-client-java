@@ -36,7 +36,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnEventForAProject200ResponseErrorsInner.JSON_PROPERTY_DATA
 })
 @JsonTypeName("Retrieve_an_Event_for_a_Project_200_response_errors_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseErrorsInner {
   public static final String JSON_PROPERTY_MESSAGE = "message";
   private String message;

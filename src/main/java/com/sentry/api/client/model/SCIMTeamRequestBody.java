@@ -36,7 +36,7 @@ import com.sentry.api.client.JSON;
   SCIMTeamRequestBody.JSON_PROPERTY_DISPLAY_NAME,
   SCIMTeamRequestBody.JSON_PROPERTY_MEMBERS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class SCIMTeamRequestBody {
   public static final String JSON_PROPERTY_SCHEMAS = "schemas";
   private List<Object> schemas = new ArrayList<>();

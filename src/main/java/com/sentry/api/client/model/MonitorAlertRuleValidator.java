@@ -40,7 +40,7 @@ import com.sentry.api.client.JSON;
   MonitorAlertRuleValidator.JSON_PROPERTY_ENVIRONMENT,
   MonitorAlertRuleValidator.JSON_PROPERTY_TARGETS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class MonitorAlertRuleValidator {
   public static final String JSON_PROPERTY_ENVIRONMENT = "environment";
   private JsonNullable<String> environment = JsonNullable.<String>undefined();

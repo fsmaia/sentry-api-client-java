@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnEventForAProject200ResponseMetadataOneOf.JSON_PROPERTY_VALUE
 })
 @JsonTypeName("Retrieve_an_Event_for_a_Project_200_response_metadata_oneOf")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseMetadataOneOf {
   public static final String JSON_PROPERTY_TYPE = "type";
   private String type;

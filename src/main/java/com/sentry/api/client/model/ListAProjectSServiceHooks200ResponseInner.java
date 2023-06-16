@@ -40,7 +40,7 @@ import com.sentry.api.client.JSON;
   ListAProjectSServiceHooks200ResponseInner.JSON_PROPERTY_URL
 })
 @JsonTypeName("List_a_Project_s_Service_Hooks_200_response_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class ListAProjectSServiceHooks200ResponseInner {
   public static final String JSON_PROPERTY_DATE_CREATED = "dateCreated";
   private String dateCreated;

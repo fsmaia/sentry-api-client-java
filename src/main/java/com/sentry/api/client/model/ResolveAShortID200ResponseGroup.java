@@ -63,7 +63,7 @@ import com.sentry.api.client.JSON;
   ResolveAShortID200ResponseGroup.JSON_PROPERTY_STATUS_DETAILS
 })
 @JsonTypeName("Resolve_a_Short_ID_200_response_group")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class ResolveAShortID200ResponseGroup {
   public static final String JSON_PROPERTY_LAST_SEEN = "lastSeen";
   private String lastSeen;

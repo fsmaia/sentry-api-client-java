@@ -44,7 +44,7 @@ import com.sentry.api.client.JSON;
   CreateANewReleaseForAnOrganizationRequest.JSON_PROPERTY_REFS
 })
 @JsonTypeName("Create_a_New_Release_for_an_Organization_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class CreateANewReleaseForAnOrganizationRequest {
   public static final String JSON_PROPERTY_VERSION = "version";
   private String version;

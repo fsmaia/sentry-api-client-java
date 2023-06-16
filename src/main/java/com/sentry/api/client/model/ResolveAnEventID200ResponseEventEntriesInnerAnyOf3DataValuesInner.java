@@ -41,7 +41,7 @@ import com.sentry.api.client.JSON;
   ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner.JSON_PROPERTY_TYPE
 })
 @JsonTypeName("Resolve_an_Event_ID_200_response_event_entries_inner_anyOf_3_data_values_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner {
   public static final String JSON_PROPERTY_STACKTRACE = "stacktrace";
   private ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktrace stacktrace;

@@ -41,7 +41,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnOrganizationMember200ResponseUserIdentitiesInner.JSON_PROPERTY_DATE_SYNCED
 })
 @JsonTypeName("Retrieve_an_Organization_Member_200_response_user_identities_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

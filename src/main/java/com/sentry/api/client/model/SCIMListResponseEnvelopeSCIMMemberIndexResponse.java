@@ -39,7 +39,7 @@ import com.sentry.api.client.JSON;
   SCIMListResponseEnvelopeSCIMMemberIndexResponse.JSON_PROPERTY_ITEMS_PER_PAGE,
   SCIMListResponseEnvelopeSCIMMemberIndexResponse.JSON_PROPERTY_RESOURCES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class SCIMListResponseEnvelopeSCIMMemberIndexResponse {
   public static final String JSON_PROPERTY_SCHEMAS = "schemas";
   private List<String> schemas = new ArrayList<>();

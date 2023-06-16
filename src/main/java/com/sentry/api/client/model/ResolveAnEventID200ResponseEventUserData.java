@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   ResolveAnEventID200ResponseEventUserData.JSON_PROPERTY_IS_STAFF
 })
 @JsonTypeName("Resolve_an_Event_ID_200_response_event_user_data")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:58:30.193453Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventUserData {
   public static final String JSON_PROPERTY_IS_STAFF = "isStaff";
   private Boolean isStaff;
