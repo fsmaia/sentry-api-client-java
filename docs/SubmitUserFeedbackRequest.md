@@ -13,8 +13,4 @@
 |**comments** | **String** | Comments supplied by user. |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

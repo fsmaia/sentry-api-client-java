@@ -17,8 +17,4 @@
 |**isBookmarked** | **Boolean** | In case this API call is invoked with a user context this allows changing of the bookmark flag. |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

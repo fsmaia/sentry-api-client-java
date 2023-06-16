@@ -15,8 +15,4 @@
 |**dateFinished** | **OffsetDateTime** | An optional date that indicates when the deploy ended. If not provided, the current time is used. |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

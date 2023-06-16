@@ -21,8 +21,4 @@
 |**secret** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -17,8 +17,4 @@
 |**monitorConfig** | **Object** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -1,12 +1,13 @@
 
 
-# RetrieveAnEventForAProject200ResponseReleaseOneOf
+# RetrieveAnEventForAProject200ResponseReleaseAllOf
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**id** | **Integer** |  |  [optional] |
 |**authors** | **List&lt;Object&gt;** |  |  |
 |**commitCount** | **Long** |  |  |
 |**data** | **Object** |  |  |
@@ -15,7 +16,7 @@
 |**deployCount** | **Long** |  |  |
 |**firstEvent** | **OffsetDateTime** |  |  |
 |**lastCommit** | **Object** |  |  |
-|**lastDeploy** | [**RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy**](RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy.md) |  |  |
+|**lastDeploy** | [**RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy**](RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy.md) |  |  |
 |**lastEvent** | **OffsetDateTime** |  |  |
 |**newGroups** | **Long** |  |  |
 |**owner** | **Object** |  |  |
@@ -25,9 +26,5 @@
 |**version** | **String** |  |  |
 |**url** | **String** |  |  |
 
-
-## Implemented Interfaces
-
-* Serializable
 
 

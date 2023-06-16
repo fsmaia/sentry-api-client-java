@@ -11,8 +11,4 @@
 |**_30d** | **List&lt;List&lt;BigDecimal&gt;&gt;** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

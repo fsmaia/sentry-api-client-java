@@ -10,8 +10,4 @@
 |**choices** | **List&lt;List&lt;String&gt;&gt;** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

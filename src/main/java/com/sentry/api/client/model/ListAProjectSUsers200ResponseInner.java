@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSUsers200ResponseInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAProjectSUsers200ResponseInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAProjectSUsers200ResponseInner {
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
   private String dateCreated;
@@ -84,7 +81,7 @@ public class ListAProjectSUsers200ResponseInner implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -105,7 +102,7 @@ public class ListAProjectSUsers200ResponseInner implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -126,7 +123,7 @@ public class ListAProjectSUsers200ResponseInner implements Serializable {
    * Get username
    * @return username
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getUsername() {
     return username;
   }
@@ -147,7 +144,7 @@ public class ListAProjectSUsers200ResponseInner implements Serializable {
    * Get email
    * @return email
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getEmail() {
     return email;
   }

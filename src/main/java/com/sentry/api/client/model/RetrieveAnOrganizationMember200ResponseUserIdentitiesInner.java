@@ -24,7 +24,6 @@ import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseUserId
 import com.sentry.api.client.model.RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,10 +53,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganizationMember200ResponseUserIdentitiesInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
@@ -95,7 +92,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -116,7 +113,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -137,7 +134,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get organization
    * @return organization
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerOrganization getOrganization() {
     return organization;
   }
@@ -158,7 +155,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get provider
    * @return provider
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider getProvider() {
     return provider;
   }
@@ -179,7 +176,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get dateVerified
    * @return dateVerified
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public OffsetDateTime getDateVerified() {
     return dateVerified;
   }
@@ -200,7 +197,7 @@ public class RetrieveAnOrganizationMember200ResponseUserIdentitiesInner implemen
    * Get dateSynced
    * @return dateSynced
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public OffsetDateTime getDateSynced() {
     return dateSynced;
   }

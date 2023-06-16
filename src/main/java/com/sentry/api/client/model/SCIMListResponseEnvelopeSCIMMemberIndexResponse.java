@@ -24,7 +24,6 @@ import com.sentry.api.client.model.ListAnOrganizationSMembers200ResponseResource
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,10 +53,8 @@ import com.sentry.api.client.JSON;
 /**
  * SCIMListResponseEnvelopeSCIMMemberIndexResponse
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class SCIMListResponseEnvelopeSCIMMemberIndexResponse {
   public static final String SERIALIZED_NAME_SCHEMAS = "schemas";
   @SerializedName(SERIALIZED_NAME_SCHEMAS)
   private List<String> schemas = new ArrayList<>();
@@ -99,7 +96,7 @@ public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializ
    * Get schemas
    * @return schemas
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getSchemas() {
     return schemas;
   }
@@ -120,7 +117,7 @@ public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializ
    * Get totalResults
    * @return totalResults
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getTotalResults() {
     return totalResults;
   }
@@ -141,7 +138,7 @@ public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializ
    * Get startIndex
    * @return startIndex
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getStartIndex() {
     return startIndex;
   }
@@ -162,7 +159,7 @@ public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializ
    * Get itemsPerPage
    * @return itemsPerPage
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getItemsPerPage() {
     return itemsPerPage;
   }
@@ -191,7 +188,7 @@ public class SCIMListResponseEnvelopeSCIMMemberIndexResponse implements Serializ
    * Get resources
    * @return resources
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<ListAnOrganizationSMembers200ResponseResourcesInner> getResources() {
     return resources;
   }

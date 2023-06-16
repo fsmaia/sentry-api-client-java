@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.ListAProjectSClientKeys200ResponseInnerBrowserSdk;
 import com.sentry.api.client.model.ListAProjectSClientKeys200ResponseInnerDsn;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,10 +52,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSClientKeys200ResponseInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAProjectSClientKeys200ResponseInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAProjectSClientKeys200ResponseInner {
   public static final String SERIALIZED_NAME_BROWSER_SDK = "browserSdk";
   @SerializedName(SERIALIZED_NAME_BROWSER_SDK)
   private ListAProjectSClientKeys200ResponseInnerBrowserSdk browserSdk;
@@ -118,7 +115,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get browserSdk
    * @return browserSdk
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ListAProjectSClientKeys200ResponseInnerBrowserSdk getBrowserSdk() {
     return browserSdk;
   }
@@ -139,7 +136,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get browserSdkVersion
    * @return browserSdkVersion
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getBrowserSdkVersion() {
     return browserSdkVersion;
   }
@@ -160,7 +157,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -181,7 +178,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get dsn
    * @return dsn
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ListAProjectSClientKeys200ResponseInnerDsn getDsn() {
     return dsn;
   }
@@ -202,7 +199,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -223,7 +220,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get isActive
    * @return isActive
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsActive() {
     return isActive;
   }
@@ -244,7 +241,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get label
    * @return label
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getLabel() {
     return label;
   }
@@ -265,7 +262,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -286,7 +283,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get projectId
    * @return projectId
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getProjectId() {
     return projectId;
   }
@@ -307,7 +304,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get _public
    * @return _public
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getPublic() {
     return _public;
   }
@@ -328,7 +325,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get rateLimit
    * @return rateLimit
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getRateLimit() {
     return rateLimit;
   }
@@ -349,7 +346,7 @@ public class ListAProjectSClientKeys200ResponseInner implements Serializable {
    * Get secret
    * @return secret
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSecret() {
     return secret;
   }

@@ -12,8 +12,4 @@
 |**data** | **Object** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAProject200ResponsePluginsInnerResourceLinksInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAProject200ResponsePluginsInnerResourceLinksInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAProject200ResponsePluginsInnerResourceLinksInner {
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
   private String title;
@@ -76,7 +73,7 @@ public class RetrieveAProject200ResponsePluginsInnerResourceLinksInner implement
    * Get title
    * @return title
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getTitle() {
     return title;
   }
@@ -97,7 +94,7 @@ public class RetrieveAProject200ResponsePluginsInnerResourceLinksInner implement
    * Get url
    * @return url
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getUrl() {
     return url;
   }

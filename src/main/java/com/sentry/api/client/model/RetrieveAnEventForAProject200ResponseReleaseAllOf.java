@@ -21,12 +21,11 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.RetrieveAProject200ResponseLatestReleaseProjectsInner;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,11 +53,13 @@ import java.util.Set;
 import com.sentry.api.client.JSON;
 
 /**
- * RetrieveAnEventForAProject200ResponseReleaseOneOf
+ * RetrieveAnEventForAProject200ResponseReleaseAllOf
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serializable {
-  private static final long serialVersionUID = 1L;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnEventForAProject200ResponseReleaseAllOf {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private Integer id;
 
   public static final String SERIALIZED_NAME_AUTHORS = "authors";
   @SerializedName(SERIALIZED_NAME_AUTHORS)
@@ -94,7 +95,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
 
   public static final String SERIALIZED_NAME_LAST_DEPLOY = "lastDeploy";
   @SerializedName(SERIALIZED_NAME_LAST_DEPLOY)
-  private RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy lastDeploy;
+  private RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy lastDeploy;
 
   public static final String SERIALIZED_NAME_LAST_EVENT = "lastEvent";
   @SerializedName(SERIALIZED_NAME_LAST_EVENT)
@@ -128,16 +129,37 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   @SerializedName(SERIALIZED_NAME_URL)
   private String url;
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf() {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf() {
   }
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf authors(List<Object> authors) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf id(Integer id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  public Integer getId() {
+    return id;
+  }
+
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf authors(List<Object> authors) {
     
     this.authors = authors;
     return this;
   }
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf addAuthorsItem(Object authorsItem) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf addAuthorsItem(Object authorsItem) {
     if (this.authors == null) {
       this.authors = new ArrayList<>();
     }
@@ -149,7 +171,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get authors
    * @return authors
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<Object> getAuthors() {
     return authors;
   }
@@ -160,7 +182,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf commitCount(Long commitCount) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf commitCount(Long commitCount) {
     
     this.commitCount = commitCount;
     return this;
@@ -170,7 +192,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get commitCount
    * @return commitCount
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Long getCommitCount() {
     return commitCount;
   }
@@ -181,7 +203,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf data(Object data) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf data(Object data) {
     
     this.data = data;
     return this;
@@ -191,7 +213,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get data
    * @return data
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Object getData() {
     return data;
   }
@@ -202,7 +224,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf dateCreated(OffsetDateTime dateCreated) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf dateCreated(OffsetDateTime dateCreated) {
     
     this.dateCreated = dateCreated;
     return this;
@@ -212,7 +234,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -223,7 +245,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf dateReleased(OffsetDateTime dateReleased) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf dateReleased(OffsetDateTime dateReleased) {
     
     this.dateReleased = dateReleased;
     return this;
@@ -233,7 +255,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get dateReleased
    * @return dateReleased
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public OffsetDateTime getDateReleased() {
     return dateReleased;
   }
@@ -244,7 +266,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf deployCount(Long deployCount) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf deployCount(Long deployCount) {
     
     this.deployCount = deployCount;
     return this;
@@ -254,7 +276,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get deployCount
    * @return deployCount
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Long getDeployCount() {
     return deployCount;
   }
@@ -265,7 +287,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf firstEvent(OffsetDateTime firstEvent) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf firstEvent(OffsetDateTime firstEvent) {
     
     this.firstEvent = firstEvent;
     return this;
@@ -275,7 +297,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get firstEvent
    * @return firstEvent
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public OffsetDateTime getFirstEvent() {
     return firstEvent;
   }
@@ -286,7 +308,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf lastCommit(Object lastCommit) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf lastCommit(Object lastCommit) {
     
     this.lastCommit = lastCommit;
     return this;
@@ -296,7 +318,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get lastCommit
    * @return lastCommit
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getLastCommit() {
     return lastCommit;
   }
@@ -307,7 +329,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf lastDeploy(RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy lastDeploy) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf lastDeploy(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy lastDeploy) {
     
     this.lastDeploy = lastDeploy;
     return this;
@@ -317,18 +339,18 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get lastDeploy
    * @return lastDeploy
   **/
-  @jakarta.annotation.Nullable
-  public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy getLastDeploy() {
+  @javax.annotation.Nullable
+  public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy getLastDeploy() {
     return lastDeploy;
   }
 
 
-  public void setLastDeploy(RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy lastDeploy) {
+  public void setLastDeploy(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy lastDeploy) {
     this.lastDeploy = lastDeploy;
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf lastEvent(OffsetDateTime lastEvent) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf lastEvent(OffsetDateTime lastEvent) {
     
     this.lastEvent = lastEvent;
     return this;
@@ -338,7 +360,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get lastEvent
    * @return lastEvent
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public OffsetDateTime getLastEvent() {
     return lastEvent;
   }
@@ -349,7 +371,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf newGroups(Long newGroups) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf newGroups(Long newGroups) {
     
     this.newGroups = newGroups;
     return this;
@@ -359,7 +381,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get newGroups
    * @return newGroups
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Long getNewGroups() {
     return newGroups;
   }
@@ -370,7 +392,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf owner(Object owner) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf owner(Object owner) {
     
     this.owner = owner;
     return this;
@@ -380,7 +402,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get owner
    * @return owner
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getOwner() {
     return owner;
   }
@@ -391,13 +413,13 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf projects(List<RetrieveAProject200ResponseLatestReleaseProjectsInner> projects) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf projects(List<RetrieveAProject200ResponseLatestReleaseProjectsInner> projects) {
     
     this.projects = projects;
     return this;
   }
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf addProjectsItem(RetrieveAProject200ResponseLatestReleaseProjectsInner projectsItem) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf addProjectsItem(RetrieveAProject200ResponseLatestReleaseProjectsInner projectsItem) {
     if (this.projects == null) {
       this.projects = new ArrayList<>();
     }
@@ -409,7 +431,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get projects
    * @return projects
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAProject200ResponseLatestReleaseProjectsInner> getProjects() {
     return projects;
   }
@@ -420,7 +442,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf ref(String ref) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf ref(String ref) {
     
     this.ref = ref;
     return this;
@@ -430,7 +452,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get ref
    * @return ref
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getRef() {
     return ref;
   }
@@ -441,7 +463,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf shortVersion(String shortVersion) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf shortVersion(String shortVersion) {
     
     this.shortVersion = shortVersion;
     return this;
@@ -451,7 +473,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get shortVersion
    * @return shortVersion
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getShortVersion() {
     return shortVersion;
   }
@@ -462,7 +484,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf version(String version) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf version(String version) {
     
     this.version = version;
     return this;
@@ -472,7 +494,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get version
    * @return version
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getVersion() {
     return version;
   }
@@ -483,7 +505,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOf url(String url) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOf url(String url) {
     
     this.url = url;
     return this;
@@ -493,7 +515,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
    * Get url
    * @return url
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getUrl() {
     return url;
   }
@@ -513,35 +535,37 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RetrieveAnEventForAProject200ResponseReleaseOneOf retrieveAnEventForAProject200ResponseReleaseOneOf = (RetrieveAnEventForAProject200ResponseReleaseOneOf) o;
-    return Objects.equals(this.authors, retrieveAnEventForAProject200ResponseReleaseOneOf.authors) &&
-        Objects.equals(this.commitCount, retrieveAnEventForAProject200ResponseReleaseOneOf.commitCount) &&
-        Objects.equals(this.data, retrieveAnEventForAProject200ResponseReleaseOneOf.data) &&
-        Objects.equals(this.dateCreated, retrieveAnEventForAProject200ResponseReleaseOneOf.dateCreated) &&
-        Objects.equals(this.dateReleased, retrieveAnEventForAProject200ResponseReleaseOneOf.dateReleased) &&
-        Objects.equals(this.deployCount, retrieveAnEventForAProject200ResponseReleaseOneOf.deployCount) &&
-        Objects.equals(this.firstEvent, retrieveAnEventForAProject200ResponseReleaseOneOf.firstEvent) &&
-        Objects.equals(this.lastCommit, retrieveAnEventForAProject200ResponseReleaseOneOf.lastCommit) &&
-        Objects.equals(this.lastDeploy, retrieveAnEventForAProject200ResponseReleaseOneOf.lastDeploy) &&
-        Objects.equals(this.lastEvent, retrieveAnEventForAProject200ResponseReleaseOneOf.lastEvent) &&
-        Objects.equals(this.newGroups, retrieveAnEventForAProject200ResponseReleaseOneOf.newGroups) &&
-        Objects.equals(this.owner, retrieveAnEventForAProject200ResponseReleaseOneOf.owner) &&
-        Objects.equals(this.projects, retrieveAnEventForAProject200ResponseReleaseOneOf.projects) &&
-        Objects.equals(this.ref, retrieveAnEventForAProject200ResponseReleaseOneOf.ref) &&
-        Objects.equals(this.shortVersion, retrieveAnEventForAProject200ResponseReleaseOneOf.shortVersion) &&
-        Objects.equals(this.version, retrieveAnEventForAProject200ResponseReleaseOneOf.version) &&
-        Objects.equals(this.url, retrieveAnEventForAProject200ResponseReleaseOneOf.url);
+    RetrieveAnEventForAProject200ResponseReleaseAllOf retrieveAnEventForAProject200ResponseReleaseAllOf = (RetrieveAnEventForAProject200ResponseReleaseAllOf) o;
+    return Objects.equals(this.id, retrieveAnEventForAProject200ResponseReleaseAllOf.id) &&
+        Objects.equals(this.authors, retrieveAnEventForAProject200ResponseReleaseAllOf.authors) &&
+        Objects.equals(this.commitCount, retrieveAnEventForAProject200ResponseReleaseAllOf.commitCount) &&
+        Objects.equals(this.data, retrieveAnEventForAProject200ResponseReleaseAllOf.data) &&
+        Objects.equals(this.dateCreated, retrieveAnEventForAProject200ResponseReleaseAllOf.dateCreated) &&
+        Objects.equals(this.dateReleased, retrieveAnEventForAProject200ResponseReleaseAllOf.dateReleased) &&
+        Objects.equals(this.deployCount, retrieveAnEventForAProject200ResponseReleaseAllOf.deployCount) &&
+        Objects.equals(this.firstEvent, retrieveAnEventForAProject200ResponseReleaseAllOf.firstEvent) &&
+        Objects.equals(this.lastCommit, retrieveAnEventForAProject200ResponseReleaseAllOf.lastCommit) &&
+        Objects.equals(this.lastDeploy, retrieveAnEventForAProject200ResponseReleaseAllOf.lastDeploy) &&
+        Objects.equals(this.lastEvent, retrieveAnEventForAProject200ResponseReleaseAllOf.lastEvent) &&
+        Objects.equals(this.newGroups, retrieveAnEventForAProject200ResponseReleaseAllOf.newGroups) &&
+        Objects.equals(this.owner, retrieveAnEventForAProject200ResponseReleaseAllOf.owner) &&
+        Objects.equals(this.projects, retrieveAnEventForAProject200ResponseReleaseAllOf.projects) &&
+        Objects.equals(this.ref, retrieveAnEventForAProject200ResponseReleaseAllOf.ref) &&
+        Objects.equals(this.shortVersion, retrieveAnEventForAProject200ResponseReleaseAllOf.shortVersion) &&
+        Objects.equals(this.version, retrieveAnEventForAProject200ResponseReleaseAllOf.version) &&
+        Objects.equals(this.url, retrieveAnEventForAProject200ResponseReleaseAllOf.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authors, commitCount, data, dateCreated, dateReleased, deployCount, firstEvent, lastCommit, lastDeploy, lastEvent, newGroups, owner, projects, ref, shortVersion, version, url);
+    return Objects.hash(id, authors, commitCount, data, dateCreated, dateReleased, deployCount, firstEvent, lastCommit, lastDeploy, lastEvent, newGroups, owner, projects, ref, shortVersion, version, url);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RetrieveAnEventForAProject200ResponseReleaseOneOf {\n");
+    sb.append("class RetrieveAnEventForAProject200ResponseReleaseAllOf {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    authors: ").append(toIndentedString(authors)).append("\n");
     sb.append("    commitCount: ").append(toIndentedString(commitCount)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
@@ -581,6 +605,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("id");
     openapiFields.add("authors");
     openapiFields.add("commitCount");
     openapiFields.add("data");
@@ -624,25 +649,25 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseOneOf
+  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseAllOf
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (!RetrieveAnEventForAProject200ResponseReleaseOneOf.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnEventForAProject200ResponseReleaseOneOf is not found in the empty JSON string", RetrieveAnEventForAProject200ResponseReleaseOneOf.openapiRequiredFields.toString()));
+        if (!RetrieveAnEventForAProject200ResponseReleaseAllOf.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnEventForAProject200ResponseReleaseAllOf is not found in the empty JSON string", RetrieveAnEventForAProject200ResponseReleaseAllOf.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnEventForAProject200ResponseReleaseOneOf.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnEventForAProject200ResponseReleaseOneOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!RetrieveAnEventForAProject200ResponseReleaseAllOf.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnEventForAProject200ResponseReleaseAllOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveAnEventForAProject200ResponseReleaseOneOf.openapiRequiredFields) {
+      for (String requiredField : RetrieveAnEventForAProject200ResponseReleaseAllOf.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
@@ -654,7 +679,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
         throw new IllegalArgumentException(String.format("Expected the field `authors` to be an array in the JSON string but got `%s`", jsonObj.get("authors").toString()));
       }
       // validate the required field `lastDeploy`
-      RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy.validateJsonObject(jsonObj.getAsJsonObject("lastDeploy"));
+      RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy.validateJsonObject(jsonObj.getAsJsonObject("lastDeploy"));
       // ensure the json data is an array
       if (!jsonObj.get("projects").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `projects` to be an array in the JSON string but got `%s`", jsonObj.get("projects").toString()));
@@ -683,22 +708,22 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnEventForAProject200ResponseReleaseOneOf.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseReleaseOneOf' and its subtypes
+       if (!RetrieveAnEventForAProject200ResponseReleaseAllOf.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseReleaseAllOf' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseOneOf> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200ResponseReleaseOneOf.class));
+       final TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseAllOf> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200ResponseReleaseAllOf.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseOneOf>() {
+       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseAllOf>() {
            @Override
-           public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseReleaseOneOf value) throws IOException {
+           public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseReleaseAllOf value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public RetrieveAnEventForAProject200ResponseReleaseOneOf read(JsonReader in) throws IOException {
+           public RetrieveAnEventForAProject200ResponseReleaseAllOf read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -709,18 +734,18 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOf implements Serial
   }
 
  /**
-  * Create an instance of RetrieveAnEventForAProject200ResponseReleaseOneOf given an JSON string
+  * Create an instance of RetrieveAnEventForAProject200ResponseReleaseAllOf given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of RetrieveAnEventForAProject200ResponseReleaseOneOf
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseOneOf
+  * @return An instance of RetrieveAnEventForAProject200ResponseReleaseAllOf
+  * @throws IOException if the JSON string is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseAllOf
   */
-  public static RetrieveAnEventForAProject200ResponseReleaseOneOf fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnEventForAProject200ResponseReleaseOneOf.class);
+  public static RetrieveAnEventForAProject200ResponseReleaseAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, RetrieveAnEventForAProject200ResponseReleaseAllOf.class);
   }
 
  /**
-  * Convert an instance of RetrieveAnEventForAProject200ResponseReleaseOneOf to an JSON string
+  * Convert an instance of RetrieveAnEventForAProject200ResponseReleaseAllOf to an JSON string
   *
   * @return JSON string
   */

@@ -20,9 +20,11 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.sentry.api.client.model.ResolveAnEventID200ResponseEventContexts;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInner;
-import com.sentry.api.client.model.ResolveAnEventID200ResponseEventErrorsInner;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventUser;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseContext;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseErrorsInner;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseMeta;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseMetadata;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseSdk;
@@ -30,7 +32,6 @@ import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseTagsInne
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -60,10 +61,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnIssueSHashes200ResponseInnerLatestEvent
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAnIssueSHashes200ResponseInnerLatestEvent {
   public static final String SERIALIZED_NAME_EVENT_I_D = "eventID";
   @SerializedName(SERIALIZED_NAME_EVENT_I_D)
   private String eventID;
@@ -86,7 +85,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
 
   public static final String SERIALIZED_NAME_ERRORS = "errors";
   @SerializedName(SERIALIZED_NAME_ERRORS)
-  private List<ResolveAnEventID200ResponseEventErrorsInner> errors = new ArrayList<>();
+  private List<RetrieveAnEventForAProject200ResponseErrorsInner> errors = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PLATFORM = "platform";
   @SerializedName(SERIALIZED_NAME_PLATFORM)
@@ -134,7 +133,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
 
   public static final String SERIALIZED_NAME_CONTEXTS = "contexts";
   @SerializedName(SERIALIZED_NAME_CONTEXTS)
-  private Object contexts;
+  private ResolveAnEventID200ResponseEventContexts contexts;
 
   public static final String SERIALIZED_NAME_FINGERPRINTS = "fingerprints";
   @SerializedName(SERIALIZED_NAME_FINGERPRINTS)
@@ -142,7 +141,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
 
   public static final String SERIALIZED_NAME_CONTEXT = "context";
   @SerializedName(SERIALIZED_NAME_CONTEXT)
-  private Object context;
+  private RetrieveAnEventForAProject200ResponseContext context;
 
   public static final String SERIALIZED_NAME_GROUP_I_D = "groupID";
   @SerializedName(SERIALIZED_NAME_GROUP_I_D)
@@ -165,7 +164,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get eventID
    * @return eventID
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEventID() {
     return eventID;
   }
@@ -186,7 +185,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get dist
    * @return dist
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getDist() {
     return dist;
   }
@@ -207,7 +206,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get message
    * @return message
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getMessage() {
     return message;
   }
@@ -228,7 +227,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -249,7 +248,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get size
    * @return size
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getSize() {
     return size;
   }
@@ -260,13 +259,13 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
   }
 
 
-  public ListAnIssueSHashes200ResponseInnerLatestEvent errors(List<ResolveAnEventID200ResponseEventErrorsInner> errors) {
+  public ListAnIssueSHashes200ResponseInnerLatestEvent errors(List<RetrieveAnEventForAProject200ResponseErrorsInner> errors) {
     
     this.errors = errors;
     return this;
   }
 
-  public ListAnIssueSHashes200ResponseInnerLatestEvent addErrorsItem(ResolveAnEventID200ResponseEventErrorsInner errorsItem) {
+  public ListAnIssueSHashes200ResponseInnerLatestEvent addErrorsItem(RetrieveAnEventForAProject200ResponseErrorsInner errorsItem) {
     if (this.errors == null) {
       this.errors = new ArrayList<>();
     }
@@ -278,13 +277,13 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get errors
    * @return errors
   **/
-  @jakarta.annotation.Nonnull
-  public List<ResolveAnEventID200ResponseEventErrorsInner> getErrors() {
+  @javax.annotation.Nonnull
+  public List<RetrieveAnEventForAProject200ResponseErrorsInner> getErrors() {
     return errors;
   }
 
 
-  public void setErrors(List<ResolveAnEventID200ResponseEventErrorsInner> errors) {
+  public void setErrors(List<RetrieveAnEventForAProject200ResponseErrorsInner> errors) {
     this.errors = errors;
   }
 
@@ -299,7 +298,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get platform
    * @return platform
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getPlatform() {
     return platform;
   }
@@ -320,7 +319,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get type
    * @return type
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -341,7 +340,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get metadata
    * @return metadata
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveAnEventForAProject200ResponseMetadata getMetadata() {
     return metadata;
   }
@@ -370,7 +369,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get tags
    * @return tags
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAnEventForAProject200ResponseTagsInner> getTags() {
     return tags;
   }
@@ -391,7 +390,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -412,7 +411,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get dateReceived
    * @return dateReceived
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateReceived() {
     return dateReceived;
   }
@@ -433,7 +432,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get user
    * @return user
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ResolveAnEventID200ResponseEventUser getUser() {
     return user;
   }
@@ -462,7 +461,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get entries
    * @return entries
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventEntriesInner> getEntries() {
     return entries;
   }
@@ -483,7 +482,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get packages
    * @return packages
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Object getPackages() {
     return packages;
   }
@@ -504,7 +503,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get sdk
    * @return sdk
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveAnEventForAProject200ResponseSdk getSdk() {
     return sdk;
   }
@@ -525,7 +524,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get meta
    * @return meta
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveAnEventForAProject200ResponseMeta getMeta() {
     return meta;
   }
@@ -536,7 +535,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
   }
 
 
-  public ListAnIssueSHashes200ResponseInnerLatestEvent contexts(Object contexts) {
+  public ListAnIssueSHashes200ResponseInnerLatestEvent contexts(ResolveAnEventID200ResponseEventContexts contexts) {
     
     this.contexts = contexts;
     return this;
@@ -546,13 +545,13 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get contexts
    * @return contexts
   **/
-  @jakarta.annotation.Nonnull
-  public Object getContexts() {
+  @javax.annotation.Nonnull
+  public ResolveAnEventID200ResponseEventContexts getContexts() {
     return contexts;
   }
 
 
-  public void setContexts(Object contexts) {
+  public void setContexts(ResolveAnEventID200ResponseEventContexts contexts) {
     this.contexts = contexts;
   }
 
@@ -575,7 +574,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get fingerprints
    * @return fingerprints
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getFingerprints() {
     return fingerprints;
   }
@@ -586,7 +585,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
   }
 
 
-  public ListAnIssueSHashes200ResponseInnerLatestEvent context(Object context) {
+  public ListAnIssueSHashes200ResponseInnerLatestEvent context(RetrieveAnEventForAProject200ResponseContext context) {
     
     this.context = context;
     return this;
@@ -596,13 +595,13 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get context
    * @return context
   **/
-  @jakarta.annotation.Nonnull
-  public Object getContext() {
+  @javax.annotation.Nonnull
+  public RetrieveAnEventForAProject200ResponseContext getContext() {
     return context;
   }
 
 
-  public void setContext(Object context) {
+  public void setContext(RetrieveAnEventForAProject200ResponseContext context) {
     this.context = context;
   }
 
@@ -617,7 +616,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get groupID
    * @return groupID
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getGroupID() {
     return groupID;
   }
@@ -638,7 +637,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
    * Get title
    * @return title
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getTitle() {
     return title;
   }
@@ -832,7 +831,7 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
       JsonArray jsonArrayerrors = jsonObj.getAsJsonArray("errors");
       // validate the required field `errors` (array)
       for (int i = 0; i < jsonArrayerrors.size(); i++) {
-        ResolveAnEventID200ResponseEventErrorsInner.validateJsonObject(jsonArrayerrors.get(i).getAsJsonObject());
+        RetrieveAnEventForAProject200ResponseErrorsInner.validateJsonObject(jsonArrayerrors.get(i).getAsJsonObject());
       };
       if (!jsonObj.get("platform").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `platform` to be a primitive type in the JSON string but got `%s`", jsonObj.get("platform").toString()));
@@ -874,12 +873,16 @@ public class ListAnIssueSHashes200ResponseInnerLatestEvent implements Serializab
       RetrieveAnEventForAProject200ResponseSdk.validateJsonObject(jsonObj.getAsJsonObject("sdk"));
       // validate the required field `_meta`
       RetrieveAnEventForAProject200ResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("_meta"));
+      // validate the required field `contexts`
+      ResolveAnEventID200ResponseEventContexts.validateJsonObject(jsonObj.getAsJsonObject("contexts"));
       // ensure the required json array is present
       if (jsonObj.get("fingerprints") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("fingerprints").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `fingerprints` to be an array in the JSON string but got `%s`", jsonObj.get("fingerprints").toString()));
       }
+      // validate the required field `context`
+      RetrieveAnEventForAProject200ResponseContext.validateJsonObject(jsonObj.getAsJsonObject("context"));
       if (!jsonObj.get("groupID").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `groupID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("groupID").toString()));
       }

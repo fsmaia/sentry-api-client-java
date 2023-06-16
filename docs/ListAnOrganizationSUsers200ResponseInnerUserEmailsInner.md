@@ -12,8 +12,4 @@
 |**email** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

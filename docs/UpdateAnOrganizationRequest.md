@@ -11,8 +11,4 @@
 |**slug** | **String** | An optional new slug for the organization. Needs to be available and unique. |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

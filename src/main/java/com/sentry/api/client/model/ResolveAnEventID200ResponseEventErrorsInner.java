@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventErrorsInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ResolveAnEventID200ResponseEventErrorsInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ResolveAnEventID200ResponseEventErrorsInner {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
   private String message;
@@ -80,7 +77,7 @@ public class ResolveAnEventID200ResponseEventErrorsInner implements Serializable
    * Get message
    * @return message
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
@@ -101,7 +98,7 @@ public class ResolveAnEventID200ResponseEventErrorsInner implements Serializable
    * Get type
    * @return type
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getType() {
     return type;
   }
@@ -122,7 +119,7 @@ public class ResolveAnEventID200ResponseEventErrorsInner implements Serializable
    * Get data
    * @return data
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getData() {
     return data;
   }

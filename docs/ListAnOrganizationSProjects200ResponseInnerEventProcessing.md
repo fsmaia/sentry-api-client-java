@@ -10,8 +10,4 @@
 |**symbolicationDegraded** | **Boolean** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

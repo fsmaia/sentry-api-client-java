@@ -11,13 +11,9 @@
 |**dist** | **String** |  |  |
 |**name** | **String** |  |  |
 |**dateCreated** | **OffsetDateTime** |  |  |
-|**headers** | **Object** |  |  |
+|**headers** | [**ListAnOrganizationSReleaseFiles200ResponseInnerHeaders**](ListAnOrganizationSReleaseFiles200ResponseInnerHeaders.md) |  |  |
 |**id** | **String** |  |  |
 |**size** | **Integer** |  |  |
 
-
-## Implemented Interfaces
-
-* Serializable
 
 

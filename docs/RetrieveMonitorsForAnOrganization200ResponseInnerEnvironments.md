@@ -14,8 +14,4 @@
 |**nextCheckIn** | **OffsetDateTime** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

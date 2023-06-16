@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSUsers200ResponseInnerFlags
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAnOrganizationSUsers200ResponseInnerFlags implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAnOrganizationSUsers200ResponseInnerFlags {
   public static final String SERIALIZED_NAME_SSO_COLON_LINKED = "sso: linked";
   @SerializedName(SERIALIZED_NAME_SSO_COLON_LINKED)
   private Boolean ssoColonLinked;
@@ -76,7 +73,7 @@ public class ListAnOrganizationSUsers200ResponseInnerFlags implements Serializab
    * Get ssoColonLinked
    * @return ssoColonLinked
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Boolean getSsoColonLinked() {
     return ssoColonLinked;
   }
@@ -97,7 +94,7 @@ public class ListAnOrganizationSUsers200ResponseInnerFlags implements Serializab
    * Get ssoColonInvalid
    * @return ssoColonInvalid
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Boolean getSsoColonInvalid() {
     return ssoColonInvalid;
   }

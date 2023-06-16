@@ -10,8 +10,4 @@
 |**fields** | **Map&lt;String, String&gt;** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

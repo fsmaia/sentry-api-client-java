@@ -20,9 +20,9 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.sentry.api.client.model.ListAnOrganizationSReleaseFiles200ResponseInnerHeaders;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,10 +52,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSReleaseFiles200ResponseInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAnOrganizationSReleaseFiles200ResponseInner {
   public static final String SERIALIZED_NAME_SHA1 = "sha1";
   @SerializedName(SERIALIZED_NAME_SHA1)
   private String sha1;
@@ -74,7 +72,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
 
   public static final String SERIALIZED_NAME_HEADERS = "headers";
   @SerializedName(SERIALIZED_NAME_HEADERS)
-  private Object headers;
+  private ListAnOrganizationSReleaseFiles200ResponseInnerHeaders headers;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -97,7 +95,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get sha1
    * @return sha1
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSha1() {
     return sha1;
   }
@@ -118,7 +116,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get dist
    * @return dist
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getDist() {
     return dist;
   }
@@ -139,7 +137,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -160,7 +158,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -171,7 +169,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
   }
 
 
-  public ListAnOrganizationSReleaseFiles200ResponseInner headers(Object headers) {
+  public ListAnOrganizationSReleaseFiles200ResponseInner headers(ListAnOrganizationSReleaseFiles200ResponseInnerHeaders headers) {
     
     this.headers = headers;
     return this;
@@ -181,13 +179,13 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get headers
    * @return headers
   **/
-  @jakarta.annotation.Nonnull
-  public Object getHeaders() {
+  @javax.annotation.Nonnull
+  public ListAnOrganizationSReleaseFiles200ResponseInnerHeaders getHeaders() {
     return headers;
   }
 
 
-  public void setHeaders(Object headers) {
+  public void setHeaders(ListAnOrganizationSReleaseFiles200ResponseInnerHeaders headers) {
     this.headers = headers;
   }
 
@@ -202,7 +200,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -223,7 +221,7 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
    * Get size
    * @return size
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getSize() {
     return size;
   }
@@ -346,6 +344,8 @@ public class ListAnOrganizationSReleaseFiles200ResponseInner implements Serializ
       if (!jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
+      // validate the required field `headers`
+      ListAnOrganizationSReleaseFiles200ResponseInnerHeaders.validateJsonObject(jsonObj.getAsJsonObject("headers"));
       if (!jsonObj.get("id").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
       }

@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganizationMember200ResponseUserEmailsInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnOrganizationMember200ResponseUserEmailsInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnOrganizationMember200ResponseUserEmailsInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
@@ -80,7 +77,7 @@ public class RetrieveAnOrganizationMember200ResponseUserEmailsInner implements S
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -101,7 +98,7 @@ public class RetrieveAnOrganizationMember200ResponseUserEmailsInner implements S
    * Get email
    * @return email
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEmail() {
     return email;
   }
@@ -122,7 +119,7 @@ public class RetrieveAnOrganizationMember200ResponseUserEmailsInner implements S
    * Get isVerified
    * @return isVerified
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsVerified() {
     return isVerified;
   }

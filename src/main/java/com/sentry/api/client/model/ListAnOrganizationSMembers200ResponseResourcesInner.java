@@ -26,7 +26,6 @@ import com.sentry.api.client.model.QueryAnIndividualTeam200ResponseMeta;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -56,10 +55,8 @@ import com.sentry.api.client.JSON;
 /**
  * Conforming to the SCIM RFC, this represents a Sentry Org Member as a SCIM user object.
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAnOrganizationSMembers200ResponseResourcesInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAnOrganizationSMembers200ResponseResourcesInner {
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
   private Boolean active;
@@ -105,7 +102,7 @@ public class ListAnOrganizationSMembers200ResponseResourcesInner implements Seri
    * Get active
    * @return active
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Boolean getActive() {
     return active;
   }
@@ -134,7 +131,7 @@ public class ListAnOrganizationSMembers200ResponseResourcesInner implements Seri
    * Get schemas
    * @return schemas
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getSchemas() {
     return schemas;
   }
@@ -155,7 +152,7 @@ public class ListAnOrganizationSMembers200ResponseResourcesInner implements Seri
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -176,7 +173,7 @@ public class ListAnOrganizationSMembers200ResponseResourcesInner implements Seri
    * Get userName
    * @return userName
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getUserName() {
     return userName;
   }
@@ -197,7 +194,7 @@ public class ListAnOrganizationSMembers200ResponseResourcesInner implements Seri
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ListAnOrganizationSMembers200ResponseResourcesInnerName getName() {
     return name;
   }
@@ -226,7 +223,7 @@ public class ListAnOrganizationSMembers200ResponseResourcesInner implements Seri
    * Get emails
    * @return emails
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<ListAnOrganizationSMembers200ResponseResourcesInnerEmailsInner> getEmails() {
     return emails;
   }
@@ -247,7 +244,7 @@ public class ListAnOrganizationSMembers200ResponseResourcesInner implements Seri
    * Get meta
    * @return meta
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public QueryAnIndividualTeam200ResponseMeta getMeta() {
     return meta;
   }
@@ -268,7 +265,7 @@ public class ListAnOrganizationSMembers200ResponseResourcesInner implements Seri
    * Get sentryOrgRole
    * @return sentryOrgRole
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSentryOrgRole() {
     return sentryOrgRole;
   }

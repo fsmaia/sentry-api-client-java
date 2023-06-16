@@ -10,8 +10,4 @@
 |**name** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

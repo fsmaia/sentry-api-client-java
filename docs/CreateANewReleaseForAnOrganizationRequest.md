@@ -16,8 +16,4 @@
 |**refs** | [**List&lt;CreateANewReleaseForAnOrganizationRequestRefsInner&gt;**](CreateANewReleaseForAnOrganizationRequestRefsInner.md) | An optional way to indicate the start and end commits for each repository included in a release. Head commits must include parameters &#x60;repository&#x60; and &#x60;commit&#x60; (the HEAD sha). They can optionally include &#x60;previousCommit&#x60; (the sha of the HEAD of the previous release), which should be specified if this is the first time you&#39;ve sent commit data. &#x60;commit&#x60; may contain a range in the form of &#x60;previousCommit..commit&#x60;. |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

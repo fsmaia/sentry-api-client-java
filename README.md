@@ -2,7 +2,7 @@
 
 API Reference
 - API version: v0
-  - Build date: 2023-06-15T10:13:02.301928Z[Etc/UTC]
+  - Build date: 2023-06-16T12:28:08.282703Z[Etc/UTC]
 
 Sentry Public API
 
@@ -282,6 +282,7 @@ Class | Method | HTTP request | Description
  - [ListAnOrganizationSProjects200ResponseInnerTeam](docs/ListAnOrganizationSProjects200ResponseInnerTeam.md)
  - [ListAnOrganizationSProjects200ResponseInnerTeamsInner](docs/ListAnOrganizationSProjects200ResponseInnerTeamsInner.md)
  - [ListAnOrganizationSReleaseFiles200ResponseInner](docs/ListAnOrganizationSReleaseFiles200ResponseInner.md)
+ - [ListAnOrganizationSReleaseFiles200ResponseInnerHeaders](docs/ListAnOrganizationSReleaseFiles200ResponseInnerHeaders.md)
  - [ListAnOrganizationSRepositories200ResponseInner](docs/ListAnOrganizationSRepositories200ResponseInner.md)
  - [ListAnOrganizationSTeams200ResponseInner](docs/ListAnOrganizationSTeams200ResponseInner.md)
  - [ListAnOrganizationSTeams200ResponseInnerOrganization](docs/ListAnOrganizationSTeams200ResponseInnerOrganization.md)
@@ -320,6 +321,12 @@ Class | Method | HTTP request | Description
  - [ResolveAnEventID200ResponseEvent](docs/ResolveAnEventID200ResponseEvent.md)
  - [ResolveAnEventID200ResponseEventContext](docs/ResolveAnEventID200ResponseEventContext.md)
  - [ResolveAnEventID200ResponseEventContextSession](docs/ResolveAnEventID200ResponseEventContextSession.md)
+ - [ResolveAnEventID200ResponseEventContexts](docs/ResolveAnEventID200ResponseEventContexts.md)
+ - [ResolveAnEventID200ResponseEventContextsBrowser](docs/ResolveAnEventID200ResponseEventContextsBrowser.md)
+ - [ResolveAnEventID200ResponseEventContextsForbiddenError](docs/ResolveAnEventID200ResponseEventContextsForbiddenError.md)
+ - [ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON](docs/ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON.md)
+ - [ResolveAnEventID200ResponseEventContextsOrganization](docs/ResolveAnEventID200ResponseEventContextsOrganization.md)
+ - [ResolveAnEventID200ResponseEventContextsTrace](docs/ResolveAnEventID200ResponseEventContextsTrace.md)
  - [ResolveAnEventID200ResponseEventEntriesInner](docs/ResolveAnEventID200ResponseEventEntriesInner.md)
  - [ResolveAnEventID200ResponseEventEntriesInnerAnyOf](docs/ResolveAnEventID200ResponseEventEntriesInnerAnyOf.md)
  - [ResolveAnEventID200ResponseEventEntriesInnerAnyOf1](docs/ResolveAnEventID200ResponseEventEntriesInnerAnyOf1.md)
@@ -355,14 +362,19 @@ Class | Method | HTTP request | Description
  - [RetrieveATeam200ResponseAvatar](docs/RetrieveATeam200ResponseAvatar.md)
  - [RetrieveATeam200ResponseOrganization](docs/RetrieveATeam200ResponseOrganization.md)
  - [RetrieveAnEventForAProject200Response](docs/RetrieveAnEventForAProject200Response.md)
+ - [RetrieveAnEventForAProject200ResponseContext](docs/RetrieveAnEventForAProject200ResponseContext.md)
+ - [RetrieveAnEventForAProject200ResponseContextResp](docs/RetrieveAnEventForAProject200ResponseContextResp.md)
+ - [RetrieveAnEventForAProject200ResponseErrorsInner](docs/RetrieveAnEventForAProject200ResponseErrorsInner.md)
+ - [RetrieveAnEventForAProject200ResponseErrorsInnerData](docs/RetrieveAnEventForAProject200ResponseErrorsInnerData.md)
  - [RetrieveAnEventForAProject200ResponseMeta](docs/RetrieveAnEventForAProject200ResponseMeta.md)
  - [RetrieveAnEventForAProject200ResponseMetadata](docs/RetrieveAnEventForAProject200ResponseMetadata.md)
  - [RetrieveAnEventForAProject200ResponseMetadataOneOf](docs/RetrieveAnEventForAProject200ResponseMetadataOneOf.md)
  - [RetrieveAnEventForAProject200ResponseMetadataOneOf1](docs/RetrieveAnEventForAProject200ResponseMetadataOneOf1.md)
  - [RetrieveAnEventForAProject200ResponseRelease](docs/RetrieveAnEventForAProject200ResponseRelease.md)
- - [RetrieveAnEventForAProject200ResponseReleaseOneOf](docs/RetrieveAnEventForAProject200ResponseReleaseOneOf.md)
- - [RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy](docs/RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy.md)
- - [RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf](docs/RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.md)
+ - [RetrieveAnEventForAProject200ResponseReleaseAllOf](docs/RetrieveAnEventForAProject200ResponseReleaseAllOf.md)
+ - [RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy](docs/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy.md)
+ - [RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf](docs/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.md)
+ - [RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not](docs/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.md)
  - [RetrieveAnEventForAProject200ResponseSdk](docs/RetrieveAnEventForAProject200ResponseSdk.md)
  - [RetrieveAnEventForAProject200ResponseTagsInner](docs/RetrieveAnEventForAProject200ResponseTagsInner.md)
  - [RetrieveAnIssue200Response](docs/RetrieveAnIssue200Response.md)
@@ -371,9 +383,10 @@ Class | Method | HTTP request | Description
  - [RetrieveAnIssue200ResponseStats](docs/RetrieveAnIssue200ResponseStats.md)
  - [RetrieveAnOrganization200Response](docs/RetrieveAnOrganization200Response.md)
  - [RetrieveAnOrganization200ResponseAvailableRolesInner](docs/RetrieveAnOrganization200ResponseAvailableRolesInner.md)
+ - [RetrieveAnOrganization200ResponseOnboardingTasksInner](docs/RetrieveAnOrganization200ResponseOnboardingTasksInner.md)
  - [RetrieveAnOrganization200ResponseProjectsInner](docs/RetrieveAnOrganization200ResponseProjectsInner.md)
  - [RetrieveAnOrganization200ResponseProjectsInnerTeam](docs/RetrieveAnOrganization200ResponseProjectsInnerTeam.md)
- - [RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot](docs/RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot.md)
+ - [RetrieveAnOrganization200ResponseQuota](docs/RetrieveAnOrganization200ResponseQuota.md)
  - [RetrieveAnOrganizationMember200Response](docs/RetrieveAnOrganizationMember200Response.md)
  - [RetrieveAnOrganizationMember200ResponseExternalUsersInner](docs/RetrieveAnOrganizationMember200ResponseExternalUsersInner.md)
  - [RetrieveAnOrganizationMember200ResponseFlags](docs/RetrieveAnOrganizationMember200ResponseFlags.md)
@@ -393,6 +406,8 @@ Class | Method | HTTP request | Description
  - [RetrieveMonitorsForAnOrganization200ResponseInnerProject](docs/RetrieveMonitorsForAnOrganization200ResponseInnerProject.md)
  - [RetrieveReleaseHealthSessionStatistics200Response](docs/RetrieveReleaseHealthSessionStatistics200Response.md)
  - [RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner](docs/RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner.md)
+ - [RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy](docs/RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy.md)
+ - [RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals](docs/RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.md)
  - [RetrieveReleaseHealthSessionStatistics400Response](docs/RetrieveReleaseHealthSessionStatistics400Response.md)
  - [RetrieveTagDetails200Response](docs/RetrieveTagDetails200Response.md)
  - [SCIMListResponseEnvelopeSCIMMemberIndexResponse](docs/SCIMListResponseEnvelopeSCIMMemberIndexResponse.md)

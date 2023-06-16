@@ -24,7 +24,6 @@ import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerA
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,10 +53,8 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOfData
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfData implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfData {
   public static final String SERIALIZED_NAME_VALUES = "values";
   @SerializedName(SERIALIZED_NAME_VALUES)
   private List<ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner> values = new ArrayList<>();
@@ -83,7 +80,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOfData implements Se
    * Get values
    * @return values
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventEntriesInnerAnyOfDataValuesInner> getValues() {
     return values;
   }

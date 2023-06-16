@@ -32,8 +32,4 @@
 | BILLING | &quot;billing&quot; |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

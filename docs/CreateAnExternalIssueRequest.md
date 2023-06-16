@@ -13,8 +13,4 @@
 |**identifier** | **String** | A unique identifier of the external issue. |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

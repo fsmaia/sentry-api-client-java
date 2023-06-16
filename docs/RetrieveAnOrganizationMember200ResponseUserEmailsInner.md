@@ -12,8 +12,4 @@
 |**isVerified** | **Boolean** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

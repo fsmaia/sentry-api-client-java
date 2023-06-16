@@ -10,8 +10,4 @@
 |**isStaff** | **Boolean** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

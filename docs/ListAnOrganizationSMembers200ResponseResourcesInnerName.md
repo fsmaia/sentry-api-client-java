@@ -11,8 +11,4 @@
 |**familyName** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

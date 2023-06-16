@@ -10,8 +10,4 @@
 |**myPackage** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

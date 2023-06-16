@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import org.openapitools.jackson.nullable.JsonNullable;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,10 +51,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnEventForAProject200ResponseMeta
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnEventForAProject200ResponseMeta {
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
   private String user;
@@ -101,7 +98,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get user
    * @return user
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getUser() {
     return user;
   }
@@ -122,7 +119,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get context
    * @return context
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getContext() {
     return context;
   }
@@ -143,7 +140,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get entries
    * @return entries
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getEntries() {
     return entries;
   }
@@ -164,7 +161,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get contexts
    * @return contexts
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getContexts() {
     return contexts;
   }
@@ -185,7 +182,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get message
    * @return message
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
@@ -206,7 +203,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get packages
    * @return packages
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getPackages() {
     return packages;
   }
@@ -227,7 +224,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get tags
    * @return tags
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getTags() {
     return tags;
   }
@@ -248,7 +245,7 @@ public class RetrieveAnEventForAProject200ResponseMeta implements Serializable {
    * Get sdk
    * @return sdk
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getSdk() {
     return sdk;
   }

@@ -11,8 +11,4 @@
 |**meta** | [**QueryDiscoverEventsInTableFormat200ResponseMeta**](QueryDiscoverEventsInTableFormat200ResponseMeta.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

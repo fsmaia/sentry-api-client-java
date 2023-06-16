@@ -15,8 +15,4 @@
 |**isPublic** | **Boolean** | Sets the issue to public or private. |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

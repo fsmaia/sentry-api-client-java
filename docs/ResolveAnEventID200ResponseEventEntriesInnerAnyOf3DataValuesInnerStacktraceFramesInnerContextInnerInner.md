@@ -9,8 +9,4 @@
 |------------ | ------------- | ------------- | -------------|
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

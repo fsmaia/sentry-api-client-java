@@ -18,6 +18,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
@@ -25,17 +26,17 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf
+ * Model tests for RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy
  */
-public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOfTest {
-    private final RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf model = new RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf();
+public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployTest {
+    private final RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy model = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy();
 
     /**
-     * Model tests for RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf
+     * Model tests for RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy
      */
     @Test
-    public void testRetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf() {
-        // TODO: test RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf
+    public void testRetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy() {
+        // TODO: test RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy
     }
 
     /**

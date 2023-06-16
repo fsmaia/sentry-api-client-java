@@ -25,7 +25,6 @@ import com.sentry.api.client.model.QueryAnIndividualTeam200ResponseMeta;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,10 +54,8 @@ import com.sentry.api.client.JSON;
 /**
  * TeamSCIM
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class TeamSCIM implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class TeamSCIM {
   public static final String SERIALIZED_NAME_SCHEMAS = "schemas";
   @SerializedName(SERIALIZED_NAME_SCHEMAS)
   private List<String> schemas = new ArrayList<>();
@@ -100,7 +97,7 @@ public class TeamSCIM implements Serializable {
    * Get schemas
    * @return schemas
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getSchemas() {
     return schemas;
   }
@@ -121,7 +118,7 @@ public class TeamSCIM implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -142,7 +139,7 @@ public class TeamSCIM implements Serializable {
    * Get displayName
    * @return displayName
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDisplayName() {
     return displayName;
   }
@@ -163,7 +160,7 @@ public class TeamSCIM implements Serializable {
    * Get meta
    * @return meta
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public QueryAnIndividualTeam200ResponseMeta getMeta() {
     return meta;
   }
@@ -192,7 +189,7 @@ public class TeamSCIM implements Serializable {
    * Get members
    * @return members
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public List<ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner> getMembers() {
     return members;
   }

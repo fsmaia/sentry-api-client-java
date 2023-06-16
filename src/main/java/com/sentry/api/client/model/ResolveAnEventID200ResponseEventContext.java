@@ -24,7 +24,6 @@ import com.sentry.api.client.model.ResolveAnEventID200ResponseEventContextSessio
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,10 +53,8 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventContext
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ResolveAnEventID200ResponseEventContext implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ResolveAnEventID200ResponseEventContext {
   public static final String SERIALIZED_NAME_LENGTH = "length";
   @SerializedName(SERIALIZED_NAME_LENGTH)
   private Integer length;
@@ -91,7 +88,7 @@ public class ResolveAnEventID200ResponseEventContext implements Serializable {
    * Get length
    * @return length
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Integer getLength() {
     return length;
   }
@@ -120,7 +117,7 @@ public class ResolveAnEventID200ResponseEventContext implements Serializable {
    * Get results
    * @return results
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public List<Integer> getResults() {
     return results;
   }
@@ -141,7 +138,7 @@ public class ResolveAnEventID200ResponseEventContext implements Serializable {
    * Get session
    * @return session
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ResolveAnEventID200ResponseEventContextSession getSession() {
     return session;
   }
@@ -162,7 +159,7 @@ public class ResolveAnEventID200ResponseEventContext implements Serializable {
    * Get unauthorized
    * @return unauthorized
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Boolean getUnauthorized() {
     return unauthorized;
   }
@@ -183,7 +180,7 @@ public class ResolveAnEventID200ResponseEventContext implements Serializable {
    * Get url
    * @return url
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getUrl() {
     return url;
   }

@@ -13,8 +13,4 @@
 |**hasSystemFrames** | **Boolean** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

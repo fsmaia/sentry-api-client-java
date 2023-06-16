@@ -45,8 +45,4 @@
 | IGNORED | &quot;ignored&quot; |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

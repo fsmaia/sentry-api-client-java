@@ -18,8 +18,4 @@
 |**method** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

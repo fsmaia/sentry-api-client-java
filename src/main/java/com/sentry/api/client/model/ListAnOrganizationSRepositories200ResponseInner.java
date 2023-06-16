@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSRepositories200ResponseInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAnOrganizationSRepositories200ResponseInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAnOrganizationSRepositories200ResponseInner {
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
   private String dateCreated;
@@ -80,7 +77,7 @@ public class ListAnOrganizationSRepositories200ResponseInner implements Serializ
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -101,7 +98,7 @@ public class ListAnOrganizationSRepositories200ResponseInner implements Serializ
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -122,7 +119,7 @@ public class ListAnOrganizationSRepositories200ResponseInner implements Serializ
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }

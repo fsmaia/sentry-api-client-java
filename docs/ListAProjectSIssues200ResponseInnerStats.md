@@ -10,8 +10,4 @@
 |**_24h** | **List&lt;List&lt;BigDecimal&gt;&gt;** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

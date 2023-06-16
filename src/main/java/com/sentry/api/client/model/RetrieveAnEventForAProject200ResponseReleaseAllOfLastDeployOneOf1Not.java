@@ -16,9 +16,8 @@ package com.sentry.api.client.model;
 import java.util.Objects;
 import java.util.Arrays;
 import java.math.BigDecimal;
-import java.io.Serializable;
 
-import jakarta.ws.rs.core.GenericType;
+import javax.ws.rs.core.GenericType;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -51,16 +50,16 @@ import com.google.gson.JsonParseException;
 
 import com.sentry.api.client.JSON;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends AbstractOpenApiSchema, Serializable {
-    private static final Logger log = Logger.getLogger(RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot.class.getName());
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not extends AbstractOpenApiSchema {
+    private static final Logger log = Logger.getLogger(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class.getName());
 
     public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
         @SuppressWarnings("unchecked")
         @Override
         public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-            if (!RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot.class.isAssignableFrom(type.getRawType())) {
-                return null; // this class only serializes 'RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot' and its subtypes
+            if (!RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class.isAssignableFrom(type.getRawType())) {
+                return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not' and its subtypes
             }
             final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
             final TypeAdapter<BigDecimal> adapterBigDecimal = gson.getDelegateAdapter(this, TypeToken.get(BigDecimal.class));
@@ -69,9 +68,9 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
             final TypeAdapter<Object> adapterObject = gson.getDelegateAdapter(this, TypeToken.get(Object.class));
             final TypeAdapter<String> adapterString = gson.getDelegateAdapter(this, TypeToken.get(String.class));
 
-            return (TypeAdapter<T>) new TypeAdapter<RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot>() {
+            return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not>() {
                 @Override
-                public void write(JsonWriter out, RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot value) throws IOException {
+                public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not value) throws IOException {
                     if (value == null || value.getActualInstance() == null) {
                         elementAdapter.write(out, null);
                         return;
@@ -116,7 +115,7 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
                 }
 
                 @Override
-                public RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot read(JsonReader in) throws IOException {
+                public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not read(JsonReader in) throws IOException {
                     Object deserialized = null;
                     JsonObject jsonObject = elementAdapter.read(in).getAsJsonObject();
 
@@ -125,7 +124,7 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
                         // validate the JSON object to see if any exception is thrown
                         BigDecimal.validateJsonObject(jsonObject);
                         log.log(Level.FINER, "Input data matches schema 'BigDecimal'");
-                        RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot ret = new RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot();
+                        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
                         ret.setActualInstance(adapterBigDecimal.fromJsonTree(jsonObject));
                         return ret;
                     } catch (Exception e) {
@@ -138,7 +137,7 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
                         // validate the JSON object to see if any exception is thrown
                         Boolean.validateJsonObject(jsonObject);
                         log.log(Level.FINER, "Input data matches schema 'Boolean'");
-                        RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot ret = new RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot();
+                        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
                         ret.setActualInstance(adapterBoolean.fromJsonTree(jsonObject));
                         return ret;
                     } catch (Exception e) {
@@ -151,7 +150,7 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
                         // validate the JSON object to see if any exception is thrown
                         List&lt;Object&gt;.validateJsonObject(jsonObject);
                         log.log(Level.FINER, "Input data matches schema 'List<Object>'");
-                        RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot ret = new RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot();
+                        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
                         ret.setActualInstance(adapterList&lt;Object&gt;.fromJsonTree(jsonObject));
                         return ret;
                     } catch (Exception e) {
@@ -164,7 +163,7 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
                         // validate the JSON object to see if any exception is thrown
                         Object.validateJsonObject(jsonObject);
                         log.log(Level.FINER, "Input data matches schema 'Object'");
-                        RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot ret = new RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot();
+                        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
                         ret.setActualInstance(adapterObject.fromJsonTree(jsonObject));
                         return ret;
                     } catch (Exception e) {
@@ -177,7 +176,7 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
                         // validate the JSON object to see if any exception is thrown
                         String.validateJsonObject(jsonObject);
                         log.log(Level.FINER, "Input data matches schema 'String'");
-                        RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot ret = new RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot();
+                        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
                         ret.setActualInstance(adapterString.fromJsonTree(jsonObject));
                         return ret;
                     } catch (Exception e) {
@@ -186,7 +185,7 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
                     }
 
 
-                    throw new IOException(String.format("Failed deserialization for RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot: no class matched. JSON: %s", jsonObject.toString()));
+                    throw new IOException(String.format("Failed deserialization for RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not: no class matched. JSON: %s", jsonObject.toString()));
                 }
             }.nullSafe();
         }
@@ -195,31 +194,31 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
     // store a list of schema names defined in anyOf
     public static final Map<String, GenericType> schemas = new HashMap<String, GenericType>();
 
-    public RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot() {
+    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not() {
         super("anyOf", Boolean.FALSE);
     }
 
-    public RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot(BigDecimal o) {
-        super("anyOf", Boolean.FALSE);
-        setActualInstance(o);
-    }
-
-    public RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot(Boolean o) {
+    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(BigDecimal o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot(List<Object> o) {
+    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(Boolean o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot(Object o) {
+    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(List<Object> o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot(String o) {
+    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(Object o) {
+        super("anyOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(String o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
@@ -239,7 +238,7 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
 
     @Override
     public Map<String, GenericType> getSchemas() {
-        return RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot.schemas;
+        return RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.schemas;
     }
 
     /**
@@ -351,7 +350,7 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot
+  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
     // validate anyOf schemas one by one
@@ -397,23 +396,23 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot extends 
       // continue to the next one
     }
     if (validCount == 0) {
-      throw new IOException(String.format("The JSON string is invalid for RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot with anyOf schemas: BigDecimal, Boolean, List<Object>, Object, String. JSON: %s", jsonObj.toString()));
+      throw new IOException(String.format("The JSON string is invalid for RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not with anyOf schemas: BigDecimal, Boolean, List<Object>, Object, String. JSON: %s", jsonObj.toString()));
     }
   }
 
  /**
-  * Create an instance of RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot given an JSON string
+  * Create an instance of RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot
+  * @return An instance of RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not
+  * @throws IOException if the JSON string is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not
   */
-  public static RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot.class);
+  public static RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class);
   }
 
  /**
-  * Convert an instance of RetrieveAnOrganization200ResponseProjectsInnerTeamOneOfNot to an JSON string
+  * Convert an instance of RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not to an JSON string
   *
   * @return JSON string
   */

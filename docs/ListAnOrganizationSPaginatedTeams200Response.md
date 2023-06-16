@@ -14,8 +14,4 @@
 |**resources** | [**List&lt;ListAnOrganizationSPaginatedTeams200ResponseResourcesInner&gt;**](ListAnOrganizationSPaginatedTeams200ResponseResourcesInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

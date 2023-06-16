@@ -13,8 +13,4 @@
 |**status** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

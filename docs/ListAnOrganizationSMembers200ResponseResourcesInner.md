@@ -18,8 +18,4 @@ Conforming to the SCIM RFC, this represents a Sentry Org Member as a SCIM user o
 |**sentryOrgRole** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

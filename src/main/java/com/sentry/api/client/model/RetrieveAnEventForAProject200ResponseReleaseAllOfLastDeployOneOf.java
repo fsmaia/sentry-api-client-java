@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,12 +49,10 @@ import java.util.Set;
 import com.sentry.api.client.JSON;
 
 /**
- * RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf
+ * RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf {
   public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
   @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
   private String environment;
@@ -80,10 +77,10 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf() {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf() {
   }
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf environment(String environment) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf environment(String environment) {
     
     this.environment = environment;
     return this;
@@ -93,7 +90,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get environment
    * @return environment
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEnvironment() {
     return environment;
   }
@@ -104,7 +101,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf name(String name) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf name(String name) {
     
     this.name = name;
     return this;
@@ -114,7 +111,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -125,7 +122,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf dateStarted(OffsetDateTime dateStarted) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf dateStarted(OffsetDateTime dateStarted) {
     
     this.dateStarted = dateStarted;
     return this;
@@ -135,7 +132,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get dateStarted
    * @return dateStarted
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public OffsetDateTime getDateStarted() {
     return dateStarted;
   }
@@ -146,7 +143,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf dateFinished(OffsetDateTime dateFinished) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf dateFinished(OffsetDateTime dateFinished) {
     
     this.dateFinished = dateFinished;
     return this;
@@ -156,7 +153,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get dateFinished
    * @return dateFinished
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public OffsetDateTime getDateFinished() {
     return dateFinished;
   }
@@ -167,7 +164,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf url(String url) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf url(String url) {
     
     this.url = url;
     return this;
@@ -177,7 +174,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get url
    * @return url
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getUrl() {
     return url;
   }
@@ -188,7 +185,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
   }
 
 
-  public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf id(String id) {
+  public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf id(String id) {
     
     this.id = id;
     return this;
@@ -198,7 +195,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -218,13 +215,13 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf retrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf = (RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf) o;
-    return Objects.equals(this.environment, retrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.environment) &&
-        Objects.equals(this.name, retrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.name) &&
-        Objects.equals(this.dateStarted, retrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.dateStarted) &&
-        Objects.equals(this.dateFinished, retrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.dateFinished) &&
-        Objects.equals(this.url, retrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.url) &&
-        Objects.equals(this.id, retrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.id);
+    RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf retrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf = (RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf) o;
+    return Objects.equals(this.environment, retrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.environment) &&
+        Objects.equals(this.name, retrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.name) &&
+        Objects.equals(this.dateStarted, retrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.dateStarted) &&
+        Objects.equals(this.dateFinished, retrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.dateFinished) &&
+        Objects.equals(this.url, retrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.url) &&
+        Objects.equals(this.id, retrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.id);
   }
 
   @Override
@@ -235,7 +232,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf {\n");
+    sb.append("class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf {\n");
     sb.append("    environment: ").append(toIndentedString(environment)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    dateStarted: ").append(toIndentedString(dateStarted)).append("\n");
@@ -285,25 +282,25 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf
+  * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (!RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf is not found in the empty JSON string", RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.openapiRequiredFields.toString()));
+        if (!RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf is not found in the empty JSON string", RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.openapiRequiredFields) {
+      for (String requiredField : RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
@@ -326,22 +323,22 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf' and its subtypes
+       if (!RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.class));
+       final TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf>() {
+       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf>() {
            @Override
-           public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf value) throws IOException {
+           public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf read(JsonReader in) throws IOException {
+           public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -352,18 +349,18 @@ public class RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf im
   }
 
  /**
-  * Create an instance of RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf given an JSON string
+  * Create an instance of RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf
-  * @throws IOException if the JSON string is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf
+  * @return An instance of RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf
+  * @throws IOException if the JSON string is invalid with respect to RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf
   */
-  public static RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf.class);
+  public static RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.class);
   }
 
  /**
-  * Convert an instance of RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf to an JSON string
+  * Convert an instance of RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf to an JSON string
   *
   * @return JSON string
   */

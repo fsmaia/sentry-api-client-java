@@ -622,8 +622,4 @@
 | ZULU | &quot;Zulu&quot; |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

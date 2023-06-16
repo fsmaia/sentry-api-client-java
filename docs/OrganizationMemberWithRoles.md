@@ -31,8 +31,4 @@
 |**teamRoleList** | [**List&lt;RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner&gt;**](RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOfData;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,10 +51,8 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private String type;
@@ -77,7 +74,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf implements Serial
    * Get type
    * @return type
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -98,7 +95,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf implements Serial
    * Get data
    * @return data
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOfData getData() {
     return data;
   }

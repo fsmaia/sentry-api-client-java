@@ -12,8 +12,4 @@
 |**idpProvisioned** | **Boolean** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

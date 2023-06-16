@@ -25,7 +25,6 @@ import com.sentry.api.client.model.RetrieveATeam200ResponseAvatar;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,10 +54,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSUsers200ResponseInnerUser
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAnOrganizationSUsers200ResponseInnerUser {
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
   private String username;
@@ -136,7 +133,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get username
    * @return username
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getUsername() {
     return username;
   }
@@ -157,7 +154,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get lastLogin
    * @return lastLogin
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getLastLogin() {
     return lastLogin;
   }
@@ -178,7 +175,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get isSuperuser
    * @return isSuperuser
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsSuperuser() {
     return isSuperuser;
   }
@@ -199,7 +196,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get isManaged
    * @return isManaged
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsManaged() {
     return isManaged;
   }
@@ -220,7 +217,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get lastActive
    * @return lastActive
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getLastActive() {
     return lastActive;
   }
@@ -241,7 +238,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get isStaff
    * @return isStaff
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsStaff() {
     return isStaff;
   }
@@ -262,7 +259,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -283,7 +280,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get isActive
    * @return isActive
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsActive() {
     return isActive;
   }
@@ -304,7 +301,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get has2fa
    * @return has2fa
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHas2fa() {
     return has2fa;
   }
@@ -325,7 +322,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -346,7 +343,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get avatarUrl
    * @return avatarUrl
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getAvatarUrl() {
     return avatarUrl;
   }
@@ -367,7 +364,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get dateJoined
    * @return dateJoined
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateJoined() {
     return dateJoined;
   }
@@ -396,7 +393,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get emails
    * @return emails
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<ListAnOrganizationSUsers200ResponseInnerUserEmailsInner> getEmails() {
     return emails;
   }
@@ -417,7 +414,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get avatar
    * @return avatar
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveATeam200ResponseAvatar getAvatar() {
     return avatar;
   }
@@ -438,7 +435,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get hasPasswordAuth
    * @return hasPasswordAuth
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasPasswordAuth() {
     return hasPasswordAuth;
   }
@@ -459,7 +456,7 @@ public class ListAnOrganizationSUsers200ResponseInnerUser implements Serializabl
    * Get email
    * @return email
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEmail() {
     return email;
   }

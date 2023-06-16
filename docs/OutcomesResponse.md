@@ -13,8 +13,4 @@
 |**groups** | [**List&lt;RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner&gt;**](RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

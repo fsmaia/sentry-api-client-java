@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * UpdateAnIssueRequest
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class UpdateAnIssueRequest implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class UpdateAnIssueRequest {
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
   private String status;
@@ -92,7 +89,7 @@ public class UpdateAnIssueRequest implements Serializable {
    * The new status for the issues. Valid values are &#x60;\&quot;resolved\&quot;&#x60;, &#x60;\&quot;resolvedInNextRelease\&quot;&#x60;, &#x60;\&quot;unresolved\&quot;&#x60;, and &#x60;\&quot;ignored\&quot;&#x60;.
    * @return status
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getStatus() {
     return status;
   }
@@ -113,7 +110,7 @@ public class UpdateAnIssueRequest implements Serializable {
    * The actor id (or username) of the user or team that should be assigned to this issue.
    * @return assignedTo
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getAssignedTo() {
     return assignedTo;
   }
@@ -134,7 +131,7 @@ public class UpdateAnIssueRequest implements Serializable {
    * In case this API call is invoked with a user context this allows changing of the flag that indicates if the user has seen the event.
    * @return hasSeen
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Boolean getHasSeen() {
     return hasSeen;
   }
@@ -155,7 +152,7 @@ public class UpdateAnIssueRequest implements Serializable {
    * In case this API call is invoked with a user context this allows changing of the bookmark flag.
    * @return isBookmarked
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
@@ -176,7 +173,7 @@ public class UpdateAnIssueRequest implements Serializable {
    * Get isSubscribed
    * @return isSubscribed
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Boolean getIsSubscribed() {
     return isSubscribed;
   }
@@ -197,7 +194,7 @@ public class UpdateAnIssueRequest implements Serializable {
    * Sets the issue to public or private.
    * @return isPublic
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Boolean getIsPublic() {
     return isPublic;
   }

@@ -23,9 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.ListAProjectSIssues200ResponseInnerMetadataOneOf;
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseMetadataOneOf1;
 import java.io.IOException;
-import java.io.Serializable;
 
-import jakarta.ws.rs.core.GenericType;
+import javax.ws.rs.core.GenericType;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -58,8 +57,8 @@ import com.google.gson.JsonParseException;
 
 import com.sentry.api.client.JSON;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAProjectSIssues200ResponseInnerMetadata extends AbstractOpenApiSchema, Serializable {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAProjectSIssues200ResponseInnerMetadata extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(ListAProjectSIssues200ResponseInnerMetadata.class.getName());
 
     public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

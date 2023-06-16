@@ -14,8 +14,4 @@
 |**memberLimitColonRestricted** | **Boolean** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerMechanism;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktrace;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,10 +52,8 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner {
   public static final String SERIALIZED_NAME_STACKTRACE = "stacktrace";
   @SerializedName(SERIALIZED_NAME_STACKTRACE)
   private ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktrace stacktrace;
@@ -98,7 +95,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner i
    * Get stacktrace
    * @return stacktrace
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktrace getStacktrace() {
     return stacktrace;
   }
@@ -119,7 +116,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner i
    * Get module
    * @return module
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getModule() {
     return module;
   }
@@ -140,7 +137,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner i
    * Get rawStacktrace
    * @return rawStacktrace
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getRawStacktrace() {
     return rawStacktrace;
   }
@@ -161,7 +158,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner i
    * Get mechanism
    * @return mechanism
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerMechanism getMechanism() {
     return mechanism;
   }
@@ -182,7 +179,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner i
    * Get threadId
    * @return threadId
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getThreadId() {
     return threadId;
   }
@@ -203,7 +200,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner i
    * Get value
    * @return value
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getValue() {
     return value;
   }
@@ -224,7 +221,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner i
    * Get type
    * @return type
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getType() {
     return type;
   }

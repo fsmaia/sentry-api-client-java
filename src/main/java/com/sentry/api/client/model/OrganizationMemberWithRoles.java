@@ -29,7 +29,6 @@ import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -59,10 +58,8 @@ import com.sentry.api.client.JSON;
 /**
  * OrganizationMemberWithRoles
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class OrganizationMemberWithRoles implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class OrganizationMemberWithRoles {
   public static final String SERIALIZED_NAME_EXTERNAL_USERS = "externalUsers";
   @SerializedName(SERIALIZED_NAME_EXTERNAL_USERS)
   private List<RetrieveAnOrganizationMember200ResponseExternalUsersInner> externalUsers;
@@ -172,7 +169,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get externalUsers
    * @return externalUsers
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public List<RetrieveAnOrganizationMember200ResponseExternalUsersInner> getExternalUsers() {
     return externalUsers;
   }
@@ -193,7 +190,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -214,7 +211,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get email
    * @return email
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEmail() {
     return email;
   }
@@ -235,7 +232,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -256,7 +253,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get user
    * @return user
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveAnOrganizationMember200ResponseUser getUser() {
     return user;
   }
@@ -277,7 +274,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get role
    * @return role
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getRole() {
     return role;
   }
@@ -298,7 +295,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get roleName
    * @return roleName
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getRoleName() {
     return roleName;
   }
@@ -319,7 +316,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get orgRole
    * @return orgRole
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getOrgRole() {
     return orgRole;
   }
@@ -348,7 +345,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get groupOrgRoles
    * @return groupOrgRoles
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> getGroupOrgRoles() {
     return groupOrgRoles;
   }
@@ -369,7 +366,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get pending
    * @return pending
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getPending() {
     return pending;
   }
@@ -390,7 +387,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get expired
    * @return expired
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getExpired() {
     return expired;
   }
@@ -411,7 +408,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get flags
    * @return flags
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveAnOrganizationMember200ResponseFlags getFlags() {
     return flags;
   }
@@ -432,7 +429,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -453,7 +450,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get inviteStatus
    * @return inviteStatus
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getInviteStatus() {
     return inviteStatus;
   }
@@ -474,7 +471,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get inviterName
    * @return inviterName
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getInviterName() {
     return inviterName;
   }
@@ -503,7 +500,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get teams
    * @return teams
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getTeams() {
     return teams;
   }
@@ -532,7 +529,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get teamRoles
    * @return teamRoles
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAnOrganizationMember200ResponseTeamRolesInner> getTeamRoles() {
     return teamRoles;
   }
@@ -553,7 +550,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get inviteLink
    * @return inviteLink
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getInviteLink() {
     return inviteLink;
   }
@@ -574,7 +571,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get isOnlyOwner
    * @return isOnlyOwner
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsOnlyOwner() {
     return isOnlyOwner;
   }
@@ -603,7 +600,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get roles
    * @return roles
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> getRoles() {
     return roles;
   }
@@ -632,7 +629,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get orgRoleList
    * @return orgRoleList
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> getOrgRoleList() {
     return orgRoleList;
   }
@@ -661,7 +658,7 @@ public class OrganizationMemberWithRoles implements Serializable {
    * Get teamRoleList
    * @return teamRoleList
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner> getTeamRoleList() {
     return teamRoleList;
   }

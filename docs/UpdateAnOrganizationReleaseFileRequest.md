@@ -11,8 +11,4 @@
 |**dist** | **String** | The new name of the dist. |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

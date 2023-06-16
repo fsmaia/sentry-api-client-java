@@ -25,7 +25,6 @@ import com.sentry.api.client.model.ListAnOrganizationSUsers200ResponseInnerUser;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,10 +54,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSUsers200ResponseInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAnOrganizationSUsers200ResponseInner {
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
   private String dateCreated;
@@ -169,7 +166,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -190,7 +187,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get user
    * @return user
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ListAnOrganizationSUsers200ResponseInnerUser getUser() {
     return user;
   }
@@ -211,7 +208,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get roleName
    * @return roleName
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getRoleName() {
     return roleName;
   }
@@ -232,7 +229,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get expired
    * @return expired
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getExpired() {
     return expired;
   }
@@ -253,7 +250,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -282,7 +279,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get projects
    * @return projects
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getProjects() {
     return projects;
   }
@@ -303,7 +300,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -324,7 +321,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get role
    * @return role
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RoleEnum getRole() {
     return role;
   }
@@ -345,7 +342,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get flags
    * @return flags
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ListAnOrganizationSUsers200ResponseInnerFlags getFlags() {
     return flags;
   }
@@ -366,7 +363,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get email
    * @return email
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEmail() {
     return email;
   }
@@ -387,7 +384,7 @@ public class ListAnOrganizationSUsers200ResponseInner implements Serializable {
    * Get pending
    * @return pending
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getPending() {
     return pending;
   }

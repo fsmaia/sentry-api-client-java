@@ -8005,7 +8005,7 @@ paths:
                 version: 2b6af31b2edccc73a629108b17344dfe20858780
               schema:
                 items:
-                  $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_oneOf'
+                  $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf'
                 type: array
           description: Success
         "401":
@@ -8074,7 +8074,7 @@ paths:
                 url: null
                 version: 2.0rc2
               schema:
-                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_oneOf'
+                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf'
           description: Success
         "400":
           description: Bad Input
@@ -8163,7 +8163,7 @@ paths:
                 url: null
                 version: 2.0rc2
               schema:
-                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_oneOf'
+                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf'
           description: Success
         "403":
           description: Forbidden
@@ -8229,7 +8229,7 @@ paths:
                 url: null
                 version: 2.0rc2
               schema:
-                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_oneOf'
+                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf'
           description: Success
         "403":
           description: Forbidden
@@ -9019,7 +9019,7 @@ paths:
                 id: "1234567"
               schema:
                 items:
-                  $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_oneOf_lastDeploy_oneOf'
+                  $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf'
                 type: array
           description: Success
         "403":
@@ -9071,7 +9071,7 @@ paths:
                 dateFinished: 2020-08-31T19:40:38.651670Z
                 id: "1234567"
               schema:
-                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_oneOf_lastDeploy_oneOf'
+                $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf'
           description: Success
         "208":
           description: Already Reported
@@ -13214,6 +13214,109 @@ components:
         url:
           type: string
       type: object
+    Resolve_an_Event_ID_200_response_event_contexts_ForbiddenError_responseJSON:
+      example:
+        detail: detail
+      properties:
+        detail:
+          type: string
+      type: object
+    Resolve_an_Event_ID_200_response_event_contexts_ForbiddenError:
+      example:
+        statusText: statusText
+        responseJSON:
+          detail: detail
+        type: type
+        status: 1
+      properties:
+        status:
+          type: integer
+        statusText:
+          type: string
+        responseJSON:
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts_ForbiddenError_responseJSON'
+        type:
+          type: string
+      type: object
+    Resolve_an_Event_ID_200_response_event_contexts_browser:
+      example:
+        name: name
+        type: type
+        version: version
+      properties:
+        version:
+          type: string
+        type:
+          type: string
+        name:
+          type: string
+      type: object
+    Resolve_an_Event_ID_200_response_event_contexts_trace:
+      example:
+        op: op
+        trace_id: trace_id
+        span_id: span_id
+        type: type
+      properties:
+        span_id:
+          type: string
+        type:
+          type: string
+        trace_id:
+          type: string
+        op:
+          type: string
+      type: object
+    Resolve_an_Event_ID_200_response_event_contexts_organization:
+      example:
+        id: id
+        type: type
+        slug: slug
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        slug:
+          type: string
+      type: object
+    Resolve_an_Event_ID_200_response_event_contexts:
+      example:
+        trace:
+          op: op
+          trace_id: trace_id
+          span_id: span_id
+          type: type
+        os:
+          name: name
+          type: type
+          version: version
+        ForbiddenError:
+          statusText: statusText
+          responseJSON:
+            detail: detail
+          type: type
+          status: 1
+        browser:
+          name: name
+          type: type
+          version: version
+        organization:
+          id: id
+          type: type
+          slug: slug
+      properties:
+        ForbiddenError:
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts_ForbiddenError'
+        browser:
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts_browser'
+        os:
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts_browser'
+        trace:
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts_trace'
+        organization:
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts_organization'
+      type: object
     Resolve_an_Event_ID_200_response_event_entries_inner_anyOf_data_values_inner:
       properties:
         category:
@@ -13604,7 +13707,30 @@ components:
           user: user
           tags: "{}"
         dist: dist
-        contexts: "{}"
+        contexts:
+          trace:
+            op: op
+            trace_id: trace_id
+            span_id: span_id
+            type: type
+          os:
+            name: name
+            type: type
+            version: version
+          ForbiddenError:
+            statusText: statusText
+            responseJSON:
+              detail: detail
+            type: type
+            status: 1
+          browser:
+            name: name
+            type: type
+            version: version
+          organization:
+            id: id
+            type: type
+            slug: slug
         message: message
         packages:
           my.package: my.package
@@ -13625,7 +13751,7 @@ components:
         - null
         - null
         dateCreated: dateCreated
-        size: 1
+        size: 5
         dateReceived: dateReceived
         context:
           session:
@@ -13659,7 +13785,7 @@ components:
         context:
           $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_context'
         contexts:
-          type: object
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts'
         dateCreated:
           type: string
         dateReceived:
@@ -13752,7 +13878,30 @@ components:
             user: user
             tags: "{}"
           dist: dist
-          contexts: "{}"
+          contexts:
+            trace:
+              op: op
+              trace_id: trace_id
+              span_id: span_id
+              type: type
+            os:
+              name: name
+              type: type
+              version: version
+            ForbiddenError:
+              statusText: statusText
+              responseJSON:
+                detail: detail
+              type: type
+              status: 1
+            browser:
+              name: name
+              type: type
+              version: version
+            organization:
+              id: id
+              type: type
+              slug: slug
           message: message
           packages:
             my.package: my.package
@@ -13773,7 +13922,7 @@ components:
           - null
           - null
           dateCreated: dateCreated
-          size: 1
+          size: 5
           dateReceived: dateReceived
           context:
             session:
@@ -13830,21 +13979,32 @@ components:
         name:
           type: string
       type: object
-    Retrieve_an_Organization_200_response_projects_inner_team_oneOf_not:
-      anyOf:
-      - type: string
-      - type: number
-      - type: boolean
-      - type: object
-      - items: {}
-        type: array
+    Retrieve_an_Organization_200_response_onboardingTasks_inner:
+      example:
+        task: 0
+        data: "{}"
+        dateCompleted: 2000-01-23T04:56:07.000+00:00
+        user: user
+        status: status
+      properties:
+        data:
+          nullable: true
+          type: object
+        dateCompleted:
+          format: date-time
+          type: string
+        status:
+          type: string
+        task:
+          type: integer
+        user:
+          nullable: true
+          type: string
+      type: object
     Retrieve_an_Organization_200_response_projects_inner_team:
-      nullable: true
-      oneOf:
+      allOf:
       - $ref: '#/components/schemas/List_an_Organization_s_Projects_200_response_inner_teams_inner'
-      - not:
-          $ref: '#/components/schemas/Retrieve_an_Organization_200_response_projects_inner_team_oneOf_not'
-        nullable: true
+      nullable: true
       type: object
     Retrieve_an_Organization_200_response_projects_inner:
       example:
@@ -13918,9 +14078,30 @@ components:
       - team
       - teams
       type: object
+    Retrieve_an_Organization_200_response_quota:
+      example:
+        projectLimit: 2
+        accountLimit: 1
+        maxRateInterval: 5
+        maxRate: 5
+      properties:
+        accountLimit:
+          format: int64
+          type: integer
+        maxRate:
+          format: int64
+          nullable: true
+          type: integer
+        maxRateInterval:
+          format: int64
+          type: integer
+        projectLimit:
+          format: int64
+          type: integer
+      type: object
     Retrieve_an_Organization_200_response:
       example:
-        storeCrashReports: 6
+        storeCrashReports: 7
         access:
         - access
         - access
@@ -13979,8 +14160,12 @@ components:
         allowSharedIssues: true
         dateCreated: 2000-01-23T04:56:07.000+00:00
         scrapeJavaScript: true
-        quota: "{}"
-        pendingAccessRequests: 0
+        quota:
+          projectLimit: 2
+          accountLimit: 1
+          maxRateInterval: 5
+          maxRate: 5
+        pendingAccessRequests: 6
         id: id
         require2FA: true
         slug: slug
@@ -14029,8 +14214,16 @@ components:
         name: name
         dataScrubber: true
         onboardingTasks:
-        - "{}"
-        - "{}"
+        - task: 0
+          data: "{}"
+          dateCompleted: 2000-01-23T04:56:07.000+00:00
+          user: user
+          status: status
+        - task: 0
+          data: "{}"
+          dateCompleted: 2000-01-23T04:56:07.000+00:00
+          user: user
+          status: status
         status:
           name: name
           id: id
@@ -14074,7 +14267,7 @@ components:
           type: string
         onboardingTasks:
           items:
-            type: object
+            $ref: '#/components/schemas/Retrieve_an_Organization_200_response_onboardingTasks_inner'
           type: array
         openMembership:
           type: boolean
@@ -14086,7 +14279,7 @@ components:
             $ref: '#/components/schemas/Retrieve_an_Organization_200_response_projects_inner'
           type: array
         quota:
-          type: object
+          $ref: '#/components/schemas/Retrieve_an_Organization_200_response_quota'
         require2FA:
           type: boolean
         safeFields:
@@ -14196,24 +14389,42 @@ components:
       - id
       - message
       type: object
+    Retrieve_Release_Health_Session_Statistics_200_response_groups_inner_by:
+      description: "These are key/value pairs, the key being the requested `groupBy`\
+        \ property with its corresponding value."
+      example:
+        session.status: session.status
+      properties:
+        session.status:
+          description: Example `groupBy` property
+          type: string
+      type: object
+    Retrieve_Release_Health_Session_Statistics_200_response_groups_inner_totals:
+      description: "These are key/value pairs, the key being the requested `field`,\
+        \ and the value the corresponding total over the requested time frame."
+      example:
+        sum(session): 0
+      properties:
+        sum(session):
+          description: Example `field` value
+          type: integer
+      type: object
     Retrieve_Release_Health_Session_Statistics_200_response_groups_inner:
       description: "A grouped result, as requested by the `groupBy` request parameter."
       example:
         series:
           key:
-          - 0
-          - 0
-        by: "{}"
-        totals: "{}"
+          - 6
+          - 6
+        by:
+          session.status: session.status
+        totals:
+          sum(session): 0
       properties:
         by:
-          description: "These are key/value pairs, the key being the requested `groupBy`\
-            \ property with its corresponding value."
-          type: object
+          $ref: '#/components/schemas/Retrieve_Release_Health_Session_Statistics_200_response_groups_inner_by'
         totals:
-          description: "These are key/value pairs, the key being the requested `field`,\
-            \ and the value the corresponding total over the requested time frame."
-          type: object
+          $ref: '#/components/schemas/Retrieve_Release_Health_Session_Statistics_200_response_groups_inner_totals'
         series:
           additionalProperties:
             items:
@@ -14237,16 +14448,20 @@ components:
         groups:
         - series:
             key:
-            - 0
-            - 0
-          by: "{}"
-          totals: "{}"
+            - 6
+            - 6
+          by:
+            session.status: session.status
+          totals:
+            sum(session): 0
         - series:
             key:
-            - 0
-            - 0
-          by: "{}"
-          totals: "{}"
+            - 6
+            - 6
+          by:
+            session.status: session.status
+          totals:
+            sum(session): 0
         end: 2000-01-23T04:56:07.000+00:00
       properties:
         start:
@@ -15678,6 +15893,35 @@ components:
       - events
       - url
       type: object
+    Retrieve_an_Event_for_a_Project_200_response_errors_inner_data:
+      example:
+        column: 6
+        source: source
+        row: 1
+      properties:
+        column:
+          type: integer
+        source:
+          type: string
+        row:
+          type: integer
+      type: object
+    Retrieve_an_Event_for_a_Project_200_response_errors_inner:
+      example:
+        data:
+          column: 6
+          source: source
+          row: 1
+        message: message
+        type: type
+      properties:
+        message:
+          type: string
+        type:
+          type: string
+        data:
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_errors_inner_data'
+      type: object
     Retrieve_an_Event_for_a_Project_200_response_metadata_oneOf:
       properties:
         type:
@@ -15757,7 +16001,54 @@ components:
           nullable: true
           type: string
       type: object
-    Retrieve_an_Event_for_a_Project_200_response_release_oneOf_lastDeploy_oneOf:
+    Retrieve_an_Event_for_a_Project_200_response_context_resp:
+      example:
+        stack: stack
+        statusText: statusText
+        name: name
+        responseJSON:
+          detail: detail
+        message: message
+        status: 5
+      properties:
+        status:
+          type: integer
+        responseJSON:
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts_ForbiddenError_responseJSON'
+        name:
+          type: string
+        statusText:
+          type: string
+        message:
+          type: string
+        stack:
+          type: string
+      type: object
+    Retrieve_an_Event_for_a_Project_200_response_context:
+      example:
+        resp:
+          stack: stack
+          statusText: statusText
+          name: name
+          responseJSON:
+            detail: detail
+          message: message
+          status: 5
+        session:
+          foo: foo
+        unauthorized: true
+        url: url
+      properties:
+        resp:
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_context_resp'
+        session:
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_context_session'
+        unauthorized:
+          type: boolean
+        url:
+          type: string
+      type: object
+    Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf:
       example:
         environment: environment
         dateStarted: 2000-01-23T04:56:07.000+00:00
@@ -15791,15 +16082,24 @@ components:
       - name
       - url
       type: object
-    Retrieve_an_Event_for_a_Project_200_response_release_oneOf_lastDeploy:
+    Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf_1_not:
+      anyOf:
+      - type: string
+      - type: number
+      - type: boolean
+      - type: object
+      - items: {}
+        type: array
+    Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy:
       nullable: true
       oneOf:
-      - $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_oneOf_lastDeploy_oneOf'
+      - $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf'
       - not:
-          $ref: '#/components/schemas/Retrieve_an_Organization_200_response_projects_inner_team_oneOf_not'
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf_1_not'
         nullable: true
+        type: string
       type: object
-    Retrieve_an_Event_for_a_Project_200_response_release_oneOf:
+    Retrieve_an_Event_for_a_Project_200_response_release_allOf:
       example:
         owner: "{}"
         shortVersion: shortVersion
@@ -15809,22 +16109,25 @@ components:
         - name: name
           slug: slug
         data: "{}"
-        commitCount: 0
+        commitCount: 6
         lastCommit: "{}"
         lastDeploy: null
         version: version
         url: url
-        newGroups: 1
+        newGroups: 5
         ref: ref
         dateCreated: 2000-01-23T04:56:07.000+00:00
         firstEvent: 2000-01-23T04:56:07.000+00:00
         lastEvent: 2000-01-23T04:56:07.000+00:00
-        deployCount: 6
+        deployCount: 1
         dateReleased: 2000-01-23T04:56:07.000+00:00
+        id: 0
         authors:
         - "{}"
         - "{}"
       properties:
+        id:
+          type: integer
         authors:
           items:
             type: object
@@ -15852,7 +16155,7 @@ components:
           nullable: true
           type: object
         lastDeploy:
-          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_oneOf_lastDeploy'
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy'
         lastEvent:
           format: date-time
           nullable: true
@@ -15897,12 +16200,9 @@ components:
       - version
       type: object
     Retrieve_an_Event_for_a_Project_200_response_release:
+      allOf:
+      - $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf'
       nullable: true
-      oneOf:
-      - $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_oneOf'
-      - not:
-          $ref: '#/components/schemas/Retrieve_an_Organization_200_response_projects_inner_team_oneOf_not'
-        nullable: true
       type: object
     Retrieve_an_Event_for_a_Project_200_response:
       example:
@@ -15921,13 +16221,48 @@ components:
           packages: packages
           user: user
           tags: "{}"
-        contexts: "{}"
+        contexts:
+          trace:
+            op: op
+            trace_id: trace_id
+            span_id: span_id
+            type: type
+          os:
+            name: name
+            type: type
+            version: version
+          ForbiddenError:
+            statusText: statusText
+            responseJSON:
+              detail: detail
+            type: type
+            status: 1
+          browser:
+            name: name
+            type: type
+            version: version
+          organization:
+            id: id
+            type: type
+            slug: slug
         type: type
         title: title
         platform: platform
         dateCreated: dateCreated
         dateReceived: dateReceived
-        context: "{}"
+        context:
+          resp:
+            stack: stack
+            statusText: statusText
+            name: name
+            responseJSON:
+              detail: detail
+            message: message
+            status: 5
+          session:
+            foo: foo
+          unauthorized: true
+          url: url
         id: id
         groupID: groupID
         previousEventID: previousEventID
@@ -15959,10 +16294,16 @@ components:
           email: email
           username: username
         errors:
-        - data: "{}"
+        - data:
+            column: 6
+            source: source
+            row: 1
           message: message
           type: type
-        - data: "{}"
+        - data:
+            column: 6
+            source: source
+            row: 1
           message: message
           type: type
       properties:
@@ -15985,7 +16326,7 @@ components:
           type: integer
         errors:
           items:
-            $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_errors_inner'
+            $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_errors_inner'
           type: array
         platform:
           type: string
@@ -16017,13 +16358,13 @@ components:
         _meta:
           $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response__meta'
         contexts:
-          type: object
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts'
         fingerprints:
           items:
             type: string
           type: array
         context:
-          type: object
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_context'
         release:
           $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release'
         groupID:
@@ -16415,7 +16756,30 @@ components:
           packages: packages
           user: user
           tags: "{}"
-        contexts: "{}"
+        contexts:
+          trace:
+            op: op
+            trace_id: trace_id
+            span_id: span_id
+            type: type
+          os:
+            name: name
+            type: type
+            version: version
+          ForbiddenError:
+            statusText: statusText
+            responseJSON:
+              detail: detail
+            type: type
+            status: 1
+          browser:
+            name: name
+            type: type
+            version: version
+          organization:
+            id: id
+            type: type
+            slug: slug
         message: message
         type: type
         packages: "{}"
@@ -16437,7 +16801,19 @@ components:
         dateCreated: dateCreated
         size: 0
         dateReceived: dateReceived
-        context: "{}"
+        context:
+          resp:
+            stack: stack
+            statusText: statusText
+            name: name
+            responseJSON:
+              detail: detail
+            message: message
+            status: 5
+          session:
+            foo: foo
+          unauthorized: true
+          url: url
         id: id
         sdk:
           name: name
@@ -16451,10 +16827,16 @@ components:
           email: email
           username: username
         errors:
-        - data: "{}"
+        - data:
+            column: 6
+            source: source
+            row: 1
           message: message
           type: type
-        - data: "{}"
+        - data:
+            column: 6
+            source: source
+            row: 1
           message: message
           type: type
       properties:
@@ -16471,7 +16853,7 @@ components:
           type: integer
         errors:
           items:
-            $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_errors_inner'
+            $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_errors_inner'
           type: array
         platform:
           type: string
@@ -16500,13 +16882,13 @@ components:
         _meta:
           $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response__meta'
         contexts:
-          type: object
+          $ref: '#/components/schemas/Resolve_an_Event_ID_200_response_event_contexts'
         fingerprints:
           items:
             type: string
           type: array
         context:
-          type: object
+          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_context'
         groupID:
           type: string
         title:
@@ -16551,7 +16933,30 @@ components:
             packages: packages
             user: user
             tags: "{}"
-          contexts: "{}"
+          contexts:
+            trace:
+              op: op
+              trace_id: trace_id
+              span_id: span_id
+              type: type
+            os:
+              name: name
+              type: type
+              version: version
+            ForbiddenError:
+              statusText: statusText
+              responseJSON:
+                detail: detail
+              type: type
+              status: 1
+            browser:
+              name: name
+              type: type
+              version: version
+            organization:
+              id: id
+              type: type
+              slug: slug
           message: message
           type: type
           packages: "{}"
@@ -16573,7 +16978,19 @@ components:
           dateCreated: dateCreated
           size: 0
           dateReceived: dateReceived
-          context: "{}"
+          context:
+            resp:
+              stack: stack
+              statusText: statusText
+              name: name
+              responseJSON:
+                detail: detail
+              message: message
+              status: 5
+            session:
+              foo: foo
+            unauthorized: true
+            url: url
           id: id
           sdk:
             name: name
@@ -16587,10 +17004,16 @@ components:
             email: email
             username: username
           errors:
-          - data: "{}"
+          - data:
+              column: 6
+              source: source
+              row: 1
             message: message
             type: type
-          - data: "{}"
+          - data:
+              column: 6
+              source: source
+              row: 1
             message: message
             type: type
         id: id
@@ -17243,10 +17666,18 @@ components:
             type: object
           type: array
       type: object
+    List_an_Organization_s_Release_Files_200_response_inner_headers:
+      example:
+        Content-Type: Content-Type
+      properties:
+        Content-Type:
+          type: string
+      type: object
     List_an_Organization_s_Release_Files_200_response_inner:
       example:
         sha1: sha1
-        headers: "{}"
+        headers:
+          Content-Type: Content-Type
         dateCreated: 2000-01-23T04:56:07.000+00:00
         size: 0
         name: name
@@ -17264,7 +17695,7 @@ components:
           format: date-time
           type: string
         headers:
-          type: object
+          $ref: '#/components/schemas/List_an_Organization_s_Release_Files_200_response_inner_headers'
         id:
           type: string
         size:

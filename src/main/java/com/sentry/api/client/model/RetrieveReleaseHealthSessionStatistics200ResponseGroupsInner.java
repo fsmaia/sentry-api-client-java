@@ -20,11 +20,12 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy;
+import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,17 +55,15 @@ import com.sentry.api.client.JSON;
 /**
  * A grouped result, as requested by the &#x60;groupBy&#x60; request parameter.
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner {
   public static final String SERIALIZED_NAME_BY = "by";
   @SerializedName(SERIALIZED_NAME_BY)
-  private Object by;
+  private RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy by;
 
   public static final String SERIALIZED_NAME_TOTALS = "totals";
   @SerializedName(SERIALIZED_NAME_TOTALS)
-  private Object totals;
+  private RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals totals;
 
   public static final String SERIALIZED_NAME_SERIES = "series";
   @SerializedName(SERIALIZED_NAME_SERIES)
@@ -73,44 +72,44 @@ public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner implem
   public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner() {
   }
 
-  public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner by(Object by) {
+  public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner by(RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy by) {
     
     this.by = by;
     return this;
   }
 
    /**
-   * These are key/value pairs, the key being the requested &#x60;groupBy&#x60; property with its corresponding value.
+   * Get by
    * @return by
   **/
-  @jakarta.annotation.Nonnull
-  public Object getBy() {
+  @javax.annotation.Nonnull
+  public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy getBy() {
     return by;
   }
 
 
-  public void setBy(Object by) {
+  public void setBy(RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy by) {
     this.by = by;
   }
 
 
-  public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner totals(Object totals) {
+  public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner totals(RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals totals) {
     
     this.totals = totals;
     return this;
   }
 
    /**
-   * These are key/value pairs, the key being the requested &#x60;field&#x60;, and the value the corresponding total over the requested time frame.
+   * Get totals
    * @return totals
   **/
-  @jakarta.annotation.Nonnull
-  public Object getTotals() {
+  @javax.annotation.Nonnull
+  public RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals getTotals() {
     return totals;
   }
 
 
-  public void setTotals(Object totals) {
+  public void setTotals(RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals totals) {
     this.totals = totals;
   }
 
@@ -133,7 +132,7 @@ public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner implem
    * These are key/value pairs, the key being the requested &#x60;field&#x60;, and the value is an array of aggregated values. The array corresponds to the times given in the &#x60;intervals&#x60; array.
    * @return series
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Map<String, List<Integer>> getSeries() {
     return series;
   }
@@ -231,6 +230,10 @@ public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner implem
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      // validate the required field `by`
+      RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy.validateJsonObject(jsonObj.getAsJsonObject("by"));
+      // validate the required field `totals`
+      RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals.validateJsonObject(jsonObj.getAsJsonObject("totals"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

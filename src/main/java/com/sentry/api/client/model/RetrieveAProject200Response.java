@@ -29,7 +29,6 @@ import com.sentry.api.client.model.RetrieveATeam200ResponseOrganization;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -59,10 +58,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAProject200Response
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAProject200Response implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAProject200Response {
   public static final String SERIALIZED_NAME_ALLOWED_DOMAINS = "allowedDomains";
   @SerializedName(SERIALIZED_NAME_ALLOWED_DOMAINS)
   private List<String> allowedDomains = new ArrayList<>();
@@ -248,7 +245,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get allowedDomains
    * @return allowedDomains
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getAllowedDomains() {
     return allowedDomains;
   }
@@ -269,7 +266,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get avatar
    * @return avatar
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveATeam200ResponseAvatar getAvatar() {
     return avatar;
   }
@@ -290,7 +287,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get color
    * @return color
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getColor() {
     return color;
   }
@@ -311,7 +308,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get dataScrubber
    * @return dataScrubber
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getDataScrubber() {
     return dataScrubber;
   }
@@ -332,7 +329,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get dataScrubberDefaults
    * @return dataScrubberDefaults
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getDataScrubberDefaults() {
     return dataScrubberDefaults;
   }
@@ -353,7 +350,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -374,7 +371,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get defaultEnvironment
    * @return defaultEnvironment
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getDefaultEnvironment() {
     return defaultEnvironment;
   }
@@ -395,7 +392,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get digestsMaxDelay
    * @return digestsMaxDelay
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getDigestsMaxDelay() {
     return digestsMaxDelay;
   }
@@ -416,7 +413,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get digestsMinDelay
    * @return digestsMinDelay
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getDigestsMinDelay() {
     return digestsMinDelay;
   }
@@ -445,7 +442,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get features
    * @return features
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getFeatures() {
     return features;
   }
@@ -466,7 +463,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get firstEvent
    * @return firstEvent
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getFirstEvent() {
     return firstEvent;
   }
@@ -487,7 +484,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get hasAccess
    * @return hasAccess
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasAccess() {
     return hasAccess;
   }
@@ -508,7 +505,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -529,7 +526,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get isBookmarked
    * @return isBookmarked
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
@@ -550,7 +547,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get isInternal
    * @return isInternal
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsInternal() {
     return isInternal;
   }
@@ -571,7 +568,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get isMember
    * @return isMember
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsMember() {
     return isMember;
   }
@@ -592,7 +589,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get isPublic
    * @return isPublic
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsPublic() {
     return isPublic;
   }
@@ -613,7 +610,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get latestRelease
    * @return latestRelease
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public RetrieveAProject200ResponseLatestRelease getLatestRelease() {
     return latestRelease;
   }
@@ -634,7 +631,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -655,7 +652,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get options
    * @return options
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveAProject200ResponseOptions getOptions() {
     return options;
   }
@@ -676,7 +673,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get organization
    * @return organization
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveATeam200ResponseOrganization getOrganization() {
     return organization;
   }
@@ -697,7 +694,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get platform
    * @return platform
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getPlatform() {
     return platform;
   }
@@ -726,7 +723,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get platforms
    * @return platforms
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getPlatforms() {
     return platforms;
   }
@@ -755,7 +752,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get plugins
    * @return plugins
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public List<RetrieveAProject200ResponsePluginsInner> getPlugins() {
     return plugins;
   }
@@ -776,7 +773,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get processingIssues
    * @return processingIssues
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getProcessingIssues() {
     return processingIssues;
   }
@@ -797,7 +794,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get relayPiiConfig
    * @return relayPiiConfig
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getRelayPiiConfig() {
     return relayPiiConfig;
   }
@@ -818,7 +815,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get resolveAge
    * @return resolveAge
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getResolveAge() {
     return resolveAge;
   }
@@ -847,7 +844,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get safeFields
    * @return safeFields
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getSafeFields() {
     return safeFields;
   }
@@ -868,7 +865,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get scrapeJavaScript
    * @return scrapeJavaScript
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getScrapeJavaScript() {
     return scrapeJavaScript;
   }
@@ -889,7 +886,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get scrubIPAddresses
    * @return scrubIPAddresses
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getScrubIPAddresses() {
     return scrubIPAddresses;
   }
@@ -910,7 +907,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get securityToken
    * @return securityToken
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSecurityToken() {
     return securityToken;
   }
@@ -931,7 +928,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get securityTokenHeader
    * @return securityTokenHeader
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getSecurityTokenHeader() {
     return securityTokenHeader;
   }
@@ -960,7 +957,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get sensitiveFields
    * @return sensitiveFields
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getSensitiveFields() {
     return sensitiveFields;
   }
@@ -981,7 +978,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get slug
    * @return slug
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -1002,7 +999,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get status
    * @return status
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -1023,7 +1020,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get storeCrashReports
    * @return storeCrashReports
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Boolean getStoreCrashReports() {
     return storeCrashReports;
   }
@@ -1044,7 +1041,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get subjectPrefix
    * @return subjectPrefix
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSubjectPrefix() {
     return subjectPrefix;
   }
@@ -1065,7 +1062,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get subjectTemplate
    * @return subjectTemplate
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSubjectTemplate() {
     return subjectTemplate;
   }
@@ -1086,7 +1083,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get team
    * @return team
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ListAnOrganizationSProjects200ResponseInnerTeamsInner getTeam() {
     return team;
   }
@@ -1115,7 +1112,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get teams
    * @return teams
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<ListAnOrganizationSProjects200ResponseInnerTeamsInner> getTeams() {
     return teams;
   }
@@ -1136,7 +1133,7 @@ public class RetrieveAProject200Response implements Serializable {
    * Get verifySSL
    * @return verifySSL
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getVerifySSL() {
     return verifySSL;
   }

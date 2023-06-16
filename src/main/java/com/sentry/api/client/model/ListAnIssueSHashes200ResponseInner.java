@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.ListAnIssueSHashes200ResponseInnerLatestEvent;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,10 +51,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnIssueSHashes200ResponseInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAnIssueSHashes200ResponseInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAnIssueSHashes200ResponseInner {
   public static final String SERIALIZED_NAME_LATEST_EVENT = "latestEvent";
   @SerializedName(SERIALIZED_NAME_LATEST_EVENT)
   private ListAnIssueSHashes200ResponseInnerLatestEvent latestEvent;
@@ -77,7 +74,7 @@ public class ListAnIssueSHashes200ResponseInner implements Serializable {
    * Get latestEvent
    * @return latestEvent
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ListAnIssueSHashes200ResponseInnerLatestEvent getLatestEvent() {
     return latestEvent;
   }
@@ -98,7 +95,7 @@ public class ListAnIssueSHashes200ResponseInner implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getId() {
     return id;
   }

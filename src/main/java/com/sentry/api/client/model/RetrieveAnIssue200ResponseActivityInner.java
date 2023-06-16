@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import org.openapitools.jackson.nullable.JsonNullable;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,10 +51,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnIssue200ResponseActivityInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnIssue200ResponseActivityInner {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   private Object data;
@@ -89,7 +86,7 @@ public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
    * Get data
    * @return data
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getData() {
     return data;
   }
@@ -110,7 +107,7 @@ public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getDateCreated() {
     return dateCreated;
   }
@@ -131,7 +128,7 @@ public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getId() {
     return id;
   }
@@ -152,7 +149,7 @@ public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
    * Get type
    * @return type
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getType() {
     return type;
   }
@@ -173,7 +170,7 @@ public class RetrieveAnIssue200ResponseActivityInner implements Serializable {
    * Get user
    * @return user
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getUser() {
     return user;
   }

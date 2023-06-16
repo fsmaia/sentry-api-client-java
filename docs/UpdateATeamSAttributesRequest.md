@@ -11,8 +11,4 @@
 |**operations** | [**List&lt;UpdateATeamSAttributesRequestOperationsInner&gt;**](UpdateATeamSAttributesRequestOperationsInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

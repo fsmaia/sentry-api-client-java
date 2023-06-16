@@ -14,8 +14,4 @@
 |**filename** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

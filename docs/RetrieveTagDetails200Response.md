@@ -11,8 +11,4 @@
 |**totalValues** | **Integer** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

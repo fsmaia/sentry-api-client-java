@@ -13,8 +13,4 @@
 |**groups** | [**List&lt;RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner&gt;**](RetrieveReleaseHealthSessionStatistics200ResponseGroupsInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

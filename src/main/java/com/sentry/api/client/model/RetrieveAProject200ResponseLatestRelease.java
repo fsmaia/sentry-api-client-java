@@ -25,7 +25,6 @@ import com.sentry.api.client.model.RetrieveAProject200ResponseLatestReleaseProje
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,10 +54,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAProject200ResponseLatestRelease
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAProject200ResponseLatestRelease implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAProject200ResponseLatestRelease {
   public static final String SERIALIZED_NAME_AUTHORS = "authors";
   @SerializedName(SERIALIZED_NAME_AUTHORS)
   private List<RetrieveAProject200ResponseLatestReleaseAuthorsInner> authors = new ArrayList<>();
@@ -148,7 +145,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get authors
    * @return authors
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAProject200ResponseLatestReleaseAuthorsInner> getAuthors() {
     return authors;
   }
@@ -169,7 +166,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get commitCount
    * @return commitCount
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getCommitCount() {
     return commitCount;
   }
@@ -190,7 +187,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get data
    * @return data
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Object getData() {
     return data;
   }
@@ -211,7 +208,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -232,7 +229,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get dateReleased
    * @return dateReleased
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getDateReleased() {
     return dateReleased;
   }
@@ -253,7 +250,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get deployCount
    * @return deployCount
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getDeployCount() {
     return deployCount;
   }
@@ -274,7 +271,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get firstEvent
    * @return firstEvent
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getFirstEvent() {
     return firstEvent;
   }
@@ -295,7 +292,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get lastCommit
    * @return lastCommit
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getLastCommit() {
     return lastCommit;
   }
@@ -316,7 +313,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get lastDeploy
    * @return lastDeploy
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getLastDeploy() {
     return lastDeploy;
   }
@@ -337,7 +334,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get lastEvent
    * @return lastEvent
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getLastEvent() {
     return lastEvent;
   }
@@ -358,7 +355,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get newGroups
    * @return newGroups
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getNewGroups() {
     return newGroups;
   }
@@ -379,7 +376,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get owner
    * @return owner
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getOwner() {
     return owner;
   }
@@ -408,7 +405,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get projects
    * @return projects
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAProject200ResponseLatestReleaseProjectsInner> getProjects() {
     return projects;
   }
@@ -429,7 +426,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get ref
    * @return ref
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getRef() {
     return ref;
   }
@@ -450,7 +447,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get shortVersion
    * @return shortVersion
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getShortVersion() {
     return shortVersion;
   }
@@ -471,7 +468,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get url
    * @return url
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getUrl() {
     return url;
   }
@@ -492,7 +489,7 @@ public class RetrieveAProject200ResponseLatestRelease implements Serializable {
    * Get version
    * @return version
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getVersion() {
     return version;
   }

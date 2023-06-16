@@ -27,8 +27,4 @@
 |**emails** | [**List&lt;RetrieveAnOrganizationMember200ResponseUserEmailsInner&gt;**](RetrieveAnOrganizationMember200ResponseUserEmailsInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

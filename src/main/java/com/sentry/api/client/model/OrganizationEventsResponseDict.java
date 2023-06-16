@@ -25,7 +25,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,10 +54,8 @@ import com.sentry.api.client.JSON;
 /**
  * OrganizationEventsResponseDict
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class OrganizationEventsResponseDict implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class OrganizationEventsResponseDict {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   private List<Map<String, Object>> data = new ArrayList<>();
@@ -88,7 +85,7 @@ public class OrganizationEventsResponseDict implements Serializable {
    * Get data
    * @return data
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<Map<String, Object>> getData() {
     return data;
   }
@@ -109,7 +106,7 @@ public class OrganizationEventsResponseDict implements Serializable {
    * Get meta
    * @return meta
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public QueryDiscoverEventsInTableFormat200ResponseMeta getMeta() {
     return meta;
   }

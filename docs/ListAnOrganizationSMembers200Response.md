@@ -14,8 +14,4 @@
 |**resources** | [**List&lt;ListAnOrganizationSMembers200ResponseResourcesInner&gt;**](ListAnOrganizationSMembers200ResponseResourcesInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

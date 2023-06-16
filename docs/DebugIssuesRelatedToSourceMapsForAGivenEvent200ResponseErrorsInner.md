@@ -12,8 +12,4 @@
 |**data** | **Map&lt;String, Object&gt;** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

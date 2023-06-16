@@ -15,8 +15,4 @@
 |**security** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -15,8 +15,4 @@
 |**allowed** | **Boolean** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

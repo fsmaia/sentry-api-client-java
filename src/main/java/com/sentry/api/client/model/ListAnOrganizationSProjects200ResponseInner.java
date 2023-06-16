@@ -31,7 +31,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.openapitools.jackson.nullable.JsonNullable;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -61,10 +60,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSProjects200ResponseInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAnOrganizationSProjects200ResponseInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAnOrganizationSProjects200ResponseInner {
   public static final String SERIALIZED_NAME_LATEST_DEPLOYS = "latestDeploys";
   @SerializedName(SERIALIZED_NAME_LATEST_DEPLOYS)
   private Map<String, Map<String, String>> latestDeploys;
@@ -198,7 +195,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get latestDeploys
    * @return latestDeploys
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Map<String, Map<String, String>> getLatestDeploys() {
     return latestDeploys;
   }
@@ -219,7 +216,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get stats
    * @return stats
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getStats() {
     return stats;
   }
@@ -240,7 +237,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get transactionStats
    * @return transactionStats
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getTransactionStats() {
     return transactionStats;
   }
@@ -261,7 +258,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get sessionStats
    * @return sessionStats
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getSessionStats() {
     return sessionStats;
   }
@@ -282,7 +279,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -303,7 +300,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get slug
    * @return slug
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -324,7 +321,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -345,7 +342,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get platform
    * @return platform
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getPlatform() {
     return platform;
   }
@@ -366,7 +363,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -387,7 +384,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get isBookmarked
    * @return isBookmarked
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
@@ -408,7 +405,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get isMember
    * @return isMember
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsMember() {
     return isMember;
   }
@@ -437,7 +434,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get features
    * @return features
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getFeatures() {
     return features;
   }
@@ -458,7 +455,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get firstEvent
    * @return firstEvent
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public OffsetDateTime getFirstEvent() {
     return firstEvent;
   }
@@ -479,7 +476,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get firstTransactionEvent
    * @return firstTransactionEvent
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getFirstTransactionEvent() {
     return firstTransactionEvent;
   }
@@ -508,7 +505,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get access
    * @return access
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getAccess() {
     return access;
   }
@@ -529,7 +526,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get hasAccess
    * @return hasAccess
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasAccess() {
     return hasAccess;
   }
@@ -550,7 +547,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get hasMinifiedStackTrace
    * @return hasMinifiedStackTrace
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasMinifiedStackTrace() {
     return hasMinifiedStackTrace;
   }
@@ -571,7 +568,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get hasMonitors
    * @return hasMonitors
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasMonitors() {
     return hasMonitors;
   }
@@ -592,7 +589,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get hasProfiles
    * @return hasProfiles
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasProfiles() {
     return hasProfiles;
   }
@@ -613,7 +610,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get hasReplays
    * @return hasReplays
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasReplays() {
     return hasReplays;
   }
@@ -634,7 +631,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get hasSessions
    * @return hasSessions
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasSessions() {
     return hasSessions;
   }
@@ -655,7 +652,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get team
    * @return team
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ListAnOrganizationSProjects200ResponseInnerTeam getTeam() {
     return team;
   }
@@ -684,7 +681,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get teams
    * @return teams
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<ListAnOrganizationSProjects200ResponseInnerTeamsInner> getTeams() {
     return teams;
   }
@@ -705,7 +702,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get eventProcessing
    * @return eventProcessing
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ListAnOrganizationSProjects200ResponseInnerEventProcessing getEventProcessing() {
     return eventProcessing;
   }
@@ -734,7 +731,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get platforms
    * @return platforms
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getPlatforms() {
     return platforms;
   }
@@ -755,7 +752,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get hasUserReports
    * @return hasUserReports
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasUserReports() {
     return hasUserReports;
   }
@@ -784,7 +781,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get environments
    * @return environments
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getEnvironments() {
     return environments;
   }
@@ -805,7 +802,7 @@ public class ListAnOrganizationSProjects200ResponseInner implements Serializable
    * Get latestRelease
    * @return latestRelease
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ListAnOrganizationSProjects200ResponseInnerLatestRelease getLatestRelease() {
     return latestRelease;
   }

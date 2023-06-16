@@ -11,8 +11,4 @@
 |**sentryOrgRole** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

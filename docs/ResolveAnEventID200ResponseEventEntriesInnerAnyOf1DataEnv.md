@@ -10,8 +10,4 @@
 |**ENV** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

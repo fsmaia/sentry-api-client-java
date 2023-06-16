@@ -50,8 +50,4 @@
 |**verifySSL** | **Boolean** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

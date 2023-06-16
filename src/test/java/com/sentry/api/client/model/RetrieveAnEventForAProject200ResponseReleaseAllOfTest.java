@@ -19,7 +19,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.RetrieveAProject200ResponseLatestReleaseProjectsInner;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -29,17 +29,25 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for RetrieveAnEventForAProject200ResponseReleaseOneOf
+ * Model tests for RetrieveAnEventForAProject200ResponseReleaseAllOf
  */
-public class RetrieveAnEventForAProject200ResponseReleaseOneOfTest {
-    private final RetrieveAnEventForAProject200ResponseReleaseOneOf model = new RetrieveAnEventForAProject200ResponseReleaseOneOf();
+public class RetrieveAnEventForAProject200ResponseReleaseAllOfTest {
+    private final RetrieveAnEventForAProject200ResponseReleaseAllOf model = new RetrieveAnEventForAProject200ResponseReleaseAllOf();
 
     /**
-     * Model tests for RetrieveAnEventForAProject200ResponseReleaseOneOf
+     * Model tests for RetrieveAnEventForAProject200ResponseReleaseAllOf
      */
     @Test
-    public void testRetrieveAnEventForAProject200ResponseReleaseOneOf() {
-        // TODO: test RetrieveAnEventForAProject200ResponseReleaseOneOf
+    public void testRetrieveAnEventForAProject200ResponseReleaseAllOf() {
+        // TODO: test RetrieveAnEventForAProject200ResponseReleaseAllOf
+    }
+
+    /**
+     * Test the property 'id'
+     */
+    @Test
+    public void idTest() {
+        // TODO: test id
     }
 
     /**

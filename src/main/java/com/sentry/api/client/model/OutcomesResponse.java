@@ -24,7 +24,6 @@ import com.sentry.api.client.model.RetrieveEventCountsForAnOrganizationV2200Resp
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,10 +53,8 @@ import com.sentry.api.client.JSON;
 /**
  * OutcomesResponse
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class OutcomesResponse implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class OutcomesResponse {
   public static final String SERIALIZED_NAME_START = "start";
   @SerializedName(SERIALIZED_NAME_START)
   private String start;
@@ -87,7 +84,7 @@ public class OutcomesResponse implements Serializable {
    * Get start
    * @return start
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getStart() {
     return start;
   }
@@ -108,7 +105,7 @@ public class OutcomesResponse implements Serializable {
    * Get end
    * @return end
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEnd() {
     return end;
   }
@@ -137,7 +134,7 @@ public class OutcomesResponse implements Serializable {
    * Get intervals
    * @return intervals
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getIntervals() {
     return intervals;
   }
@@ -166,7 +163,7 @@ public class OutcomesResponse implements Serializable {
    * Get groups
    * @return groups
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner> getGroups() {
     return groups;
   }

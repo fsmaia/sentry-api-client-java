@@ -14,8 +14,4 @@
 |**resources** | [**List&lt;QueryAnIndividualTeam200Response&gt;**](QueryAnIndividualTeam200Response.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

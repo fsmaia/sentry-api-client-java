@@ -19,6 +19,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventContext;
+import com.sentry.api.client.model.ResolveAnEventID200ResponseEventContexts;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInner;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventErrorsInner;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventMeta;

@@ -25,8 +25,4 @@
 |**orgRole** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

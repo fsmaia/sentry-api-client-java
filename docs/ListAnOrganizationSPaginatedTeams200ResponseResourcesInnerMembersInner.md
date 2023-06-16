@@ -11,8 +11,4 @@
 |**display** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

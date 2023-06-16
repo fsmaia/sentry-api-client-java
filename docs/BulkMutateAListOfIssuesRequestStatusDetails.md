@@ -18,8 +18,4 @@ Additional details about the resolution. Valid values are `\"inRelease\"`, `\"in
 |**ignoreUserWindow** | **Integer** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

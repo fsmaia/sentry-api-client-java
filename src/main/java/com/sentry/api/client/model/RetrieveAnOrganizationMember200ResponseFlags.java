@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganizationMember200ResponseFlags
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnOrganizationMember200ResponseFlags implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnOrganizationMember200ResponseFlags {
   public static final String SERIALIZED_NAME_IDP_COLON_PROVISIONED = "idp:provisioned";
   @SerializedName(SERIALIZED_NAME_IDP_COLON_PROVISIONED)
   private Boolean idpColonProvisioned;
@@ -88,7 +85,7 @@ public class RetrieveAnOrganizationMember200ResponseFlags implements Serializabl
    * Get idpColonProvisioned
    * @return idpColonProvisioned
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIdpColonProvisioned() {
     return idpColonProvisioned;
   }
@@ -109,7 +106,7 @@ public class RetrieveAnOrganizationMember200ResponseFlags implements Serializabl
    * Get idpColonRoleRestricted
    * @return idpColonRoleRestricted
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIdpColonRoleRestricted() {
     return idpColonRoleRestricted;
   }
@@ -130,7 +127,7 @@ public class RetrieveAnOrganizationMember200ResponseFlags implements Serializabl
    * Get ssoColonLinked
    * @return ssoColonLinked
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getSsoColonLinked() {
     return ssoColonLinked;
   }
@@ -151,7 +148,7 @@ public class RetrieveAnOrganizationMember200ResponseFlags implements Serializabl
    * Get ssoColonInvalid
    * @return ssoColonInvalid
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getSsoColonInvalid() {
     return ssoColonInvalid;
   }
@@ -172,7 +169,7 @@ public class RetrieveAnOrganizationMember200ResponseFlags implements Serializabl
    * Get memberLimitColonRestricted
    * @return memberLimitColonRestricted
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getMemberLimitColonRestricted() {
     return memberLimitColonRestricted;
   }

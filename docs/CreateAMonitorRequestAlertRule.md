@@ -11,8 +11,4 @@
 |**targets** | [**List&lt;CreateAMonitorRequestAlertRuleTargetsInner&gt;**](CreateAMonitorRequestAlertRuleTargetsInner.md) | Array of dictionaries with information of the user or team to be notified |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

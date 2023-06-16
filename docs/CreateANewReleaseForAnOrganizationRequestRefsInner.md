@@ -12,8 +12,4 @@
 |**previousCommit** | **String** | The previous release&#39;s commit. |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

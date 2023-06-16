@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * SCIMMemberProvision
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class SCIMMemberProvision implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class SCIMMemberProvision {
   public static final String SERIALIZED_NAME_USER_NAME = "userName";
   @SerializedName(SERIALIZED_NAME_USER_NAME)
   private String userName;
@@ -76,7 +73,7 @@ public class SCIMMemberProvision implements Serializable {
    * Get userName
    * @return userName
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getUserName() {
     return userName;
   }
@@ -97,7 +94,7 @@ public class SCIMMemberProvision implements Serializable {
    * Get sentryOrgRole
    * @return sentryOrgRole
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getSentryOrgRole() {
     return sentryOrgRole;
   }

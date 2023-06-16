@@ -14,8 +14,4 @@
 |**projectSlug** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -19,8 +19,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.RetrieveAProject200ResponseLatestReleaseProjectsInner;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseOneOf;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -41,6 +40,14 @@ public class RetrieveAnEventForAProject200ResponseReleaseTest {
     @Test
     public void testRetrieveAnEventForAProject200ResponseRelease() {
         // TODO: test RetrieveAnEventForAProject200ResponseRelease
+    }
+
+    /**
+     * Test the property 'id'
+     */
+    @Test
+    public void idTest() {
+        // TODO: test id
     }
 
     /**

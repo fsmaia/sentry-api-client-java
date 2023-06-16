@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventUserData;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,10 +51,8 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventUser
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ResolveAnEventID200ResponseEventUser implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ResolveAnEventID200ResponseEventUser {
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
   private String username;
@@ -93,7 +90,7 @@ public class ResolveAnEventID200ResponseEventUser implements Serializable {
    * Get username
    * @return username
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getUsername() {
     return username;
   }
@@ -114,7 +111,7 @@ public class ResolveAnEventID200ResponseEventUser implements Serializable {
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -135,7 +132,7 @@ public class ResolveAnEventID200ResponseEventUser implements Serializable {
    * Get ipAddress
    * @return ipAddress
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getIpAddress() {
     return ipAddress;
   }
@@ -156,7 +153,7 @@ public class ResolveAnEventID200ResponseEventUser implements Serializable {
    * Get email
    * @return email
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getEmail() {
     return email;
   }
@@ -177,7 +174,7 @@ public class ResolveAnEventID200ResponseEventUser implements Serializable {
    * Get data
    * @return data
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ResolveAnEventID200ResponseEventUserData getData() {
     return data;
   }
@@ -198,7 +195,7 @@ public class ResolveAnEventID200ResponseEventUser implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }

@@ -11,8 +11,4 @@
 |**regionUrl** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

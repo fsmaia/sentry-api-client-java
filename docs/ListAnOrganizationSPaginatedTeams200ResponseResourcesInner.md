@@ -14,8 +14,4 @@
 |**meta** | [**ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMeta**](ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMeta.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

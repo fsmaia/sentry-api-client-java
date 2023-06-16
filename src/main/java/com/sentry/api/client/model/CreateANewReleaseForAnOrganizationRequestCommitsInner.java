@@ -25,7 +25,6 @@ import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,10 +54,8 @@ import com.sentry.api.client.JSON;
 /**
  * CreateANewReleaseForAnOrganizationRequestCommitsInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class CreateANewReleaseForAnOrganizationRequestCommitsInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
   public static final String SERIALIZED_NAME_PATCH_SET = "patch_set";
   @SerializedName(SERIALIZED_NAME_PATCH_SET)
   private List<CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner> patchSet;
@@ -108,7 +105,7 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner implements Se
    * A list of the files that have been changed in the commit. Specifying the patch_set is necessary to power suspect commits and suggested assignees.
    * @return patchSet
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public List<CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner> getPatchSet() {
     return patchSet;
   }
@@ -129,7 +126,7 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner implements Se
    * The full name of the repository the commit belongs to. If this field is not given Sentry will generate a name in the form: u&#39;organization-&lt;organization_id&gt;&#39; (i.e. if the organization id is 123, then the generated repository name will be u&#39;organization-123).
    * @return repository
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getRepository() {
     return repository;
   }
@@ -150,7 +147,7 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner implements Se
    * The name of the commit author.
    * @return authorName
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getAuthorName() {
     return authorName;
   }
@@ -171,7 +168,7 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner implements Se
    * The email of the commit author. The commit author&#39;s email is required to enable the suggested assignee feature.
    * @return authorEmail
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getAuthorEmail() {
     return authorEmail;
   }
@@ -192,7 +189,7 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner implements Se
    * The commit timestamp is used to sort the commits given. If a timestamp is not included, the commits will remain sorted in the order given.
    * @return timestamp
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public OffsetDateTime getTimestamp() {
     return timestamp;
   }
@@ -213,7 +210,7 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner implements Se
    * The commit message.
    * @return message
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getMessage() {
     return message;
   }
@@ -234,7 +231,7 @@ public class CreateANewReleaseForAnOrganizationRequestCommitsInner implements Se
    * The commit ID (the commit SHA).
    * @return id
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getId() {
     return id;
   }

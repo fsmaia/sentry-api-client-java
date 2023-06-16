@@ -24,7 +24,6 @@ import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerA
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,10 +53,8 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktrace
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktrace implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktrace {
   public static final String SERIALIZED_NAME_FRAMES = "frames";
   @SerializedName(SERIALIZED_NAME_FRAMES)
   private List<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner> frames = new ArrayList<>();
@@ -95,7 +92,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get frames
    * @return frames
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerStacktraceFramesInner> getFrames() {
     return frames;
   }
@@ -116,7 +113,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get framesOmitted
    * @return framesOmitted
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getFramesOmitted() {
     return framesOmitted;
   }
@@ -137,7 +134,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get registers
    * @return registers
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getRegisters() {
     return registers;
   }
@@ -158,7 +155,7 @@ public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInnerSt
    * Get hasSystemFrames
    * @return hasSystemFrames
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasSystemFrames() {
     return hasSystemFrames;
   }

@@ -22,13 +22,14 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.RetrieveATeam200ResponseAvatar;
 import com.sentry.api.client.model.RetrieveAnOrganization200ResponseAvailableRolesInner;
+import com.sentry.api.client.model.RetrieveAnOrganization200ResponseOnboardingTasksInner;
 import com.sentry.api.client.model.RetrieveAnOrganization200ResponseProjectsInner;
+import com.sentry.api.client.model.RetrieveAnOrganization200ResponseQuota;
 import com.sentry.api.client.model.UpdateATeam200Response;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -58,10 +59,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganization200Response
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnOrganization200Response implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnOrganization200Response {
   public static final String SERIALIZED_NAME_ACCESS = "access";
   @SerializedName(SERIALIZED_NAME_ACCESS)
   private List<String> access = new ArrayList<>();
@@ -124,7 +123,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
 
   public static final String SERIALIZED_NAME_ONBOARDING_TASKS = "onboardingTasks";
   @SerializedName(SERIALIZED_NAME_ONBOARDING_TASKS)
-  private List<Object> onboardingTasks = new ArrayList<>();
+  private List<RetrieveAnOrganization200ResponseOnboardingTasksInner> onboardingTasks = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OPEN_MEMBERSHIP = "openMembership";
   @SerializedName(SERIALIZED_NAME_OPEN_MEMBERSHIP)
@@ -140,7 +139,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
 
   public static final String SERIALIZED_NAME_QUOTA = "quota";
   @SerializedName(SERIALIZED_NAME_QUOTA)
-  private Object quota;
+  private RetrieveAnOrganization200ResponseQuota quota;
 
   public static final String SERIALIZED_NAME_REQUIRE2_F_A = "require2FA";
   @SerializedName(SERIALIZED_NAME_REQUIRE2_F_A)
@@ -203,7 +202,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get access
    * @return access
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getAccess() {
     return access;
   }
@@ -224,7 +223,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get allowSharedIssues
    * @return allowSharedIssues
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getAllowSharedIssues() {
     return allowSharedIssues;
   }
@@ -253,7 +252,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get availableRoles
    * @return availableRoles
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAnOrganization200ResponseAvailableRolesInner> getAvailableRoles() {
     return availableRoles;
   }
@@ -274,7 +273,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get avatar
    * @return avatar
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveATeam200ResponseAvatar getAvatar() {
     return avatar;
   }
@@ -295,7 +294,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get dataScrubber
    * @return dataScrubber
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getDataScrubber() {
     return dataScrubber;
   }
@@ -316,7 +315,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get dataScrubberDefaults
    * @return dataScrubberDefaults
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getDataScrubberDefaults() {
     return dataScrubberDefaults;
   }
@@ -337,7 +336,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -358,7 +357,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get defaultRole
    * @return defaultRole
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDefaultRole() {
     return defaultRole;
   }
@@ -379,7 +378,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get enhancedPrivacy
    * @return enhancedPrivacy
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getEnhancedPrivacy() {
     return enhancedPrivacy;
   }
@@ -400,7 +399,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get experiments
    * @return experiments
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Object getExperiments() {
     return experiments;
   }
@@ -429,7 +428,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get features
    * @return features
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getFeatures() {
     return features;
   }
@@ -450,7 +449,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -471,7 +470,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get isDefault
    * @return isDefault
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsDefault() {
     return isDefault;
   }
@@ -492,7 +491,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get isEarlyAdopter
    * @return isEarlyAdopter
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsEarlyAdopter() {
     return isEarlyAdopter;
   }
@@ -513,7 +512,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -524,13 +523,13 @@ public class RetrieveAnOrganization200Response implements Serializable {
   }
 
 
-  public RetrieveAnOrganization200Response onboardingTasks(List<Object> onboardingTasks) {
+  public RetrieveAnOrganization200Response onboardingTasks(List<RetrieveAnOrganization200ResponseOnboardingTasksInner> onboardingTasks) {
     
     this.onboardingTasks = onboardingTasks;
     return this;
   }
 
-  public RetrieveAnOrganization200Response addOnboardingTasksItem(Object onboardingTasksItem) {
+  public RetrieveAnOrganization200Response addOnboardingTasksItem(RetrieveAnOrganization200ResponseOnboardingTasksInner onboardingTasksItem) {
     if (this.onboardingTasks == null) {
       this.onboardingTasks = new ArrayList<>();
     }
@@ -542,13 +541,13 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get onboardingTasks
    * @return onboardingTasks
   **/
-  @jakarta.annotation.Nonnull
-  public List<Object> getOnboardingTasks() {
+  @javax.annotation.Nonnull
+  public List<RetrieveAnOrganization200ResponseOnboardingTasksInner> getOnboardingTasks() {
     return onboardingTasks;
   }
 
 
-  public void setOnboardingTasks(List<Object> onboardingTasks) {
+  public void setOnboardingTasks(List<RetrieveAnOrganization200ResponseOnboardingTasksInner> onboardingTasks) {
     this.onboardingTasks = onboardingTasks;
   }
 
@@ -563,7 +562,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get openMembership
    * @return openMembership
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getOpenMembership() {
     return openMembership;
   }
@@ -584,7 +583,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get pendingAccessRequests
    * @return pendingAccessRequests
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Long getPendingAccessRequests() {
     return pendingAccessRequests;
   }
@@ -613,7 +612,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get projects
    * @return projects
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<RetrieveAnOrganization200ResponseProjectsInner> getProjects() {
     return projects;
   }
@@ -624,7 +623,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
   }
 
 
-  public RetrieveAnOrganization200Response quota(Object quota) {
+  public RetrieveAnOrganization200Response quota(RetrieveAnOrganization200ResponseQuota quota) {
     
     this.quota = quota;
     return this;
@@ -634,13 +633,13 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get quota
    * @return quota
   **/
-  @jakarta.annotation.Nonnull
-  public Object getQuota() {
+  @javax.annotation.Nonnull
+  public RetrieveAnOrganization200ResponseQuota getQuota() {
     return quota;
   }
 
 
-  public void setQuota(Object quota) {
+  public void setQuota(RetrieveAnOrganization200ResponseQuota quota) {
     this.quota = quota;
   }
 
@@ -655,7 +654,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get require2FA
    * @return require2FA
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getRequire2FA() {
     return require2FA;
   }
@@ -684,7 +683,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get safeFields
    * @return safeFields
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getSafeFields() {
     return safeFields;
   }
@@ -705,7 +704,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get scrapeJavaScript
    * @return scrapeJavaScript
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getScrapeJavaScript() {
     return scrapeJavaScript;
   }
@@ -726,7 +725,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get scrubIPAddresses
    * @return scrubIPAddresses
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getScrubIPAddresses() {
     return scrubIPAddresses;
   }
@@ -755,7 +754,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get sensitiveFields
    * @return sensitiveFields
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getSensitiveFields() {
     return sensitiveFields;
   }
@@ -776,7 +775,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get slug
    * @return slug
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -797,7 +796,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get status
    * @return status
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveAnOrganization200ResponseAvailableRolesInner getStatus() {
     return status;
   }
@@ -818,7 +817,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get storeCrashReports
    * @return storeCrashReports
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Long getStoreCrashReports() {
     return storeCrashReports;
   }
@@ -847,7 +846,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get teams
    * @return teams
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<UpdateATeam200Response> getTeams() {
     return teams;
   }
@@ -876,7 +875,7 @@ public class RetrieveAnOrganization200Response implements Serializable {
    * Get trustedRelays
    * @return trustedRelays
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getTrustedRelays() {
     return trustedRelays;
   }
@@ -1115,12 +1114,16 @@ public class RetrieveAnOrganization200Response implements Serializable {
       if (!jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
-      // ensure the required json array is present
-      if (jsonObj.get("onboardingTasks") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("onboardingTasks").isJsonArray()) {
+      // ensure the json data is an array
+      if (!jsonObj.get("onboardingTasks").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `onboardingTasks` to be an array in the JSON string but got `%s`", jsonObj.get("onboardingTasks").toString()));
       }
+
+      JsonArray jsonArrayonboardingTasks = jsonObj.getAsJsonArray("onboardingTasks");
+      // validate the required field `onboardingTasks` (array)
+      for (int i = 0; i < jsonArrayonboardingTasks.size(); i++) {
+        RetrieveAnOrganization200ResponseOnboardingTasksInner.validateJsonObject(jsonArrayonboardingTasks.get(i).getAsJsonObject());
+      };
       // ensure the json data is an array
       if (!jsonObj.get("projects").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `projects` to be an array in the JSON string but got `%s`", jsonObj.get("projects").toString()));
@@ -1131,6 +1134,8 @@ public class RetrieveAnOrganization200Response implements Serializable {
       for (int i = 0; i < jsonArrayprojects.size(); i++) {
         RetrieveAnOrganization200ResponseProjectsInner.validateJsonObject(jsonArrayprojects.get(i).getAsJsonObject());
       };
+      // validate the required field `quota`
+      RetrieveAnOrganization200ResponseQuota.validateJsonObject(jsonObj.getAsJsonObject("quota"));
       // ensure the required json array is present
       if (jsonObj.get("safeFields") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");

@@ -11,8 +11,4 @@
 |**avatarUuid** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

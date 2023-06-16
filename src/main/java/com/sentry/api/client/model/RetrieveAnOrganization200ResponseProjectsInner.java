@@ -25,7 +25,6 @@ import com.sentry.api.client.model.RetrieveAnOrganization200ResponseProjectsInne
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,10 +54,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganization200ResponseProjectsInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnOrganization200ResponseProjectsInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnOrganization200ResponseProjectsInner {
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
   private String dateCreated;
@@ -124,7 +121,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -145,7 +142,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get firstEvent
    * @return firstEvent
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getFirstEvent() {
     return firstEvent;
   }
@@ -166,7 +163,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get hasAccess
    * @return hasAccess
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasAccess() {
     return hasAccess;
   }
@@ -187,7 +184,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -208,7 +205,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get isBookmarked
    * @return isBookmarked
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
@@ -229,7 +226,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get isMember
    * @return isMember
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsMember() {
     return isMember;
   }
@@ -250,7 +247,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get latestDeploys
    * @return latestDeploys
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getLatestDeploys() {
     return latestDeploys;
   }
@@ -271,7 +268,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -292,7 +289,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get platform
    * @return platform
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getPlatform() {
     return platform;
   }
@@ -321,7 +318,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get platforms
    * @return platforms
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getPlatforms() {
     return platforms;
   }
@@ -342,7 +339,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get slug
    * @return slug
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -363,7 +360,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get team
    * @return team
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public RetrieveAnOrganization200ResponseProjectsInnerTeam getTeam() {
     return team;
   }
@@ -392,7 +389,7 @@ public class RetrieveAnOrganization200ResponseProjectsInner implements Serializa
    * Get teams
    * @return teams
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<ListAnOrganizationSProjects200ResponseInnerTeamsInner> getTeams() {
     return teams;
   }

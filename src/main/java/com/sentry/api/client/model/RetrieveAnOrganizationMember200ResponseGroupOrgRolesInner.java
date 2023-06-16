@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,10 +52,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
@@ -94,7 +91,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -115,7 +112,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -136,7 +133,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get desc
    * @return desc
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDesc() {
     return desc;
   }
@@ -165,7 +162,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get scopes
    * @return scopes
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getScopes() {
     return scopes;
   }
@@ -186,7 +183,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get isGlobal
    * @return isGlobal
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsGlobal() {
     return isGlobal;
   }
@@ -207,7 +204,7 @@ public class RetrieveAnOrganizationMember200ResponseGroupOrgRolesInner implement
    * Get allowed
    * @return allowed
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getAllowed() {
     return allowed;
   }

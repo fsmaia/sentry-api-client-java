@@ -11,8 +11,4 @@
 |**ssoColonInvalid** | **Boolean** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

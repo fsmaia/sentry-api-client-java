@@ -12,7 +12,7 @@
 |**message** | **String** |  |  |
 |**id** | **String** |  |  |
 |**size** | **Integer** |  |  |
-|**errors** | [**List&lt;ResolveAnEventID200ResponseEventErrorsInner&gt;**](ResolveAnEventID200ResponseEventErrorsInner.md) |  |  |
+|**errors** | [**List&lt;RetrieveAnEventForAProject200ResponseErrorsInner&gt;**](RetrieveAnEventForAProject200ResponseErrorsInner.md) |  |  |
 |**platform** | **String** |  |  |
 |**type** | **String** |  |  |
 |**metadata** | [**RetrieveAnEventForAProject200ResponseMetadata**](RetrieveAnEventForAProject200ResponseMetadata.md) |  |  |
@@ -24,15 +24,11 @@
 |**packages** | **Object** |  |  |
 |**sdk** | [**RetrieveAnEventForAProject200ResponseSdk**](RetrieveAnEventForAProject200ResponseSdk.md) |  |  |
 |**meta** | [**RetrieveAnEventForAProject200ResponseMeta**](RetrieveAnEventForAProject200ResponseMeta.md) |  |  |
-|**contexts** | **Object** |  |  |
+|**contexts** | [**ResolveAnEventID200ResponseEventContexts**](ResolveAnEventID200ResponseEventContexts.md) |  |  |
 |**fingerprints** | **List&lt;String&gt;** |  |  |
-|**context** | **Object** |  |  |
+|**context** | [**RetrieveAnEventForAProject200ResponseContext**](RetrieveAnEventForAProject200ResponseContext.md) |  |  |
 |**groupID** | **String** |  |  |
 |**title** | **String** |  |  |
 
-
-## Implemented Interfaces
-
-* Serializable
 
 

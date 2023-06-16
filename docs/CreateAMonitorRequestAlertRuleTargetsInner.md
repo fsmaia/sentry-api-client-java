@@ -11,8 +11,4 @@
 |**targetType** | **String** | One of [Member, Team] |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

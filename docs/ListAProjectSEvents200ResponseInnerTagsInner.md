@@ -11,8 +11,4 @@
 |**key** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

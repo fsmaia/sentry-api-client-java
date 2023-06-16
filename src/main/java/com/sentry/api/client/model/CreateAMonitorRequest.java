@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.CreateAMonitorRequestAlertRule;
 import com.sentry.api.client.model.CreateANewCheckInRequestMonitorConfig;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,10 +52,8 @@ import com.sentry.api.client.JSON;
 /**
  * Allows parameters to be defined in snake case, but passed as camel case.  Errors are output in camel case.
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class CreateAMonitorRequest implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class CreateAMonitorRequest {
   public static final String SERIALIZED_NAME_PROJECT = "project";
   @SerializedName(SERIALIZED_NAME_PROJECT)
   private String project;
@@ -190,7 +187,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get project
    * @return project
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getProject() {
     return project;
   }
@@ -211,7 +208,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -232,7 +229,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get slug
    * @return slug
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getSlug() {
     return slug;
   }
@@ -253,7 +250,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get status
    * @return status
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public StatusEnum getStatus() {
     return status;
   }
@@ -274,7 +271,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get type
    * @return type
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public TypeEnum getType() {
     return type;
   }
@@ -295,7 +292,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get config
    * @return config
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public CreateANewCheckInRequestMonitorConfig getConfig() {
     return config;
   }
@@ -316,7 +313,7 @@ public class CreateAMonitorRequest implements Serializable {
    * Get alertRule
    * @return alertRule
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public CreateAMonitorRequestAlertRule getAlertRule() {
     return alertRule;
   }

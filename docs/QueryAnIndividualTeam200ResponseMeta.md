@@ -10,8 +10,4 @@
 |**resourceType** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

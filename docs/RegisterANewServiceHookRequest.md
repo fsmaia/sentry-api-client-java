@@ -11,8 +11,4 @@
 |**events** | **List&lt;String&gt;** | The events to subscribe to. |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

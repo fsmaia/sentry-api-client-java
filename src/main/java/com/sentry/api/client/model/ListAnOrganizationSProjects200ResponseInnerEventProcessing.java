@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSProjects200ResponseInnerEventProcessing
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAnOrganizationSProjects200ResponseInnerEventProcessing implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAnOrganizationSProjects200ResponseInnerEventProcessing {
   public static final String SERIALIZED_NAME_SYMBOLICATION_DEGRADED = "symbolicationDegraded";
   @SerializedName(SERIALIZED_NAME_SYMBOLICATION_DEGRADED)
   private Boolean symbolicationDegraded;
@@ -72,7 +69,7 @@ public class ListAnOrganizationSProjects200ResponseInnerEventProcessing implemen
    * Get symbolicationDegraded
    * @return symbolicationDegraded
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getSymbolicationDegraded() {
     return symbolicationDegraded;
   }

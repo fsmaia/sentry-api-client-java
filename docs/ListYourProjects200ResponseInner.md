@@ -36,8 +36,4 @@
 | DELETION_IN_PROGRESS | &quot;deletion_in_progress&quot; |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

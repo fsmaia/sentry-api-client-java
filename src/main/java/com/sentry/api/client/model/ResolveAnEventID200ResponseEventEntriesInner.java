@@ -26,9 +26,8 @@ import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerA
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOf3;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEventEntriesInnerAnyOf3Data;
 import java.io.IOException;
-import java.io.Serializable;
 
-import jakarta.ws.rs.core.GenericType;
+import javax.ws.rs.core.GenericType;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -61,8 +60,8 @@ import com.google.gson.JsonParseException;
 
 import com.sentry.api.client.JSON;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ResolveAnEventID200ResponseEventEntriesInner extends AbstractOpenApiSchema, Serializable {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ResolveAnEventID200ResponseEventEntriesInner extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(ResolveAnEventID200ResponseEventEntriesInner.class.getName());
 
     public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

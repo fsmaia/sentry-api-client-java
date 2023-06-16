@@ -25,7 +25,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.jackson.nullable.JsonNullable;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,10 +54,8 @@ import com.sentry.api.client.JSON;
 /**
  * CreateAMonitorRequestAlertRule
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class CreateAMonitorRequestAlertRule implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class CreateAMonitorRequestAlertRule {
   public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
   @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
   private String environment;
@@ -80,7 +77,7 @@ public class CreateAMonitorRequestAlertRule implements Serializable {
    * Name of the environment
    * @return environment
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getEnvironment() {
     return environment;
   }
@@ -109,7 +106,7 @@ public class CreateAMonitorRequestAlertRule implements Serializable {
    * Array of dictionaries with information of the user or team to be notified
    * @return targets
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<CreateAMonitorRequestAlertRuleTargetsInner> getTargets() {
     return targets;
   }

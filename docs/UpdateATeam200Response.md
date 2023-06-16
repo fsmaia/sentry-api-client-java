@@ -18,8 +18,4 @@
 |**slug** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

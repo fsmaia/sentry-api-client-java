@@ -14,8 +14,4 @@
 |**webUrl** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

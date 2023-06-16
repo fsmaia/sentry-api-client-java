@@ -27,8 +27,4 @@
 |**version** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

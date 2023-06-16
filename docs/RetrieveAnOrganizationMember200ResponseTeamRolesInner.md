@@ -11,8 +11,4 @@
 |**role** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

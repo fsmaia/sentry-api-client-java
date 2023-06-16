@@ -11,8 +11,4 @@
 |**slug** | **String** | A new slug for the team. It has to be unique and available. |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

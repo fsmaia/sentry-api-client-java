@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSClientKeys200ResponseInnerDsn
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAProjectSClientKeys200ResponseInnerDsn implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAProjectSClientKeys200ResponseInnerDsn {
   public static final String SERIALIZED_NAME_CDN = "cdn";
   @SerializedName(SERIALIZED_NAME_CDN)
   private String cdn;
@@ -92,7 +89,7 @@ public class ListAProjectSClientKeys200ResponseInnerDsn implements Serializable 
    * Get cdn
    * @return cdn
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getCdn() {
     return cdn;
   }
@@ -113,7 +110,7 @@ public class ListAProjectSClientKeys200ResponseInnerDsn implements Serializable 
    * Get csp
    * @return csp
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getCsp() {
     return csp;
   }
@@ -134,7 +131,7 @@ public class ListAProjectSClientKeys200ResponseInnerDsn implements Serializable 
    * Get minidump
    * @return minidump
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getMinidump() {
     return minidump;
   }
@@ -155,7 +152,7 @@ public class ListAProjectSClientKeys200ResponseInnerDsn implements Serializable 
    * Get _public
    * @return _public
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getPublic() {
     return _public;
   }
@@ -176,7 +173,7 @@ public class ListAProjectSClientKeys200ResponseInnerDsn implements Serializable 
    * Get secret
    * @return secret
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSecret() {
     return secret;
   }
@@ -197,7 +194,7 @@ public class ListAProjectSClientKeys200ResponseInnerDsn implements Serializable 
    * Get security
    * @return security
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSecurity() {
     return security;
   }

@@ -25,7 +25,6 @@ import com.sentry.api.client.model.ResolveAnEventID200ResponseEventUser;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,10 +54,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSEvents200ResponseInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAProjectSEvents200ResponseInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAProjectSEvents200ResponseInner {
   public static final String SERIALIZED_NAME_EVENT_I_D = "eventID";
   @SerializedName(SERIALIZED_NAME_EVENT_I_D)
   private String eventID;
@@ -112,7 +109,7 @@ public class ListAProjectSEvents200ResponseInner implements Serializable {
    * Get eventID
    * @return eventID
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEventID() {
     return eventID;
   }
@@ -141,7 +138,7 @@ public class ListAProjectSEvents200ResponseInner implements Serializable {
    * Get tags
    * @return tags
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<ListAProjectSEvents200ResponseInnerTagsInner> getTags() {
     return tags;
   }
@@ -162,7 +159,7 @@ public class ListAProjectSEvents200ResponseInner implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -183,7 +180,7 @@ public class ListAProjectSEvents200ResponseInner implements Serializable {
    * Get user
    * @return user
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ResolveAnEventID200ResponseEventUser getUser() {
     return user;
   }
@@ -204,7 +201,7 @@ public class ListAProjectSEvents200ResponseInner implements Serializable {
    * Get message
    * @return message
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getMessage() {
     return message;
   }
@@ -225,7 +222,7 @@ public class ListAProjectSEvents200ResponseInner implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -246,7 +243,7 @@ public class ListAProjectSEvents200ResponseInner implements Serializable {
    * Get platform
    * @return platform
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getPlatform() {
     return platform;
   }
@@ -267,7 +264,7 @@ public class ListAProjectSEvents200ResponseInner implements Serializable {
    * Get eventType
    * @return eventType
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEventType() {
     return eventType;
   }
@@ -288,7 +285,7 @@ public class ListAProjectSEvents200ResponseInner implements Serializable {
    * Get groupID
    * @return groupID
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getGroupID() {
     return groupID;
   }
@@ -309,7 +306,7 @@ public class ListAProjectSEvents200ResponseInner implements Serializable {
    * Get title
    * @return title
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getTitle() {
     return title;
   }

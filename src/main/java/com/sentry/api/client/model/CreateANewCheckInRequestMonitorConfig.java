@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import org.openapitools.jackson.nullable.JsonNullable;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,10 +51,8 @@ import com.sentry.api.client.JSON;
 /**
  * CreateANewCheckInRequestMonitorConfig
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class CreateANewCheckInRequestMonitorConfig implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class CreateANewCheckInRequestMonitorConfig {
   /**
    * Currently supports \&quot;crontab\&quot; or \&quot;interval\&quot;
    */
@@ -1363,7 +1360,7 @@ public class CreateANewCheckInRequestMonitorConfig implements Serializable {
    * Currently supports \&quot;crontab\&quot; or \&quot;interval\&quot;
    * @return scheduleType
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ScheduleTypeEnum getScheduleType() {
     return scheduleType;
   }
@@ -1384,7 +1381,7 @@ public class CreateANewCheckInRequestMonitorConfig implements Serializable {
    * Varies depending on the schedule_type. Is either a crontab string, or a 2 element tuple for intervals (e.g. [1, &#39;day&#39;])
    * @return schedule
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getSchedule() {
     return schedule;
   }
@@ -1406,7 +1403,7 @@ public class CreateANewCheckInRequestMonitorConfig implements Serializable {
    * minimum: 0
    * @return checkinMargin
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Integer getCheckinMargin() {
     return checkinMargin;
   }
@@ -1428,7 +1425,7 @@ public class CreateANewCheckInRequestMonitorConfig implements Serializable {
    * minimum: 1
    * @return maxRuntime
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Integer getMaxRuntime() {
     return maxRuntime;
   }
@@ -1449,7 +1446,7 @@ public class CreateANewCheckInRequestMonitorConfig implements Serializable {
    * tz database style timezone string
    * @return timezone
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public TimezoneEnum getTimezone() {
     return timezone;
   }

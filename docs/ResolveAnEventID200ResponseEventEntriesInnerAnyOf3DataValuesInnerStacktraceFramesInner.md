@@ -25,8 +25,4 @@
 |**symbol** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -13,8 +13,4 @@
 |**defaultRules** | **Boolean** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

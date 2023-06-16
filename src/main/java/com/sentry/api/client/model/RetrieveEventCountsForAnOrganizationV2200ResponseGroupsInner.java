@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,10 +52,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner {
   public static final String SERIALIZED_NAME_BY = "by";
   @SerializedName(SERIALIZED_NAME_BY)
   private Map<String, Object> by = new HashMap<>();
@@ -90,7 +87,7 @@ public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner implem
    * Get by
    * @return by
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Map<String, Object> getBy() {
     return by;
   }
@@ -119,7 +116,7 @@ public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner implem
    * Get totals
    * @return totals
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Map<String, Object> getTotals() {
     return totals;
   }
@@ -148,7 +145,7 @@ public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner implem
    * Get series
    * @return series
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Map<String, Object> getSeries() {
     return series;
   }

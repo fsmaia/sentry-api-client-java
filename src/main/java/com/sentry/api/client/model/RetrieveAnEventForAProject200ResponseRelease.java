@@ -21,224 +21,629 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.RetrieveAProject200ResponseLatestReleaseProjectsInner;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseOneOf;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
-
-import jakarta.ws.rs.core.GenericType;
-
-import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapter;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.JsonPrimitive;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import com.sentry.api.client.JSON;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnEventForAProject200ResponseRelease extends AbstractOpenApiSchema, Serializable {
-    private static final Logger log = Logger.getLogger(RetrieveAnEventForAProject200ResponseRelease.class.getName());
+/**
+ * RetrieveAnEventForAProject200ResponseRelease
+ */
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnEventForAProject200ResponseRelease {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private Integer id;
 
-    public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-        @SuppressWarnings("unchecked")
-        @Override
-        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-            if (!RetrieveAnEventForAProject200ResponseRelease.class.isAssignableFrom(type.getRawType())) {
-                return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseRelease' and its subtypes
-            }
-            final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-            final TypeAdapter<Object> adapterObject = gson.getDelegateAdapter(this, TypeToken.get(Object.class));
-            final TypeAdapter<RetrieveAnEventForAProject200ResponseReleaseOneOf> adapterRetrieveAnEventForAProject200ResponseReleaseOneOf = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200ResponseReleaseOneOf.class));
+  public static final String SERIALIZED_NAME_AUTHORS = "authors";
+  @SerializedName(SERIALIZED_NAME_AUTHORS)
+  private List<Object> authors = new ArrayList<>();
 
-            return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseRelease>() {
-                @Override
-                public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseRelease value) throws IOException {
-                    if (value == null || value.getActualInstance() == null) {
-                        elementAdapter.write(out, null);
-                        return;
-                    }
+  public static final String SERIALIZED_NAME_COMMIT_COUNT = "commitCount";
+  @SerializedName(SERIALIZED_NAME_COMMIT_COUNT)
+  private Long commitCount;
 
-                    // check if the actual instance is of the type `Object`
-                    if (value.getActualInstance() instanceof Object) {
-                        JsonObject obj = adapterObject.toJsonTree((Object)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+  public static final String SERIALIZED_NAME_DATA = "data";
+  @SerializedName(SERIALIZED_NAME_DATA)
+  private Object data;
 
-                    // check if the actual instance is of the type `RetrieveAnEventForAProject200ResponseReleaseOneOf`
-                    if (value.getActualInstance() instanceof RetrieveAnEventForAProject200ResponseReleaseOneOf) {
-                        JsonObject obj = adapterRetrieveAnEventForAProject200ResponseReleaseOneOf.toJsonTree((RetrieveAnEventForAProject200ResponseReleaseOneOf)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+  public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
+  @SerializedName(SERIALIZED_NAME_DATE_CREATED)
+  private OffsetDateTime dateCreated;
 
-                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: Object, RetrieveAnEventForAProject200ResponseReleaseOneOf");
-                }
+  public static final String SERIALIZED_NAME_DATE_RELEASED = "dateReleased";
+  @SerializedName(SERIALIZED_NAME_DATE_RELEASED)
+  private OffsetDateTime dateReleased;
 
-                @Override
-                public RetrieveAnEventForAProject200ResponseRelease read(JsonReader in) throws IOException {
-                    Object deserialized = null;
-                    JsonObject jsonObject = elementAdapter.read(in).getAsJsonObject();
+  public static final String SERIALIZED_NAME_DEPLOY_COUNT = "deployCount";
+  @SerializedName(SERIALIZED_NAME_DEPLOY_COUNT)
+  private Long deployCount;
 
-                    int match = 0;
-                    ArrayList<String> errorMessages = new ArrayList<>();
-                    TypeAdapter actualAdapter = elementAdapter;
+  public static final String SERIALIZED_NAME_FIRST_EVENT = "firstEvent";
+  @SerializedName(SERIALIZED_NAME_FIRST_EVENT)
+  private OffsetDateTime firstEvent;
 
-                    // deserialize Object
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        Object.validateJsonObject(jsonObject);
-                        actualAdapter = adapterObject;
-                        match++;
-                        log.log(Level.FINER, "Input data matches schema 'Object'");
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        errorMessages.add(String.format("Deserialization for Object failed with `%s`.", e.getMessage()));
-                        log.log(Level.FINER, "Input data does not match schema 'Object'", e);
-                    }
+  public static final String SERIALIZED_NAME_LAST_COMMIT = "lastCommit";
+  @SerializedName(SERIALIZED_NAME_LAST_COMMIT)
+  private Object lastCommit;
 
-                    // deserialize RetrieveAnEventForAProject200ResponseReleaseOneOf
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        RetrieveAnEventForAProject200ResponseReleaseOneOf.validateJsonObject(jsonObject);
-                        actualAdapter = adapterRetrieveAnEventForAProject200ResponseReleaseOneOf;
-                        match++;
-                        log.log(Level.FINER, "Input data matches schema 'RetrieveAnEventForAProject200ResponseReleaseOneOf'");
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        errorMessages.add(String.format("Deserialization for RetrieveAnEventForAProject200ResponseReleaseOneOf failed with `%s`.", e.getMessage()));
-                        log.log(Level.FINER, "Input data does not match schema 'RetrieveAnEventForAProject200ResponseReleaseOneOf'", e);
-                    }
+  public static final String SERIALIZED_NAME_LAST_DEPLOY = "lastDeploy";
+  @SerializedName(SERIALIZED_NAME_LAST_DEPLOY)
+  private RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy lastDeploy;
 
-                    if (match == 1) {
-                        RetrieveAnEventForAProject200ResponseRelease ret = new RetrieveAnEventForAProject200ResponseRelease();
-                        ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject));
-                        return ret;
-                    }
+  public static final String SERIALIZED_NAME_LAST_EVENT = "lastEvent";
+  @SerializedName(SERIALIZED_NAME_LAST_EVENT)
+  private OffsetDateTime lastEvent;
 
-                    throw new IOException(String.format("Failed deserialization for RetrieveAnEventForAProject200ResponseRelease: %d classes match result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", match, errorMessages, jsonObject.toString()));
-                }
-            }.nullSafe();
-        }
+  public static final String SERIALIZED_NAME_NEW_GROUPS = "newGroups";
+  @SerializedName(SERIALIZED_NAME_NEW_GROUPS)
+  private Long newGroups;
+
+  public static final String SERIALIZED_NAME_OWNER = "owner";
+  @SerializedName(SERIALIZED_NAME_OWNER)
+  private Object owner;
+
+  public static final String SERIALIZED_NAME_PROJECTS = "projects";
+  @SerializedName(SERIALIZED_NAME_PROJECTS)
+  private List<RetrieveAProject200ResponseLatestReleaseProjectsInner> projects = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_REF = "ref";
+  @SerializedName(SERIALIZED_NAME_REF)
+  private String ref;
+
+  public static final String SERIALIZED_NAME_SHORT_VERSION = "shortVersion";
+  @SerializedName(SERIALIZED_NAME_SHORT_VERSION)
+  private String shortVersion;
+
+  public static final String SERIALIZED_NAME_VERSION = "version";
+  @SerializedName(SERIALIZED_NAME_VERSION)
+  private String version;
+
+  public static final String SERIALIZED_NAME_URL = "url";
+  @SerializedName(SERIALIZED_NAME_URL)
+  private String url;
+
+  public RetrieveAnEventForAProject200ResponseRelease() {
+  }
+
+  public RetrieveAnEventForAProject200ResponseRelease id(Integer id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  public Integer getId() {
+    return id;
+  }
+
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease authors(List<Object> authors) {
+    
+    this.authors = authors;
+    return this;
+  }
+
+  public RetrieveAnEventForAProject200ResponseRelease addAuthorsItem(Object authorsItem) {
+    if (this.authors == null) {
+      this.authors = new ArrayList<>();
     }
+    this.authors.add(authorsItem);
+    return this;
+  }
 
-    // store a list of schema names defined in oneOf
-    public static final Map<String, GenericType> schemas = new HashMap<String, GenericType>();
+   /**
+   * Get authors
+   * @return authors
+  **/
+  @javax.annotation.Nonnull
+  public List<Object> getAuthors() {
+    return authors;
+  }
 
-    public RetrieveAnEventForAProject200ResponseRelease() {
-        super("oneOf", Boolean.TRUE);
+
+  public void setAuthors(List<Object> authors) {
+    this.authors = authors;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease commitCount(Long commitCount) {
+    
+    this.commitCount = commitCount;
+    return this;
+  }
+
+   /**
+   * Get commitCount
+   * @return commitCount
+  **/
+  @javax.annotation.Nonnull
+  public Long getCommitCount() {
+    return commitCount;
+  }
+
+
+  public void setCommitCount(Long commitCount) {
+    this.commitCount = commitCount;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease data(Object data) {
+    
+    this.data = data;
+    return this;
+  }
+
+   /**
+   * Get data
+   * @return data
+  **/
+  @javax.annotation.Nonnull
+  public Object getData() {
+    return data;
+  }
+
+
+  public void setData(Object data) {
+    this.data = data;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease dateCreated(OffsetDateTime dateCreated) {
+    
+    this.dateCreated = dateCreated;
+    return this;
+  }
+
+   /**
+   * Get dateCreated
+   * @return dateCreated
+  **/
+  @javax.annotation.Nonnull
+  public OffsetDateTime getDateCreated() {
+    return dateCreated;
+  }
+
+
+  public void setDateCreated(OffsetDateTime dateCreated) {
+    this.dateCreated = dateCreated;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease dateReleased(OffsetDateTime dateReleased) {
+    
+    this.dateReleased = dateReleased;
+    return this;
+  }
+
+   /**
+   * Get dateReleased
+   * @return dateReleased
+  **/
+  @javax.annotation.Nullable
+  public OffsetDateTime getDateReleased() {
+    return dateReleased;
+  }
+
+
+  public void setDateReleased(OffsetDateTime dateReleased) {
+    this.dateReleased = dateReleased;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease deployCount(Long deployCount) {
+    
+    this.deployCount = deployCount;
+    return this;
+  }
+
+   /**
+   * Get deployCount
+   * @return deployCount
+  **/
+  @javax.annotation.Nonnull
+  public Long getDeployCount() {
+    return deployCount;
+  }
+
+
+  public void setDeployCount(Long deployCount) {
+    this.deployCount = deployCount;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease firstEvent(OffsetDateTime firstEvent) {
+    
+    this.firstEvent = firstEvent;
+    return this;
+  }
+
+   /**
+   * Get firstEvent
+   * @return firstEvent
+  **/
+  @javax.annotation.Nullable
+  public OffsetDateTime getFirstEvent() {
+    return firstEvent;
+  }
+
+
+  public void setFirstEvent(OffsetDateTime firstEvent) {
+    this.firstEvent = firstEvent;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease lastCommit(Object lastCommit) {
+    
+    this.lastCommit = lastCommit;
+    return this;
+  }
+
+   /**
+   * Get lastCommit
+   * @return lastCommit
+  **/
+  @javax.annotation.Nullable
+  public Object getLastCommit() {
+    return lastCommit;
+  }
+
+
+  public void setLastCommit(Object lastCommit) {
+    this.lastCommit = lastCommit;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease lastDeploy(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy lastDeploy) {
+    
+    this.lastDeploy = lastDeploy;
+    return this;
+  }
+
+   /**
+   * Get lastDeploy
+   * @return lastDeploy
+  **/
+  @javax.annotation.Nullable
+  public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy getLastDeploy() {
+    return lastDeploy;
+  }
+
+
+  public void setLastDeploy(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy lastDeploy) {
+    this.lastDeploy = lastDeploy;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease lastEvent(OffsetDateTime lastEvent) {
+    
+    this.lastEvent = lastEvent;
+    return this;
+  }
+
+   /**
+   * Get lastEvent
+   * @return lastEvent
+  **/
+  @javax.annotation.Nullable
+  public OffsetDateTime getLastEvent() {
+    return lastEvent;
+  }
+
+
+  public void setLastEvent(OffsetDateTime lastEvent) {
+    this.lastEvent = lastEvent;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease newGroups(Long newGroups) {
+    
+    this.newGroups = newGroups;
+    return this;
+  }
+
+   /**
+   * Get newGroups
+   * @return newGroups
+  **/
+  @javax.annotation.Nonnull
+  public Long getNewGroups() {
+    return newGroups;
+  }
+
+
+  public void setNewGroups(Long newGroups) {
+    this.newGroups = newGroups;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease owner(Object owner) {
+    
+    this.owner = owner;
+    return this;
+  }
+
+   /**
+   * Get owner
+   * @return owner
+  **/
+  @javax.annotation.Nullable
+  public Object getOwner() {
+    return owner;
+  }
+
+
+  public void setOwner(Object owner) {
+    this.owner = owner;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease projects(List<RetrieveAProject200ResponseLatestReleaseProjectsInner> projects) {
+    
+    this.projects = projects;
+    return this;
+  }
+
+  public RetrieveAnEventForAProject200ResponseRelease addProjectsItem(RetrieveAProject200ResponseLatestReleaseProjectsInner projectsItem) {
+    if (this.projects == null) {
+      this.projects = new ArrayList<>();
     }
+    this.projects.add(projectsItem);
+    return this;
+  }
 
-    public RetrieveAnEventForAProject200ResponseRelease(Object o) {
-        super("oneOf", Boolean.TRUE);
-        setActualInstance(o);
+   /**
+   * Get projects
+   * @return projects
+  **/
+  @javax.annotation.Nonnull
+  public List<RetrieveAProject200ResponseLatestReleaseProjectsInner> getProjects() {
+    return projects;
+  }
+
+
+  public void setProjects(List<RetrieveAProject200ResponseLatestReleaseProjectsInner> projects) {
+    this.projects = projects;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease ref(String ref) {
+    
+    this.ref = ref;
+    return this;
+  }
+
+   /**
+   * Get ref
+   * @return ref
+  **/
+  @javax.annotation.Nullable
+  public String getRef() {
+    return ref;
+  }
+
+
+  public void setRef(String ref) {
+    this.ref = ref;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease shortVersion(String shortVersion) {
+    
+    this.shortVersion = shortVersion;
+    return this;
+  }
+
+   /**
+   * Get shortVersion
+   * @return shortVersion
+  **/
+  @javax.annotation.Nonnull
+  public String getShortVersion() {
+    return shortVersion;
+  }
+
+
+  public void setShortVersion(String shortVersion) {
+    this.shortVersion = shortVersion;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease version(String version) {
+    
+    this.version = version;
+    return this;
+  }
+
+   /**
+   * Get version
+   * @return version
+  **/
+  @javax.annotation.Nonnull
+  public String getVersion() {
+    return version;
+  }
+
+
+  public void setVersion(String version) {
+    this.version = version;
+  }
+
+
+  public RetrieveAnEventForAProject200ResponseRelease url(String url) {
+    
+    this.url = url;
+    return this;
+  }
+
+   /**
+   * Get url
+   * @return url
+  **/
+  @javax.annotation.Nullable
+  public String getUrl() {
+    return url;
+  }
+
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    public RetrieveAnEventForAProject200ResponseRelease(RetrieveAnEventForAProject200ResponseReleaseOneOf o) {
-        super("oneOf", Boolean.TRUE);
-        setActualInstance(o);
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    RetrieveAnEventForAProject200ResponseRelease retrieveAnEventForAProject200ResponseRelease = (RetrieveAnEventForAProject200ResponseRelease) o;
+    return Objects.equals(this.id, retrieveAnEventForAProject200ResponseRelease.id) &&
+        Objects.equals(this.authors, retrieveAnEventForAProject200ResponseRelease.authors) &&
+        Objects.equals(this.commitCount, retrieveAnEventForAProject200ResponseRelease.commitCount) &&
+        Objects.equals(this.data, retrieveAnEventForAProject200ResponseRelease.data) &&
+        Objects.equals(this.dateCreated, retrieveAnEventForAProject200ResponseRelease.dateCreated) &&
+        Objects.equals(this.dateReleased, retrieveAnEventForAProject200ResponseRelease.dateReleased) &&
+        Objects.equals(this.deployCount, retrieveAnEventForAProject200ResponseRelease.deployCount) &&
+        Objects.equals(this.firstEvent, retrieveAnEventForAProject200ResponseRelease.firstEvent) &&
+        Objects.equals(this.lastCommit, retrieveAnEventForAProject200ResponseRelease.lastCommit) &&
+        Objects.equals(this.lastDeploy, retrieveAnEventForAProject200ResponseRelease.lastDeploy) &&
+        Objects.equals(this.lastEvent, retrieveAnEventForAProject200ResponseRelease.lastEvent) &&
+        Objects.equals(this.newGroups, retrieveAnEventForAProject200ResponseRelease.newGroups) &&
+        Objects.equals(this.owner, retrieveAnEventForAProject200ResponseRelease.owner) &&
+        Objects.equals(this.projects, retrieveAnEventForAProject200ResponseRelease.projects) &&
+        Objects.equals(this.ref, retrieveAnEventForAProject200ResponseRelease.ref) &&
+        Objects.equals(this.shortVersion, retrieveAnEventForAProject200ResponseRelease.shortVersion) &&
+        Objects.equals(this.version, retrieveAnEventForAProject200ResponseRelease.version) &&
+        Objects.equals(this.url, retrieveAnEventForAProject200ResponseRelease.url);
+  }
 
-    static {
-        schemas.put("Object", new GenericType<Object>() {
-        });
-        schemas.put("RetrieveAnEventForAProject200ResponseReleaseOneOf", new GenericType<RetrieveAnEventForAProject200ResponseReleaseOneOf>() {
-        });
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, authors, commitCount, data, dateCreated, dateReleased, deployCount, firstEvent, lastCommit, lastDeploy, lastEvent, newGroups, owner, projects, ref, shortVersion, version, url);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class RetrieveAnEventForAProject200ResponseRelease {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    authors: ").append(toIndentedString(authors)).append("\n");
+    sb.append("    commitCount: ").append(toIndentedString(commitCount)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
+    sb.append("    dateReleased: ").append(toIndentedString(dateReleased)).append("\n");
+    sb.append("    deployCount: ").append(toIndentedString(deployCount)).append("\n");
+    sb.append("    firstEvent: ").append(toIndentedString(firstEvent)).append("\n");
+    sb.append("    lastCommit: ").append(toIndentedString(lastCommit)).append("\n");
+    sb.append("    lastDeploy: ").append(toIndentedString(lastDeploy)).append("\n");
+    sb.append("    lastEvent: ").append(toIndentedString(lastEvent)).append("\n");
+    sb.append("    newGroups: ").append(toIndentedString(newGroups)).append("\n");
+    sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
+    sb.append("    projects: ").append(toIndentedString(projects)).append("\n");
+    sb.append("    ref: ").append(toIndentedString(ref)).append("\n");
+    sb.append("    shortVersion: ").append(toIndentedString(shortVersion)).append("\n");
+    sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    @Override
-    public Map<String, GenericType> getSchemas() {
-        return RetrieveAnEventForAProject200ResponseRelease.schemas;
-    }
 
-    /**
-     * Set the instance that matches the oneOf child schema, check
-     * the instance parameter is valid against the oneOf child schemas:
-     * Object, RetrieveAnEventForAProject200ResponseReleaseOneOf
-     *
-     * It could be an instance of the 'oneOf' schemas.
-     * The oneOf child schemas may themselves be a composed schema (allOf, anyOf, oneOf).
-     */
-    @Override
-    public void setActualInstance(Object instance) {
-        if (instance == null) {
-           super.setActualInstance(instance);
-           return;
-        }
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
 
-        if (instance instanceof Object) {
-            super.setActualInstance(instance);
-            return;
-        }
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("id");
+    openapiFields.add("authors");
+    openapiFields.add("commitCount");
+    openapiFields.add("data");
+    openapiFields.add("dateCreated");
+    openapiFields.add("dateReleased");
+    openapiFields.add("deployCount");
+    openapiFields.add("firstEvent");
+    openapiFields.add("lastCommit");
+    openapiFields.add("lastDeploy");
+    openapiFields.add("lastEvent");
+    openapiFields.add("newGroups");
+    openapiFields.add("owner");
+    openapiFields.add("projects");
+    openapiFields.add("ref");
+    openapiFields.add("shortVersion");
+    openapiFields.add("version");
+    openapiFields.add("url");
 
-        if (instance instanceof RetrieveAnEventForAProject200ResponseReleaseOneOf) {
-            super.setActualInstance(instance);
-            return;
-        }
-
-        throw new RuntimeException("Invalid instance type. Must be Object, RetrieveAnEventForAProject200ResponseReleaseOneOf");
-    }
-
-    /**
-     * Get the actual instance, which can be the following:
-     * Object, RetrieveAnEventForAProject200ResponseReleaseOneOf
-     *
-     * @return The actual instance (Object, RetrieveAnEventForAProject200ResponseReleaseOneOf)
-     */
-    @Override
-    public Object getActualInstance() {
-        return super.getActualInstance();
-    }
-
-    /**
-     * Get the actual instance of `Object`. If the actual instance is not `Object`,
-     * the ClassCastException will be thrown.
-     *
-     * @return The actual instance of `Object`
-     * @throws ClassCastException if the instance is not `Object`
-     */
-    public Object getObject() throws ClassCastException {
-        return (Object)super.getActualInstance();
-    }
-
-    /**
-     * Get the actual instance of `RetrieveAnEventForAProject200ResponseReleaseOneOf`. If the actual instance is not `RetrieveAnEventForAProject200ResponseReleaseOneOf`,
-     * the ClassCastException will be thrown.
-     *
-     * @return The actual instance of `RetrieveAnEventForAProject200ResponseReleaseOneOf`
-     * @throws ClassCastException if the instance is not `RetrieveAnEventForAProject200ResponseReleaseOneOf`
-     */
-    public RetrieveAnEventForAProject200ResponseReleaseOneOf getRetrieveAnEventForAProject200ResponseReleaseOneOf() throws ClassCastException {
-        return (RetrieveAnEventForAProject200ResponseReleaseOneOf)super.getActualInstance();
-    }
-
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("authors");
+    openapiRequiredFields.add("commitCount");
+    openapiRequiredFields.add("data");
+    openapiRequiredFields.add("dateCreated");
+    openapiRequiredFields.add("dateReleased");
+    openapiRequiredFields.add("deployCount");
+    openapiRequiredFields.add("firstEvent");
+    openapiRequiredFields.add("lastCommit");
+    openapiRequiredFields.add("lastDeploy");
+    openapiRequiredFields.add("lastEvent");
+    openapiRequiredFields.add("newGroups");
+    openapiRequiredFields.add("owner");
+    openapiRequiredFields.add("projects");
+    openapiRequiredFields.add("ref");
+    openapiRequiredFields.add("shortVersion");
+    openapiRequiredFields.add("version");
+    openapiRequiredFields.add("url");
+  }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
@@ -247,27 +652,84 @@ public class RetrieveAnEventForAProject200ResponseRelease extends AbstractOpenAp
   * @throws IOException if the JSON Object is invalid with respect to RetrieveAnEventForAProject200ResponseRelease
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-    // validate oneOf schemas one by one
-    int validCount = 0;
-    ArrayList<String> errorMessages = new ArrayList<>();
-    // validate the json string with Object
-    try {
-      Object.validateJsonObject(jsonObj);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for Object failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    // validate the json string with RetrieveAnEventForAProject200ResponseReleaseOneOf
-    try {
-      RetrieveAnEventForAProject200ResponseReleaseOneOf.validateJsonObject(jsonObj);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for RetrieveAnEventForAProject200ResponseReleaseOneOf failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    if (validCount != 1) {
-      throw new IOException(String.format("The JSON string is invalid for RetrieveAnEventForAProject200ResponseRelease with oneOf schemas: Object, RetrieveAnEventForAProject200ResponseReleaseOneOf. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonObj.toString()));
+      if (jsonObj == null) {
+        if (!RetrieveAnEventForAProject200ResponseRelease.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnEventForAProject200ResponseRelease is not found in the empty JSON string", RetrieveAnEventForAProject200ResponseRelease.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!RetrieveAnEventForAProject200ResponseRelease.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnEventForAProject200ResponseRelease` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : RetrieveAnEventForAProject200ResponseRelease.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      // ensure the required json array is present
+      if (jsonObj.get("authors") == null) {
+        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
+      } else if (!jsonObj.get("authors").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `authors` to be an array in the JSON string but got `%s`", jsonObj.get("authors").toString()));
+      }
+      // validate the required field `lastDeploy`
+      RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy.validateJsonObject(jsonObj.getAsJsonObject("lastDeploy"));
+      // ensure the json data is an array
+      if (!jsonObj.get("projects").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `projects` to be an array in the JSON string but got `%s`", jsonObj.get("projects").toString()));
+      }
+
+      JsonArray jsonArrayprojects = jsonObj.getAsJsonArray("projects");
+      // validate the required field `projects` (array)
+      for (int i = 0; i < jsonArrayprojects.size(); i++) {
+        RetrieveAProject200ResponseLatestReleaseProjectsInner.validateJsonObject(jsonArrayprojects.get(i).getAsJsonObject());
+      };
+      if (!jsonObj.get("ref").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `ref` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ref").toString()));
+      }
+      if (!jsonObj.get("shortVersion").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `shortVersion` to be a primitive type in the JSON string but got `%s`", jsonObj.get("shortVersion").toString()));
+      }
+      if (!jsonObj.get("version").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+      }
+      if (!jsonObj.get("url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!RetrieveAnEventForAProject200ResponseRelease.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'RetrieveAnEventForAProject200ResponseRelease' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<RetrieveAnEventForAProject200ResponseRelease> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnEventForAProject200ResponseRelease.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnEventForAProject200ResponseRelease>() {
+           @Override
+           public void write(JsonWriter out, RetrieveAnEventForAProject200ResponseRelease value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public RetrieveAnEventForAProject200ResponseRelease read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
     }
   }
 

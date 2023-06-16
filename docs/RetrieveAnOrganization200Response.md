@@ -22,11 +22,11 @@
 |**isDefault** | **Boolean** |  |  |
 |**isEarlyAdopter** | **Boolean** |  |  |
 |**name** | **String** |  |  |
-|**onboardingTasks** | **List&lt;Object&gt;** |  |  |
+|**onboardingTasks** | [**List&lt;RetrieveAnOrganization200ResponseOnboardingTasksInner&gt;**](RetrieveAnOrganization200ResponseOnboardingTasksInner.md) |  |  |
 |**openMembership** | **Boolean** |  |  |
 |**pendingAccessRequests** | **Long** |  |  |
 |**projects** | [**List&lt;RetrieveAnOrganization200ResponseProjectsInner&gt;**](RetrieveAnOrganization200ResponseProjectsInner.md) |  |  |
-|**quota** | **Object** |  |  |
+|**quota** | [**RetrieveAnOrganization200ResponseQuota**](RetrieveAnOrganization200ResponseQuota.md) |  |  |
 |**require2FA** | **Boolean** |  |  |
 |**safeFields** | **List&lt;String&gt;** |  |  |
 |**scrapeJavaScript** | **Boolean** |  |  |
@@ -38,9 +38,5 @@
 |**teams** | [**List&lt;UpdateATeam200Response&gt;**](UpdateATeam200Response.md) |  |  |
 |**trustedRelays** | **List&lt;String&gt;** |  |  |
 
-
-## Implemented Interfaces
-
-* Serializable
 
 

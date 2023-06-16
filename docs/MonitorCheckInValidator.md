@@ -23,8 +23,4 @@
 | IN_PROGRESS | &quot;in_progress&quot; |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -34,8 +34,4 @@ Allows parameters to be defined in snake case, but passed as camel case.  Errors
 | CRON_JOB | &quot;cron_job&quot; |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

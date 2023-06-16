@@ -17,8 +17,4 @@
 |**sdk** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

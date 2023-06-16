@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.RetrieveATeam200ResponseAvatar;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,10 +52,8 @@ import com.sentry.api.client.JSON;
 /**
  * UpdateATeam200Response
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class UpdateATeam200Response implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class UpdateATeam200Response {
   public static final String SERIALIZED_NAME_AVATAR = "avatar";
   @SerializedName(SERIALIZED_NAME_AVATAR)
   private RetrieveATeam200ResponseAvatar avatar;
@@ -106,7 +103,7 @@ public class UpdateATeam200Response implements Serializable {
    * Get avatar
    * @return avatar
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveATeam200ResponseAvatar getAvatar() {
     return avatar;
   }
@@ -127,7 +124,7 @@ public class UpdateATeam200Response implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -148,7 +145,7 @@ public class UpdateATeam200Response implements Serializable {
    * Get hasAccess
    * @return hasAccess
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasAccess() {
     return hasAccess;
   }
@@ -169,7 +166,7 @@ public class UpdateATeam200Response implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -190,7 +187,7 @@ public class UpdateATeam200Response implements Serializable {
    * Get isMember
    * @return isMember
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsMember() {
     return isMember;
   }
@@ -211,7 +208,7 @@ public class UpdateATeam200Response implements Serializable {
    * Get isPending
    * @return isPending
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsPending() {
     return isPending;
   }
@@ -232,7 +229,7 @@ public class UpdateATeam200Response implements Serializable {
    * Get memberCount
    * @return memberCount
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Long getMemberCount() {
     return memberCount;
   }
@@ -253,7 +250,7 @@ public class UpdateATeam200Response implements Serializable {
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -274,7 +271,7 @@ public class UpdateATeam200Response implements Serializable {
    * Get slug
    * @return slug
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSlug() {
     return slug;
   }

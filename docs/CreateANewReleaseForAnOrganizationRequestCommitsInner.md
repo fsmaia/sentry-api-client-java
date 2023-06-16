@@ -16,8 +16,4 @@
 |**id** | **String** | The commit ID (the commit SHA). |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.ResolveAnEventID200ResponseEvent;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,10 +51,8 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAnEventID200Response
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ResolveAnEventID200Response implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ResolveAnEventID200Response {
   public static final String SERIALIZED_NAME_EVENT = "event";
   @SerializedName(SERIALIZED_NAME_EVENT)
   private ResolveAnEventID200ResponseEvent event;
@@ -89,7 +86,7 @@ public class ResolveAnEventID200Response implements Serializable {
    * Get event
    * @return event
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ResolveAnEventID200ResponseEvent getEvent() {
     return event;
   }
@@ -110,7 +107,7 @@ public class ResolveAnEventID200Response implements Serializable {
    * Get eventId
    * @return eventId
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEventId() {
     return eventId;
   }
@@ -131,7 +128,7 @@ public class ResolveAnEventID200Response implements Serializable {
    * Get groupId
    * @return groupId
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getGroupId() {
     return groupId;
   }
@@ -152,7 +149,7 @@ public class ResolveAnEventID200Response implements Serializable {
    * Get organizationSlug
    * @return organizationSlug
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getOrganizationSlug() {
     return organizationSlug;
   }
@@ -173,7 +170,7 @@ public class ResolveAnEventID200Response implements Serializable {
    * Get projectSlug
    * @return projectSlug
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getProjectSlug() {
     return projectSlug;
   }

@@ -10,8 +10,4 @@
 |**errors** | [**List&lt;DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner&gt;**](DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

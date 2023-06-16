@@ -18,8 +18,4 @@
 |**environments** | [**RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments**](RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

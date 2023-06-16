@@ -16,8 +16,4 @@
 |**integrationId** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -10,8 +10,4 @@
 |**name** | **String** | The name for the new key. |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

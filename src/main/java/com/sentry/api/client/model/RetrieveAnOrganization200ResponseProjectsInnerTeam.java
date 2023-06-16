@@ -20,220 +20,175 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.sentry.api.client.model.ListAnOrganizationSProjects200ResponseInnerTeamsInner;
 import java.io.IOException;
-import java.io.Serializable;
-
-import jakarta.ws.rs.core.GenericType;
-
-import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonParseException;
-import com.google.gson.TypeAdapter;
-import com.google.gson.TypeAdapterFactory;
-import com.google.gson.reflect.TypeToken;
-import com.google.gson.JsonPrimitive;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonSerializationContext;
-import com.google.gson.JsonSerializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import com.sentry.api.client.JSON;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnOrganization200ResponseProjectsInnerTeam extends AbstractOpenApiSchema, Serializable {
-    private static final Logger log = Logger.getLogger(RetrieveAnOrganization200ResponseProjectsInnerTeam.class.getName());
+/**
+ * RetrieveAnOrganization200ResponseProjectsInnerTeam
+ */
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnOrganization200ResponseProjectsInnerTeam {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
-    public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
-        @SuppressWarnings("unchecked")
-        @Override
-        public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-            if (!RetrieveAnOrganization200ResponseProjectsInnerTeam.class.isAssignableFrom(type.getRawType())) {
-                return null; // this class only serializes 'RetrieveAnOrganization200ResponseProjectsInnerTeam' and its subtypes
-            }
-            final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-            final TypeAdapter<ListAnOrganizationSProjects200ResponseInnerTeamsInner> adapterListAnOrganizationSProjects200ResponseInnerTeamsInner = gson.getDelegateAdapter(this, TypeToken.get(ListAnOrganizationSProjects200ResponseInnerTeamsInner.class));
-            final TypeAdapter<Object> adapterObject = gson.getDelegateAdapter(this, TypeToken.get(Object.class));
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
-            return (TypeAdapter<T>) new TypeAdapter<RetrieveAnOrganization200ResponseProjectsInnerTeam>() {
-                @Override
-                public void write(JsonWriter out, RetrieveAnOrganization200ResponseProjectsInnerTeam value) throws IOException {
-                    if (value == null || value.getActualInstance() == null) {
-                        elementAdapter.write(out, null);
-                        return;
-                    }
+  public static final String SERIALIZED_NAME_SLUG = "slug";
+  @SerializedName(SERIALIZED_NAME_SLUG)
+  private String slug;
 
-                    // check if the actual instance is of the type `ListAnOrganizationSProjects200ResponseInnerTeamsInner`
-                    if (value.getActualInstance() instanceof ListAnOrganizationSProjects200ResponseInnerTeamsInner) {
-                        JsonObject obj = adapterListAnOrganizationSProjects200ResponseInnerTeamsInner.toJsonTree((ListAnOrganizationSProjects200ResponseInnerTeamsInner)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+  public RetrieveAnOrganization200ResponseProjectsInnerTeam() {
+  }
 
-                    // check if the actual instance is of the type `Object`
-                    if (value.getActualInstance() instanceof Object) {
-                        JsonObject obj = adapterObject.toJsonTree((Object)value.getActualInstance()).getAsJsonObject();
-                        elementAdapter.write(out, obj);
-                        return;
-                    }
+  public RetrieveAnOrganization200ResponseProjectsInnerTeam id(String id) {
+    
+    this.id = id;
+    return this;
+  }
 
-                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: ListAnOrganizationSProjects200ResponseInnerTeamsInner, Object");
-                }
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nonnull
+  public String getId() {
+    return id;
+  }
 
-                @Override
-                public RetrieveAnOrganization200ResponseProjectsInnerTeam read(JsonReader in) throws IOException {
-                    Object deserialized = null;
-                    JsonObject jsonObject = elementAdapter.read(in).getAsJsonObject();
 
-                    int match = 0;
-                    ArrayList<String> errorMessages = new ArrayList<>();
-                    TypeAdapter actualAdapter = elementAdapter;
+  public void setId(String id) {
+    this.id = id;
+  }
 
-                    // deserialize ListAnOrganizationSProjects200ResponseInnerTeamsInner
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        ListAnOrganizationSProjects200ResponseInnerTeamsInner.validateJsonObject(jsonObject);
-                        actualAdapter = adapterListAnOrganizationSProjects200ResponseInnerTeamsInner;
-                        match++;
-                        log.log(Level.FINER, "Input data matches schema 'ListAnOrganizationSProjects200ResponseInnerTeamsInner'");
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        errorMessages.add(String.format("Deserialization for ListAnOrganizationSProjects200ResponseInnerTeamsInner failed with `%s`.", e.getMessage()));
-                        log.log(Level.FINER, "Input data does not match schema 'ListAnOrganizationSProjects200ResponseInnerTeamsInner'", e);
-                    }
 
-                    // deserialize Object
-                    try {
-                        // validate the JSON object to see if any exception is thrown
-                        Object.validateJsonObject(jsonObject);
-                        actualAdapter = adapterObject;
-                        match++;
-                        log.log(Level.FINER, "Input data matches schema 'Object'");
-                    } catch (Exception e) {
-                        // deserialization failed, continue
-                        errorMessages.add(String.format("Deserialization for Object failed with `%s`.", e.getMessage()));
-                        log.log(Level.FINER, "Input data does not match schema 'Object'", e);
-                    }
+  public RetrieveAnOrganization200ResponseProjectsInnerTeam name(String name) {
+    
+    this.name = name;
+    return this;
+  }
 
-                    if (match == 1) {
-                        RetrieveAnOrganization200ResponseProjectsInnerTeam ret = new RetrieveAnOrganization200ResponseProjectsInnerTeam();
-                        ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject));
-                        return ret;
-                    }
+   /**
+   * Get name
+   * @return name
+  **/
+  @javax.annotation.Nonnull
+  public String getName() {
+    return name;
+  }
 
-                    throw new IOException(String.format("Failed deserialization for RetrieveAnOrganization200ResponseProjectsInnerTeam: %d classes match result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", match, errorMessages, jsonObject.toString()));
-                }
-            }.nullSafe();
-        }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+  public RetrieveAnOrganization200ResponseProjectsInnerTeam slug(String slug) {
+    
+    this.slug = slug;
+    return this;
+  }
+
+   /**
+   * Get slug
+   * @return slug
+  **/
+  @javax.annotation.Nonnull
+  public String getSlug() {
+    return slug;
+  }
+
+
+  public void setSlug(String slug) {
+    this.slug = slug;
+  }
+
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
-
-    // store a list of schema names defined in oneOf
-    public static final Map<String, GenericType> schemas = new HashMap<String, GenericType>();
-
-    public RetrieveAnOrganization200ResponseProjectsInnerTeam() {
-        super("oneOf", Boolean.TRUE);
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    RetrieveAnOrganization200ResponseProjectsInnerTeam retrieveAnOrganization200ResponseProjectsInnerTeam = (RetrieveAnOrganization200ResponseProjectsInnerTeam) o;
+    return Objects.equals(this.id, retrieveAnOrganization200ResponseProjectsInnerTeam.id) &&
+        Objects.equals(this.name, retrieveAnOrganization200ResponseProjectsInnerTeam.name) &&
+        Objects.equals(this.slug, retrieveAnOrganization200ResponseProjectsInnerTeam.slug);
+  }
 
-    public RetrieveAnOrganization200ResponseProjectsInnerTeam(ListAnOrganizationSProjects200ResponseInnerTeamsInner o) {
-        super("oneOf", Boolean.TRUE);
-        setActualInstance(o);
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, name, slug);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class RetrieveAnOrganization200ResponseProjectsInnerTeam {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    slug: ").append(toIndentedString(slug)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
 
-    public RetrieveAnOrganization200ResponseProjectsInnerTeam(Object o) {
-        super("oneOf", Boolean.TRUE);
-        setActualInstance(o);
-    }
 
-    static {
-        schemas.put("ListAnOrganizationSProjects200ResponseInnerTeamsInner", new GenericType<ListAnOrganizationSProjects200ResponseInnerTeamsInner>() {
-        });
-        schemas.put("Object", new GenericType<Object>() {
-        });
-    }
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
 
-    @Override
-    public Map<String, GenericType> getSchemas() {
-        return RetrieveAnOrganization200ResponseProjectsInnerTeam.schemas;
-    }
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("id");
+    openapiFields.add("name");
+    openapiFields.add("slug");
 
-    /**
-     * Set the instance that matches the oneOf child schema, check
-     * the instance parameter is valid against the oneOf child schemas:
-     * ListAnOrganizationSProjects200ResponseInnerTeamsInner, Object
-     *
-     * It could be an instance of the 'oneOf' schemas.
-     * The oneOf child schemas may themselves be a composed schema (allOf, anyOf, oneOf).
-     */
-    @Override
-    public void setActualInstance(Object instance) {
-        if (instance == null) {
-           super.setActualInstance(instance);
-           return;
-        }
-
-        if (instance instanceof ListAnOrganizationSProjects200ResponseInnerTeamsInner) {
-            super.setActualInstance(instance);
-            return;
-        }
-
-        if (instance instanceof Object) {
-            super.setActualInstance(instance);
-            return;
-        }
-
-        throw new RuntimeException("Invalid instance type. Must be ListAnOrganizationSProjects200ResponseInnerTeamsInner, Object");
-    }
-
-    /**
-     * Get the actual instance, which can be the following:
-     * ListAnOrganizationSProjects200ResponseInnerTeamsInner, Object
-     *
-     * @return The actual instance (ListAnOrganizationSProjects200ResponseInnerTeamsInner, Object)
-     */
-    @Override
-    public Object getActualInstance() {
-        return super.getActualInstance();
-    }
-
-    /**
-     * Get the actual instance of `ListAnOrganizationSProjects200ResponseInnerTeamsInner`. If the actual instance is not `ListAnOrganizationSProjects200ResponseInnerTeamsInner`,
-     * the ClassCastException will be thrown.
-     *
-     * @return The actual instance of `ListAnOrganizationSProjects200ResponseInnerTeamsInner`
-     * @throws ClassCastException if the instance is not `ListAnOrganizationSProjects200ResponseInnerTeamsInner`
-     */
-    public ListAnOrganizationSProjects200ResponseInnerTeamsInner getListAnOrganizationSProjects200ResponseInnerTeamsInner() throws ClassCastException {
-        return (ListAnOrganizationSProjects200ResponseInnerTeamsInner)super.getActualInstance();
-    }
-
-    /**
-     * Get the actual instance of `Object`. If the actual instance is not `Object`,
-     * the ClassCastException will be thrown.
-     *
-     * @return The actual instance of `Object`
-     * @throws ClassCastException if the instance is not `Object`
-     */
-    public Object getObject() throws ClassCastException {
-        return (Object)super.getActualInstance();
-    }
-
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("id");
+    openapiRequiredFields.add("name");
+    openapiRequiredFields.add("slug");
+  }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
@@ -242,27 +197,63 @@ public class RetrieveAnOrganization200ResponseProjectsInnerTeam extends Abstract
   * @throws IOException if the JSON Object is invalid with respect to RetrieveAnOrganization200ResponseProjectsInnerTeam
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-    // validate oneOf schemas one by one
-    int validCount = 0;
-    ArrayList<String> errorMessages = new ArrayList<>();
-    // validate the json string with ListAnOrganizationSProjects200ResponseInnerTeamsInner
-    try {
-      ListAnOrganizationSProjects200ResponseInnerTeamsInner.validateJsonObject(jsonObj);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for ListAnOrganizationSProjects200ResponseInnerTeamsInner failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    // validate the json string with Object
-    try {
-      Object.validateJsonObject(jsonObj);
-      validCount++;
-    } catch (Exception e) {
-      errorMessages.add(String.format("Deserialization for Object failed with `%s`.", e.getMessage()));
-      // continue to the next one
-    }
-    if (validCount != 1) {
-      throw new IOException(String.format("The JSON string is invalid for RetrieveAnOrganization200ResponseProjectsInnerTeam with oneOf schemas: ListAnOrganizationSProjects200ResponseInnerTeamsInner, Object. %d class(es) match the result, expected 1. Detailed failure message for oneOf schemas: %s. JSON: %s", validCount, errorMessages, jsonObj.toString()));
+      if (jsonObj == null) {
+        if (!RetrieveAnOrganization200ResponseProjectsInnerTeam.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in RetrieveAnOrganization200ResponseProjectsInnerTeam is not found in the empty JSON string", RetrieveAnOrganization200ResponseProjectsInnerTeam.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!RetrieveAnOrganization200ResponseProjectsInnerTeam.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `RetrieveAnOrganization200ResponseProjectsInnerTeam` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : RetrieveAnOrganization200ResponseProjectsInnerTeam.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      if (!jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if (!jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      if (!jsonObj.get("slug").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `slug` to be a primitive type in the JSON string but got `%s`", jsonObj.get("slug").toString()));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!RetrieveAnOrganization200ResponseProjectsInnerTeam.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'RetrieveAnOrganization200ResponseProjectsInnerTeam' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<RetrieveAnOrganization200ResponseProjectsInnerTeam> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(RetrieveAnOrganization200ResponseProjectsInnerTeam.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<RetrieveAnOrganization200ResponseProjectsInnerTeam>() {
+           @Override
+           public void write(JsonWriter out, RetrieveAnOrganization200ResponseProjectsInnerTeam value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public RetrieveAnOrganization200ResponseProjectsInnerTeam read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
+           }
+
+       }.nullSafe();
     }
   }
 

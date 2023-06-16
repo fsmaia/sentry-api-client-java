@@ -12,8 +12,4 @@
 |**members** | **List&lt;Object&gt;** |  |  [readonly] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -24,7 +24,6 @@ import com.sentry.api.client.model.RetrieveMonitorsForAnOrganization200ResponseI
 import com.sentry.api.client.model.RetrieveMonitorsForAnOrganization200ResponseInnerProject;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,10 +53,8 @@ import com.sentry.api.client.JSON;
 /**
  * Monitor
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class Monitor implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class Monitor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
@@ -107,7 +104,7 @@ public class Monitor implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -128,7 +125,7 @@ public class Monitor implements Serializable {
    * Get name
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -149,7 +146,7 @@ public class Monitor implements Serializable {
    * Get slug
    * @return slug
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSlug() {
     return slug;
   }
@@ -170,7 +167,7 @@ public class Monitor implements Serializable {
    * Get status
    * @return status
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -191,7 +188,7 @@ public class Monitor implements Serializable {
    * Get type
    * @return type
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -212,7 +209,7 @@ public class Monitor implements Serializable {
    * Get config
    * @return config
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Object getConfig() {
     return config;
   }
@@ -233,7 +230,7 @@ public class Monitor implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public OffsetDateTime getDateCreated() {
     return dateCreated;
   }
@@ -254,7 +251,7 @@ public class Monitor implements Serializable {
    * Get project
    * @return project
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveMonitorsForAnOrganization200ResponseInnerProject getProject() {
     return project;
   }
@@ -275,7 +272,7 @@ public class Monitor implements Serializable {
    * Get environments
    * @return environments
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public RetrieveMonitorsForAnOrganization200ResponseInnerEnvironments getEnvironments() {
     return environments;
   }

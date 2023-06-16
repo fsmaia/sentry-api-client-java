@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,10 +52,8 @@ import com.sentry.api.client.JSON;
 /**
  * DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private String type;
@@ -82,7 +79,7 @@ public class DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner 
    * Get type
    * @return type
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -103,7 +100,7 @@ public class DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner 
    * Get message
    * @return message
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getMessage() {
     return message;
   }
@@ -132,7 +129,7 @@ public class DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner 
    * Get data
    * @return data
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Map<String, Object> getData() {
     return data;
   }

@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,10 +53,8 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveAnIssue200ResponseStats
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class RetrieveAnIssue200ResponseStats implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class RetrieveAnIssue200ResponseStats {
   public static final String SERIALIZED_NAME_24H = "24h";
   @SerializedName(SERIALIZED_NAME_24H)
   private List<List<BigDecimal>> _24h;
@@ -87,7 +84,7 @@ public class RetrieveAnIssue200ResponseStats implements Serializable {
    * Get _24h
    * @return _24h
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public List<List<BigDecimal>> get24h() {
     return _24h;
   }
@@ -116,7 +113,7 @@ public class RetrieveAnIssue200ResponseStats implements Serializable {
    * Get _30d
    * @return _30d
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public List<List<BigDecimal>> get30d() {
     return _30d;
   }

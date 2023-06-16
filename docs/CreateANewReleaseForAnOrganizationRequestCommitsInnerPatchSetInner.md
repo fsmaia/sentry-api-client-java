@@ -21,8 +21,4 @@
 | D | &quot;D&quot; |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

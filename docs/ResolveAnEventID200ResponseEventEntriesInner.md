@@ -11,8 +11,4 @@
 |**data** | [**ResolveAnEventID200ResponseEventEntriesInnerAnyOf3Data**](ResolveAnEventID200ResponseEventEntriesInnerAnyOf3Data.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

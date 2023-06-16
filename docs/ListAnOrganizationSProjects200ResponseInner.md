@@ -37,8 +37,4 @@
 |**latestRelease** | [**ListAnOrganizationSProjects200ResponseInnerLatestRelease**](ListAnOrganizationSProjects200ResponseInnerLatestRelease.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

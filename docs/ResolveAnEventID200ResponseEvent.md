@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**meta** | [**ResolveAnEventID200ResponseEventMeta**](ResolveAnEventID200ResponseEventMeta.md) |  |  |
 |**context** | [**ResolveAnEventID200ResponseEventContext**](ResolveAnEventID200ResponseEventContext.md) |  |  |
-|**contexts** | **Object** |  |  |
+|**contexts** | [**ResolveAnEventID200ResponseEventContexts**](ResolveAnEventID200ResponseEventContexts.md) |  |  |
 |**dateCreated** | **String** |  |  |
 |**dateReceived** | **String** |  |  |
 |**dist** | **String** |  |  |
@@ -30,9 +30,5 @@
 |**user** | [**ResolveAnEventID200ResponseEventUser**](ResolveAnEventID200ResponseEventUser.md) |  |  |
 |**title** | **String** |  |  |
 
-
-## Implemented Interfaces
-
-* Serializable
 
 

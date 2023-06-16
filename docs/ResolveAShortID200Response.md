@@ -14,8 +14,4 @@
 |**groupId** | **String** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

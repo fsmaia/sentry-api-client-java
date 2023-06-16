@@ -11,8 +11,4 @@
 |**operations** | [**List&lt;UpdateAnOrganizationMemberSAttributesRequestOperationsInner&gt;**](UpdateAnOrganizationMemberSAttributesRequestOperationsInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

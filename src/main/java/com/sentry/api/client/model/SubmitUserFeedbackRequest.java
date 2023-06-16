@@ -21,7 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,10 +50,8 @@ import com.sentry.api.client.JSON;
 /**
  * SubmitUserFeedbackRequest
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class SubmitUserFeedbackRequest implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class SubmitUserFeedbackRequest {
   public static final String SERIALIZED_NAME_EVENT_ID = "event_id";
   @SerializedName(SERIALIZED_NAME_EVENT_ID)
   private String eventId;
@@ -84,7 +81,7 @@ public class SubmitUserFeedbackRequest implements Serializable {
    * The event ID. This can be retrieved from the [beforeSend callback](https://docs.sentry.io/platforms/javascript/configuration/filtering/#using-beforesend).
    * @return eventId
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEventId() {
     return eventId;
   }
@@ -105,7 +102,7 @@ public class SubmitUserFeedbackRequest implements Serializable {
    * User&#39;s name.
    * @return name
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
@@ -126,7 +123,7 @@ public class SubmitUserFeedbackRequest implements Serializable {
    * User&#39;s email address.
    * @return email
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEmail() {
     return email;
   }
@@ -147,7 +144,7 @@ public class SubmitUserFeedbackRequest implements Serializable {
    * Comments supplied by user.
    * @return comments
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getComments() {
     return comments;
   }

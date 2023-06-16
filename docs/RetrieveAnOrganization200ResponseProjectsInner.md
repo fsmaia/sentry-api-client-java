@@ -22,8 +22,4 @@
 |**teams** | [**List&lt;ListAnOrganizationSProjects200ResponseInnerTeamsInner&gt;**](ListAnOrganizationSProjects200ResponseInnerTeamsInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -33,8 +33,8 @@ import java.io.File;
 import com.sentry.api.client.model.ListARepositorySCommits200ResponseInner;
 import com.sentry.api.client.model.ListAnOrganizationSReleaseFiles200ResponseInner;
 import java.time.OffsetDateTime;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseOneOf;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOf;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf;
 import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics200Response;
 import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics400Response;
 import com.sentry.api.client.model.UpdateAnOrganizationReleaseFileRequest;
@@ -45,7 +45,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import jakarta.ws.rs.core.GenericType;
+import javax.ws.rs.core.GenericType;
 
 public class ReleasesApi {
     private ApiClient localVarApiClient;
@@ -170,7 +170,7 @@ public class ReleasesApi {
      * @param organizationSlug The slug of the organization. (required)
      * @param version The version identifier of the release. (required)
      * @param createANewDeployForAnOrganizationRequest  (optional)
-     * @return RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf
+     * @return RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -181,8 +181,8 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf createANewDeployForAnOrganization(String organizationSlug, String version, CreateANewDeployForAnOrganizationRequest createANewDeployForAnOrganizationRequest) throws ApiException {
-        ApiResponse<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf> localVarResp = createANewDeployForAnOrganizationWithHttpInfo(organizationSlug, version, createANewDeployForAnOrganizationRequest);
+    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf createANewDeployForAnOrganization(String organizationSlug, String version, CreateANewDeployForAnOrganizationRequest createANewDeployForAnOrganizationRequest) throws ApiException {
+        ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf> localVarResp = createANewDeployForAnOrganizationWithHttpInfo(organizationSlug, version, createANewDeployForAnOrganizationRequest);
         return localVarResp.getData();
     }
 
@@ -192,7 +192,7 @@ public class ReleasesApi {
      * @param organizationSlug The slug of the organization. (required)
      * @param version The version identifier of the release. (required)
      * @param createANewDeployForAnOrganizationRequest  (optional)
-     * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf&gt;
+     * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -203,9 +203,9 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf> createANewDeployForAnOrganizationWithHttpInfo(String organizationSlug, String version, CreateANewDeployForAnOrganizationRequest createANewDeployForAnOrganizationRequest) throws ApiException {
+    public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf> createANewDeployForAnOrganizationWithHttpInfo(String organizationSlug, String version, CreateANewDeployForAnOrganizationRequest createANewDeployForAnOrganizationRequest) throws ApiException {
         okhttp3.Call localVarCall = createANewDeployForAnOrganizationValidateBeforeCall(organizationSlug, version, createANewDeployForAnOrganizationRequest, null);
-        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -227,10 +227,10 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createANewDeployForAnOrganizationAsync(String organizationSlug, String version, CreateANewDeployForAnOrganizationRequest createANewDeployForAnOrganizationRequest, final ApiCallback<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf> _callback) throws ApiException {
+    public okhttp3.Call createANewDeployForAnOrganizationAsync(String organizationSlug, String version, CreateANewDeployForAnOrganizationRequest createANewDeployForAnOrganizationRequest, final ApiCallback<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = createANewDeployForAnOrganizationValidateBeforeCall(organizationSlug, version, createANewDeployForAnOrganizationRequest, _callback);
-        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -311,7 +311,7 @@ public class ReleasesApi {
      * Create a new release for the given organization.  Releases are used by Sentry to improve its error reporting abilities by correlating first seen events with the release that might have introduced the problem. Releases are also necessary for source maps and other debug features that require manual upload for functioning well.
      * @param organizationSlug The slug of the organization. (required)
      * @param createANewReleaseForAnOrganizationRequest  (optional)
-     * @return RetrieveAnEventForAProject200ResponseReleaseOneOf
+     * @return RetrieveAnEventForAProject200ResponseReleaseAllOf
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -321,8 +321,8 @@ public class ReleasesApi {
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
      </table>
      */
-    public RetrieveAnEventForAProject200ResponseReleaseOneOf createANewReleaseForAnOrganization(String organizationSlug, CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest) throws ApiException {
-        ApiResponse<RetrieveAnEventForAProject200ResponseReleaseOneOf> localVarResp = createANewReleaseForAnOrganizationWithHttpInfo(organizationSlug, createANewReleaseForAnOrganizationRequest);
+    public RetrieveAnEventForAProject200ResponseReleaseAllOf createANewReleaseForAnOrganization(String organizationSlug, CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest) throws ApiException {
+        ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOf> localVarResp = createANewReleaseForAnOrganizationWithHttpInfo(organizationSlug, createANewReleaseForAnOrganizationRequest);
         return localVarResp.getData();
     }
 
@@ -331,7 +331,7 @@ public class ReleasesApi {
      * Create a new release for the given organization.  Releases are used by Sentry to improve its error reporting abilities by correlating first seen events with the release that might have introduced the problem. Releases are also necessary for source maps and other debug features that require manual upload for functioning well.
      * @param organizationSlug The slug of the organization. (required)
      * @param createANewReleaseForAnOrganizationRequest  (optional)
-     * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseOneOf&gt;
+     * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -341,9 +341,9 @@ public class ReleasesApi {
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseOneOf> createANewReleaseForAnOrganizationWithHttpInfo(String organizationSlug, CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest) throws ApiException {
+    public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOf> createANewReleaseForAnOrganizationWithHttpInfo(String organizationSlug, CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest) throws ApiException {
         okhttp3.Call localVarCall = createANewReleaseForAnOrganizationValidateBeforeCall(organizationSlug, createANewReleaseForAnOrganizationRequest, null);
-        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseOneOf>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseAllOf>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -363,10 +363,10 @@ public class ReleasesApi {
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call createANewReleaseForAnOrganizationAsync(String organizationSlug, CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest, final ApiCallback<RetrieveAnEventForAProject200ResponseReleaseOneOf> _callback) throws ApiException {
+    public okhttp3.Call createANewReleaseForAnOrganizationAsync(String organizationSlug, CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest, final ApiCallback<RetrieveAnEventForAProject200ResponseReleaseAllOf> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = createANewReleaseForAnOrganizationValidateBeforeCall(organizationSlug, createANewReleaseForAnOrganizationRequest, _callback);
-        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseOneOf>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseAllOf>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1184,7 +1184,7 @@ public class ReleasesApi {
      * Return a list of deploys for a given release.
      * @param organizationSlug The slug of the organization. (required)
      * @param version The version identifier of the release. (required)
-     * @return List&lt;RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf&gt;
+     * @return List&lt;RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1194,8 +1194,8 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public List<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf> listAReleasesDeploys(String organizationSlug, String version) throws ApiException {
-        ApiResponse<List<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf>> localVarResp = listAReleasesDeploysWithHttpInfo(organizationSlug, version);
+    public List<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf> listAReleasesDeploys(String organizationSlug, String version) throws ApiException {
+        ApiResponse<List<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf>> localVarResp = listAReleasesDeploysWithHttpInfo(organizationSlug, version);
         return localVarResp.getData();
     }
 
@@ -1204,7 +1204,7 @@ public class ReleasesApi {
      * Return a list of deploys for a given release.
      * @param organizationSlug The slug of the organization. (required)
      * @param version The version identifier of the release. (required)
-     * @return ApiResponse&lt;List&lt;RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf&gt;&gt;
+     * @return ApiResponse&lt;List&lt;RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1214,9 +1214,9 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf>> listAReleasesDeploysWithHttpInfo(String organizationSlug, String version) throws ApiException {
+    public ApiResponse<List<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf>> listAReleasesDeploysWithHttpInfo(String organizationSlug, String version) throws ApiException {
         okhttp3.Call localVarCall = listAReleasesDeploysValidateBeforeCall(organizationSlug, version, null);
-        Type localVarReturnType = new TypeToken<List<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1236,10 +1236,10 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listAReleasesDeploysAsync(String organizationSlug, String version, final ApiCallback<List<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf>> _callback) throws ApiException {
+    public okhttp3.Call listAReleasesDeploysAsync(String organizationSlug, String version, final ApiCallback<List<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listAReleasesDeploysValidateBeforeCall(organizationSlug, version, _callback);
-        Type localVarReturnType = new TypeToken<List<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1606,7 +1606,7 @@ public class ReleasesApi {
      * Return a list of releases for a given organization.
      * @param organizationSlug The slug of the organization. (required)
      * @param query This parameter can be used to create a \&quot;starts with\&quot; filter for the version. (optional)
-     * @return List&lt;RetrieveAnEventForAProject200ResponseReleaseOneOf&gt;
+     * @return List&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1617,8 +1617,8 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public List<RetrieveAnEventForAProject200ResponseReleaseOneOf> listAnOrganizationsReleases(String organizationSlug, String query) throws ApiException {
-        ApiResponse<List<RetrieveAnEventForAProject200ResponseReleaseOneOf>> localVarResp = listAnOrganizationsReleasesWithHttpInfo(organizationSlug, query);
+    public List<RetrieveAnEventForAProject200ResponseReleaseAllOf> listAnOrganizationsReleases(String organizationSlug, String query) throws ApiException {
+        ApiResponse<List<RetrieveAnEventForAProject200ResponseReleaseAllOf>> localVarResp = listAnOrganizationsReleasesWithHttpInfo(organizationSlug, query);
         return localVarResp.getData();
     }
 
@@ -1627,7 +1627,7 @@ public class ReleasesApi {
      * Return a list of releases for a given organization.
      * @param organizationSlug The slug of the organization. (required)
      * @param query This parameter can be used to create a \&quot;starts with\&quot; filter for the version. (optional)
-     * @return ApiResponse&lt;List&lt;RetrieveAnEventForAProject200ResponseReleaseOneOf&gt;&gt;
+     * @return ApiResponse&lt;List&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1638,9 +1638,9 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<RetrieveAnEventForAProject200ResponseReleaseOneOf>> listAnOrganizationsReleasesWithHttpInfo(String organizationSlug, String query) throws ApiException {
+    public ApiResponse<List<RetrieveAnEventForAProject200ResponseReleaseAllOf>> listAnOrganizationsReleasesWithHttpInfo(String organizationSlug, String query) throws ApiException {
         okhttp3.Call localVarCall = listAnOrganizationsReleasesValidateBeforeCall(organizationSlug, query, null);
-        Type localVarReturnType = new TypeToken<List<RetrieveAnEventForAProject200ResponseReleaseOneOf>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<RetrieveAnEventForAProject200ResponseReleaseAllOf>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1661,10 +1661,10 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call listAnOrganizationsReleasesAsync(String organizationSlug, String query, final ApiCallback<List<RetrieveAnEventForAProject200ResponseReleaseOneOf>> _callback) throws ApiException {
+    public okhttp3.Call listAnOrganizationsReleasesAsync(String organizationSlug, String query, final ApiCallback<List<RetrieveAnEventForAProject200ResponseReleaseAllOf>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = listAnOrganizationsReleasesValidateBeforeCall(organizationSlug, query, _callback);
-        Type localVarReturnType = new TypeToken<List<RetrieveAnEventForAProject200ResponseReleaseOneOf>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<RetrieveAnEventForAProject200ResponseReleaseAllOf>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2224,7 +2224,7 @@ public class ReleasesApi {
      * Return a release for a given organization.
      * @param organizationSlug The slug of the organization the release belongs to. (required)
      * @param version The version identifier of the release. (required)
-     * @return RetrieveAnEventForAProject200ResponseReleaseOneOf
+     * @return RetrieveAnEventForAProject200ResponseReleaseAllOf
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2234,8 +2234,8 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public RetrieveAnEventForAProject200ResponseReleaseOneOf retrieveAnOrganizationsReleases(String organizationSlug, String version) throws ApiException {
-        ApiResponse<RetrieveAnEventForAProject200ResponseReleaseOneOf> localVarResp = retrieveAnOrganizationsReleasesWithHttpInfo(organizationSlug, version);
+    public RetrieveAnEventForAProject200ResponseReleaseAllOf retrieveAnOrganizationsReleases(String organizationSlug, String version) throws ApiException {
+        ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOf> localVarResp = retrieveAnOrganizationsReleasesWithHttpInfo(organizationSlug, version);
         return localVarResp.getData();
     }
 
@@ -2244,7 +2244,7 @@ public class ReleasesApi {
      * Return a release for a given organization.
      * @param organizationSlug The slug of the organization the release belongs to. (required)
      * @param version The version identifier of the release. (required)
-     * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseOneOf&gt;
+     * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2254,9 +2254,9 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseOneOf> retrieveAnOrganizationsReleasesWithHttpInfo(String organizationSlug, String version) throws ApiException {
+    public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOf> retrieveAnOrganizationsReleasesWithHttpInfo(String organizationSlug, String version) throws ApiException {
         okhttp3.Call localVarCall = retrieveAnOrganizationsReleasesValidateBeforeCall(organizationSlug, version, null);
-        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseOneOf>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseAllOf>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2276,10 +2276,10 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call retrieveAnOrganizationsReleasesAsync(String organizationSlug, String version, final ApiCallback<RetrieveAnEventForAProject200ResponseReleaseOneOf> _callback) throws ApiException {
+    public okhttp3.Call retrieveAnOrganizationsReleasesAsync(String organizationSlug, String version, final ApiCallback<RetrieveAnEventForAProject200ResponseReleaseAllOf> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = retrieveAnOrganizationsReleasesValidateBeforeCall(organizationSlug, version, _callback);
-        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseOneOf>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseAllOf>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -3067,7 +3067,7 @@ public class ReleasesApi {
      * @param organizationSlug The slug of the organization the release belongs to. (required)
      * @param version The version identifier of the release. (required)
      * @param updateAnOrganizationSReleaseRequest  (optional)
-     * @return RetrieveAnEventForAProject200ResponseReleaseOneOf
+     * @return RetrieveAnEventForAProject200ResponseReleaseAllOf
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3077,8 +3077,8 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public RetrieveAnEventForAProject200ResponseReleaseOneOf updateAnOrganizationsRelease(String organizationSlug, String version, UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest) throws ApiException {
-        ApiResponse<RetrieveAnEventForAProject200ResponseReleaseOneOf> localVarResp = updateAnOrganizationsReleaseWithHttpInfo(organizationSlug, version, updateAnOrganizationSReleaseRequest);
+    public RetrieveAnEventForAProject200ResponseReleaseAllOf updateAnOrganizationsRelease(String organizationSlug, String version, UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest) throws ApiException {
+        ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOf> localVarResp = updateAnOrganizationsReleaseWithHttpInfo(organizationSlug, version, updateAnOrganizationSReleaseRequest);
         return localVarResp.getData();
     }
 
@@ -3088,7 +3088,7 @@ public class ReleasesApi {
      * @param organizationSlug The slug of the organization the release belongs to. (required)
      * @param version The version identifier of the release. (required)
      * @param updateAnOrganizationSReleaseRequest  (optional)
-     * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseOneOf&gt;
+     * @return ApiResponse&lt;RetrieveAnEventForAProject200ResponseReleaseAllOf&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -3098,9 +3098,9 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseOneOf> updateAnOrganizationsReleaseWithHttpInfo(String organizationSlug, String version, UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest) throws ApiException {
+    public ApiResponse<RetrieveAnEventForAProject200ResponseReleaseAllOf> updateAnOrganizationsReleaseWithHttpInfo(String organizationSlug, String version, UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest) throws ApiException {
         okhttp3.Call localVarCall = updateAnOrganizationsReleaseValidateBeforeCall(organizationSlug, version, updateAnOrganizationSReleaseRequest, null);
-        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseOneOf>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseAllOf>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -3121,10 +3121,10 @@ public class ReleasesApi {
         <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateAnOrganizationsReleaseAsync(String organizationSlug, String version, UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest, final ApiCallback<RetrieveAnEventForAProject200ResponseReleaseOneOf> _callback) throws ApiException {
+    public okhttp3.Call updateAnOrganizationsReleaseAsync(String organizationSlug, String version, UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest, final ApiCallback<RetrieveAnEventForAProject200ResponseReleaseAllOf> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateAnOrganizationsReleaseValidateBeforeCall(organizationSlug, version, updateAnOrganizationSReleaseRequest, _callback);
-        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseOneOf>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveAnEventForAProject200ResponseReleaseAllOf>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

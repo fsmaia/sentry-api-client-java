@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,10 +52,8 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSServiceHooks200ResponseInner
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ListAProjectSServiceHooks200ResponseInner {
   public static final String SERIALIZED_NAME_DATE_CREATED = "dateCreated";
   @SerializedName(SERIALIZED_NAME_DATE_CREATED)
   private String dateCreated;
@@ -94,7 +91,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get dateCreated
    * @return dateCreated
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getDateCreated() {
     return dateCreated;
   }
@@ -123,7 +120,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get events
    * @return events
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getEvents() {
     return events;
   }
@@ -144,7 +141,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -165,7 +162,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get secret
    * @return secret
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getSecret() {
     return secret;
   }
@@ -186,7 +183,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get status
    * @return status
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getStatus() {
     return status;
   }
@@ -207,7 +204,7 @@ public class ListAProjectSServiceHooks200ResponseInner implements Serializable {
    * Get url
    * @return url
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getUrl() {
     return url;
   }

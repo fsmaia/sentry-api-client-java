@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,10 +53,8 @@ import com.sentry.api.client.JSON;
 /**
  * CreateANewDeployForAnOrganizationRequest
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class CreateANewDeployForAnOrganizationRequest implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class CreateANewDeployForAnOrganizationRequest {
   public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
   @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
   private String environment;
@@ -95,7 +92,7 @@ public class CreateANewDeployForAnOrganizationRequest implements Serializable {
    * The environment you&#39;re deploying to.
    * @return environment
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getEnvironment() {
     return environment;
   }
@@ -116,7 +113,7 @@ public class CreateANewDeployForAnOrganizationRequest implements Serializable {
    * The optional URL that points to the deploy.
    * @return url
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getUrl() {
     return url;
   }
@@ -137,7 +134,7 @@ public class CreateANewDeployForAnOrganizationRequest implements Serializable {
    * The optional name of the deploy.
    * @return name
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getName() {
     return name;
   }
@@ -166,7 +163,7 @@ public class CreateANewDeployForAnOrganizationRequest implements Serializable {
    * The optional list of projects to deploy.
    * @return projects
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public List<String> getProjects() {
     return projects;
   }
@@ -187,7 +184,7 @@ public class CreateANewDeployForAnOrganizationRequest implements Serializable {
    * An optional date that indicates when the deploy started.
    * @return dateStarted
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public OffsetDateTime getDateStarted() {
     return dateStarted;
   }
@@ -208,7 +205,7 @@ public class CreateANewDeployForAnOrganizationRequest implements Serializable {
    * An optional date that indicates when the deploy ended. If not provided, the current time is used.
    * @return dateFinished
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public OffsetDateTime getDateFinished() {
     return dateFinished;
   }

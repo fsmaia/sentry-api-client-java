@@ -15,8 +15,4 @@
 |**dateSynced** | **OffsetDateTime** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

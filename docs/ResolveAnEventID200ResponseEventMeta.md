@@ -17,8 +17,4 @@
 |**user** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -15,8 +15,4 @@
 |**digestsMaxDelay** | **Integer** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

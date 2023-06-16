@@ -27,7 +27,6 @@ import com.sentry.api.client.model.ResolveAShortID200ResponseGroupSubscriptionDe
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -57,10 +56,8 @@ import com.sentry.api.client.JSON;
 /**
  * ResolveAShortID200ResponseGroup
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class ResolveAShortID200ResponseGroup implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class ResolveAShortID200ResponseGroup {
   public static final String SERIALIZED_NAME_LAST_SEEN = "lastSeen";
   @SerializedName(SERIALIZED_NAME_LAST_SEEN)
   private String lastSeen;
@@ -223,7 +220,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get lastSeen
    * @return lastSeen
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getLastSeen() {
     return lastSeen;
   }
@@ -244,7 +241,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get numComments
    * @return numComments
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getNumComments() {
     return numComments;
   }
@@ -265,7 +262,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get userCount
    * @return userCount
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Integer getUserCount() {
     return userCount;
   }
@@ -286,7 +283,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get culprit
    * @return culprit
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getCulprit() {
     return culprit;
   }
@@ -307,7 +304,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get title
    * @return title
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getTitle() {
     return title;
   }
@@ -328,7 +325,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get id
    * @return id
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getId() {
     return id;
   }
@@ -349,7 +346,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get assignedTo
    * @return assignedTo
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ResolveAShortID200ResponseGroupAssignedTo getAssignedTo() {
     return assignedTo;
   }
@@ -370,7 +367,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get logger
    * @return logger
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getLogger() {
     return logger;
   }
@@ -391,7 +388,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get type
    * @return type
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getType() {
     return type;
   }
@@ -420,7 +417,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get annotations
    * @return annotations
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public List<String> getAnnotations() {
     return annotations;
   }
@@ -441,7 +438,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get metadata
    * @return metadata
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ResolveAShortID200ResponseGroupMetadata getMetadata() {
     return metadata;
   }
@@ -462,7 +459,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get status
    * @return status
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public StatusEnum getStatus() {
     return status;
   }
@@ -483,7 +480,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get subscriptionDetails
    * @return subscriptionDetails
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public ResolveAShortID200ResponseGroupSubscriptionDetails getSubscriptionDetails() {
     return subscriptionDetails;
   }
@@ -504,7 +501,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get isPublic
    * @return isPublic
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsPublic() {
     return isPublic;
   }
@@ -525,7 +522,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get hasSeen
    * @return hasSeen
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getHasSeen() {
     return hasSeen;
   }
@@ -546,7 +543,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get shortId
    * @return shortId
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getShortId() {
     return shortId;
   }
@@ -567,7 +564,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get shareId
    * @return shareId
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getShareId() {
     return shareId;
   }
@@ -588,7 +585,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get firstSeen
    * @return firstSeen
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getFirstSeen() {
     return firstSeen;
   }
@@ -609,7 +606,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get count
    * @return count
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getCount() {
     return count;
   }
@@ -630,7 +627,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get permalink
    * @return permalink
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getPermalink() {
     return permalink;
   }
@@ -651,7 +648,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get level
    * @return level
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public String getLevel() {
     return level;
   }
@@ -672,7 +669,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get isSubscribed
    * @return isSubscribed
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsSubscribed() {
     return isSubscribed;
   }
@@ -693,7 +690,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get isBookmarked
    * @return isBookmarked
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Boolean getIsBookmarked() {
     return isBookmarked;
   }
@@ -714,7 +711,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get project
    * @return project
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public ResolveAShortID200ResponseGroupProject getProject() {
     return project;
   }
@@ -735,7 +732,7 @@ public class ResolveAShortID200ResponseGroup implements Serializable {
    * Get statusDetails
    * @return statusDetails
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public Object getStatusDetails() {
     return statusDetails;
   }

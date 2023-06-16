@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import com.sentry.api.client.model.CreateANewCheckInRequestMonitorConfig;
 import java.io.IOException;
 import org.openapitools.jackson.nullable.JsonNullable;
-import java.io.Serializable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,10 +52,8 @@ import com.sentry.api.client.JSON;
 /**
  * CreateANewCheckInRequest
  */
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T10:13:02.301928Z[Etc/UTC]")
-public class CreateANewCheckInRequest implements Serializable {
-  private static final long serialVersionUID = 1L;
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+public class CreateANewCheckInRequest {
   /**
    * Gets or Sets status
    */
@@ -135,7 +132,7 @@ public class CreateANewCheckInRequest implements Serializable {
    * Get status
    * @return status
   **/
-  @jakarta.annotation.Nonnull
+  @javax.annotation.Nonnull
   public StatusEnum getStatus() {
     return status;
   }
@@ -158,7 +155,7 @@ public class CreateANewCheckInRequest implements Serializable {
    * maximum: 2147483647
    * @return duration
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public Integer getDuration() {
     return duration;
   }
@@ -179,7 +176,7 @@ public class CreateANewCheckInRequest implements Serializable {
    * Get environment
    * @return environment
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public String getEnvironment() {
     return environment;
   }
@@ -200,7 +197,7 @@ public class CreateANewCheckInRequest implements Serializable {
    * Get monitorConfig
    * @return monitorConfig
   **/
-  @jakarta.annotation.Nullable
+  @javax.annotation.Nullable
   public CreateANewCheckInRequestMonitorConfig getMonitorConfig() {
     return monitorConfig;
   }

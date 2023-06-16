@@ -18,8 +18,4 @@
 |**user** | **Object** |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

@@ -20,8 +20,8 @@ import java.io.File;
 import com.sentry.api.client.model.ListARepositorySCommits200ResponseInner;
 import com.sentry.api.client.model.ListAnOrganizationSReleaseFiles200ResponseInner;
 import java.time.OffsetDateTime;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseOneOf;
-import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOf;
+import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf;
 import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics200Response;
 import com.sentry.api.client.model.RetrieveReleaseHealthSessionStatistics400Response;
 import com.sentry.api.client.model.UpdateAnOrganizationReleaseFileRequest;
@@ -52,7 +52,7 @@ public class ReleasesApiTest {
         String organizationSlug = null;
         String version = null;
         CreateANewDeployForAnOrganizationRequest createANewDeployForAnOrganizationRequest = null;
-        RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf response = api.createANewDeployForAnOrganization(organizationSlug, version, createANewDeployForAnOrganizationRequest);
+        RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf response = api.createANewDeployForAnOrganization(organizationSlug, version, createANewDeployForAnOrganizationRequest);
         // TODO: test validations
     }
 
@@ -65,7 +65,7 @@ public class ReleasesApiTest {
     public void createANewReleaseForAnOrganizationTest() throws ApiException {
         String organizationSlug = null;
         CreateANewReleaseForAnOrganizationRequest createANewReleaseForAnOrganizationRequest = null;
-        RetrieveAnEventForAProject200ResponseReleaseOneOf response = api.createANewReleaseForAnOrganization(organizationSlug, createANewReleaseForAnOrganizationRequest);
+        RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.createANewReleaseForAnOrganization(organizationSlug, createANewReleaseForAnOrganizationRequest);
         // TODO: test validations
     }
 
@@ -148,7 +148,7 @@ public class ReleasesApiTest {
     public void listAReleasesDeploysTest() throws ApiException {
         String organizationSlug = null;
         String version = null;
-        List<RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeployOneOf> response = api.listAReleasesDeploys(organizationSlug, version);
+        List<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf> response = api.listAReleasesDeploys(organizationSlug, version);
         // TODO: test validations
     }
 
@@ -187,7 +187,7 @@ public class ReleasesApiTest {
     public void listAnOrganizationsReleasesTest() throws ApiException {
         String organizationSlug = null;
         String query = null;
-        List<RetrieveAnEventForAProject200ResponseReleaseOneOf> response = api.listAnOrganizationsReleases(organizationSlug, query);
+        List<RetrieveAnEventForAProject200ResponseReleaseAllOf> response = api.listAnOrganizationsReleases(organizationSlug, query);
         // TODO: test validations
     }
 
@@ -245,7 +245,7 @@ public class ReleasesApiTest {
     public void retrieveAnOrganizationsReleasesTest() throws ApiException {
         String organizationSlug = null;
         String version = null;
-        RetrieveAnEventForAProject200ResponseReleaseOneOf response = api.retrieveAnOrganizationsReleases(organizationSlug, version);
+        RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.retrieveAnOrganizationsReleases(organizationSlug, version);
         // TODO: test validations
     }
 
@@ -327,7 +327,7 @@ public class ReleasesApiTest {
         String organizationSlug = null;
         String version = null;
         UpdateAnOrganizationSReleaseRequest updateAnOrganizationSReleaseRequest = null;
-        RetrieveAnEventForAProject200ResponseReleaseOneOf response = api.updateAnOrganizationsRelease(organizationSlug, version, updateAnOrganizationSReleaseRequest);
+        RetrieveAnEventForAProject200ResponseReleaseAllOf response = api.updateAnOrganizationsRelease(organizationSlug, version, updateAnOrganizationSReleaseRequest);
         // TODO: test validations
     }
 

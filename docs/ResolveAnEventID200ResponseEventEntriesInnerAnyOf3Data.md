@@ -12,8 +12,4 @@
 |**values** | [**List&lt;ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner&gt;**](ResolveAnEventID200ResponseEventEntriesInnerAnyOf3DataValuesInner.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

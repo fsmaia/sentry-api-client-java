@@ -17,8 +17,4 @@
 |**status** | [**RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider**](RetrieveAnOrganizationMember200ResponseUserIdentitiesInnerProvider.md) |  |  |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

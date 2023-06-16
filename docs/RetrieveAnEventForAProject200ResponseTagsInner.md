@@ -12,8 +12,4 @@
 |**meta** | **String** |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 

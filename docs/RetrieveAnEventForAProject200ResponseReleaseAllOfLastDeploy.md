@@ -1,6 +1,6 @@
 
 
-# RetrieveAnEventForAProject200ResponseReleaseOneOfLastDeploy
+# RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy
 
 
 ## Properties
@@ -14,9 +14,5 @@
 |**url** | **String** |  |  |
 |**id** | **String** |  |  |
 
-
-## Implemented Interfaces
-
-* Serializable
 
 

@@ -14,8 +14,4 @@
 |**members** | [**List&lt;ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner&gt;**](ListAnOrganizationSPaginatedTeams200ResponseResourcesInnerMembersInner.md) |  |  [optional] |
 
 
-## Implemented Interfaces
-
-* Serializable
-
 
