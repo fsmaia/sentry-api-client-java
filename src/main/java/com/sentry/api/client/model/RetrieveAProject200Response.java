@@ -81,7 +81,7 @@ import com.sentry.api.client.JSON;
   RetrieveAProject200Response.JSON_PROPERTY_VERIFY_S_S_L
 })
 @JsonTypeName("Retrieve_a_Project_200_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class RetrieveAProject200Response {
   public static final String JSON_PROPERTY_ALLOWED_DOMAINS = "allowedDomains";
   private List<String> allowedDomains = new ArrayList<>();

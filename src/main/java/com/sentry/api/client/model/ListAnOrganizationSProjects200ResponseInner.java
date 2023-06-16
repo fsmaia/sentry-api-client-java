@@ -73,7 +73,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSProjects200ResponseInner.JSON_PROPERTY_LATEST_RELEASE
 })
 @JsonTypeName("List_an_Organization_s_Projects_200_response_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class ListAnOrganizationSProjects200ResponseInner {
   public static final String JSON_PROPERTY_LATEST_DEPLOYS = "latestDeploys";
   private JsonNullable<Map<String, Map<String, String>>> latestDeploys = JsonNullable.<Map<String, Map<String, String>>>undefined();

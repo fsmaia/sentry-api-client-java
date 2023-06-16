@@ -1597,7 +1597,8 @@ paths:
         name: project
         required: false
         schema:
-          items: {}
+          items:
+            type: string
           type: array
         style: form
       - description: |-
@@ -10334,7 +10335,8 @@ components:
         op:
           type: string
         value:
-          items: {}
+          items:
+            type: string
           readOnly: true
           type: array
         path:
@@ -10360,13 +10362,15 @@ components:
     SCIMTeamRequestBody:
       properties:
         schemas:
-          items: {}
+          items:
+            type: string
           readOnly: true
           type: array
         displayName:
           type: string
         members:
-          items: {}
+          items:
+            type: string
           readOnly: true
           type: array
       required:
@@ -12396,7 +12400,8 @@ components:
         op:
           type: string
         value:
-          items: {}
+          items:
+            type: string
           readOnly: true
           type: array
         path:
@@ -16088,7 +16093,8 @@ components:
       - type: number
       - type: boolean
       - type: object
-      - items: {}
+      - items:
+          type: string
         type: array
     Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy:
       nullable: true

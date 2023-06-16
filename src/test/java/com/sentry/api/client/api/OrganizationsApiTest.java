@@ -202,7 +202,7 @@ public class OrganizationsApiTest {
         //String interval = null;
         //OffsetDateTime start = null;
         //OffsetDateTime end = null;
-        //List<Object> project = null;
+        //List<String> project = null;
         //String category = null;
         //String outcome = null;
         //String reason = null;

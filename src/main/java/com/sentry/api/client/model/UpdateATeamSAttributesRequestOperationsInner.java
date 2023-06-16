@@ -37,13 +37,13 @@ import com.sentry.api.client.JSON;
   UpdateATeamSAttributesRequestOperationsInner.JSON_PROPERTY_PATH
 })
 @JsonTypeName("Update_a_Team_s_Attributes_request_Operations_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class UpdateATeamSAttributesRequestOperationsInner {
   public static final String JSON_PROPERTY_OP = "op";
   private String op;
 
   public static final String JSON_PROPERTY_VALUE = "value";
-  private List<Object> value = new ArrayList<>();
+  private List<String> value = new ArrayList<>();
 
   public static final String JSON_PROPERTY_PATH = "path";
   private String path;
@@ -53,7 +53,7 @@ public class UpdateATeamSAttributesRequestOperationsInner {
 
   @JsonCreator
   public UpdateATeamSAttributesRequestOperationsInner(
-    @JsonProperty(JSON_PROPERTY_VALUE) List<Object> value
+    @JsonProperty(JSON_PROPERTY_VALUE) List<String> value
   ) {
     this();
     this.value = value;
@@ -92,7 +92,7 @@ public class UpdateATeamSAttributesRequestOperationsInner {
   @JsonProperty(JSON_PROPERTY_VALUE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public List<Object> getValue() {
+  public List<String> getValue() {
     return value;
   }
 

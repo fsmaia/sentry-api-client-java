@@ -27,7 +27,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class OrganizationsApi {
   private ApiClient apiClient;
 
@@ -710,7 +710,7 @@ public class OrganizationsApi {
        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
    */
-  public RetrieveEventCountsForAnOrganizationV2200Response retrieveEventCountsForAnOrganizationV2(String organizationSlug, List<String> groupBy, String field, String statsPeriod, String interval, OffsetDateTime start, OffsetDateTime end, List<Object> project, String category, String outcome, String reason) throws ApiException {
+  public RetrieveEventCountsForAnOrganizationV2200Response retrieveEventCountsForAnOrganizationV2(String organizationSlug, List<String> groupBy, String field, String statsPeriod, String interval, OffsetDateTime start, OffsetDateTime end, List<String> project, String category, String outcome, String reason) throws ApiException {
     return retrieveEventCountsForAnOrganizationV2WithHttpInfo(organizationSlug, groupBy, field, statsPeriod, interval, start, end, project, category, outcome, reason).getData();
   }
 
@@ -738,7 +738,7 @@ public class OrganizationsApi {
        <tr><td> 404 </td><td> Not Found </td><td>  -  </td></tr>
      </table>
    */
-  public ApiResponse<RetrieveEventCountsForAnOrganizationV2200Response> retrieveEventCountsForAnOrganizationV2WithHttpInfo(String organizationSlug, List<String> groupBy, String field, String statsPeriod, String interval, OffsetDateTime start, OffsetDateTime end, List<Object> project, String category, String outcome, String reason) throws ApiException {
+  public ApiResponse<RetrieveEventCountsForAnOrganizationV2200Response> retrieveEventCountsForAnOrganizationV2WithHttpInfo(String organizationSlug, List<String> groupBy, String field, String statsPeriod, String interval, OffsetDateTime start, OffsetDateTime end, List<String> project, String category, String outcome, String reason) throws ApiException {
     // Check required parameters
     if (organizationSlug == null) {
       throw new ApiException(400, "Missing the required parameter 'organizationSlug' when calling retrieveEventCountsForAnOrganizationV2");

@@ -38,7 +38,7 @@ import com.sentry.api.client.JSON;
   ListAProjectSClientKeys200ResponseInnerDsn.JSON_PROPERTY_SECURITY
 })
 @JsonTypeName("List_a_Project_s_Client_Keys_200_response_inner_dsn")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class ListAProjectSClientKeys200ResponseInnerDsn {
   public static final String JSON_PROPERTY_CDN = "cdn";
   private String cdn;

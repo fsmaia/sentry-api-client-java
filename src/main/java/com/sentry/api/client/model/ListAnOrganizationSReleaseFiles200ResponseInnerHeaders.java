@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSReleaseFiles200ResponseInnerHeaders.JSON_PROPERTY_CONTENT_TYPE
 })
 @JsonTypeName("List_an_Organization_s_Release_Files_200_response_inner_headers")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class ListAnOrganizationSReleaseFiles200ResponseInnerHeaders {
   public static final String JSON_PROPERTY_CONTENT_TYPE = "Content-Type";
   private String contentType;

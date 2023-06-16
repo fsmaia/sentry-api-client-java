@@ -7,9 +7,9 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**schemas** | **List&lt;Object&gt;** |  |  [readonly] |
+|**schemas** | **List&lt;String&gt;** |  |  [readonly] |
 |**displayName** | **String** |  |  |
-|**members** | **List&lt;Object&gt;** |  |  [readonly] |
+|**members** | **List&lt;String&gt;** |  |  [readonly] |
 
 
 

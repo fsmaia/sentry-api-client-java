@@ -5,7 +5,7 @@
 ## anyOf schemas
 * [BigDecimal](BigDecimal.md)
 * [Boolean](Boolean.md)
-* [List<Object>](List<Object>.md)
+* [List<String>](List<String>.md)
 * [Object](Object.md)
 * [String](String.md)
 
@@ -15,7 +15,7 @@
 import com.sentry.api.client.model.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not;
 import com.sentry.api.client.model.BigDecimal;
 import com.sentry.api.client.model.Boolean;
-import com.sentry.api.client.model.List<Object>;
+import com.sentry.api.client.model.List<String>;
 import com.sentry.api.client.model.Object;
 import com.sentry.api.client.model.String;
 
@@ -37,12 +37,12 @@ public class Example {
         // to get back the Boolean set earlier
         Boolean testBoolean = (Boolean) exampleRetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.getActualInstance();
 
-        // create a new List<Object>
-        List<Object> exampleList<Object> = new List<Object>();
-        // set RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not to List<Object>
-        exampleRetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.setActualInstance(exampleList<Object>);
-        // to get back the List<Object> set earlier
-        List<Object> testList<Object> = (List<Object>) exampleRetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.getActualInstance();
+        // create a new List<String>
+        List<String> exampleList<String> = new List<String>();
+        // set RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not to List<String>
+        exampleRetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.setActualInstance(exampleList<String>);
+        // to get back the List<String> set earlier
+        List<String> testList<String> = (List<String>) exampleRetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.getActualInstance();
 
         // create a new Object
         Object exampleObject = new Object();

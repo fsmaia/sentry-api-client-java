@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnEventForAProject200ResponseSdk.JSON_PROPERTY_NAME
 })
 @JsonTypeName("Retrieve_an_Event_for_a_Project_200_response_sdk")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseSdk {
   public static final String JSON_PROPERTY_VERSION = "version";
   private String version;

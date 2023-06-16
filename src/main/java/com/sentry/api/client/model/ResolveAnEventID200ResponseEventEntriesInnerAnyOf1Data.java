@@ -44,7 +44,7 @@ import com.sentry.api.client.JSON;
   ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data.JSON_PROPERTY_METHOD
 })
 @JsonTypeName("Resolve_an_Event_ID_200_response_event_entries_inner_anyOf_1_data")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf1Data {
   public static final String JSON_PROPERTY_FRAGMENT = "fragment";
   private String fragment;

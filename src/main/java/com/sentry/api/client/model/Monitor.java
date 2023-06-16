@@ -43,7 +43,7 @@ import com.sentry.api.client.JSON;
   Monitor.JSON_PROPERTY_PROJECT,
   Monitor.JSON_PROPERTY_ENVIRONMENTS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class Monitor {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

@@ -42,7 +42,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnOrganization200ResponseOnboardingTasksInner.JSON_PROPERTY_USER
 })
 @JsonTypeName("Retrieve_an_Organization_200_response_onboardingTasks_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class RetrieveAnOrganization200ResponseOnboardingTasksInner {
   public static final String JSON_PROPERTY_DATA = "data";
   private JsonNullable<Object> data = JsonNullable.<Object>undefined();

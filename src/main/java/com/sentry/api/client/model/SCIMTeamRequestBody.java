@@ -36,24 +36,24 @@ import com.sentry.api.client.JSON;
   SCIMTeamRequestBody.JSON_PROPERTY_DISPLAY_NAME,
   SCIMTeamRequestBody.JSON_PROPERTY_MEMBERS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class SCIMTeamRequestBody {
   public static final String JSON_PROPERTY_SCHEMAS = "schemas";
-  private List<Object> schemas = new ArrayList<>();
+  private List<String> schemas = new ArrayList<>();
 
   public static final String JSON_PROPERTY_DISPLAY_NAME = "displayName";
   private String displayName;
 
   public static final String JSON_PROPERTY_MEMBERS = "members";
-  private List<Object> members = new ArrayList<>();
+  private List<String> members = new ArrayList<>();
 
   public SCIMTeamRequestBody() { 
   }
 
   @JsonCreator
   public SCIMTeamRequestBody(
-    @JsonProperty(JSON_PROPERTY_SCHEMAS) List<Object> schemas, 
-    @JsonProperty(JSON_PROPERTY_MEMBERS) List<Object> members
+    @JsonProperty(JSON_PROPERTY_SCHEMAS) List<String> schemas, 
+    @JsonProperty(JSON_PROPERTY_MEMBERS) List<String> members
   ) {
     this();
     this.schemas = schemas;
@@ -68,7 +68,7 @@ public class SCIMTeamRequestBody {
   @JsonProperty(JSON_PROPERTY_SCHEMAS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public List<Object> getSchemas() {
+  public List<String> getSchemas() {
     return schemas;
   }
 
@@ -108,7 +108,7 @@ public class SCIMTeamRequestBody {
   @JsonProperty(JSON_PROPERTY_MEMBERS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
-  public List<Object> getMembers() {
+  public List<String> getMembers() {
     return members;
   }
 

@@ -4,7 +4,7 @@ API Reference
 
 - API version: v0
 
-- Build date: 2023-06-16T14:23:11.909078Z[Etc/UTC]
+- Build date: 2023-06-16T14:43:30.075015Z[Etc/UTC]
 
 Sentry Public API
 

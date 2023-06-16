@@ -44,7 +44,7 @@ import com.sentry.api.client.JSON;
   RetrieveMonitorsForAnOrganization200ResponseInner.JSON_PROPERTY_ENVIRONMENTS
 })
 @JsonTypeName("Retrieve_monitors_for_an_organization_200_response_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class RetrieveMonitorsForAnOrganization200ResponseInner {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

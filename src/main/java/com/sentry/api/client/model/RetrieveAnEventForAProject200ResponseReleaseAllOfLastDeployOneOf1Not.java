@@ -46,7 +46,7 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.sentry.api.client.JSON;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 @JsonDeserialize(using=RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotDeserializer.class)
 @JsonSerialize(using = RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotSerializer.class)
 public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not extends AbstractOpenApiSchema {
@@ -103,9 +103,9 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
                 log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
             }
 
-            // deserialize List<Object>
+            // deserialize List<String>
             try {
-                deserialized = tree.traverse(jp.getCodec()).readValueAs(List<Object>.class);
+                deserialized = tree.traverse(jp.getCodec()).readValueAs(List<String>.class);
                 RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
                 ret.setActualInstance(deserialized);
                 return ret;
@@ -165,7 +165,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
         setActualInstance(o);
     }
 
-    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(List<Object> o) {
+    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(List<String> o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
@@ -185,7 +185,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
         });
         schemas.put("Boolean", new GenericType<Boolean>() {
         });
-        schemas.put("List<Object>", new GenericType<List<Object>>() {
+        schemas.put("List<String>", new GenericType<List<String>>() {
         });
         schemas.put("Object", new GenericType<Object>() {
         });
@@ -202,7 +202,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
     /**
      * Set the instance that matches the anyOf child schema, check
      * the instance parameter is valid against the anyOf child schemas:
-     * BigDecimal, Boolean, List<Object>, Object, String
+     * BigDecimal, Boolean, List<String>, Object, String
      *
      * It could be an instance of the 'anyOf' schemas.
      * The anyOf child schemas may themselves be a composed schema (allOf, anyOf, anyOf).
@@ -219,7 +219,7 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
             return;
         }
 
-        if (JSON.isInstanceOf(List<Object>.class, instance, new HashSet<>())) {
+        if (JSON.isInstanceOf(List<String>.class, instance, new HashSet<>())) {
             super.setActualInstance(instance);
             return;
         }
@@ -234,14 +234,14 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
             return;
         }
 
-        throw new RuntimeException("Invalid instance type. Must be BigDecimal, Boolean, List<Object>, Object, String");
+        throw new RuntimeException("Invalid instance type. Must be BigDecimal, Boolean, List<String>, Object, String");
     }
 
     /**
      * Get the actual instance, which can be the following:
-     * BigDecimal, Boolean, List<Object>, Object, String
+     * BigDecimal, Boolean, List<String>, Object, String
      *
-     * @return The actual instance (BigDecimal, Boolean, List<Object>, Object, String)
+     * @return The actual instance (BigDecimal, Boolean, List<String>, Object, String)
      */
     @Override
     public Object getActualInstance() {
@@ -271,14 +271,14 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
     }
 
     /**
-     * Get the actual instance of `List<Object>`. If the actual instance is not `List<Object>`,
+     * Get the actual instance of `List<String>`. If the actual instance is not `List<String>`,
      * the ClassCastException will be thrown.
      *
-     * @return The actual instance of `List<Object>`
-     * @throws ClassCastException if the instance is not `List<Object>`
+     * @return The actual instance of `List<String>`
+     * @throws ClassCastException if the instance is not `List<String>`
      */
-    public List<Object> getList<Object>() throws ClassCastException {
-        return (List<Object>)super.getActualInstance();
+    public List<String> getList<String>() throws ClassCastException {
+        return (List<String>)super.getActualInstance();
     }
 
     /**

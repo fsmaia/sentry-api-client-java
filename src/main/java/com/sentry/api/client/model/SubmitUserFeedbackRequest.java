@@ -36,7 +36,7 @@ import com.sentry.api.client.JSON;
   SubmitUserFeedbackRequest.JSON_PROPERTY_COMMENTS
 })
 @JsonTypeName("Submit_User_Feedback_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class SubmitUserFeedbackRequest {
   public static final String JSON_PROPERTY_EVENT_ID = "event_id";
   private String eventId;

@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSUsers200ResponseInnerUser.JSON_PROPERTY_EMAIL
 })
 @JsonTypeName("List_an_Organization_s_Users_200_response_inner_user")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class ListAnOrganizationSUsers200ResponseInnerUser {
   public static final String JSON_PROPERTY_USERNAME = "username";
   private String username;

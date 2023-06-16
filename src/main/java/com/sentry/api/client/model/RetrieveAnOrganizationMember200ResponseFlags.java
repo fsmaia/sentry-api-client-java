@@ -37,7 +37,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnOrganizationMember200ResponseFlags.JSON_PROPERTY_MEMBER_LIMIT_COLON_RESTRICTED
 })
 @JsonTypeName("Retrieve_an_Organization_Member_200_response_flags")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200ResponseFlags {
   public static final String JSON_PROPERTY_IDP_COLON_PROVISIONED = "idp:provisioned";
   private Boolean idpColonProvisioned;

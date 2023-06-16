@@ -38,7 +38,7 @@ import com.sentry.api.client.JSON;
   ResolveAShortID200Response.JSON_PROPERTY_GROUP_ID
 })
 @JsonTypeName("Resolve_a_Short_ID_200_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:23:11.909078Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T14:43:30.075015Z[Etc/UTC]")
 public class ResolveAShortID200Response {
   public static final String JSON_PROPERTY_ORGANIZATION_SLUG = "organizationSlug";
   private String organizationSlug;
