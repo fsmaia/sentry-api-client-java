@@ -55,7 +55,7 @@ import com.sentry.api.client.JSON;
   RetrieveTheOldestEventForAnIssue200ResponseRelease.JSON_PROPERTY_URL
 })
 @JsonTypeName("Retrieve_the_Oldest_Event_for_an_Issue_200_response_release")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class RetrieveTheOldestEventForAnIssue200ResponseRelease {
   public static final String JSON_PROPERTY_ID = "id";
   private Integer id;

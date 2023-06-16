@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSProjects200ResponseInnerLatestRelease.JSON_PROPERTY_VERSION
 })
 @JsonTypeName("List_an_Organization_s_Projects_200_response_inner_latestRelease")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class ListAnOrganizationSProjects200ResponseInnerLatestRelease {
   public static final String JSON_PROPERTY_VERSION = "version";
   private String version;

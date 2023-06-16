@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSUsers200ResponseInnerUserEmailsInner.JSON_PROPERTY_EMAIL
 })
 @JsonTypeName("List_an_Organization_s_Users_200_response_inner_user_emails_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class ListAnOrganizationSUsers200ResponseInnerUserEmailsInner {
   public static final String JSON_PROPERTY_IS_VERIFIED = "is_verified";
   private Boolean isVerified;

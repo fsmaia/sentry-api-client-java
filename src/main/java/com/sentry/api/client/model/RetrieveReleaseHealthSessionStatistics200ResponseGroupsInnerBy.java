@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy.JSON_PROPERTY_SESSION_STATUS
 })
 @JsonTypeName("Retrieve_Release_Health_Session_Statistics_200_response_groups_inner_by")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerBy {
   public static final String JSON_PROPERTY_SESSION_STATUS = "session.status";
   private String sessionStatus;

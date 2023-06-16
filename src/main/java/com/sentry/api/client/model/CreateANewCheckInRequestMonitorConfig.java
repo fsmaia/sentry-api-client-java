@@ -41,7 +41,7 @@ import com.sentry.api.client.JSON;
   CreateANewCheckInRequestMonitorConfig.JSON_PROPERTY_TIMEZONE
 })
 @JsonTypeName("Create_a_new_check_in_request_monitor_config")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class CreateANewCheckInRequestMonitorConfig {
   /**
    * Currently supports \&quot;crontab\&quot; or \&quot;interval\&quot;

@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   RetrieveAProject200ResponseLatestReleaseAuthorsInner.JSON_PROPERTY_EMAIL
 })
 @JsonTypeName("Retrieve_a_Project_200_response_latestRelease_authors_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class RetrieveAProject200ResponseLatestReleaseAuthorsInner {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;

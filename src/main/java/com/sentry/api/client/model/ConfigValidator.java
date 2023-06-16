@@ -40,7 +40,7 @@ import com.sentry.api.client.JSON;
   ConfigValidator.JSON_PROPERTY_MAX_RUNTIME,
   ConfigValidator.JSON_PROPERTY_TIMEZONE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class ConfigValidator {
   /**
    * Currently supports \&quot;crontab\&quot; or \&quot;interval\&quot;

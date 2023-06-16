@@ -37,7 +37,7 @@ import com.sentry.api.client.JSON;
   RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner.JSON_PROPERTY_SERIES
 })
 @JsonTypeName("Retrieve_Event_Counts_for_an_Organization__v2__200_response_groups_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner {
   public static final String JSON_PROPERTY_BY = "by";
   private Map<String, Object> by = new HashMap<>();

@@ -37,7 +37,7 @@ import com.sentry.api.client.JSON;
   UpdateATeamSAttributesRequestOperationsInner.JSON_PROPERTY_PATH
 })
 @JsonTypeName("Update_a_Team_s_Attributes_request_Operations_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class UpdateATeamSAttributesRequestOperationsInner {
   public static final String JSON_PROPERTY_OP = "op";
   private String op;

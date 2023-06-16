@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON.JSON_PROPERTY_DETAIL
 })
 @JsonTypeName("Resolve_an_Event_ID_200_response_event_contexts_ForbiddenError_responseJSON")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventContextsForbiddenErrorResponseJSON {
   public static final String JSON_PROPERTY_DETAIL = "detail";
   private String detail;

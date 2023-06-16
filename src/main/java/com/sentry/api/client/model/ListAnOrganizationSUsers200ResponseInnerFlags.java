@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSUsers200ResponseInnerFlags.JSON_PROPERTY_SSO_COLON_INVALID
 })
 @JsonTypeName("List_an_Organization_s_Users_200_response_inner_flags")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class ListAnOrganizationSUsers200ResponseInnerFlags {
   public static final String JSON_PROPERTY_SSO_COLON_LINKED = "sso: linked";
   private Boolean ssoColonLinked;

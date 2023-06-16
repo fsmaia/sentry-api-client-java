@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSProjects200ResponseInnerTeam.JSON_PROPERTY_SLUG
 })
 @JsonTypeName("List_an_Organization_s_Projects_200_response_inner_team")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class ListAnOrganizationSProjects200ResponseInnerTeam {
   public static final String JSON_PROPERTY_ID = "id";
   private String id;

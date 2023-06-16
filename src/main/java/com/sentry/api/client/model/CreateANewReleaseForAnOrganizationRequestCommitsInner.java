@@ -43,7 +43,7 @@ import com.sentry.api.client.JSON;
   CreateANewReleaseForAnOrganizationRequestCommitsInner.JSON_PROPERTY_ID
 })
 @JsonTypeName("Create_a_New_Release_for_an_Organization_request_commits_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class CreateANewReleaseForAnOrganizationRequestCommitsInner {
   public static final String JSON_PROPERTY_PATCH_SET = "patch_set";
   private List<CreateANewReleaseForAnOrganizationRequestCommitsInnerPatchSetInner> patchSet;

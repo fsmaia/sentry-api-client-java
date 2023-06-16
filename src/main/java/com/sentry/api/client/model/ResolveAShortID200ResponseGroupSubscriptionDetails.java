@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   ResolveAShortID200ResponseGroupSubscriptionDetails.JSON_PROPERTY_REASON
 })
 @JsonTypeName("Resolve_a_Short_ID_200_response_group_subscriptionDetails")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class ResolveAShortID200ResponseGroupSubscriptionDetails {
   public static final String JSON_PROPERTY_REASON = "reason";
   private String reason;

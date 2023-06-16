@@ -41,7 +41,7 @@ import com.sentry.api.client.JSON;
   CreateANewCheckInRequest.JSON_PROPERTY_MONITOR_CONFIG
 })
 @JsonTypeName("Create_a_new_check_in_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class CreateANewCheckInRequest {
   /**
    * Gets or Sets status

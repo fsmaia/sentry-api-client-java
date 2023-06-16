@@ -71,7 +71,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnOrganization200Response.JSON_PROPERTY_TRUSTED_RELAYS
 })
 @JsonTypeName("Retrieve_an_Organization_200_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class RetrieveAnOrganization200Response {
   public static final String JSON_PROPERTY_ACCESS = "access";
   private List<String> access = new ArrayList<>();

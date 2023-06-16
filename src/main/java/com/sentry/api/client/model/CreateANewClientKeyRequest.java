@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   CreateANewClientKeyRequest.JSON_PROPERTY_NAME
 })
 @JsonTypeName("Create_a_New_Client_Key_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class CreateANewClientKeyRequest {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;

@@ -44,7 +44,7 @@ import com.sentry.api.client.JSON;
   OrganizationMemberSCIM.JSON_PROPERTY_META,
   OrganizationMemberSCIM.JSON_PROPERTY_SENTRY_ORG_ROLE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class OrganizationMemberSCIM {
   public static final String JSON_PROPERTY_ACTIVE = "active";
   private Boolean active;

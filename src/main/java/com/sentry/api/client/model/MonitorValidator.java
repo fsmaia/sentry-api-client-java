@@ -40,7 +40,7 @@ import com.sentry.api.client.JSON;
   MonitorValidator.JSON_PROPERTY_CONFIG,
   MonitorValidator.JSON_PROPERTY_ALERT_RULE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:28:33.253050Z[Etc/UTC]")
 public class MonitorValidator {
   public static final String JSON_PROPERTY_PROJECT = "project";
   private String project;
