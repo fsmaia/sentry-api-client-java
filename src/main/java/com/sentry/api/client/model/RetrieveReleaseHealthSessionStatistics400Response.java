@@ -33,7 +33,7 @@ import com.sentry.api.client.JSON;
   RetrieveReleaseHealthSessionStatistics400Response.JSON_PROPERTY_DETAIL
 })
 @JsonTypeName("Retrieve_Release_Health_Session_Statistics_400_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class RetrieveReleaseHealthSessionStatistics400Response {
   public static final String JSON_PROPERTY_DETAIL = "detail";
   private String detail;

@@ -46,136 +46,136 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.sentry.api.client.JSON;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
-@JsonDeserialize(using=RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotDeserializer.class)
-@JsonSerialize(using = RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotSerializer.class)
-public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not extends AbstractOpenApiSchema {
-    private static final Logger log = Logger.getLogger(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class.getName());
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
+@JsonDeserialize(using=RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot.RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNotDeserializer.class)
+@JsonSerialize(using = RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot.RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNotSerializer.class)
+public class RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot extends AbstractOpenApiSchema {
+    private static final Logger log = Logger.getLogger(RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot.class.getName());
 
-    public static class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotSerializer extends StdSerializer<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not> {
-        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotSerializer(Class<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not> t) {
+    public static class RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNotSerializer extends StdSerializer<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot> {
+        public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNotSerializer(Class<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot> t) {
             super(t);
         }
 
-        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotSerializer() {
+        public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNotSerializer() {
             this(null);
         }
 
         @Override
-        public void serialize(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not value, JsonGenerator jgen, SerializerProvider provider) throws IOException, JsonProcessingException {
+        public void serialize(RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot value, JsonGenerator jgen, SerializerProvider provider) throws IOException, JsonProcessingException {
             jgen.writeObject(value.getActualInstance());
         }
     }
 
-    public static class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotDeserializer extends StdDeserializer<RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not> {
-        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotDeserializer() {
-            this(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class);
+    public static class RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNotDeserializer extends StdDeserializer<RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot> {
+        public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNotDeserializer() {
+            this(RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot.class);
         }
 
-        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotDeserializer(Class<?> vc) {
+        public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNotDeserializer(Class<?> vc) {
             super(vc);
         }
 
         @Override
-        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+        public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JsonProcessingException {
             JsonNode tree = jp.readValueAsTree();
 
             Object deserialized = null;
             // deserialize BigDecimal
             try {
                 deserialized = tree.traverse(jp.getCodec()).readValueAs(BigDecimal.class);
-                RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
+                RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot ret = new RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot();
                 ret.setActualInstance(deserialized);
                 return ret;
             } catch (Exception e) {
                 // deserialization failed, continue, log to help debugging
-                log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
+                log.log(Level.FINER, "Input data does not match 'RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot'", e);
             }
 
             // deserialize Boolean
             try {
                 deserialized = tree.traverse(jp.getCodec()).readValueAs(Boolean.class);
-                RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
+                RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot ret = new RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot();
                 ret.setActualInstance(deserialized);
                 return ret;
             } catch (Exception e) {
                 // deserialization failed, continue, log to help debugging
-                log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
+                log.log(Level.FINER, "Input data does not match 'RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot'", e);
             }
 
             // deserialize List<String>
             try {
                 deserialized = tree.traverse(jp.getCodec()).readValueAs(List<String>.class);
-                RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
+                RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot ret = new RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot();
                 ret.setActualInstance(deserialized);
                 return ret;
             } catch (Exception e) {
                 // deserialization failed, continue, log to help debugging
-                log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
+                log.log(Level.FINER, "Input data does not match 'RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot'", e);
             }
 
             // deserialize Object
             try {
                 deserialized = tree.traverse(jp.getCodec()).readValueAs(Object.class);
-                RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
+                RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot ret = new RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot();
                 ret.setActualInstance(deserialized);
                 return ret;
             } catch (Exception e) {
                 // deserialization failed, continue, log to help debugging
-                log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
+                log.log(Level.FINER, "Input data does not match 'RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot'", e);
             }
 
             // deserialize String
             try {
                 deserialized = tree.traverse(jp.getCodec()).readValueAs(String.class);
-                RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not ret = new RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not();
+                RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot ret = new RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot();
                 ret.setActualInstance(deserialized);
                 return ret;
             } catch (Exception e) {
                 // deserialization failed, continue, log to help debugging
-                log.log(Level.FINER, "Input data does not match 'RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not'", e);
+                log.log(Level.FINER, "Input data does not match 'RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot'", e);
             }
 
-            throw new IOException(String.format("Failed deserialization for RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not: no match found"));
+            throw new IOException(String.format("Failed deserialization for RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot: no match found"));
         }
 
         /**
          * Handle deserialization of the 'null' value.
          */
         @Override
-        public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not getNullValue(DeserializationContext ctxt) throws JsonMappingException {
-            throw new JsonMappingException(ctxt.getParser(), "RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not cannot be null");
+        public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot getNullValue(DeserializationContext ctxt) throws JsonMappingException {
+            throw new JsonMappingException(ctxt.getParser(), "RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot cannot be null");
         }
     }
 
     // store a list of schema names defined in anyOf
     public static final Map<String, GenericType> schemas = new HashMap<>();
 
-    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not() {
+    public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot() {
         super("anyOf", Boolean.FALSE);
     }
 
-    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(BigDecimal o) {
-        super("anyOf", Boolean.FALSE);
-        setActualInstance(o);
-    }
-
-    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(Boolean o) {
+    public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot(BigDecimal o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(List<String> o) {
+    public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot(Boolean o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(Object o) {
+    public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot(List<String> o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
 
-    public RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not(String o) {
+    public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot(Object o) {
+        super("anyOf", Boolean.FALSE);
+        setActualInstance(o);
+    }
+
+    public RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot(String o) {
         super("anyOf", Boolean.FALSE);
         setActualInstance(o);
     }
@@ -191,12 +191,12 @@ public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1No
         });
         schemas.put("String", new GenericType<String>() {
         });
-        JSON.registerDescendants(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class, Collections.unmodifiableMap(schemas));
+        JSON.registerDescendants(RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot.class, Collections.unmodifiableMap(schemas));
     }
 
     @Override
     public Map<String, GenericType> getSchemas() {
-        return RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.schemas;
+        return RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot.schemas;
     }
 
     /**

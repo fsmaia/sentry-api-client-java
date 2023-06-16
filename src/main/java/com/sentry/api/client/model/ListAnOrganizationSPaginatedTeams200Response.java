@@ -40,7 +40,7 @@ import com.sentry.api.client.JSON;
   ListAnOrganizationSPaginatedTeams200Response.JSON_PROPERTY_RESOURCES
 })
 @JsonTypeName("List_an_Organization_s_Paginated_Teams_200_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class ListAnOrganizationSPaginatedTeams200Response {
   public static final String JSON_PROPERTY_SCHEMAS = "schemas";
   private List<String> schemas;

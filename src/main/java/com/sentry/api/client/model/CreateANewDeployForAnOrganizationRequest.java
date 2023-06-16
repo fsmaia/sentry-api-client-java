@@ -41,7 +41,7 @@ import com.sentry.api.client.JSON;
   CreateANewDeployForAnOrganizationRequest.JSON_PROPERTY_DATE_FINISHED
 })
 @JsonTypeName("Create_a_New_Deploy_for_an_Organization_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class CreateANewDeployForAnOrganizationRequest {
   public static final String JSON_PROPERTY_ENVIRONMENT = "environment";
   private String environment;

@@ -39,7 +39,7 @@ import com.sentry.api.client.JSON;
   ResolveAnEventID200ResponseEventUser.JSON_PROPERTY_ID
 })
 @JsonTypeName("Resolve_an_Event_ID_200_response_event_user")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventUser {
   public static final String JSON_PROPERTY_USERNAME = "username";
   private String username;

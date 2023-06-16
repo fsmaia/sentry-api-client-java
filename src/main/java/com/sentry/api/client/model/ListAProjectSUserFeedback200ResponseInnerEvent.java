@@ -38,7 +38,7 @@ import com.sentry.api.client.JSON;
   ListAProjectSUserFeedback200ResponseInnerEvent.JSON_PROPERTY_ID
 })
 @JsonTypeName("List_a_Project_s_User_Feedback_200_response_inner_event")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class ListAProjectSUserFeedback200ResponseInnerEvent {
   public static final String JSON_PROPERTY_EVENT_I_D = "eventID";
   private String eventID;

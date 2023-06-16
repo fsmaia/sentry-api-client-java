@@ -4,7 +4,7 @@ API Reference
 
 - API version: v0
 
-- Build date: 2023-06-16T15:18:46.808333Z[Etc/UTC]
+- Build date: 2023-06-16T15:22:58.941842Z[Etc/UTC]
 
 Sentry Public API
 
@@ -374,7 +374,6 @@ Class | Method | HTTP request | Description
  - [RetrieveAnEventForAProject200ResponseReleaseAllOf](docs/RetrieveAnEventForAProject200ResponseReleaseAllOf.md)
  - [RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy](docs/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy.md)
  - [RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf](docs/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.md)
- - [RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not](docs/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.md)
  - [RetrieveAnEventForAProject200ResponseSdk](docs/RetrieveAnEventForAProject200ResponseSdk.md)
  - [RetrieveAnEventForAProject200ResponseTagsInner](docs/RetrieveAnEventForAProject200ResponseTagsInner.md)
  - [RetrieveAnIssue200Response](docs/RetrieveAnIssue200Response.md)
@@ -414,6 +413,7 @@ Class | Method | HTTP request | Description
  - [RetrieveTheOldestEventForAnIssue200ResponseRelease](docs/RetrieveTheOldestEventForAnIssue200ResponseRelease.md)
  - [RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf](docs/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf.md)
  - [RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy](docs/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy.md)
+ - [RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot](docs/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot.md)
  - [SCIMListResponseEnvelopeSCIMMemberIndexResponse](docs/SCIMListResponseEnvelopeSCIMMemberIndexResponse.md)
  - [SCIMListResponseEnvelopeSCIMTeamIndexResponse](docs/SCIMListResponseEnvelopeSCIMTeamIndexResponse.md)
  - [SCIMMemberProvision](docs/SCIMMemberProvision.md)

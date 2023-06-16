@@ -58,7 +58,7 @@ import com.sentry.api.client.JSON;
   RetrieveAProject200ResponsePluginsInner.JSON_PROPERTY_VERSION
 })
 @JsonTypeName("Retrieve_a_Project_200_response_plugins_inner")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class RetrieveAProject200ResponsePluginsInner {
   public static final String JSON_PROPERTY_ASSETS = "assets";
   private List<String> assets = new ArrayList<>();

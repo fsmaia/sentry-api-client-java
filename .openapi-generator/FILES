@@ -162,7 +162,6 @@ docs/RetrieveAnEventForAProject200ResponseRelease.md
 docs/RetrieveAnEventForAProject200ResponseReleaseAllOf.md
 docs/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy.md
 docs/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.md
-docs/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.md
 docs/RetrieveAnEventForAProject200ResponseSdk.md
 docs/RetrieveAnEventForAProject200ResponseTagsInner.md
 docs/RetrieveAnIssue200Response.md
@@ -202,6 +201,7 @@ docs/RetrieveTheOldestEventForAnIssue200Response.md
 docs/RetrieveTheOldestEventForAnIssue200ResponseRelease.md
 docs/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf.md
 docs/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy.md
+docs/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot.md
 docs/SCIMListResponseEnvelopeSCIMMemberIndexResponse.md
 docs/SCIMListResponseEnvelopeSCIMTeamIndexResponse.md
 docs/SCIMMemberProvision.md
@@ -413,7 +413,6 @@ src/main/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseR
 src/main/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseReleaseAllOf.java
 src/main/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeploy.java
 src/main/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf.java
-src/main/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.java
 src/main/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseSdk.java
 src/main/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseTagsInner.java
 src/main/java/com/sentry/api/client/model/RetrieveAnIssue200Response.java
@@ -453,6 +452,7 @@ src/main/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200Res
 src/main/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseRelease.java
 src/main/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOf.java
 src/main/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy.java
+src/main/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNot.java
 src/main/java/com/sentry/api/client/model/SCIMListResponseEnvelopeSCIMMemberIndexResponse.java
 src/main/java/com/sentry/api/client/model/SCIMListResponseEnvelopeSCIMTeamIndexResponse.java
 src/main/java/com/sentry/api/client/model/SCIMMemberProvision.java
@@ -632,7 +632,6 @@ src/test/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseM
 src/test/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseMetadataOneOf1Test.java
 src/test/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseMetadataOneOfTest.java
 src/test/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseMetadataTest.java
-src/test/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1NotTest.java
 src/test/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOfTest.java
 src/test/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployTest.java
 src/test/java/com/sentry/api/client/model/RetrieveAnEventForAProject200ResponseReleaseAllOfTest.java
@@ -673,6 +672,7 @@ src/test/java/com/sentry/api/client/model/RetrieveReleaseHealthSessionStatistics
 src/test/java/com/sentry/api/client/model/RetrieveReleaseHealthSessionStatistics200ResponseTest.java
 src/test/java/com/sentry/api/client/model/RetrieveReleaseHealthSessionStatistics400ResponseTest.java
 src/test/java/com/sentry/api/client/model/RetrieveTagDetails200ResponseTest.java
+src/test/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployOneOfNotTest.java
 src/test/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployTest.java
 src/test/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfTest.java
 src/test/java/com/sentry/api/client/model/RetrieveTheOldestEventForAnIssue200ResponseReleaseTest.java

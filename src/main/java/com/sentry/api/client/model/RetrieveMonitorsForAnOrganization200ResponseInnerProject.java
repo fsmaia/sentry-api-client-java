@@ -64,7 +64,7 @@ import com.sentry.api.client.JSON;
   RetrieveMonitorsForAnOrganization200ResponseInnerProject.JSON_PROPERTY_STATUS
 })
 @JsonTypeName("Retrieve_monitors_for_an_organization_200_response_inner_project")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class RetrieveMonitorsForAnOrganization200ResponseInnerProject {
   public static final String JSON_PROPERTY_STATS = "stats";
   private JsonNullable<Object> stats = JsonNullable.<Object>of(null);

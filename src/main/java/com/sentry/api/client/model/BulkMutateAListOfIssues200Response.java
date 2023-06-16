@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   BulkMutateAListOfIssues200Response.JSON_PROPERTY_STATUS_DETAILS
 })
 @JsonTypeName("Bulk_Mutate_a_List_of_Issues_200_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class BulkMutateAListOfIssues200Response {
   public static final String JSON_PROPERTY_IS_PUBLIC = "isPublic";
   private Boolean isPublic;

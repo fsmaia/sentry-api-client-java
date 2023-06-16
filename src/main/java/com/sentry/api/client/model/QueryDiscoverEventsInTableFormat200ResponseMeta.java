@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   QueryDiscoverEventsInTableFormat200ResponseMeta.JSON_PROPERTY_FIELDS
 })
 @JsonTypeName("Query_Discover_Events_in_Table_Format_200_response_meta")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class QueryDiscoverEventsInTableFormat200ResponseMeta {
   public static final String JSON_PROPERTY_FIELDS = "fields";
   private Map<String, String> fields = new HashMap<>();

@@ -62,7 +62,7 @@ import com.sentry.api.client.JSON;
   RetrieveAnOrganizationMember200Response.JSON_PROPERTY_TEAM_ROLE_LIST
 })
 @JsonTypeName("Retrieve_an_Organization_Member_200_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class RetrieveAnOrganizationMember200Response {
   public static final String JSON_PROPERTY_EXTERNAL_USERS = "externalUsers";
   private List<RetrieveAnOrganizationMember200ResponseExternalUsersInner> externalUsers;

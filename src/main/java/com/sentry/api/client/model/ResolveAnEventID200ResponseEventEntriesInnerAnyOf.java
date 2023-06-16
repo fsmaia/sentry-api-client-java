@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
   ResolveAnEventID200ResponseEventEntriesInnerAnyOf.JSON_PROPERTY_DATA
 })
 @JsonTypeName("Resolve_an_Event_ID_200_response_event_entries_inner_anyOf")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class ResolveAnEventID200ResponseEventEntriesInnerAnyOf {
   public static final String JSON_PROPERTY_TYPE = "type";
   private String type;

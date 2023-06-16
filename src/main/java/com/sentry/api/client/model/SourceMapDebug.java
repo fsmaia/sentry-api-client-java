@@ -35,7 +35,7 @@ import com.sentry.api.client.JSON;
 @JsonPropertyOrder({
   SourceMapDebug.JSON_PROPERTY_ERRORS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class SourceMapDebug {
   public static final String JSON_PROPERTY_ERRORS = "errors";
   private List<DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner> errors = new ArrayList<>();

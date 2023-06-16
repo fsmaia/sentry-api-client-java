@@ -54,7 +54,7 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.sentry.api.client.JSON;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 @JsonDeserialize(using = RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy.RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeployDeserializer.class)
 @JsonSerialize(using = RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy.RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploySerializer.class)
 public class RetrieveTheOldestEventForAnIssue200ResponseReleaseAllOfLastDeploy extends AbstractOpenApiSchema {

@@ -34,7 +34,7 @@ import com.sentry.api.client.JSON;
   UpdateATeamRequest.JSON_PROPERTY_SLUG
 })
 @JsonTypeName("Update_a_Team_request")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class UpdateATeamRequest {
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;

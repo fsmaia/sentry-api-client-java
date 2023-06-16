@@ -16087,22 +16087,11 @@ components:
       - name
       - url
       type: object
-    Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf_1_not:
-      anyOf:
-      - type: string
-      - type: number
-      - type: boolean
-      - type: object
-      - items:
-          type: string
-        type: array
     Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy:
       nullable: true
       oneOf:
       - $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf'
-      - not:
-          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf_1_not'
-        nullable: true
+      - nullable: true
         type: string
     Retrieve_an_Event_for_a_Project_200_response_release_allOf:
       properties:
@@ -17003,12 +16992,21 @@ components:
         id:
           type: string
       type: object
+    Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf_lastDeploy_oneOf_not:
+      anyOf:
+      - type: string
+      - type: number
+      - type: boolean
+      - type: object
+      - items:
+          type: string
+        type: array
     Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf_lastDeploy:
       nullable: true
       oneOf:
       - $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf'
       - not:
-          $ref: '#/components/schemas/Retrieve_an_Event_for_a_Project_200_response_release_allOf_lastDeploy_oneOf_1_not'
+          $ref: '#/components/schemas/Retrieve_the_Oldest_Event_for_an_Issue_200_response_release_allOf_lastDeploy_oneOf_not'
         nullable: true
         type: string
       type: object

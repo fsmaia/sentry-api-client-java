@@ -36,7 +36,7 @@ import com.sentry.api.client.JSON;
   DebugIssuesRelatedToSourceMapsForAGivenEvent200Response.JSON_PROPERTY_ERRORS
 })
 @JsonTypeName("Debug_issues_related_to_source_maps_for_a_given_event_200_response")
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:18:46.808333Z[Etc/UTC]")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T15:22:58.941842Z[Etc/UTC]")
 public class DebugIssuesRelatedToSourceMapsForAGivenEvent200Response {
   public static final String JSON_PROPERTY_ERRORS = "errors";
   private List<DebugIssuesRelatedToSourceMapsForAGivenEvent200ResponseErrorsInner> errors = new ArrayList<>();
