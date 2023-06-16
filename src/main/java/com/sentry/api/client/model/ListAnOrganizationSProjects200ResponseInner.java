@@ -60,7 +60,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSProjects200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
 public class ListAnOrganizationSProjects200ResponseInner {
   public static final String SERIALIZED_NAME_LATEST_DEPLOYS = "latestDeploys";
   @SerializedName(SERIALIZED_NAME_LATEST_DEPLOYS)

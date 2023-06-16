@@ -51,7 +51,7 @@ import com.sentry.api.client.JSON;
 /**
  * ConfigValidator
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
 public class ConfigValidator {
   /**
    * Currently supports \&quot;crontab\&quot; or \&quot;interval\&quot;

@@ -50,7 +50,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAProjectSIssues200ResponseInnerMetadataOneOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
 public class ListAProjectSIssues200ResponseInnerMetadataOneOf {
   public static final String SERIALIZED_NAME_FILENAME = "filename";
   @SerializedName(SERIALIZED_NAME_FILENAME)

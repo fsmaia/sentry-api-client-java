@@ -50,7 +50,7 @@ import com.sentry.api.client.JSON;
 /**
  * These are key/value pairs, the key being the requested &#x60;field&#x60;, and the value the corresponding total over the requested time frame.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
 public class RetrieveReleaseHealthSessionStatistics200ResponseGroupsInnerTotals {
   public static final String SERIALIZED_NAME_SUM_SESSION = "sum(session)";
   @SerializedName(SERIALIZED_NAME_SUM_SESSION)

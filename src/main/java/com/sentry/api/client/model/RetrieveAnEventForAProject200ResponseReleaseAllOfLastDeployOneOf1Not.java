@@ -50,7 +50,7 @@ import com.google.gson.JsonParseException;
 
 import com.sentry.api.client.JSON;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
 public class RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not extends AbstractOpenApiSchema {
     private static final Logger log = Logger.getLogger(RetrieveAnEventForAProject200ResponseReleaseAllOfLastDeployOneOf1Not.class.getName());
 

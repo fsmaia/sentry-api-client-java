@@ -59,7 +59,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSTeams200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
 public class ListAnOrganizationSTeams200ResponseInner {
   public static final String SERIALIZED_NAME_EXTERNAL_TEAMS = "externalTeams";
   @SerializedName(SERIALIZED_NAME_EXTERNAL_TEAMS)

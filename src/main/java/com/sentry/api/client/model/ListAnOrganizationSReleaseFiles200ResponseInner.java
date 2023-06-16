@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * ListAnOrganizationSReleaseFiles200ResponseInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
 public class ListAnOrganizationSReleaseFiles200ResponseInner {
   public static final String SERIALIZED_NAME_SHA1 = "sha1";
   @SerializedName(SERIALIZED_NAME_SHA1)

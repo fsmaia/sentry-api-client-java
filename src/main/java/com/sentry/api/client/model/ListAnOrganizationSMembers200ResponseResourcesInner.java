@@ -55,7 +55,7 @@ import com.sentry.api.client.JSON;
 /**
  * Conforming to the SCIM RFC, this represents a Sentry Org Member as a SCIM user object.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
 public class ListAnOrganizationSMembers200ResponseResourcesInner {
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)

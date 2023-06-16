@@ -52,7 +52,7 @@ import com.sentry.api.client.JSON;
 /**
  * RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
 public class RetrieveEventCountsForAnOrganizationV2200ResponseGroupsInner {
   public static final String SERIALIZED_NAME_BY = "by";
   @SerializedName(SERIALIZED_NAME_BY)

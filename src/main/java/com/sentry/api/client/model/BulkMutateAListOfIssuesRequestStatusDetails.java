@@ -50,7 +50,7 @@ import com.sentry.api.client.JSON;
 /**
  * Additional details about the resolution. Valid values are &#x60;\&quot;inRelease\&quot;&#x60;, &#x60;\&quot;inNextRelease\&quot;&#x60;, &#x60;\&quot;inCommit\&quot;&#x60;, &#x60;\&quot;ignoreDuration\&quot;&#x60;, &#x60;\&quot;ignoreCount\&quot;&#x60;, &#x60;\&quot;ignoreWindow\&quot;&#x60;, &#x60;\&quot;ignoreUserCount\&quot;&#x60;, and &#x60;\&quot;ignoreUserWindow\&quot;&#x60;.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:28:08.282703Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-16T12:40:29.777755Z[Etc/UTC]")
 public class BulkMutateAListOfIssuesRequestStatusDetails {
   public static final String SERIALIZED_NAME_IN_RELEASE = "inRelease";
   @SerializedName(SERIALIZED_NAME_IN_RELEASE)
